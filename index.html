@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI for EDA 论文与资讯索引</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --card: #1a1d27;
+      --card2: #161820;
+      --border: #2a2d3a;
+      --accent: #6c63ff;
+      --accent2: #00d4aa;
+      --accent3: #ff6b6b;
+      --accent4: #f5a623;
+      --text: #e2e4ed;
+      --muted: #8b8fa8;
+      --tag-bg: #252838;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif; line-height: 1.7; }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg,#1a1d27 0%,#0f1117 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 20px 28px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem; font-weight: 700;
+      background: linear-gradient(90deg,var(--accent),var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 6px;
+    }
+    header .subtitle { color: var(--muted); font-size: .9rem; margin-top: 4px; }
+    .stats { display:flex; justify-content:center; gap:32px; margin-top:20px; flex-wrap:wrap; }
+    .stat .num { font-size:1.6rem; font-weight:700; color:var(--accent2); }
+    .stat .label { font-size:.8rem; color:var(--muted); }
+
+    /* ── Nav ── */
+    nav {
+      display:flex; justify-content:center; gap:8px; padding:12px 16px;
+      flex-wrap:wrap; position:sticky; top:0; z-index:100;
+      background:rgba(15,17,23,.96); backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--border);
+    }
+    nav a {
+      color:var(--muted); text-decoration:none; font-size:.82rem;
+      padding:5px 14px; border-radius:20px; border:1px solid var(--border); transition:all .2s;
+    }
+    nav a:hover, nav a.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+
+    /* ── Layout ── */
+    .container { max-width:1200px; margin:0 auto; padding:36px 20px; }
+    section { margin-bottom:56px; }
+    .section-title {
+      font-size:1.25rem; font-weight:700; margin-bottom:20px;
+      display:flex; align-items:center; gap:10px;
+    }
+    .section-title .icon { font-size:1.3rem; }
+    .section-title .line { flex:1; height:1px; background:linear-gradient(90deg,var(--border),transparent); }
+
+    /* ── Date group header ── */
+    .date-group { margin-bottom:40px; }
+    .date-header {
+      display:flex; align-items:center; gap:12px;
+      background:var(--card2); border:1px solid var(--border); border-left:4px solid var(--accent);
+      border-radius:8px; padding:12px 18px; margin-bottom:16px; cursor:pointer;
+      user-select:none;
+    }
+    .date-header h3 { font-size:1rem; font-weight:700; flex:1; }
+    .date-header .badge-count {
+      background:var(--tag-bg); color:var(--accent2); font-size:.75rem;
+      padding:3px 10px; border-radius:12px; border:1px solid var(--accent2);
+    }
+    .date-header .toggle { color:var(--muted); font-size:.85rem; }
+    .date-body { display:block; }
+    .date-body.collapsed { display:none; }
+
+    /* ── Paper table ── */
+    .paper-table { width:100%; border-collapse:collapse; margin-bottom:16px; font-size:.85rem; }
+    .paper-table th {
+      background:var(--tag-bg); color:var(--muted); padding:8px 12px;
+      text-align:left; border-bottom:1px solid var(--border); font-weight:600; font-size:.8rem;
+    }
+    .paper-table td { padding:9px 12px; border-bottom:1px solid var(--border); vertical-align:top; }
+    .paper-table tr:last-child td { border-bottom:none; }
+    .paper-table tr:hover td { background:rgba(108,99,255,.06); }
+    .paper-table .cat { color:var(--muted); font-size:.78rem; }
+    .paper-table a.arxiv-link { color:var(--accent); text-decoration:none; font-size:.78rem; white-space:nowrap; }
+    .paper-table a.arxiv-link:hover { text-decoration:underline; }
+    .paper-table a.pdf-link {
+      color:var(--accent2); text-decoration:none; font-size:.75rem;
+      padding:2px 8px; border:1px solid var(--accent2); border-radius:8px;
+      white-space:nowrap; display:inline-block;
+    }
+    .paper-table a.pdf-link:hover { background:var(--accent2); color:#000; }
+    .star { color:var(--accent4); }
+
+    /* ── Abstract cards (expandable) ── */
+    .abstracts { display:flex; flex-direction:column; gap:14px; margin-top:4px; }
+    .abs-card {
+      background:var(--card); border:1px solid var(--border); border-radius:10px;
+      padding:18px 20px; position:relative; overflow:hidden;
+    }
+    .abs-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:3px;
+      background:linear-gradient(90deg,var(--accent),var(--accent2)); opacity:0; transition:.25s;
+    }
+    .abs-card:hover::before { opacity:1; }
+    .abs-card .abs-title { font-size:.95rem; font-weight:600; margin-bottom:5px; }
+    .abs-card .abs-meta { font-size:.78rem; color:var(--muted); margin-bottom:9px; }
+    .abs-card .abs-body { font-size:.86rem; color:#b0b3c5; line-height:1.65; }
+    .abs-card .abs-body strong { color:var(--text); }
+    .abs-card .abs-links { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+    .abs-card .abs-links a {
+      color:var(--accent); text-decoration:none; font-size:.8rem;
+      padding:3px 12px; border:1px solid var(--accent); border-radius:8px; transition:.2s;
+    }
+    .abs-card .abs-links a:hover { background:var(--accent); color:#fff; }
+    .abs-card .abs-links a.local { color:var(--accent2); border-color:var(--accent2); }
+    .abs-card .abs-links a.local:hover { background:var(--accent2); color:#000; }
+    .badge-hot { display:inline-block; background:rgba(255,107,107,.12); color:var(--accent3); font-size:.72rem; padding:2px 8px; border-radius:10px; border:1px solid var(--accent3); margin-right:6px; font-weight:600; }
+    .badge-new { display:inline-block; background:rgba(0,212,170,.1); color:var(--accent2); font-size:.72rem; padding:2px 8px; border-radius:10px; border:1px solid var(--accent2); margin-right:6px; font-weight:600; }
+    .badge-top { display:inline-block; background:rgba(245,166,35,.1); color:var(--accent4); font-size:.72rem; padding:2px 8px; border-radius:10px; border:1px solid var(--accent4); margin-right:6px; font-weight:600; }
+
+    /* ── News ── */
+    .news-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:14px; }
+    .news-card {
+      background:var(--card); border:1px solid var(--border); border-radius:10px;
+      padding:16px 18px; transition:.2s;
+    }
+    .news-card:hover { border-color:var(--accent2); transform:translateY(-2px); }
+    .news-card .src { font-size:.75rem; color:var(--muted); margin-bottom:5px; display:flex; align-items:center; gap:6px; }
+    .news-card .dot { width:6px;height:6px;border-radius:50%;background:var(--accent2);flex-shrink:0; }
+    .news-card h4 { font-size:.92rem; font-weight:600; margin-bottom:7px; line-height:1.45; }
+    .news-card p { font-size:.84rem; color:#a0a3b5; line-height:1.6; margin-bottom:10px; }
+    .news-card a { color:var(--accent2); text-decoration:none; font-size:.8rem; }
+    .news-card a:hover { opacity:.75; }
+
+    /* ── Summary box ── */
+    .summary-box {
+      background:var(--card); border:1px solid var(--border); border-left:4px solid var(--accent);
+      border-radius:8px; padding:20px 24px; margin-bottom:24px;
+    }
+    .summary-box h3 { font-size:.95rem; font-weight:600; margin-bottom:10px; color:var(--accent); }
+    .summary-box ul { list-style:none; }
+    .summary-box ul li {
+      padding:4px 0 4px 18px; position:relative; font-size:.9rem; color:#c0c3d5;
+    }
+    .summary-box ul li::before { content:'›'; position:absolute; left:0; color:var(--accent2); font-weight:700; }
+
+    /* ── Timeline ── */
+    .timeline { border-left:2px solid var(--border); padding-left:22px; }
+    .tl-item { position:relative; margin-bottom:18px; }
+    .tl-item::before {
+      content:''; position:absolute; left:-27px; top:6px;
+      width:10px;height:10px; border-radius:50%; background:var(--accent); border:2px solid var(--bg);
+    }
+    .tl-item .tl-date { font-size:.78rem; color:var(--accent); font-weight:600; margin-bottom:3px; }
+    .tl-item h4 { font-size:.92rem; font-weight:600; margin-bottom:4px; }
+    .tl-item p { font-size:.84rem; color:#a0a3b5; }
+
+    /* ── Todo / Tracking ── */
+    .todo-list { list-style:none; }
+    .todo-list li {
+      padding:7px 12px 7px 32px; position:relative; font-size:.88rem;
+      border-bottom:1px solid var(--border); color:#c0c3d5;
+    }
+    .todo-list li:last-child { border-bottom:none; }
+    .todo-list li::before { content:'◻'; position:absolute; left:10px; color:var(--accent2); }
+
+    /* ── Tags ── */
+    .tags { display:flex; gap:7px; flex-wrap:wrap; margin-top:14px; }
+    .tag { background:var(--tag-bg); color:var(--muted); font-size:.76rem; padding:3px 11px; border-radius:12px; border:1px solid var(--border); }
+
+    /* ── Footer ── */
+    footer { border-top:1px solid var(--border); padding:20px; text-align:center; color:var(--muted); font-size:.82rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🔬 AI for EDA 论文与资讯索引</h1>
+  <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-03-24 · 涵盖 2026-03-15 → 2026-03-24</p>
+  <div class="stats">
+    <div class="stat"><div class="num">57</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">8</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">20+</div><div class="label">行业动态</div></div>
+    <div class="stat"><div class="num">3</div><div class="label">额外 PDF</div></div>
+  </div>
+</header>
+
+<nav>
+  <a href="#overview">📋 综述</a>
+  <a href="#papers">📄 论文</a>
+  <a href="#news">🌍 行业动态</a>
+  <a href="#timeline">📅 时间线</a>
+  <a href="#tracking">📌 待追踪</a>
+</nav>
+
+<div class="container">
+
+<!-- ══════════════ 综述 ══════════════ -->
+<section id="overview">
+  <div class="section-title"><span class="icon">📋</span> 核心趋势综述 <span class="line"></span></div>
+  <div class="summary-box">
+    <h3>🔑 当前最重要的五大趋势</h3>
+    <ul>
+      <li><strong>Agentic EDA 范式确立：</strong>AI for EDA 正从 L2（点工具优化）向 L3/L4（全流程自主编排）跨越。Verkor Design Conductor 用 219 字需求文档、12 小时自主完成 1.48 GHz RISC-V CPU（VerCore），是首个 AI 智能体端到端流片 CPU，重新定义了"自动化"上限。</li>
+      <li><strong>三巨头绑定 NVIDIA AI 平台：</strong>GTC 2026（3月16-17日）上，Cadence（ChipStack™ AI Super Agent）、Synopsys（AgentEngineer™）、Siemens（Fuse EDA AI Agent）三大 EDA 厂商全部基于 NVIDIA NeMo/NemoClaw 发布旗舰 Agentic EDA 产品，行业格局正式确立。</li>
+      <li><strong>国内自主路线崛起：</strong>合见工软 UDA 2.0（2026-03-18）发布国内首款 L4 Agentic EDA，支持 DeepSeek + 国产 GPU 全栈适配；中科院"启蒙"（QiMeng）在 NeurIPS25 / AAAI26 斩获 6 篇顶会；复旦朱可人 MAGICAL 系统入选 MIT TR35 亚太。</li>
+      <li><strong>形式化验证成为可信性关键：</strong>多篇论文（FormalRTL、AutoVeriFix+、SpecLoop）引入形式等价检验作为 LLM 生成 RTL 的后端验证门，将"不可信原型"转向"工业可靠系统"；DRCY 已真正落地量产。</li>
+      <li><strong>Benchmark 生态快速补全：</strong>CktEvo（仓库级RTL演化）、HWE-Bench（板级设计）、KernelCraft（近金属内核）、ChipBench（新一代LLM评测）、EvoRTL-Bench（工业级 RTL 定位）密集发布，填补了多个重要空白。</li>
+    </ul>
+  </div>
+  <div class="tags">
+    <span class="tag">Agentic EDA</span><span class="tag">RTL Generation</span><span class="tag">LLM for Hardware</span>
+    <span class="tag">Formal Verification</span><span class="tag">Multi-Agent</span><span class="tag">Verilog LLM</span>
+    <span class="tag">Chip Placement</span><span class="tag">Analog Layout</span><span class="tag">Physical Design</span>
+    <span class="tag">RISC-V CPU</span><span class="tag">国产EDA</span><span class="tag">QiMeng</span>
+    <span class="tag">PPA Optimization</span><span class="tag">LLM Accelerator</span><span class="tag">Benchmark</span>
+  </div>
+</section>
+
+<!-- ══════════════ 论文 ══════════════ -->
+<section id="papers">
+  <div class="section-title"><span class="icon">📄</span> 论文收录（按日期倒序）<span class="line"></span></div>
+
+  <!-- ── 2026-03-24 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0324')">
+      <h3>📅 2026-03-24 · 补录论文（3篇）</h3>
+      <span class="badge-count">3 篇</span>
+      <span class="toggle" id="toggle-g0324">▼</span>
+    </div>
+    <div id="g0324" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Large Language Models (LLMs) for Electronic Design Automation (EDA)</td>
+            <td class="cat">综述 / LLM for EDA</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2508.20030" target="_blank">2508.20030</a></td>
+            <td><a class="pdf-link" href="./2026-03-24/2508.20030-LLMs-for-EDA-Survey.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>A Flexible Language Model-Assisted Electronic Design Automation Framework</td>
+            <td class="cat">LLM 辅助 / 商业EDA / 多域</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2601.14098" target="_blank">2601.14098</a></td>
+            <td><a class="pdf-link" href="./2026-03-24/2601.14098-Flexible-LM-Assisted-EDA-Framework.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Advancing Routing-Awareness in Analog ICs Floorplanning</td>
+            <td class="cat">模拟IC / 布图 / RL + GNN</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2510.15387" target="_blank">2510.15387</a></td>
+            <td><a class="pdf-link" href="./2026-03-24/2510.15387-Advancing-Routing-Awareness-Analog-Floorplan.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <div class="abs-title">LLMs for Electronic Design Automation — IEEE SOCC 录用综述</div>
+          <div class="abs-meta">Kangwei Xu 等 13 人 · 2025-08-27 · eess.SY / cs.AI / cs.AR</div>
+          <div class="abs-body">全面综述 LLM 应用于 EDA 的现状，覆盖从硬件设计、测试到优化的完整流程。通过三个案例研究展示 LLM 能力，并指出未来发展方向与挑战。为有意利用先进 AI 技术推进 EDA 的研究人员提供宝贵参考。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2508.20030" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-24/2508.20030-LLMs-for-EDA-Survey.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-title">Flexible LLM-Assisted EDA Framework — 支持商业工具的多域框架</div>
+          <div class="abs-meta">Cristian Sestito 等 8 人 · 2026-01-20 · eess.SY</div>
+          <div class="abs-body">不同于只支持开源工具的现有方法，本框架通用性强：生成商业 EDA 工具兼容文件，通过 PPA 报告与工具约束反馈迭代优化，覆盖模拟（OTA）/ 数字（FPGA）/ 射频（贴片天线）三大领域，均验证有效。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2601.14098" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-24/2601.14098-Flexible-LM-Assisted-EDA-Framework.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-title">Advancing Routing-Awareness in Analog ICs Floorplanning — RL + RGNN</div>
+          <div class="abs-meta">Davide Basso 等 4 人 · 2025-10-17 · cs.AI / cs.LG</div>
+          <div class="abs-body">针对模拟 IC 布图布线感知问题，提出强化学习 + 关系图卷积神经网络（RGNN）自动布局引擎，通过提高网格分辨率、精确集成引脚信息和动态布线资源估计实现工业标准。<strong>死区减少 13.8%，线长减少 40.6%，布线成功率提升 73.4%。</strong></div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2510.15387" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-24/2510.15387-Advancing-Routing-Awareness-Analog-Floorplan.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2026-03-22 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0322')">
+      <h3>📅 2026-03-22 · 3 篇</h3>
+      <span class="badge-count">3 篇</span>
+      <span class="toggle" id="toggle-g0322">▼</span>
+    </div>
+    <div id="g0322" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="star">★</span> RTLocating: Intent-aware RTL Localization for Hardware Design Iteration</td><td class="cat">RTL迭代/意图感知/工业基准</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.00434" target="_blank">2603.00434</a></td><td><a class="pdf-link" href="./2026-03-22/2603.00434-RTLocating-RTL-Localization-Hardware-Iteration.pdf">📥 PDF</a></td></tr>
+          <tr><td>2</td><td><span class="star">★</span> SpecLoop: An Agentic RTL-to-Specification Framework with Formal Verification Feedback Loop</td><td class="cat">RTL→规范/形式验证/Agent</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.02895" target="_blank">2603.02895</a></td><td><a class="pdf-link" href="./2026-03-22/2603.02895-SpecLoop-RTL-to-Spec-Formal-Verification.pdf">📥 PDF</a></td></tr>
+          <tr><td>3</td><td>AutoEDA: Enabling EDA Flow Automation through Microservice-Based LLM Agents</td><td class="cat">EDA全流程/MCP协议/微服务</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2508.01012" target="_blank">2508.01012</a></td><td><a class="pdf-link" href="./2026-03-22/2508.01012-AutoEDA-EDA-Flow-Automation-LLM-Agents.pdf">📥 PDF</a></td></tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">RTLocating — 首个形式化 ΔSpec-to-RTL 定位问题，意图感知迭代硬件设计</div>
+          <div class="abs-meta">Changwen Xing 等 8 人 · cs.ET · EvoRTL-Bench（OpenTitan，1905条变更请求）</div>
+          <div class="abs-body">现有 LAD 工具聚焦一次性生成，忽略迭代更新。RTLocating 形式化了 <strong>ΔSpec-to-RTL 定位问题</strong>，动态路由器融合文本语义编码器 + 局部结构编码器 + GLIDE 全局依赖编码器。在首个工业级基准 EvoRTL-Bench 上：MRR = 0.568，R@1 = 15.08%，相比最强基线 <strong>MRR +22.9%，R@1 +67.0%</strong>，新 SOTA。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.00434" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">SpecLoop — 形式验证闭环驱动 RTL→规范自动生成，消除"文档失真"</div>
+          <div class="abs-meta">Fu-Chieh Chang 等 8 人 · 2026-03-03 · cs.AR + cs.PL</div>
+          <div class="abs-body">LLM 生成候选规范 → 基于规范重构 RTL → <strong>形式等价性检查</strong> → 反例反馈 LLM 迭代，直到证明等价。相比纯 LLM 基线，规范正确性显著提升。"逆向文档生成 + 形式验证"闭环是硬件可维护性的工程化答案。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.02895" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-title">AutoEDA — MCP 协议微服务架构，准确率提升 9.9×，token 减少 97%</div>
+          <div class="abs-meta">Yiyi Lu 等 11 人 · Duke + UMD · 2025-08-01（v1）/ 2026-02-24（v2）</div>
+          <div class="abs-body">基于 <strong>Model Context Protocol（MCP）</strong> 构建微服务架构，本地微调 LLM 保护设计 IP 隐私，实现自然语言到完整 RTL-to-GDSII 流程端到端自动化。准确率比简单方法 <strong>提升 9.9×</strong>，token 使用量比上下文学习减少约 <strong>97%</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2508.01012" target="_blank">arXiv</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2026-03-21 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0321')">
+      <h3>📅 2026-03-21 · 4 篇</h3>
+      <span class="badge-count">4 篇</span>
+      <span class="toggle" id="toggle-g0321">▼</span>
+    </div>
+    <div id="g0321" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="star">★</span> VeriAgent: A Tool-Integrated Multi-Agent System with Evolving Memory for PPA-Aware RTL Code Generation</td><td class="cat">RTL生成/PPA优化/Multi-Agent</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17613" target="_blank">2603.17613</a></td><td><a class="pdf-link" href="./2026-03-21/2603.17613-VeriAgent-PPA-Aware-RTL-MultiAgent.pdf">📥 PDF</a></td></tr>
+          <tr><td>2</td><td><span class="star">★</span> HWE-Bench: Can Language Models Perform Board-level Schematic Designs?</td><td class="cat">Benchmark/板级设计/EDA</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.18102" target="_blank">2603.18102</a></td><td><a class="pdf-link" href="./2026-03-21/2603.18102-HWE-Bench-Board-Level-Schematic-Design.pdf">📥 PDF</a></td></tr>
+          <tr><td>3</td><td>WarPGNN: A Parametric Thermal Warpage Analysis Framework with Physics-aware GNN</td><td class="cat">封装/热翘曲/GNN/EDA工具</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.18581" target="_blank">2603.18581</a></td><td><a class="pdf-link" href="./2026-03-21/2603.18581-WarPGNN-Thermal-Warpage-GNN.pdf">📥 PDF</a></td></tr>
+          <tr><td>4</td><td>MatrixFlow: Mitigating the Bandwidth Wall via Data-Streaming System-Accelerator Co-Design</td><td class="cat">硬件加速/协同设计/Transformer</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.19057" target="_blank">2603.19057</a></td><td><a class="pdf-link" href="./2026-03-21/2603.19057-MatrixFlow-BandwidthWall-SystemAccelerator.pdf">📥 PDF</a></td></tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">VeriAgent — PPA 感知闭环多智能体 RTL 生成，进化记忆无需重训持续改进</div>
+          <div class="abs-meta">Yaoxiang Wang 等 · 清华大学 + 厦门大学 · 2026-03-18 · cs.CL</div>
+          <div class="abs-body">程序员智能体（生成）+ 正确性智能体（仿真验证）+ PPA 智能体（综合优化）三方协同，形成功能正确性与 PPA 的联合优化闭环。<strong>进化记忆机制</strong>将优化经验外部化为结构化记忆节点，系统越用越强，无需重新训练模型。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.17613" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">HWE-Bench — 首个板级原理图设计 EDA Benchmark，当前最强 LLM 仅 8.15% 通过</div>
+          <div class="abs-meta">Weibo Qiu 等 · 2026-03-18 · cs.AR · 300 个真实板级任务 + 2914 份 IC 数据手册</div>
+          <div class="abs-body">LLM 根据功能需求 + 数据手册从头生成原理图 → 静态电气规则检查 → 电路仿真验证，全流程自动化评测。<strong>当前最先进 LLM 总体通过率仅 8.15%</strong>，精准标定当前 LLM 的物理推理天花板。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.18102" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-title">WarPGNN — 比 3D COMSOL FEM 快 11.9 万倍的物理感知 GNN 热翘曲分析</div>
+          <div class="abs-meta">Haotian Lu 等 · UCR · 2026-03-19</div>
+          <div class="abs-body">针对 2.5D/3D 异构集成封装热翘曲问题，将多芯片平面图编码为精简传递闭包图（rTCG），GCN 编码器 + U-Net 解码器重建翘曲图。比 2D FEM 加速 <strong>205.91×</strong>，比 3D COMSOL <strong>119,766×</strong>，归一化 RMSE 仅 1.26%。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.18581" target="_blank">arXiv</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2026-03-20 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0320')">
+      <h3>📅 2026-03-20 · 4 篇</h3>
+      <span class="badge-count">4 篇</span>
+      <span class="toggle" id="toggle-g0320">▼</span>
+    </div>
+    <div id="g0320" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="star">★</span> CODMAS: A Dialectic Multi-Agent Collaborative Framework for Structured RTL Optimization</td><td class="cat">RTL优化/Multi-Agent/EACL2026</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17204" target="_blank">2603.17204</a></td><td><a class="pdf-link" href="./2026-03-20/2603.17204-CODMAS-RTL-Optimization-MultiAgent.pdf">📥 PDF</a></td></tr>
+          <tr><td>2</td><td><span class="star">★</span> ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression</td><td class="cat">LLM推理/ASPLOS2026/硬件感知</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17435" target="_blank">2603.17435</a></td><td><a class="pdf-link" href="./2026-03-20/2603.17435-ZipServ-LLM-Inference-Compression.pdf">📥 PDF</a></td></tr>
+          <tr><td>3</td><td>LLM4Cov: Execution-Aware Agentic Learning for High-coverage Testbench Generation</td><td class="cat">硬件验证/Agent学习/Agent4Chip</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2602.16953" target="_blank">2602.16953</a></td><td><a class="pdf-link" href="./2026-03-20/2602.16953-LLM4Cov-Testbench-Generation.pdf">📥 PDF</a></td></tr>
+          <tr><td>4</td><td>HeaRT: A Hierarchical Circuit Reasoning Tree for AMS Design</td><td class="cat">模拟混合信号/Agent/推理树</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2511.19669" target="_blank">2511.19669</a></td><td><a class="pdf-link" href="./2026-03-20/2511.19669-HeaRT-AMS-Hierarchical-Reasoning.pdf">📥 PDF</a></td></tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">CODMAS — 辩证多智能体框架，关键路径延迟降低 25%（EACL 2026）</div>
+          <div class="abs-meta">Che-Ming Chang 等 7 人 · EACL 2026 接收 · RTL优化 / RTLOPT Benchmark</div>
+          <div class="abs-body"><strong>Articulator</strong>（橡皮鸭调试式逐步阐述）+ <strong>Hypothesis Partner</strong>（预测并调和偏差）引导 DCA 生成架构感知 Verilog 编辑，CEA 验证 PPA。关键路径延迟降低约 <strong>25%</strong>（流水线优化），功耗降低约 <strong>22%</strong>（时钟门控），配套 RTLOPT Benchmark（120 组 Verilog 三元组）。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.17204" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">ZipServ — 首个 GPU 上无损压缩且加速 LLM 推理系统（ASPLOS'26）</div>
+          <div class="abs-meta">Ruibo Fan 等 · ASPLOS'26 接收</div>
+          <div class="abs-body">TCA-TBE（Tensor-Core-Aware 固定长度编码）支持并行解码 + ZipGEMM（融合解压-GEMM 内核）消除中间缓冲区。模型大小减少 <strong>30%</strong>，内核级加速 cuBLAS <strong>2.21×</strong>，端到端比 vLLM 加速 <strong>1.22×</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.17435" target="_blank">arXiv</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2026-03-19 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0319')">
+      <h3>📅 2026-03-19 · 3 篇（已归档 + 额外 6 个 PDF）</h3>
+      <span class="badge-count">3 篇</span>
+      <span class="toggle" id="toggle-g0319">▼</span>
+    </div>
+    <div id="g0319" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="star">★</span> DRCY: Agentic Hardware Design Reviews</td><td class="cat">AI for EDA/多智能体/硬件验证</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.15672" target="_blank">2603.15672</a></td><td><a class="pdf-link" href="./2026-03-19/2603.15672-DRCY-Agentic-Hardware-Design-Reviews.pdf">📥 PDF</a></td></tr>
+          <tr><td>2</td><td><span class="star">★</span> ACE-RTL: When Agentic Context Evolution Meets RTL-Specialized LLMs</td><td class="cat">RTL生成/Agent/专用LLM</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2602.10218" target="_blank">2602.10218</a></td><td><a class="pdf-link" href="./2026-03-19/2602.10218-ACE-RTL-Agentic-Context-Evolution.pdf">📥 PDF</a></td></tr>
+          <tr><td>3</td><td>GLANCE: Gaze-Led Attention Network for Compressed Edge-inference</td><td class="cat">边缘推理/硬件加速/注意力</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.15717" target="_blank">2603.15717</a></td><td><a class="pdf-link" href="./2026-03-19/2603.15717-GLANCE-Gaze-Led-Attention-Edge-Inference.pdf">📥 PDF</a></td></tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-hot">🔥 落地量产</span>
+          <div class="abs-title">DRCY — 首个可投入生产的多智能体 LLM 硬件原理图审查系统</div>
+          <div class="abs-meta">Kyle Dumont 等 · AllSpice · 2026-03-13 · cs.AR</div>
+          <div class="abs-body">五智能体流水线 + 智能数据手册检索 + 多轮共识机制，实现原理图连接语义正确性自动审查。已部署于 AllSpice Hub CI/CD 流水线，被多家头部硬件公司用于车辆设计到太空探索场景。<strong>首个真正量产落地的 Agentic EDA 工具。</strong></div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.15672" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">ACE-RTL — 专用 RTL LLM + 通用推理 Agent 有机融合，CVDP 通过率 +44.87%</div>
+          <div class="abs-meta">Chenhui Deng 等 · NVIDIA Research · Agent4Chip @ ICLR 2026</div>
+          <div class="abs-body">在 <strong>170 万 RTL 样本</strong>上训练专用 LLM（生成器）与前沿推理 LLM（协调器+反射器）协同，迭代优化 RTL 代码，并行扩展策略减少迭代次数。在 CVDP 基准上通过率最高提升 <strong>44.87%</strong>，平均仅需 <strong>4 次迭代</strong>收敛。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2602.10218" target="_blank">arXiv</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2026-03-18 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0318')">
+      <h3>📅 2026-03-18 · 5 篇</h3>
+      <span class="badge-count">5 篇</span>
+      <span class="toggle" id="toggle-g0318">▼</span>
+    </div>
+    <div id="g0318" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="star">★</span> Retrieve, Schedule, Reflect: LLM Agents for Chip QoR Optimization</td><td class="cat">AI for EDA/Agent/QoR优化</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.13767" target="_blank">2603.13767</a></td><td><a class="pdf-link" href="./2026-03-18/2603.13767-RetrieveScheduleReflect-ChipQoR.pdf">📥 PDF</a></td></tr>
+          <tr><td>2</td><td><span class="star">★</span> QiMeng-CodeV-SVA: RTL-Grounded Bidirectional Data Synthesis for SVA Generation</td><td class="cat">硬件验证/LLM专用/DAC2026</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.14239" target="_blank">2603.14239</a></td><td><a class="pdf-link" href="./2026-03-18/2603.14239-QiMengCodeVSVA-HardwareAssertion.pdf">📥 PDF</a></td></tr>
+          <tr><td>3</td><td>SkipOPU: FPGA-based Overlay Processor for LLMs with Dynamically Allocated Computation</td><td class="cat">LLM加速器/FPGA</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.14785" target="_blank">2603.14785</a></td><td><a class="pdf-link" href="./2026-03-18/2603.14785-SkipOPU-FPGA-LLM.pdf">📥 PDF</a></td></tr>
+          <tr><td>4</td><td>DUET: Disaggregated Hybrid Mamba-Transformer LLMs (DAC 2026)</td><td class="cat">LLM加速器/DAC2026</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.15530" target="_blank">2603.15530</a></td><td><a class="pdf-link" href="./2026-03-18/2603.15530-DUET-MambaTransformer-Accelerator.pdf">📥 PDF</a></td></tr>
+          <tr><td>5</td><td>LEXI: Lossless Exponent Coding for Efficient Inter-Chiplet Communication</td><td class="cat">小芯片通信/数据压缩</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.15589" target="_blank">2603.15589</a></td><td><a class="pdf-link" href="./2026-03-18/2603.15589-LEXI-Chiplet-Communication.pdf">📥 PDF</a></td></tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">Retrieve, Schedule, Reflect — 首个 LLM Agent 芯片 QoR 自动调度，媲美人工专家</div>
+          <div class="abs-meta">Yikang Ouyang 等 · 2026-03-14</div>
+          <div class="abs-body">RAG 从自然语言专家知识树检索优化策略 → Agent 直接与 EDA 工具交互编排 pass 顺序 → Pareto 前沿 QoR 反馈语言反思。时序优化 <strong>+10%</strong>，优化速度比 RL 基线 <strong>快 4×</strong>，QoR 媲美人工专家。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.13767" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">QiMeng-CodeV-SVA — DAC 2026，SVA 生成超越 GPT-5 / DeepSeek-R1</div>
+          <div class="abs-meta">Yutong Wu 等 · 中科院计算所 QiMeng 团队 · DAC 2026 接收</div>
+          <div class="abs-body">RTL 引导双向数据合成解决 SVA 数据稀缺问题，SVA↔自然语言双向翻译一致性机制筛选高质量数据。CodeV-SVA-14B 在 NL2SVA-Human 达 Func.@1 <strong>75.8%</strong>，NL2SVA-Machine 达 <strong>84.0%</strong>，<strong>匹配或超越 GPT-5 和 DeepSeek-R1</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.14239" target="_blank">arXiv</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2026-03-17 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0317')">
+      <h3>📅 2026-03-17 · 5 篇</h3>
+      <span class="badge-count">5 篇</span>
+      <span class="toggle" id="toggle-g0317">▼</span>
+    </div>
+    <div id="g0317" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="star">★</span> CellE: Automated Standard Cell Library Extension via Equality Saturation (DAC 2026)</td><td class="cat">标准单元库/形式化/北大+清华</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.12797" target="_blank">2603.12797</a></td><td><a class="pdf-link" href="./2026-03-17/2603.12797-CellE.pdf">📥 PDF</a></td></tr>
+          <tr><td>2</td><td>VeriHGN: Unifying Logical and Physical Layout via Heterogeneous Graphs for Congestion Prediction</td><td class="cat">布局预测/GNN/拥塞</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.11075" target="_blank">2603.11075</a></td><td><a class="pdf-link" href="./2026-03-17/2603.11075-VeriHGN.pdf">📥 PDF</a></td></tr>
+          <tr><td>3</td><td><span class="star">★</span> AutoVeriFix+: High-Correctness RTL Generation via Trace-Aware Causal Fix</td><td class="cat">RTL生成/形式化验证</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.11489" target="_blank">2603.11489</a></td><td><a class="pdf-link" href="./2026-03-17/2603.11489-AutoVeriFix.pdf">📥 PDF</a></td></tr>
+          <tr><td>4</td><td>Helios: Hardware-Software Co-design for 3D-DRAM-based LLM Serving Accelerator</td><td class="cat">LLM加速器/近存计算</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.04797" target="_blank">2603.04797</a></td><td><a class="pdf-link" href="./2026-03-17/2603.04797-Helios-3DDRAM-LLM.pdf">📥 PDF</a></td></tr>
+          <tr><td>5</td><td>Multi-Agent Memory from a Computer Architecture Perspective</td><td class="cat">多智能体/体系结构</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.10062" target="_blank">2603.10062</a></td><td><a class="pdf-link" href="./2026-03-17/2603.10062-MultiAgentMemory.pdf">📥 PDF</a></td></tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-new">DAC 2026</span>
+          <div class="abs-title">CellE — 等式饱和标准单元库自动扩展，面积减少 15.4%（DAC 2026，北大+清华）</div>
+          <div class="abs-meta">Yi Ren 等 · 北京大学 & 清华大学 · 已被 DAC 2026 接收</div>
+          <div class="abs-body">将<strong>等式饱和（Equality Saturation）</strong>应用于映射后网表，生成 e-graph 聚类所有功能等价实现，结合高效模式挖掘选择面积最优标准单元。平均面积减少 <strong>15.41%</strong>（最高 23.64%），商用流程中延迟减少 <strong>8.00%</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.12797" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-title">AutoVeriFix+ — 轨迹感知因果修复，VerilogEval pass@10 达 90.2%</div>
+          <div class="abs-meta">Yan Tan 等 · 2026-03-12</div>
+          <div class="abs-body">三阶段：LLM 生成 Python 参考模型 → 迭代修复语法错误 → <strong>Concolic 测试引擎</strong>深测时序逻辑，通过周期精确执行轨迹为 LLM 提供因果上下文。严格基准功能正确性超过 80%，VerilogEval-machine pass@10 达 <strong>90.2%</strong>，冗余逻辑平均消除 <strong>25%</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.11489" target="_blank">arXiv</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2026-03-16 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0316')">
+      <h3>📅 2026-03-16 · 6 篇</h3>
+      <span class="badge-count">6 篇</span>
+      <span class="toggle" id="toggle-g0316">▼</span>
+    </div>
+    <div id="g0316" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="star">★</span> HDLFORGE: A Two-Stage Multi-Agent Framework for Efficient Verilog Code Generation</td><td class="cat">RTL生成/Multi-Agent/自适应升级</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.04646" target="_blank">2603.04646</a></td><td><a class="pdf-link" href="./2026-03-16/2603.04646-HDLFORGE.pdf">📥 PDF</a></td></tr>
+          <tr><td>2</td><td><span class="star">★</span> LUMINA: LLM-Guided GPU Architecture Exploration via Bottleneck Analysis</td><td class="cat">架构探索/DSE/微软亚研院</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.05904" target="_blank">2603.05904</a></td><td><a class="pdf-link" href="./2026-03-16/2603.05904-LUMINA.pdf">📥 PDF</a></td></tr>
+          <tr><td>3</td><td><span class="star">★</span> CktEvo: Repository-Level RTL Code Benchmark for Design Evolution</td><td class="cat">Benchmark/RTL优化/仓库级</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.08718" target="_blank">2603.08718</a></td><td><a class="pdf-link" href="./2026-03-16/2603.08718-CktEvo.pdf">📥 PDF</a></td></tr>
+          <tr><td>4</td><td>VeriInteresting: Empirical Study of Model Prompt Interactions in Verilog Code Generation</td><td class="cat">RTL生成/提示工程/实证</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.08715" target="_blank">2603.08715</a></td><td><a class="pdf-link" href="./2026-03-16/2603.08715-VeriInteresting.pdf">📥 PDF</a></td></tr>
+          <tr><td>5</td><td>Wrong Code, Right Structure: Netlist Representations from Imperfect LLM-Generated RTL</td><td class="cat">网表表示学习/数据增强</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.09161" target="_blank">2603.09161</a></td><td><a class="pdf-link" href="./2026-03-16/2603.09161-WrongCodeRightStructure.pdf">📥 PDF</a></td></tr>
+          <tr><td>6</td><td>KernelCraft: Benchmarking Agentic Kernel Generation on Emerging Hardware</td><td class="cat">Agent/Benchmark/近金属内核</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.08721" target="_blank">2603.08721</a></td><td><a class="pdf-link" href="./2026-03-16/2603.08721-KernelCraft.pdf">📥 PDF</a></td></tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <div class="abs-title">HDLFORGE — 两阶段自适应模型升级，中位延迟降低 50%，Pass@1 91.8%</div>
+          <div class="abs-meta">Armin Abdollahi 等 · 南加州大学</div>
+          <div class="abs-body">默认中等 LLM，轻量级诊断校准分数决定是否升级大模型，同时引入反例引导形式验证 Agent，将有界模型检验跟踪转化为可复用微测试。VerilogEval Human/V2 Pass@1 <strong>91.2%/91.8%</strong>，中位延迟降低 <strong>50%</strong>，RTLLM Pass@5 <strong>97.2%</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.04646" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-title">LUMINA — 仅 20 步找到优于 A100 的 GPU 设计方案（微软亚研院）</div>
+          <div class="abs-meta">Tao Zhang 等 · 微软亚研院</div>
+          <div class="abs-body">从仿真器代码提取架构知识，敏感性分析自动构建 DSE 规则。470 万样本设计空间中，仅 20 步识别 6 个在性能和面积上优于 A100 的设计，DSE 效率比 ML 基线 <strong>高 17.5×</strong>，帕累托超体积提升 <strong>32.9%</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.05904" target="_blank">arXiv</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2026-03-15 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0315')">
+      <h3>📅 2026-03-15 · 8 篇（含 13 份额外 PDF）</h3>
+      <span class="badge-count">8+13 篇</span>
+      <span class="toggle" id="toggle-g0315">▼</span>
+    </div>
+    <div id="g0315" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="star">★</span> Design Conductor: An agent autonomously builds a 1.5 GHz Linux-capable RISC-V CPU</td><td class="cat">Agent芯片设计/全流程/GDSII</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.08716" target="_blank">2603.08716</a></td><td><a class="pdf-link" href="./2026-03-15/2603.08716_Design_Conductor_RISCV_CPU.pdf">📥 PDF</a></td></tr>
+          <tr><td>2</td><td><span class="star">★</span> SiliconMind-V1: Multi-Agent Distillation and Debug-Reasoning for Verilog Generation</td><td class="cat">RTL生成/Multi-Agent</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.08719" target="_blank">2603.08719</a></td><td><a class="pdf-link" href="./2026-03-15/2603.08719_SiliconMind_V1_Verilog_Generation.pdf">📥 PDF</a></td></tr>
+          <tr><td>3</td><td><span class="star">★</span> FormalRTL: Verified RTL Synthesis at Scale</td><td class="cat">RTL生成/形式化验证/港中文</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.08738" target="_blank">2603.08738</a></td><td><a class="pdf-link" href="./2026-03-15/2603.08738_FormalRTL_Verified_RTL_Synthesis.pdf">📥 PDF</a></td></tr>
+          <tr><td>4</td><td>Synthesis-in-the-Loop Evaluation of LLMs for RTL Generation</td><td class="cat">评测/Benchmark/32个LLM横评</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.11287" target="_blank">2603.11287</a></td><td><a class="pdf-link" href="./2026-03-15/2603.11287_Synthesis_in_Loop_LLMs_RTL_Quality.pdf">📥 PDF</a></td></tr>
+          <tr><td>5</td><td>ChatNeuroSim: LLM Agent Framework for Automated CIM Accelerator Deployment</td><td class="cat">AI加速器/CIM</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.08745" target="_blank">2603.08745</a></td><td><a class="pdf-link" href="./2026-03-15/2603.08745_ChatNeuroSim_LLM_CIM_Accelerator.pdf">📥 PDF</a></td></tr>
+          <tr><td>6</td><td>NL2GDS: LLM-aided interface for Open Source Chip Design</td><td class="cat">全流程自动化/布局</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.05489" target="_blank">2603.05489</a></td><td><a class="pdf-link" href="./2026-03-15/2603.05489_NL2GDS_LLM_Natural_Language_to_Chip_Layout.pdf">📥 PDF</a></td></tr>
+          <tr><td>7</td><td>ChipBench: A Next-Step Benchmark for LLM Performance in AI-Aided Chip Design</td><td class="cat">Benchmark/下一代评测</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2601.21448" target="_blank">2601.21448</a></td><td><a class="pdf-link" href="./2026-03-15/2601.21448_ChipBench_LLM_Chip_Design_Benchmark.pdf">📥 PDF</a></td></tr>
+          <tr><td>8</td><td>The Dawn of Agentic EDA: A Survey of Autonomous Digital Chip Design</td><td class="cat">综述/Agentic EDA框架</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2512.23189" target="_blank">2512.23189</a></td><td><a class="pdf-link" href="./2026-03-15/2512.23189_Dawn_of_Agentic_EDA_Survey.pdf">📥 PDF</a></td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:.82rem;color:var(--muted);margin:10px 0 14px;">额外归档（非 arXiv 来源，位于 <code>2026-03-15/</code>）：</p>
+      <table class="paper-table">
+        <thead><tr><th>文件名</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr><td>Agentic AI驱动芯片设计：智能理解、编码、分析、调试与优化闭环</td><td><a class="pdf-link" href="./2026-03-15/Agentic AI驱动芯片设计：智能理解、编码、分析、调试与优化闭环.pdf">📥 PDF</a></td></tr>
+          <tr><td>AI-HW-2035: Shaping the Next Decade</td><td><a class="pdf-link" href="./2026-03-15/AI-HW-2035_Shaping-the-Next-Decade.pdf">📥 PDF</a></td></tr>
+          <tr><td>AiEDA: Open-Source AI-Aided Design (2511.05823)</td><td><a class="pdf-link" href="./2026-03-15/AiEDA_Open-Source-AI-Aided-Design.pdf">📥 PDF</a></td></tr>
+          <tr><td>AI辅助RTL代码生成工具推荐</td><td><a class="pdf-link" href="./2026-03-15/AI辅助RTL代码生成工具推荐.pdf">📥 PDF</a></td></tr>
+          <tr><td>AI辅助验证（AI-Driven Verification）工具推荐</td><td><a class="pdf-link" href="./2026-03-15/AI辅助验证(AI-Driven Verification)工具推荐.pdf">📥 PDF</a></td></tr>
+          <tr><td>AI芯片设计师：Superlint Agent助力RTL Sign Off</td><td><a class="pdf-link" href="./2026-03-15/AI芯片设计师_ Superlint Agent助力进行RTL Sign Off.pdf">📥 PDF</a></td></tr>
+          <tr><td>Multi-Agent Generative AI for IC Verification</td><td><a class="pdf-link" href="./2026-03-15/Multi-Agent-Generative-AI-for-IC-Verification.pdf">📥 PDF</a></td></tr>
+          <tr><td>Shift-Left Techniques in EDA Survey</td><td><a class="pdf-link" href="./2026-03-15/Shift-Left-Techniques-in-EDA_Survey.pdf">📥 PDF</a></td></tr>
+          <tr><td>2D-TherMAl: Physics-Informed Thermal Analysis</td><td><a class="pdf-link" href="./2026-03-15/2D-ThermAl_Physics-Informed-Thermal-Analysis.pdf">📥 PDF</a></td></tr>
+          <tr><td>利用 MCP 进行 EDA 仿真的 Root Cause 分析</td><td><a class="pdf-link" href="./2026-03-15/利用 MCP 进行 EDA 仿真的 Root Cause 分析.pdf">📥 PDF</a></td></tr>
+          <tr><td>我用OpenClaw+全开源EDA工具+开源IP，做了一颗SoC</td><td><a class="pdf-link" href="./2026-03-15/我用OpenClaw+全开源EDA工具+开源IP，做了一颗SoC.pdf">📥 PDF</a></td></tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-hot">🔥 历史里程碑</span>
+          <div class="abs-title">Design Conductor — 世界首个自主设计完整可流片 CPU 的 AI Agent</div>
+          <div class="abs-meta">Verkor Team · 2026-02-06（更新 2026-03-11）· cs.AR / cs.AI</div>
+          <div class="abs-body">219 字需求文档，12 小时内全自主完成 RTL 实现 → 测试平台 → 前端调试 → 时序收敛 → GDSII 全流程。VerCore CPU：1.48 GHz（ASAP7 PDK，rv32i-zmmul），CoreMark 3261，性能相当于 2011 年 Intel Celeron SU2300。<strong>首个从规格到 GDSII 全自主构建的工作 CPU。</strong></div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.08716" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-15/2603.08716_Design_Conductor_RISCV_CPU.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-title">The Dawn of Agentic EDA — Agentic EDA 首篇系统综述</div>
+          <div class="abs-meta">Zelin Zang 等 9 人 · 2025-12-29（2026-02-07 修订）· eess.SY</div>
+          <div class="abs-body">提出 AI for EDA L2（点优化）→ L3（Agentic EDA 自主编排）范式框架，认知栈分类法（感知-认知-行动），分析前端双循环语法-语义修复与后端编排器，提出 Sim-to-Silicon 基准弥合可信性差距。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2512.23189" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-15/2512.23189_Dawn_of_Agentic_EDA_Survey.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 行业动态 ══════════════ -->
+<section id="news">
+  <div class="section-title"><span class="icon">🌍</span> 行业动态 <span class="line"></span></div>
+
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">🌐</span> 国际动态</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>西门子 · 2026-03-16（GTC 2026）</div>
+      <h4>西门子发布 Fuse EDA AI Agent — 跨领域自主智能体</h4>
+      <p>覆盖半导体数字设计（前端+物理）+ 3D IC + PCB 系统全流程，MCP 驱动分层规划（Supervisor + Worker Agents）+ 可执行 Playbook，三星电子和 NVIDIA 自身均为早期用户。</p>
+      <a href="https://news.siemens.com/en-us/siemens-fuse-eda-ai-agent/" target="_blank">→ 阅读原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Cadence / NVIDIA · 2026-03-18</div>
+      <h4>Cadence ChipStack™ AI Super Agent — 首个前端芯片设计 AI 超级智能体</h4>
+      <p>与 NVIDIA NemoClaw 深度集成，全系 EDA 工具 GPU 加速，吞吐量提升最高 80×，Clarity 3D Solver 在 Millennium M2000 上快 5×。联发科、Micron HBM 等已在使用。</p>
+      <a href="https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-and-nvidia-unveil-accelerated-engineering-solutions.html" target="_blank">→ 阅读原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Synopsys / NVIDIA · 2026-03-16</div>
+      <h4>Synopsys AgentEngineer™ — L4 级自主 EDA 工作流（Converge 2026 / GTC 2026）</h4>
+      <p>首个行业演示 L4 级自主 EDA 工作流（设计+验证），多智能体 RTL-to-Sign-off，Astera Labs 仿真加速 3.5×，Applied Materials 量子化学加速 30×。</p>
+      <a href="https://news.synopsys.com/2026-03-16-Synopsys-Showcases-NVIDIA-Partnership-Impact-and-Ecosystem-Innovation-at-GTC-2026" target="_blank">→ 阅读原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Adafruit Blog · 2026-03-22</div>
+      <h4>Design Conductor：AI Agent 12 小时从提示词到可流片 RISC-V CPU</h4>
+      <p>Verkor 团队发布 arXiv:2603.08716，从 219 字需求文档出发，自主完成 Verilog 编写、综合、布局布线、时序收敛到 GDSII 全流程，是已知首个自主构建的可工作 CPU。</p>
+      <a href="https://blog.adafruit.com/2026/03/22/prompt-to-tape-out-autonomous-ai-agent-builds-1-5-ghz-risc-v-cpu/" target="_blank">→ 阅读原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Rapidus · 2026-03-19</div>
+      <h4>Rapidus Raads — 日本 2nm 晶圆厂自研 AI 设计代理，3 家公司在用</h4>
+      <p>Generator（NL→RTL）+ Predictor（早期PPA预测）+ SynthCast（上游优化）三件套，直接利用自家 2nm 生产线制造数据训练，目标设计时间缩短 50%，成本降低 30%。</p>
+      <a href="https://kantenna.com/topic/rapidus-ai-agent-semiconductor-design-raads-three-companies" target="_blank">→ 阅读原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · 2026-03-17</div>
+      <h4>AI 如何自动化芯片设计：Cadence VP 提出五级自动化分类法</h4>
+      <p>Cadence VP Ziyad Hanna 提出芯片设计自动化五级分类法（镜像汽车自动驾驶），成为行业参考。核心挑战：可追溯性与可解释性——AI 的设计决策如何能被人类工程师审查和复现。</p>
+      <a href="https://semiengineering.com/how-ai-will-automate-chip-design/" target="_blank">→ 阅读原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>NSF / UCLA · 2026-03-13</div>
+      <h4>NSF Workshop on Agents for Chip Design Automation（UCLA）</h4>
+      <p>NVIDIA Mark Ho、UT Austin David Z. Pan、UCSD Jishen Zhao、UCLA Jason Cong、Cornell Zhiru Zhang 等顶级学者出席。NSF 级别认可标志着 Agentic EDA 升级为国家科研战略方向。</p>
+      <a href="https://ai4eda-workshop.github.io/2026/" target="_blank">→ 会议页面</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>DAC 2026 · 2026-03-19</div>
+      <h4>DAC 2026（第 63 届）接收论文 ID 公布，约 500+ 篇</h4>
+      <p>AI/EDA 方向录用包含：QiMeng-CodeV-SVA（中科院计算所）、DUET（Mamba-Transformer 加速器）、CellE（北大+清华）、UT Austin Meng Li 组 7 篇等。完整程序预计 4 月发布。</p>
+      <a href="https://www.dac.com/2026/accepted-paper-ids" target="_blank">→ 查看接收列表</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>ICLR 2026 Agent4Chip Workshop · 4月23-27</div>
+      <h4>Agent4Chip Workshop @ ICLR 2026 全部 23 篇论文公开</h4>
+      <p>精选：ACE-RTL（NVIDIA）、LLM4Cov（UCSD+NVIDIA）、VeriTrace（Utah）、EDAForge（TAMU）、HeaRT（UT Austin+NVIDIA）、PRO-V-R1（UCSD+NVIDIA）、NoTB（Columbia）等。</p>
+      <a href="https://ai4eda-workshop.github.io/2026/accepted_papers.html" target="_blank">→ 查看论文列表</a>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:1rem;margin:28px 0 14px;"><span class="icon">🇨🇳</span> 国内动态</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot" style="background:var(--accent3)"></span>新华网 · 2026-03-19</div>
+      <h4>合见工软发布 UniVista Design Agent 2.0 — 国产首款 L4 Agentic EDA</h4>
+      <p>从 L2 对话辅助跨越至 L4 智能体自主工作流，自主完成 RTL 设计→验证→纠错→优化闭环，全面支持 DeepSeek 等国产大模型，适配国产 GPU，全栈软硬件国产化。已开放商用试用。</p>
+      <a href="https://www.xinhuanet.com/tech/20260319/d8c0b88848874b96b23f9c5dddf2bbb5/c.html" target="_blank">→ 阅读原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot" style="background:var(--accent3)"></span>腾讯新闻 · 2026-03-22</div>
+      <h4>200字指令，Agent 设计出首个可流片 CPU，半天做完人类 18 个月工作</h4>
+      <p>国内媒体报道 Verkor Design Conductor 突破，强调 AI 智能体已能完成从需求到 GDSII 全流程，挑战"数百人团队、18–36 个月开发周期"的芯片设计传统范式。</p>
+      <a href="https://news.qq.com/rain/a/20260322A069R900" target="_blank">→ 阅读原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot" style="background:var(--accent3)"></span>中科院计算所 · 2025-12-23</div>
+      <h4>中科院"启蒙"（QiMeng）系统 6 项成果获 NeurIPS25 / AAAI26 顶会录用</h4>
+      <p>陈云霁/郭崎团队。NeurIPS25：CodeV-R1（Verilog RL生成 +12-20%）、SALV（信号级RL +10.9%）、MuPa（代码并行化）、NeuComBack（IR→汇编自演化）；AAAI26：CRUX（NL→Verilog结构化中间表达）、Kernel（GPU核宏观-微观编码，速度+7.3×）。</p>
+      <a href="https://sklp.ict.ac.cn/yjcg/202512/t20251223_813082.html" target="_blank">→ 阅读原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot" style="background:var(--accent3)"></span>复旦大学 · 2026-03-18</div>
+      <h4>复旦朱可人：AI 赋能 EDA，MAGICAL 系统实现模拟版图全自动化</h4>
+      <p>MAGICAL 系统从网表到版图全流程自动化，性能接近或超越人工，设计周期从小时级缩至秒级，入选 2025 年 MIT TR35 亚太区，已与多家企业合作推动产业落地。</p>
+      <a href="https://news.fudan.edu.cn/2026/0318/c31a148445/page.htm" target="_blank">→ 阅读原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot" style="background:var(--accent3)"></span>中科院 · 2024-08 → 2025-06</div>
+      <h4>"启蒙1号/2号"：全球首颗全自动设计处理器芯片及超标量处理器核</h4>
+      <p>"启蒙1号"：全球首颗无人工干预全自动设计处理器，可运行 Linux，性能达 Intel 486。"启蒙2号"：国际首个全自动设计超标量处理器核，性能达 ARM Cortex A53，1700 万逻辑门。</p>
+      <a href="https://www.cas.cn/cm/202408/t20240809_5028564.shtml" target="_blank">→ 阅读原文</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 时间线 ══════════════ -->
+<section id="timeline">
+  <div class="section-title"><span class="icon">📅</span> 重大事件时间线 <span class="line"></span></div>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-date">2026-03-22</div><h4>Design Conductor 论文公开，国内外媒体大规模报道</h4><p>Verkor 宣布首个从自然语言到可流片 GDSII 的完整自主 AI 芯片设计系统。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-19</div><h4>DAC 2026 接收论文 ID 正式公布（约 500+ 篇）</h4><p>AI/EDA 方向大量论文被录用，完整程序预计 4 月发布。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-18</div><h4>合见工软 UDA 2.0 + 复旦 MAGICAL 媒体聚焦</h4><p>国产 L4 Agentic EDA 平台正式商用；复旦朱可人团队模拟版图全自动化获 MIT TR35 认可。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-16–17</div><h4>NVIDIA GTC 2026：EDA 三巨头同台发布 Agentic EDA 产品</h4><p>Siemens Fuse EDA AI Agent（3/16）、Cadence ChipStack（3/18）、Synopsys AgentEngineer™（3/11 预发），三大厂商全部绑定 NVIDIA AI 平台，行业格局正式确立。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-13</div><h4>NSF UCLA Workshop — Agentic EDA 升级为国家科研战略方向</h4><p>NVIDIA、UT Austin、UCSD、UCLA、Cornell 等顶级研究组参与。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-11</div><h4>Synopsys Converge 2026：AgentEngineer™ 正式亮相，Multiphysics Fusion™ 预告</h4><p>L4 级高度自主多智能体工作流，涵盖 RTL → 验证闭环，首个 Ansys 收购后整合产品预告。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-06</div><h4>LUMINA（微软亚研院）：20 步找到优于 A100 的 GPU 架构设计</h4><p>LLM 驱动架构设计空间探索，DSE 效率比 ML 基线高 17.5×。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-02-10</div><h4>Cadence ChipStack™ AI Super Agent 首次发布</h4><p>声称全球首个面向前端芯片设计和验证的 Agentic AI 工作流，最高 10× 生产力提升。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-02-06</div><h4>Design Conductor 论文提交 arXiv（arXiv:2603.08716）</h4><p>Verkor Team，cs.AR / cs.AI，3 月起大规模传播。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-01-20</div><h4>灵活 LLM 辅助 EDA 框架论文发布（arXiv:2601.14098）</h4><p>支持商业 EDA 工具多领域（模拟/数字/RF）设计。</p></div>
+    <div class="tl-item"><div class="tl-date">2025-12-29</div><h4>"Agentic EDA 的黎明"综述发布（arXiv:2512.23189）</h4><p>首次系统构建 Agentic EDA 框架，提出 L3 自主数字芯片设计体系，2026 年 2 月更新。</p></div>
+    <div class="tl-item"><div class="tl-date">2025-12-23</div><h4>中科院"启蒙"6 项成果获 NeurIPS25 / AAAI26 录用</h4><p>覆盖 Verilog 生成、代码并行化、GPU 核自动生成等，NeurIPS25 收录 4 篇，AAAI26 收录 2 篇。</p></div>
+    <div class="tl-item"><div class="tl-date">2025-11-08</div><h4>AiEDA 开源库 &amp; iDATA 数据集发布（TCAD 2025）</h4><p>统一 Design-to-Vector 框架，600GB 真实芯片数据集（50 个 28nm 设计）。</p></div>
+    <div class="tl-item"><div class="tl-date">2025-10-17</div><h4>模拟 IC 布图规划布线感知 RL 方法（arXiv:2510.15387）</h4><p>布线成功率提升 73.4%，满足工业标准。</p></div>
+  </div>
+</section>
+
+<!-- ══════════════ 待追踪 ══════════════ -->
+<section id="tracking">
+  <div class="section-title"><span class="icon">📌</span> 待追踪事项 <span class="line"></span></div>
+  <ul class="todo-list">
+    <li><strong>VeriAgent</strong> 进化记忆机制代码开源（清华团队），与 ACE-RTL 的比较评测</li>
+    <li><strong>HWE-Bench</strong> GitHub 开源（EDI-Systems/HWE-Bench），社区扩展进度</li>
+    <li><strong>WarPGNN</strong> 与工业封装 EDA 工具（Ansys Sherlock / Cadence Allegro）集成可行性</li>
+    <li><strong>DAC 2026 完整论文程序</strong>：预计 4 月发布，关注 AI for EDA、高效 LLM 加速器两大专题</li>
+    <li><strong>Agent4Chip Workshop @ ICLR 2026</strong>（4月23-27，里约热内卢）：现场展示与论文演讲内容</li>
+    <li><strong>CODMAS RTLOPT 基准集</strong>开源进展，社区采用情况</li>
+    <li><strong>ACE-RTL 170 万 RTL 数据集</strong>开源时间表（NVIDIA Research）</li>
+    <li><strong>Rapidus Raads</strong> 更多客户公布，2nm 量产推进（目标 2027H2）</li>
+    <li><strong>Cadence 五级分类法</strong>：行业标准化进展与其他厂商的采用情况</li>
+    <li><strong>RTLocating EvoRTL-Bench</strong> 开源发布与社区复现</li>
+    <li><strong>合见工软 UDA 2.0</strong> 商用落地：头部客户公布与量产推进</li>
+    <li><strong>Siemens Fuse EDA AI Agent</strong> 实际用户规模（目前三星 + NVIDIA 已确认）</li>
+    <li>NVIDIA EDA Research：<a href="https://research.nvidia.com/labs/electronic-design-automation/" target="_blank" style="color:var(--accent2);">research.nvidia.com/labs/electronic-design-automation</a></li>
+  </ul>
+</section>
+
+</div>
+
+<footer>
+  <p>数据来源：arXiv.org · siemens.com · cadence.com · synopsys.com · xinhuanet.com · fudan.edu.cn · ict.cas.cn · news.qq.com · semiengineering.com · kantenna.com</p>
+  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-03-24</p>
+</footer>
+
+<script>
+  function toggleGroup(id) {
+    const body = document.getElementById(id);
+    const tog = document.getElementById('toggle-' + id);
+    if (body.classList.contains('collapsed')) {
+      body.classList.remove('collapsed');
+      tog.textContent = '▼';
+    } else {
+      body.classList.add('collapsed');
+      tog.textContent = '▶';
+    }
+  }
+</script>
+</body>
+</html>
