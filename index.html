@@ -185,11 +185,11 @@
 <header>
   <h1>🔬 AI for EDA 论文与资讯索引</h1>
   <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-03-24 · 涵盖 2026-03-15 → 2026-03-24</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-03-25 · 涵盖 2026-03-15 → 2026-03-25</p>
   <div class="stats">
-    <div class="stat"><div class="num">57</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">8</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">20+</div><div class="label">行业动态</div></div>
+    <div class="stat"><div class="num">64</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">9</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">25+</div><div class="label">行业动态</div></div>
     <div class="stat"><div class="num">3</div><div class="label">额外 PDF</div></div>
   </div>
 </header>
@@ -208,13 +208,14 @@
 <section id="overview">
   <div class="section-title"><span class="icon">📋</span> 核心趋势综述 <span class="line"></span></div>
   <div class="summary-box">
-    <h3>🔑 当前最重要的五大趋势</h3>
+    <h3>🔑 当前最重要的五大趋势（截至 2026-03-25）</h3>
     <ul>
       <li><strong>Agentic EDA 范式确立：</strong>AI for EDA 正从 L2（点工具优化）向 L3/L4（全流程自主编排）跨越。Verkor Design Conductor 用 219 字需求文档、12 小时自主完成 1.48 GHz RISC-V CPU（VerCore），是首个 AI 智能体端到端流片 CPU，重新定义了"自动化"上限。</li>
       <li><strong>三巨头绑定 NVIDIA AI 平台：</strong>GTC 2026（3月16-17日）上，Cadence（ChipStack™ AI Super Agent）、Synopsys（AgentEngineer™）、Siemens（Fuse EDA AI Agent）三大 EDA 厂商全部基于 NVIDIA NeMo/NemoClaw 发布旗舰 Agentic EDA 产品，行业格局正式确立。</li>
       <li><strong>国内自主路线崛起：</strong>合见工软 UDA 2.0（2026-03-18）发布国内首款 L4 Agentic EDA，支持 DeepSeek + 国产 GPU 全栈适配；中科院"启蒙"（QiMeng）在 NeurIPS25 / AAAI26 斩获 6 篇顶会；复旦朱可人 MAGICAL 系统入选 MIT TR35 亚太。</li>
-      <li><strong>形式化验证成为可信性关键：</strong>多篇论文（FormalRTL、AutoVeriFix+、SpecLoop）引入形式等价检验作为 LLM 生成 RTL 的后端验证门，将"不可信原型"转向"工业可靠系统"；DRCY 已真正落地量产。</li>
-      <li><strong>Benchmark 生态快速补全：</strong>CktEvo（仓库级RTL演化）、HWE-Bench（板级设计）、KernelCraft（近金属内核）、ChipBench（新一代LLM评测）、EvoRTL-Bench（工业级 RTL 定位）密集发布，填补了多个重要空白。</li>
+      <li><strong>多智能体协作 RTL 优化成核心范式：</strong>VeriAgent（清华，PPA 感知 + 进化记忆）、CODMAS（台大 + IBM，辩证式多智能体，延迟-25%/功耗-22%）、ACE-RTL（NVIDIA，智能上下文演化，CVDP+41% Pass Rate）三篇论文密集发布，标志着多智能体协作 RTL 优化进入成熟期。</li>
+      <li><strong>Benchmark 生态快速补全：</strong>CktEvo（仓库级RTL演化）、HWE-Bench（板级设计）、KernelCraft（近金属内核）、ChipBench（新一代LLM评测）、EvoRTL-Bench（工业级 RTL 定位）密集发布，COmPOSER（DAC 2026 录用）将 RF/mmWave 电路 AI 自动化效率提升 100-300×，填补多个重要空白。</li>
+    </ul>
     </ul>
   </div>
   <div class="tags">
@@ -229,6 +230,143 @@
 <!-- ══════════════ 论文 ══════════════ -->
 <section id="papers">
   <div class="section-title"><span class="icon">📄</span> 论文收录（按日期倒序）<span class="line"></span></div>
+
+  <!-- ── 2026-03-25 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0325')">
+      <h3>📅 2026-03-25 · 今日更新（7篇）</h3>
+      <span class="badge-count">7 篇</span>
+      <span class="toggle" id="toggle-g0325">▼</span>
+    </div>
+    <div id="g0325" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> VeriAgent: A Tool-Integrated Multi-Agent System with Evolving Memory for PPA-Aware RTL Code Generation</td>
+            <td class="cat">多智能体/RTL生成/PPA优化</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17613" target="_blank">2603.17613</a></td>
+            <td><a class="pdf-link" href="./2026-03-25/VeriAgent_Multi-Agent_PPA-Aware_RTL_Generation.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="star">★</span> CODMAS: A Dialectic Multi-Agent Collaborative Framework for Structured RTL Optimization</td>
+            <td class="cat">多智能体/RTL优化/PPA/EACL 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17204" target="_blank">2603.17204</a></td>
+            <td><a class="pdf-link" href="./2026-03-25/CODMAS_Dialectic_Multi-Agent_RTL_Optimization.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><span class="star">★</span> ACE-RTL: When Agentic Context Evolution Meets RTL-Specialized LLMs</td>
+            <td class="cat">RTL-专用LLM/多智能体/CVDP基准</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2602.10218" target="_blank">2602.10218</a></td>
+            <td><a class="pdf-link" href="./2026-03-25/ACE-RTL_Agentic_Context_Evolution_RTL-Specialized_LLMs.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Synthesis-in-the-Loop Evaluation of LLMs for RTL Generation: Quality, Reliability, and Failure Modes</td>
+            <td class="cat">LLM评测/RTL综合/HQI指标/VerilogEval</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.11287" target="_blank">2603.11287</a></td>
+            <td><a class="pdf-link" href="./2026-03-25/Synthesis-in-the-Loop_Eval_LLMs_RTL_Generation.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>DRCY: Agentic Hardware Design Reviews</td>
+            <td class="cat">硬件设计审查/多智能体/量产落地</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.15672" target="_blank">2603.15672</a></td>
+            <td><a class="pdf-link" href="./2026-03-25/DRCY_Agentic_Hardware_Design_Reviews.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>DS2SC-Agent: A Multi-Agent Automated Pipeline for Rapid Chiplet Model Generation</td>
+            <td class="cat">Chiplet/SystemC/多智能体/异构架构</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.21190" target="_blank">2603.21190</a></td>
+            <td><a class="pdf-link" href="./2026-03-25/DS2SC-Agent_Automated_Chiplet_Model_Generation.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><span class="star">★</span> COmPOSER: Circuit Optimization of mm-wave/RF circuits with Performance-Oriented Synthesis</td>
+            <td class="cat">模拟RF/毫米波/AI电路综合/DAC 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.20486" target="_blank">2603.20486</a></td>
+            <td><a class="pdf-link" href="./2026-03-25/COmPOSER_RF_mmwave_Circuit_Optimization_DAC2026.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-new">NEW</span><span class="badge-hot">🔥 HOT</span>
+          <div class="abs-title">VeriAgent — PPA 感知多智能体 RTL 生成系统，进化记忆机制驱动持续优化</div>
+          <div class="abs-meta">Yaoxiang Wang 等 9 人（清华 + 厦大）· 2026-03-18 · cs.CL</div>
+          <div class="abs-body">将 EDA 工具显式集成到三智能体闭环（程序员 / 正确性 / PPA智能体），首次将功能正确性与 <strong>物理 PPA 指标</strong> 共同优化。"进化记忆"机制将优化经验外化为结构化记忆节点，无需重训练即可持续改进。将 RTL 生成从一次性推理转变为 <strong>持续反馈驱动优化</strong>。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.17613" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-25/VeriAgent_Multi-Agent_PPA-Aware_RTL_Generation.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-new">NEW</span><span class="badge-top">🏆 EACL 2026</span>
+          <div class="abs-title">CODMAS — 辩证多智能体协作 RTL 优化，流水线延迟 −25%，功耗 −22%</div>
+          <div class="abs-meta">Che-Ming Chang 等 7 人（台大 + IBM Research）· 2026-03-17 · cs.CL · EACL 2026</div>
+          <div class="abs-body">提出"阐述者"（Articulator）+ "假设伙伴"（Hypothesis Partner）辩证推理架构，并引入 <strong>RTLOPT 基准</strong>（120 个 Verilog 三元组）。两类核心优化：流水线转换（关键路径延迟 <strong>↓25%</strong>）和时钟门控（功耗 <strong>↓22%</strong>），同时功能/编译失败率低于所有基线。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.17204" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-25/CODMAS_Dialectic_Multi-Agent_RTL_Optimization.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-new">NEW</span><span class="badge-hot">🔥 NVIDIA</span>
+          <div class="abs-title">ACE-RTL — 智能上下文演化统一 RTL 专用 LLM 与推理模型，CVDP 基准 +41% Pass Rate</div>
+          <div class="abs-meta">Chenhui Deng 等 6 人（NVIDIA Research）· 2026-02-10 / 2026-03-21修订 · cs.AR + cs.LG</div>
+          <div class="abs-body">统一两条独立路径：（1）170 万 RTL 样本训练的域适配 LLM；（2）由前沿推理 LLM 驱动的智能体系统。三组件协作（生成器 / 反思器 / 协调器）迭代优化功能正确性，并行探索策略缩短实际调试时间。在 CVDP 基准上相比 14 个竞品 <strong>Pass Rate 最高提升 41%</strong>。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2602.10218" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-25/ACE-RTL_Agentic_Context_Evolution_RTL-Specialized_LLMs.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-new">NEW</span>
+          <div class="abs-title">Synthesis-in-the-Loop Eval — 32 个 LLM 在 202 Verilog 任务全面基准，引入 HQI 硬件质量指数</div>
+          <div class="abs-meta">Weimin Fu 等 7 人（KU Leuven + NYU + KAUST）· 2026-03-11 · cs.AR + cs.SE</div>
+          <div class="abs-body">首次将综合循环（Synthesis-in-the-Loop）引入 LLM RTL 评测，提出 <strong>HQI（硬件质量指数）</strong>，整合面积 / 延迟 / 警告的 0-100 综合评分。结论：Gemini-3-Pro 领跑（HQI 85.1），专有模型因综合超时和细化错误而后期失败；开源模型因缺少模块封装而早期失败。<strong>多样本策略</strong>可获 3.8-22.1 HQI 提升。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.11287" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-25/Synthesis-in-the-Loop_Eval_LLMs_RTL_Generation.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-new">NEW</span>
+          <div class="abs-title">DRCY — 首个量产多智能体硬件设计审查系统，已在 AllSpice Hub 上线 CI/CD</div>
+          <div class="abs-meta">Kyle Dumont 等 4 人（AllSpice）· 2026-03-13 · cs.AR + cs.AI + cs.SE</div>
+          <div class="abs-body">自动化原理图连接性语义审查：自主获取器件数据手册 → 逐引脚分析 → 内联评论发布。五智能体流水线架构 + 多轮共识机制（提高安全关键分析可靠性）。已由多家硬件公司用于<strong>多智能体车辆设计到太空探索</strong>领域，真正落地量产。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.15672" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-25/DRCY_Agentic_Hardware_Design_Reviews.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-new">NEW</span>
+          <div class="abs-title">DS2SC-Agent — 数据手册→SystemC Chiplet 模型自动生成流水线，首个端到端全自动系统</div>
+          <div class="abs-meta">Yiwei Wu 等 9 人（上交 + 复旦）· 2026-03-22 · cs.AR</div>
+          <div class="abs-body">解决 Chiplet 建模的核心痛点：原始数据手册长篇复杂非结构化 → 上下文消失 + 逻辑幻觉。多智能体协作：非结构化长文档解析 / SystemC 代码构建 / 测试平台生成 / 自适应闭环调试。在 LNA、FFT、PA 三类典型 Chiplet 上验证，一致生成功能正确的 SystemC 模型，<strong>大幅减少人工干预</strong>。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.21190" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-25/DS2SC-Agent_Automated_Chiplet_Model_Generation.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-new">NEW</span><span class="badge-top">🏆 DAC 2026</span>
+          <div class="abs-title">COmPOSER — 开源 RF/毫米波端到端设计自动化框架，效率比人工提升 100–300×</div>
+          <div class="abs-meta">Subhadip Ghosh 等 7 人（明尼苏达大学 + 印度学者）· 2026-03-20 · cs.AR · <strong>DAC 2026 录用</strong></div>
+          <div class="abs-body">将目标规格直接转化为带布局的优化射频电路，集成：原理图综合 + 有源/无源器件布局生成 + 布局布线 + <strong>物理方程与机器学习电磁模型</strong>融合。在商用 65nm 工艺、60 GHz LNA 和 PA 上验证，性能媲美专家手工设计，同时效率提升 <strong>100-300×</strong>。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.20486" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-25/COmPOSER_RF_mmwave_Circuit_Optimization_DAC2026.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ── 2026-03-24 ── -->
   <div class="date-group">
@@ -626,7 +764,51 @@
 <section id="news">
   <div class="section-title"><span class="icon">🌍</span> 行业动态 <span class="line"></span></div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">🌐</span> 国际动态</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">🌐</span> 国际动态（2026-03-25 更新）</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Synopsys · 2026-03-11~19（Converge 2026）</div>
+      <h4>Synopsys AgentEngineer™ 正式发布 — 业界首个 L4 多智能体芯片设计与验证工作流</h4>
+      <p>Synopsys Converge 2026 大会发布 AgentEngineer™ 技术，演示业界首套精心编排的多智能体设计与验证工作流（L4 级高度自主），同步发布 Multiphysics-Fusion™（首批 Ansys 收购后集成产品），与 NVIDIA 战略合作实现 <strong>34 倍计算加速</strong>，提升设计效率 2-5 倍。</p>
+      <a href="https://www.synopsys.com/zh-tw/taiwan/press-releases/2026-press-release/2026-03-18-snps-vision-for-engineering-the-future.html" target="_blank">→ 阅读官方公告</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>arXiv · 2026-03-25（cs.AR 列表）</div>
+      <h4>arXiv cs.AR 今日新提交 13 篇 — MINISA、IMMSched 等 AI 加速器研究</h4>
+      <p>今日 arXiv 硬件架构类新提交包括：MINISA（下一代可重构推理加速器最小指令集架构，ISPASS 2026）、IMMSched（多 DNN 调度并行粒子子图同构）、COmPOSER（DAC 2026，RF/毫米波 AI 优化）、DS2SC-Agent（Chiplet 自动建模）等，共 13 篇。</p>
+      <a href="https://arxiv.org/list/cs.AR/recent" target="_blank">→ 查看 cs.AR 新论文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>NVIDIA Research · 2026-03-21</div>
+      <h4>ACE-RTL（NVIDIA）修订发布 — 170 万 RTL 样本驱动的专用域 LLM</h4>
+      <p>NVIDIA EDA 研究团队的 ACE-RTL 完成修订版发布（v2）。基于 170 万条 RTL 样本训练专用域模型，结合前沿推理 LLM 的智能体协调，在 CVDP 基准上 Pass Rate 较 14 个竞品最高提升 <strong>41.02%</strong>，树立硬件代码生成新 SOTA。</p>
+      <a href="https://arxiv.org/abs/2602.10218" target="_blank">→ 查看论文</a>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🇨🇳</span> 国内动态（2026-03-25 更新）</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>合见工软 · 2026-03-18</div>
+      <h4>合见工软发布国内首款 Agentic AI EDA 平台 UDA 2.0 — 全流程自主设计闭环</h4>
+      <p>上海合见工业软件正式发布第二代数字设计 AI 智能平台 UniVista Design Agent（UDA）2.0，是国内首款 Agentic AI 自研 EDA 平台。支持自主解析 RTL / 网表 / 时序报告，多维度 PPA 折中探索，约束收敛自治完成，并兼容 DeepSeek 模型与国产 GPU 全栈适配。</p>
+      <a href="https://www.guancha.cn/GongSi/2026_03_19_810641.shtml" target="_blank">→ 阅读报道</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>清华 + 厦大 · 2026-03-18</div>
+      <h4>VeriAgent：国内学术团队发布 PPA 感知 RTL 多智能体系统，进化记忆机制首创</h4>
+      <p>清华 + 厦大团队发布 VeriAgent，首次引入<strong>进化记忆机制</strong>（Evolving Memory），将优化经验外化为结构化记忆节点，实现无需重训练的持续改进，被认为是国内 LLM for EDA 学术研究的最新力作之一。</p>
+      <a href="https://arxiv.org/abs/2603.17613" target="_blank">→ 查看论文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>上交 + 复旦 · 2026-03-22</div>
+      <h4>DS2SC-Agent：首个 Chiplet 数据手册→SystemC 全自动建模流水线，复旦上交联合发布</h4>
+      <p>直接将非结构化数据手册转换为 SystemC Chiplet 模型，覆盖模拟（LNA）/ 数字（FFT）/ 射频（PA）三类芯片。为国内在先进封装 / Chiplet 异构集成 AI 辅助设计领域的重要进展。</p>
+      <a href="https://arxiv.org/abs/2603.21190" target="_blank">→ 查看论文</a>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌐</span> 国际动态（历史）</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>西门子 · 2026-03-16（GTC 2026）</div>
@@ -727,6 +909,10 @@
     <div class="tl-item"><div class="tl-date">2026-03-19</div><h4>DAC 2026 接收论文 ID 正式公布（约 500+ 篇）</h4><p>AI/EDA 方向大量论文被录用，完整程序预计 4 月发布。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-18</div><h4>合见工软 UDA 2.0 + 复旦 MAGICAL 媒体聚焦</h4><p>国产 L4 Agentic EDA 平台正式商用；复旦朱可人团队模拟版图全自动化获 MIT TR35 认可。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-16–17</div><h4>NVIDIA GTC 2026：EDA 三巨头同台发布 Agentic EDA 产品</h4><p>Siemens Fuse EDA AI Agent（3/16）、Cadence ChipStack（3/18）、Synopsys AgentEngineer™（3/11 预发），三大厂商全部绑定 NVIDIA AI 平台，行业格局正式确立。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-25</div><h4>今日更新：7 篇新论文（VeriAgent / CODMAS / ACE-RTL / COmPOSER-DAC 等）</h4><p>多智能体 RTL 优化三剑客同期发布，COmPOSER DAC 2026 录用，DS2SC-Agent 实现 Chiplet 全自动建模。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-22</div><h4>DS2SC-Agent 发布 — Chiplet 自动建模里程碑</h4><p>上交 + 复旦团队，首个数据手册→SystemC 端到端流水线。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-20</div><h4>COmPOSER 被 DAC 2026 录用 — RF/毫米波 AI 优化效率提升 100-300×</h4><p>明尼苏达大学团队，开源端到端 RF 电路设计自动化框架。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-18</div><h4>合见工软 UDA 2.0 + VeriAgent + CODMAS 三款重磅产品/论文同日发布</h4><p>Agentic EDA 国产阵营 + 多智能体 RTL 优化学术研究在同一天达到高峰。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-13</div><h4>NSF UCLA Workshop — Agentic EDA 升级为国家科研战略方向</h4><p>NVIDIA、UT Austin、UCSD、UCLA、Cornell 等顶级研究组参与。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-11</div><h4>Synopsys Converge 2026：AgentEngineer™ 正式亮相，Multiphysics Fusion™ 预告</h4><p>L4 级高度自主多智能体工作流，涵盖 RTL → 验证闭环，首个 Ansys 收购后整合产品预告。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-06</div><h4>LUMINA（微软亚研院）：20 步找到优于 A100 的 GPU 架构设计</h4><p>LLM 驱动架构设计空间探索，DSE 效率比 ML 基线高 17.5×。</p></div>
@@ -744,7 +930,11 @@
 <section id="tracking">
   <div class="section-title"><span class="icon">📌</span> 待追踪事项 <span class="line"></span></div>
   <ul class="todo-list">
-    <li><strong>VeriAgent</strong> 进化记忆机制代码开源（清华团队），与 ACE-RTL 的比较评测</li>
+    <li><strong>VeriAgent 进化记忆机制</strong>代码开源（清华团队），与 ACE-RTL 的比较评测</li>
+    <li><strong>COmPOSER</strong> 开源代码发布时间（DAC 2026 录用后），65nm RF/mmWave 扩展</li>
+    <li><strong>DS2SC-Agent</strong> 数字 DDR/PCIe Chiplet 模型生成扩展（当前仅模拟+数字+RF）</li>
+    <li><strong>CODMAS RTLOPT 基准集</strong>开源进展，社区采用情况</li>
+    <li><strong>ACE-RTL 170 万 RTL 数据集</strong>开源时间表（NVIDIA Research）</li>
     <li><strong>HWE-Bench</strong> GitHub 开源（EDI-Systems/HWE-Bench），社区扩展进度</li>
     <li><strong>WarPGNN</strong> 与工业封装 EDA 工具（Ansys Sherlock / Cadence Allegro）集成可行性</li>
     <li><strong>DAC 2026 完整论文程序</strong>：预计 4 月发布，关注 AI for EDA、高效 LLM 加速器两大专题</li>
@@ -763,8 +953,8 @@
 </div>
 
 <footer>
-  <p>数据来源：arXiv.org · siemens.com · cadence.com · synopsys.com · xinhuanet.com · fudan.edu.cn · ict.cas.cn · news.qq.com · semiengineering.com · kantenna.com</p>
-  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-03-24</p>
+  <p>数据来源：arXiv.org · siemens.com · cadence.com · synopsys.com · xinhuanet.com · fudan.edu.cn · ict.cas.cn · news.qq.com · semiengineering.com · guancha.cn · eepw.com.cn · cleancode.vip</p>
+  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-03-25</p>
 </footer>
 
 <script>
