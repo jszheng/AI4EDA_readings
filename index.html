@@ -185,11 +185,11 @@
 <header>
   <h1>🔬 AI for EDA 论文与资讯索引</h1>
   <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-03-25 · 涵盖 2026-03-15 → 2026-03-25</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-03-26 · 涵盖 2026-03-15 → 2026-03-26</p>
   <div class="stats">
-    <div class="stat"><div class="num">64</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">9</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">25+</div><div class="label">行业动态</div></div>
+    <div class="stat"><div class="num">67</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">10</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">29+</div><div class="label">行业动态</div></div>
     <div class="stat"><div class="num">3</div><div class="label">额外 PDF</div></div>
   </div>
 </header>
@@ -208,14 +208,14 @@
 <section id="overview">
   <div class="section-title"><span class="icon">📋</span> 核心趋势综述 <span class="line"></span></div>
   <div class="summary-box">
-    <h3>🔑 当前最重要的五大趋势（截至 2026-03-25）</h3>
+    <h3>🔑 当前最重要的六大趋势（截至 2026-03-26）</h3>
     <ul>
       <li><strong>Agentic EDA 范式确立：</strong>AI for EDA 正从 L2（点工具优化）向 L3/L4（全流程自主编排）跨越。Verkor Design Conductor 用 219 字需求文档、12 小时自主完成 1.48 GHz RISC-V CPU（VerCore），是首个 AI 智能体端到端流片 CPU，重新定义了"自动化"上限。</li>
-      <li><strong>三巨头绑定 NVIDIA AI 平台：</strong>GTC 2026（3月16-17日）上，Cadence（ChipStack™ AI Super Agent）、Synopsys（AgentEngineer™）、Siemens（Fuse EDA AI Agent）三大 EDA 厂商全部基于 NVIDIA NeMo/NemoClaw 发布旗舰 Agentic EDA 产品，行业格局正式确立。</li>
+      <li><strong>三巨头绑定 NVIDIA AI 平台：</strong>GTC 2026（3月16-17日）上，Cadence（ChipStack™ AI Super Agent）、Synopsys（AgentEngineer™）、Siemens（Fuse EDA AI Agent）三大 EDA 厂商全部基于 NVIDIA NeMo/NemoClaw 发布旗舰 Agentic EDA 产品，行业格局正式确立。NVIDIA 内部也证实：强化学习系统可一夜生成标准单元库，内部 LLM 可导航几十年架构知识。</li>
       <li><strong>国内自主路线崛起：</strong>合见工软 UDA 2.0（2026-03-18）发布国内首款 L4 Agentic EDA，支持 DeepSeek + 国产 GPU 全栈适配；中科院"启蒙"（QiMeng）在 NeurIPS25 / AAAI26 斩获 6 篇顶会；复旦朱可人 MAGICAL 系统入选 MIT TR35 亚太。</li>
-      <li><strong>多智能体协作 RTL 优化成核心范式：</strong>VeriAgent（清华，PPA 感知 + 进化记忆）、CODMAS（台大 + IBM，辩证式多智能体，延迟-25%/功耗-22%）、ACE-RTL（NVIDIA，智能上下文演化，CVDP+41% Pass Rate）三篇论文密集发布，标志着多智能体协作 RTL 优化进入成熟期。</li>
-      <li><strong>Benchmark 生态快速补全：</strong>CktEvo（仓库级RTL演化）、HWE-Bench（板级设计）、KernelCraft（近金属内核）、ChipBench（新一代LLM评测）、EvoRTL-Bench（工业级 RTL 定位）密集发布，COmPOSER（DAC 2026 录用）将 RF/mmWave 电路 AI 自动化效率提升 100-300×，填补多个重要空白。</li>
-    </ul>
+      <li><strong>多智能体协作 RTL 优化成核心范式：</strong>VeriAgent（清华，PPA 感知 + 进化记忆）、CODMAS（台大 + IBM，辩证式多智能体，延迟-25%/功耗-22%）、ACE-RTL（NVIDIA，智能上下文演化，CVDP+41% Pass Rate）、POET（USC，进化调优功耗-PPA，100% 功能正确性）四篇论文密集发布，标志着多智能体协作 RTL 优化进入成熟期。</li>
+      <li><strong>Benchmark 生态快速补全：</strong>CktEvo（仓库级RTL演化）、HWE-Bench（板级设计，300项任务，2914份IC数据手册，LLM通过率仅8.15%揭示物理直觉缺失）、KernelCraft（近金属内核）、ChipBench、CVDP（NVIDIA，782题Verilog综合基准）密集发布，填补多个重要空白。</li>
+      <li><strong>LLM Verilog 智能体系统化评测启动：</strong>「Exploring the Agentic Frontier of Verilog Code Generation」首次系统评测 Agentic LLM for Verilog（CVDP 基准），发现：简单智能体化封装反而降低性能；结构化框架才有意义；开源/闭源差距主要来自崩溃率和工具输出解释能力。</li>
     </ul>
   </div>
   <div class="tags">
@@ -230,6 +230,71 @@
 <!-- ══════════════ 论文 ══════════════ -->
 <section id="papers">
   <div class="section-title"><span class="icon">📄</span> 论文收录（按日期倒序）<span class="line"></span></div>
+
+  <!-- ── 2026-03-26 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0326')">
+      <h3>📅 2026-03-26 · 今日更新（3篇）</h3>
+      <span class="badge-count">3 篇</span>
+      <span class="toggle" id="toggle-g0326">▼</span>
+    </div>
+    <div class="date-body" id="g0326">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> POET: Power-Oriented Evolutionary Tuning for LLM-Based RTL PPA Optimization</td>
+            <td class="cat">RTL优化/LLM/进化算法/PPA/功耗</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.19333" target="_blank">2603.19333</a></td>
+            <td><a class="pdf-link" href="./2026-03-26/POET-Power-Oriented-Evolutionary-Tuning-LLM-RTL-PPA.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="star">★</span> Exploring the Agentic Frontier of Verilog Code Generation</td>
+            <td class="cat">Agentic LLM/Verilog生成/CVDP基准/开源评测</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.19347" target="_blank">2603.19347</a></td>
+            <td><a class="pdf-link" href="./2026-03-26/Exploring-Agentic-Frontier-Verilog-Code-Generation.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>HWE-Bench: Can Language Models Perform Board-level Schematic Designs?</td>
+            <td class="cat">板级EDA/LLM基准/原理图设计/LLM评测</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.18102" target="_blank">2603.18102</a></td>
+            <td><a class="pdf-link" href="./2026-03-26/HWE-Bench-LM-Board-level-Schematic-Designs.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 摘要卡片 -->
+      <div class="abs-card">
+        <div class="abs-title">POET: Power-Oriented Evolutionary Tuning for LLM-Based RTL PPA Optimization</div>
+        <div class="abs-meta">arXiv:2603.19333 · 2026-03-19 · USC（Shahin Nazarian 组）</div>
+        <div class="abs-body">针对 LLM 驱动 RTL PPA 优化的两大核心挑战：功能正确性（LLM 幻觉）与功耗优先的多目标权衡。POET 引入<strong>差分测试基准生成</strong>（以原始设计作参考消除幻觉）+ <strong>LLM 驱动进化机制</strong>（非支配排序 + 功率优先层内排序 + 帕累托前端低功耗导航）。在 40 个多样化 RTL 设计（RTL-OPT 基准）上实现 <strong>100% 功能正确性</strong> + 所有设计最优功耗结果，面积和延迟改善同样具竞争力。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.19333" target="_blank">arXiv</a>
+          <a class="local" href="./2026-03-26/POET-Power-Oriented-Evolutionary-Tuning-LLM-RTL-PPA.pdf">本地 PDF</a>
+        </div>
+      </div>
+      <div class="abs-card">
+        <div class="abs-title">Exploring the Agentic Frontier of Verilog Code Generation</div>
+        <div class="abs-meta">arXiv:2603.19347 · 2026-03-19（v1）/ 2026-03-24（v2）· NYU（Siddharth Garg、Chinmay Hegde 组）</div>
+        <div class="abs-body">首个系统评测用于 Verilog 生成的 Agentic LLM 框架，使用 CVDP 基准（NVIDIA 发布）。关键发现：<strong>简单智能体化封装可能降低性能</strong>（相比优化提示词的标准前向传递），但结构化框架能有意义地达到或超越非智能体基线；开源 / 闭源差距主要由<strong>更高崩溃率</strong>和<strong>较弱工具输出解释能力</strong>驱动。发布多个开源硬件设计智能体框架，提供与模型无关的基线。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.19347" target="_blank">arXiv</a>
+          <a class="local" href="./2026-03-26/Exploring-Agentic-Frontier-Verilog-Code-Generation.pdf">本地 PDF</a>
+        </div>
+      </div>
+      <div class="abs-card">
+        <div class="abs-title">HWE-Bench: Can Language Models Perform Board-level Schematic Designs?</div>
+        <div class="abs-meta">arXiv:2603.18102 · 2026-03-18 · Weibo Qiu 等</div>
+        <div class="abs-body">提出 HWE-Bench —— 评估 LLM 执行板级电路设计能力的基准。300 项板级设计任务（8 个应用领域，来自 GitHub / OSHWLab），含 <strong>2,914 份真实 IC 数据手册</strong>。LLM 需根据功能需求 + 器件数据手册从零生成原理图，经静态电气规则检查 + 电路仿真验证。结论：<strong>最佳模型通过率仅 8.15%</strong>，揭示 LLM 缺乏物理直觉，为 EDA AI 智能体发展路径研究提供方向。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.18102" target="_blank">arXiv</a>
+          <a class="local" href="./2026-03-26/HWE-Bench-LM-Board-level-Schematic-Designs.pdf">本地 PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ── 2026-03-25 ── -->
   <div class="date-group">
@@ -764,7 +829,46 @@
 <section id="news">
   <div class="section-title"><span class="icon">🌍</span> 行业动态 <span class="line"></span></div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">🌐</span> 国际动态（2026-03-25 更新）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">🌐</span> 国际动态（2026-03-26 更新）</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>NVIDIA Research · 2026-03-19（GTC 2026 主题演讲）</div>
+      <h4>NVIDIA 内部揭秘：强化学习一夜生成标准单元库 / 内部 LLM 导航设计历史</h4>
+      <p>GTC 2026 首席科学家 Bill Dally 公开披露：NVIDIA 正在使用<strong>强化学习系统一夜之间生成标准单元库</strong>（传统需数月人工），并以内部 LLM 训练几十年设计历史，助力初级工程师快速导航架构知识。下一代平台 Vera Rubin 和 Feynman 架构同步发布。</p>
+      <a href="https://blogs.nvidia.com/blog/gtc-2026-news/" target="_blank">→ 阅读 GTC 2026 新闻汇总</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>NVIDIA / Cadence / Synopsys / Siemens · 2026-03-16~17（GTC 2026）</div>
+      <h4>NVIDIA 宣布与四大工业软件巨头（含 Cadence、Synopsys、Siemens）深化 AI 智能体合作</h4>
+      <p>NVIDIA 与 Cadence、Dassault Systèmes、Siemens、Synopsys 联合发布：基于 <strong>NVIDIA CUDA-X、Omniverse、NeMo、GPU 加速</strong>构建新一代 AI 智能体，用于复杂芯片和系统工作流的规划、优化和验证。Cadence 在 Millennium M2000（GB200）上实现吞吐量提升 <strong>最高 80×</strong>。</p>
+      <a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Global-Industrial-Software-Giants-Bring-Design-Engineering-and-Manufacturing-Into-the-AI-Era/default.aspx" target="_blank">→ 阅读 NVIDIA 新闻稿</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-03-26（今日新提交）</div>
+      <h4>arXiv cs.AR 今日新论文：TsetlinWiSARD（DAC 2026 录用）片上训练权重神经网络</h4>
+      <p>今日 cs.AR 新提交 2 篇，交叉列表 2 篇。重点：<strong>TsetlinWiSARD（DAC 2026 录用）</strong>：在 FPGA 上实现权重神经网络（WNN）片上训练，相比传统 WiSARD 实现超 1000× 训练加速，针对边缘 AI 自适应性 / 隐私 / 安全需求；PowerFlow-DNN：编译器驱动的边缘 AI 推理精细化功耗编排框架，自动发现满足截止时间约束的能耗最优调度。</p>
+      <a href="https://arxiv.org/list/cs.AR/new" target="_blank">→ 查看 cs.AR 今日列表</a>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🇨🇳</span> 国内动态（2026-03-26 更新）</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>USC 郑昆旺等 · 2026-03-19（arXiv）</div>
+      <h4>POET 框架：LLM 进化调优首次实现 RTL PPA 全样本最优功耗 + 100% 功能正确</h4>
+      <p>USC Shahin Nazarian 组提出 POET（Power-Oriented Evolutionary Tuning），在 40 个 RTL 设计上获得<strong>全部最佳功耗结果 + 100% 功能正确</strong>，同时面积和延迟保持竞争力。差分测试基准生成技术彻底消除 LLM 幻觉对验证的影响。</p>
+      <a href="https://arxiv.org/abs/2603.19333" target="_blank">→ 查看论文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>NYU · 2026-03-24（arXiv v2）</div>
+      <h4>Agentic Verilog 系统化评测：简单智能体化封装反而降低性能，结构化框架是关键</h4>
+      <p>NYU 首次系统评测 Agentic LLM 用于 Verilog 生成（基于 CVDP 基准），关键发现：智能体化封装不等于性能提升，结构化工具使用和提示设计更重要；开源模型与闭源差距主要来自崩溃率与工具输出解释能力，为设计专用 Verilog 智能体提供实证方向。</p>
+      <a href="https://arxiv.org/abs/2603.19347" target="_blank">→ 查看论文</a>
+    </div>
+  </div>
+
+
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌐</span> 国际动态（2026-03-25 · 历史）</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>Synopsys · 2026-03-11~19（Converge 2026）</div>
@@ -786,7 +890,7 @@
     </div>
   </div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🇨🇳</span> 国内动态（2026-03-25 更新）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🇨🇳</span> 国内动态（2026-03-25 · 历史）</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>合见工软 · 2026-03-18</div>
@@ -905,6 +1009,7 @@
 <section id="timeline">
   <div class="section-title"><span class="icon">📅</span> 重大事件时间线 <span class="line"></span></div>
   <div class="timeline">
+    <div class="tl-item"><div class="tl-date">2026-03-26</div><h4>今日更新：3 篇新论文（POET / Agentic Verilog / HWE-Bench）+ NVIDIA GTC 2026 AI 芯片设计内部披露</h4><p>POET 实现 RTL 全样本最优功耗 + 100% 功能正确；首个系统评测 Agentic LLM for Verilog（CVDP 基准）；HWE-Bench 揭示 LLM 板级设计通过率仅 8.15%；NVIDIA 首席科学家披露内部 RL 系统一夜生成标准单元库。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-22</div><h4>Design Conductor 论文公开，国内外媒体大规模报道</h4><p>Verkor 宣布首个从自然语言到可流片 GDSII 的完整自主 AI 芯片设计系统。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-19</div><h4>DAC 2026 接收论文 ID 正式公布（约 500+ 篇）</h4><p>AI/EDA 方向大量论文被录用，完整程序预计 4 月发布。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-18</div><h4>合见工软 UDA 2.0 + 复旦 MAGICAL 媒体聚焦</h4><p>国产 L4 Agentic EDA 平台正式商用；复旦朱可人团队模拟版图全自动化获 MIT TR35 认可。</p></div>
@@ -953,8 +1058,8 @@
 </div>
 
 <footer>
-  <p>数据来源：arXiv.org · siemens.com · cadence.com · synopsys.com · xinhuanet.com · fudan.edu.cn · ict.cas.cn · news.qq.com · semiengineering.com · guancha.cn · eepw.com.cn · cleancode.vip</p>
-  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-03-25</p>
+  <p>数据来源：arXiv.org · siemens.com · cadence.com · synopsys.com · xinhuanet.com · fudan.edu.cn · ict.cas.cn · news.qq.com · semiengineering.com · guancha.cn · eepw.com.cn · nvidia.com · blogs.nvidia.com</p>
+  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-03-26</p>
 </footer>
 
 <script>
