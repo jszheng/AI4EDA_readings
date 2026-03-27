@@ -185,12 +185,12 @@
 <header>
   <h1>🔬 AI for EDA 论文与资讯索引</h1>
   <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-03-26 · 涵盖 2026-03-15 → 2026-03-26</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-03-27 · 涵盖 2026-03-15 → 2026-03-27</p>
   <div class="stats">
-    <div class="stat"><div class="num">67</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">10</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">29+</div><div class="label">行业动态</div></div>
-    <div class="stat"><div class="num">3</div><div class="label">额外 PDF</div></div>
+    <div class="stat"><div class="num">71</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">11</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">33+</div><div class="label">行业动态</div></div>
+    <div class="stat"><div class="num">4</div><div class="label">今日新增</div></div>
   </div>
 </header>
 
@@ -208,14 +208,15 @@
 <section id="overview">
   <div class="section-title"><span class="icon">📋</span> 核心趋势综述 <span class="line"></span></div>
   <div class="summary-box">
-    <h3>🔑 当前最重要的六大趋势（截至 2026-03-26）</h3>
+    <h3>🔑 当前最重要的七大趋势（截至 2026-03-27）</h3>
     <ul>
       <li><strong>Agentic EDA 范式确立：</strong>AI for EDA 正从 L2（点工具优化）向 L3/L4（全流程自主编排）跨越。Verkor Design Conductor 用 219 字需求文档、12 小时自主完成 1.48 GHz RISC-V CPU（VerCore），是首个 AI 智能体端到端流片 CPU，重新定义了"自动化"上限。</li>
       <li><strong>三巨头绑定 NVIDIA AI 平台：</strong>GTC 2026（3月16-17日）上，Cadence（ChipStack™ AI Super Agent）、Synopsys（AgentEngineer™）、Siemens（Fuse EDA AI Agent）三大 EDA 厂商全部基于 NVIDIA NeMo/NemoClaw 发布旗舰 Agentic EDA 产品，行业格局正式确立。NVIDIA 内部也证实：强化学习系统可一夜生成标准单元库，内部 LLM 可导航几十年架构知识。</li>
-      <li><strong>国内自主路线崛起：</strong>合见工软 UDA 2.0（2026-03-18）发布国内首款 L4 Agentic EDA，支持 DeepSeek + 国产 GPU 全栈适配；中科院"启蒙"（QiMeng）在 NeurIPS25 / AAAI26 斩获 6 篇顶会；复旦朱可人 MAGICAL 系统入选 MIT TR35 亚太。</li>
+      <li><strong>SEMICON China 2026（3月25-27日）掀起国内 AI EDA 浪潮：</strong>Siemens EDA EVP Ankur Gupta 主题演讲"以 AI 重塑电子设计的未来"，提出 Agentic AI 目标是将<strong>芯片设计周期缩短一半</strong>，构建数字孪生 + 三层技术架构（算力基础设施 / 物理建模 / 设计流程），并重点攻克大模型幻觉问题。全球半导体市场规模有望 2026 年底提前达一万亿美元。</li>
+      <li><strong>国内自主路线崛起：</strong>合见工软 UDA 2.0（2026-03-18）发布国内首款 L4 Agentic EDA，支持 DeepSeek + 国产 GPU 全栈适配；芯和半导体在 SEMICON China 2026 启动成立 16 年来最具里程碑意义的定位升级，以"AI 时代系统级 EDA"为核心重塑品牌；中科院"启蒙"（QiMeng）在 NeurIPS25 / AAAI26 斩获 6 篇顶会。</li>
       <li><strong>多智能体协作 RTL 优化成核心范式：</strong>VeriAgent（清华，PPA 感知 + 进化记忆）、CODMAS（台大 + IBM，辩证式多智能体，延迟-25%/功耗-22%）、ACE-RTL（NVIDIA，智能上下文演化，CVDP+41% Pass Rate）、POET（USC，进化调优功耗-PPA，100% 功能正确性）四篇论文密集发布，标志着多智能体协作 RTL 优化进入成熟期。</li>
-      <li><strong>Benchmark 生态快速补全：</strong>CktEvo（仓库级RTL演化）、HWE-Bench（板级设计，300项任务，2914份IC数据手册，LLM通过率仅8.15%揭示物理直觉缺失）、KernelCraft（近金属内核）、ChipBench、CVDP（NVIDIA，782题Verilog综合基准）密集发布，填补多个重要空白。</li>
-      <li><strong>LLM Verilog 智能体系统化评测启动：</strong>「Exploring the Agentic Frontier of Verilog Code Generation」首次系统评测 Agentic LLM for Verilog（CVDP 基准），发现：简单智能体化封装反而降低性能；结构化框架才有意义；开源/闭源差距主要来自崩溃率和工具输出解释能力。</li>
+      <li><strong>Benchmark 生态快速补全：</strong>CktEvo（仓库级RTL演化）、HWE-Bench（板级设计，300项任务，最佳LLM通过率仅8.15%）、ChipBench（UCSD/Columbia，超越VerilogEval饱和问题）、CVDP（NVIDIA，782题Verilog综合基准）、DUET（Agentic RTL形式验证理解框架）密集发布，填补多个重要空白。</li>
+      <li><strong>边缘 AI 推理与硬件协同设计受关注：</strong>PowerFlow-DNN（TSMC 40nm 验证，能耗降低 37%，编译器指导功耗编排）和 Energy-Efficient SW/HW CoDesign（从 TinyML 到 LLM 全栈覆盖，ASPLOS 2026 EMC2 Workshop）标志着 AI 系统硬件协同设计理论成熟，将对 AI 芯片 EDA 流程产生深远影响。</li>
     </ul>
   </div>
   <div class="tags">
@@ -230,6 +231,91 @@
 <!-- ══════════════ 论文 ══════════════ -->
 <section id="papers">
   <div class="section-title"><span class="icon">📄</span> 论文收录（按日期倒序）<span class="line"></span></div>
+
+  <!-- ── 2026-03-27 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0327')">
+      <h3>📅 2026-03-27 · 今日更新（4篇）</h3>
+      <span class="badge-count">4 篇</span>
+      <span class="toggle" id="toggle-g0327">▼</span>
+    </div>
+    <div class="date-body" id="g0327">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> PowerFlow-DNN: Compiler-Directed Fine-Grained Power Orchestration for End-to-End Edge AI Inference</td>
+            <td class="cat">边缘AI推理/电源管理/编译器优化/VLSI</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.23882" target="_blank">2603.23882</a></td>
+            <td><a class="pdf-link" href="./2026-03-27/PowerFlow-DNN-Compiler-Power-Orchestration-Edge-AI.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Energy Efficient Software Hardware CoDesign for Machine Learning: From TinyML to Large Language Models</td>
+            <td class="cat">软硬件协同设计/能效/TinyML/LLM/ASPLOS 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.23668" target="_blank">2603.23668</a></td>
+            <td><a class="pdf-link" href="./2026-03-27/Energy-Efficient-SW-HW-CoDesign-ML-TinyML-LLM.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><span class="star">★</span> ChipBench: A Next-Step Benchmark for Evaluating LLM Performance in AI-Aided Chip Design</td>
+            <td class="cat">LLM评测基准/HLS/Verilog/芯片设计/UCSD/Columbia</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2601.21448" target="_blank">2601.21448</a></td>
+            <td><a class="pdf-link" href="./2026-03-27/ChipBench-Next-Step-Benchmark-LLM-Hardware-Design.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><span class="star">★</span> DUET: Agentic Design Understanding via Experimentation and Testing</td>
+            <td class="cat">Agentic LLM/RTL理解/形式验证/迭代实验</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2512.06247" target="_blank">2512.06247</a></td>
+            <td><a class="pdf-link" href="./2026-03-27/DUET-Agentic-Design-Understanding-RTL-Formal-Verification.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 摘要卡片 -->
+      <div class="abs-card">
+        <span class="badge-new">NEW</span>
+        <div class="abs-title">PowerFlow-DNN: Compiler-Directed Fine-Grained Power Orchestration for End-to-End Edge AI Inference</div>
+        <div class="abs-meta">arXiv:2603.23882 · cs.AR · 2026-03-25 · Paul Chen, Jeongeun Kim et al.（TSMC 40nm 验证）</div>
+        <div class="abs-body">针对边缘 AI 推理的超低功耗加速器，提出编译器指导的细粒度功率状态编排框架。将 deadline 约束下的实时周期性推理建模为统一的<strong>层间功率调度问题</strong>，自动发现能量最小的调度方案。在 TSMC 40nm 工艺上验证，在超过 10<sup>160</sup> 的组合空间中通过结构化层级状态图 + 轻量级剪枝，能耗降低高达 <strong>37%</strong>，与精确 ILP 解仅差 0.68%，推理加速 2.14×。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.23882" target="_blank">arXiv</a>
+          <a class="local" href="./2026-03-27/PowerFlow-DNN-Compiler-Power-Orchestration-Edge-AI.pdf">本地 PDF</a>
+        </div>
+      </div>
+      <div class="abs-card">
+        <span class="badge-new">NEW</span><span class="badge-top">ASPLOS 2026 Workshop</span>
+        <div class="abs-title">Energy Efficient Software Hardware CoDesign for Machine Learning: From TinyML to Large Language Models</div>
+        <div class="abs-meta">arXiv:2603.23668 · cs.AR × cs.LG · 2026-03-24 · Mohammad Saleh Vahdatpour, Yanqing Zhang · EMC2 @ ASPLOS 2026（海报）</div>
+        <div class="abs-body">全面综述从 mW 级 TinyML 到数据中心 LLM 服务的<strong>能效软硬件协同设计方法</strong>。覆盖加速器架构（ASIC/FPGA 数据流、PIM/近存计算）和系统级技术（分区、量化、调度、运行时适应）。提炼通用设计杠杆，指出跨平台泛化能力不足、协同设计搜索空间庞大、跨工作负载基准不一致等核心差距，提出层次分解视角和碳感知 ML 系统路线图。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.23668" target="_blank">arXiv</a>
+          <a class="local" href="./2026-03-27/Energy-Efficient-SW-HW-CoDesign-ML-TinyML-LLM.pdf">本地 PDF</a>
+        </div>
+      </div>
+      <div class="abs-card">
+        <span class="badge-hot">HIGH VALUE</span>
+        <div class="abs-title">ChipBench: A Next-Step Benchmark for Evaluating LLM Performance in AI-Aided Chip Design</div>
+        <div class="abs-meta">arXiv:2601.21448 · 2026-01-29（v1）/ 2026-02-03（v2）· UCSD + Columbia University · SemiEngineering 推荐</div>
+        <div class="abs-body">针对 VerilogEval 等现有基准<strong>饱和且任务多样性不足</strong>的问题，提出 ChipBench —— 更贴近实际工程的 LLM 硬件设计评测框架。覆盖 HLS（高层次综合）与底层 HDL 对比、PPA 感知优化、可综合性验证等多维度评估，为研究 HLS 与低级 HDL 在 LLM 辅助设计中的适用性提供实验基础与洞察。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2601.21448" target="_blank">arXiv</a>
+          <a class="local" href="./2026-03-27/ChipBench-Next-Step-Benchmark-LLM-Hardware-Design.pdf">本地 PDF</a>
+        </div>
+      </div>
+      <div class="abs-card">
+        <span class="badge-hot">HIGH VALUE</span>
+        <div class="abs-title">DUET: Agentic Design Understanding via Experimentation and Testing</div>
+        <div class="abs-meta">arXiv:2512.06247 · 2025-12-05（v1）/ 2026-01-21（v2）· Gus Henry Smith, Sandesh Adhikary et al.（UC Berkeley / 卡内基梅隆）</div>
+        <div class="abs-body">提出 DUET 方法论：通过<strong>迭代实验</strong>（模拟运行、波形检查、形式验证）帮助 AI 智能体真正<strong>理解复杂 RTL 设计</strong>，而非仅一次性代码审读。DUET 模拟资深硬件工程师的工作方式，通过主动探索获得对设计行为的深层理解，在形式验证等复杂推理任务中显著提升智能体表现，是 Agentic RTL 验证的重要基础性工作。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2512.06247" target="_blank">arXiv</a>
+          <a class="local" href="./2026-03-27/DUET-Agentic-Design-Understanding-RTL-Formal-Verification.pdf">本地 PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ── 2026-03-26 ── -->
   <div class="date-group">
@@ -829,7 +915,45 @@
 <section id="news">
   <div class="section-title"><span class="icon">🌍</span> 行业动态 <span class="line"></span></div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">🌐</span> 国际动态（2026-03-26 更新）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">🌐</span> 国际动态（2026-03-27 · 今日更新）</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Siemens EDA · 2026-03-26（SEMICON China 2026 开幕主题演讲）</div>
+      <h4>Siemens EDA 宣言：Agentic AI 目标将芯片设计周期缩短一半</h4>
+      <p>Siemens EDA IC 产品 EVP Ankur Gupta 在 SEMICON China 2026 主题演讲中宣布：传统 EDA 软件已不足应对挑战，未来必须是 AI 驱动的。提出<strong>三层技术架构</strong>（算力基础设施 / 物理建模 / 设计流程），目标是通过 Agentic AI 将芯片设计周期<strong>缩短一半</strong>，并重点攻克大语言模型"幻觉"问题，推进数字孪生应用于制造全生命周期。</p>
+      <a href="https://www.digitimes.com/news/a20260326VL206/siemens-eda-design-semicon-china-2026-ic.html" target="_blank">→ 阅读 Digitimes 报道</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>SEMI 中国 · 2026-03-26（SEMICON/FPD China 2026）</div>
+      <h4>全球半导体产业规模 2026 年底有望提前达 1 万亿美元</h4>
+      <p>SEMI 中国总裁冯莉在开幕式披露：2025 年全球半导体销售额达 <strong>7,917 亿美元</strong>（同比 +25.6%），预计 2026 年将达 9,750 亿美元，比此前"2030 年破万亿"的预测<strong>提前 4 年</strong>。本届展会展览面积超 10 万㎡，1,500 家展商，18 万预计专业观众。AI 算力、HBM 存储、先进封装三大趋势主导全场。</p>
+      <a href="https://www.semi.org.cn/site/semi/article/5e3371028a90451298f3476f622217a5.html" target="_blank">→ 阅读 SEMI 官方报道</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>ChipAgents（Alpha Design AI）· 2026-02-17 / 2026-03-05</div>
+      <h4>ChipAgents 获 $7400 万融资，在 DVCon 2026 展示多智能体根本原因分析</h4>
+      <p>初创公司 ChipAgents（Alpha Design AI）宣布获得 <strong>7,400 万美元</strong>融资，加速其面向芯片设计的 Agentic AI 平台。在 DVCon 2026（3月5日）演示了业界首个<strong>多智能体 AI 团队驱动的根本原因分析（RCA）</strong>技术，目标将 RTL 设计和验证效率提升 10 倍，顾问委员会包含 Synopsys、Cadence、Mentor Graphics 前 CEO/CTO。</p>
+      <a href="https://chipagents.ai/" target="_blank">→ 访问官网</a>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🇨🇳</span> 国内动态（2026-03-27 · 今日更新）</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>上海证券报 · 2026-03-26</div>
+      <h4>AI 驱动半导体产业升级，EDA 工具重要性随芯片设计成本飙升而凸显</h4>
+      <p>上证报报道：先进工艺节点芯片研发成本高达 <strong>50亿~80亿美元</strong>，AI 技术正重塑 EDA 行业。Cadence（铿腾电子）45% 营收已来自系统级客户；AI 芯片公司沐曦股份 2025 年营收超 16 亿元（2022 年不足 50 万元）；中国在全球半导体制造产能份额预计从 32%（2025）提升至 42%（2028），设备市场增速将高于全球均值。</p>
+      <a href="https://paper.cnstock.com/html/2026-03/26/content_2192390.htm" target="_blank">→ 阅读上证报原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>SEMICON China 2026 · 2026-03-24~25</div>
+      <h4>芯和半导体启动成立 16 年来最重大品牌升级：聚焦"AI 时代系统级 EDA"</h4>
+      <p>国内 EDA 领先企业芯和半导体（Xpeedic）在 SEMICON China 2026 相关论坛期间召开品牌发布会，宣布启动<strong>定位升级</strong>：以"AI 时代系统级 EDA 平台"为核心，向 AI 驱动的系统级仿真与物理验证方向全面转型，覆盖 PCB / IC 封装 / SiP / 毫米波等多领域，强调国产替代与先进封装时代的系统级设计需求。</p>
+      <a href="https://www.msn.cn/zh-cn/技术/技术公司/ai重构芯片设计产业-芯和半导体构建系统级eda平台/ar-AA1ZpaSp" target="_blank">→ 阅读相关报道</a>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌐</span> 国际动态（2026-03-26 更新）</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>NVIDIA Research · 2026-03-19（GTC 2026 主题演讲）</div>
@@ -1009,6 +1133,8 @@
 <section id="timeline">
   <div class="section-title"><span class="icon">📅</span> 重大事件时间线 <span class="line"></span></div>
   <div class="timeline">
+    <div class="tl-item"><div class="tl-date">2026-03-27</div><h4>今日更新：4 篇论文（PowerFlow-DNN / SW-HW CoDesign / ChipBench / DUET）+ SEMICON China 2026 闭幕</h4><p>Siemens EDA 提出 Agentic AI 缩短芯片设计周期一半目标；芯和半导体启动 AI 时代系统级 EDA 战略升级；ChipAgents 获 7400 万美元融资；PowerFlow-DNN 在 TSMC 40nm 实现能耗降低 37%，DUET 建立 Agentic RTL 理解新范式。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-25~27</div><h4>SEMICON China 2026 · 上海：AI 重塑半导体产业格局</h4><p>全球半导体产业规模有望 2026 年底提前达万亿美元。Siemens EDA、芯和半导体、CSTIC 2026 多方聚焦 Agentic AI for EDA。近 40 家科创板公司参展，先进封装、AI 算力需求成核心主题。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-26</div><h4>今日更新：3 篇新论文（POET / Agentic Verilog / HWE-Bench）+ NVIDIA GTC 2026 AI 芯片设计内部披露</h4><p>POET 实现 RTL 全样本最优功耗 + 100% 功能正确；首个系统评测 Agentic LLM for Verilog（CVDP 基准）；HWE-Bench 揭示 LLM 板级设计通过率仅 8.15%；NVIDIA 首席科学家披露内部 RL 系统一夜生成标准单元库。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-22</div><h4>Design Conductor 论文公开，国内外媒体大规模报道</h4><p>Verkor 宣布首个从自然语言到可流片 GDSII 的完整自主 AI 芯片设计系统。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-19</div><h4>DAC 2026 接收论文 ID 正式公布（约 500+ 篇）</h4><p>AI/EDA 方向大量论文被录用，完整程序预计 4 月发布。</p></div>
@@ -1035,20 +1161,18 @@
 <section id="tracking">
   <div class="section-title"><span class="icon">📌</span> 待追踪事项 <span class="line"></span></div>
   <ul class="todo-list">
+    <li><strong>ChipBench 后续实验</strong>：关注 UCSD + Columbia 团队对 HLS vs HDL 的深度对比结果公布</li>
+    <li><strong>DUET 开源代码</strong>：UC Berkeley / CMU 团队 Agentic RTL 理解框架开源进展</li>
+    <li><strong>Siemens Agentic AI EDA</strong>：设计周期缩短一半的具体落地案例和客户公告（SEMICON China 2026 后）</li>
+    <li><strong>芯和半导体 AI 时代系统级 EDA</strong>：系统级 AI 仿真平台具体产品发布时间</li>
+    <li><strong>ChipAgents</strong>：7400 万融资后产品商业化进展，RCA 智能体技术开放合作情况</li>
     <li><strong>VeriAgent 进化记忆机制</strong>代码开源（清华团队），与 ACE-RTL 的比较评测</li>
     <li><strong>COmPOSER</strong> 开源代码发布时间（DAC 2026 录用后），65nm RF/mmWave 扩展</li>
     <li><strong>DS2SC-Agent</strong> 数字 DDR/PCIe Chiplet 模型生成扩展（当前仅模拟+数字+RF）</li>
-    <li><strong>CODMAS RTLOPT 基准集</strong>开源进展，社区采用情况</li>
     <li><strong>ACE-RTL 170 万 RTL 数据集</strong>开源时间表（NVIDIA Research）</li>
     <li><strong>HWE-Bench</strong> GitHub 开源（EDI-Systems/HWE-Bench），社区扩展进度</li>
-    <li><strong>WarPGNN</strong> 与工业封装 EDA 工具（Ansys Sherlock / Cadence Allegro）集成可行性</li>
     <li><strong>DAC 2026 完整论文程序</strong>：预计 4 月发布，关注 AI for EDA、高效 LLM 加速器两大专题</li>
     <li><strong>Agent4Chip Workshop @ ICLR 2026</strong>（4月23-27，里约热内卢）：现场展示与论文演讲内容</li>
-    <li><strong>CODMAS RTLOPT 基准集</strong>开源进展，社区采用情况</li>
-    <li><strong>ACE-RTL 170 万 RTL 数据集</strong>开源时间表（NVIDIA Research）</li>
-    <li><strong>Rapidus Raads</strong> 更多客户公布，2nm 量产推进（目标 2027H2）</li>
-    <li><strong>Cadence 五级分类法</strong>：行业标准化进展与其他厂商的采用情况</li>
-    <li><strong>RTLocating EvoRTL-Bench</strong> 开源发布与社区复现</li>
     <li><strong>合见工软 UDA 2.0</strong> 商用落地：头部客户公布与量产推进</li>
     <li><strong>Siemens Fuse EDA AI Agent</strong> 实际用户规模（目前三星 + NVIDIA 已确认）</li>
     <li>NVIDIA EDA Research：<a href="https://research.nvidia.com/labs/electronic-design-automation/" target="_blank" style="color:var(--accent2);">research.nvidia.com/labs/electronic-design-automation</a></li>
@@ -1058,8 +1182,8 @@
 </div>
 
 <footer>
-  <p>数据来源：arXiv.org · siemens.com · cadence.com · synopsys.com · xinhuanet.com · fudan.edu.cn · ict.cas.cn · news.qq.com · semiengineering.com · guancha.cn · eepw.com.cn · nvidia.com · blogs.nvidia.com</p>
-  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-03-26</p>
+  <p>数据来源：arXiv.org · siemens.com · cadence.com · synopsys.com · semi.org.cn · semiconductor-digest.com · digitimes.com · chipagents.ai · paper.cnstock.com · semiengineering.com · nvidia.com · blogs.nvidia.com</p>
+  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-03-27</p>
 </footer>
 
 <script>
