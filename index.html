@@ -185,12 +185,12 @@
 <header>
   <h1>🔬 AI for EDA 论文与资讯索引</h1>
   <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-03-27 · 涵盖 2026-03-15 → 2026-03-27</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-03-28 · 涵盖 2026-03-15 → 2026-03-28</p>
   <div class="stats">
-    <div class="stat"><div class="num">71</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">11</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">33+</div><div class="label">行业动态</div></div>
-    <div class="stat"><div class="num">4</div><div class="label">今日新增</div></div>
+    <div class="stat"><div class="num">74</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">12</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">36+</div><div class="label">行业动态</div></div>
+    <div class="stat"><div class="num">3</div><div class="label">今日新增</div></div>
   </div>
 </header>
 
@@ -208,15 +208,15 @@
 <section id="overview">
   <div class="section-title"><span class="icon">📋</span> 核心趋势综述 <span class="line"></span></div>
   <div class="summary-box">
-    <h3>🔑 当前最重要的七大趋势（截至 2026-03-27）</h3>
+    <h3>🔑 当前最重要的七大趋势（截至 2026-03-28）</h3>
     <ul>
+      <li><strong>Agentic EDA 基础设施层出现：</strong>FluxEDA（2026-03-26，arXiv:2603.25243）首次提出"有状态 Agentic EDA 执行基础设施"，通过持久化后端工具实例 + 结构化请求网关，使 AI 智能体能在真实工具上下文中做多步分析、状态回滚与协同迭代，是 Agentic EDA 工程化落地的关键缺失一环。</li>
       <li><strong>Agentic EDA 范式确立：</strong>AI for EDA 正从 L2（点工具优化）向 L3/L4（全流程自主编排）跨越。Verkor Design Conductor 用 219 字需求文档、12 小时自主完成 1.48 GHz RISC-V CPU（VerCore），是首个 AI 智能体端到端流片 CPU，重新定义了"自动化"上限。</li>
-      <li><strong>三巨头绑定 NVIDIA AI 平台：</strong>GTC 2026（3月16-17日）上，Cadence（ChipStack™ AI Super Agent）、Synopsys（AgentEngineer™）、Siemens（Fuse EDA AI Agent）三大 EDA 厂商全部基于 NVIDIA NeMo/NemoClaw 发布旗舰 Agentic EDA 产品，行业格局正式确立。NVIDIA 内部也证实：强化学习系统可一夜生成标准单元库，内部 LLM 可导航几十年架构知识。</li>
-      <li><strong>SEMICON China 2026（3月25-27日）掀起国内 AI EDA 浪潮：</strong>Siemens EDA EVP Ankur Gupta 主题演讲"以 AI 重塑电子设计的未来"，提出 Agentic AI 目标是将<strong>芯片设计周期缩短一半</strong>，构建数字孪生 + 三层技术架构（算力基础设施 / 物理建模 / 设计流程），并重点攻克大模型幻觉问题。全球半导体市场规模有望 2026 年底提前达一万亿美元。</li>
-      <li><strong>国内自主路线崛起：</strong>合见工软 UDA 2.0（2026-03-18）发布国内首款 L4 Agentic EDA，支持 DeepSeek + 国产 GPU 全栈适配；芯和半导体在 SEMICON China 2026 启动成立 16 年来最具里程碑意义的定位升级，以"AI 时代系统级 EDA"为核心重塑品牌；中科院"启蒙"（QiMeng）在 NeurIPS25 / AAAI26 斩获 6 篇顶会。</li>
-      <li><strong>多智能体协作 RTL 优化成核心范式：</strong>VeriAgent（清华，PPA 感知 + 进化记忆）、CODMAS（台大 + IBM，辩证式多智能体，延迟-25%/功耗-22%）、ACE-RTL（NVIDIA，智能上下文演化，CVDP+41% Pass Rate）、POET（USC，进化调优功耗-PPA，100% 功能正确性）四篇论文密集发布，标志着多智能体协作 RTL 优化进入成熟期。</li>
-      <li><strong>Benchmark 生态快速补全：</strong>CktEvo（仓库级RTL演化）、HWE-Bench（板级设计，300项任务，最佳LLM通过率仅8.15%）、ChipBench（UCSD/Columbia，超越VerilogEval饱和问题）、CVDP（NVIDIA，782题Verilog综合基准）、DUET（Agentic RTL形式验证理解框架）密集发布，填补多个重要空白。</li>
-      <li><strong>边缘 AI 推理与硬件协同设计受关注：</strong>PowerFlow-DNN（TSMC 40nm 验证，能耗降低 37%，编译器指导功耗编排）和 Energy-Efficient SW/HW CoDesign（从 TinyML 到 LLM 全栈覆盖，ASPLOS 2026 EMC2 Workshop）标志着 AI 系统硬件协同设计理论成熟，将对 AI 芯片 EDA 流程产生深远影响。</li>
+      <li><strong>三巨头绑定 NVIDIA AI 平台：</strong>GTC 2026（3月16-17日）上，Cadence（ChipStack™ AI Super Agent）、Synopsys（AgentEngineer™）、Siemens（Fuse EDA AI Agent）三大 EDA 厂商全部基于 NVIDIA NeMo/NemoClaw 发布旗舰 Agentic EDA 产品，行业格局正式确立。</li>
+      <li><strong>ISPD 2026 Agentic AI Panel（3月15-18日，德国波恩）：</strong>今年 ISPD 专设"Agentic AI"圆桌讨论，NVIDIA/Cadence/Siemens 代表探讨 LLM+自主代理在物理设计中的自动化算法演进；Ansys/Synopsys EVP Prith Banerjee 在 Keynote 8 全面阐述 AI/ML 在 EDA 工程仿真中的应用；AstroTune（德州农工+杜克）实现跨阶段设计流 AST+LLM 参数调优；CHASE（港中文+北邮）提出 Chiplet 多保真度协同优化框架。</li>
+      <li><strong>形式验证+物理验证中 AI 应用加速：</strong>AutoPDR（arXiv:2603.25048）用图学习预测硬件模型检查中 PDR 求解器的最优配置，搜索空间缩减 78%；Causal AI for AMS（arXiv:2603.24618，TSMC 65nm 验证）首次将因果推断框架应用于模拟混合信号电路参数效应分析，ATE 估计误差<25%，远优于神经网络(>80%)；ISPD 2026 MultiRAG 论文系统梳理三种 EDA 知识注入 LLM 路径（微调/RAG/智能体工具）。</li>
+      <li><strong>SEMICON China 2026（3月25-27日）掀起国内 AI EDA 浪潮：</strong>Siemens EDA EVP Ankur Gupta 提出 Agentic AI 目标是将<strong>芯片设计周期缩短一半</strong>；芯和半导体宣布 AI 时代系统级 EDA 战略升级；全球半导体市场规模有望 2026 年底提前达一万亿美元。</li>
+      <li><strong>多智能体协作 RTL 优化成核心范式：</strong>VeriAgent（清华，PPA 感知 + 进化记忆）、CODMAS（台大 + IBM，辩证式多智能体，延迟-25%/功耗-22%）、ACE-RTL（NVIDIA，+41% Pass Rate）、POET（USC，100% 功能正确性）密集发布，标志多智能体 RTL 优化进入成熟期。</li>
     </ul>
   </div>
   <div class="tags">
@@ -231,6 +231,74 @@
 <!-- ══════════════ 论文 ══════════════ -->
 <section id="papers">
   <div class="section-title"><span class="icon">📄</span> 论文收录（按日期倒序）<span class="line"></span></div>
+
+  <!-- ── 2026-03-28 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0328')">
+      <h3>📅 2026-03-28 · 今日更新（3篇）</h3>
+      <span class="badge-count">3 篇</span>
+      <span class="toggle" id="toggle-g0328">▼</span>
+    </div>
+    <div class="date-body" id="g0328">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> FluxEDA: A Unified Execution Infrastructure for Stateful Agentic EDA</td>
+            <td class="cat">Agentic EDA/基础设施/状态保持/时序ECO/单元库优化</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.25243" target="_blank">2603.25243</a></td>
+            <td><a class="pdf-link" href="./2026-03-28/FluxEDA-Unified-Stateful-Agentic-EDA-Infrastructure.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="star">★</span> AutoPDR: Circuit-Aware Solver Configuration Prediction for Hardware Model Checking</td>
+            <td class="cat">形式验证/图学习/PDR求解器/参数调优/AI辅助验证</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.25048" target="_blank">2603.25048</a></td>
+            <td><a class="pdf-link" href="./2026-03-28/AutoPDR-Circuit-Solver-Config-Prediction-Model-Checking.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><span class="star">★</span> Causal AI For AMS Circuit Design: Interpretable Parameter Effects Analysis</td>
+            <td class="cat">因果AI/模拟混合信号/可解释性/TSMC 65nm/ATE估计</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.24618" target="_blank">2603.24618</a></td>
+            <td><a class="pdf-link" href="./2026-03-28/CausalAI-AMS-Circuit-Design-Interpretable-Parameter-Analysis.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 摘要卡片 -->
+      <div class="abs-card">
+        <span class="badge-hot">HIGH VALUE</span><span class="badge-new">NEW</span>
+        <div class="abs-title">FluxEDA: A Unified Execution Infrastructure for Stateful Agentic EDA</div>
+        <div class="abs-meta">arXiv:2603.25243 · cs.AR · 2026-03-26 · Zhengrui Chen, Zixuan Song, Yu Li, Qi Sun, Cheng Zhuo</div>
+        <div class="abs-body">随着 LLM 和自主智能体在 EDA 中的应用增多，现有方案仍基于脚本级调用，无法在真实生产环境中保持工具状态。FluxEDA 提出<strong>有状态 Agentic EDA 统一执行基础设施</strong>：托管网关接口 + 持久化后端工具实例 + 结构化请求-响应机制，支持多步骤分析、状态复用与回滚。在自动布线后<strong>时序 ECO</strong> 和<strong>标准单元子库优化</strong>两个商用后端案例中验证可行性，是 Agentic EDA 工程化落地的核心基础设施层。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.25243" target="_blank">arXiv</a>
+          <a class="local" href="./2026-03-28/FluxEDA-Unified-Stateful-Agentic-EDA-Infrastructure.pdf">本地 PDF</a>
+        </div>
+      </div>
+      <div class="abs-card">
+        <span class="badge-new">NEW</span>
+        <div class="abs-title">AutoPDR: Circuit-Aware Solver Configuration Prediction for Hardware Model Checking</div>
+        <div class="abs-meta">arXiv:2603.25048 · cs.AR · 2026-03-26 · Guangyu Hu, Chen Chen et al.</div>
+        <div class="abs-body">PDR（Property Directed Reachability）算法广泛用于硬件形式验证，但性能高度依赖参数配置。AutoPDR 通过<strong>图学习</strong>结合电路图表示和静态结构特征，预测特定电路的最优 PDR 求解器配置。引入专家知识约束剪枝，搜索空间缩减约 <strong>78%</strong>；实验显示 AutoPDR 在多个基准测试中显著优于默认配置，能自动识别电路特定参数模式并选择最佳求解策略，开创了 GNN 辅助形式验证调优新方向。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.25048" target="_blank">arXiv</a>
+          <a class="local" href="./2026-03-28/AutoPDR-Circuit-Solver-Config-Prediction-Model-Checking.pdf">本地 PDF</a>
+        </div>
+      </div>
+      <div class="abs-card">
+        <span class="badge-new">NEW</span>
+        <div class="abs-title">Causal AI For AMS Circuit Design: Interpretable Parameter Effects Analysis</div>
+        <div class="abs-meta">arXiv:2603.24618 · cs.AR · 2026-03-24 · Mohyeu Hussain, David Koblah, Reiner Dizon-Paradis, Domenic Forte（University of Florida）</div>
+        <div class="abs-body">AMS 电路高度非线性、难以用数据驱动 AI 建模。本文将<strong>因果推断</strong>（DAG + 平均处理效应 ATE）引入模拟混合信号电路参数效应分析。在 TSMC 65nm 下对三种运算放大器（OTA、望远镜式、折叠共源共栅）验证：因果模型 ATE 估计误差 <strong>&lt;25%</strong>，而神经网络误差 >80% 且常预测错误方向。可生成可解释的参数重要性排序与"假设分析"预测，推动 AMS 设计自动化可信化。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.24618" target="_blank">arXiv</a>
+          <a class="local" href="./2026-03-28/CausalAI-AMS-Circuit-Design-Interpretable-Parameter-Analysis.pdf">本地 PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ── 2026-03-27 ── -->
   <div class="date-group">
@@ -915,7 +983,23 @@
 <section id="news">
   <div class="section-title"><span class="icon">🌍</span> 行业动态 <span class="line"></span></div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">🌐</span> 国际动态（2026-03-27 · 今日更新）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">🎓</span> 顶会动态（2026-03-28 · ISPD 2026 闭幕汇总）</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>ISPD 2026 · 德国波恩 · 2026-03-15~18（本周闭幕）</div>
+      <h4>ISPD 2026 Keynote：AI/ML 重塑 EDA 工程仿真 + Agentic AI 专题圆桌</h4>
+      <p>Ansys/Synopsys EVP <strong>Prith Banerjee</strong> 主题演讲（Keynote 8）全面阐述 AI/ML 在 EDA 与工程仿真中的应用，涵盖强化学习布局布线、神经网络时序预测；专设<strong>Agentic AI 圆桌讨论</strong>，NVIDIA/Cadence/Siemens 代表探讨 LLM 自主代理在物理设计算法演进中的路径。Session 9 "AI/LLM in Physical Design" 收录 AstroTune（跨阶段 AST+LLM 参数调优）和 CHASE（Chiplet 多保真度仿真探索框架）等重点论文，MultiRAG 邀请报告系统梳理三种 EDA 知识注入 LLM 路径。</p>
+      <a href="https://ispd.cc/ispd2026/index.php?page=program" target="_blank">→ 查看完整论文程序</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>arXiv / semi-insights.com · 2026-03-27~28</div>
+      <h4>2026 年将成 AI-EDA 工作流从"概念"到"部署"的关键转折点</h4>
+      <p>半导体行业观察报道：尽管 AI 在多领域爆发，但受半导体复杂性影响发展更循序渐进。<strong>2026 年是关键一年</strong>——AI 驱动的工作流正从概念阶段走向正式部署，主要驱动力包括：① EDA 巨头 Agentic 产品实际落地、② 开源工具链（OpenROAD）AI 集成成熟、③ 硅验证加速催生对 AI 辅助验证的真实需求。同期，arXiv 新论文 FluxEDA（有状态 Agentic 执行基础设施）和 AutoPDR（GNN 辅助形式验证调优）为这一趋势提供了技术支撑。</p>
+      <a href="http://www.semi-insights.com/s/ai/38/50061.shtml" target="_blank">→ 阅读半导体行业观察</a>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌐</span> 国际动态（2026-03-27 · 今日更新）</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>Siemens EDA · 2026-03-26（SEMICON China 2026 开幕主题演讲）</div>
@@ -1133,6 +1217,8 @@
 <section id="timeline">
   <div class="section-title"><span class="icon">📅</span> 重大事件时间线 <span class="line"></span></div>
   <div class="timeline">
+    <div class="tl-item"><div class="tl-date">2026-03-28</div><h4>今日更新：3 篇新论文（FluxEDA / AutoPDR / Causal AI for AMS）+ ISPD 2026 闭幕汇总</h4><p>FluxEDA 提出有状态 Agentic EDA 执行基础设施（状态回滚 + 多步优化）；AutoPDR 用图学习预测 PDR 求解器配置，搜索空间缩减 78%；Causal AI for AMS 在 TSMC 65nm 实现可解释参数效应分析（ATE 误差 &lt;25%）；ISPD 2026 Agentic AI 圆桌讨论与 MultiRAG 邀请报告正式发布。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-15~18</div><h4>ISPD 2026 · 德国波恩：AI/LLM 在物理设计中正式成为顶会核心议题</h4><p>专设"AI/LLM in Physical Design"session，Agentic AI 圆桌讨论，AstroTune（AST+LLM 跨阶段参数调优）、CHASE（Chiplet 多保真度探索）等重点论文。MultiRAG 邀请报告系统梳理三种 EDA 知识注入 LLM 路径。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-27</div><h4>今日更新：4 篇论文（PowerFlow-DNN / SW-HW CoDesign / ChipBench / DUET）+ SEMICON China 2026 闭幕</h4><p>Siemens EDA 提出 Agentic AI 缩短芯片设计周期一半目标；芯和半导体启动 AI 时代系统级 EDA 战略升级；ChipAgents 获 7400 万美元融资；PowerFlow-DNN 在 TSMC 40nm 实现能耗降低 37%，DUET 建立 Agentic RTL 理解新范式。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-25~27</div><h4>SEMICON China 2026 · 上海：AI 重塑半导体产业格局</h4><p>全球半导体产业规模有望 2026 年底提前达万亿美元。Siemens EDA、芯和半导体、CSTIC 2026 多方聚焦 Agentic AI for EDA。近 40 家科创板公司参展，先进封装、AI 算力需求成核心主题。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-26</div><h4>今日更新：3 篇新论文（POET / Agentic Verilog / HWE-Bench）+ NVIDIA GTC 2026 AI 芯片设计内部披露</h4><p>POET 实现 RTL 全样本最优功耗 + 100% 功能正确；首个系统评测 Agentic LLM for Verilog（CVDP 基准）；HWE-Bench 揭示 LLM 板级设计通过率仅 8.15%；NVIDIA 首席科学家披露内部 RL 系统一夜生成标准单元库。</p></div>
@@ -1161,20 +1247,18 @@
 <section id="tracking">
   <div class="section-title"><span class="icon">📌</span> 待追踪事项 <span class="line"></span></div>
   <ul class="todo-list">
-    <li><strong>ChipBench 后续实验</strong>：关注 UCSD + Columbia 团队对 HLS vs HDL 的深度对比结果公布</li>
+    <li><strong>FluxEDA 开源发布</strong>：当前论文验证可行性，关注 GitHub 开源时间与商用 EDA 工具（Synopsys / Cadence）集成适配情况</li>
+    <li><strong>AutoPDR 代码开源</strong>：图学习 + PDR 参数预测的代码实现开放，关注在 ABC/Yosys 等开源形式验证工具上的扩展</li>
+    <li><strong>AstroTube @ ISPD 2026</strong>：跨阶段 AST+LLM 参数调优完整论文发布（ACM DL 收录）与代码开源</li>
+    <li><strong>CHASE @ ISPD 2026</strong>：Chiplet 多保真度协同仿真框架开源时间表（港中文+北邮团队）</li>
+    <li><strong>MultiRAG 知识注入框架</strong>（ISPD 2026 邀请论文）：三种路径（微调/RAG/工具代理）的开源基准与实际效果对比</li>
+    <li><strong>ChipBench 后续实验</strong>：UCSD + Columbia 团队对 HLS vs HDL 的深度对比结果公布</li>
     <li><strong>DUET 开源代码</strong>：UC Berkeley / CMU 团队 Agentic RTL 理解框架开源进展</li>
     <li><strong>Siemens Agentic AI EDA</strong>：设计周期缩短一半的具体落地案例和客户公告（SEMICON China 2026 后）</li>
-    <li><strong>芯和半导体 AI 时代系统级 EDA</strong>：系统级 AI 仿真平台具体产品发布时间</li>
     <li><strong>ChipAgents</strong>：7400 万融资后产品商业化进展，RCA 智能体技术开放合作情况</li>
-    <li><strong>VeriAgent 进化记忆机制</strong>代码开源（清华团队），与 ACE-RTL 的比较评测</li>
-    <li><strong>COmPOSER</strong> 开源代码发布时间（DAC 2026 录用后），65nm RF/mmWave 扩展</li>
-    <li><strong>DS2SC-Agent</strong> 数字 DDR/PCIe Chiplet 模型生成扩展（当前仅模拟+数字+RF）</li>
-    <li><strong>ACE-RTL 170 万 RTL 数据集</strong>开源时间表（NVIDIA Research）</li>
-    <li><strong>HWE-Bench</strong> GitHub 开源（EDI-Systems/HWE-Bench），社区扩展进度</li>
     <li><strong>DAC 2026 完整论文程序</strong>：预计 4 月发布，关注 AI for EDA、高效 LLM 加速器两大专题</li>
     <li><strong>Agent4Chip Workshop @ ICLR 2026</strong>（4月23-27，里约热内卢）：现场展示与论文演讲内容</li>
     <li><strong>合见工软 UDA 2.0</strong> 商用落地：头部客户公布与量产推进</li>
-    <li><strong>Siemens Fuse EDA AI Agent</strong> 实际用户规模（目前三星 + NVIDIA 已确认）</li>
     <li>NVIDIA EDA Research：<a href="https://research.nvidia.com/labs/electronic-design-automation/" target="_blank" style="color:var(--accent2);">research.nvidia.com/labs/electronic-design-automation</a></li>
   </ul>
 </section>
@@ -1182,8 +1266,8 @@
 </div>
 
 <footer>
-  <p>数据来源：arXiv.org · siemens.com · cadence.com · synopsys.com · semi.org.cn · semiconductor-digest.com · digitimes.com · chipagents.ai · paper.cnstock.com · semiengineering.com · nvidia.com · blogs.nvidia.com</p>
-  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-03-27</p>
+  <p>数据来源：arXiv.org · ispd.cc · siemens.com · cadence.com · synopsys.com · semi.org.cn · semiconductor-digest.com · chipagents.ai · paper.cnstock.com · semi-insights.com · nvidia.com · blogs.nvidia.com</p>
+  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-03-28</p>
 </footer>
 
 <script>
