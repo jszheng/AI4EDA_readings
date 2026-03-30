@@ -185,12 +185,12 @@
 <header>
   <h1>🔬 AI for EDA 论文与资讯索引</h1>
   <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-03-28 · 涵盖 2026-03-15 → 2026-03-28</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-03-30 · 涵盖 2026-03-15 → 2026-03-30</p>
   <div class="stats">
-    <div class="stat"><div class="num">74</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">12</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">36+</div><div class="label">行业动态</div></div>
-    <div class="stat"><div class="num">3</div><div class="label">今日新增</div></div>
+    <div class="stat"><div class="num">76</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">14</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">40+</div><div class="label">行业动态</div></div>
+    <div class="stat"><div class="num">2</div><div class="label">今日新增</div></div>
   </div>
 </header>
 
@@ -208,8 +208,10 @@
 <section id="overview">
   <div class="section-title"><span class="icon">📋</span> 核心趋势综述 <span class="line"></span></div>
   <div class="summary-box">
-    <h3>🔑 当前最重要的七大趋势（截至 2026-03-28）</h3>
+    <h3>🔑 当前最重要的七大趋势（截至 2026-03-30）</h3>
     <ul>
+      <li><strong>验证智能体突破：</strong>UCAgent（arXiv:2603.25768，中科院/国防科大）首次提出 31 级细粒度验证工作流 + VCLM 验证一致性标签机制，在 UART/FPU/整数除法器上实现 <strong>98.5% 代码覆盖率、100% 功能覆盖率</strong>，并首次发现未识别设计缺陷。验证是芯片开发最耗时环节（约 70%），此工作标志着 Agentic 硬件验证进入新阶段。</li>
+      <li><strong>增量 RTL 生成解决迭代需求：</strong>IncreRTL（arXiv:2603.25769）首次将需求-代码可追溯性链接引入 LLM RTL 生成，解决需求演变时的结构漂移和昂贵重生成问题。与上周 RTLocating（ΔSpec-to-RTL 定位）形成"定位-增量生成"完整迭代工作流。</li>
       <li><strong>Agentic EDA 基础设施层出现：</strong>FluxEDA（2026-03-26，arXiv:2603.25243）首次提出"有状态 Agentic EDA 执行基础设施"，通过持久化后端工具实例 + 结构化请求网关，使 AI 智能体能在真实工具上下文中做多步分析、状态回滚与协同迭代，是 Agentic EDA 工程化落地的关键缺失一环。</li>
       <li><strong>Agentic EDA 范式确立：</strong>AI for EDA 正从 L2（点工具优化）向 L3/L4（全流程自主编排）跨越。Verkor Design Conductor 用 219 字需求文档、12 小时自主完成 1.48 GHz RISC-V CPU（VerCore），是首个 AI 智能体端到端流片 CPU，重新定义了"自动化"上限。</li>
       <li><strong>三巨头绑定 NVIDIA AI 平台：</strong>GTC 2026（3月16-17日）上，Cadence（ChipStack™ AI Super Agent）、Synopsys（AgentEngineer™）、Siemens（Fuse EDA AI Agent）三大 EDA 厂商全部基于 NVIDIA NeMo/NemoClaw 发布旗舰 Agentic EDA 产品，行业格局正式确立。</li>
@@ -232,10 +234,62 @@
 <section id="papers">
   <div class="section-title"><span class="icon">📄</span> 论文收录（按日期倒序）<span class="line"></span></div>
 
+  <!-- ── 2026-03-30 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0330')">
+      <h3>📅 2026-03-30 · 今日更新（2篇）</h3>
+      <span class="badge-count">2 篇</span>
+      <span class="toggle" id="toggle-g0330">▼</span>
+    </div>
+    <div class="date-body" id="g0330">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> UCAgent: An End-to-End Agent for Block-Level Functional Verification</td>
+            <td class="cat">功能验证/Agent/31阶段工作流/覆盖率达98.5%</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.25768" target="_blank">2603.25768</a></td>
+            <td><a class="pdf-link" href="./2026-03-30/UCAgent_End_to_End_Agent_Block_Level_Functional_Verification.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="star">★</span> IncreRTL: Traceability-Guided Incremental RTL Generation under Requirement Evolution</td>
+            <td class="cat">RTL增量生成/可追溯性/需求演变/EvoRTL-Bench</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.25769" target="_blank">2603.25769</a></td>
+            <td><a class="pdf-link" href="./2026-03-30/IncreRTL_Traceability_Guided_Incremental_RTL_Generation.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-hot">HIGH VALUE</span><span class="badge-new">NEW</span>
+          <div class="abs-title">UCAgent: 端到端功能验证智能体，31阶段工作流实现98.5%覆盖率</div>
+          <div class="abs-meta">Junyue Wang, Zhicheng Yao, Yan Pi 等 9 人 · 中科院计算所 / 国防科大 · 2026-03-26 · cs.AR + cs.SE</div>
+          <div class="abs-body">针对功能验证约占项目开发时间 70% 的瓶颈，UCAgent 提出三大核心机制：① 基于 Picker 和 Toffee 的<strong>纯 Python 验证环境</strong>，避免依赖 LLM 生成 SystemVerilog；② <strong>31 级细粒度验证工作流</strong>引导 LLM，每个阶段通过自动化检查器验证；③ <strong>验证一致性标签机制（VCLM）</strong>为生成产物分配分层标签。在 UART、FPU、整数除法器模块上实现端到端自动化验证，<strong>最高代码覆盖率 98.5%，功能覆盖率 100%</strong>，并首次发现此前未识别的设计缺陷。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.25768" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-30/UCAgent_End_to_End_Agent_Block_Level_Functional_Verification.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-new">NEW</span>
+          <div class="abs-title">IncreRTL: 需求演变下的可追溯性引导增量 RTL 生成</div>
+          <div class="abs-meta">Luanrong Chen, Renzhi Chen, Xinyu Li 等 6 人 · 2026-03-26 · cs.SE</div>
+          <div class="abs-body">现有 LLM 驱动 RTL 生成方法仍是<strong>静态的</strong>，难以适应不断变化的设计需求，导致结构漂移和昂贵的完全重新生成。IncreRTL 通过构建<strong>需求-代码可追溯性链接</strong>来定位和重新生成受影响的代码段，实现准确且一致的增量更新。在新构建的 <strong>EvoRTL-Bench</strong> 上评估，IncreRTL 在重新生成的一致性和效率方面显著改进，推动基于 LLM 的 RTL 生成向实际工程部署迈进。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.25769" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-30/IncreRTL_Traceability_Guided_Incremental_RTL_Generation.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── 2026-03-28 ── -->
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0328')">
-      <h3>📅 2026-03-28 · 今日更新（3篇）</h3>
+      <h3>📅 2026-03-28 · 3篇</h3>
       <span class="badge-count">3 篇</span>
       <span class="toggle" id="toggle-g0328">▼</span>
     </div>
@@ -983,7 +1037,51 @@
 <section id="news">
   <div class="section-title"><span class="icon">🌍</span> 行业动态 <span class="line"></span></div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">🎓</span> 顶会动态（2026-03-28 · ISPD 2026 闭幕汇总）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-03-30 · arXiv 11 篇新提交）</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-03-30（今日）</div>
+      <h4>arXiv 今日新提交 11 篇 — UCAgent 领衔验证智能体突破</h4>
+      <p>今日 cs.AR 提交 11 篇新论文。重点论文：<strong>UCAgent</strong>（中科院计算所/国防科大）提出 31 级细粒度验证工作流 + VCLM 标签机制，实现 98.5% 代码覆盖率并发现未识别缺陷；<strong>IncreRTL</strong> 通过需求-代码可追溯性解决增量 RTL 生成的结构漂移问题；<strong>Wattchmen</strong>（ICS 2026 录用）提出 GPU 能耗建模新方法，MAPE 降至 11%。</p>
+      <a href="https://arxiv.org/list/cs.AR/recent" target="_blank">→ 查看 cs.AR 完整列表</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>NVIDIA GTC 2026 · 2026-03-16~20</div>
+      <h4>复旦大学 FudanGAN 团队 GTC 2026 论文展示：面向芯片设计的 AI 生成</h4>
+      <p>FudanGAN 团队在 GTC 2026 展示面向芯片设计的生成式 AI 最新成果，涵盖硬件设计自动化、版图生成等方向。GTC 2026 吸引全球 190+ 国家、3 万余名开发者参会，核心议题从模型训练转向 AI 智能体与工程应用。</p>
+      <a href="https://fddi.fudan.edu.cn/d0/55/c18965a774229/page.htm" target="_blank">→ 阅读复旦 GTC 报道</a>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 昨日动态（2026-03-29 · 手动补跑）</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-03-29（周日）</div>
+      <h4>arXiv 周日无新提交 — 本批次论文积压将于周一统一处理</h4>
+      <p>arXiv 在周六/周日不受理新提交，今日 cs.AR 无新论文发布。本周（2026-03-28/29）提交的稿件将于<strong>周一（3月30日）</strong>统一公布，届时将自动触发定时任务下载。</p>
+      <a href="https://arxiv.org/list/cs.AR/recent" target="_blank">→ 查看 cs.AR 最新列表</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Anthropic · 2026-03-26（意外数据泄露）</div>
+      <h4>Anthropic 史上最强模型 Claude Mythos 内部文档意外曝光</h4>
+      <p>Anthropic 内容管理系统配置失误，约 3,000 份未发布资产（含草稿博文、内部 PPT）短暂公开。曝光内容显示：新模型代号 <strong>Capybara（水豚）</strong>，正式名 <strong>Claude Mythos</strong>，官方自评"step change 级别突破"，性能全面超越 Claude Opus 4.6，安全评级同步升级。访问权限已在 Fortune 记者联系后关闭。<br><small style="color:var(--muted)">📌 对 AI for EDA 的影响：更强的代码推理能力预期将直接惠及 RTL 生成与 Agentic EDA 链路。</small></p>
+      <a href="https://zhuanlan.zhihu.com/p/2020903523051652221" target="_blank">→ 阅读知乎报道</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>2026 中国科幻大会 · 2026-03-28（北京石景山）</div>
+      <h4>全国最大人形机器人训练基地揭牌，石景山具身智能数据联盟（40+ 单位）成立</h4>
+      <p>北京石景山具身智能实训场<strong>三期项目</strong>正式揭牌，完成一至三期整体布局，成为全国最大的人形机器人数据采集训练中心，专注精密操作与触觉感知关键技术。同步成立<strong>石景山区具身智能数据要素产业联盟</strong>（政产学研用 40+ 单位），目标制定具身智能数据采集、人才评价等标准，拉动高性能算力需求，连接全球技术资源。</p>
+      <a href="https://ai5g.china.com/ai/13004828/20260329/49365167.html" target="_blank">→ 阅读中华网报道</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>上汽集团 + 智元机器人 · 2026-03-27（上海）</div>
+      <h4>中国汽车行业首批人形机器人上量产线：智元"能仔1号"正式在别克至境 E7 电池线上岗</h4>
+      <p>上汽集团首位具身智能人形机器人员工<strong>「能仔1号」</strong>（智元机器人研制）正式在别克至境 E7 电池量产线上岗，执行高精度操作任务。这是上汽集团，同时也是中国汽车行业<strong>首批真正投入量产产线应用的人形机器人案例</strong>，标志着具身智能从实验室走向规模化工业部署的历史节点。<br><small style="color:var(--muted)">📌 EDA 关联：量产人形机器人的感知+控制 SoC 设计需求将推动专用 AI 芯片与 EDA 工具持续演进。</small></p>
+      <a href="https://www.saicmotor.com/chinese/xwzx/xwk/2026/64051.shtml" target="_blank">→ 阅读上汽官方公告</a>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🎓</span> 顶会动态（2026-03-28 · ISPD 2026 闭幕汇总）</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>ISPD 2026 · 德国波恩 · 2026-03-15~18（本周闭幕）</div>
@@ -1217,6 +1315,8 @@
 <section id="timeline">
   <div class="section-title"><span class="icon">📅</span> 重大事件时间线 <span class="line"></span></div>
   <div class="timeline">
+    <div class="tl-item"><div class="tl-date">2026-03-30（今日）</div><h4>arXiv 今日新提交 11 篇 — UCAgent 端到端功能验证智能体 + IncreRTL 增量 RTL 生成</h4><p>arXiv cs.AR 今日新提交 11 篇论文。重点论文：UCAgent（中科院/国防科大）提出 31 级细粒度验证工作流 + VCLM 标签机制，在 UART/FPU 等模块上实现 98.5% 代码覆盖率并发现未识别缺陷；IncreRTL 通过需求-代码可追溯性链接实现增量 RTL 生成，避免结构漂移。另有 Wattchmen（ICS 2026）GPU 能耗建模、IBEX CXL 内存扩展等硬件架构论文。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-29（今日）</div><h4>行业动态更新：Claude Mythos 意外曝光 + 智元"能仔1号"量产线上岗 + 北京石景山具身智能实训场三期揭牌</h4><p>Anthropic 未发布旗舰模型 Claude Mythos（代号 Capybara）内部文档意外泄露，被评为"step change 级别突破"；智元机器人"能仔1号"正式在上汽别克量产线上岗（中国汽车行业首批）；北京石景山具身智能实训场三期揭牌，石景山区具身智能数据要素产业联盟（40+ 单位）成立。arXiv 周日无新提交，明日（周一）将统一处理本周末积压稿件。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-28</div><h4>今日更新：3 篇新论文（FluxEDA / AutoPDR / Causal AI for AMS）+ ISPD 2026 闭幕汇总</h4><p>FluxEDA 提出有状态 Agentic EDA 执行基础设施（状态回滚 + 多步优化）；AutoPDR 用图学习预测 PDR 求解器配置，搜索空间缩减 78%；Causal AI for AMS 在 TSMC 65nm 实现可解释参数效应分析（ATE 误差 &lt;25%）；ISPD 2026 Agentic AI 圆桌讨论与 MultiRAG 邀请报告正式发布。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-15~18</div><h4>ISPD 2026 · 德国波恩：AI/LLM 在物理设计中正式成为顶会核心议题</h4><p>专设"AI/LLM in Physical Design"session，Agentic AI 圆桌讨论，AstroTune（AST+LLM 跨阶段参数调优）、CHASE（Chiplet 多保真度探索）等重点论文。MultiRAG 邀请报告系统梳理三种 EDA 知识注入 LLM 路径。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-27</div><h4>今日更新：4 篇论文（PowerFlow-DNN / SW-HW CoDesign / ChipBench / DUET）+ SEMICON China 2026 闭幕</h4><p>Siemens EDA 提出 Agentic AI 缩短芯片设计周期一半目标；芯和半导体启动 AI 时代系统级 EDA 战略升级；ChipAgents 获 7400 万美元融资；PowerFlow-DNN 在 TSMC 40nm 实现能耗降低 37%，DUET 建立 Agentic RTL 理解新范式。</p></div>
@@ -1267,7 +1367,7 @@
 
 <footer>
   <p>数据来源：arXiv.org · ispd.cc · siemens.com · cadence.com · synopsys.com · semi.org.cn · semiconductor-digest.com · chipagents.ai · paper.cnstock.com · semi-insights.com · nvidia.com · blogs.nvidia.com</p>
-  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-03-28</p>
+  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-03-30</p>
 </footer>
 
 <script>
