@@ -185,11 +185,11 @@
 <header>
   <h1>🔬 AI for EDA 论文与资讯索引</h1>
   <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-03-30 · 涵盖 2026-03-15 → 2026-03-30</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-03-31 · 涵盖 2026-03-15 → 2026-03-31</p>
   <div class="stats">
-    <div class="stat"><div class="num">76</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">14</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">40+</div><div class="label">行业动态</div></div>
+    <div class="stat"><div class="num">78</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">15</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">42+</div><div class="label">行业动态</div></div>
     <div class="stat"><div class="num">2</div><div class="label">今日新增</div></div>
   </div>
 </header>
@@ -208,17 +208,15 @@
 <section id="overview">
   <div class="section-title"><span class="icon">📋</span> 核心趋势综述 <span class="line"></span></div>
   <div class="summary-box">
-    <h3>🔑 当前最重要的七大趋势（截至 2026-03-30）</h3>
+    <h3>🔑 当前最重要的七大趋势（截至 2026-03-31）</h3>
     <ul>
+      <li><strong>RL 驱动 RTL 生成多样性突破：</strong>RTLSeek（arXiv:2603.27630，DAC 2026 投稿，华为 + 复旦等）提出多阶段多样性导向强化学习（DORL）范式，三阶段训练框架将 EDA 反馈融入多目标奖励调度，在 RTLLM 基准上超越已有方法并验证"生成越多，结果越好"的扩展律，代码已开源。这是首个将 RL 多样性探索与 EDA 工具反馈深度结合的 RTL 生成方法。</li>
+      <li><strong>加法器网表级自动化优化新范式：</strong>AXON（arXiv:2603.28184，TSMC 28nm 验证）提出分层架构级→网表级协同优化框架，混合并行前缀+林氏架构，实现延迟 -10.3%、ADP -12.6%、EDP -32.1%，优于商业 EDA 工具，填补了高速算术单元智能优化的空白。</li>
       <li><strong>验证智能体突破：</strong>UCAgent（arXiv:2603.25768，中科院/国防科大）首次提出 31 级细粒度验证工作流 + VCLM 验证一致性标签机制，在 UART/FPU/整数除法器上实现 <strong>98.5% 代码覆盖率、100% 功能覆盖率</strong>，并首次发现未识别设计缺陷。验证是芯片开发最耗时环节（约 70%），此工作标志着 Agentic 硬件验证进入新阶段。</li>
       <li><strong>增量 RTL 生成解决迭代需求：</strong>IncreRTL（arXiv:2603.25769）首次将需求-代码可追溯性链接引入 LLM RTL 生成，解决需求演变时的结构漂移和昂贵重生成问题。与上周 RTLocating（ΔSpec-to-RTL 定位）形成"定位-增量生成"完整迭代工作流。</li>
       <li><strong>Agentic EDA 基础设施层出现：</strong>FluxEDA（2026-03-26，arXiv:2603.25243）首次提出"有状态 Agentic EDA 执行基础设施"，通过持久化后端工具实例 + 结构化请求网关，使 AI 智能体能在真实工具上下文中做多步分析、状态回滚与协同迭代，是 Agentic EDA 工程化落地的关键缺失一环。</li>
       <li><strong>Agentic EDA 范式确立：</strong>AI for EDA 正从 L2（点工具优化）向 L3/L4（全流程自主编排）跨越。Verkor Design Conductor 用 219 字需求文档、12 小时自主完成 1.48 GHz RISC-V CPU（VerCore），是首个 AI 智能体端到端流片 CPU，重新定义了"自动化"上限。</li>
-      <li><strong>三巨头绑定 NVIDIA AI 平台：</strong>GTC 2026（3月16-17日）上，Cadence（ChipStack™ AI Super Agent）、Synopsys（AgentEngineer™）、Siemens（Fuse EDA AI Agent）三大 EDA 厂商全部基于 NVIDIA NeMo/NemoClaw 发布旗舰 Agentic EDA 产品，行业格局正式确立。</li>
-      <li><strong>ISPD 2026 Agentic AI Panel（3月15-18日，德国波恩）：</strong>今年 ISPD 专设"Agentic AI"圆桌讨论，NVIDIA/Cadence/Siemens 代表探讨 LLM+自主代理在物理设计中的自动化算法演进；Ansys/Synopsys EVP Prith Banerjee 在 Keynote 8 全面阐述 AI/ML 在 EDA 工程仿真中的应用；AstroTune（德州农工+杜克）实现跨阶段设计流 AST+LLM 参数调优；CHASE（港中文+北邮）提出 Chiplet 多保真度协同优化框架。</li>
-      <li><strong>形式验证+物理验证中 AI 应用加速：</strong>AutoPDR（arXiv:2603.25048）用图学习预测硬件模型检查中 PDR 求解器的最优配置，搜索空间缩减 78%；Causal AI for AMS（arXiv:2603.24618，TSMC 65nm 验证）首次将因果推断框架应用于模拟混合信号电路参数效应分析，ATE 估计误差<25%，远优于神经网络(>80%)；ISPD 2026 MultiRAG 论文系统梳理三种 EDA 知识注入 LLM 路径（微调/RAG/智能体工具）。</li>
-      <li><strong>SEMICON China 2026（3月25-27日）掀起国内 AI EDA 浪潮：</strong>Siemens EDA EVP Ankur Gupta 提出 Agentic AI 目标是将<strong>芯片设计周期缩短一半</strong>；芯和半导体宣布 AI 时代系统级 EDA 战略升级；全球半导体市场规模有望 2026 年底提前达一万亿美元。</li>
-      <li><strong>多智能体协作 RTL 优化成核心范式：</strong>VeriAgent（清华，PPA 感知 + 进化记忆）、CODMAS（台大 + IBM，辩证式多智能体，延迟-25%/功耗-22%）、ACE-RTL（NVIDIA，+41% Pass Rate）、POET（USC，100% 功能正确性）密集发布，标志多智能体 RTL 优化进入成熟期。</li>
+      <li><strong>三巨头绑定 NVIDIA AI 平台：</strong>GTC 2026（3月16-17日）上，Cadence（ChipStack™ AI Super Agent）、Synopsys（AgentEngineer™）、Siemens（Fuse EDA AI Agent）三大 EDA 厂商全部基于 NVIDIA NeMo/NemoClaw 发布旗舰 Agentic EDA 产品；Cadence 于 3 月 26 日再次更新与 NVIDIA 的深度合作，Millennium M2000 超算支撑 80× 吞吐量提升，Micron HBM/Honda CFD 已实际落地。行业格局正式确立。</li>
     </ul>
   </div>
   <div class="tags">
@@ -233,6 +231,59 @@
 <!-- ══════════════ 论文 ══════════════ -->
 <section id="papers">
   <div class="section-title"><span class="icon">📄</span> 论文收录（按日期倒序）<span class="line"></span></div>
+
+  <!-- ── 2026-03-31 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0331')">
+      <h3>📅 2026-03-31 · 今日更新（2篇）</h3>
+      <span class="badge-count">2 篇</span>
+      <span class="toggle" id="toggle-g0331">▼</span>
+    </div>
+    <div class="date-body" id="g0331">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> RTLSeek: Boosting the LLM-Based RTL Generation with Multi-Stage Diversity-Oriented Reinforcement Learning</td>
+            <td class="cat">RTL生成/多样性RL/EDA反馈/DAC2026投稿</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.27630" target="_blank">2603.27630</a></td>
+            <td><a class="pdf-link" href="./2026-03-31/RTLSeek_LLM_RTL_Generation_MultiStage_Diversity_RL.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>AXON: An Automated Netlist Optimization Framework for High-Speed Adders</td>
+            <td class="cat">网表优化/加法器PPA/TSMC 28nm</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.28184" target="_blank">2603.28184</a></td>
+            <td><a class="pdf-link" href="./2026-03-31/AXON_Automated_Netlist_Optimization_HighSpeed_Adders.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-hot">HIGH VALUE</span><span class="badge-new">NEW</span>
+          <div class="abs-title">RTLSeek: 多阶段多样性导向 RL 大幅提升 LLM RTL 生成质量（DAC 2026 投稿）</div>
+          <div class="abs-meta">Xinyu Zhang, Zhiteng Chao, Yonghao Wang, Bin Sun 等 9 人 · 2026-03-29 · cs.AR + cs.LG · 代码开源</div>
+          <div class="abs-body">针对功能可验证的高质量 RTL 数据稀缺问题，RTLSeek 提出三大机制：① <strong>多样性导向强化学习（DORL）</strong>后训练范式，鼓励 LLM 探索更广泛的设计空间；② <strong>多样性中心多目标奖励调度</strong>，融合专家知识与 EDA 工具（仿真/综合）反馈；③ <strong>三阶段训练框架</strong>，最大化有限数据效用。在 RTLLM 基准上超越以往方法，并验证"<strong>生成越多，结果越好</strong>"的扩展律。实现代码/数据集/模型权重已开源（DAC 2026 ID 71）。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.27630" target="_blank">arXiv</a>
+            <a href="https://anonymous.4open.science/r/DAC2026ID71-ACB4/" target="_blank">开源代码</a>
+            <a class="local" href="./2026-03-31/RTLSeek_LLM_RTL_Generation_MultiStage_Diversity_RL.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-new">NEW</span>
+          <div class="abs-title">AXON: 架构级→网表级协同优化，超越商业 EDA 工具的加法器自动化框架</div>
+          <div class="abs-meta">Tiantian Yang, Xuanle Ren, Qingdian Wan, Qi Meng · 2026-03-30 · cs.AR · TSMC 28nm</div>
+          <div class="abs-body">针对加法器 PPA 优化缺乏网表级精细考量的问题，AXON 通过<strong>分层前缀拓扑搜索 + 标准单元感知映射</strong>实现设计空间全局最优。提出混合并行前缀+林氏架构（Ling's Adder），在 TSMC 28nm 上：延迟 <strong>-10.3%</strong>、面积-延迟积 <strong>-12.6%</strong>、能量-延迟积 <strong>-32.1%</strong>，全部优于商业综合工具。是面向标准单元感知的网表级智能优化的重要突破。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.28184" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-31/AXON_Automated_Netlist_Optimization_HighSpeed_Adders.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ── 2026-03-30 ── -->
   <div class="date-group">
@@ -1227,6 +1278,18 @@
       <a href="https://news.siemens.com/en-us/siemens-fuse-eda-ai-agent/" target="_blank">→ 阅读原文</a>
     </div>
     <div class="news-card">
+      <div class="src"><span class="dot"></span>Cadence / NVIDIA · 2026-03-26（最新）</div>
+      <h4>Cadence × NVIDIA 再度扩大合作 — Millennium M2000 超算 + 全系 EDA 工具 GPU 加速</h4>
+      <p>Cadence 宣布扩大与 NVIDIA 的战略合作，推出 Millennium™ M2000 超算（Grace CPU + Blackwell GPU），Innovus/Celsius/Voltus/EMX 全系物理设计工具 GPU 加速，吞吐量高达 80×，功耗降低 20×。Micron HBM 设计流已集成，Honda 全涡扇发动机仿真（Fidelity CFD）实现完整工程化落地。ChipStack™ AI Super Agent 与 NVIDIA NemoClaw 开源栈深度融合。</p>
+      <a href="https://www.engineering.com/cadence-expands-ai-design-collaboration-with-nvidia/" target="_blank">→ 阅读原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Siemens EDA · 2026-03-24（最新）</div>
+      <h4>Siemens Fuse EDA AI System — AI 代理自动化设计工作流，Aprisa 效率提升 10×</h4>
+      <p>Siemens 发布 Fuse EDA AI 系统最新白皮书《三波 AI 代理开启 EDA 的下一个时代》。核心能力：Fuse EDA AI 代理协调复杂多工具工作流，集中式多模态 EDA 数据湖（向量化所有 EDA 格式），安全 RAG 框架支持本地/云部署。Aprisa（IC 布局布线）效率提升 10×，Calibre（制造验证）运行时间加速 60-400%，HyperLynx（PCB 仿真）仿真时间缩短 100,000×。</p>
+      <a href="https://www.siemens.com/zh-cn/products/fuse-eda-ai-system/" target="_blank">→ 产品页面</a>
+    </div>
+    <div class="news-card">
       <div class="src"><span class="dot"></span>Cadence / NVIDIA · 2026-03-18</div>
       <h4>Cadence ChipStack™ AI Super Agent — 首个前端芯片设计 AI 超级智能体</h4>
       <p>与 NVIDIA NemoClaw 深度集成，全系 EDA 工具 GPU 加速，吞吐量提升最高 80×，Clarity 3D Solver 在 Millennium M2000 上快 5×。联发科、Micron HBM 等已在使用。</p>
@@ -1315,7 +1378,8 @@
 <section id="timeline">
   <div class="section-title"><span class="icon">📅</span> 重大事件时间线 <span class="line"></span></div>
   <div class="timeline">
-    <div class="tl-item"><div class="tl-date">2026-03-30（今日）</div><h4>arXiv 今日新提交 11 篇 — UCAgent 端到端功能验证智能体 + IncreRTL 增量 RTL 生成</h4><p>arXiv cs.AR 今日新提交 11 篇论文。重点论文：UCAgent（中科院/国防科大）提出 31 级细粒度验证工作流 + VCLM 标签机制，在 UART/FPU 等模块上实现 98.5% 代码覆盖率并发现未识别缺陷；IncreRTL 通过需求-代码可追溯性链接实现增量 RTL 生成，避免结构漂移。另有 Wattchmen（ICS 2026）GPU 能耗建模、IBEX CXL 内存扩展等硬件架构论文。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-31（今日）</div><h4>arXiv 今日新提交 13 篇 — RTLSeek 多样性RL提升RTL生成 + AXON 网表级智能优化</h4><p>arXiv cs.AR 今日新提交 13 篇论文。重点论文：RTLSeek（华为/复旦等，DAC 2026 投稿）提出多阶段多样性导向强化学习范式，将 EDA 工具反馈融入奖励调度，在 RTLLM 基准上验证"生成越多结果越好"扩展律，代码开源；AXON（Tiantian Yang等）提出架构级→网表级协同加法器优化，TSMC 28nm 实测 EDP 提升 32.1% 超越商业工具。行业动态：Cadence 与 NVIDIA 再度扩大合作，Millennium M2000 超算支持全系 EDA 工具 GPU 加速（80×吞吐），Siemens Fuse EDA AI 系统更新白皮书，AI 代理赋能全工具链。</p></div>
+    <div class="tl-item"><div class="tl-date">2026-03-30（昨日）</div><h4>arXiv 今日新提交 11 篇 — UCAgent 端到端功能验证智能体 + IncreRTL 增量 RTL 生成</h4><p>arXiv cs.AR 今日新提交 11 篇论文。重点论文：UCAgent（中科院/国防科大）提出 31 级细粒度验证工作流 + VCLM 标签机制，在 UART/FPU 等模块上实现 98.5% 代码覆盖率并发现未识别缺陷；IncreRTL 通过需求-代码可追溯性链接实现增量 RTL 生成，避免结构漂移。另有 Wattchmen（ICS 2026）GPU 能耗建模、IBEX CXL 内存扩展等硬件架构论文。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-29（今日）</div><h4>行业动态更新：Claude Mythos 意外曝光 + 智元"能仔1号"量产线上岗 + 北京石景山具身智能实训场三期揭牌</h4><p>Anthropic 未发布旗舰模型 Claude Mythos（代号 Capybara）内部文档意外泄露，被评为"step change 级别突破"；智元机器人"能仔1号"正式在上汽别克量产线上岗（中国汽车行业首批）；北京石景山具身智能实训场三期揭牌，石景山区具身智能数据要素产业联盟（40+ 单位）成立。arXiv 周日无新提交，明日（周一）将统一处理本周末积压稿件。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-28</div><h4>今日更新：3 篇新论文（FluxEDA / AutoPDR / Causal AI for AMS）+ ISPD 2026 闭幕汇总</h4><p>FluxEDA 提出有状态 Agentic EDA 执行基础设施（状态回滚 + 多步优化）；AutoPDR 用图学习预测 PDR 求解器配置，搜索空间缩减 78%；Causal AI for AMS 在 TSMC 65nm 实现可解释参数效应分析（ATE 误差 &lt;25%）；ISPD 2026 Agentic AI 圆桌讨论与 MultiRAG 邀请报告正式发布。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-15~18</div><h4>ISPD 2026 · 德国波恩：AI/LLM 在物理设计中正式成为顶会核心议题</h4><p>专设"AI/LLM in Physical Design"session，Agentic AI 圆桌讨论，AstroTune（AST+LLM 跨阶段参数调优）、CHASE（Chiplet 多保真度探索）等重点论文。MultiRAG 邀请报告系统梳理三种 EDA 知识注入 LLM 路径。</p></div>
@@ -1367,7 +1431,7 @@
 
 <footer>
   <p>数据来源：arXiv.org · ispd.cc · siemens.com · cadence.com · synopsys.com · semi.org.cn · semiconductor-digest.com · chipagents.ai · paper.cnstock.com · semi-insights.com · nvidia.com · blogs.nvidia.com</p>
-  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-03-30</p>
+  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-03-31</p>
 </footer>
 
 <script>
