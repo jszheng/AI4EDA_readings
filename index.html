@@ -185,11 +185,11 @@
 <header>
   <h1>🔬 AI for EDA 论文与资讯索引</h1>
   <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-04-02 · 涵盖 2026-03-15 → 2026-04-02</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-04-03 · 涵盖 2026-03-15 → 2026-04-03</p>
   <div class="stats">
-    <div class="stat"><div class="num">84</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">17</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">50+</div><div class="label">行业动态</div></div>
+    <div class="stat"><div class="num">87</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">18</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">53+</div><div class="label">行业动态</div></div>
     <div class="stat"><div class="num">3</div><div class="label">今日新增</div></div>
   </div>
 </header>
@@ -208,8 +208,9 @@
 <section id="overview">
   <div class="section-title"><span class="icon">📋</span> 核心趋势综述 <span class="line"></span></div>
   <div class="summary-box">
-    <h3>🔑 当前最重要的九大趋势（截至 2026-04-02）</h3>
+    <h3>🔑 当前最重要的十大趋势（截至 2026-04-03）</h3>
     <ul>
+      <li><strong>🆕 AI辅助硬件安全验证综述（VTS 2026，arXiv:2604.01572，今日发布）：</strong>Khan Thamid Hasan 等人发布首个面向 AI/LLM 辅助硬件安全验证全流程的系统综述，以开源 NVDLA 为案例，覆盖资产识别、威胁建模、安全测试生成、仿真分析、形式验证到对策推理六大阶段。强调 AI/LLM 自动化必须配以仿真证据与形式化推理进行"可信落地"，将在 IEEE VTS 2026 展示。这是今日最新发布的 AI for EDA 安全方向重要综述。</li>
       <li><strong>🆕 Cognichip 获 $6000 万融资（2026-04-02）：</strong>AI 芯片设计初创公司 Cognichip 宣布完成 6000 万美元融资（TechCrunch 报道），声称其 AI 技术可将芯片开发成本降低 75%、缩短开发周期一半以上，专注于 AI 工作负载专用芯片设计自动化，是本周最重磅的 AI for EDA 投资事件。</li>
       <li><strong>🆕 后端物理设计新突破：GNN + 3D FPGA + 多FPGA划分（4月新论文）：</strong>arXiv 4月首批 cs.AR 论文释放多个重量级 EDA 方向成果：<strong>GSR-GNN</strong>（DAC 2026，87.2% 内存降低 + 30× 训练加速）突破深度 GNN 在大规模电路图训练的工程瓶颈；<strong>RePart</strong>（ISEDA 2026，跳数降低 52.3% + 11× 加速）刷新多FPGA超图划分SOTA；<strong>Escaping Flatland</strong>（DAC 2026）提出首个3D FPGA布局流程，将在GitHub开源。</li>
       <li><strong>🆕 NVIDIA 四大工业软件巨头 AI Agent 联合生态全面落地：</strong>2026-03-16 NVIDIA 宣布与 Cadence（ChipStack AI SuperAgent）、Siemens（Fuse EDA AI Agent）、Synopsys（AgentEngineer）、Dassault Systèmes 深度绑定，Samsung/SK hynix/Astera Labs/MediaTek/TSMC/Micron 均已实际部署，形成史上最大规模的 EDA AI 商业联盟。</li>
@@ -233,6 +234,75 @@
 <!-- ══════════════ 论文 ══════════════ -->
 <section id="papers">
   <div class="section-title"><span class="icon">📄</span> 论文收录（按日期倒序）<span class="line"></span></div>
+
+  <!-- ── 2026-04-03 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0403')">
+      <h3>📅 2026-04-03 · 今日更新（3篇）</h3>
+      <span class="badge-count">3 篇</span>
+      <span class="toggle" id="toggle-g0403">▼</span>
+    </div>
+    <div class="date-body" id="g0403">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> AI-Assisted Hardware Security Verification: A Survey and AI Accelerator Case Study</td>
+            <td class="cat">硬件安全/LLM辅助验证/AI加速器/VTS 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.01572" target="_blank">2604.01572</a></td>
+            <td><a class="pdf-link" href="./2026-04-03/2604.01572_AI-HW-Security-Verification.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="star">★</span> VeriAgent: A Tool-Integrated Multi-Agent System with Evolving Memory for PPA-Aware RTL Code Generation</td>
+            <td class="cat">多智能体/PPA优化/RTL生成/进化记忆/清华+厦大</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17613" target="_blank">2603.17613</a></td>
+            <td><a class="pdf-link" href="./2026-04-03/2603.17613_VeriAgent.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><span class="star">★</span> CODMAS: A Dialectic Multi-Agent Collaborative Framework for Structured RTL Optimization</td>
+            <td class="cat">辩证多智能体/RTL优化/PPA/EACL 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17204" target="_blank">2603.17204</a></td>
+            <td><a class="pdf-link" href="./2026-04-03/2603.17204_CODMAS.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">NEW</span><span class="badge-top">VTS 2026</span>
+          <div class="abs-title">AI辅助硬件安全验证：系统综述与AI加速器案例研究（首篇全流程综述）</div>
+          <div class="abs-meta">Khan Thamid Hasan, Md Ajoad Hasan, Nashmin Alam, Md. Touhidul Islam, Upoma Das, Farimah Farahmandi · 2026-04-02 · cs.CR, cs.AR · <strong>IEEE VTS 2026 录用</strong></div>
+          <div class="abs-body">首次对 AI/LLM 辅助硬件安全验证全流程进行系统综述，覆盖：① <strong>资产识别</strong>（AI自动分析设计资产）；② <strong>威胁建模</strong>（LLM辅助安全威胁推理）；③ <strong>安全测试计划生成</strong>；④ <strong>仿真驱动分析</strong>；⑤ <strong>形式化验证</strong>；⑥ <strong>对策推理</strong>六大阶段。以开源 <strong>NVIDIA NVDLA</strong> 深度学习加速器为实践案例，展示 AI 技术在真实硬件安全验证中的具体应用。核心观点：AI/LLM 的自动化输出必须经过仿真证据与形式化推理的"可信落地"验证，强调方法可靠性。这是 AI for EDA 中硬件安全验证方向的重要综述性工作，同时触及 RTL生成/LLM辅助工具的相邻领域。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.01572" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-03/2604.01572_AI-HW-Security-Verification.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-hot">HIGH VALUE</span><span class="badge-new">NEW</span>
+          <div class="abs-title">VeriAgent：带进化记忆机制的工具集成 PPA 感知多智能体 RTL 生成系统（清华+厦大）</div>
+          <div class="abs-meta">Yaoxiang Wang, Qi Shi, ShangZhan Li, Qingguo Hu, Xinyu Yin, Bo Guo, Xu Han, Maosong Sun, Jinsong Su · 2026-03-18 · cs.CL, cs.PL · <strong>清华大学 + 厦门大学</strong></div>
+          <div class="abs-body">多智能体框架，首次将 PPA（功耗/性能/面积）感知与 RTL 生成深度结合。三大核心智能体：① <strong>程序员智能体</strong>（代码生成）；② <strong>正确性智能体</strong>（功能验证）；③ <strong>PPA 智能体</strong>（物理指标评估与优化）。创新引入 <strong>演进记忆机制（Evolving Memory）</strong>：将优化经验外化为持久化结构化记忆节点，系统基于历史执行轨迹持续改进策略，无需重训练模型，实现从"一次性推理"到"反馈驱动持续优化"的范式转变。被认为是国内 LLM for EDA 学术研究的最新力作，与 CODMAS 同期发布，共同引领多智能体 RTL 优化研究浪潮。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.17613" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-03/2603.17613_VeriAgent.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-new">NEW</span><span class="badge-top">EACL 2026</span>
+          <div class="abs-title">CODMAS：辩证多智能体协作框架实现结构化 RTL 优化，关键路径延迟降低 25%、功耗降低 22%</div>
+          <div class="abs-meta">Che-Ming Chang, Prashanth Vijayaraghavan, Ashutosh Jadhav, Charles Mackin, Vandana Mukherjee, Hsinyu Tsai, Ehsan Degan · 2026-03-17 · cs.CL, cs.AR · <strong>EACL 2026 录用</strong></div>
+          <div class="abs-body">将"小黄鸭调试法"哲学引入 RTL 优化，提出 <strong>CODMAS（辩证多智能体协作系统）</strong>框架，四大角色协同运作：① <strong>阐述者（Articulator）</strong>：逐步阐述代码转换计划，揭示隐含假设；② <strong>假设伙伴（Hypothesis Partner）</strong>：预测转换结果，调和预期与实际偏差；③ <strong>领域特定编码智能体（DCA）</strong>：生成符合硬件架构的 Verilog 修改；④ <strong>代码评估智能体（CEA）</strong>：验证语法、功能与 PPA 指标。同步贡献包含 120 个 Verilog 三元组的 <strong>RTLOPT 基准</strong>（流水线+时钟门控）。实验结果：流水线优化关键路径延迟降低 <strong>25%</strong>，时钟门控功耗降低 <strong>22%</strong>，在多个开源/专有 LLM 上均表现显著优于基线。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.17204" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-03/2603.17204_CODMAS.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ── 2026-04-02 ── -->
   <div class="date-group">
@@ -1380,7 +1450,41 @@
   </div>
 
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌐</span> 国际动态（2026-03-25 · 历史）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌐</span> 国际动态（2026-04-03 · 今日最新）</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>The Institution of Electronics · 2026-04-01</div>
+      <h4>深度剖析：AI 在 EDA 中真正值得解决的是什么？（SystemVerilog 共同创建者执笔）</h4>
+      <p>Simon Davidmann（SystemVerilog 联合创始人）在 EDN 发表深度分析，揭示 EDA 三巨头（Cadence/Synopsys/Siemens）的 AI 产品仍是"营销叙事+增量优化"，而非解决验证能力的根本突破。核心论点：真正值得 AI 解决的 EDA 问题是如何验证万亿周期、软硬件一体的复杂系统，而非优化现有流程。开放生态协作是唯一出路。</p>
+      <a href="https://institutionofelectronics.ac.uk/what-is-the-eda-problem-worth-solving-with-ai/" target="_blank">→ 阅读原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Normal Computing · 2026-03-28</div>
+      <h4>Normal Computing 获三星催化剂基金领投 5000 万美元，攻克 AI 硬件能耗危机</h4>
+      <p>通过随机热力学计算原理重构硅设计流程，解决 AI 算力能耗危机，三星催化剂基金领投 5000 万美元融资，是继 Cognichip（6000 万，4月2日）之后又一重磅 AI 硬件初创公司融资事件。</p>
+      <a href="https://www.asicpro.com/2026/04/02/semiconductor-news-march-2026/" target="_blank">→ 阅读报道</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Siemens / AsicPro · 2026-03-31</div>
+      <h4>Siemens Questa One Agentic Toolkit 正式发布 — 芯片验证工作流全面自动化</h4>
+      <p>Siemens 推出 Questa One Agentic Toolkit，专注自动化芯片验证工作流，与 Fuse EDA AI Agent 协同，覆盖半导体、3D IC、PCB 全流程验证任务，目标将验证工程师的重复性操作降至最低。</p>
+      <a href="https://news.siemens.com/en-us/questa-one-agentic-ai-toolkit/" target="_blank">→ 阅读原文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Synopsys / AsicPro · 2026-03-27</div>
+      <h4>Synopsys 推出电子数字孪生平台 — 加速物理 AI 系统开发（软件定义硬件辅助验证）</h4>
+      <p>Synopsys 发布用于物理 AI 系统（机器人、自动驾驶）的数字孪生平台，实现从芯片仿真到系统级协同验证的全链路。同步推出软件定义硬件辅助验证方案，支持 AI 芯片大规模部署场景的验证需求。Ansys 多物理场工具与 Agentic AI 的整合（Ansys 2026 R1）持续推进。</p>
+      <a href="https://www.synopsys.com/ai/ai-powered-eda.html" target="_blank">→ 了解更多</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Samsung + Synopsys · 2026-03-30</div>
+      <h4>三星 × Synopsys 战略合作深化 — 共同推进 Multi-Die / Chiplet 设计创新</h4>
+      <p>三星与 Synopsys 宣布扩大战略合作，重点聚焦 Multi-Die 和 Chiplet 架构设计，对接先进封装可靠性验证需求，将 AI 工具深度整合到 2.5D/3D IC 协同设计流程中。</p>
+      <a href="https://www.asicpro.com/2026/04/02/semiconductor-news-march-2026/" target="_blank">→ 阅读报道</a>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌍</span> 国际动态（2026-04-02 · 历史）</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>Synopsys · 2026-03-11~19（Converge 2026）</div>
@@ -1533,7 +1637,8 @@
 <section id="timeline">
   <div class="section-title"><span class="icon">📅</span> 重大事件时间线 <span class="line"></span></div>
   <div class="timeline">
-  <div class="tl-item"><div class="tl-date">2026-04-02（今日）</div><h4>🔥 Cognichip $6000万融资 + DAC/ISEDA 2026 新论文：GSR-GNN 深度GNN加速 + RePart多FPGA划分 + Escaping Flatland 3D FPGA布局</h4><p>TechCrunch报道：Cognichip 完成 6000 万美元融资，AI 辅助设计 AI 芯片，宣称降本 75%。arXiv 发布三篇已被顶会录用的后端物理设计论文：GSR-GNN（DAC 2026，深度 GNN 训练 87.2% 内存降低、30× 加速）、RePart（ISEDA 2026，多FPGA超图划分跳数降低52.3%）、Escaping Flatland（DAC 2026，3D FPGA首个专用布局流程，关键路径最高降低18%，将开源）。Siemens Fuse EDA AI Agent、Cadence ChipStack 持续落地。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-03（今日）</div><h4>🔥 3篇新论文收录：AI硬件安全验证综述（VTS 2026）+ VeriAgent 进化记忆PPA感知 + CODMAS 辩证多智能体RTL优化 · Normal Computing $5000万融资 · Siemens Questa One Agentic Toolkit发布 · Simon Davidmann深度剖析AI EDA真实价值</h4><p>今日新增3篇论文：arXiv:2604.01572（VTS 2026，首篇AI辅助硬件安全验证全流程综述，NVDLA案例实践）；VeriAgent（2603.17613，清华+厦大，PPA感知多智能体+进化记忆机制）；CODMAS（2603.17204，EACL 2026，辩证式多智能体，流水线延迟-25%/功耗-22%）。注：RTLSeek（2603.27630）已于2026-03-31收录，本次不重复。行业：Normal Computing获三星催化剂基金领投5000万美元融资；Siemens发布Questa One Agentic Toolkit；SystemVerilog共同创建者Simon Davidmann发表深度反思文章，批判EDA AI仍停留"营销叙事"，呼吁开放验证生态突破。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-02（昨日）</div><h4>🔥 Cognichip $6000万融资 + DAC/ISEDA 2026 新论文：GSR-GNN 深度GNN加速 + RePart多FPGA划分 + Escaping Flatland 3D FPGA布局</h4><p>TechCrunch报道：Cognichip 完成 6000 万美元融资，AI 辅助设计 AI 芯片，宣称降本 75%。arXiv 发布三篇已被顶会录用的后端物理设计论文：GSR-GNN（DAC 2026，深度 GNN 训练 87.2% 内存降低、30× 加速）、RePart（ISEDA 2026，多FPGA超图划分跳数降低52.3%）、Escaping Flatland（DAC 2026，3D FPGA首个专用布局流程，关键路径最高降低18%，将开源）。Siemens Fuse EDA AI Agent、Cadence ChipStack 持续落地。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-01</div><h4>arXiv 9 篇新提交 — FluxEDA + AP-DRL + AutoPDR + Cadence×NVIDIA × 论芯科技落地</h4><p>arXiv cs.AR 今日公布 9 篇论文，3 篇高度相关：FluxEDA（有状态 Agentic EDA 执行基础设施，商用后端实测）、AP-DRL（Versal ACAP 异构 DRL 训练加速，FPGA 基线 4.17×）、AutoPDR（图学习 PDR 形式验证配置预测，ISEDA 2026，已开源）。行业：Cadence × NVIDIA 发布 Millennium M2000 加速套件（80×吞吐，Micron/Honda 落地），Synopsys 发布 Ansys 2026 R1 整合多物理场+Agentic AI，国内论芯科技产线落地（25× 文档效率 + 发现 Respin Bug），芯和半导体 SEMICONChina 宣布 AI 时代系统级 EDA 战略升级，Agent4Chip Workshop @ UCLA 23 篇论文公布。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-31</div><h4>arXiv 今日新提交 13 篇 — RTLSeek 多样性RL提升RTL生成 + AXON 网表级智能优化</h4><p>arXiv cs.AR 今日新提交 13 篇论文。重点论文：RTLSeek（华为/复旦等，DAC 2026 投稿）提出多阶段多样性导向强化学习范式，将 EDA 工具反馈融入奖励调度，在 RTLLM 基准上验证"生成越多结果越好"扩展律，代码开源；AXON（Tiantian Yang等）提出架构级→网表级协同加法器优化，TSMC 28nm 实测 EDP 提升 32.1% 超越商业工具。行业动态：Cadence 与 NVIDIA 再度扩大合作，Millennium M2000 超算支持全系 EDA 工具 GPU 加速（80×吞吐），Siemens Fuse EDA AI 系统更新白皮书，AI 代理赋能全工具链。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-30（昨日）</div><h4>arXiv 今日新提交 11 篇 — UCAgent 端到端功能验证智能体 + IncreRTL 增量 RTL 生成</h4><p>arXiv cs.AR 今日新提交 11 篇论文。重点论文：UCAgent（中科院/国防科大）提出 31 级细粒度验证工作流 + VCLM 标签机制，在 UART/FPU 等模块上实现 98.5% 代码覆盖率并发现未识别缺陷；IncreRTL 通过需求-代码可追溯性链接实现增量 RTL 生成，避免结构漂移。另有 Wattchmen（ICS 2026）GPU 能耗建模、IBEX CXL 内存扩展等硬件架构论文。</p></div>
@@ -1568,16 +1673,15 @@
 <section id="tracking">
   <div class="section-title"><span class="icon">📌</span> 待追踪事项 <span class="line"></span></div>
   <ul class="todo-list">
+    <li><strong>🆕 AI 辅助硬件安全验证（arXiv:2604.01572，VTS 2026）</strong>：关注 IEEE VTS 2026（4月底）现场展示，以及 NVDLA 开源验证流程的进一步开放</li>
+    <li><strong>🆕 RTLSeek 正式开源代码</strong>（DAC 2026 ID#71，华为+复旦）：匿名提交期结束后关注 GitHub 正式仓库发布，以及 DAC 2026（6月）现场结果展示</li>
+    <li><strong>🆕 Normal Computing 技术落地进展</strong>：三星催化剂基金领投 5000 万美元后，关注其随机热力学计算芯片在 AI 推理功耗优化中的实测数据</li>
     <li><strong>🆕 Cognichip 技术细节披露</strong>：2026-04-02 融资 $6000 万后，关注其 AI 驱动芯片设计技术路线、实际落地案例、与 Synopsys/Cadence 工具链集成方式</li>
     <li><strong>🆕 Escaping Flatland GitHub 开源</strong>（DAC 2026，Cong Hao/Andrew Kahng）：3D FPGA 布局流程承诺开源，关注代码发布时间与 VTR 框架集成</li>
-    <li><strong>🆕 GSR-GNN 代码开源</strong>（DAC 2026，Yuebo Luo 等）：87.2% 内存降低 + 30× 训练加速的电路 GNN 框架，关注 GitHub 仓库发布</li>
     <li><strong>DAC 2026 完整论文程序</strong>（6月22-26日，旧金山）：预计 4 月发布完整录用列表，关注 AI for EDA、高效 LLM 加速器两大专题；RTLSeek（DAC 2026 ID 71）等已投稿论文现场展示</li>
     <li><strong>Agent4Chip Workshop @ ICLR 2026</strong>（4月23-27，里约热内卢）：23 篇已录用论文的现场展示、演讲与 Q&A 内容；ACE-RTL / ASPEN / PRO-V-R1 的完整实验数据</li>
     <li><strong>ISEDA 2026</strong>（5月8-10日，新加坡）：RepArt（多FPGA划分）、AutoPDR（GNN形式验证）等已录用论文的完整发表版本，关注会议现场展示细节</li>
     <li><strong>FluxEDA 开源发布</strong>：当前论文验证可行性（有状态后端执行层），关注 GitHub 代码开源时间与与商用 EDA 工具（Synopsys/Cadence）的真实集成效果</li>
-    <li><strong>Cadence Millennium M2000 客户扩展</strong>：Micron HBM / Honda CFD 之后的新客户落地公告（预计 Q2 2026）</li>
-    <li><strong>Synopsys AgentEngineer 多智能体框架</strong>：在 NVIDIA NeMo 平台上构建的半导体和系统设计多智能体框架，关注具体工具与流程细节</li>
-    <li><strong>ChipAgents</strong>：7400 万融资后产品商业化进展，RCA 智能体技术开放合作情况</li>
     <li>NVIDIA EDA Research：<a href="https://research.nvidia.com/labs/electronic-design-automation/" target="_blank" style="color:var(--accent2);">research.nvidia.com/labs/electronic-design-automation</a></li>
   </ul>
 </section>
@@ -1586,7 +1690,7 @@
 
 <footer>
   <p>数据来源：arXiv.org · ispd.cc · siemens.com · cadence.com · synopsys.com · semi.org.cn · semiconductor-digest.com · chipagents.ai · paper.cnstock.com · semi-insights.com · nvidia.com · blogs.nvidia.com</p>
-  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-04-02</p>
+  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-04-03</p>
 </footer>
 
 <script>
