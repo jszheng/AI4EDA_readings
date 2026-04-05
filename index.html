@@ -185,12 +185,12 @@
 <header>
   <h1>🔬 AI for EDA 论文与资讯索引</h1>
   <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-04-04 · 涵盖 2026-03-15 → 2026-04-04</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-04-05 · 涵盖 2026-03-15 → 2026-04-05</p>
   <div class="stats">
-    <div class="stat"><div class="num">88</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">19</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">57+</div><div class="label">行业动态</div></div>
-    <div class="stat"><div class="num">1</div><div class="label">今日新增</div></div>
+    <div class="stat"><div class="num">90</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">20</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">61+</div><div class="label">行业动态</div></div>
+    <div class="stat"><div class="num">2</div><div class="label">今日新增</div></div>
   </div>
 </header>
 
@@ -208,7 +208,7 @@
 <section id="overview">
   <div class="section-title"><span class="icon">📋</span> 核心趋势综述 <span class="line"></span></div>
   <div class="summary-box">
-    <h3>🔑 当前最重要的十大趋势（截至 2026-04-04）</h3>
+    <h3>🔑 当前最重要的十大趋势（截至 2026-04-05）</h3>
     <ul>
       <li><strong>🆕 FormalRTL（arXiv:2603.08738，今日重点推荐）：</strong>CUHK Qiang Xu 团队提出端到端多智能体 RTL 合成框架，核心创新为将软件参考模型作为可执行形式化规约，把 <strong>规划、代码生成、形式等价性检查</strong> 紧密结合，专为工业级数据路径密集型设计而设计，解决现有 LLM 方法在规范模糊和缺乏形式化正确性保证上的关键痛点。贡献了新工业级复杂基准测试集，框架将全面开源。</li>
       <li><strong>🆕 ACE-RTL（arXiv:2602.10218，NVIDIA，今日重点推荐）：</strong>NVIDIA 芯片设计 AI 团队提出 ACE-RTL（Agentic Context Evolution）方法，将 1.7M RTL 样本训练的专用 LLM 与前沿推理 LLM 通过三组件协同（Generator / Reflector / Coordinator）深度结合，在 CVDP 基准取得 <strong>41.02% 通过率提升</strong>，首次实现 RTL 专用知识与推理能力的 Agentic 融合。</li>
@@ -237,10 +237,63 @@
 <section id="papers">
   <div class="section-title"><span class="icon">📄</span> 论文收录（按日期倒序）<span class="line"></span></div>
 
+  <!-- ── 2026-04-05 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0405')">
+      <h3>📅 2026-04-05 · 今日更新（2篇）</h3>
+      <span class="badge-count">2 篇</span>
+      <span class="toggle" id="toggle-g0405">▼</span>
+    </div>
+    <div class="date-body" id="g0405">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> ARCS: Autoregressive Circuit Synthesis with Topology-Aware Graph Attention and Spec Conditioning</td>
+            <td class="cat">模拟电路生成/自回归/GRPO强化学习/GNN/SPICE/NYU</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.29068" target="_blank">2603.29068</a></td>
+            <td><a class="pdf-link" href="./2026-04-05/2603.29068_ARCS_Autoregressive_Circuit_Synthesis.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="star">★</span> From Physics to Surrogate Intelligence: A Unified Electro-Thermo-Optimization Framework for TSV Networks</td>
+            <td class="cat">TSV/GNN替代模型/电热优化/Chiplet/3D IC/IEEE TCAD</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.29268" target="_blank">2603.29268</a></td>
+            <td><a class="pdf-link" href="./2026-04-05/2603.29268_TSV_PhGNN_ElectroThermo.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">NEW</span><span class="badge-top">NYU · 开源</span>
+          <div class="abs-title">ARCS：拓扑感知图注意力 + 规格条件化的自回归模拟电路合成，首次将 GRPO 引入多拓扑 RL 训练</div>
+          <div class="abs-meta">Tushar Dhananjay Pathak · 2026-03-30 · cs.LG · <strong>NYU · GitHub: tusharpathaknyu/ARCS</strong></div>
+          <div class="abs-body">ARCS（自回归电路合成）是一种模拟电路摊销生成系统，<strong>毫秒级</strong>生成完整 SPICE 可仿真设计（拓扑 + 元件值）。混合流水线结合图VAE + 流匹配模型 + SPICE排序，仅需 <strong>8 次 SPICE 评估</strong>即在 32 种拓扑中达 <strong>99.9% 仿真有效性</strong>（奖励 6.43/8.0），比遗传算法少 40× 评估。单模型推理 97ms 达 85% 有效性，比随机搜索快 600×。关键贡献：<strong>GRPO（组相对策略优化）</strong> 按拓扑进行优势归一化，解决 REINFORCE 跨拓扑奖励分布不匹配问题，仅 500 步 RL 训练（比 REINFORCE 少 10×）提升 +9.6 个百分点。语法约束解码 + 拓扑感知令牌掩码保证 100% 结构有效性。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.29068" target="_blank">arXiv</a>
+            <a href="https://github.com/tusharpathaknyu/ARCS" target="_blank">GitHub</a>
+            <a class="local" href="./2026-04-05/2603.29068_ARCS_Autoregressive_Circuit_Synthesis.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">NEW</span><span class="badge-top">投 IEEE TCAD</span>
+          <div class="abs-title">TSV-PhGNN：物理信息 GNN 替代模型驱动的 TSV 阵列电热协同优化，评估时间缩短六个数量级</div>
+          <div class="abs-meta">Mohamed Gharib, Leonid Popryho, Inna Partin-Vaisband · 2026-03-31 · cs.LG · <strong>已投 IEEE TCAD</strong></div>
+          <div class="abs-body">高密度 TSV 是 2.5D/3D 异构集成关键，但电耦合、插入损耗、自热效应带来信号完整性和热可靠性挑战，传统 FEM 计算成本过高。本文提出可扩展框架：① 多导体解析模型计算宽带 S 参数和有效各向异性热导率（15×15 阵列以内 5%–10% RFE）；② <strong>TSV-PhGNN</strong> 在解析数据训练+HFSS微调后泛化到更大阵列，RFE 低于 <strong>2%</strong>，方差几乎恒定；③ 集成多目标帕累托优化（反射系数/插入损耗/NEXT-FEXT/热导率），数百万 TSV 配置数分钟内探索完毕。评估时间比 FEM <strong>缩短超六个数量级</strong>，Ansys HFSS + Mechanical 验证高度一致。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.29268" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-05/2603.29268_TSV_PhGNN_ElectroThermo.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── 2026-04-04 ── -->
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0404')">
-      <h3>📅 2026-04-04 · 今日更新（1篇）</h3>
+      <h3>📅 2026-04-04 · 1 篇</h3>
       <span class="badge-count">1 篇</span>
       <span class="toggle" id="toggle-g0404">▼</span>
     </div>
@@ -1341,7 +1394,35 @@
 <section id="news">
   <div class="section-title"><span class="icon">🌍</span> 行业动态 <span class="line"></span></div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-04 · FormalRTL形式化RTL合成 + ACE-RTL NVIDIA Agentic RTL + 国内外EDA生态动态）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-05 · ARCS模拟电路RL合成 + TSV-PhGNN电热优化 + ICCAD 2026投稿截止临近）</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>arXiv cs.AR/cs.LG · 2026-04-05（今日重点论文）</div>
+      <h4>今日 2 篇新论文 — ARCS模拟电路合成 + TSV-PhGNN电热优化</h4>
+      <p>今日收录 2 篇高质量 AI for EDA 论文：<strong>ARCS</strong>（模拟电路自回归生成，GRPO RL，97ms推理，99.9%仿真有效性，NYU开源）；<strong>TSV-PhGNN</strong>（TSV 电热 GNN 代替 FEM，评估时间缩短六个数量级，已投 IEEE TCAD）。另 IncreRTL（arXiv:2603.25769）已于 2026-03-30 收录，AXON（arXiv:2603.28184）已于 2026-03-31 收录，不重复计入。</p>
+      <a href="https://arxiv.org/list/cs.AR/recent" target="_blank">→ 查看 cs.AR 完整列表</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>ICCAD 2026 · 截止日期提醒（今日重要）</div>
+      <h4>⚠️ ICCAD 2026 摘要提交截止：2026-04-07 · 论文截止：2026-04-14</h4>
+      <p>ICCAD 2026（国际计算机辅助设计大会）正式征稿中，摘要截止 4月7日（后天），完整论文截止 4月14日。AI for EDA 三大方向均可投稿：系统级CAD（AI与加速器/嵌入式）、综合与物理设计分析（GNN布局/RL布线）、新兴范式（LLM芯片设计）。录用通知 7月11日发布，会议地点与时间待官方公告。</p>
+      <a href="https://iccad.com/2026/authors/call-for-papers" target="_blank">→ ICCAD 2026 CFP</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>IEEE / NSF · 2026-04-05（重磅政策报告）</div>
+      <h4>NSF AI for EDA 战略研讨报告正式发表（IEEE Xplore），提出五大建议</h4>
+      <p>NSF Workshop on AI for EDA（NeurIPS 2024 卫星会议，2024年12月10日举办）官方报告在 IEEE Xplore 发表（arXiv:2601.14541）。五大建议：① 促进 AI/EDA 跨领域合作；② 加大 EDA 基础 AI 研究投入；③ 建立鲁棒数据基础设施；④ 推进可扩展计算设施；⑤ 加强人才培养。首次将 AI for EDA 列为美国国家科研战略优先方向。</p>
+      <a href="https://arxiv.org/abs/2601.14541" target="_blank">→ 报告 arXiv 页面</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>同济大学 EDA Lab · 2026-04-04（持续开源进展）</div>
+      <h4>RTL-CLAW 正式媒体报道 — 同济大学 AI 自动化集成电路设计工具开源持续推进</h4>
+      <p>同济大学电信学院叶雨阳团队联合 CUHK 余备团队开发的 RTL-CLAW 获同济官网正式报道（2026-04-04），核心功能：自然语言一句话指令调度多 EDA 工具，集成 Yosys/Verilator，路线图包含 DreamPlace/OpenROAD 后端对接与 3D IC 设计扩展。已在 GitHub 逐步开源，是国内 AI for EDA 开源工具链的重要新增。</p>
+      <a href="https://github.com/TONGJI-EDA-LAB/RTL-CLAW" target="_blank">→ GitHub 项目页面</a>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 昨日动态（2026-04-04 · FormalRTL形式化RTL合成 + ACE-RTL NVIDIA Agentic RTL + 国内外EDA生态动态）</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>GitHub · 2026-03-27（今日重点开源）</div>
@@ -1699,13 +1780,8 @@
 <section id="timeline">
   <div class="section-title"><span class="icon">📅</span> 重大事件时间线 <span class="line"></span></div>
   <div class="timeline">
-  <div class="tl-item"><div class="tl-date">2026-04-03（今日）</div><h4>🔥 3篇新论文收录：AI硬件安全验证综述（VTS 2026）+ VeriAgent 进化记忆PPA感知 + CODMAS 辩证多智能体RTL优化 · Normal Computing $5000万融资 · Siemens Questa One Agentic Toolkit发布 · Simon Davidmann深度剖析AI EDA真实价值</h4><p>今日新增3篇论文：arXiv:2604.01572（VTS 2026，首篇AI辅助硬件安全验证全流程综述，NVDLA案例实践）；VeriAgent（2603.17613，清华+厦大，PPA感知多智能体+进化记忆机制）；CODMAS（2603.17204，EACL 2026，辩证式多智能体，流水线延迟-25%/功耗-22%）。注：RTLSeek（2603.27630）已于2026-03-31收录，本次不重复。行业：Normal Computing获三星催化剂基金领投5000万美元融资；Siemens发布Questa One Agentic Toolkit；SystemVerilog共同创建者Simon Davidmann发表深度反思文章，批判EDA AI仍停留"营销叙事"，呼吁开放验证生态突破。</p></div>
-  <div class="tl-item"><div class="tl-date">2026-04-02（昨日）</div><h4>🔥 Cognichip $6000万融资 + DAC/ISEDA 2026 新论文：GSR-GNN 深度GNN加速 + RePart多FPGA划分 + Escaping Flatland 3D FPGA布局</h4><p>TechCrunch报道：Cognichip 完成 6000 万美元融资，AI 辅助设计 AI 芯片，宣称降本 75%。arXiv 发布三篇已被顶会录用的后端物理设计论文：GSR-GNN（DAC 2026，深度 GNN 训练 87.2% 内存降低、30× 加速）、RePart（ISEDA 2026，多FPGA超图划分跳数降低52.3%）、Escaping Flatland（DAC 2026，3D FPGA首个专用布局流程，关键路径最高降低18%，将开源）。Siemens Fuse EDA AI Agent、Cadence ChipStack 持续落地。</p></div>
-  <div class="tl-item"><div class="tl-date">2026-04-01</div><h4>arXiv 9 篇新提交 — FluxEDA + AP-DRL + AutoPDR + Cadence×NVIDIA × 论芯科技落地</h4><p>arXiv cs.AR 今日公布 9 篇论文，3 篇高度相关：FluxEDA（有状态 Agentic EDA 执行基础设施，商用后端实测）、AP-DRL（Versal ACAP 异构 DRL 训练加速，FPGA 基线 4.17×）、AutoPDR（图学习 PDR 形式验证配置预测，ISEDA 2026，已开源）。行业：Cadence × NVIDIA 发布 Millennium M2000 加速套件（80×吞吐，Micron/Honda 落地），Synopsys 发布 Ansys 2026 R1 整合多物理场+Agentic AI，国内论芯科技产线落地（25× 文档效率 + 发现 Respin Bug），芯和半导体 SEMICONChina 宣布 AI 时代系统级 EDA 战略升级，Agent4Chip Workshop @ UCLA 23 篇论文公布。</p></div>
-    <div class="tl-item"><div class="tl-date">2026-04-04</div><h4>今日更新：2 篇新论文（FormalRTL 形式化 RTL 合成 / ACE-RTL NVIDIA Agentic 上下文演化）+ 三大开源/行业动态</h4><p>FormalRTL（CUHK，arXiv:2603.08738）将软件参考模型作为可执行规约引导多智能体 RTL 合成+形式等价验证，解决工业级数据通路密集任务的规范模糊问题，框架将开源；ACE-RTL（NVIDIA，arXiv:2602.10218）首次实现 RTL 专用 LLM + 推理 LLM 的 Agentic 融合，CVDP 基准通过率提升 41.02%。开源：RTL-CLAW（同济+CUHK，AI智能体驱动EDA工具链）正式上线；Macro Placement Challenge 2026（$49,000 奖金赛）开放参赛。国内：合见工软 UDA 2.0（国内首款 Agentic AI EDA 平台）发布。EDA三巨头 Agentic 竞争格局深度文章发布。</p></div>
-    <div class="tl-item"><div class="tl-date">2026-04-03</div><h4>arXiv 今日新提交 — AI辅助硬件安全验证首篇综述 + VeriAgent PPA感知多智能体 + CODMAS 辩证框架</h4><p>arXiv cs.AR 更新。重点：AI辅助硬件安全验证综述（arXiv:2604.01572，VTS 2026）首次系统梳理 NVDLA 六阶段全流程；VeriAgent（清华+厦大，arXiv:2603.17613）三智能体+进化记忆 PPA 优化；CODMAS（EACL 2026，arXiv:2603.17204）辩证协作框架延迟 -25%/功耗 -22%。行业：Simon Davidmann（SystemVerilog创始人）深度批评 AI EDA 仍是营销叙事；Siemens Questa One Agentic Toolkit 发布；Synopsys 发布电子数字孪生平台。</p></div>
-    <div class="tl-item"><div class="tl-date">2026-04-02</div><h4>今日更新：3 篇新论文（GSR-GNN / RePart / Escaping Flatland）+ Cognichip $6000 万融资</h4><p>GSR-GNN（DAC 2026，内存降低 87.2%，30× 训练加速）、RePart（ISEDA 2026，跳数降低 52.3%，11× 加速）、Escaping Flatland（DAC 2026，3D FPGA 布局，最高 18% 延迟降低）。行业：Cognichip 完成 $6000 万融资（TechCrunch），用AI设计AI芯片；Cadence ChipStack AI SuperAgent 持续落地。</p></div>
-    <div class="tl-item"><div class="tl-date">2026-04-01</div><h4>今日更新：3 篇论文（FluxEDA / AP-DRL / AutoPDR）+ Cadence × NVIDIA Millennium M2000 + Agent4Chip Workshop</h4><p>FluxEDA 提出有状态 Agentic EDA 执行基础设施；AP-DRL 在 AMD Versal ACAP 上 DRL 训练加速 4.17×；AutoPDR 图学习 PDR 求解器配置，搜索空间压缩 78%。行业：Cadence × NVIDIA Millennium M2000 加速套件（80× 吞吐）；Synopsys Ansys 2026 R1 整合多物理场；论芯科技产线落地（25× 文档效率）；Agent4Chip Workshop @ UCLA（23 篇论文）。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-05（今日）</div><h4>🔥 2篇新论文收录：ARCS模拟电路GRPO强化学习合成 + TSV-PhGNN电热优化 · ICCAD 2026摘要截止临近（4月7日）· NSF AI for EDA战略报告发表</h4><p>今日新增2篇论文：ARCS（arXiv:2603.29068，NYU，GRPO驱动模拟电路自回归合成，97ms推理99.9%有效性，开源）；TSV-PhGNN（arXiv:2603.29268，TSV电热GNN框架，FEM评估时间缩短六数量级，投IEEE TCAD）。注：IncreRTL（2603.25769）已于2026-03-30收录，AXON（2603.28184）已于2026-03-31收录，不重复计入。行业：ICCAD 2026摘要截止4月7日；NSF AI for EDA报告正式在IEEE Xplore发表，首次列为国家科研战略；同济大学RTL-CLAW开源持续推进获官方报道。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-04</div><h4>今日更新：2 篇新论文（FormalRTL 形式化 RTL 合成 / ACE-RTL NVIDIA Agentic 上下文演化）+ 三大开源/行业动态</h4><p>FormalRTL（CUHK，arXiv:2603.08738）将软件参考模型作为可执行规约引导多智能体 RTL 合成+形式等价验证，解决工业级数据通路密集任务的规范模糊问题，框架将开源；ACE-RTL（NVIDIA，arXiv:2602.10218）首次实现 RTL 专用 LLM + 推理 LLM 的 Agentic 融合，CVDP 基准通过率提升 41.02%。开源：RTL-CLAW（同济+CUHK，AI智能体驱动EDA工具链）正式上线；Macro Placement Challenge 2026（$49,000 奖金赛）开放参赛。国内：合见工软 UDA 2.0（国内首款 Agentic AI EDA 平台）发布。EDA三巨头 Agentic 竞争格局深度文章发布。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-31</div><h4>arXiv 今日新提交 13 篇 — RTLSeek 多样性RL提升RTL生成 + AXON 网表级智能优化</h4><p>arXiv cs.AR 今日新提交 13 篇论文。重点论文：RTLSeek（华为/复旦等，DAC 2026 投稿）提出多阶段多样性导向强化学习范式，将 EDA 工具反馈融入奖励调度，在 RTLLM 基准上验证"生成越多结果越好"扩展律，代码开源；AXON（Tiantian Yang等）提出架构级→网表级协同加法器优化，TSMC 28nm 实测 EDP 提升 32.1% 超越商业工具。行业动态：Cadence 与 NVIDIA 再度扩大合作，Millennium M2000 超算支持全系 EDA 工具 GPU 加速（80×吞吐），Siemens Fuse EDA AI 系统更新白皮书，AI 代理赋能全工具链。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-30（昨日）</div><h4>arXiv 今日新提交 11 篇 — UCAgent 端到端功能验证智能体 + IncreRTL 增量 RTL 生成</h4><p>arXiv cs.AR 今日新提交 11 篇论文。重点论文：UCAgent（中科院/国防科大）提出 31 级细粒度验证工作流 + VCLM 标签机制，在 UART/FPU 等模块上实现 98.5% 代码覆盖率并发现未识别缺陷；IncreRTL 通过需求-代码可追溯性链接实现增量 RTL 生成，避免结构漂移。另有 Wattchmen（ICS 2026）GPU 能耗建模、IBEX CXL 内存扩展等硬件架构论文。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-29（今日）</div><h4>行业动态更新：Claude Mythos 意外曝光 + 智元"能仔1号"量产线上岗 + 北京石景山具身智能实训场三期揭牌</h4><p>Anthropic 未发布旗舰模型 Claude Mythos（代号 Capybara）内部文档意外泄露，被评为"step change 级别突破"；智元机器人"能仔1号"正式在上汽别克量产线上岗（中国汽车行业首批）；北京石景山具身智能实训场三期揭牌，石景山区具身智能数据要素产业联盟（40+ 单位）成立。arXiv 周日无新提交，明日（周一）将统一处理本周末积压稿件。</p></div>
@@ -1739,15 +1815,17 @@
 <section id="tracking">
   <div class="section-title"><span class="icon">📌</span> 待追踪事项 <span class="line"></span></div>
   <ul class="todo-list">
+    <li><strong>🆕 ICCAD 2026 摘要提交截止（2026-04-07）</strong>：摘要截止后天（4月7日），完整论文截止 4月14日。AI for EDA 相关投稿（布局布线/LLM/验证）将在 7月11日公布录用；关注会议论文收录情况。</li>
+    <li><strong>🆕 ARCS 开源代码跟进</strong>（arXiv:2603.29068，NYU）：GRPO驱动模拟电路合成框架已开源于 GitHub，关注后续对更多拓扑类型、更大规模电路的扩展，以及与商用模拟 EDA 工具链的集成验证。</li>
+    <li><strong>🆕 TSV-PhGNN IEEE TCAD 发表进度</strong>（arXiv:2603.29268）：论文已投 IEEE TCAD，关注 2.5D/3D IC 设计中 TSV 电热协同优化框架的同行评审反馈与最终发表版本。</li>
+    <li><strong>🆕 IncreRTL EvoRTL-Bench 开放</strong>（arXiv:2603.25769）：关注 EvoRTL-Bench 基准数据集开放发布，以及与其他 RTL 生成框架的对比评测结果。</li>
     <li><strong>🆕 AI 辅助硬件安全验证（arXiv:2604.01572，VTS 2026）</strong>：关注 IEEE VTS 2026（4月底）现场展示，以及 NVDLA 开源验证流程的进一步开放</li>
     <li><strong>🆕 RTLSeek 正式开源代码</strong>（DAC 2026 ID#71，华为+复旦）：匿名提交期结束后关注 GitHub 正式仓库发布，以及 DAC 2026（6月）现场结果展示</li>
-    <li><strong>🆕 Normal Computing 技术落地进展</strong>：三星催化剂基金领投 5000 万美元后，关注其随机热力学计算芯片在 AI 推理功耗优化中的实测数据</li>
     <li><strong>🆕 Cognichip 技术细节披露</strong>：2026-04-02 融资 $6000 万后，关注其 AI 驱动芯片设计技术路线、实际落地案例、与 Synopsys/Cadence 工具链集成方式</li>
     <li><strong>🆕 Escaping Flatland GitHub 开源</strong>（DAC 2026，Cong Hao/Andrew Kahng）：3D FPGA 布局流程承诺开源，关注代码发布时间与 VTR 框架集成</li>
     <li><strong>DAC 2026 完整论文程序</strong>（6月22-26日，旧金山）：预计 4 月发布完整录用列表，关注 AI for EDA、高效 LLM 加速器两大专题；RTLSeek（DAC 2026 ID 71）等已投稿论文现场展示</li>
-    <li><strong>Agent4Chip Workshop @ ICLR 2026</strong>（4月23-27，里约热内卢）：23 篇已录用论文的现场展示、演讲与 Q&A 内容；ACE-RTL / ASPEN / PRO-V-R1 的完整实验数据</li>
+    <li><strong>Agent4Chip Workshop @ ICLR 2026</strong>（4月23-27，里约热内卢）：23 篇已录用论文的现场展示、演讲与 Q&amp;A 内容；ACE-RTL / ASPEN / PRO-V-R1 的完整实验数据</li>
     <li><strong>ISEDA 2026</strong>（5月8-10日，新加坡）：RepArt（多FPGA划分）、AutoPDR（GNN形式验证）等已录用论文的完整发表版本，关注会议现场展示细节</li>
-    <li><strong>FluxEDA 开源发布</strong>：当前论文验证可行性（有状态后端执行层），关注 GitHub 代码开源时间与与商用 EDA 工具（Synopsys/Cadence）的真实集成效果</li>
     <li>NVIDIA EDA Research：<a href="https://research.nvidia.com/labs/electronic-design-automation/" target="_blank" style="color:var(--accent2);">research.nvidia.com/labs/electronic-design-automation</a></li>
   </ul>
 </section>
@@ -1756,7 +1834,7 @@
 
 <footer>
   <p>数据来源：arXiv.org · ispd.cc · siemens.com · cadence.com · synopsys.com · semi.org.cn · semiconductor-digest.com · chipagents.ai · paper.cnstock.com · semi-insights.com · nvidia.com · blogs.nvidia.com</p>
-  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-04-03</p>
+  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-04-05</p>
 </footer>
 
 <script>
