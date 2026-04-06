@@ -185,12 +185,12 @@
 <header>
   <h1>🔬 AI for EDA 论文与资讯索引</h1>
   <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-04-05 · 涵盖 2026-03-15 → 2026-04-05</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-04-06 · 涵盖 2026-03-15 → 2026-04-06</p>
   <div class="stats">
-    <div class="stat"><div class="num">90</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">20</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">61+</div><div class="label">行业动态</div></div>
-    <div class="stat"><div class="num">2</div><div class="label">今日新增</div></div>
+    <div class="stat"><div class="num">93</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">21</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">65+</div><div class="label">行业动态</div></div>
+    <div class="stat"><div class="num">3</div><div class="label">今日新增</div></div>
   </div>
 </header>
 
@@ -208,20 +208,18 @@
 <section id="overview">
   <div class="section-title"><span class="icon">📋</span> 核心趋势综述 <span class="line"></span></div>
   <div class="summary-box">
-    <h3>🔑 当前最重要的十大趋势（截至 2026-04-05）</h3>
+    <h3>🔑 当前最重要的十大趋势（截至 2026-04-06）</h3>
     <ul>
+      <li><strong>🆕 ChatSVA（arXiv:2604.02811，今日重点推荐 · DAC 2026）：</strong>首个面向 SystemVerilog 断言（SVA）自动化生成的端到端多智能体框架，提出 AgentBridge 平台解决小样本域特定数据稀缺问题。在 24 个 RTL 设计上实现 <strong>98.66% 语法通过率、96.12% 功能通过率</strong>，每设计生成 139.5 个 SVA，功能覆盖率 82.50%，比此前 SOTA 功能正确性提升 <strong>33.3 个百分点</strong>，覆盖率提升超 11×。</li>
+      <li><strong>🆕 Assertain（arXiv:2604.01583，今日重点推荐 · IEEE MDTS 2026）：</strong>自动化安全属性生成框架，集成 RTL 设计分析 + CWE 映射 + 威胁模型 + LLM 自反思优化机制，在 11 个代表性硬件设计上比 GPT-5 基线断言生成质量提升 61.22%，CWE 独特覆盖率提升 59.49%，架构缺陷检测提升 67.92%。</li>
+      <li><strong>🆕 AI辅助硬件安全验证综述（arXiv:2604.01572，今日跟进 · VTS 2026）：</strong>首个面向 AI/LLM 辅助硬件安全验证全流程的系统综述，以开源 NVDLA 为案例，覆盖六大验证阶段。将在 IEEE VTS 2026 展示。</li>
       <li><strong>🆕 FormalRTL（arXiv:2603.08738，今日重点推荐）：</strong>CUHK Qiang Xu 团队提出端到端多智能体 RTL 合成框架，核心创新为将软件参考模型作为可执行形式化规约，把 <strong>规划、代码生成、形式等价性检查</strong> 紧密结合，专为工业级数据路径密集型设计而设计，解决现有 LLM 方法在规范模糊和缺乏形式化正确性保证上的关键痛点。贡献了新工业级复杂基准测试集，框架将全面开源。</li>
-      <li><strong>🆕 ACE-RTL（arXiv:2602.10218，NVIDIA，今日重点推荐）：</strong>NVIDIA 芯片设计 AI 团队提出 ACE-RTL（Agentic Context Evolution）方法，将 1.7M RTL 样本训练的专用 LLM 与前沿推理 LLM 通过三组件协同（Generator / Reflector / Coordinator）深度结合，在 CVDP 基准取得 <strong>41.02% 通过率提升</strong>，首次实现 RTL 专用知识与推理能力的 Agentic 融合。</li>
-      <li><strong>🆕 AI辅助硬件安全验证综述（VTS 2026，arXiv:2604.01572，昨日发布）：</strong>Khan Thamid Hasan 等人发布首个面向 AI/LLM 辅助硬件安全验证全流程的系统综述，以开源 NVDLA 为案例，覆盖资产识别、威胁建模、安全测试生成、仿真分析、形式验证到对策推理六大阶段。强调 AI/LLM 自动化必须配以仿真证据与形式化推理进行"可信落地"，将在 IEEE VTS 2026 展示。</li>
-      <li><strong>🆕 Cognichip 获 $6000 万融资（2026-04-02）：</strong>AI 芯片设计初创公司 Cognichip 宣布完成 6000 万美元融资（TechCrunch 报道），声称其 AI 技术可将芯片开发成本降低 75%、缩短开发周期一半以上，专注于 AI 工作负载专用芯片设计自动化，是本周最重磅的 AI for EDA 投资事件。</li>
-      <li><strong>🆕 后端物理设计新突破：GNN + 3D FPGA + 多FPGA划分（4月新论文）：</strong>arXiv 4月首批 cs.AR 论文释放多个重量级 EDA 方向成果：<strong>GSR-GNN</strong>（DAC 2026，87.2% 内存降低 + 30× 训练加速）突破深度 GNN 在大规模电路图训练的工程瓶颈；<strong>RePart</strong>（ISEDA 2026，跳数降低 52.3% + 11× 加速）刷新多FPGA超图划分SOTA；<strong>Escaping Flatland</strong>（DAC 2026）提出首个3D FPGA布局流程，将在GitHub开源。</li>
-      <li><strong>🆕 NVIDIA 四大工业软件巨头 AI Agent 联合生态全面落地：</strong>2026-03-16 NVIDIA 宣布与 Cadence（ChipStack AI SuperAgent）、Siemens（Fuse EDA AI Agent）、Synopsys（AgentEngineer）、Dassault Systèmes 深度绑定，Samsung/SK hynix/Astera Labs/MediaTek/TSMC/Micron 均已实际部署，形成史上最大规模的 EDA AI 商业联盟。</li>
-      <li><strong>🆕 Agentic EDA 执行基础设施成熟化：</strong>FluxEDA（arXiv:2603.25243）已在多个商用后端实际验证，提出"有状态 Agentic EDA"基础设施层，持久化工具实例 + 回滚机制，支持时序 ECO 和标准单元库优化的多步骤协同迭代。AutoPDR（arXiv:2603.25048，ISEDA 2026）进一步展示了图学习在形式验证求解器智能配置中的价值，78% 搜索空间压缩 + 显著验证性能提升。</li>
-      <li><strong>Agent4Chip Workshop @ UCLA（3月13日）：</strong>23 篇论文覆盖 Agentic RTL/HLS/验证全栈。亮点包括：ACE-RTL（NVIDIA，Agentic Context Evolution）、ASPEN（LLM+E-Graph RTL 数据路径优化）、PRO-V-R1（推理增强 RTL 验证 Agent）、EDAForge（模拟电路多智能体综合框架）、HeaRT（AMS 设计分层推理树）。这是 2026 年迄今最集中的 AI for EDA 学术聚焦。</li>
-      <li><strong>RL 驱动 RTL 生成多样性突破：</strong>RTLSeek（arXiv:2603.27630，DAC 2026 投稿，华为 + 复旦等）提出多阶段多样性导向强化学习（DORL）范式，三阶段训练框架将 EDA 反馈融入多目标奖励调度，在 RTLLM 基准上超越已有方法并验证"生成越多，结果越好"的扩展律，代码已开源。</li>
-      <li><strong>验证智能体突破：</strong>UCAgent（arXiv:2603.25768，中科院/国防科大）首次提出 31 级细粒度验证工作流 + VCLM 验证一致性标签机制，在 UART/FPU/整数除法器上实现 <strong>98.5% 代码覆盖率、100% 功能覆盖率</strong>，并首次发现未识别设计缺陷。</li>
-      <li><strong>DAC 2026 AI for EDA 论文矩阵成型（截至4月）：</strong>Zhiyao Xie 组 13 篇（LEAP 功耗分析、RTL-Sequencer 时序预测、COOL 3D热预测、RTL-BenchMT 动态基准维护、G-Power GPU功耗建模等）；Cong Hao 组 Escaping Flatland（3D FPGA布局）；GSR-GNN（深度GNN电路训练加速）等均已在 DAC'26 正式录用。</li>
-      <li><strong>ChipBench 揭示 LLM 芯片设计能力仍存巨大差距：</strong>最新 ChipBench 评测（arXiv:2601.21448，UCSD/Columbia）显示，最先进 LLM 在 Verilog 生成任务正确率仅 30.74%、Python 参考模型生成仅 13.33%，而旧基准已达 95%+ 饱和，新一代评测标准的建立刻不容缓。</li>
+      <li><strong>🆕 ICCAD 2026 摘要截止倒计时（明日4月7日）：</strong>ICCAD 2026（November 8-12）摘要截止日期为 <strong>明日 4月7日</strong>，完整论文截止 4月14日。目前已有大量 AI for EDA 方向预印本提交，包括 ChatSVA（DAC 2026已录用）等论文作为 arXiv 预印本出现，关注今明两天的集中预印本爆发。</li>
+      <li><strong>🆕 Cognichip 获 $6000 万融资（2026-04-02）：</strong>AI 芯片设计初创公司 Cognichip 宣布完成 6000 万美元融资（TechCrunch 报道），声称其 AI 技术可将芯片开发成本降低 75%、缩短开发周期一半以上，是本周最重磅的 AI for EDA 投资事件。</li>
+      <li><strong>🆕 后端物理设计新突破：GNN + 3D FPGA + 多FPGA划分（4月新论文）：</strong>arXiv 4月首批 cs.AR 论文：<strong>GSR-GNN</strong>（DAC 2026，87.2% 内存降低 + 30× 训练加速）；<strong>RePart</strong>（ISEDA 2026，跳数降低 52.3% + 11× 加速）；<strong>Escaping Flatland</strong>（DAC 2026）提出首个3D FPGA布局流程。</li>
+      <li><strong>🆕 NVIDIA 四大工业软件巨头 AI Agent 联合生态全面落地：</strong>2026-03-16 NVIDIA 宣布与 Cadence（ChipStack AI SuperAgent）、Siemens（Fuse EDA AI Agent）、Synopsys（AgentEngineer）、Dassault Systèmes 深度绑定，三星/SK hynix/Astera Labs/联发科/TSMC/Micron 均已实际部署，形成史上最大规模的 EDA AI 商业联盟。</li>
+      <li><strong>🆕 Agentic EDA 执行基础设施成熟化：</strong>FluxEDA（arXiv:2603.25243）已在多个商用后端实际验证，提出"有状态 Agentic EDA"基础设施层；AutoPDR（arXiv:2603.25048，ISEDA 2026）进一步展示了图学习在形式验证求解器智能配置中的价值，78% 搜索空间压缩。</li>
+      <li><strong>ChipBench 揭示 LLM 芯片设计能力仍存巨大差距：</strong>最新 ChipBench 评测（arXiv:2601.21448，UCSD/Columbia）显示，最先进 LLM 在 Verilog 生成任务正确率仅 30.74%、Python 参考模型生成仅 13.33%，而旧基准已达 95%+ 饱和。</li>
     </ul>
   </div>
   <div class="tags">
@@ -237,7 +235,78 @@
 <section id="papers">
   <div class="section-title"><span class="icon">📄</span> 论文收录（按日期倒序）<span class="line"></span></div>
 
+  <!-- ── 2026-04-06 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0406')">
+      <h3>📅 2026-04-06 · 今日更新（3篇）</h3>
+      <span class="badge-count">3 篇</span>
+      <span class="toggle" id="toggle-g0406">▼</span>
+    </div>
+    <div class="date-body" id="g0406">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> ChatSVA: Bridging SVA Generation for Hardware Verification via Task-Specific LLMs</td>
+            <td class="cat">SVA自动生成/多智能体/硬件验证/形式化/DAC 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.02811" target="_blank">2604.02811</a></td>
+            <td><a class="pdf-link" href="./2026-04-06/2604.02811_ChatSVA_SVA_Generation_Hardware_Verification.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="star">★</span> Assertain: Automated Security Assertion Generation Using Large Language Models</td>
+            <td class="cat">硬件安全/安全断言自动生成/CWE映射/LLM自反思/IEEE MDTS 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.01583" target="_blank">2604.01583</a></td>
+            <td><a class="pdf-link" href="./2026-04-06/2604.01583_Assertain_Security_Assertion_LLM.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>AI-Assisted Hardware Security Verification: A Survey and AI Accelerator Case Study</td>
+            <td class="cat">AI辅助硬件安全验证综述/NVDLA案例/形式化验证/IEEE VTS 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.01572" target="_blank">2604.01572</a></td>
+            <td><a class="pdf-link" href="./2026-04-06/2604.01572_AI_Hardware_Security_Verification_Survey.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">DAC 2026</span><span class="badge-top">新 SOTA</span>
+          <div class="abs-title">ChatSVA：基于任务专属 LLM 的多智能体 SVA 自动生成框架，DAC 2026 录用</div>
+          <div class="abs-meta">Lik Tung Fu, Jie Zhou, Shaokai Ren, Mengli Zhang 等 9 位作者 · 2026-04-03 · cs.AR · <strong>DAC 2026</strong></div>
+          <div class="abs-body">功能验证占集成电路开发周期一半以上，SystemVerilog 断言（SVA）是形式化属性验证和调试的核心工具，但手工编写既费力又易错。ChatSVA 提出基于 <strong>多智能体框架</strong> 的端到端 SVA 生成系统，核心为 <strong>AgentBridge</strong> 平台，通过系统化生成高纯度数据集，解决小样本场景中数据严重稀缺的问题。在 24 个 RTL 设计上的评估表明：<strong>98.66% 语法通过率</strong>、<strong>96.12% 功能通过率</strong>，每设计生成 139.5 个 SVA，功能覆盖率 82.50%。与前 SOTA 相比，功能正确性提升 <strong>+33.3 个百分点</strong>，功能覆盖率提升 <strong>超过 11×</strong>。ChatSVA 为自动化 SVA 生成设立新 SOTA，同时为小样本、域特定场景中的长链推理问题提供了鲁棒解决框架。在线服务已公开发布。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.02811" target="_blank">arXiv</a>
+            <a href="https://www.nctieda.com/CHATDV.html" target="_blank">在线服务</a>
+            <a class="local" href="./2026-04-06/2604.02811_ChatSVA_SVA_Generation_Hardware_Verification.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">IEEE MDTS 2026</span>
+          <div class="abs-title">Assertain：基于 LLM 与自反思机制的自动化硬件安全属性生成，超越 GPT-5 67.92%</div>
+          <div class="abs-meta">Shams Tarek, Dipayan Saha, Khan Thamid Hasan 等 · 2026-04-02 · cs.CR · <strong>IEEE MDTS 2026</strong></div>
+          <div class="abs-body">现代片上系统设计日益复杂，手动指定安全属性已成形式化属性验证的主要瓶颈。Assertain 提出自动化框架，集成 <strong>RTL 设计分析、通用缺陷枚举（CWE）映射和威胁模型智能</strong>，利用 LLM + <strong>自反思优化机制</strong>确保语法正确性和语义一致性，自动生成安全属性和可执行 SystemVerilog 断言。在 11 个代表性硬件设计上的评估显示，与 GPT-5 基线相比：正确断言生成提升 <strong>61.22%</strong>，独特 CWE 覆盖率提升 <strong>59.49%</strong>，架构缺陷检测提升 <strong>67.92%</strong>。显著扩大了漏洞覆盖范围，提高断言质量，减少硬件安全验证中的人工工作量。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.01583" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-06/2604.01583_Assertain_Security_Assertion_LLM.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-new">VTS 2026 · 综述</span>
+          <div class="abs-title">AI 辅助硬件安全验证综述（VTS 2026）：六大阶段全流程梳理，以 NVDLA 为案例</div>
+          <div class="abs-meta">Khan Thamid Hasan, Md Ajoad Hasan, Nashmin Alam 等 · 2026-04-02 · cs.CR · <strong>IEEE VTS 2026</strong></div>
+          <div class="abs-body">系统梳理 AI/LLM 辅助硬件安全验证最新进展，按验证工作流六大关键阶段组织文献：<strong>资产识别、威胁建模、安全测试计划生成、仿真驱动分析、形式化验证以及对策推理</strong>。以开源 NVIDIA 深度学习加速器（NVDLA）为案例展示实际应用。研究强调：尽管 AI/LLM 自动化能显著加速验证任务，但其输出仍需基于<strong>仿真证据、形式推理和基准评估</strong>，以确保可信的硬件安全保障。为 AI for EDA 安全验证方向提供首篇全流程综述参考。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.01572" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-06/2604.01572_AI_Hardware_Security_Verification_Survey.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── 2026-04-05 ── -->
+
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0405')">
       <h3>📅 2026-04-05 · 今日更新（2篇）</h3>
@@ -1394,24 +1463,42 @@
 <section id="news">
   <div class="section-title"><span class="icon">🌍</span> 行业动态 <span class="line"></span></div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-05 · ARCS模拟电路RL合成 + TSV-PhGNN电热优化 + ICCAD 2026投稿截止临近）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-06 · ChatSVA DAC 2026 + Assertain硬件安全断言 + ICCAD 2026摘要截止明日）</div>
   <div class="news-grid">
     <div class="news-card">
-      <div class="src"><span class="dot"></span>arXiv cs.AR/cs.LG · 2026-04-05（今日重点论文）</div>
-      <h4>今日 2 篇新论文 — ARCS模拟电路合成 + TSV-PhGNN电热优化</h4>
-      <p>今日收录 2 篇高质量 AI for EDA 论文：<strong>ARCS</strong>（模拟电路自回归生成，GRPO RL，97ms推理，99.9%仿真有效性，NYU开源）；<strong>TSV-PhGNN</strong>（TSV 电热 GNN 代替 FEM，评估时间缩短六个数量级，已投 IEEE TCAD）。另 IncreRTL（arXiv:2603.25769）已于 2026-03-30 收录，AXON（arXiv:2603.28184）已于 2026-03-31 收录，不重复计入。</p>
-      <a href="https://arxiv.org/list/cs.AR/recent" target="_blank">→ 查看 cs.AR 完整列表</a>
+      <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-04-06（今日重点论文）</div>
+      <h4>今日 3 篇新论文 — ChatSVA · Assertain · AI硬件安全验证综述</h4>
+      <p>今日收录 3 篇高质量 AI for EDA 论文，聚焦<strong>硬件安全验证 + LLM断言生成</strong>方向：<strong>ChatSVA</strong>（DAC 2026录用，SVA自动生成SOTA，98.66%语法通过率）；<strong>Assertain</strong>（IEEE MDTS 2026，超越GPT-5 67.92%）；<strong>AI辅助硬件安全验证综述</strong>（IEEE VTS 2026，NVDLA案例，六大阶段全流程梳理）。</p>
+      <a href="https://arxiv.org/list/cs.AR/current" target="_blank">→ 查看 cs.AR 完整列表</a>
     </div>
     <div class="news-card">
-      <div class="src"><span class="dot"></span>ICCAD 2026 · 截止日期提醒（今日重要）</div>
-      <h4>⚠️ ICCAD 2026 摘要提交截止：2026-04-07 · 论文截止：2026-04-14</h4>
-      <p>ICCAD 2026（国际计算机辅助设计大会）正式征稿中，摘要截止 4月7日（后天），完整论文截止 4月14日。AI for EDA 三大方向均可投稿：系统级CAD（AI与加速器/嵌入式）、综合与物理设计分析（GNN布局/RL布线）、新兴范式（LLM芯片设计）。录用通知 7月11日发布，会议地点与时间待官方公告。</p>
+      <div class="src"><span class="dot"></span>ICCAD 2026 · 截止日期紧急提醒（明日截止）</div>
+      <h4>🚨 ICCAD 2026 摘要提交截止：明日 2026-04-07 · 论文截止：2026-04-14</h4>
+      <p>ICCAD 2026 摘要截止<strong>明日（4月7日）</strong>，完整论文截止 4月14日。arXiv 今日（周一）已出现多篇预印本集中投稿（含 ChatSVA/Assertain），预计今明两天将有更多 AI for EDA 方向预印本爆发。会议将于 <strong>2026年11月8-12日</strong>举行，录用通知 7月11日发布。</p>
       <a href="https://iccad.com/2026/authors/call-for-papers" target="_blank">→ ICCAD 2026 CFP</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>ChipAgents / Alpha Design AI · 2026-03-05（行业要闻回顾）</div>
+      <h4>ChipAgents 完成 $7400 万 A 轮融资，多智能体 AI 芯片验证首独角兽</h4>
+      <p>ChipAgents（Alpha Design AI）宣布完成 <strong>7400 万美元 A 轮融资</strong>，专注于多智能体 AI 驱动芯片验证和调试。核心产品包括：多智能体根因分析（RCA）、CoverAgent 覆盖率优化、RTL 代码重构与测试平台自动生成。已在 DVCon 2026 展示，顾问包括前 Synopsys CTO Raúl Camposano、前 Cadence CEO Jack Harding 等行业大咖背书。</p>
+      <a href="https://chipagents.ai/" target="_blank">→ ChipAgents 官网</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Cadence · 持续更新（商用工具进展）</div>
+      <h4>Cadence Cerebrus AI Studio 三星落地案例：4× 生产力提升 + 8-11% PPA 提升</h4>
+      <p>Cadence Cerebrus AI Studio 最新客户验证：<strong>三星 SARC+ACL（Advanced Computing Lab）</strong>实现整体 4× 生产力提升；<strong>三星半导体印度研究所（SSIR）</strong>在 SoC 子系统上实现 <strong>8%-11% PPA（功耗/性能/面积）提升</strong>；STMicroelectronics 强调其多设计多用户 SoC 子系统优化能力。Cerebrus AI Studio 已成为头部芯片厂商标准化工具。</p>
+      <a href="https://www.cadence.com/zh_CN/home/tools/digital-design-and-signoff/soc-implementation-and-floorplanning/cadence-cerebrus-ai-studio.html" target="_blank">→ Cadence Cerebrus 主页</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>arXiv cs.AR/cs.LG · 2026-04-05（前日重点论文）</div>
+      <h4>前日 2 篇新论文 — ARCS模拟电路合成 + TSV-PhGNN电热优化</h4>
+      <p>2026-04-05 收录 2 篇高质量论文：<strong>ARCS</strong>（模拟电路自回归生成，GRPO RL，97ms推理，99.9%仿真有效性，NYU开源）；<strong>TSV-PhGNN</strong>（TSV 电热 GNN 代替 FEM，评估时间缩短六个数量级，已投 IEEE TCAD）。另 IncreRTL（2603.25769）已于 2026-03-30 收录，AXON（2603.28184）已于 2026-03-31 收录，不重复计入。</p>
+      <a href="https://arxiv.org/list/cs.AR/recent" target="_blank">→ 查看 cs.AR 完整列表</a>
     </div>
     <div class="news-card">
       <div class="src"><span class="dot"></span>IEEE / NSF · 2026-04-05（重磅政策报告）</div>
       <h4>NSF AI for EDA 战略研讨报告正式发表（IEEE Xplore），提出五大建议</h4>
-      <p>NSF Workshop on AI for EDA（NeurIPS 2024 卫星会议，2024年12月10日举办）官方报告在 IEEE Xplore 发表（arXiv:2601.14541）。五大建议：① 促进 AI/EDA 跨领域合作；② 加大 EDA 基础 AI 研究投入；③ 建立鲁棒数据基础设施；④ 推进可扩展计算设施；⑤ 加强人才培养。首次将 AI for EDA 列为美国国家科研战略优先方向。</p>
+      <p>NSF Workshop on AI for EDA（NeurIPS 2024 卫星会议）官方报告在 IEEE Xplore 正式发表（arXiv:2601.14541）。五大建议：① 促进 AI/EDA 跨领域合作；② 加大 EDA 基础 AI 研究投入；③ 建立鲁棒数据基础设施；④ 推进可扩展计算设施；⑤ 加强人才培养。<strong>首次将 AI for EDA 列为美国国家科研战略优先方向</strong>。</p>
       <a href="https://arxiv.org/abs/2601.14541" target="_blank">→ 报告 arXiv 页面</a>
     </div>
     <div class="news-card">
@@ -1780,7 +1867,8 @@
 <section id="timeline">
   <div class="section-title"><span class="icon">📅</span> 重大事件时间线 <span class="line"></span></div>
   <div class="timeline">
-  <div class="tl-item"><div class="tl-date">2026-04-05（今日）</div><h4>🔥 2篇新论文收录：ARCS模拟电路GRPO强化学习合成 + TSV-PhGNN电热优化 · ICCAD 2026摘要截止临近（4月7日）· NSF AI for EDA战略报告发表</h4><p>今日新增2篇论文：ARCS（arXiv:2603.29068，NYU，GRPO驱动模拟电路自回归合成，97ms推理99.9%有效性，开源）；TSV-PhGNN（arXiv:2603.29268，TSV电热GNN框架，FEM评估时间缩短六数量级，投IEEE TCAD）。注：IncreRTL（2603.25769）已于2026-03-30收录，AXON（2603.28184）已于2026-03-31收录，不重复计入。行业：ICCAD 2026摘要截止4月7日；NSF AI for EDA报告正式在IEEE Xplore发表，首次列为国家科研战略；同济大学RTL-CLAW开源持续推进获官方报道。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-06（今日）</div><h4>🔥 3篇新论文收录：ChatSVA(DAC 2026·SVA自动生成新SOTA) + Assertain(IEEE MDTS 2026·超越GPT-5 67.92%) + AI硬件安全验证综述(VTS 2026) · ICCAD 2026摘要截止明日（4月7日）</h4><p>今日新增3篇论文，均聚焦<strong>AI辅助硬件安全验证</strong>方向（ICCAD 2026截止前集中预印本爆发）：ChatSVA（arXiv:2604.02811，DAC 2026，98.66%语法通过率，覆盖率提升11×）；Assertain（arXiv:2604.01583，IEEE MDTS 2026，超越GPT-5 67.92%）；AI辅助硬件安全验证综述（arXiv:2604.01572，VTS 2026，NVDLA案例）。⚠️ 行业：ICCAD 2026摘要提交截止<strong>明日4月7日</strong>；ChipAgents完成$7400万A轮融资；Cadence Cerebrus AI Studio三星落地4×生产力提升。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-05（昨日）</div><h4>2篇新论文收录：ARCS模拟电路GRPO强化学习合成 + TSV-PhGNN电热优化 · ICCAD 2026摘要截止临近（4月7日）· NSF AI for EDA战略报告发表</h4><p>今日新增2篇论文：ARCS（arXiv:2603.29068，NYU，GRPO驱动模拟电路自回归合成，97ms推理99.9%有效性，开源）；TSV-PhGNN（arXiv:2603.29268，TSV电热GNN框架，FEM评估时间缩短六数量级，投IEEE TCAD）。注：IncreRTL（2603.25769）已于2026-03-30收录，AXON（2603.28184）已于2026-03-31收录，不重复计入。行业：ICCAD 2026摘要截止4月7日；NSF AI for EDA报告正式在IEEE Xplore发表，首次列为国家科研战略；同济大学RTL-CLAW开源持续推进获官方报道。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-04</div><h4>今日更新：2 篇新论文（FormalRTL 形式化 RTL 合成 / ACE-RTL NVIDIA Agentic 上下文演化）+ 三大开源/行业动态</h4><p>FormalRTL（CUHK，arXiv:2603.08738）将软件参考模型作为可执行规约引导多智能体 RTL 合成+形式等价验证，解决工业级数据通路密集任务的规范模糊问题，框架将开源；ACE-RTL（NVIDIA，arXiv:2602.10218）首次实现 RTL 专用 LLM + 推理 LLM 的 Agentic 融合，CVDP 基准通过率提升 41.02%。开源：RTL-CLAW（同济+CUHK，AI智能体驱动EDA工具链）正式上线；Macro Placement Challenge 2026（$49,000 奖金赛）开放参赛。国内：合见工软 UDA 2.0（国内首款 Agentic AI EDA 平台）发布。EDA三巨头 Agentic 竞争格局深度文章发布。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-31</div><h4>arXiv 今日新提交 13 篇 — RTLSeek 多样性RL提升RTL生成 + AXON 网表级智能优化</h4><p>arXiv cs.AR 今日新提交 13 篇论文。重点论文：RTLSeek（华为/复旦等，DAC 2026 投稿）提出多阶段多样性导向强化学习范式，将 EDA 工具反馈融入奖励调度，在 RTLLM 基准上验证"生成越多结果越好"扩展律，代码开源；AXON（Tiantian Yang等）提出架构级→网表级协同加法器优化，TSMC 28nm 实测 EDP 提升 32.1% 超越商业工具。行业动态：Cadence 与 NVIDIA 再度扩大合作，Millennium M2000 超算支持全系 EDA 工具 GPU 加速（80×吞吐），Siemens Fuse EDA AI 系统更新白皮书，AI 代理赋能全工具链。</p></div>
     <div class="tl-item"><div class="tl-date">2026-03-30（昨日）</div><h4>arXiv 今日新提交 11 篇 — UCAgent 端到端功能验证智能体 + IncreRTL 增量 RTL 生成</h4><p>arXiv cs.AR 今日新提交 11 篇论文。重点论文：UCAgent（中科院/国防科大）提出 31 级细粒度验证工作流 + VCLM 标签机制，在 UART/FPU 等模块上实现 98.5% 代码覆盖率并发现未识别缺陷；IncreRTL 通过需求-代码可追溯性链接实现增量 RTL 生成，避免结构漂移。另有 Wattchmen（ICS 2026）GPU 能耗建模、IBEX CXL 内存扩展等硬件架构论文。</p></div>
@@ -1815,10 +1903,10 @@
 <section id="tracking">
   <div class="section-title"><span class="icon">📌</span> 待追踪事项 <span class="line"></span></div>
   <ul class="todo-list">
-    <li><strong>🆕 ICCAD 2026 摘要提交截止（2026-04-07）</strong>：摘要截止后天（4月7日），完整论文截止 4月14日。AI for EDA 相关投稿（布局布线/LLM/验证）将在 7月11日公布录用；关注会议论文收录情况。</li>
+    <li><strong>🚨 ICCAD 2026 摘要提交截止（明日 2026-04-07）</strong>：摘要截止<strong>明日（4月7日）</strong>，完整论文截止 4月14日。今日已有 ChatSVA（DAC 2026 已录用）、Assertain（IEEE MDTS 2026 已录用）等论文预印本发布，关注 ICCAD 2026 相关论文录用情况（7月11日公布）。</li>
+    <li><strong>🆕 ChatSVA 在线服务追踪</strong>（arXiv:2604.02811，DAC 2026）：SVA 自动生成框架在线服务已公开（nctieda.com/CHATDV.html），关注 DAC 2026（6月）现场展示及工具与商业 EDA 流程的集成方式（Cadence Jasper/Synopsys VCS 集成路径）。</li>
+    <li><strong>🆕 Assertain 开源代码跟进</strong>（arXiv:2604.01583，IEEE MDTS 2026）：关注框架代码开源进度，以及在更大规模工业 RTL 设计上的泛化验证；关注 CWE 映射数据库更新与自反思机制对更复杂安全属性的适用性。</li>
     <li><strong>🆕 ARCS 开源代码跟进</strong>（arXiv:2603.29068，NYU）：GRPO驱动模拟电路合成框架已开源于 GitHub，关注后续对更多拓扑类型、更大规模电路的扩展，以及与商用模拟 EDA 工具链的集成验证。</li>
-    <li><strong>🆕 TSV-PhGNN IEEE TCAD 发表进度</strong>（arXiv:2603.29268）：论文已投 IEEE TCAD，关注 2.5D/3D IC 设计中 TSV 电热协同优化框架的同行评审反馈与最终发表版本。</li>
-    <li><strong>🆕 IncreRTL EvoRTL-Bench 开放</strong>（arXiv:2603.25769）：关注 EvoRTL-Bench 基准数据集开放发布，以及与其他 RTL 生成框架的对比评测结果。</li>
     <li><strong>🆕 AI 辅助硬件安全验证（arXiv:2604.01572，VTS 2026）</strong>：关注 IEEE VTS 2026（4月底）现场展示，以及 NVDLA 开源验证流程的进一步开放</li>
     <li><strong>🆕 RTLSeek 正式开源代码</strong>（DAC 2026 ID#71，华为+复旦）：匿名提交期结束后关注 GitHub 正式仓库发布，以及 DAC 2026（6月）现场结果展示</li>
     <li><strong>🆕 Cognichip 技术细节披露</strong>：2026-04-02 融资 $6000 万后，关注其 AI 驱动芯片设计技术路线、实际落地案例、与 Synopsys/Cadence 工具链集成方式</li>
@@ -1834,7 +1922,7 @@
 
 <footer>
   <p>数据来源：arXiv.org · ispd.cc · siemens.com · cadence.com · synopsys.com · semi.org.cn · semiconductor-digest.com · chipagents.ai · paper.cnstock.com · semi-insights.com · nvidia.com · blogs.nvidia.com</p>
-  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-04-05</p>
+  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-04-06</p>
 </footer>
 
 <script>
