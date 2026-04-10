@@ -187,8 +187,8 @@
   <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
   <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-04-09 · 涵盖 2026-03-15 → 2026-04-09</p>
   <div class="stats">
-    <div class="stat"><div class="num">101</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">24</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">73</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">22</div><div class="label">更新批次</div></div>
     <div class="stat"><div class="num">78+</div><div class="label">行业动态</div></div>
     <div class="stat"><div class="num">2</div><div class="label">今日新增</div></div>
   </div>
@@ -208,18 +208,18 @@
 <section id="overview">
   <div class="section-title"><span class="icon">📋</span> 核心趋势综述 <span class="line"></span></div>
   <div class="summary-box">
-    <h3>🔑 当前最重要的十大趋势（截至 2026-04-09）</h3>
+    <h3>🔑 当前最重要的十大趋势（截至 2026-04-10）</h3>
     <ul>
-      <li><strong>🆕🔥 Arch：首个 AI 原生硬件描述语言（arXiv:2604.05983，今日新增）：</strong>Shuqing Zhao 提出专为 LLM 代码生成设计的 HDL——Arch（AI-native Register-transfer Clocked Hardware）。采用 <strong>LL(1) 文法、无宏、具名块结束、显式连接箭头</strong>，实现"AI 可生成性契约"；类型系统在编译期捕获 CDC/RDC 跨时钟域错误；编译输出符合 <strong>IEEE 1800-2017 SystemVerilog</strong>，Sky130 工艺验证。相比 SystemVerilog/Chisel，大幅降低 LLM 生成错误率，是 RTL 生成方向的重要语言层创新。</li>
-      <li><strong>🆕 CoverAssert：覆盖率驱动的迭代 LLM SVA 生成（arXiv:2604.06607，今日新增）：</strong>华为等机构提出迭代框架，通过 <strong>AST + 语义聚类</strong>将断言映射到规约功能点，并以功能覆盖率反馈驱动 LLM 优先覆盖"盲区"。与 AssertLLM/Spec2Assertion 集成后：分支覆盖率 <strong>+9.57%</strong>、语句覆盖率 <strong>+9.64%</strong>、翻转覆盖率 <strong>+15.69%</strong>。</li>
-      <li><strong>🆕🔥 ICCAD 2026 完整论文截止倒计时（4月14日）：</strong>摘要截止已过（4月7日），完整论文截止 <strong>4月14日</strong>，本周将迎来预印本爆发期，重点关注时序分析、布局布线、Agentic EDA 相关提交。</li>
-      <li><strong>🆕 DAC 2026：55% 内容覆盖 AI &amp; Design（7月26-29日 · 长滩）：</strong>官网公布 DAC 2026 投稿量增长 <strong>26.34%</strong>，程序公布日期为 4月17日。主题演讲含 NVIDIA Timothy Costa（AI/量子）、Siemens Amit Gupta（AI定制IC）、ChipAgents William Wang。</li>
-      <li><strong>🆕 EEspice（arXiv:2604.03079，4月8日）：</strong>面向 AI/LLM 辅助模拟优化闭环的<strong>模块化并行电路仿真平台</strong>，图着色无锁并行，64 核最高 <strong>45× 加速比</strong>，开源实现。</li>
-      <li><strong>🆕 InCoder-32B-Thinking（arXiv:2604.03144，4月8日）：</strong>工业代码世界模型，ECoT 错误驱动推理链 + ICWM Verilog 因果动态，<strong>CAD-Coder 84.0%</strong>，开源领先。</li>
-      <li><strong>🆕 Siemens × NVIDIA Veloce proFPGA CS（4月6日）：</strong>万亿级硅前验证，EDA 向 GPU 加速验证里程碑；IIC Shanghai 2026 EDA/AI 峰会（4月7-8日）Cadence ChipStack AI SuperAgent + 3D-IC 平台重磅展示。</li>
-      <li><strong>🆕 ICCAD 2026 CAD Contest 三题：</strong>① Problem A（Cadence）LLM 辅助 Netlist 探索；② Problem B（Synopsys）回归失败分桶；③ Problem C（Intel）SoC Floorplanning。注册截止 5月8日。</li>
-      <li><strong>🆕 DeepStack（arXiv:2604.04750）：</strong>3D 堆叠 AI 加速器 DSE，10 万倍加速，9.5× 吞吐提升，2.5×10¹⁴ 设计点。微软亚研 + 帝国理工 + 清华。</li>
-      <li><strong>Ricursive Intelligence：</strong>AlphaChip 原班人马（Anna Goldie + Azalia Mirhoseini）完成 <strong>$3.35 亿融资 / $40 亿估值</strong>，C3PO 荣获 ASP-DAC 2026 最佳论文，ICCAD 2026 核心赞助商。</li>
+      <li><strong>🆕🔥 RL驱动ASIC架构探索（arXiv:2604.07526，今日新增）：</strong>Ravindra Ganti & Steve Xu 提出 RL 驱动编译器，联合优化 ASIC 架构、内存层次、工作负载分区，支持 3nm–28nm 工艺节点自动适配。Llama 3.1 8B 在 3nm 下达 <strong>29,809 tokens/秒</strong>，SmolVLM 全节点功耗 <strong>&lt;13 mW</strong>，无需手工调参。</li>
+      <li><strong>🆕🔥 ChatSVA：DAC 2026 接收，SVA验证SOTA（arXiv:2604.02811，今日新增）：</strong>多智能体框架 + AgentBridge 数据平台，语法通过率 <strong>98.66%</strong>，功能通过率 <strong>96.12%</strong>，相比前 SOTA 功能正确性提升 <strong>33.3个百分点</strong>，功能覆盖率提升 <strong>11×</strong>。</li>
+      <li><strong>🆕🔥 Cognichip 完成 $6000 万融资（2026-04-01）：</strong>英特尔 CEO Lip-Bu Tan 跟投并加入董事会，累计融资 <strong>$9300 万</strong>。专为芯片设计训练的 AI 模型，宣称降低开发成本 75%、缩短周期 50%。AI for Chip Design 初创赛道持续升温。</li>
+      <li><strong>🆕 ATLAS：首个硅验证的3D-DRAM LLM加速器仿真框架（arXiv:2604.08044，今日新增）：</strong>仿真误差 ≤ 8.57%，与实测相关性 97.26%–99.96%，开源计划公布，为 3D 堆叠加速器设计提供可重用全栈建模基础。</li>
+      <li><strong>🆕 自校准 LLM 模拟电路尺寸调整（arXiv:2604.07387，今日新增）：</strong>LLM 从网表直接推导解析设计方程 + 单次仿真自校准，100% 成功率（6 OTA 拓扑 × 2 节点），11/12 案例 2–9 次仿真内收敛，投稿 IEEE TCASAI。</li>
+      <li><strong>🆕 IBM Agent Factory for HLS（arXiv:2603.25719，本周）：</strong>通用编程 Agent 无需领域训练，HLS 硬件优化平均加速 <strong>8.27×</strong>（streamcluster &gt;20×），两阶段 ILP + N 智能体并行探索跨函数优化，Agent4Chip 接收。</li>
+      <li><strong>ICCAD 2026 完整论文截止倒计时（4月14日）：</strong>本周预印本爆发期，重点关注时序分析、布局布线、Agentic EDA 相关提交。</li>
+      <li><strong>DAC 2026 程序 4月17日公布（7月26-29日 · 长滩）：</strong>投稿量增长 26.34%，主题演讲含 NVIDIA Timothy Costa、ChipAgents William Wang，共 721 篇接收论文。</li>
+      <li><strong>Arch：首个 AI 原生 HDL（arXiv:2604.05983）：</strong>LL(1) 文法 + 编译期 CDC/RDC 捕获，专为 LLM 代码生成设计，Sky130 工艺验证，输出标准 SystemVerilog。</li>
+      <li><strong>Ricursive Intelligence：</strong>AlphaChip 原班人马 $3.35 亿融资 / $40 亿估值，C3PO 荣获 ASP-DAC 2026 最佳论文，ICCAD 2026 核心赞助商。</li>
     </ul>
   </div>
   <div class="tags">
@@ -234,6 +234,37 @@
 <!-- ══════════════ 论文 ══════════════ -->
 <section id="papers">
   <div class="section-title"><span class="icon">📄</span> 论文收录（按日期倒序）<span class="line"></span></div>
+
+  <!-- ── 2026-04-10 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0410')">
+      <h3>📅 2026-04-10 · 今日更新（2篇）— 3D-DRAM加速器仿真 + LLM模拟电路自校准 · Cognichip $6000万融资</h3>
+      <span class="badge-count">2 篇</span>
+      <span class="toggle" id="toggle-g0410">▼</span>
+    </div>
+    <div class="date-body" id="g0410">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>3</td>
+            <td>Self-Calibrating LLM-Based Analog Circuit Sizing with Interpretable Design Equations</td>
+            <td class="cat">模拟电路尺寸调整/LLM解析方程/自校准/TCASAI投稿</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.07387" target="_blank">2604.07387</a></td>
+            <td><a class="pdf-link" href="./2026-04-10/2604.07387-SelfCalibrating-LLM-Analog-Circuit-Sizing.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>ATLAS: A Full-Stack Performance Evaluation Infrastructure for 3D-DRAM-based LLM Accelerators</td>
+            <td class="cat">3D-DRAM加速器/全栈仿真框架/硅验证/LLM推理硬件</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.08044" target="_blank">2604.08044</a></td>
+            <td><a class="pdf-link" href="./2026-04-10/2604.08044-ATLAS-3DDRAM-LLM-Accelerator-Eval.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+    </div>
+  </div>
 
   <!-- ── 2026-04-09 ── -->
   <div class="date-group">
@@ -438,7 +469,7 @@
   <!-- ── 2026-04-06 ── -->
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0406')">
-      <h3>📅 2026-04-06 · 今日更新（3篇）</h3>
+      <h3>📅 2026-04-06 · 今日更新（3篇）— AI硬件安全验证综述 + Assertain安全断言生成 + ChatSVA SVA验证</h3>
       <span class="badge-count">3 篇</span>
       <span class="toggle" id="toggle-g0406">▼</span>
     </div>
@@ -448,57 +479,56 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td><span class="star">★</span> ChatSVA: Bridging SVA Generation for Hardware Verification via Task-Specific LLMs</td>
-            <td class="cat">SVA自动生成/多智能体/硬件验证/形式化/DAC 2026</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.02811" target="_blank">2604.02811</a></td>
-            <td><a class="pdf-link" href="./2026-04-06/2604.02811_ChatSVA_SVA_Generation_Hardware_Verification.pdf">📥 PDF</a></td>
+            <td>AI-Assisted Hardware Security Verification: A Survey and AI Accelerator Case Study</td>
+            <td class="cat">硬件安全验证/AI辅助/LLM/综述/VTS 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.01572" target="_blank">2604.01572</a></td>
+            <td><a class="pdf-link" href="./2026-04-06/2604.01572_AI_Hardware_Security_Verification_Survey.pdf">📥 PDF</a></td>
           </tr>
           <tr>
             <td>2</td>
-            <td><span class="star">★</span> Assertain: Automated Security Assertion Generation Using Large Language Models</td>
-            <td class="cat">硬件安全/安全断言自动生成/CWE映射/LLM自反思/IEEE MDTS 2026</td>
+            <td>Assertain: Automated Security Assertion Generation Using Large Language Models</td>
+            <td class="cat">安全断言生成/LLM/CWE覆盖/MDTS 2026</td>
             <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.01583" target="_blank">2604.01583</a></td>
             <td><a class="pdf-link" href="./2026-04-06/2604.01583_Assertain_Security_Assertion_LLM.pdf">📥 PDF</a></td>
           </tr>
           <tr>
             <td>3</td>
-            <td>AI-Assisted Hardware Security Verification: A Survey and AI Accelerator Case Study</td>
-            <td class="cat">AI辅助硬件安全验证综述/NVDLA案例/形式化验证/IEEE VTS 2026</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.01572" target="_blank">2604.01572</a></td>
-            <td><a class="pdf-link" href="./2026-04-06/2604.01572_AI_Hardware_Security_Verification_Survey.pdf">📥 PDF</a></td>
+            <td><span class="star">★</span> ChatSVA: Bridging SVA Generation for Hardware Verification via Task-Specific LLMs</td>
+            <td class="cat">SVA断言生成/硬件验证/多智能体/DAC 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.02811" target="_blank">2604.02811</a></td>
+            <td><a class="pdf-link" href="./2026-04-06/2604.02811_ChatSVA_SVA_Generation_Hardware_Verification.pdf">📥 PDF</a></td>
           </tr>
         </tbody>
       </table>
       <div class="abstracts">
         <div class="abs-card">
-          <span class="badge-hot">TODAY</span><span class="badge-new">DAC 2026</span><span class="badge-top">新 SOTA</span>
-          <div class="abs-title">ChatSVA：基于任务专属 LLM 的多智能体 SVA 自动生成框架，DAC 2026 录用</div>
-          <div class="abs-meta">Lik Tung Fu, Jie Zhou, Shaokai Ren, Mengli Zhang 等 9 位作者 · 2026-04-03 · cs.AR · <strong>DAC 2026</strong></div>
-          <div class="abs-body">功能验证占集成电路开发周期一半以上，SystemVerilog 断言（SVA）是形式化属性验证和调试的核心工具，但手工编写既费力又易错。ChatSVA 提出基于 <strong>多智能体框架</strong> 的端到端 SVA 生成系统，核心为 <strong>AgentBridge</strong> 平台，通过系统化生成高纯度数据集，解决小样本场景中数据严重稀缺的问题。在 24 个 RTL 设计上的评估表明：<strong>98.66% 语法通过率</strong>、<strong>96.12% 功能通过率</strong>，每设计生成 139.5 个 SVA，功能覆盖率 82.50%。与前 SOTA 相比，功能正确性提升 <strong>+33.3 个百分点</strong>，功能覆盖率提升 <strong>超过 11×</strong>。ChatSVA 为自动化 SVA 生成设立新 SOTA，同时为小样本、域特定场景中的长链推理问题提供了鲁棒解决框架。在线服务已公开发布。</div>
+          <span class="badge-new">AI硬件安全</span>
+          <div class="abs-title">AI辅助硬件安全验证综述（VTS 2026）：覆盖资产识别→威胁建模→形式验证全流程，NVDLA案例研究</div>
+          <div class="abs-meta">Khan Thamid Hasan 等 6 位作者 · 2026-04-02 · cs.CR · <strong>IEEE VTS 2026</strong></div>
+          <div class="abs-body">随着硬件系统复杂度持续提升，AI/LLM开始自动化验证工作流的多个阶段：<strong>资产识别、威胁建模、安全测试计划生成、仿真驱动分析、形式验证、防护措施推理</strong>。本综述系统梳理相关进展，以开源 NVDLA 为案例研究，强调 AI 输出须经仿真证据和形式推理验证。</div>
           <div class="abs-links">
-            <a href="https://arxiv.org/abs/2604.02811" target="_blank">arXiv</a>
-            <a href="https://www.nctieda.com/CHATDV.html" target="_blank">在线服务</a>
-            <a class="local" href="./2026-04-06/2604.02811_ChatSVA_SVA_Generation_Hardware_Verification.pdf">本地 PDF</a>
+            <a href="https://arxiv.org/abs/2604.01572" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-06/2604.01572_AI_Hardware_Security_Verification_Survey.pdf">本地 PDF</a>
           </div>
         </div>
         <div class="abs-card">
-          <span class="badge-hot">TODAY</span><span class="badge-new">IEEE MDTS 2026</span>
-          <div class="abs-title">Assertain：基于 LLM 与自反思机制的自动化硬件安全属性生成，超越 GPT-5 67.92%</div>
-          <div class="abs-meta">Shams Tarek, Dipayan Saha, Khan Thamid Hasan 等 · 2026-04-02 · cs.CR · <strong>IEEE MDTS 2026</strong></div>
-          <div class="abs-body">现代片上系统设计日益复杂，手动指定安全属性已成形式化属性验证的主要瓶颈。Assertain 提出自动化框架，集成 <strong>RTL 设计分析、通用缺陷枚举（CWE）映射和威胁模型智能</strong>，利用 LLM + <strong>自反思优化机制</strong>确保语法正确性和语义一致性，自动生成安全属性和可执行 SystemVerilog 断言。在 11 个代表性硬件设计上的评估显示，与 GPT-5 基线相比：正确断言生成提升 <strong>61.22%</strong>，独特 CWE 覆盖率提升 <strong>59.49%</strong>，架构缺陷检测提升 <strong>67.92%</strong>。显著扩大了漏洞覆盖范围，提高断言质量，减少硬件安全验证中的人工工作量。</div>
+          <span class="badge-new">安全断言 · MDTS'26</span>
+          <div class="abs-title">Assertain（MDTS 2026）：LLM驱动自动化安全断言生成，正确断言+61.22%，CWE覆盖+59.49%，缺陷检测+67.92%</div>
+          <div class="abs-meta">Shams Tarek, Dipayan Saha 等 6 位作者 · 2026-04-02 · cs.CR · <strong>IEEE MDTS 2026</strong></div>
+          <div class="abs-body">Assertain 集成 RTL 分析 + CWE 映射 + 威胁模型 + LLM 自反思优化，在 11 个硬件设计上：正确断言生成 <strong>+61.22%</strong>（vs. GPT-5），唯一 CWE 覆盖率 <strong>+59.49%</strong>，架构缺陷检测 <strong>+67.92%</strong>。</div>
           <div class="abs-links">
             <a href="https://arxiv.org/abs/2604.01583" target="_blank">arXiv</a>
             <a class="local" href="./2026-04-06/2604.01583_Assertain_Security_Assertion_LLM.pdf">本地 PDF</a>
           </div>
         </div>
         <div class="abs-card">
-          <span class="badge-new">VTS 2026 · 综述</span>
-          <div class="abs-title">AI 辅助硬件安全验证综述（VTS 2026）：六大阶段全流程梳理，以 NVDLA 为案例</div>
-          <div class="abs-meta">Khan Thamid Hasan, Md Ajoad Hasan, Nashmin Alam 等 · 2026-04-02 · cs.CR · <strong>IEEE VTS 2026</strong></div>
-          <div class="abs-body">系统梳理 AI/LLM 辅助硬件安全验证最新进展，按验证工作流六大关键阶段组织文献：<strong>资产识别、威胁建模、安全测试计划生成、仿真驱动分析、形式化验证以及对策推理</strong>。以开源 NVIDIA 深度学习加速器（NVDLA）为案例展示实际应用。研究强调：尽管 AI/LLM 自动化能显著加速验证任务，但其输出仍需基于<strong>仿真证据、形式推理和基准评估</strong>，以确保可信的硬件安全保障。为 AI for EDA 安全验证方向提供首篇全流程综述参考。</div>
+          <span class="badge-top">DAC 2026 · 功能覆盖 +11×</span>
+          <div class="abs-title">ChatSVA（DAC 2026）：多智能体 SVA 生成，语法通过率 98.66%，功能通过率 96.12%，相比前 SOTA 覆盖率提升 11×</div>
+          <div class="abs-meta">Lik Tung Fu, Jie Zhou 等 9 位作者 · 2026-04-03 · cs.AR / cs.AI · <strong>DAC 2026 接收</strong></div>
+          <div class="abs-body">ChatSVA 端到端多智能体框架，核心 <strong>AgentBridge 平台</strong>系统性生成高纯度 SVA 数据集。24 个 RTL 设计实验：语法通过率 <strong>98.66%</strong>，功能通过率 <strong>96.12%</strong>，每设计 SVA <strong>139.5</strong> 条，功能覆盖率 <strong>82.50%</strong>；相比前 SOTA 功能正确性 <strong>+33.3 个百分点</strong>，功能覆盖率 <strong>+11×</strong>。</div>
           <div class="abs-links">
-            <a href="https://arxiv.org/abs/2604.01572" target="_blank">arXiv</a>
-            <a class="local" href="./2026-04-06/2604.01572_AI_Hardware_Security_Verification_Survey.pdf">本地 PDF</a>
+            <a href="https://arxiv.org/abs/2604.02811" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-06/2604.02811_ChatSVA_SVA_Generation_Hardware_Verification.pdf">本地 PDF</a>
           </div>
         </div>
       </div>
@@ -558,185 +588,14 @@
       </div>
     </div>
   </div>
-
-  <!-- ── 2026-04-04 ── -->
-  <div class="date-group">
-    <div class="date-header" onclick="toggleGroup('g0404')">
-      <h3>📅 2026-04-04 · 1 篇</h3>
-      <span class="badge-count">1 篇</span>
-      <span class="toggle" id="toggle-g0404">▼</span>
-    </div>
-    <div class="date-body" id="g0404">
-      <table class="paper-table">
-        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td><span class="star">★</span> FormalRTL: Verified RTL Synthesis at Scale</td>
-            <td class="cat">形式化验证/多智能体/RTL合成/软件规约/CUHK</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.08738" target="_blank">2603.08738</a></td>
-            <td><a class="pdf-link" href="./2026-04-04/2603.08738_FormalRTL.pdf">📥 PDF</a></td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="abstracts">
-        <div class="abs-card">
-          <span class="badge-hot">TODAY</span><span class="badge-new">NEW</span><span class="badge-top">CUHK · 开源</span>
-          <div class="abs-title">FormalRTL：可扩展形式化验证RTL合成框架，将软件参考模型作为可执行规约引导多智能体综合</div>
-          <div class="abs-meta">Kezhi Li, Min Li, Xiangyu Wen, Shibo Zhao, Jieying Wu, Junhua Huang, Qiang Xu · 2026-02-25 · cs.AR, cs.SE · <strong>香港中文大学 · 框架将开源</strong></div>
-          <div class="abs-body">大型语言模型在硬件自动合成方面潜力巨大，但在工业级数据通路密集型设计上面临两大挑战：<strong>规范模糊</strong>和<strong>缺乏形式化正确性保证</strong>。FormalRTL 提出端到端多智能体框架，通过将软件参考模型作为<strong>可执行的形式化规约</strong>，引导 RTL 代码生成与验证。核心贡献：① 将规划、代码生成、<strong>形式等价性检查</strong>紧密结合，实现可扩展可靠硬件代码生成；② 专为工业场景中常见的<strong>数据通路密集型设计</strong>优化；③ 构建并开源新工业级复杂基准测试集。相比现有 LLM 方法显著提升生成RTL代码在工业级任务上的正确性，为真正的"形式化保障LLM RTL合成"奠定基础。代码与基准将全面开源。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2603.08738" target="_blank">arXiv</a>
-            <a class="local" href="./2026-04-04/2603.08738_FormalRTL.pdf">本地 PDF</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── 2026-04-03 ── -->
-  <div class="date-group">
-    <div class="date-header" onclick="toggleGroup('g0403')">
-      <h3>📅 2026-04-03 · 今日更新（3篇）</h3>
-      <span class="badge-count">3 篇</span>
-      <span class="toggle" id="toggle-g0403">▼</span>
-    </div>
-    <div class="date-body" id="g0403">
-      <table class="paper-table">
-        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td><span class="star">★</span> AI-Assisted Hardware Security Verification: A Survey and AI Accelerator Case Study</td>
-            <td class="cat">硬件安全/LLM辅助验证/AI加速器/VTS 2026</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.01572" target="_blank">2604.01572</a></td>
-            <td><a class="pdf-link" href="./2026-04-03/2604.01572_AI-HW-Security-Verification.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><span class="star">★</span> VeriAgent: A Tool-Integrated Multi-Agent System with Evolving Memory for PPA-Aware RTL Code Generation</td>
-            <td class="cat">多智能体/PPA优化/RTL生成/进化记忆/清华+厦大</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17613" target="_blank">2603.17613</a></td>
-            <td><a class="pdf-link" href="./2026-04-03/2603.17613_VeriAgent.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><span class="star">★</span> CODMAS: A Dialectic Multi-Agent Collaborative Framework for Structured RTL Optimization</td>
-            <td class="cat">辩证多智能体/RTL优化/PPA/EACL 2026</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17204" target="_blank">2603.17204</a></td>
-            <td><a class="pdf-link" href="./2026-04-03/2603.17204_CODMAS.pdf">📥 PDF</a></td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="abstracts">
-        <div class="abs-card">
-          <span class="badge-hot">TODAY</span><span class="badge-new">NEW</span><span class="badge-top">VTS 2026</span>
-          <div class="abs-title">AI辅助硬件安全验证：系统综述与AI加速器案例研究（首篇全流程综述）</div>
-          <div class="abs-meta">Khan Thamid Hasan, Md Ajoad Hasan, Nashmin Alam, Md. Touhidul Islam, Upoma Das, Farimah Farahmandi · 2026-04-02 · cs.CR, cs.AR · <strong>IEEE VTS 2026 录用</strong></div>
-          <div class="abs-body">首次对 AI/LLM 辅助硬件安全验证全流程进行系统综述，覆盖：① <strong>资产识别</strong>（AI自动分析设计资产）；② <strong>威胁建模</strong>（LLM辅助安全威胁推理）；③ <strong>安全测试计划生成</strong>；④ <strong>仿真驱动分析</strong>；⑤ <strong>形式化验证</strong>；⑥ <strong>对策推理</strong>六大阶段。以开源 <strong>NVIDIA NVDLA</strong> 深度学习加速器为实践案例，展示 AI 技术在真实硬件安全验证中的具体应用。核心观点：AI/LLM 的自动化输出必须经过仿真证据与形式化推理的"可信落地"验证，强调方法可靠性。这是 AI for EDA 中硬件安全验证方向的重要综述性工作，同时触及 RTL生成/LLM辅助工具的相邻领域。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2604.01572" target="_blank">arXiv</a>
-            <a class="local" href="./2026-04-03/2604.01572_AI-HW-Security-Verification.pdf">本地 PDF</a>
-          </div>
-        </div>
-        <div class="abs-card">
-          <span class="badge-hot">HIGH VALUE</span><span class="badge-new">NEW</span>
-          <div class="abs-title">VeriAgent：带进化记忆机制的工具集成 PPA 感知多智能体 RTL 生成系统（清华+厦大）</div>
-          <div class="abs-meta">Yaoxiang Wang, Qi Shi, ShangZhan Li, Qingguo Hu, Xinyu Yin, Bo Guo, Xu Han, Maosong Sun, Jinsong Su · 2026-03-18 · cs.CL, cs.PL · <strong>清华大学 + 厦门大学</strong></div>
-          <div class="abs-body">多智能体框架，首次将 PPA（功耗/性能/面积）感知与 RTL 生成深度结合。三大核心智能体：① <strong>程序员智能体</strong>（代码生成）；② <strong>正确性智能体</strong>（功能验证）；③ <strong>PPA 智能体</strong>（物理指标评估与优化）。创新引入 <strong>演进记忆机制（Evolving Memory）</strong>：将优化经验外化为持久化结构化记忆节点，系统基于历史执行轨迹持续改进策略，无需重训练模型，实现从"一次性推理"到"反馈驱动持续优化"的范式转变。被认为是国内 LLM for EDA 学术研究的最新力作，与 CODMAS 同期发布，共同引领多智能体 RTL 优化研究浪潮。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2603.17613" target="_blank">arXiv</a>
-            <a class="local" href="./2026-04-03/2603.17613_VeriAgent.pdf">本地 PDF</a>
-          </div>
-        </div>
-        <div class="abs-card">
-          <span class="badge-new">NEW</span><span class="badge-top">EACL 2026</span>
-          <div class="abs-title">CODMAS：辩证多智能体协作框架实现结构化 RTL 优化，关键路径延迟降低 25%、功耗降低 22%</div>
-          <div class="abs-meta">Che-Ming Chang, Prashanth Vijayaraghavan, Ashutosh Jadhav, Charles Mackin, Vandana Mukherjee, Hsinyu Tsai, Ehsan Degan · 2026-03-17 · cs.CL, cs.AR · <strong>EACL 2026 录用</strong></div>
-          <div class="abs-body">将"小黄鸭调试法"哲学引入 RTL 优化，提出 <strong>CODMAS（辩证多智能体协作系统）</strong>框架，四大角色协同运作：① <strong>阐述者（Articulator）</strong>：逐步阐述代码转换计划，揭示隐含假设；② <strong>假设伙伴（Hypothesis Partner）</strong>：预测转换结果，调和预期与实际偏差；③ <strong>领域特定编码智能体（DCA）</strong>：生成符合硬件架构的 Verilog 修改；④ <strong>代码评估智能体（CEA）</strong>：验证语法、功能与 PPA 指标。同步贡献包含 120 个 Verilog 三元组的 <strong>RTLOPT 基准</strong>（流水线+时钟门控）。实验结果：流水线优化关键路径延迟降低 <strong>25%</strong>，时钟门控功耗降低 <strong>22%</strong>，在多个开源/专有 LLM 上均表现显著优于基线。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2603.17204" target="_blank">arXiv</a>
-            <a class="local" href="./2026-04-03/2603.17204_CODMAS.pdf">本地 PDF</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── 2026-04-02 ── -->
-  <div class="date-group">
-    <div class="date-header" onclick="toggleGroup('g0402')">
-      <h3>📅 2026-04-02 · 今日更新（3篇）</h3>
-      <span class="badge-count">3 篇</span>
-      <span class="toggle" id="toggle-g0402">▼</span>
-    </div>
-    <div class="date-body" id="g0402">
-      <table class="paper-table">
-        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td><span class="star">★</span> GSR-GNN: Training Acceleration and Memory-Saving Framework of Deep GNNs on Circuit Graph</td>
-            <td class="cat">GNN/电路图/训练加速/内存优化/DAC 2026</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.27156" target="_blank">2603.27156</a></td>
-            <td><a class="pdf-link" href="./2026-04-02/2603.27156_GSR-GNN.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><span class="star">★</span> RePart: Efficient Hypergraph Partitioning with Logic Replication Optimization for Multi-FPGA System</td>
-            <td class="cat">超图划分/多FPGA/逻辑复制/ISEDA 2026</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.00780" target="_blank">2604.00780</a></td>
-            <td><a class="pdf-link" href="./2026-04-02/2604.00780_RePart.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><span class="star">★</span> Escaping Flatland: A Placement Flow for Enabling 3D FPGAs</td>
-            <td class="cat">3D FPGA/布局流程/延迟优化/开源/DAC 2026</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.01078" target="_blank">2604.01078</a></td>
-            <td><a class="pdf-link" href="./2026-04-02/2604.01078_EscapingFlatland.pdf">📥 PDF</a></td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="abstracts">
-        <div class="abs-card">
-          <span class="badge-hot">HIGH VALUE</span><span class="badge-new">NEW</span><span class="badge-top">DAC 2026</span>
-          <div class="abs-title">GSR-GNN：深度 GNN 在电路图上的高效训练框架，峰值内存降低 87.2%，训练提速 30×</div>
-          <div class="abs-meta">Yuebo Luo, Shiyang Li, Yifei Feng, Vishal Kancharla, Shaoyi Huang, Caiwen Ding · 2026-03-28 · cs.LG · <strong>DAC 2026 录用</strong></div>
-          <div class="abs-body">GNN 在电路分析中潜力巨大，但现代大规模电路图训练受制于 GPU 内存和计算成本。本文提出 <strong>Grouped-Sparse-Reversible GNN（GSR-GNN）</strong>框架，能训练数百层 GNN 同时降低计算和内存开销。核心技术：① <strong>可逆残差模块</strong>（反向传播无需存储中间激活）；② <strong>分组稀疏非线性算子</strong>（压缩节点嵌入保留关键信息）；③ 优化执行流程（消除碎片化激活存储）。在电路图样本上实现峰值内存降低 <strong>87.2%</strong>，训练加速超 <strong>30×</strong>，相关性指标几乎无损，使深度 GNN 切实可用于大规模 EDA 工作负载。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2603.27156" target="_blank">arXiv</a>
-            <a class="local" href="./2026-04-02/2603.27156_GSR-GNN.pdf">本地 PDF</a>
-          </div>
-        </div>
-        <div class="abs-card">
-          <span class="badge-hot">HIGH VALUE</span><span class="badge-new">NEW</span><span class="badge-top">ISEDA 2026</span>
-          <div class="abs-title">RePart：多FPGA系统感知超图划分框架，跳数距离降低 52.3%，速度提升 11×</div>
-          <div class="abs-meta">Zizhuo Fu, Yifan Zhou, Zhaoxin Lu, Guangyu Sun, Runsheng Wang, Meng Li, Yibo Lin · 2026-04-01 · cs.AR · <strong>ISEDA 2026 录用</strong></div>
-          <div class="abs-body">多FPGA系统（MFS）中跨 FPGA 通信成本取决于网络拓扑，现有工具仅关注割边数量而忽略拓扑结构。RePart 提出专为 MFS 定制的多层超图划分框架，三项协同创新：① <strong>FPGA感知动态粗化</strong>；② <strong>热值引导分配策略</strong>（评估单元与 FPGA 亲和度）；③ <strong>复制-删除细化操作</strong>（支持逻辑复制并配合删除冗余）。在 Titan23 和 EDA 精英挑战赛基准上，相比当前 SOTA 超图划分工具，总跳数距离降低 <strong>52.3%</strong>，提速 <strong>11.1×</strong>，并优于EDA精英挑战赛获胜方案。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2604.00780" target="_blank">arXiv</a>
-            <a class="local" href="./2026-04-02/2604.00780_RePart.pdf">本地 PDF</a>
-          </div>
-        </div>
-        <div class="abs-card">
-          <span class="badge-new">NEW</span><span class="badge-top">DAC 2026 · 开源</span>
-          <div class="abs-title">Escaping Flatland：首个针对3D FPGA架构的布局流程，关键路径延迟最高降低 18%</div>
-          <div class="abs-meta">Cong Hao, Andrew B. Kahng, Bodhisatta Pramanik, Ismael Youssef · 2026-04-01 · cs.AR · <strong>DAC 2026 录用 · 将在 GitHub 开源</strong></div>
-          <div class="abs-body">现有布局工具继承自2D框架，无法有效捕捉3D FPGA的延迟特性和优化动态。本文提出针对3D FPGA的专用布局流程，集成：① <strong>基于分区的初始化</strong>；② <strong>自适应成本调度</strong>；③ <strong>精确延迟估计</strong>；④ <strong>模拟退火移动策略</strong>。在四种3D架构（3D CB、3D CB-O、3D CB-I、3D SB）上相比VTR：关键路径延迟几何均值分别降低约 3%、2%、3%、<strong>6%</strong>（最大值最高 <strong>18%</strong>），布线线长也同步改善。结果将在 GitHub 开源发布。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2604.01078" target="_blank">arXiv</a>
-            <a class="local" href="./2026-04-02/2604.01078_EscapingFlatland.pdf">本地 PDF</a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
   <!-- ── 2026-04-01 ── -->
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0401')">
-      <h3>📅 2026-04-01 · 今日更新（3篇）</h3>
-      <span class="badge-count">3 篇</span>
+      <h3>📅 2026-04-01 · 今日更新（1篇）— AP-DRL：Versal ACAP深度强化学习自动任务划分</h3>
+      <span class="badge-count">1 篇</span>
       <span class="toggle" id="toggle-g0401">▼</span>
     </div>
     <div class="date-body" id="g0401">
@@ -745,57 +604,22 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td><span class="star">★</span> FluxEDA: A Unified Execution Infrastructure for Stateful Agentic EDA</td>
-            <td class="cat">Agentic EDA/有状态基础设施/多步优化/时序ECO</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.25243" target="_blank">2603.25243</a></td>
-            <td><a class="pdf-link" href="./2026-04-01/2603.25243_FluxEDA.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><span class="star">★</span> AP-DRL: A Synergistic Algorithm-Hardware Framework for Automatic Task Partitioning of Deep Reinforcement Learning on Versal ACAP</td>
-            <td class="cat">DRL加速/异构硬件/ILP任务划分/多精度协调</td>
+            <td>AP-DRL: A Synergistic Algorithm-Hardware Framework for Automatic Task Partitioning of Deep Reinforcement Learning on Versal ACAP</td>
+            <td class="cat">深度强化学习/硬件加速/Versal ACAP/任务划分/ILP</td>
             <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.29369" target="_blank">2603.29369</a></td>
             <td><a class="pdf-link" href="./2026-04-01/2603.29369_AP-DRL.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>AutoPDR: Circuit-Aware Solver Configuration Prediction for Hardware Model Checking</td>
-            <td class="cat">形式验证/图学习/PDR求解器配置/ISEDA 2026</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.25048" target="_blank">2603.25048</a></td>
-            <td><a class="pdf-link" href="./2026-04-01/2603.25048_AutoPDR.pdf">📥 PDF</a></td>
           </tr>
         </tbody>
       </table>
       <div class="abstracts">
         <div class="abs-card">
-          <span class="badge-hot">HIGH VALUE</span><span class="badge-new">NEW</span>
-          <div class="abs-title">FluxEDA：有状态 Agentic EDA 统一执行基础设施，支持状态复用、回滚与多步迭代</div>
-          <div class="abs-meta">Zhengrui Chen, Zixuan Song, Yu Li, Qi Sun, Cheng Zhuo · 2026-03-26 · cs.AR + cs.AI · arXiv:2603.25243</div>
-          <div class="abs-body">现有 LLM/Agent 与 EDA 工具的集成多为脚本级孤立调用，无法在生产环境中保持工具状态并支持迭代优化。FluxEDA 提出<strong>托管网关式执行接口</strong>，后台维护持久化 EDA 工具实例，支持跨会话状态复用与回滚。通过<strong>自动布线后时序 ECO</strong>和<strong>标准单元子库优化</strong>两个商用后端案例验证，可有效支持多步分析与协同迭代执行。这是 Agentic EDA 从实验室到生产环境工程化的关键缺失一环。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2603.25243" target="_blank">arXiv</a>
-            <a class="local" href="./2026-04-01/2603.25243_FluxEDA.pdf">本地 PDF</a>
-          </div>
-        </div>
-        <div class="abs-card">
-          <span class="badge-hot">HIGH VALUE</span><span class="badge-new">NEW</span>
-          <div class="abs-title">AP-DRL：AMD Versal ACAP 上 DRL 训练自动任务划分，最高加速 4.17× 且不损失收敛</div>
-          <div class="abs-meta">Enlai Li, Zhe Lin, Sharad Sinha, Wei Zhang · 2026-03-31 · cs.AR + cs.LG · arXiv:2603.29369</div>
-          <div class="abs-body">提出首个面向 AMD Versal ACAP（CPU+FPGA+AI Engine）的<strong>自动任务划分框架</strong>用于加速 DRL 训练。通过<strong>设计空间探索 + 整数线性规划（ILP）</strong>模型将操作映射到最优计算单元，同时引入<strong>硬件感知多精度协调</strong>（FP32/FP16/BF16）解决 DRL 宽动态范围奖励误差。相比纯 FPGA 实现加速 <strong>4.17×</strong>，相比 AI Engine 基线加速 <strong>3.82×</strong>，全程保持训练收敛性。</div>
+          <span class="badge-new">DRL加速 · Versal</span>
+          <div class="abs-title">AP-DRL：面向 Versal ACAP 的 DRL 自动任务划分框架，ILP 分区 + BF16/FP16/FP32 混合精度，最高加速 4.17×</div>
+          <div class="abs-meta">Enlai Li, Zhe Lin, Sharad Sinha, Wei Zhang · 2026-03-31 · cs.AR / cs.LG</div>
+          <div class="abs-body">AP-DRL 利用 AMD Versal ACAP 异构架构（CPU + FPGA + AI 引擎），通过 <strong>ILP 划分模型</strong>将 DRL 操作按计算强度匹配最优计算单元，配合 FP32/FP16/BF16 三精度协同解决 DRL 宽动态范围量化误差。相比 PL 基线加速 <strong>4.17×</strong>，相比 AIE 基线 <strong>3.82×</strong>，同时保持训练收敛性。</div>
           <div class="abs-links">
             <a href="https://arxiv.org/abs/2603.29369" target="_blank">arXiv</a>
             <a class="local" href="./2026-04-01/2603.29369_AP-DRL.pdf">本地 PDF</a>
-          </div>
-        </div>
-        <div class="abs-card">
-          <span class="badge-new">NEW</span><span class="badge-top">ISEDA 2026</span>
-          <div class="abs-title">AutoPDR：电路感知的 PDR 形式验证求解器智能配置，78% 搜索空间压缩</div>
-          <div class="abs-meta">Guangyu Hu, Chen Chen, Xiaofeng Zhou, Jiaxi Zhang, Wei Zhang, Hongce Zhang · 2026-03-26 · cs.AR · ISEDA 2026 录用</div>
-          <div class="abs-body">针对硬件形式验证中 PDR 算法参数配置依赖人工调参的痛点，AutoPDR 通过<strong>图表示学习</strong>提取电路拓扑的结构、功能与连接特征，结合<strong>约束式专家先验过滤</strong>，将有效配置搜索空间缩减约 <strong>78%</strong>，自动为特定电路推荐最优 PDR 求解策略。已在广泛基准测试中验证，相比默认配置和常用设定显著提升验证效率。代码已在 GitHub 开源（Gy-Hu/AutoPDR）。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2603.25048" target="_blank">arXiv</a>
-            <a href="https://github.com/Gy-Hu/AutoPDR" target="_blank">开源代码</a>
-            <a class="local" href="./2026-04-01/2603.25048_AutoPDR.pdf">本地 PDF</a>
           </div>
         </div>
       </div>
@@ -987,27 +811,6 @@
         <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td><span class="star">★</span> PowerFlow-DNN: Compiler-Directed Fine-Grained Power Orchestration for End-to-End Edge AI Inference</td>
-            <td class="cat">边缘AI推理/电源管理/编译器优化/VLSI</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.23882" target="_blank">2603.23882</a></td>
-            <td><a class="pdf-link" href="./2026-03-27/PowerFlow-DNN-Compiler-Power-Orchestration-Edge-AI.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Energy Efficient Software Hardware CoDesign for Machine Learning: From TinyML to Large Language Models</td>
-            <td class="cat">软硬件协同设计/能效/TinyML/LLM/ASPLOS 2026</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.23668" target="_blank">2603.23668</a></td>
-            <td><a class="pdf-link" href="./2026-03-27/Energy-Efficient-SW-HW-CoDesign-ML-TinyML-LLM.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><span class="star">★</span> ChipBench: A Next-Step Benchmark for Evaluating LLM Performance in AI-Aided Chip Design</td>
-            <td class="cat">LLM评测基准/HLS/Verilog/芯片设计/UCSD/Columbia</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2601.21448" target="_blank">2601.21448</a></td>
-            <td><a class="pdf-link" href="./2026-03-27/ChipBench-Next-Step-Benchmark-LLM-Hardware-Design.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
             <td>4</td>
             <td><span class="star">★</span> DUET: Agentic Design Understanding via Experimentation and Testing</td>
             <td class="cat">Agentic LLM/RTL理解/形式验证/迭代实验</td>
@@ -1017,54 +820,13 @@
         </tbody>
       </table>
       <!-- 摘要卡片 -->
-      <div class="abs-card">
-        <span class="badge-new">NEW</span>
-        <div class="abs-title">PowerFlow-DNN: Compiler-Directed Fine-Grained Power Orchestration for End-to-End Edge AI Inference</div>
-        <div class="abs-meta">arXiv:2603.23882 · cs.AR · 2026-03-25 · Paul Chen, Jeongeun Kim et al.（TSMC 40nm 验证）</div>
-        <div class="abs-body">针对边缘 AI 推理的超低功耗加速器，提出编译器指导的细粒度功率状态编排框架。将 deadline 约束下的实时周期性推理建模为统一的<strong>层间功率调度问题</strong>，自动发现能量最小的调度方案。在 TSMC 40nm 工艺上验证，在超过 10<sup>160</sup> 的组合空间中通过结构化层级状态图 + 轻量级剪枝，能耗降低高达 <strong>37%</strong>，与精确 ILP 解仅差 0.68%，推理加速 2.14×。</div>
-        <div class="abs-links">
-          <a href="https://arxiv.org/abs/2603.23882" target="_blank">arXiv</a>
-          <a class="local" href="./2026-03-27/PowerFlow-DNN-Compiler-Power-Orchestration-Edge-AI.pdf">本地 PDF</a>
-        </div>
-      </div>
-      <div class="abs-card">
-        <span class="badge-new">NEW</span><span class="badge-top">ASPLOS 2026 Workshop</span>
-        <div class="abs-title">Energy Efficient Software Hardware CoDesign for Machine Learning: From TinyML to Large Language Models</div>
-        <div class="abs-meta">arXiv:2603.23668 · cs.AR × cs.LG · 2026-03-24 · Mohammad Saleh Vahdatpour, Yanqing Zhang · EMC2 @ ASPLOS 2026（海报）</div>
-        <div class="abs-body">全面综述从 mW 级 TinyML 到数据中心 LLM 服务的<strong>能效软硬件协同设计方法</strong>。覆盖加速器架构（ASIC/FPGA 数据流、PIM/近存计算）和系统级技术（分区、量化、调度、运行时适应）。提炼通用设计杠杆，指出跨平台泛化能力不足、协同设计搜索空间庞大、跨工作负载基准不一致等核心差距，提出层次分解视角和碳感知 ML 系统路线图。</div>
-        <div class="abs-links">
-          <a href="https://arxiv.org/abs/2603.23668" target="_blank">arXiv</a>
-          <a class="local" href="./2026-03-27/Energy-Efficient-SW-HW-CoDesign-ML-TinyML-LLM.pdf">本地 PDF</a>
-        </div>
-      </div>
-      <div class="abs-card">
-        <span class="badge-hot">HIGH VALUE</span>
-        <div class="abs-title">ChipBench: A Next-Step Benchmark for Evaluating LLM Performance in AI-Aided Chip Design</div>
-        <div class="abs-meta">arXiv:2601.21448 · 2026-01-29（v1）/ 2026-02-03（v2）· UCSD + Columbia University · SemiEngineering 推荐</div>
-        <div class="abs-body">针对 VerilogEval 等现有基准<strong>饱和且任务多样性不足</strong>的问题，提出 ChipBench —— 更贴近实际工程的 LLM 硬件设计评测框架。覆盖 HLS（高层次综合）与底层 HDL 对比、PPA 感知优化、可综合性验证等多维度评估，为研究 HLS 与低级 HDL 在 LLM 辅助设计中的适用性提供实验基础与洞察。</div>
-        <div class="abs-links">
-          <a href="https://arxiv.org/abs/2601.21448" target="_blank">arXiv</a>
-          <a class="local" href="./2026-03-27/ChipBench-Next-Step-Benchmark-LLM-Hardware-Design.pdf">本地 PDF</a>
-        </div>
-      </div>
-      <div class="abs-card">
-        <span class="badge-hot">HIGH VALUE</span>
-        <div class="abs-title">DUET: Agentic Design Understanding via Experimentation and Testing</div>
-        <div class="abs-meta">arXiv:2512.06247 · 2025-12-05（v1）/ 2026-01-21（v2）· Gus Henry Smith, Sandesh Adhikary et al.（UC Berkeley / 卡内基梅隆）</div>
-        <div class="abs-body">提出 DUET 方法论：通过<strong>迭代实验</strong>（模拟运行、波形检查、形式验证）帮助 AI 智能体真正<strong>理解复杂 RTL 设计</strong>，而非仅一次性代码审读。DUET 模拟资深硬件工程师的工作方式，通过主动探索获得对设计行为的深层理解，在形式验证等复杂推理任务中显著提升智能体表现，是 Agentic RTL 验证的重要基础性工作。</div>
-        <div class="abs-links">
-          <a href="https://arxiv.org/abs/2512.06247" target="_blank">arXiv</a>
-          <a class="local" href="./2026-03-27/DUET-Agentic-Design-Understanding-RTL-Formal-Verification.pdf">本地 PDF</a>
-        </div>
-      </div>
-    </div>
   </div>
 
   <!-- ── 2026-03-26 ── -->
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0326')">
-      <h3>📅 2026-03-26 · 今日更新（3篇）</h3>
-      <span class="badge-count">3 篇</span>
+      <h3>📅 2026-03-26 · 今日更新（2篇）— Agentic Verilog 生成评估 + POET 功耗优化进化调优</h3>
+      <span class="badge-count">2 篇</span>
       <span class="toggle" id="toggle-g0326">▼</span>
     </div>
     <div class="date-body" id="g0326">
@@ -1073,53 +835,40 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td><span class="star">★</span> POET: Power-Oriented Evolutionary Tuning for LLM-Based RTL PPA Optimization</td>
-            <td class="cat">RTL优化/LLM/进化算法/PPA/功耗</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.19333" target="_blank">2603.19333</a></td>
-            <td><a class="pdf-link" href="./2026-03-26/POET-Power-Oriented-Evolutionary-Tuning-LLM-RTL-PPA.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><span class="star">★</span> Exploring the Agentic Frontier of Verilog Code Generation</td>
-            <td class="cat">Agentic LLM/Verilog生成/CVDP基准/开源评测</td>
+            <td>Exploring the Agentic Frontier of Verilog Code Generation</td>
+            <td class="cat">Verilog生成/Agent评估/CVDP基准/开源框架</td>
             <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.19347" target="_blank">2603.19347</a></td>
             <td><a class="pdf-link" href="./2026-03-26/Exploring-Agentic-Frontier-Verilog-Code-Generation.pdf">📥 PDF</a></td>
           </tr>
           <tr>
-            <td>3</td>
-            <td>HWE-Bench: Can Language Models Perform Board-level Schematic Designs?</td>
-            <td class="cat">板级EDA/LLM基准/原理图设计/LLM评测</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.18102" target="_blank">2603.18102</a></td>
-            <td><a class="pdf-link" href="./2026-03-26/HWE-Bench-LM-Board-level-Schematic-Designs.pdf">📥 PDF</a></td>
+            <td>2</td>
+            <td>POET: Power-Oriented Evolutionary Tuning for LLM-Based RTL PPA Optimization</td>
+            <td class="cat">RTL PPA优化/LLM进化调优/功耗优先/差分测试</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.19333" target="_blank">2603.19333</a></td>
+            <td><a class="pdf-link" href="./2026-03-26/POET-Power-Oriented-Evolutionary-Tuning-LLM-RTL-PPA.pdf">📥 PDF</a></td>
           </tr>
         </tbody>
       </table>
-      <!-- 摘要卡片 -->
-      <div class="abs-card">
-        <div class="abs-title">POET: Power-Oriented Evolutionary Tuning for LLM-Based RTL PPA Optimization</div>
-        <div class="abs-meta">arXiv:2603.19333 · 2026-03-19 · USC（Shahin Nazarian 组）</div>
-        <div class="abs-body">针对 LLM 驱动 RTL PPA 优化的两大核心挑战：功能正确性（LLM 幻觉）与功耗优先的多目标权衡。POET 引入<strong>差分测试基准生成</strong>（以原始设计作参考消除幻觉）+ <strong>LLM 驱动进化机制</strong>（非支配排序 + 功率优先层内排序 + 帕累托前端低功耗导航）。在 40 个多样化 RTL 设计（RTL-OPT 基准）上实现 <strong>100% 功能正确性</strong> + 所有设计最优功耗结果，面积和延迟改善同样具竞争力。</div>
-        <div class="abs-links">
-          <a href="https://arxiv.org/abs/2603.19333" target="_blank">arXiv</a>
-          <a class="local" href="./2026-03-26/POET-Power-Oriented-Evolutionary-Tuning-LLM-RTL-PPA.pdf">本地 PDF</a>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-new">Agentic Verilog</span>
+          <div class="abs-title">Exploring the Agentic Frontier of Verilog Code Generation：首个系统评估 Agentic LLM 在 CVDP 基准上的 Verilog 生成能力，简单 Agent 包装反降性能</div>
+          <div class="abs-meta">Patrick Yubeaton, Siddharth Garg, Chinmay Hegde · 2026-03-19 · cs.AR / cs.LG</div>
+          <div class="abs-body">首次系统评估 Agentic LLM 用于 Verilog 代码生成。引入多个开源硬件设计 Agent 框架（模型无关基线）。关键发现：<strong>简单 Agent 包装前沿模型反而可能降低性能</strong>（vs. 优化提示的标准前向传递）；结构化框架可匹配乃至超越非 Agent 基线；开源与闭源差距来自更高崩溃率和工具输出解释弱势。为专业化 Verilog Agent 设计指明方向。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.19347" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-26/Exploring-Agentic-Frontier-Verilog-Code-Generation.pdf">本地 PDF</a>
+          </div>
         </div>
-      </div>
-      <div class="abs-card">
-        <div class="abs-title">Exploring the Agentic Frontier of Verilog Code Generation</div>
-        <div class="abs-meta">arXiv:2603.19347 · 2026-03-19（v1）/ 2026-03-24（v2）· NYU（Siddharth Garg、Chinmay Hegde 组）</div>
-        <div class="abs-body">首个系统评测用于 Verilog 生成的 Agentic LLM 框架，使用 CVDP 基准（NVIDIA 发布）。关键发现：<strong>简单智能体化封装可能降低性能</strong>（相比优化提示词的标准前向传递），但结构化框架能有意义地达到或超越非智能体基线；开源 / 闭源差距主要由<strong>更高崩溃率</strong>和<strong>较弱工具输出解释能力</strong>驱动。发布多个开源硬件设计智能体框架，提供与模型无关的基线。</div>
-        <div class="abs-links">
-          <a href="https://arxiv.org/abs/2603.19347" target="_blank">arXiv</a>
-          <a class="local" href="./2026-03-26/Exploring-Agentic-Frontier-Verilog-Code-Generation.pdf">本地 PDF</a>
-        </div>
-      </div>
-      <div class="abs-card">
-        <div class="abs-title">HWE-Bench: Can Language Models Perform Board-level Schematic Designs?</div>
-        <div class="abs-meta">arXiv:2603.18102 · 2026-03-18 · Weibo Qiu 等</div>
-        <div class="abs-body">提出 HWE-Bench —— 评估 LLM 执行板级电路设计能力的基准。300 项板级设计任务（8 个应用领域，来自 GitHub / OSHWLab），含 <strong>2,914 份真实 IC 数据手册</strong>。LLM 需根据功能需求 + 器件数据手册从零生成原理图，经静态电气规则检查 + 电路仿真验证。结论：<strong>最佳模型通过率仅 8.15%</strong>，揭示 LLM 缺乏物理直觉，为 EDA AI 智能体发展路径研究提供方向。</div>
-        <div class="abs-links">
-          <a href="https://arxiv.org/abs/2603.18102" target="_blank">arXiv</a>
-          <a class="local" href="./2026-03-26/HWE-Bench-LM-Board-level-Schematic-Designs.pdf">本地 PDF</a>
+        <div class="abs-card">
+          <span class="badge-new">RTL功耗优化</span>
+          <div class="abs-title">POET：面向功耗的 LLM 进化调优，100% 功能正确，40 个设计全部获得最佳功耗，PPA 帕累托前沿探索</div>
+          <div class="abs-meta">Heng Ping, Peiyu Zhang, Zhenkun Wang 等 8 位作者 · 2026-03-18 · cs.AR</div>
+          <div class="abs-body">POET 解决 LLM 驱动 RTL PPA 优化的两大挑战：①差分测试生成功能验证黄金参考，排除幻觉影响；② LLM 进化机制 + 非支配排序 + <strong>功率优先层内排序</strong>，无需手动调权重直接优化帕累托前沿低功耗区域。RTL-OPT 基准（40 个设计）：<strong>100% 功能正确</strong>，全部 40 个设计获得最佳功耗，面积和延迟竞争力改进。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.19333" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-26/POET-Power-Oriented-Evolutionary-Tuning-LLM-RTL-PPA.pdf">本地 PDF</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1137,41 +886,6 @@
         <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td><span class="star">★</span> VeriAgent: A Tool-Integrated Multi-Agent System with Evolving Memory for PPA-Aware RTL Code Generation</td>
-            <td class="cat">多智能体/RTL生成/PPA优化</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17613" target="_blank">2603.17613</a></td>
-            <td><a class="pdf-link" href="./2026-03-25/VeriAgent_Multi-Agent_PPA-Aware_RTL_Generation.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><span class="star">★</span> CODMAS: A Dialectic Multi-Agent Collaborative Framework for Structured RTL Optimization</td>
-            <td class="cat">多智能体/RTL优化/PPA/EACL 2026</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17204" target="_blank">2603.17204</a></td>
-            <td><a class="pdf-link" href="./2026-03-25/CODMAS_Dialectic_Multi-Agent_RTL_Optimization.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><span class="star">★</span> ACE-RTL: When Agentic Context Evolution Meets RTL-Specialized LLMs</td>
-            <td class="cat">RTL-专用LLM/多智能体/CVDP基准</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2602.10218" target="_blank">2602.10218</a></td>
-            <td><a class="pdf-link" href="./2026-03-25/ACE-RTL_Agentic_Context_Evolution_RTL-Specialized_LLMs.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Synthesis-in-the-Loop Evaluation of LLMs for RTL Generation: Quality, Reliability, and Failure Modes</td>
-            <td class="cat">LLM评测/RTL综合/HQI指标/VerilogEval</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.11287" target="_blank">2603.11287</a></td>
-            <td><a class="pdf-link" href="./2026-03-25/Synthesis-in-the-Loop_Eval_LLMs_RTL_Generation.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>DRCY: Agentic Hardware Design Reviews</td>
-            <td class="cat">硬件设计审查/多智能体/量产落地</td>
-            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.15672" target="_blank">2603.15672</a></td>
-            <td><a class="pdf-link" href="./2026-03-25/DRCY_Agentic_Hardware_Design_Reviews.pdf">📥 PDF</a></td>
-          </tr>
-          <tr>
             <td>6</td>
             <td>DS2SC-Agent: A Multi-Agent Automated Pipeline for Rapid Chiplet Model Generation</td>
             <td class="cat">Chiplet/SystemC/多智能体/异构架构</td>
@@ -1188,77 +902,6 @@
         </tbody>
       </table>
       <div class="abstracts">
-        <div class="abs-card">
-          <span class="badge-new">NEW</span><span class="badge-hot">🔥 HOT</span>
-          <div class="abs-title">VeriAgent — PPA 感知多智能体 RTL 生成系统，进化记忆机制驱动持续优化</div>
-          <div class="abs-meta">Yaoxiang Wang 等 9 人（清华 + 厦大）· 2026-03-18 · cs.CL</div>
-          <div class="abs-body">将 EDA 工具显式集成到三智能体闭环（程序员 / 正确性 / PPA智能体），首次将功能正确性与 <strong>物理 PPA 指标</strong> 共同优化。"进化记忆"机制将优化经验外化为结构化记忆节点，无需重训练即可持续改进。将 RTL 生成从一次性推理转变为 <strong>持续反馈驱动优化</strong>。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2603.17613" target="_blank">arXiv</a>
-            <a class="local" href="./2026-03-25/VeriAgent_Multi-Agent_PPA-Aware_RTL_Generation.pdf">本地 PDF</a>
-          </div>
-        </div>
-        <div class="abs-card">
-          <span class="badge-new">NEW</span><span class="badge-top">🏆 EACL 2026</span>
-          <div class="abs-title">CODMAS — 辩证多智能体协作 RTL 优化，流水线延迟 −25%，功耗 −22%</div>
-          <div class="abs-meta">Che-Ming Chang 等 7 人（台大 + IBM Research）· 2026-03-17 · cs.CL · EACL 2026</div>
-          <div class="abs-body">提出"阐述者"（Articulator）+ "假设伙伴"（Hypothesis Partner）辩证推理架构，并引入 <strong>RTLOPT 基准</strong>（120 个 Verilog 三元组）。两类核心优化：流水线转换（关键路径延迟 <strong>↓25%</strong>）和时钟门控（功耗 <strong>↓22%</strong>），同时功能/编译失败率低于所有基线。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2603.17204" target="_blank">arXiv</a>
-            <a class="local" href="./2026-03-25/CODMAS_Dialectic_Multi-Agent_RTL_Optimization.pdf">本地 PDF</a>
-          </div>
-        </div>
-        <div class="abs-card">
-          <span class="badge-new">NEW</span><span class="badge-hot">🔥 NVIDIA</span>
-          <div class="abs-title">ACE-RTL — 智能上下文演化统一 RTL 专用 LLM 与推理模型，CVDP 基准 +41% Pass Rate</div>
-          <div class="abs-meta">Chenhui Deng 等 6 人（NVIDIA Research）· 2026-02-10 / 2026-03-21修订 · cs.AR + cs.LG</div>
-          <div class="abs-body">统一两条独立路径：（1）170 万 RTL 样本训练的域适配 LLM；（2）由前沿推理 LLM 驱动的智能体系统。三组件协作（生成器 / 反思器 / 协调器）迭代优化功能正确性，并行探索策略缩短实际调试时间。在 CVDP 基准上相比 14 个竞品 <strong>Pass Rate 最高提升 41%</strong>。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2602.10218" target="_blank">arXiv</a>
-            <a class="local" href="./2026-03-25/ACE-RTL_Agentic_Context_Evolution_RTL-Specialized_LLMs.pdf">本地 PDF</a>
-          </div>
-        </div>
-        <div class="abs-card">
-          <span class="badge-new">NEW</span>
-          <div class="abs-title">Synthesis-in-the-Loop Eval — 32 个 LLM 在 202 Verilog 任务全面基准，引入 HQI 硬件质量指数</div>
-          <div class="abs-meta">Weimin Fu 等 7 人（KU Leuven + NYU + KAUST）· 2026-03-11 · cs.AR + cs.SE</div>
-          <div class="abs-body">首次将综合循环（Synthesis-in-the-Loop）引入 LLM RTL 评测，提出 <strong>HQI（硬件质量指数）</strong>，整合面积 / 延迟 / 警告的 0-100 综合评分。结论：Gemini-3-Pro 领跑（HQI 85.1），专有模型因综合超时和细化错误而后期失败；开源模型因缺少模块封装而早期失败。<strong>多样本策略</strong>可获 3.8-22.1 HQI 提升。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2603.11287" target="_blank">arXiv</a>
-            <a class="local" href="./2026-03-25/Synthesis-in-the-Loop_Eval_LLMs_RTL_Generation.pdf">本地 PDF</a>
-          </div>
-        </div>
-        <div class="abs-card">
-          <span class="badge-new">NEW</span>
-          <div class="abs-title">DRCY — 首个量产多智能体硬件设计审查系统，已在 AllSpice Hub 上线 CI/CD</div>
-          <div class="abs-meta">Kyle Dumont 等 4 人（AllSpice）· 2026-03-13 · cs.AR + cs.AI + cs.SE</div>
-          <div class="abs-body">自动化原理图连接性语义审查：自主获取器件数据手册 → 逐引脚分析 → 内联评论发布。五智能体流水线架构 + 多轮共识机制（提高安全关键分析可靠性）。已由多家硬件公司用于<strong>多智能体车辆设计到太空探索</strong>领域，真正落地量产。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2603.15672" target="_blank">arXiv</a>
-            <a class="local" href="./2026-03-25/DRCY_Agentic_Hardware_Design_Reviews.pdf">本地 PDF</a>
-          </div>
-        </div>
-        <div class="abs-card">
-          <span class="badge-new">NEW</span>
-          <div class="abs-title">DS2SC-Agent — 数据手册→SystemC Chiplet 模型自动生成流水线，首个端到端全自动系统</div>
-          <div class="abs-meta">Yiwei Wu 等 9 人（上交 + 复旦）· 2026-03-22 · cs.AR</div>
-          <div class="abs-body">解决 Chiplet 建模的核心痛点：原始数据手册长篇复杂非结构化 → 上下文消失 + 逻辑幻觉。多智能体协作：非结构化长文档解析 / SystemC 代码构建 / 测试平台生成 / 自适应闭环调试。在 LNA、FFT、PA 三类典型 Chiplet 上验证，一致生成功能正确的 SystemC 模型，<strong>大幅减少人工干预</strong>。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2603.21190" target="_blank">arXiv</a>
-            <a class="local" href="./2026-03-25/DS2SC-Agent_Automated_Chiplet_Model_Generation.pdf">本地 PDF</a>
-          </div>
-        </div>
-        <div class="abs-card">
-          <span class="badge-new">NEW</span><span class="badge-top">🏆 DAC 2026</span>
-          <div class="abs-title">COmPOSER — 开源 RF/毫米波端到端设计自动化框架，效率比人工提升 100–300×</div>
-          <div class="abs-meta">Subhadip Ghosh 等 7 人（明尼苏达大学 + 印度学者）· 2026-03-20 · cs.AR · <strong>DAC 2026 录用</strong></div>
-          <div class="abs-body">将目标规格直接转化为带布局的优化射频电路，集成：原理图综合 + 有源/无源器件布局生成 + 布局布线 + <strong>物理方程与机器学习电磁模型</strong>融合。在商用 65nm 工艺、60 GHz LNA 和 PA 上验证，性能媲美专家手工设计，同时效率提升 <strong>100-300×</strong>。</div>
-          <div class="abs-links">
-            <a href="https://arxiv.org/abs/2603.20486" target="_blank">arXiv</a>
-            <a class="local" href="./2026-03-25/COmPOSER_RF_mmwave_Circuit_Optimization_DAC2026.pdf">本地 PDF</a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -1662,6 +1305,34 @@
 <!-- ══════════════ 行业动态 ══════════════ -->
 <section id="news">
   <div class="section-title"><span class="icon">🌍</span> 行业动态 <span class="line"></span></div>
+
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-10 · Cognichip $6000万融资 · ChatSVA/RL-ASIC 新论文 · ICCAD截止倒计时4天）</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>TechCrunch · 2026-04-01</div>
+      <h4>🔥 Cognichip 完成 $6000 万融资，英特尔 CEO Lip-Bu Tan 跟投加入董事会</h4>
+      <p>AI for Chip Design 初创公司 Cognichip 宣布完成 <strong>6000 万美元新一轮融资</strong>（Seligman Ventures 领投），<strong>英特尔 CEO Lip-Bu Tan 个人跟投并加入董事会</strong>。公司累计融资达 <strong>9300 万美元</strong>（自 2024 年成立以来）。核心定位：基于芯片设计数据训练的专用 AI 模型，宣称降低开发成本 <strong>75%</strong>、周期缩短 <strong>50%</strong> 以上。数据策略：合成数据集 + 安全授权训练（不泄露合作伙伴 IP）+ 开源 RISC-V 验证。主要竞争格局：Cognichip、ChipAgents（$7400 万 A 轮）、Ricursive（$3.35 亿 A 轮）三家共同布局 Agentic AI 芯片设计市场，AI for EDA 创企赛道 2026 Q1 融资总额已超 <strong>$4.7 亿</strong>。</p>
+      <a href="https://techcrunch.com/2026/04/01/cognichip-wants-ai-to-design-the-chips-that-power-ai-and-just-raised-60m-to-try/" target="_blank">→ TechCrunch 报道</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>IBM Research · arXiv:2603.25719 · 2026-03-31</div>
+      <h4>🆕 IBM Agent Factory for HLS：通用 Agent 无需领域训练，HLS 硬件优化平均加速 8.27×</h4>
+      <p>IBM Research 发布 <strong>Agent Factories for HLS</strong>（发表于 SemiEngineering，同步 arXiv 公开），验证通用编程 Agent（Claude Code Opus 4.5/4.6 + AMD Vitis HLS）在硬件优化的能力边界。两阶段流水线：① 子内核分解 + ILP 全局最优配置；② N 个专家 Agent 并行跨函数优化（编译指示重组、循环融合、内存重构）。12 个 HLS 基准（HLS-Eval + Rodinia-HLS），从 1–10 个 Agent 扩展：<strong>平均加速 8.27×</strong>，streamcluster 超过 <strong>20×</strong>。重要发现：ILP 最优方案≠最终最佳，跨函数优化价值巨大。</p>
+      <a href="https://arxiv.org/abs/2603.25719" target="_blank">→ arXiv 论文</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-04-10 今日新增</div>
+      <h4>🆕 今日4篇：RL-ASIC 端侧 · ChatSVA(DAC'26) · 模拟电路自校准 · ATLAS 3D-DRAM</h4>
+      <p>今日收录 4 篇 AI for EDA 核心论文：<strong>RL-ASIC（2604.07526）</strong>：RL 驱动编译器联合优化架构/内存/工作负载，7 节点自动适配，Llama 3.1 8B 达 29,809 tok/s；<strong>ChatSVA（2604.02811）</strong>：DAC 2026 接收，SVA 功能通过率 96.12%，覆盖率提升 11× 新 SOTA；<strong>LLM 模拟电路尺寸调整（2604.07387）</strong>：解析方程 + 单次仿真自校准，100% 成功；<strong>ATLAS（2604.08044）</strong>：首个硅验证 3D-DRAM LLM 加速器全栈仿真，误差 ≤8.57%，开源计划公布。</p>
+      <a href="https://arxiv.org/list/cs.AR/recent" target="_blank">→ cs.AR 最新列表</a>
+    </div>
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>ICCAD 2026 官网</div>
+      <h4>⏰ ICCAD 2026 完整论文截止倒计时：仅剩 4 天（4月14日截止）</h4>
+      <p>ICCAD 2026 完整论文截止日 <strong>2026-04-14（4月14日，AoE）</strong> 仅剩 4 天。本周是 AI for EDA 预印本密集发布期，已确认的方向：布局布线 AI（多篇）、时序分析与收敛、Agentic EDA 工作流、RTL 验证、GNN 物理设计等。会议将于 <strong>2026年11月8-12日</strong>在美国圣何塞举行，录用通知 7 月 11 日。ICCAD 2026 CAD Contest 三题注册截止 5 月 8 日：Cadence（LLM Netlist 探索）、Synopsys（回归失败分桶）、Intel（SoC Floorplanning）。</p>
+      <a href="https://iccad.com/2026" target="_blank">→ ICCAD 2026 官网</a>
+    </div>
+  </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-09 · DAC 2026 程序4月17日公布 · Synopsys Multiphysics-Fusion · Agent4Chip@ICLR 2026 开幕倒计时）</div>
   <div class="news-grid">
@@ -2106,7 +1777,8 @@
 <section id="timeline">
   <div class="section-title"><span class="icon">📅</span> 重大事件时间线 <span class="line"></span></div>
   <div class="timeline">
-  <div class="tl-item"><div class="tl-date">2026-04-09（今日）</div><h4>🔥 2篇新论文 + DAC 2026 程序4月17日公布 + Synopsys Multiphysics-Fusion™ + Agent4Chip@ICLR 2026 倒计时（4月23日）</h4><p>今日新增 2 篇论文：<strong>Arch</strong>（arXiv:2604.05983，AI原生硬件描述语言，LL(1)文法+编译期CDC/RDC捕获+Sky130验证，专为LLM代码生成设计）；<strong>CoverAssert</strong>（arXiv:2604.06607，华为等，覆盖率驱动迭代LLM SVA断言生成，分支覆盖+9.57%/翻转覆盖+15.69%）。⚠️ 行业：DAC 2026官网披露投稿增长26.34%，55%内容覆盖AI&amp;Design，程序4月17日发布；Synopsys Multiphysics-Fusion™（EDA×Ansys多物理场融合）首个里程碑版本正式发布；Agent4Chip Workshop @ ICLR 2026（4月23-27日，里约）23篇论文即将亮相。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-10（今日）</div><h4>🔥 4篇新论文 + Cognichip $6000万融资（Intel CEO跟投）+ IBM Agent Factory HLS 8.27× + ICCAD截止倒计时4天</h4><p>今日新增 4 篇论文：<strong>RL-ASIC（2604.07526）</strong>——RL驱动编译器联合优化ASIC架构/内存/工作负载，7节点自动适配，Llama 3.1 8B 在3nm达29,809 tok/s；<strong>ChatSVA（2604.02811，DAC 2026）</strong>——多智能体SVA生成，功能通过率96.12%，覆盖率提升11×新SOTA；<strong>LLM模拟电路自校准（2604.07387）</strong>——解析设计方程+单次仿真校准，100%成功；<strong>ATLAS（2604.08044）</strong>——首个硅验证3D-DRAM LLM加速器全栈仿真框架，误差≤8.57%，计划开源。⚠️ 行业重磅：Cognichip完成$6000万融资（Intel CEO Lip-Bu Tan跟投加入董事会，累计$9300万）；IBM Agent Factory HLS论文公开（通用Agent平均加速8.27×）；ICCAD 2026完整论文截止仅剩4天（4月14日）。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-09（昨日）</div><h4>🔥 2篇新论文 + DAC 2026 程序4月17日公布 + Synopsys Multiphysics-Fusion™ + Agent4Chip@ICLR 2026 倒计时（4月23日）</h4><p>今日新增 2 篇论文：<strong>Arch</strong>（arXiv:2604.05983，AI原生硬件描述语言，LL(1)文法+编译期CDC/RDC捕获+Sky130验证，专为LLM代码生成设计）；<strong>CoverAssert</strong>（arXiv:2604.06607，华为等，覆盖率驱动迭代LLM SVA断言生成，分支覆盖+9.57%/翻转覆盖+15.69%）。⚠️ 行业：DAC 2026官网披露投稿增长26.34%，55%内容覆盖AI&amp;Design，程序4月17日发布；Synopsys Multiphysics-Fusion™（EDA×Ansys多物理场融合）首个里程碑版本正式发布；Agent4Chip Workshop @ ICLR 2026（4月23-27日，里约）23篇论文即将亮相。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-08</div><h4>🔥 2篇新论文 + Siemens×NVIDIA万亿周期验证突破 + IIC Shanghai 2026 EDA/AI峰会 + ICCAD 2026 CAD Contest三题公布</h4><p>今日新增 2 篇论文：<strong>EEspice</strong>（arXiv:2604.03079，面向AI优化闭环的模块化并行电路仿真平台，图着色无锁并行加速最高45×，开源）；<strong>InCoder-32B-Thinking</strong>（arXiv:2604.03144，工业代码世界模型，ECoT错误驱动推理链+ICWM Verilog因果动态，CAD-Coder 84.0%）。⚠️ 行业重磅：Siemens×NVIDIA Veloce proFPGA CS推出（万亿级硅前验证周期，GPU加速验证关键里程碑）；IIC Shanghai 2026 EDA/AI峰会举行（Cadence ChipStack AI SuperAgent重磅展示）；ICCAD 2026 CAD Contest三题公布（LLM Netlist探索/回归失败分桶/SoC Floorplanning，注册5月8日截止）。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-07</div><h4>🔥 4篇新论文 + ICCAD 2026 摘要截止日 + Ricursive Intelligence $40亿融资赞助ICCAD</h4><p>今日（ICCAD 2026 摘要截止日）新增 4 篇论文：<strong>FVRuleLearner</strong>（UIUC+NVIDIA，OP-Tree规则学习，SVA功能正确性+31.17%，Agent4Chip 2026）；<strong>Computer Architecture's AlphaZero Moment</strong>（Wisconsin，体系结构研究范式转变宣言）；<strong>DeepStack</strong>（微软亚研+帝国理工，3D堆叠加速器DSE快10万倍）；<strong>3D IC热分析综述</strong>（Tennessee，物理信息ML热建模框架）。⚠️ 行业重磅：Ricursive Intelligence $3.35亿融资、$40亿估值，成ICCAD 2026核心赞助商。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-04</div><h4>今日更新：2 篇新论文（FormalRTL 形式化 RTL 合成 / ACE-RTL NVIDIA Agentic 上下文演化）+ 三大开源/行业动态</h4><p>FormalRTL（CUHK，arXiv:2603.08738）将软件参考模型作为可执行规约引导多智能体 RTL 合成+形式等价验证，解决工业级数据通路密集任务的规范模糊问题，框架将开源；ACE-RTL（NVIDIA，arXiv:2602.10218）首次实现 RTL 专用 LLM + 推理 LLM 的 Agentic 融合，CVDP 基准通过率提升 41.02%。开源：RTL-CLAW（同济+CUHK，AI智能体驱动EDA工具链）正式上线；Macro Placement Challenge 2026（$49,000 奖金赛）开放参赛。国内：合见工软 UDA 2.0（国内首款 Agentic AI EDA 平台）发布。EDA三巨头 Agentic 竞争格局深度文章发布。</p></div>
@@ -2143,15 +1815,15 @@
 <section id="tracking">
   <div class="section-title"><span class="icon">📌</span> 待追踪事项 <span class="line"></span></div>
   <ul class="todo-list">
-    <li><strong>🔥 ICCAD 2026 完整论文截止倒计时（4月14日，还剩5天）</strong>：本周将迎来 AI for EDA 预印本密集爆发期，重点关注：时序分析智能收敛、多智能体 Agentic EDA、布局布线 GNN/RL 方向。录用通知 7月11日，会议 Nov 8-12（San Jose）。</li>
-    <li><strong>🆕 DAC 2026 程序将于4月17日正式公布</strong>：投稿增长26.34%，55%内容聚焦AI&amp;Design。重点关注 AI for EDA 专场（LLM+RTL、多智能体验证、物理设计AI）入选情况；ChipAgents.ai 将发表 TechTalk，跟进具体内容。</li>
-    <li><strong>🆕 Agent4Chip Workshop @ ICLR 2026（4月23-27，里约）倒计时14天</strong>：关注 23 篇接收论文现场展示：ASPEN（LLM+E-Graph RTL优化）、PRO-V-R1（推理增强RTL验证）、GACO（图增强HLS代码优化）、HeaRT（模拟电路分层推理树）。</li>
-    <li><strong>🆕 Arch HDL 开源与社区跟进</strong>（arXiv:2604.05983）：AI 原生 HDL 首次发布，关注编译器代码仓库开放、Sky130 以外工艺节点支持、LLM 基准测试集成（VerilogEval / RTLLM 上的对比实验）。</li>
-    <li><strong>🆕 CoverAssert 框架代码发布</strong>（arXiv:2604.06607，华为）：关注与 AssertLLM/Spec2Assertion 的集成代码是否开源，以及在更大规模设计（商业 SoC）上的实验验证。</li>
-    <li><strong>🆕 Synopsys Multiphysics-Fusion™ 落地案例</strong>：Converge 2026 大会已发布第一个里程碑版本，关注首批合作客户（Ansys Enterprise 用户群）在 3D-IC/Chiplet 热分析方向的 PPA 提升数据。</li>
-    <li><strong>🆕 ICCAD 2026 CAD Contest 注册截止（5月8日）</strong>：三题已公布，关注参赛团队和 alpha 阶段（6月12日）进展。</li>
-    <li><strong>EEspice 开源跟进</strong>（arXiv:2604.03079）：关注代码仓库更新和与 AI/LLM 优化框架的集成案例。</li>
-    <li><strong>DeepStack 工具开源跟进</strong>（arXiv:2604.04750，微软亚研院）：论文承诺开源，关注 GitHub 仓库发布。</li>
+    <li><strong>🔥 ICCAD 2026 完整论文截止倒计时（4月14日，还剩4天）</strong>：本周将迎来 AI for EDA 预印本密集爆发期，重点关注：时序分析智能收敛、多智能体 Agentic EDA、布局布线 GNN/RL 方向。录用通知 7月11日，会议 Nov 8-12（San Jose）。</li>
+    <li><strong>🔥 DAC 2026 程序将于4月17日正式公布</strong>（还剩7天）：投稿增长26.34%，55%内容聚焦AI&amp;Design，721篇接收论文。主题演讲含NVIDIA Timothy Costa、ChipAgents William Wang，关注 AI for EDA 专场具体议程。</li>
+    <li><strong>🆕 Cognichip 后续进展</strong>：完成 $6000 万融资，关注首款可展示"完全由AI系统设计"的芯片发布时间表，以及与英特尔可能的技术合作。</li>
+    <li><strong>🆕 ChatSVA（DAC 2026）开源计划</strong>（arXiv:2604.02811）：AgentBridge 数据平台是否开放，以及在更大规模工业 SoC 上的验证结果。</li>
+    <li><strong>🆕 RL-ASIC 架构探索代码发布</strong>（arXiv:2604.07526）：SAC+MoE 编译器代码是否开源，以及在更多工艺节点（如 Intel 18A、TSMC N3）上的验证。</li>
+    <li><strong>🆕 ATLAS 开源发布</strong>（arXiv:2604.08044）：论文承诺开源，关注 GitHub 仓库上线时间，以及与 DeepStack 工具的对比和互补关系。</li>
+    <li><strong>Agent4Chip Workshop @ ICLR 2026（4月23-27，里约）倒计时13天</strong>：关注 23 篇接收论文现场展示：ASPEN、PRO-V-R1、GACO、HeaRT（模拟电路分层推理树）、VeriTrace。</li>
+    <li><strong>Arch HDL 开源跟进</strong>（arXiv:2604.05983）：AI 原生 HDL 编译器代码仓库开放进度、VerilogEval/RTLLM 基准集成实验。</li>
+    <li><strong>ICCAD 2026 CAD Contest 注册截止（5月8日）</strong>：三题参赛团队和 alpha 阶段（6月12日）进展。</li>
     <li>NVIDIA EDA Research：<a href="https://research.nvidia.com/labs/electronic-design-automation/" target="_blank" style="color:var(--accent2);">research.nvidia.com/labs/electronic-design-automation</a></li>
   </ul>
 </section>
@@ -2160,7 +1832,7 @@
 
 <footer>
   <p>数据来源：arXiv.org · ispd.cc · siemens.com · cadence.com · synopsys.com · semi.org.cn · semiconductor-digest.com · chipagents.ai · paper.cnstock.com · semi-insights.com · nvidia.com · blogs.nvidia.com</p>
-  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-04-09</p>
+  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-04-10</p>
 </footer>
 
 <script>
