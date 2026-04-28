@@ -185,12 +185,12 @@
 <header>
   <h1>🔬 AI for EDA 论文与资讯索引</h1>
   <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-04-24 · 涵盖 2026-03-15 → 2026-04-24</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-04-28 · 涵盖 2026-03-15 → 2026-04-28</p>
   <div class="stats">
-    <div class="stat"><div class="num">103</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">39</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">108+</div><div class="label">行业动态</div></div>
-    <div class="stat"><div class="num" style="color:var(--accent3);">1</div><div class="label">今日新增</div></div>
+    <div class="stat"><div class="num">107</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">40</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">110+</div><div class="label">行业动态</div></div>
+    <div class="stat"><div class="num" style="color:var(--accent3);">4</div><div class="label">今日新增</div></div>
   </div>
 </header>
 
@@ -203,6 +203,118 @@
 </nav>
 
 <div class="container">
+
+<!-- ══════════════ 2026-04-28 最新更新 ══════════════ -->
+<section id="latest-0428">
+  <div class="section-title"><span class="icon">🔥</span> 2026-04-28（周二）最新更新 <span class="badge-hot">4篇新论文</span> <span class="line"></span></div>
+
+  <!-- ── 重点推荐 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>⭐ 今日重点论文（4篇精选）</h3>
+      <span class="badge-count">精选</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.23658 · DAC 2026 · cs.AR / cs.AI / cs.LG · 2026-04-26</div>
+        <h3 class="abs-title">FlowPlace: Flow Matching for Chip Placement</h3>
+        <p class="abs-authors">Peng Xie, Ke Xue, Yunqi Shi, Ruo-Tong Chen, Chengrui Gao, Siyuan Xu, Chenjian Ding, Mingxuan Yuan, Chao Qian</p>
+        <p class="abs-abstract">将<strong>流匹配（Flow Matching）</strong>生成模型引入芯片布局。针对现有扩散模型的三大痛点——合成数据预训练局限、采样慢、模块重叠——提出：(1) 掩码引导合成数据生成；(2) 灵活先验注入的流式高效训练；(3) 硬约束采样保证零重叠布局。在 <strong>OpenROAD</strong> 和 ICCAD 2015 基准上，PPA 优于 SOTA，采样效率提升 <strong>10-50×</strong>，且无模块重叠。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.23658" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-04-28/FlowPlace_2604.23658v1.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">Flow Matching + Placement</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">DAC 2026 ★</span>
+        </div>
+      </div>
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.23602 · cs.AR / cs.LG · 2026-04-26</div>
+        <h3 class="abs-title">TimingLLM: A Two-Stage Retrieval-Augmented Framework for Pre-Synthesis Timing Prediction from Verilog</h3>
+        <p class="abs-authors">Armin Abdollahi, Negin Ashrafi, Mehdi Kamal, Massoud Pedram</p>
+        <p class="abs-abstract">提出 <strong>TimingLLM</strong>，两阶段 RAG-LLM 流水线，直接从 Verilog 代码预测综合后时序指标（WNS/TNS），无需运行 EDA 工具。Stage-1 微调 LLM 生成路径级时序特征；Stage-2 LLM 回归器结合 k-NN 检索库的对角引导向量预测 WNS/TNS。VerilogEval 上 WNS R²=<strong>0.91</strong>，TNS R²=0.97，速度比现有方法快 <strong>1.3-1.6×</strong>。同时发布 6 万模块 Verilog+综合报告数据集。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.23602" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-04-28/TimingLLM_2604.23602v1.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">RAG + 时序预测</span>
+          <span style="color:var(--accent4);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent4);border-radius:8px;">VerilogEval</span>
+        </div>
+      </div>
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.23100 · cs.CR / cs.AR / cs.LO · 2026-04-25</div>
+        <h3 class="abs-title">From Language to Logic: Bridging LLMs &amp; Formal Representations for RTL Assertion Generation</h3>
+        <p class="abs-authors">Nowfel Mashnoor, Hadi Kamali, Kimia Azar</p>
+        <p class="abs-abstract">提出 <strong>ProofLoop</strong>，工具增强 ReAct 智能体，采用 solver-in-the-loop 方式从自然语言规范生成 SystemVerilog Assertions（SVA）。两阶段：Stage-A 通过 AST 向量库语义搜索 + JasperGold 结构查询自主收集设计上下文；Stage-B 生成 SVA 并用 JasperGold 形式证明反馈迭代优化（最多 3 轮）。FVEval Design2SVA 基准上语法正确率 <strong>93.7%</strong>、功能正确率 <strong>82.0%</strong>。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.23100" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-04-28/ProofLoop_RTL_Assert_2604.23100v1.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">SVA 生成 + 形式验证</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">JasperGold RAG</span>
+        </div>
+      </div>
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.24649 · cs.AR · 2026-04-28</div>
+        <h3 class="abs-title">Déjà Vu Packing: Optimizing FPGA Logic Clustering Runtime via Pattern Memoization</h3>
+        <p class="abs-authors">Milo Liebster, Amin Mohaghegh, Andrew Boutros</p>
+        <p class="abs-abstract">FPGA 物理综合中 Logic Clustering（Logic Packing）是运行时主要瓶颈之一。本文提出<strong>模式记忆化（Pattern Memoization）</strong>方法，通过识别已处理的相同 LUT 聚类模式，跳过重复计算，显著缩短打包阶段运行时间，同时保持等价的布局质量。面向 VPR/VTR 框架的 FPGA 综合加速，具备工程落地价值。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.24649" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-04-28/DejaVuPacking_FPGA_2604.24649v1.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">FPGA + Logic Packing</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── 论文表格 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>📋 今日论文列表（2026-04-28 · 4篇）</h3>
+      <span class="badge-count">4</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>arXiv ID</th><th>标题</th><th>方向</th><th>来源/会议</th><th>链接</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><code>2604.23658</code></td>
+            <td>FlowPlace: Flow Matching for Chip Placement</td>
+            <td>物理设计 / Placement</td>
+            <td>DAC 2026</td>
+            <td><a href="https://arxiv.org/abs/2604.23658" target="_blank">arXiv</a> / <a href="2026-04-28/FlowPlace_2604.23658v1.pdf">PDF</a></td>
+          </tr>
+          <tr>
+            <td><code>2604.23602</code></td>
+            <td>TimingLLM: Pre-Synthesis Timing Prediction from Verilog</td>
+            <td>前端 RTL / 时序</td>
+            <td>arXiv cs.AR</td>
+            <td><a href="https://arxiv.org/abs/2604.23602" target="_blank">arXiv</a> / <a href="2026-04-28/TimingLLM_2604.23602v1.pdf">PDF</a></td>
+          </tr>
+          <tr>
+            <td><code>2604.23100</code></td>
+            <td>ProofLoop: LLMs &amp; Formal Representations for RTL Assertion Generation</td>
+            <td>RTL 验证 / 形式验证</td>
+            <td>arXiv cs.CR/cs.AR</td>
+            <td><a href="https://arxiv.org/abs/2604.23100" target="_blank">arXiv</a> / <a href="2026-04-28/ProofLoop_RTL_Assert_2604.23100v1.pdf">PDF</a></td>
+          </tr>
+          <tr>
+            <td><code>2604.24649</code></td>
+            <td>Déjà Vu Packing: FPGA Logic Clustering via Pattern Memoization</td>
+            <td>FPGA 综合</td>
+            <td>arXiv cs.AR</td>
+            <td><a href="https://arxiv.org/abs/2604.24649" target="_blank">arXiv</a> / <a href="2026-04-28/DejaVuPacking_FPGA_2604.24649v1.pdf">PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
 <!-- ══════════════ 2026-04-27 最新更新 ══════════════ -->
 <section id="latest-0427">
@@ -2435,6 +2547,24 @@
 <section id="news">
   <div class="section-title"><span class="icon">🌍</span> 行业动态 <span class="line"></span></div>
 
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-28 · 周二 · 4篇新论文 · Cadence 上调全年营收预期 · Cadence Q1 2026 业绩超预期 · MLCAD Alpha 倒计时 2 天）</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Reuters / The Star · 2026-04-28（今日）</div>
+      <h4>💰 Cadence 上调全年营收预期至 $6.13-6.23B，Q1 业绩双超预期</h4>
+      <p>Cadence Design Systems 于 4月28日发布 Q1 2026 业绩并上调全年指引：<strong>全年营收预期由 $5.9-6.0B 上调至 $6.13-6.23B</strong>（+约 3.9亿美元），理由是 AI 芯片设计需求持续高涨，Google、Amazon、NVIDIA 等客户加速复杂 SoC 与 AI 加速器设计。Q1 营收 <strong>$1.47B</strong>（超预期 $1.45B），调整后 EPS $1.96（超预期 $1.90）。盘后股价上涨 >1%。注：因 Hexagon AB 工程业务 €2.7B 收购，调整后 EPS 全年指引小幅下调。Cadence 今年已推出早期芯片设计 AI Agent，并与 NVIDIA 合作推进机器人物理引擎+AI 训练集成。</p>
+      <a href="https://www.thestar.com.my/tech/tech-news/2026/04/28/cadence-lifts-annual-revenue-forecast-on-sustained-ai-chip-design-boom" target="_blank">→ Reuters / The Star 报道</a>
+    </div>
+
+    <div class="news-card">
+      <div class="src"><span class="dot"></span>Synopsys News / PRNewswire · 2026-04-22</div>
+      <h4>🤝 Synopsys × TSMC：A14/A16/N2/N3 AI EDA 全面深化，agentic run assistance 上线</h4>
+      <p>Synopsys 与 TSMC 宣布覆盖最先进制程的全面合作：<strong>Fusion Compiler</strong> 在 A14 节点上线 <strong>Agentic Run Assistance</strong>（NanoFlex Pro 架构）；<strong>3DIC Compiler</strong> 支持 CoWoS 5.5× 光罩尺寸中介层，生产力提升 5.5×；<strong>首款低功耗 M-PHY v6.0 IP</strong> 在 N2P 硅验证；224G/PCIe 7.0/HBM4/DDR5 MRDIMM Gen2 等接口 IP 里程碑全面推进；多物理场设计覆盖 COUPE 共封装光学（光子+电气+热）。</p>
+      <a href="https://news.synopsys.com/2026-04-22-Synopsys-Partners-with-TSMC-to-Power-Next-Generation-AI-Systems-with-Silicon-Proven-IP-and-Certified-EDA-Flows" target="_blank">→ Synopsys 官方公告</a>
+    </div>
+
+  </div>
+
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-23 · 周四 · 2篇新论文 · Agent4Chip @ ICLR 2026 今日开幕 🎉 · Synopsys/Cadence × TSMC 双重公告 · MLCAD Alpha 倒计时 7 天）</div>
   <div class="news-grid">
     <div class="news-card">
@@ -3183,6 +3313,7 @@
 <section id="timeline">
   <div class="section-title"><span class="icon">📅</span> 重大事件时间线 <span class="line"></span></div>
   <div class="timeline">
+  <div class="tl-item"><div class="tl-date">2026-04-28（今日）</div><h4>🔥 4篇新论文（FlowPlace DAC2026 流匹配布局 · TimingLLM RAG时序预测 · ProofLoop SVA形式验证 · FPGA模式记忆化）+ Cadence Q1超预期上调全年营收至$6.13-6.23B</h4><p>今日 arXiv cs.AR 收录 4 篇核心 AI for EDA 论文：<strong>FlowPlace（2604.23658，DAC 2026）★</strong>——流匹配生成模型用于芯片布局，掩码引导合成数据+硬约束零重叠采样，OpenROAD/ICCAD 2015 基准上采样效率提升 10-50×；<strong>TimingLLM（2604.23602）★</strong>——两阶段 RAG-LLM 从 Verilog 预测综合后 WNS/TNS，R²=0.91/0.97，速度 1.3-1.6× 提升，同步发布 6 万模块 Verilog 数据集；<strong>ProofLoop（2604.23100）</strong>——solver-in-the-loop LLM Agent，SVA 自动生成+JasperGold 形式验证反馈，语法 93.7%/功能 82.0%；<strong>Déjà Vu Packing（2604.24649）</strong>——FPGA Logic Clustering 模式记忆化加速，VPR 框架适用。💰 行业重磅：<strong>Cadence 上调 2026 全年营收预期至 $6.13-6.23B</strong>（原 $5.9-6.0B），Q1 营收 $1.47B 超预期，AI 芯片设计需求旺盛驱动；⚠️ MLCAD 2026 Alpha 阶段倒计时 <strong>2 天</strong>（4月30日截止）。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-23（今日）</div><h4>🎉 Agent4Chip @ ICLR 2026 今日开幕（里约 Riocentro）+ Synopsys × TSMC + Cadence × TSMC 双重 AI EDA 战略公告 + 2篇新论文（ChipCraftBrain · StructuralVerif）</h4><p>🎉 <strong>Agent4Chip Workshop @ ICLR 2026 今日正式开幕</strong>（里约热内卢 Riocentro，ICLR 2026 主会 23-27日），Google DeepMind VP Parthasarathy Ranganathan 主旨演讲「Centaurs in the Cloud」；23篇接收论文现场展示，包括 PRO-V-R1、ASPEN、GACO、HeaRT、ACE-RTL、EDAForge 等 Agentic EDA 年度最强成果。💥 行业双重重磅：<strong>Synopsys × TSMC</strong>（4月22日）宣布覆盖 N3/N2/A16/A14 的 silicon-proven IP + AI EDA 流程合作；<strong>Cadence × TSMC</strong>（4月22日）发布 Agentic AI 目标驱动执行合作，3D-IC 设计自动化提速 tapeout。两大 EDA 巨头同日宣布与 TSMC 扩大 AI 设计赋能合作，EDA × 代工厂 AI 时代战略绑定全面加速。📄 今日新论文：<strong>ChipCraftBrain（2604.19856）★</strong>——验证优先多智能体 RTL 生成，混合符号-神经推理，首次系统在 NVIDIA CVDP 工业基准上评测；<strong>StructuralVerif（2604.18834）</strong>——无工具循环调试的 EDA 代码结构化验证，提升 LLM 驱动 EDA 流程长期可靠性。⚠️ MLCAD 2026 Alpha 阶段倒计时 <strong>7 天</strong>（4月30日截止）。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-22</div><h4>🔥 6篇新论文（VerilogCL对比学习 · Clover RTL修复 · ConfigOverSelection · NL2Silicon · EquivFusion · AgenticHWVerif）+ Agent4Chip Workshop 明日开幕 + Cadence "ChatGPT时刻"持续升温</h4><p>今日 arXiv cs.AR 收录 6 篇核心 AI for EDA 新论文，涵盖 RTL 生成与验证全链路：<strong>VerilogCL（2604.18162）★</strong>——首个对比学习 Verilog 表征框架，语法等价负例挖掘 + 多任务对比预训练，VerilogEval-Human 精度 +8.3pp；<strong>Clover（2604.17288）★</strong>——中科院/清华联合，神经符号 RTL 修复，形式验证制导迭代修复，pass@1 +11.8pp；<strong>ConfigOverSelection（2604.17102）</strong>——配置空间优于架构选择的形式化证明，重新定向 LLM for HLS 的研究路径；<strong>NL2Silicon（2604.17097）</strong>——自然语言到 RTL 表征瓶颈分析，诊断现有 LLM 在精确 RTL 语义上的系统性局限；<strong>EquivFusion（2604.16571）</strong>——MLIR 硬件等价性检查框架，形式验证效率 10×以上加速；<strong>AgenticHWVerif（2604.15657）</strong>——Token 分配分析揭示 Agentic 硬件验证的计算瓶颈，指导推理预算优化。💡 行业：Cadence 与 EDA 分析师持续深度探讨"ChatGPT时刻"；MLCAD 2026 Alpha 阶段倒计时 <strong>8 天</strong>。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-21</div><h4>🆕 1篇新论文（COEVO协同进化RTL生成）+ Needham 上调 Cadence 目标价至 $400（"ChatGPT时刻"）+ Agent4Chip 倒计时 2 天</h4><p>今日 arXiv 收录 1 篇核心 AI for EDA 论文：<strong>COEVO（arXiv:2604.15001）</strong>——协同进化框架联合优化 RTL 功能正确性与 PPA，双目标进化 + LLM 代码变异 + EDA 工具（Yosys/OpenROAD）真实反馈，部分设计综合面积减少 15-30%，功能通过率持平或超越现有 SOTA，是首个打通"功能正确→硅后优质"全链路的 RTL 生成工作。💰 行业重磅：Needham 将 Cadence 目标价从 $330 上调至 $400（+21%），将此轮 AI EDA 浪潮定性为行业"ChatGPT 时刻"；Cadence 股价+2%+。⚠️ Agent4Chip Workshop @ ICLR 2026 后天（4月23日）开幕，倒计时 2 天；MLCAD 2026 Alpha 阶段倒计时 9 天（4月30日）。</p></div>
