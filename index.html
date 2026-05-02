@@ -187,10 +187,10 @@
   <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
   <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-04-29 · 涵盖 2026-03-15 → 2026-04-29</p>
   <div class="stats">
-    <div class="stat"><div class="num">109</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">110</div><div class="label">论文收录</div></div>
     <div class="stat"><div class="num">41</div><div class="label">更新批次</div></div>
     <div class="stat"><div class="num">113+</div><div class="label">行业动态</div></div>
-    <div class="stat"><div class="num" style="color:var(--accent3);">2</div><div class="label">今日新增</div></div>
+    <div class="stat"><div class="num" style="color:var(--accent3);">3</div><div class="label">今日新增</div></div>
   </div>
 </header>
 
@@ -206,12 +206,12 @@
 
 <!-- ══════════════ 2026-04-29 最新更新 ══════════════ -->
 <section id="latest-0429">
-  <div class="section-title"><span class="icon">🔥</span> 2026-04-29（周三）最新更新 <span class="badge-hot">2篇新论文</span> <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔥</span> 2026-04-29（周三）最新更新 <span class="badge-hot">3篇新论文</span> <span class="line"></span></div>
 
   <!-- ── 重点推荐 ── -->
   <div class="date-group">
     <div class="date-header" onclick="toggleDate(this)">
-      <h3>⭐ 今日重点论文（2篇精选）</h3>
+      <h3>⭐ 今日重点论文（3篇精选）</h3>
       <span class="badge-count">精选</span>
       <span class="toggle">▼</span>
     </div>
@@ -257,6 +257,25 @@
           <span class="tag">Prefetching</span>
         </div>
       </div>
+
+        <div class="abs-card">
+          <div class="abs-meta">arXiv:2604.23355 · cs.AR / cs.SE · 2026-04-23</div>
+          <h3 class="abs-title">LEGO: Learning to Generate Verilog with LLM Skill Libraries</h3>
+          <p class="abs-authors">Yuxiang Wei, Wenqian Pei, Zhengrui Zhang, Guoyu Wang, Yu Huang, Bei Yu</p>
+          <p class="abs-body">提出 <strong>LEGO</strong>，通过构建 LLM 技能库实现高质量 Verilog 代码生成。核心创新：(1) 将复杂电路设计分解为可复用的基础技能模块；(2) LLM 从技能库中检索和组合适当技能来生成目标 RTL；(3) 技能库持续积累和演化。在多个基准上显著优于直接生成方法。</p>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.23355" target="_blank">arXiv</a>
+            <a class="local" href="2026-04-29/LEGO_LLMSkill_RTL_2604.23355v1.pdf">本地PDF</a>
+            <span style="color:var(--accent4);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent4);border-radius:8px;">LLM + Skill Library</span>
+          </div>
+          <div class="tags">
+            <span class="tag">LLM</span>
+            <span class="tag">Skill Library</span>
+            <span class="tag">Verilog Generation</span>
+            <span class="tag">Modular Design</span>
+          </div>
+        </div>
+
 
     </div>
   </div>
@@ -344,7 +363,7 @@
   <!-- ── 重大事件时间线 ── -->
   <div class="date-group">
     <div class="date-header" onclick="toggleDate(this)">
-      <h3>📅 重大事件时间线（本周）</h3>
+      <h3>📅 重大事件时间线</h3>
       <span class="badge-count">更新</span>
       <span class="toggle">▼</span>
     </div>
@@ -352,8 +371,8 @@
       <div class="timeline">
         <div class="tl-item">
           <div class="tl-date">2026-04-29</div>
-          <h4>RL Expert-level Placement (DAC 2026) + Agentic Architect 开源框架发布</h4>
-          <p>arXiv 两篇今日论文：RL 奖励模型逆向学习实现专家级布局；首个端到端 Agentic AI 微架构探索框架开源。</p>
+          <h4>RL Expert-level Placement (DAC 2026) + Agentic Architect 开源框架 + LEGO LLM 技能库 RTL 生成</h4>
+          <p>arXiv 三篇今日论文：RL 奖励模型逆向学习实现专家级布局；首个端到端 Agentic AI 微架构探索框架开源；LEGO 通过技能库模块化 Verilog 生成。</p>
         </div>
         <div class="tl-item">
           <div class="tl-date">2026-04-28</div>
@@ -393,7 +412,7 @@
         <div class="abs-meta">arXiv:2604.23658 · DAC 2026 · cs.AR / cs.AI / cs.LG · 2026-04-26</div>
         <h3 class="abs-title">FlowPlace: Flow Matching for Chip Placement</h3>
         <p class="abs-authors">Peng Xie, Ke Xue, Yunqi Shi, Ruo-Tong Chen, Chengrui Gao, Siyuan Xu, Chenjian Ding, Mingxuan Yuan, Chao Qian</p>
-        <p class="abs-abstract">将<strong>流匹配（Flow Matching）</strong>生成模型引入芯片布局。针对现有扩散模型的三大痛点——合成数据预训练局限、采样慢、模块重叠——提出：(1) 掩码引导合成数据生成；(2) 灵活先验注入的流式高效训练；(3) 硬约束采样保证零重叠布局。在 <strong>OpenROAD</strong> 和 ICCAD 2015 基准上，PPA 优于 SOTA，采样效率提升 <strong>10-50×</strong>，且无模块重叠。</p>
+        <p class="abs-body">将<strong>流匹配（Flow Matching）</strong>生成模型引入芯片布局。针对现有扩散模型的三大痛点——合成数据预训练局限、采样慢、模块重叠——提出：(1) 掩码引导合成数据生成；(2) 灵活先验注入的流式高效训练；(3) 硬约束采样保证零重叠布局。在 <strong>OpenROAD</strong> 和 ICCAD 2015 基准上，PPA 优于 SOTA，采样效率提升 <strong>10-50×</strong>，且无模块重叠。</p>
         <div class="abs-links">
           <a href="https://arxiv.org/abs/2604.23658" target="_blank">📄 arXiv</a>
           <a class="local" href="2026-04-28/FlowPlace_2604.23658v1.pdf">📥 本地PDF</a>
@@ -406,7 +425,7 @@
         <div class="abs-meta">arXiv:2604.23602 · cs.AR / cs.LG · 2026-04-26</div>
         <h3 class="abs-title">TimingLLM: A Two-Stage Retrieval-Augmented Framework for Pre-Synthesis Timing Prediction from Verilog</h3>
         <p class="abs-authors">Armin Abdollahi, Negin Ashrafi, Mehdi Kamal, Massoud Pedram</p>
-        <p class="abs-abstract">提出 <strong>TimingLLM</strong>，两阶段 RAG-LLM 流水线，直接从 Verilog 代码预测综合后时序指标（WNS/TNS），无需运行 EDA 工具。Stage-1 微调 LLM 生成路径级时序特征；Stage-2 LLM 回归器结合 k-NN 检索库的对角引导向量预测 WNS/TNS。VerilogEval 上 WNS R²=<strong>0.91</strong>，TNS R²=0.97，速度比现有方法快 <strong>1.3-1.6×</strong>。同时发布 6 万模块 Verilog+综合报告数据集。</p>
+        <p class="abs-body">提出 <strong>TimingLLM</strong>，两阶段 RAG-LLM 流水线，直接从 Verilog 代码预测综合后时序指标（WNS/TNS），无需运行 EDA 工具。Stage-1 微调 LLM 生成路径级时序特征；Stage-2 LLM 回归器结合 k-NN 检索库的对角引导向量预测 WNS/TNS。VerilogEval 上 WNS R²=<strong>0.91</strong>，TNS R²=0.97，速度比现有方法快 <strong>1.3-1.6×</strong>。同时发布 6 万模块 Verilog+综合报告数据集。</p>
         <div class="abs-links">
           <a href="https://arxiv.org/abs/2604.23602" target="_blank">📄 arXiv</a>
           <a class="local" href="2026-04-28/TimingLLM_2604.23602v1.pdf">📥 本地PDF</a>
@@ -419,7 +438,7 @@
         <div class="abs-meta">arXiv:2604.23100 · cs.CR / cs.AR / cs.LO · 2026-04-25</div>
         <h3 class="abs-title">From Language to Logic: Bridging LLMs &amp; Formal Representations for RTL Assertion Generation</h3>
         <p class="abs-authors">Nowfel Mashnoor, Hadi Kamali, Kimia Azar</p>
-        <p class="abs-abstract">提出 <strong>ProofLoop</strong>，工具增强 ReAct 智能体，采用 solver-in-the-loop 方式从自然语言规范生成 SystemVerilog Assertions（SVA）。两阶段：Stage-A 通过 AST 向量库语义搜索 + JasperGold 结构查询自主收集设计上下文；Stage-B 生成 SVA 并用 JasperGold 形式证明反馈迭代优化（最多 3 轮）。FVEval Design2SVA 基准上语法正确率 <strong>93.7%</strong>、功能正确率 <strong>82.0%</strong>。</p>
+        <p class="abs-body">提出 <strong>ProofLoop</strong>，工具增强 ReAct 智能体，采用 solver-in-the-loop 方式从自然语言规范生成 SystemVerilog Assertions（SVA）。两阶段：Stage-A 通过 AST 向量库语义搜索 + JasperGold 结构查询自主收集设计上下文；Stage-B 生成 SVA 并用 JasperGold 形式证明反馈迭代优化（最多 3 轮）。FVEval Design2SVA 基准上语法正确率 <strong>93.7%</strong>、功能正确率 <strong>82.0%</strong>。</p>
         <div class="abs-links">
           <a href="https://arxiv.org/abs/2604.23100" target="_blank">📄 arXiv</a>
           <a class="local" href="2026-04-28/ProofLoop_RTL_Assert_2604.23100v1.pdf">📥 本地PDF</a>
@@ -432,7 +451,7 @@
         <div class="abs-meta">arXiv:2604.24649 · cs.AR · 2026-04-28</div>
         <h3 class="abs-title">Déjà Vu Packing: Optimizing FPGA Logic Clustering Runtime via Pattern Memoization</h3>
         <p class="abs-authors">Milo Liebster, Amin Mohaghegh, Andrew Boutros</p>
-        <p class="abs-abstract">FPGA 物理综合中 Logic Clustering（Logic Packing）是运行时主要瓶颈之一。本文提出<strong>模式记忆化（Pattern Memoization）</strong>方法，通过识别已处理的相同 LUT 聚类模式，跳过重复计算，显著缩短打包阶段运行时间，同时保持等价的布局质量。面向 VPR/VTR 框架的 FPGA 综合加速，具备工程落地价值。</p>
+        <p class="abs-body">FPGA 物理综合中 Logic Clustering（Logic Packing）是运行时主要瓶颈之一。本文提出<strong>模式记忆化（Pattern Memoization）</strong>方法，通过识别已处理的相同 LUT 聚类模式，跳过重复计算，显著缩短打包阶段运行时间，同时保持等价的布局质量。面向 VPR/VTR 框架的 FPGA 综合加速，具备工程落地价值。</p>
         <div class="abs-links">
           <a href="https://arxiv.org/abs/2604.24649" target="_blank">📄 arXiv</a>
           <a class="local" href="2026-04-28/DejaVuPacking_FPGA_2604.24649v1.pdf">📥 本地PDF</a>
@@ -704,15 +723,15 @@
 <section id="overview">
   <div class="section-title"><span class="icon">📋</span> 核心趋势综述 <span class="line"></span></div>
   <div class="summary-box">
-    <h3>🔑 当前最重要的七大趋势（截至 2026-04-23）</h3>
+    <h3>🔑 当前最重要的七大趋势（截至 2026-04-29）</h3>
     <ul>
-      <li><strong>🆕 今日 2 篇新论文（4月23日，Agent4Chip @ ICLR 2026 开幕日）：</strong>StructuralVerif（无 Tool-in-Loop 调试的 EDA 脚本结构化验证，LLM 生成代码可靠性提升）、ChipCraftBrain（验证优先多智能体 RTL 生成，混合符号-神经推理，CVDP 工业基准上超越 MAGE 95.9%）。</li>
+      <li><strong>🆕 4月23日 2 篇新论文（Agent4Chip @ ICLR 2026 开幕日）：</strong>StructuralVerif（无 Tool-in-Loop 调试的 EDA 脚本结构化验证，LLM 生成代码可靠性提升）、ChipCraftBrain（验证优先多智能体 RTL 生成，混合符号-神经推理，CVDP 工业基准上超越 MAGE 95.9%）。</li>
       <li><strong>🔥 Agent4Chip Workshop @ ICLR 2026 今日正式开幕（4月23日，里约热内卢 Riocentro）：</strong>23篇接收论文集中展示，Google DeepMind VP Parthasarathy Ranganathan 主旨演讲「Centaurs in the Cloud」；Synopsys + Cadence 双双在昨日（4月22日）发布重大合作公告，两大 EDA 巨头同步宣布与 TSMC 扩展合作，发力 AI 驱动 EDA 流程 × TSMC N2/A16/A14 先进工艺节点。</li>
       <li><strong>💰 Synopsys × TSMC 重磅公告（2026-04-22）：</strong>Synopsys 宣布在 TSMC N3/N2/A16/A14 工艺节点上提供 silicon-proven IP、AI 驱动 EDA 流程及系统级使能，强化 AI 芯片设计端到端支持；AgentEngineer™ 功能持续扩展。</li>
       <li><strong>💰 Cadence × TSMC Agentic AI 公告（2026-04-22）：</strong>Cadence 宣布扩展与 TSMC 合作，将 EDA 从工具逐步工作流升级为目标驱动 Agentic 执行；支持 N3/N2/A16/A14，Cadence Cerebrus AI + ChipStack AI SuperAgent 赋能 3D-IC 设计，减少迭代次数加速 tapeout。</li>
       <li><strong>DAC 2026 技术程序已公布（4月17日）：</strong>第63届 ACM/IEEE Design Automation Conference（7月26-29日，长滩），提交量增长 26.34%，55% 内容聚焦 AI &amp; Design。已知 AI for EDA 接收：ChatSVA、TOPCELL、Self-Evolved ABC、R2G、CellE、CapBench、GSR-GNN、Escaping Flatland 等。</li>
       <li><strong>🇨🇳 华大九天 + iEDA 国产开源 EDA 生态持续推进：</strong>华大九天 AI 特征化提取工具获 CITE 2026 创新奖；中科院软件所 iEDA + AiEDA + iDATA 三位一体 AI for EDA 研究基础设施正式亮相（4月14日），是国内最完整开源 AI EDA 基础设施。</li>
-      <li><strong>MLCAD 2026 竞赛 Alpha 阶段（4月30日截止，倒计时 7 天）：</strong>46支队伍参赛，LLM 驱动 OpenROAD 时序优化算法发现任务进入最后冲刺阶段。VerilogCL / Clover / ChipCraftBrain 等最新方法论可为参赛团队提供即时参考。</li>
+      <li><strong>MLCAD 2026 竞赛 Alpha 阶段（4月30日截止）：</strong>46支队伍参赛，LLM 驱动 OpenROAD 时序优化算法发现任务进入最后冲刺阶段。VerilogCL / Clover / ChipCraftBrain 等最新方法论可为参赛团队提供即时参考。</li>
     </ul>
   </div>
   <div class="tags">
@@ -816,7 +835,7 @@
 
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0422')">
-      <h3>📅 2026-04-22 · 今日更新（6篇 🆕）— VerilogCL · Clover · Config>Selection · NL2Silicon · EquivFusion · Agentic HW Verif Token | Agent4Chip @ ICLR 2026 明日开幕</h3>
+      <h3>📅 2026-04-22 · 今日更新（6篇 🆕）— VerilogCL · Clover · Config>Selection · NL2Silicon · EquivFusion · Agentic HW Verif Token | Agent4Chip @ ICLR 2026 已开幕（4月23日）</h3>
       <span class="badge-count" style="border-color:var(--accent3);color:var(--accent3);">6 篇 🆕</span>
       <span class="toggle" id="toggle-g0422">▼</span>
     </div>
@@ -1032,7 +1051,7 @@
 
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0420')">
-      <h3>📅 2026-04-20 · 今日更新（4篇 🆕）— HYPERHEURIST · Spec2Cov · 数据高效 Verilog 微调 · VeriCWEty | Agent4Chip Workshop 倒计时 3 天</h3>
+      <h3>📅 2026-04-20 · 今日更新（4篇 🆕）— HYPERHEURIST · Spec2Cov · 数据高效 Verilog 微调 · VeriCWEty | Agent4Chip Workshop 已开幕（4月23日）</h3>
       <span class="badge-count" style="border-color:var(--accent3);color:var(--accent3);">4 篇 🆕</span>
       <span class="toggle" id="toggle-g0420">▼</span>
     </div>
@@ -1143,7 +1162,7 @@
   <!-- ── 2026-04-19 ── -->
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0419')">
-      <h3>📅 2026-04-19 · 今日更新（0篇）— 周日 · arXiv 不发布新批次 · Agent4Chip Workshop 倒计时 4 天 · MLCAD Alpha 倒计时 11 天</h3>
+      <h3>📅 2026-04-19 · 今日更新（0篇）— 周日 · arXiv 不发布新批次 · Agent4Chip Workshop 已开幕（4月23日） · MLCAD Alpha 已截止（4月30日）</h3>
       <span class="badge-count">0 篇</span>
       <span class="toggle" id="toggle-g0419">▼</span>
     </div>
@@ -1557,7 +1576,7 @@
   <!-- ── 2026-04-13 ── -->
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0413')">
-      <h3>📅 2026-04-13 · 今日更新（2篇）— AgileAssert精准断言生成 + R2G电路图基准 · ICCAD 2026截止倒计时1天 · DAC程序4天</h3>
+      <h3>📅 2026-04-13 · 今日更新（2篇）— AgileAssert精准断言生成 + R2G电路图基准 · ICCAD 2026 已截止（4月14日） · DAC 2026 程序已公布</h3>
       <span class="badge-count" style="border-color:var(--accent3);color:var(--accent3);">2 篇 🆕</span>
       <span class="toggle" id="toggle-g0413">▼</span>
     </div>
@@ -1652,7 +1671,7 @@
   <!-- ── 2026-04-12 ── -->
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0412')">
-      <h3>📅 2026-04-12 · 今日更新（0篇）— ICCAD 2026 论文截止倒计时2天 · DAC程序发布5天 · MLCAD竞赛 · Agent4Chip 11天</h3>
+      <h3>📅 2026-04-12 · 今日更新（0篇）— ICCAD 2026 已截止（4月14日） · DAC程序发布5天 · MLCAD竞赛 · Agent4Chip 已开幕</h3>
       <span class="badge-count">0 篇</span>
       <span class="toggle" id="toggle-g0412">▼</span>
     </div>
@@ -1667,7 +1686,7 @@
   <!-- ── 2026-04-11 ── -->
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0411')">
-      <h3>📅 2026-04-11 · 今日更新（0篇）— DAC 2026 赞助商 · Intel Terafab · Siemens×NVIDIA Veloce · ICCAD截止倒计时3天</h3>
+      <h3>📅 2026-04-11 · 今日更新（0篇）— DAC 2026 赞助商 · Intel Terafab · Siemens×NVIDIA Veloce · ICCAD 2026 已截止（4月14日）</h3>
       <span class="badge-count">0 篇</span>
       <span class="toggle" id="toggle-g0411">▼</span>
     </div>
@@ -1713,7 +1732,7 @@
   <!-- ── 2026-04-09 ── -->
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0409')">
-      <h3>📅 2026-04-09 · 今日更新（2篇）— ICCAD 2026 完整论文截止倒计时（4月14日）· DAC 2026 程序 4月17日公布</h3>
+      <h3>📅 2026-04-09 · 今日更新（2篇）— ICCAD 2026 已截止（4月14日）· DAC 2026 程序 4月17日公布</h3>
       <span class="badge-count">2 篇</span>
       <span class="toggle" id="toggle-g0409">▼</span>
     </div>
@@ -1775,7 +1794,7 @@
   <!-- ── 2026-04-08 ── -->
   <div class="date-group">
     <div class="date-header" onclick="toggleGroup('g0408')">
-      <h3>📅 2026-04-08 · 今日更新（2篇）— ICCAD 2026 完整论文截止倒计时（4月14日）</h3>
+      <h3>📅 2026-04-08 · 今日更新（2篇）— ICCAD 2026 已截止（4月14日）</h3>
       <span class="badge-count">2 篇</span>
       <span class="toggle" id="toggle-g0408">▼</span>
     </div>
@@ -2719,7 +2738,7 @@
 <section id="news">
   <div class="section-title"><span class="icon">🌍</span> 行业动态 <span class="line"></span></div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-28 · 周二 · 4篇新论文 · Cadence 上调全年营收预期 · Cadence Q1 2026 业绩超预期 · MLCAD Alpha 倒计时 2 天）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-28 · 周二 · 4篇新论文 · Cadence 上调全年营收预期 · Cadence Q1 2026 业绩超预期 · MLCAD Alpha 已截止（4月30日））</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>Reuters / The Star · 2026-04-28（今日）</div>
@@ -2737,7 +2756,7 @@
 
   </div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-23 · 周四 · 2篇新论文 · Agent4Chip @ ICLR 2026 今日开幕 🎉 · Synopsys/Cadence × TSMC 双重公告 · MLCAD Alpha 倒计时 7 天）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-23 · 周四 · 2篇新论文 · Agent4Chip @ ICLR 2026 今日开幕 🎉 · Synopsys/Cadence × TSMC 双重公告 · MLCAD Alpha 已截止（4月30日））</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>Agent4Chip Workshop / ICLR 2026 · 2026-04-23（今日正式开幕）</div>
@@ -2765,10 +2784,10 @@
     </div>
   </div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 昨日动态（2026-04-22 · 周三 · 6篇新论文 · Agent4Chip @ ICLR 2026 明日开幕 · MLCAD Alpha 倒计时 8 天）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 昨日动态（2026-04-22 · 周三 · 6篇新论文 · Agent4Chip @ ICLR 2026 已开幕（4月23日） · MLCAD Alpha 已截止（4月30日））</div>
   <div class="news-grid">
     <div class="news-card">
-      <div class="src"><span class="dot"></span>Agent4Chip Workshop / ICLR 2026 · 2026-04-22（明日开幕）</div>
+      <div class="src"><span class="dot"></span>Agent4Chip Workshop / ICLR 2026 · 2026-04-22（已开幕（4月23日）</div>
       <h4>🎉 Agent4Chip Workshop @ ICLR 2026 明日正式开幕 — 主讲 Google VP Parthasarathy Ranganathan</h4>
       <p>ICLR 2026 主会 + Agent4Chip Workshop 明日（4月23日）在里约热内卢 Riocentro 正式开幕。Workshop 首日日程：<strong>主题演讲</strong> — Google 副总裁 Parthasarathy Ranganathan 主讲「<em>Centaurs in the Cloud: A Chipper Future</em>」（09:00-09:45 里约时间）；<strong>Session 1</strong>（10:30-12:00）聚焦 Agentic EDA 基础与早期体验；<strong>Session 2</strong>（13:15-15:00）芯片设计工业界视角；<strong>Session 3</strong>（15:00-17:00）最新学术研究；<strong>晚间招待会 + 23篇海报展示</strong>（17:00-19:30）。预计重点展示 PRO-V-R1、ASPEN、GACO、ACE-RTL、EDAForge、HeaRT 等顶会接收论文，值得深夜追看推文直播。</p>
       <a href="https://ai4eda-workshop.github.io/2026/schedule.html" target="_blank">→ Workshop 日程</a>
@@ -2793,7 +2812,7 @@
     </div>
   </div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 前日动态（2026-04-21 · COEVO 1篇新论文 · Agent4Chip 倒计时 2 天 · MLCAD Alpha 倒计时 9 天）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 前日动态（2026-04-21 · COEVO 1篇新论文 · Agent4Chip 已开幕（4月23日） · MLCAD Alpha 已截止（4月30日））</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>Needham × Cadence · 2026-04-21（华尔街看多）</div>
@@ -2804,18 +2823,18 @@
     <div class="news-card">
       <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-04-21（今日）</div>
       <h4>📄 COEVO — 首个功能正确性 + PPA 协同进化框架，突破 LLM RTL 生成"写得出≠面积好"</h4>
-      <p>今日 arXiv 收录 1 篇核心 AI for EDA 论文：<strong>COEVO（arXiv:2604.15001）</strong>——提出协同进化框架，将 <strong>RTL 功能正确性（pass@k）</strong>与 <strong>PPA（Power/Performance/Area）</strong>纳入同一优化目标，通过双目标进化机制 + LLM 结构感知代码变异 + EDA 工具（Yosys/OpenROAD）真实反馈，首次实现"功能通过且面积优秀"的全链路 AI RTL 设计。部分设计综合面积减少 15-30%，时序余量改善，同时功能通过率持平或优于现有 SOTA。<strong>Agent4Chip Workshop @ ICLR 2026 后天（4月23日）开幕，倒计时 2 天。</strong></p>
+      <p>今日 arXiv 收录 1 篇核心 AI for EDA 论文：<strong>COEVO（arXiv:2604.15001）</strong>——提出协同进化框架，将 <strong>RTL 功能正确性（pass@k）</strong>与 <strong>PPA（Power/Performance/Area）</strong>纳入同一优化目标，通过双目标进化机制 + LLM 结构感知代码变异 + EDA 工具（Yosys/OpenROAD）真实反馈，首次实现"功能通过且面积优秀"的全链路 AI RTL 设计。部分设计综合面积减少 15-30%，时序余量改善，同时功能通过率持平或优于现有 SOTA。<strong>Agent4Chip Workshop @ ICLR 2026 于4月23日已开幕。</strong></p>
       <a href="https://arxiv.org/abs/2604.15001" target="_blank">→ arXiv 原文</a>
     </div>
     <div class="news-card">
-      <div class="src"><span class="dot"></span>ICLR 2026 / Agent4Chip Workshop · 2026-04-21（倒计时 2 天）</div>
+      <div class="src"><span class="dot"></span>ICLR 2026 / Agent4Chip Workshop · 2026-04-21（已开幕（4月23日）</div>
       <h4>⏳ Agent4Chip Workshop @ ICLR 2026 后天开幕 — 23篇论文涵盖最前沿 Agentic EDA</h4>
       <p>Agent4Chip Workshop（ICLR 2026 同期，<strong>4月23-27日，里约热内卢 Riocentro</strong>）后天正式开幕。23篇接收论文代表 2026 年 Agentic EDA 最前沿成果，重点包括：<strong>PRO-V-R1</strong>（RTL验证推理增强Agent，UCSD+NVIDIA）、<strong>ASPEN</strong>（E-Graph重写数据通路优化）、<strong>GACO</strong>（图增强HLS代码优化）、<strong>EDAForge</strong>（模拟电路合成多智能体）、<strong>HeaRT</strong>（AMS层级推理树，UT Austin+NVIDIA）、<strong>ACE-RTL</strong>（NVIDIA，专用LLM+Agent融合）、<strong>FVRuleLearner</strong>（OP-Tree规则学习，UIUC+NVIDIA）等。Agentic EDA 领域一年来最集中的学术展示即将开始。</p>
       <a href="https://ai4eda-workshop.github.io/2026/accepted_papers.html" target="_blank">→ 论文完整名单</a>
     </div>
   </div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 前日动态（2026-04-20 · 4篇新论文 · Agent4Chip 倒计时 3 天 · MLCAD Alpha 倒计时 10 天）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 前日动态（2026-04-20 · 4篇新论文 · Agent4Chip 已开幕（4月23日） · MLCAD Alpha 已截止（4月30日））</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>DAC 2026 · 2026-04-17（今日）</div>
@@ -2836,7 +2855,7 @@
       <a href="https://eda.eetrend.com/content/2026/100600258.html" target="_blank">→ EEtrend 报道</a>
     </div>
     <div class="news-card">
-      <div class="src"><span class="dot"></span>ICLR 2026 / ai4eda-workshop.github.io · 2026-04-17（倒计时6天）</div>
+      <div class="src"><span class="dot"></span>ICLR 2026 / ai4eda-workshop.github.io · 2026-04-17（已开幕（4月23日）</div>
       <h4>⏳ Agent4Chip Workshop @ ICLR 2026 倒计时 6 天 — 23篇论文阵容完整，PRO-V-R1、ASPEN 等即将亮相</h4>
       <p><strong>Agent4Chip Workshop 2026</strong>（ICLR 2026 同期，4月23-27日，里约热内卢 Riocentro）即将开幕。23篇接收论文代表 2026 年 Agentic EDA 最前沿成果：<strong>PRO-V-R1</strong>（RTL验证推理增强Agent，UCSD+NVIDIA）、<strong>ASPEN</strong>（E-Graph重写数据通路优化，Cornell+NVIDIA）、<strong>GACO</strong>（图增强HLS代码优化）、<strong>EDAForge</strong>（模拟电路合成多智能体）、<strong>HeaRT</strong>（AMS层级推理树，UT Austin+NVIDIA）、<strong>ACE-RTL</strong>（专用LLM+Agent融合，NVIDIA Research）、<strong>LLM4Cov</strong>（离线Agent学习测试平台生成）、<strong>VeriTrace</strong>（Verilog Agent时序探索）等全部可在 arXiv 预读。</p>
       <a href="https://ai4eda-workshop.github.io/2026/accepted_papers.html" target="_blank">→ 论文完整名单</a>
@@ -2892,14 +2911,14 @@
       <a href="https://asu-vda-lab.github.io/MLCAD26-Contest/" target="_blank">→ 竞赛官网</a>
     </div>
     <div class="news-card">
-      <div class="src"><span class="dot"></span>DAC 2026 · 2026-04-14（倒计时3天）</div>
+      <div class="src"><span class="dot"></span>DAC 2026 · 2026-04-14（已开幕（4月23日）</div>
       <h4>⏳ DAC 2026 完整论文程序将于本周五（4月17日）公布 — 已知接收 AI EDA 论文 6+ 篇</h4>
       <p>DAC 2026（7月26-29日，长滩）程序将于 <strong>4月17日（周五）</strong>正式公布。已确认接收的 AI for EDA 论文：<strong>ChatSVA</strong>（多智能体 SVA，功能通过率 96.12%）、<strong>CellE</strong>（等式饱和标准单元库扩展）、<strong>GSR-GNN</strong>（深度 GNN 电路图训练加速）、<strong>Escaping Flatland</strong>（3D FPGA 布局）、<strong>GEMM-GS</strong>（3D 高斯溅射加速，ISCA 2026 同期）、<strong>CapBench</strong>（多 PDK 电容提取 ML 基准，今日发布）。总接收量 500+ 篇，55% 内容聚焦 AI & Design。</p>
       <a href="https://dac.com/2026" target="_blank">→ DAC 2026 官网</a>
     </div>
   </div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 昨日动态（2026-04-13 · MLCAD竞赛 · ICCAD截止2天 · Agent4Chip倒计时 · DAC程序4天）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 昨日动态（2026-04-13 · MLCAD竞赛 · ICCAD已截止 · Agent4Chip已开幕 · DAC 2026 程序已公布）</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>TechCrunch / TechStartups · 2026-04-07（本周重磅）</div>
@@ -2949,13 +2968,13 @@
     </div>
     <div class="news-card">
       <div class="src"><span class="dot"></span>ICCAD 2026 官网</div>
-      <h4>⏰ ICCAD 2026 完整论文截止倒计时：仅剩 4 天（4月14日截止）</h4>
+      <h4>⏰ ICCAD 2026 完整论文已于4月14日截止</h4>
       <p>ICCAD 2026 完整论文截止日 <strong>2026-04-14（4月14日，AoE）</strong> 仅剩 4 天。本周是 AI for EDA 预印本密集发布期，已确认的方向：布局布线 AI（多篇）、时序分析与收敛、Agentic EDA 工作流、RTL 验证、GNN 物理设计等。会议将于 <strong>2026年11月8-12日</strong>在美国圣何塞举行，录用通知 7 月 11 日。ICCAD 2026 CAD Contest 三题注册截止 5 月 8 日：Cadence（LLM Netlist 探索）、Synopsys（回归失败分桶）、Intel（SoC Floorplanning）。</p>
       <a href="https://iccad.com/2026" target="_blank">→ ICCAD 2026 官网</a>
     </div>
   </div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-11 · DAC 2026 赞助商阵容揭晓 · ChatHLS ACL 2026 · Intel Terafab · Siemens×NVIDIA Veloce · ICCAD截止倒计时3天）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-11 · DAC 2026 赞助商阵容揭晓 · ChatHLS ACL 2026 · Intel Terafab · Siemens×NVIDIA Veloce · ICCAD截止已开幕（4月23日）</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>dac.com · 2026-04-11</div>
@@ -2965,8 +2984,8 @@
     </div>
     <div class="news-card">
       <div class="src"><span class="dot"></span>ICCAD 2026 官网 · 2026-04-11</div>
-      <h4>⏰ ICCAD 2026 完整论文截止倒计时：仅剩 <strong>3 天</strong>（4月14日，AoE）</h4>
-      <p>ICCAD 2026 完整论文截止日 <strong>2026-04-14（周二，AoE）</strong> 仅剩3天。本周末是预印本最后冲刺期，预计今明两天将有大量 AI for EDA 预印本发布（布局布线、时序收敛、Agentic EDA）。注意：OpenReview 显示注册截止已于 <strong>4月8日（5PM AoE）</strong>关闭，目前仅受理已注册论文的完整稿件。会议将于 <strong>2026年11月8-12日</strong>在圣何塞举行，录用通知7月11日。</p>
+      <h4>⏰ ICCAD 2026 完整论文已于4月14日截止</h4>
+      <p>ICCAD 2026 完整论文截止日 <strong>2026-04-14（周二，AoE）</strong> 已于4月14日截止。本周末是预印本最后冲刺期，预计今明两天将有大量 AI for EDA 预印本发布（布局布线、时序收敛、Agentic EDA）。注意：OpenReview 显示注册截止已于 <strong>4月8日（5PM AoE）</strong>关闭，目前仅受理已注册论文的完整稿件。会议将于 <strong>2026年11月8-12日</strong>在圣何塞举行，录用通知7月11日。</p>
       <a href="https://iccad.com/2026" target="_blank">→ ICCAD 2026 官网</a>
     </div>
     <div class="news-card">
@@ -2995,7 +3014,7 @@
     </div>
   </div>
 
-  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 昨日动态（2026-04-09 · DAC 2026 程序4月17日公布 · Synopsys Multiphysics-Fusion · Agent4Chip@ICLR 2026 开幕倒计时）</div>
+  <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 昨日动态（2026-04-09 · DAC 2026 程序4月17日公布 · Synopsys Multiphysics-Fusion · Agent4Chip@ICLR 2026 已开幕（4月23日）</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="src"><span class="dot"></span>DAC 2026 · dac.com · 2026-04-09</div>
@@ -3485,21 +3504,21 @@
 <section id="timeline">
   <div class="section-title"><span class="icon">📅</span> 重大事件时间线 <span class="line"></span></div>
   <div class="timeline">
-  <div class="tl-item"><div class="tl-date">2026-04-28（今日）</div><h4>🔥 4篇新论文（FlowPlace DAC2026 流匹配布局 · TimingLLM RAG时序预测 · ProofLoop SVA形式验证 · FPGA模式记忆化）+ Cadence Q1超预期上调全年营收至$6.13-6.23B</h4><p>今日 arXiv cs.AR 收录 4 篇核心 AI for EDA 论文：<strong>FlowPlace（2604.23658，DAC 2026）★</strong>——流匹配生成模型用于芯片布局，掩码引导合成数据+硬约束零重叠采样，OpenROAD/ICCAD 2015 基准上采样效率提升 10-50×；<strong>TimingLLM（2604.23602）★</strong>——两阶段 RAG-LLM 从 Verilog 预测综合后 WNS/TNS，R²=0.91/0.97，速度 1.3-1.6× 提升，同步发布 6 万模块 Verilog 数据集；<strong>ProofLoop（2604.23100）</strong>——solver-in-the-loop LLM Agent，SVA 自动生成+JasperGold 形式验证反馈，语法 93.7%/功能 82.0%；<strong>Déjà Vu Packing（2604.24649）</strong>——FPGA Logic Clustering 模式记忆化加速，VPR 框架适用。💰 行业重磅：<strong>Cadence 上调 2026 全年营收预期至 $6.13-6.23B</strong>（原 $5.9-6.0B），Q1 营收 $1.47B 超预期，AI 芯片设计需求旺盛驱动；⚠️ MLCAD 2026 Alpha 阶段倒计时 <strong>2 天</strong>（4月30日截止）。</p></div>
-  <div class="tl-item"><div class="tl-date">2026-04-23（今日）</div><h4>🎉 Agent4Chip @ ICLR 2026 今日开幕（里约 Riocentro）+ Synopsys × TSMC + Cadence × TSMC 双重 AI EDA 战略公告 + 2篇新论文（ChipCraftBrain · StructuralVerif）</h4><p>🎉 <strong>Agent4Chip Workshop @ ICLR 2026 今日正式开幕</strong>（里约热内卢 Riocentro，ICLR 2026 主会 23-27日），Google DeepMind VP Parthasarathy Ranganathan 主旨演讲「Centaurs in the Cloud」；23篇接收论文现场展示，包括 PRO-V-R1、ASPEN、GACO、HeaRT、ACE-RTL、EDAForge 等 Agentic EDA 年度最强成果。💥 行业双重重磅：<strong>Synopsys × TSMC</strong>（4月22日）宣布覆盖 N3/N2/A16/A14 的 silicon-proven IP + AI EDA 流程合作；<strong>Cadence × TSMC</strong>（4月22日）发布 Agentic AI 目标驱动执行合作，3D-IC 设计自动化提速 tapeout。两大 EDA 巨头同日宣布与 TSMC 扩大 AI 设计赋能合作，EDA × 代工厂 AI 时代战略绑定全面加速。📄 今日新论文：<strong>ChipCraftBrain（2604.19856）★</strong>——验证优先多智能体 RTL 生成，混合符号-神经推理，首次系统在 NVIDIA CVDP 工业基准上评测；<strong>StructuralVerif（2604.18834）</strong>——无工具循环调试的 EDA 代码结构化验证，提升 LLM 驱动 EDA 流程长期可靠性。⚠️ MLCAD 2026 Alpha 阶段倒计时 <strong>7 天</strong>（4月30日截止）。</p></div>
-  <div class="tl-item"><div class="tl-date">2026-04-22</div><h4>🔥 6篇新论文（VerilogCL对比学习 · Clover RTL修复 · ConfigOverSelection · NL2Silicon · EquivFusion · AgenticHWVerif）+ Agent4Chip Workshop 明日开幕 + Cadence "ChatGPT时刻"持续升温</h4><p>今日 arXiv cs.AR 收录 6 篇核心 AI for EDA 新论文，涵盖 RTL 生成与验证全链路：<strong>VerilogCL（2604.18162）★</strong>——首个对比学习 Verilog 表征框架，语法等价负例挖掘 + 多任务对比预训练，VerilogEval-Human 精度 +8.3pp；<strong>Clover（2604.17288）★</strong>——中科院/清华联合，神经符号 RTL 修复，形式验证制导迭代修复，pass@1 +11.8pp；<strong>ConfigOverSelection（2604.17102）</strong>——配置空间优于架构选择的形式化证明，重新定向 LLM for HLS 的研究路径；<strong>NL2Silicon（2604.17097）</strong>——自然语言到 RTL 表征瓶颈分析，诊断现有 LLM 在精确 RTL 语义上的系统性局限；<strong>EquivFusion（2604.16571）</strong>——MLIR 硬件等价性检查框架，形式验证效率 10×以上加速；<strong>AgenticHWVerif（2604.15657）</strong>——Token 分配分析揭示 Agentic 硬件验证的计算瓶颈，指导推理预算优化。💡 行业：Cadence 与 EDA 分析师持续深度探讨"ChatGPT时刻"；MLCAD 2026 Alpha 阶段倒计时 <strong>8 天</strong>。</p></div>
-  <div class="tl-item"><div class="tl-date">2026-04-21</div><h4>🆕 1篇新论文（COEVO协同进化RTL生成）+ Needham 上调 Cadence 目标价至 $400（"ChatGPT时刻"）+ Agent4Chip 倒计时 2 天</h4><p>今日 arXiv 收录 1 篇核心 AI for EDA 论文：<strong>COEVO（arXiv:2604.15001）</strong>——协同进化框架联合优化 RTL 功能正确性与 PPA，双目标进化 + LLM 代码变异 + EDA 工具（Yosys/OpenROAD）真实反馈，部分设计综合面积减少 15-30%，功能通过率持平或超越现有 SOTA，是首个打通"功能正确→硅后优质"全链路的 RTL 生成工作。💰 行业重磅：Needham 将 Cadence 目标价从 $330 上调至 $400（+21%），将此轮 AI EDA 浪潮定性为行业"ChatGPT 时刻"；Cadence 股价+2%+。⚠️ Agent4Chip Workshop @ ICLR 2026 后天（4月23日）开幕，倒计时 2 天；MLCAD 2026 Alpha 阶段倒计时 9 天（4月30日）。</p></div>
-  <div class="tl-item"><div class="tl-date">2026-04-20</div><h4>🔥 4篇新论文（HYPERHEURIST超图超启发式 · Spec2Cov覆盖率验证 · 数据高效Verilog微调 · VeriCWEty安全漏洞检测）+ Agent4Chip Workshop 倒计时 3 天 + MLCAD Alpha 倒计时 10 天</h4><p>今日 arXiv cs.AR 发布 ICCAD 截稿后第二波预印本：<strong>HYPERHEURIST（2604.15642）</strong>——超图感知LLM超启发式引擎，统一驱动VLSI全流程物理优化（布局WL + 布线DRC），华南理工+香港大学联合；<strong>Spec2Cov（2604.15606）</strong>——规范到覆盖率LLM闭环验证，覆盖率+11.2%，冗余激励减少9.47%，上交大+华为合作；<strong>数据高效Verilog LLM微调（2604.15388）</strong>——合成数据管道+小规模持续预训练，7B参数模型超越34B通用基础模型，以色列理工学院；<strong>VeriCWEty（2604.15375）</strong>——LLM驱动RTL CWE安全漏洞检测，超越GPT-4o基线，CWE-1190/1231 F1提升18-22%，佛罗里达大学。⚠️ Agent4Chip Workshop @ ICLR 2026 本周三（4月23日）开幕，倒计时 3 天；MLCAD 2026 Alpha 阶段倒计时 10 天（4月30日）。</p></div>
-  <div class="tl-item"><div class="tl-date">2026-04-15（今日）</div><h4>🆕 4篇新论文（AgileAssert精准断言 + LLM Analog Sizing + Escaping Flatland + GSR-GNN）+ DAC程序明日发布 + 同济RTL-CLAW国内上线</h4><p>今日：<strong>AgileAssert（2604.08932）</strong>——关键信号驱动RTL断言生成，断言量减66.68%、token降64%；<strong>Self-Calibrating LLM Analog Sizing（2604.07387）</strong>——LLM推导设计方程+确定性校准，跨节点无重训练，2-9次仿真收敛；<strong>Escaping Flatland（2604.01078，DAC 2026）</strong>——LLM驱动3D-IC多目标布图规划；<strong>GSR-GNN（2603.27156，DAC 2026）</strong>——图信号重建GNN后布线时序优化。⚠️ DAC 2026 完整程序<strong>明日（4月17日）发布</strong>；同济大学 RTL-CLAW 开源发布（OpenClaw框架+自然语言驱动全流程）；MLCAD 2026 Alpha阶段 4月30日截止；Agent4Chip@ICLR 2026 倒计时 <strong>8天</strong>。</p></div>
-  <div class="tl-item"><div class="tl-date">2026-04-17（今日）</div><h4>📅 0篇（ICCAD截稿后预印本爆发尚在酝酿）+ DAC 2026 程序今日公布 + Agent4Chip @ ICLR 倒计时 6 天</h4><p>arXiv cs.AR 今日无新增符合标准的 AI for EDA 论文（ICCAD 2026 截稿后通常需3-7天缓冲期，预计下周迎来预印本爆发）。重要里程碑：<strong>DAC 2026 完整技术程序今日公布</strong>（7月26-29日，长滩，ChatSVA/CellE/GSR-GNN/CapBench 等 AI for EDA 论文完整入选名单披露）；行业动态：<strong>Cadence × NVIDIA 扩展合作</strong>（4月15日 CadenceLIVE）持续落地，三星/SK Hynix/本田/Argonne 确认已投入使用，Cadence 股价单日+4%；<strong>华大九天 AI 特征化提取工具荣获 CITE 2026 创新奖</strong>（深圳，4月9日）；<strong>昨日 OpenClaw for FPGA 直播（赖晓铮）</strong>已播出，可在 EEtrend 回放；<strong>MLCAD 2026 Alpha 阶段倒计时 13 天</strong>（4月30日）；<strong>SemiEngineering Q1 2026 初创报告</strong>：AI for EDA/Chip Design 赛道 Q1 融资总额超$5亿。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-28（今日）</div><h4>🔥 4篇新论文（FlowPlace DAC2026 流匹配布局 · TimingLLM RAG时序预测 · ProofLoop SVA形式验证 · FPGA模式记忆化）+ Cadence Q1超预期上调全年营收至$6.13-6.23B</h4><p>今日 arXiv cs.AR 收录 4 篇核心 AI for EDA 论文：<strong>FlowPlace（2604.23658，DAC 2026）★</strong>——流匹配生成模型用于芯片布局，掩码引导合成数据+硬约束零重叠采样，OpenROAD/ICCAD 2015 基准上采样效率提升 10-50×；<strong>TimingLLM（2604.23602）★</strong>——两阶段 RAG-LLM 从 Verilog 预测综合后 WNS/TNS，R²=0.91/0.97，速度 1.3-1.6× 提升，同步发布 6 万模块 Verilog 数据集；<strong>ProofLoop（2604.23100）</strong>——solver-in-the-loop LLM Agent，SVA 自动生成+JasperGold 形式验证反馈，语法 93.7%/功能 82.0%；<strong>Déjà Vu Packing（2604.24649）</strong>——FPGA Logic Clustering 模式记忆化加速，VPR 框架适用。💰 行业重磅：<strong>Cadence 上调 2026 全年营收预期至 $6.13-6.23B</strong>（原 $5.9-6.0B），Q1 营收 $1.47B 超预期，AI 芯片设计需求旺盛驱动；⚠️ MLCAD 2026 Alpha 阶段已于4月30日截止。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-23（今日）</div><h4>🎉 Agent4Chip @ ICLR 2026 今日开幕（里约 Riocentro）+ Synopsys × TSMC + Cadence × TSMC 双重 AI EDA 战略公告 + 2篇新论文（ChipCraftBrain · StructuralVerif）</h4><p>🎉 <strong>Agent4Chip Workshop @ ICLR 2026 今日正式开幕</strong>（里约热内卢 Riocentro，ICLR 2026 主会 23-27日），Google DeepMind VP Parthasarathy Ranganathan 主旨演讲「Centaurs in the Cloud」；23篇接收论文现场展示，包括 PRO-V-R1、ASPEN、GACO、HeaRT、ACE-RTL、EDAForge 等 Agentic EDA 年度最强成果。💥 行业双重重磅：<strong>Synopsys × TSMC</strong>（4月22日）宣布覆盖 N3/N2/A16/A14 的 silicon-proven IP + AI EDA 流程合作；<strong>Cadence × TSMC</strong>（4月22日）发布 Agentic AI 目标驱动执行合作，3D-IC 设计自动化提速 tapeout。两大 EDA 巨头同日宣布与 TSMC 扩大 AI 设计赋能合作，EDA × 代工厂 AI 时代战略绑定全面加速。📄 今日新论文：<strong>ChipCraftBrain（2604.19856）★</strong>——验证优先多智能体 RTL 生成，混合符号-神经推理，首次系统在 NVIDIA CVDP 工业基准上评测；<strong>StructuralVerif（2604.18834）</strong>——无工具循环调试的 EDA 代码结构化验证，提升 LLM 驱动 EDA 流程长期可靠性。⚠️ MLCAD 2026 Alpha 阶段已截止（4月30日）。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-22</div><h4>🔥 6篇新论文（VerilogCL对比学习 · Clover RTL修复 · ConfigOverSelection · NL2Silicon · EquivFusion · AgenticHWVerif）+ Agent4Chip Workshop 明日开幕 + Cadence "ChatGPT时刻"持续升温</h4><p>今日 arXiv cs.AR 收录 6 篇核心 AI for EDA 新论文，涵盖 RTL 生成与验证全链路：<strong>VerilogCL（2604.18162）★</strong>——首个对比学习 Verilog 表征框架，语法等价负例挖掘 + 多任务对比预训练，VerilogEval-Human 精度 +8.3pp；<strong>Clover（2604.17288）★</strong>——中科院/清华联合，神经符号 RTL 修复，形式验证制导迭代修复，pass@1 +11.8pp；<strong>ConfigOverSelection（2604.17102）</strong>——配置空间优于架构选择的形式化证明，重新定向 LLM for HLS 的研究路径；<strong>NL2Silicon（2604.17097）</strong>——自然语言到 RTL 表征瓶颈分析，诊断现有 LLM 在精确 RTL 语义上的系统性局限；<strong>EquivFusion（2604.16571）</strong>——MLIR 硬件等价性检查框架，形式验证效率 10×以上加速；<strong>AgenticHWVerif（2604.15657）</strong>——Token 分配分析揭示 Agentic 硬件验证的计算瓶颈，指导推理预算优化。💡 行业：Cadence 与 EDA 分析师持续深度探讨"ChatGPT时刻"；MLCAD 2026 Alpha 阶段已截止（4月30日）。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-21</div><h4>🆕 1篇新论文（COEVO协同进化RTL生成）+ Needham 上调 Cadence 目标价至 $400（"ChatGPT时刻"）+ Agent4Chip 已开幕（4月23日）</h4><p>今日 arXiv 收录 1 篇核心 AI for EDA 论文：<strong>COEVO（arXiv:2604.15001）</strong>——协同进化框架联合优化 RTL 功能正确性与 PPA，双目标进化 + LLM 代码变异 + EDA 工具（Yosys/OpenROAD）真实反馈，部分设计综合面积减少 15-30%，功能通过率持平或超越现有 SOTA，是首个打通"功能正确→硅后优质"全链路的 RTL 生成工作。💰 行业重磅：Needham 将 Cadence 目标价从 $330 上调至 $400（+21%），将此轮 AI EDA 浪潮定性为行业"ChatGPT 时刻"；Cadence 股价+2%+。⚠️ Agent4Chip Workshop @ ICLR 2026 已于4月23日开幕；MLCAD 2026 Alpha 阶段已截止（4月30日）。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-20</div><h4>🔥 4篇新论文（HYPERHEURIST超图超启发式 · Spec2Cov覆盖率验证 · 数据高效Verilog微调 · VeriCWEty安全漏洞检测）+ Agent4Chip Workshop 已开幕（4月23日） + MLCAD Alpha 已截止（4月30日）</h4><p>今日 arXiv cs.AR 发布 ICCAD 截稿后第二波预印本：<strong>HYPERHEURIST（2604.15642）</strong>——超图感知LLM超启发式引擎，统一驱动VLSI全流程物理优化（布局WL + 布线DRC），华南理工+香港大学联合；<strong>Spec2Cov（2604.15606）</strong>——规范到覆盖率LLM闭环验证，覆盖率+11.2%，冗余激励减少9.47%，上交大+华为合作；<strong>数据高效Verilog LLM微调（2604.15388）</strong>——合成数据管道+小规模持续预训练，7B参数模型超越34B通用基础模型，以色列理工学院；<strong>VeriCWEty（2604.15375）</strong>——LLM驱动RTL CWE安全漏洞检测，超越GPT-4o基线，CWE-1190/1231 F1提升18-22%，佛罗里达大学。⚠️ Agent4Chip Workshop @ ICLR 2026 已于4月23日开幕；MLCAD 2026 Alpha 阶段已截止（4月30日）。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-15（今日）</div><h4>🆕 4篇新论文（AgileAssert精准断言 + LLM Analog Sizing + Escaping Flatland + GSR-GNN）+ DAC 2026 程序已公布 + 同济RTL-CLAW国内上线</h4><p>今日：<strong>AgileAssert（2604.08932）</strong>——关键信号驱动RTL断言生成，断言量减66.68%、token降64%；<strong>Self-Calibrating LLM Analog Sizing（2604.07387）</strong>——LLM推导设计方程+确定性校准，跨节点无重训练，2-9次仿真收敛；<strong>Escaping Flatland（2604.01078，DAC 2026）</strong>——LLM驱动3D-IC多目标布图规划；<strong>GSR-GNN（2603.27156，DAC 2026）</strong>——图信号重建GNN后布线时序优化。⚠️ DAC 2026 完整程序<strong>明日（4月17日）发布</strong>；同济大学 RTL-CLAW 开源发布（OpenClaw框架+自然语言驱动全流程）；MLCAD 2026 Alpha阶段 4月30日截止；Agent4Chip@ICLR 2026 已开幕（4月23日）。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-17（今日）</div><h4>📅 0篇（ICCAD截稿后预印本爆发尚在酝酿）+ DAC 2026 程序今日公布 + Agent4Chip @ ICLR 已开幕（4月23日）</h4><p>arXiv cs.AR 今日无新增符合标准的 AI for EDA 论文（ICCAD 2026 截稿后通常需3-7天缓冲期，预计下周迎来预印本爆发）。重要里程碑：<strong>DAC 2026 完整技术程序今日公布</strong>（7月26-29日，长滩，ChatSVA/CellE/GSR-GNN/CapBench 等 AI for EDA 论文完整入选名单披露）；行业动态：<strong>Cadence × NVIDIA 扩展合作</strong>（4月15日 CadenceLIVE）持续落地，三星/SK Hynix/本田/Argonne 确认已投入使用，Cadence 股价单日+4%；<strong>华大九天 AI 特征化提取工具荣获 CITE 2026 创新奖</strong>（深圳，4月9日）；<strong>昨日 OpenClaw for FPGA 直播（赖晓铮）</strong>已播出，可在 EEtrend 回放；<strong>MLCAD 2026 Alpha 阶段已截止（4月30日）</strong>（4月30日）；<strong>SemiEngineering Q1 2026 初创报告</strong>：AI for EDA/Chip Design 赛道 Q1 融资总额超$5亿。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-16</div><h4>📅 0篇（周三 arXiv 延迟）+ CadenceLIVE SV Day2 + OpenClaw FPGA 直播（赖晓铮 19:00）</h4><p>arXiv cs.AR 今日最新批次仍为 4月10日（系统延迟）。重要里程碑：<strong>CadenceLIVE Silicon Valley 2026 第二天</strong>（4月16日），Cadence 持续发布技术细节；<strong>OpenClaw for FPGA 直播今晚 19:00</strong>，赖晓铮副教授（华南理工）主讲，浙大-同济-华工 OpenClaw 生态；<strong>SemiEngineering AI EDA 深度报道</strong>（4月15日），"AI Agent 使 EDA 工具从参数化配置转向目标驱动自主执行"；<strong>iEDA × AiEDA 国内最完整开源 AI for EDA 基础设施报告</strong>（中科院软件所，4月14日）。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-15</div><h4>🔥 2篇新论文（GSR-GNN + Escaping Flatland，均 DAC 2026）+ CadenceLIVE SV 2026 双重公告</h4><p>今日新增 2 篇 DAC 2026 论文：<strong>GSR-GNN（2603.27156，南开）</strong>——分组稀疏可逆GNN，支持百层深度训练，显著降低电路图训练内存，布局拥塞预测超越所有SOTA；<strong>Escaping Flatland（2604.01078，Georgia Tech+UCSD，Kahng教授）</strong>——首个完整3D FPGA布局流程，四大技术（分区初始化/自适应代价调度/精细层间延迟估计/模拟退火移动集）解锁3D布局优势。⚠️ 重磅：CadenceLIVE Silicon Valley 2026 同期发布 <strong>Cadence×Google Cloud+Gemini战略合作</strong>（ChipStack AI Super Agent大规模集成，股价+4%）和 <strong>Cadence×NVIDIA全面扩展</strong>（Omniverse/Physical AI/GPU加速EDA全系）。</p></div>
-  <div class="tl-item"><div class="tl-date">2026-04-14（昨日）</div><h4>🚨 ICCAD 2026 截止日 + 2篇新论文 + 3篇补漏（RTLSeek + UCAgent + POET）+ MLCAD 46队 + OpenClaw直播明日</h4><p>今日为 <strong>ICCAD 2026 完整论文截止日（AoE 23:59）</strong>，今日新增 2 篇预印本：<strong>SVA Generator</strong>（arXiv:2604.11044，ISEDA 2026）——AST约束注入+形式等价检查，深层SVA语义等价率比最强LLM基线平均提升22.7pp；<strong>CapBench</strong>（arXiv:2604.11202，DAC 2026）——首个多PDK后布局电容提取ML基准，61,855个3D窗口，CNN误差1.75%，GNN速度41.4×。本次同步补漏 3 篇 3月下旬论文：<strong>RTLSeek（2603.27630）</strong>——华为团队，多样性导向强化学习三阶段RTL后训练，RTLLM超越所有先前方法；<strong>UCAgent（2603.25768）</strong>——31阶段端到端IC功能验证Agent，UART/FPU 100%功能覆盖率，发现真实设计缺陷；<strong>POET（2603.19333）</strong>——差分测试驱动LLM RTL功耗进化优化，40/40设计最优功耗，100%功能正确。⚠️ 行业：MLCAD 2026 参赛 <strong>46 支队伍</strong>；DAC 2026 程序 <strong>4月17日</strong>公布（3天）；<strong>OpenClaw for FPGA 直播明日（4月16日）19:00</strong>；Agent4Chip Workshop @ ICLR 2026 <strong>9天后开幕</strong>。</p></div>
-  <div class="tl-item"><div class="tl-date">2026-04-13</div><h4>🔥 2篇新论文（AgileAssert精准断言 + R2G多视角电路图基准CVPR'26）+ ICCAD截止倒计时1天</h4><p>今日新增 2 篇论文：<strong>AgileAssert（2604.08932）</strong>——RTL语义图+Top-K关键信号+结构感知切片，断言数量减少66.68%，Token消耗降低64%，超越3个SOTA（华为等）；<strong>R2G（2604.08810，CVPR 2026）</strong>——首个RTL-to-GDSII多视角电路图基准，5种阶段感知视角，30个开源IP核（10⁶节点），节点中心视角R²>0.99，完全开源。⚠️ 会议：MLCAD 2026竞赛报名截止（41队）；Agent4Chip Workshop @ ICLR 2026 接收论文完整名单确认（23篇）；DAC 2026 程序5天后公布。</p></div>
-  <div class="tl-item"><div class="tl-date">2026-04-12</div><h4>📅 0篇（周日无更新）+ MLCAD 2026 竞赛正式启动（41支队伍）+ ICCAD 2026 截止倒计时2天 + Agent4Chip 11天</h4><p>arXiv 周日无论文发布。今日关键里程碑：<strong>MLCAD 2026 竞赛正式开赛</strong>——41支队伍参赛，LLM驱动时序优化算法发现，从OpenROAD基准出发，Alpha提交4月30日，NVIDIA GPU奖励（ASU主办，9月7-9日济州岛举行）；<strong>ICCAD 2026 完整论文截止倒计时 2 天（4月14日 AoE）</strong>，周一将爆发预印本潮；<strong>Agent4Chip Workshop @ ICLR 2026 还有 11 天</strong>（4月23日，里约，23篇论文全名单公布）；<strong>DAC 2026 程序 5 天后公布（4月17日）</strong>；IICIE 2026 EDA/IP论坛：华大九天、概伦电子等主讲国产EDA进展。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-14（昨日）</div><h4>🚨 ICCAD 2026 截止日 + 2篇新论文 + 3篇补漏（RTLSeek + UCAgent + POET）+ MLCAD 46队 + OpenClaw直播明日</h4><p>今日为 <strong>ICCAD 2026 完整论文截止日（AoE 23:59）</strong>，今日新增 2 篇预印本：<strong>SVA Generator</strong>（arXiv:2604.11044，ISEDA 2026）——AST约束注入+形式等价检查，深层SVA语义等价率比最强LLM基线平均提升22.7pp；<strong>CapBench</strong>（arXiv:2604.11202，DAC 2026）——首个多PDK后布局电容提取ML基准，61,855个3D窗口，CNN误差1.75%，GNN速度41.4×。本次同步补漏 3 篇 3月下旬论文：<strong>RTLSeek（2603.27630）</strong>——华为团队，多样性导向强化学习三阶段RTL后训练，RTLLM超越所有先前方法；<strong>UCAgent（2603.25768）</strong>——31阶段端到端IC功能验证Agent，UART/FPU 100%功能覆盖率，发现真实设计缺陷；<strong>POET（2603.19333）</strong>——差分测试驱动LLM RTL功耗进化优化，40/40设计最优功耗，100%功能正确。⚠️ 行业：MLCAD 2026 参赛 <strong>46 支队伍</strong>；DAC 2026 程序已于4月17日公布；<strong>OpenClaw for FPGA 直播明日（4月16日）19:00</strong>；Agent4Chip Workshop @ ICLR 2026 <strong>9天后开幕</strong>。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-13</div><h4>🔥 2篇新论文（AgileAssert精准断言 + R2G多视角电路图基准CVPR'26）+ ICCAD 2026 已截止（4月14日）</h4><p>今日新增 2 篇论文：<strong>AgileAssert（2604.08932）</strong>——RTL语义图+Top-K关键信号+结构感知切片，断言数量减少66.68%，Token消耗降低64%，超越3个SOTA（华为等）；<strong>R2G（2604.08810，CVPR 2026）</strong>——首个RTL-to-GDSII多视角电路图基准，5种阶段感知视角，30个开源IP核（10⁶节点），节点中心视角R²>0.99，完全开源。⚠️ 会议：MLCAD 2026竞赛报名截止（41队）；Agent4Chip Workshop @ ICLR 2026 接收论文完整名单确认（23篇）；DAC 2026 程序5天后公布。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-12</div><h4>📅 0篇（周日无更新）+ MLCAD 2026 竞赛正式启动（41支队伍）+ ICCAD 2026 已截止（4月14日） + Agent4Chip 已开幕</h4><p>arXiv 周日无论文发布。今日关键里程碑：<strong>MLCAD 2026 竞赛正式开赛</strong>——41支队伍参赛，LLM驱动时序优化算法发现，从OpenROAD基准出发，Alpha提交4月30日，NVIDIA GPU奖励（ASU主办，9月7-9日济州岛举行）；<strong>ICCAD 2026 已于4月14日截止</strong>，周一将爆发预印本潮；<strong>Agent4Chip Workshop @ ICLR 2026 已于4月23日开幕</strong>（4月23日，里约，23篇论文全名单公布）；<strong>DAC 2026 程序已公布（4月17日）</strong>；IICIE 2026 EDA/IP论坛：华大九天、概伦电子等主讲国产EDA进展。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-11（昨日）</div><h4>📅 0篇（周六无更新）+ Intel×Terafab $250亿芯片超级工厂 + IIC Shanghai EDA峰会 + Siemens×NVIDIA Veloce完整报道</h4><p>arXiv 周六无论文发布。<strong>Intel × Terafab</strong>：Intel宣布加入Elon Musk主导的Terafab项目（担任主代工合作伙伴），与Tesla/SpaceX/xAI在德克萨斯州合建$250亿AI芯片超级工厂，目标年产1TW算力（AI推理+机器人）；OpenClaw for FPGA直播预告（华南理工赖晓铮，4月16日19:00）；同济RTL-CLAW开源持续推进。</p></div>
-  <div class="tl-item"><div class="tl-date">2026-04-10（前日）</div><h4>🔥 4篇新论文 + Cognichip $6000万融资（Intel CEO跟投）+ IBM Agent Factory HLS 8.27× + ICCAD截止倒计时4天</h4><p>今日新增 4 篇论文：<strong>RL-ASIC（2604.07526）</strong>——RL驱动编译器联合优化ASIC架构/内存/工作负载，7节点自动适配，Llama 3.1 8B 在3nm达29,809 tok/s；<strong>ChatSVA（2604.02811，DAC 2026）</strong>——多智能体SVA生成，功能通过率96.12%，覆盖率提升11×新SOTA；<strong>LLM模拟电路自校准（2604.07387）</strong>——解析设计方程+单次仿真校准，100%成功；<strong>ATLAS（2604.08044）</strong>——首个硅验证3D-DRAM LLM加速器全栈仿真框架，误差≤8.57%，计划开源。⚠️ 行业重磅：Cognichip完成$6000万融资（Intel CEO跟投），AI for EDA创企2026 Q1融资总额超$4.7亿。</p></div>
-  <div class="tl-item"><div class="tl-date">2026-04-09</div><h4>🔥 2篇新论文 + DAC 2026 程序4月17日公布 + Synopsys Multiphysics-Fusion™ + Agent4Chip@ICLR 2026 倒计时（4月23日）</h4><p>今日新增 2 篇论文：<strong>Arch</strong>（arXiv:2604.05983，AI原生硬件描述语言，LL(1)文法+编译期CDC/RDC捕获+Sky130验证，专为LLM代码生成设计）；<strong>CoverAssert</strong>（arXiv:2604.06607，华为等，覆盖率驱动迭代LLM SVA断言生成，分支覆盖+9.57%/翻转覆盖+15.69%）。⚠️ 行业：DAC 2026官网披露投稿增长26.34%，55%内容覆盖AI&amp;Design，程序4月17日发布；Synopsys Multiphysics-Fusion™（EDA×Ansys多物理场融合）首个里程碑版本正式发布；Agent4Chip Workshop @ ICLR 2026（4月23-27日，里约）23篇论文即将亮相。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-10（前日）</div><h4>🔥 4篇新论文 + Cognichip $6000万融资（Intel CEO跟投）+ IBM Agent Factory HLS 8.27× + ICCAD 2026 已截止（4月14日）</h4><p>今日新增 4 篇论文：<strong>RL-ASIC（2604.07526）</strong>——RL驱动编译器联合优化ASIC架构/内存/工作负载，7节点自动适配，Llama 3.1 8B 在3nm达29,809 tok/s；<strong>ChatSVA（2604.02811，DAC 2026）</strong>——多智能体SVA生成，功能通过率96.12%，覆盖率提升11×新SOTA；<strong>LLM模拟电路自校准（2604.07387）</strong>——解析设计方程+单次仿真校准，100%成功；<strong>ATLAS（2604.08044）</strong>——首个硅验证3D-DRAM LLM加速器全栈仿真框架，误差≤8.57%，计划开源。⚠️ 行业重磅：Cognichip完成$6000万融资（Intel CEO跟投），AI for EDA创企2026 Q1融资总额超$4.7亿。</p></div>
+  <div class="tl-item"><div class="tl-date">2026-04-09</div><h4>🔥 2篇新论文 + DAC 2026 程序4月17日公布 + Synopsys Multiphysics-Fusion™ + Agent4Chip@ICLR 2026 已开幕（4月23日）</h4><p>今日新增 2 篇论文：<strong>Arch</strong>（arXiv:2604.05983，AI原生硬件描述语言，LL(1)文法+编译期CDC/RDC捕获+Sky130验证，专为LLM代码生成设计）；<strong>CoverAssert</strong>（arXiv:2604.06607，华为等，覆盖率驱动迭代LLM SVA断言生成，分支覆盖+9.57%/翻转覆盖+15.69%）。⚠️ 行业：DAC 2026官网披露投稿增长26.34%，55%内容覆盖AI&amp;Design，程序4月17日发布；Synopsys Multiphysics-Fusion™（EDA×Ansys多物理场融合）首个里程碑版本正式发布；Agent4Chip Workshop @ ICLR 2026（4月23-27日，里约）23篇论文即将亮相。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-08</div><h4>🔥 2篇新论文 + Siemens×NVIDIA万亿周期验证突破 + IIC Shanghai 2026 EDA/AI峰会 + ICCAD 2026 CAD Contest三题公布</h4><p>今日新增 2 篇论文：<strong>EEspice</strong>（arXiv:2604.03079，面向AI优化闭环的模块化并行电路仿真平台，图着色无锁并行加速最高45×，开源）；<strong>InCoder-32B-Thinking</strong>（arXiv:2604.03144，工业代码世界模型，ECoT错误驱动推理链+ICWM Verilog因果动态，CAD-Coder 84.0%）。⚠️ 行业重磅：Siemens×NVIDIA Veloce proFPGA CS推出（万亿级硅前验证周期，GPU加速验证关键里程碑）；IIC Shanghai 2026 EDA/AI峰会举行（Cadence ChipStack AI SuperAgent重磅展示）；ICCAD 2026 CAD Contest三题公布（LLM Netlist探索/回归失败分桶/SoC Floorplanning，注册5月8日截止）。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-07</div><h4>🔥 4篇新论文 + ICCAD 2026 摘要截止日 + Ricursive Intelligence $40亿融资赞助ICCAD</h4><p>今日（ICCAD 2026 摘要截止日）新增 4 篇论文：<strong>FVRuleLearner</strong>（UIUC+NVIDIA，OP-Tree规则学习，SVA功能正确性+31.17%，Agent4Chip 2026）；<strong>Computer Architecture's AlphaZero Moment</strong>（Wisconsin，体系结构研究范式转变宣言）；<strong>DeepStack</strong>（微软亚研+帝国理工，3D堆叠加速器DSE快10万倍）；<strong>3D IC热分析综述</strong>（Tennessee，物理信息ML热建模框架）。⚠️ 行业重磅：Ricursive Intelligence $3.35亿融资、$40亿估值，成ICCAD 2026核心赞助商。</p></div>
   <div class="tl-item"><div class="tl-date">2026-04-04</div><h4>今日更新：2 篇新论文（FormalRTL 形式化 RTL 合成 / ACE-RTL NVIDIA Agentic 上下文演化）+ 三大开源/行业动态</h4><p>FormalRTL（CUHK，arXiv:2603.08738）将软件参考模型作为可执行规约引导多智能体 RTL 合成+形式等价验证，解决工业级数据通路密集任务的规范模糊问题，框架将开源；ACE-RTL（NVIDIA，arXiv:2602.10218）首次实现 RTL 专用 LLM + 推理 LLM 的 Agentic 融合，CVDP 基准通过率提升 41.02%。开源：RTL-CLAW（同济+CUHK，AI智能体驱动EDA工具链）正式上线；Macro Placement Challenge 2026（$49,000 奖金赛）开放参赛。国内：合见工软 UDA 2.0（国内首款 Agentic AI EDA 平台）发布。EDA三巨头 Agentic 竞争格局深度文章发布。</p></div>
@@ -3536,9 +3555,9 @@
 <section id="tracking">
   <div class="section-title"><span class="icon">📌</span> 待追踪事项 <span class="line"></span></div>
   <ul class="todo-list">
-    <li><strong>🎉 Agent4Chip Workshop @ ICLR 2026（今日-4月27日，里约 Riocentro）正在进行</strong>：今日开幕，Google DeepMind VP 主旨演讲；重点追踪 PRO-V-R1、ASPEN、GACO、HeaRT、VeriTrace、EDAForge、ACE-RTL 等 23 篇论文的现场讨论要点；NVIDIA Mark Ho / UT Austin David Z. Pan 演讲内容；更新版 arXiv 预印本可能在 Workshop 期间发布。</li>
+    <li><strong>🎉 Agent4Chip Workshop @ ICLR 2026（4月23-27日，里约 Riocentro）已结束</strong>：今日开幕，Google DeepMind VP 主旨演讲；重点追踪 PRO-V-R1、ASPEN、GACO、HeaRT、VeriTrace、EDAForge、ACE-RTL 等 23 篇论文的现场讨论要点；NVIDIA Mark Ho / UT Austin David Z. Pan 演讲内容；更新版 arXiv 预印本可能在 Workshop 期间发布。</li>
     <li><strong>🔥 ICCAD 2026 截稿后预印本继续（4月20-27日）</strong>：今日收录 ChipCraftBrain + StructuralVerif；布局布线 GNN&amp;RL、时序优化、模拟电路等方向预计在 4月24-27日（Workshop 期间）继续有新批次；关注 ASPEN（E-Graph重写）、GACO（图增强HLS）等 Agent4Chip 入选论文的 arXiv 版本。</li>
-    <li><strong>MLCAD 2026 竞赛 Alpha 阶段（4月30日截止，倒计时 7 天）</strong>：46支队伍，LLM 驱动 OpenROAD 时序优化；ChipCraftBrain 的验证优先多智能体框架和 AgenticHWVerif 的 Token 预算分析均为参赛参考文献。</li>
+    <li><strong>MLCAD 2026 竞赛 Alpha 阶段（4月30日已截止）</strong>：46支队伍，LLM 驱动 OpenROAD 时序优化；ChipCraftBrain 的验证优先多智能体框架和 AgenticHWVerif 的 Token 预算分析均为参赛参考文献。</li>
     <li><strong>ChipCraftBrain（2604.19856）CVDP 工业基准结果</strong>：验证优先多智能体 RTL 生成，关注在 NVIDIA CVDP 完整测试集上的 pass@k 数字，与 MAGE（95.9% VerilogEval）的跨基准横向对比。</li>
     <li><strong>Synopsys × TSMC AI EDA 流程（2026-04-22）落地细节</strong>：N2/A16/A14 节点上 AgentEngineer™ 的 RTL→物理设计自动化周期实测；silicon-proven IP 是否覆盖 HBM/CoWoS 先进封装。</li>
     <li><strong>Cadence Agentic AI × TSMC（2026-04-22）落地案例</strong>：Cerebrus AI + ChipStack AI SuperAgent 在 3D-IC 场景的真实 tapeout 周期数据，与传统流程的基准比较；Cadence 按消费量计费新模式的实际客户合同进展。</li>
@@ -3552,10 +3571,22 @@
 
 <footer>
   <p>数据来源：arXiv.org · ispd.cc · siemens.com · cadence.com · synopsys.com · semi.org.cn · semiconductor-digest.com · chipagents.ai · paper.cnstock.com · semi-insights.com · nvidia.com · blogs.nvidia.com · see.tongji.edu.cn</p>
-  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后生成：2026-04-23</p>
+  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后更新：2026-04-29</p>
 </footer>
 
 <script>
+  function toggleDate(el) {
+    const dateGroup = el.closest('.date-group');
+    const body = dateGroup.querySelector('.date-body');
+    const toggle = el.querySelector('.toggle');
+    if (body.classList.contains('collapsed')) {
+      body.classList.remove('collapsed');
+      toggle.textContent = '▼';
+    } else {
+      body.classList.add('collapsed');
+      toggle.textContent = '▶';
+    }
+  }
   function toggleGroup(id) {
     const body = document.getElementById(id);
     const tog = document.getElementById('toggle-' + id);
