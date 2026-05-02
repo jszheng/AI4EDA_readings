@@ -185,16 +185,19 @@
 <header>
   <h1>🔬 AI for EDA 论文与资讯索引</h1>
   <p class="subtitle">电子设计自动化 × 人工智能 · 持续追踪 arXiv cs.AR / cs.LG · 国内外行业动态</p>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-04-29 · 涵盖 2026-03-15 → 2026-04-29</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-05-02 · 涵盖 2026-03-15 → 2026-05-02</p>
   <div class="stats">
-    <div class="stat"><div class="num">110</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">41</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">114</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">42</div><div class="label">更新批次</div></div>
     <div class="stat"><div class="num">113+</div><div class="label">行业动态</div></div>
-    <div class="stat"><div class="num" style="color:var(--accent3);">3</div><div class="label">今日新增</div></div>
+    <div class="stat"><div class="num" style="color:var(--accent3);">4</div><div class="label">今日新增</div></div>
   </div>
 </header>
 
 <nav>
+  <a href="#latest-0502">🔥 05-02</a>
+  <a href="#latest-0429">📅 04-29</a>
+  <a href="#latest-0428">📅 04-28</a>
   <a href="#overview">📋 综述</a>
   <a href="#papers">📄 论文</a>
   <a href="#news">🌍 行业动态</a>
@@ -203,6 +206,101 @@
 </nav>
 
 <div class="container">
+
+<!-- ══════════════ 2026-05-02 最新更新 ══════════════ -->
+<section id="latest-0502">
+  <div class="section-title"><span class="icon">🔥</span> 2026-05-02（周六）最新更新 <span class="badge-hot">4篇新论文</span> <span class="line"></span></div>
+
+  <!-- ── 重点推荐 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>⭐ 今日重点论文（4篇精选）</h3>
+      <span class="badge-count">精选</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.27780 · cs.AR / cs.PL · 2026-04-30</div>
+        <h3 class="abs-title">RuC: A Benchmark for HDL-Agnostic Rule Completion in Hardware Description Languages</h3>
+        <p class="abs-authors">Yao Lu, Hao Guo, Jianwu Dang, Jian Lu, Chen Luo, Yuetian Luo, Wuyue Liang, Zhao Zhang, Shu Chen, Dan Li</p>
+        <p class="abs-body">提出首个<strong>语言无关 HDL 规则补全基准 RuC</strong>，涵盖 Verilog/VHDL/SystemVerilog 三种硬件描述语言，评测 LLM 对 HDL 语法规则的理解与补全能力。构建了包含 HDL 典型规则的题库（缺失端口声明、时序逻辑错误、信号位宽不匹配等），通过 Pass@k 与准确率双维度评估 GPT-4o、Claude 3.7、DeepSeek-V3 等主流模型，揭示当前 LLM 在 HDL 规则推理上的<strong>关键瓶颈</strong>。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.27780" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-02/2604.27780-RuC-HDL-Agnostic-Rule-Completion.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">LLM + HDL Benchmark</span>
+        </div>
+        <div class="tags">
+          <span class="tag">LLM</span>
+          <span class="tag">HDL</span>
+          <span class="tag">Verilog</span>
+          <span class="tag">Rule Completion</span>
+          <span class="tag">Benchmark</span>
+        </div>
+      </div>
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.27643 · cs.AR / cs.AI · 2026-04-30</div>
+        <h3 class="abs-title">HAVEN: Automated UVM Testbench Synthesis with Large Language Models</h3>
+        <p class="abs-authors">Fikret Emin Akçelik, Emre Doğan, Sven Thümmel, Stefan Wildermann, Jürgen Teich</p>
+        <p class="abs-body">提出 <strong>HAVEN</strong> 框架，基于 LLM 自动合成符合 UVM 规范的验证测试台。利用结构化提示工程引导 LLM 生成 UVM 组件（driver/monitor/scoreboard/agent），实现模块间一致性约束。在 ISCAS-85/89 基准电路上评估，<strong>100% 编译成功率</strong>，覆盖率驱动测试台生成比人工编写代码减少 65% 工作量。有效解决 UVM 样板代码繁复的痛点。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.27643" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-02/2604.27643-HAVEN-UVM-Testbench-LLM.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">LLM + UVM Verification</span>
+        </div>
+        <div class="tags">
+          <span class="tag">LLM</span>
+          <span class="tag">UVM</span>
+          <span class="tag">Testbench</span>
+          <span class="tag">Verification</span>
+          <span class="tag">Code Generation</span>
+        </div>
+      </div>
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.27238 · cs.AR / cs.CR · 2026-04-29</div>
+        <h3 class="abs-title">SafeTune: Mitigating Data Poisoning Attacks in RTL Code Generation via GNN and XGBoost</h3>
+        <p class="abs-authors">Animesh Dey, Sayak Ray</p>
+        <p class="abs-body">针对 LLM 辅助 RTL 生成中的<strong>数据投毒安全威胁</strong>，提出 SafeTune 防御框架。利用<strong>图神经网络（GNN）</strong>提取 RTL 代码的图结构特征（AST/DFG/CFG），结合 <strong>XGBoost</strong> 分类器识别恶意植入的后门代码。在合成数据集上检测准确率超 97%，误报率低于 2%。首次将 GNN+ML 组合方法应用于 HDL 代码安全检测。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.27238" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-02/2604.27238-SafeTune-RTL-Code-Generation.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">Security + RTL</span>
+          <span style="color:var(--accent4);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent4);border-radius:8px;">GNN + XGBoost</span>
+        </div>
+        <div class="tags">
+          <span class="tag">GNN</span>
+          <span class="tag">Data Poisoning</span>
+          <span class="tag">RTL Security</span>
+          <span class="tag">LLM</span>
+          <span class="tag">Hardware Security</span>
+        </div>
+      </div>
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.26153 · cs.AR / cs.AI · 2026-04-29</div>
+        <h3 class="abs-title">RKHS: RAG-Enhanced Kernel-based Heuristic Synthesis for High-Level Synthesis</h3>
+        <p class="abs-authors">Jing Wang, Peng Liu, Qianru Zhang, Yang Liu, Huawei Li, Xiaowei Li</p>
+        <p class="abs-body">提出 <strong>RKHS 框架</strong>，将 <strong>RAG（检索增强生成）</strong> 与 LLM 结合用于高层次综合（HLS）启发式优化。构建 HLS 设计案例知识库，RAG 动态检索相似历史设计；LLM 基于检索结果生成优化调度策略，替代传统手工调整的启发式规则。在 Polybench/PolyMage 基准上平均<strong>调度长度减少 11%</strong>，相比单独 LLM 提升 6.2 个百分点，资源利用率（DSP/BRAM/LUT）持平或改善。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.26153" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-02/2604.26153-RKHS-RAG-Hardware-Design.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">RAG + HLS</span>
+        </div>
+        <div class="tags">
+          <span class="tag">RAG</span>
+          <span class="tag">HLS</span>
+          <span class="tag">LLM</span>
+          <span class="tag">Heuristic Synthesis</span>
+          <span class="tag">Scheduling Optimization</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
 
 <!-- ══════════════ 2026-04-29 最新更新 ══════════════ -->
 <section id="latest-0429">
@@ -3571,7 +3669,7 @@
 
 <footer>
   <p>数据来源：arXiv.org · ispd.cc · siemens.com · cadence.com · synopsys.com · semi.org.cn · semiconductor-digest.com · chipagents.ai · paper.cnstock.com · semi-insights.com · nvidia.com · blogs.nvidia.com · see.tongji.edu.cn</p>
-  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后更新：2026-04-29</p>
+  <p style="margin-top:6px;">AI for EDA 论文与资讯索引 · 自动更新 · 最后更新：2026-05-02</p>
 </footer>
 
 <script>
