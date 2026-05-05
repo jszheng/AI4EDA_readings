@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<section id="date-0505">
+  <div class="section-title"><span class="icon">📅</span> 2026-05-05（周二）<span class="badge-hot">2篇论文</span> <span class="line"></span></div>
+
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>📝 学术论文</h3>
+      <span class="badge-count">2篇</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2605.01836 · cs.AR · 2026-05-03</div>
+        <h3 class="abs-title">PipeRTL: Timing-Aware Pipeline Optimization at IR-Level for RTL Generation</h3>
+        <p class="abs-authors">Shuo Yin, Fangzhou Liu, Lancheng Zou, Rongliang Fu, Wenqian Zhao, Chen Bai, Tsung-Yi Ho, Yuan Xie, Bei Yu</p>
+        <p class="abs-body">提出<strong>PipeRTL</strong>——基于 CIRCT 的 IR 级流水线优化框架，用于硬件编译器中的 RTL 生成。核心创新：① 在 IR 中显式表达寄存器重定位合法性；② 使用<strong>学习型时序预测器</strong>近似下游延迟行为；③ 将时序感知的寄存器重定位形式化为<strong>全局最小费用流问题</strong>。评估开源设计，平均降低关键路径延迟、功耗和面积，为后端重定时提供更好起点。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2605.01836" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-05/2605.01836-PipeRTL-Timing-Aware-Pipeline-RTL.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">Learned Timing Predictor</span>
+          <span style="color:var(--accent4);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent4);border-radius:8px;">CIRCT</span>
+        </div>
+        <div class="tags">
+          <span class="tag">RTL Generation</span>
+          <span class="tag">Pipeline Optimization</span>
+          <span class="tag">Learned Timing Predictor</span>
+          <span class="tag">CIRCT</span>
+          <span class="tag">Min-Cost Flow</span>
+        </div>
+      </div>
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2605.01404 · cs.AR / cs.AI · 2026-05-02</div>
+        <h3 class="abs-title">AMSnet-q: Unsupervised Circuit Identification and Performance Labeling for AMS Circuits</h3>
+        <p class="abs-authors">Ze Zhang, Junzhuo Zhou, Yichen Shi, Zhuofu Tao, Rui Ji, Zhiping Yu, Quan Chen, Ting-Jung Lin, Lei He</p>
+        <p class="abs-body">提出<strong>AMSnet-q</strong>——全自动化、无监督的 AMS 电路数据集构建管线，消除人工标注需求。从原理图图像直接转换为带标签的 AMS 电路数据库，自动完成：原理图→网表转换、拓扑感知测试台生成、仿真验证。在 28nm 工艺下验证，处理 739 张原理图，自动构建 4 个电路类别、105 种拓扑、89,789 个标注器件配置的数据库。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2605.01404" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-05/2605.01404-AMSnet-q-Unsupervised-Circuit-Identification.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">AI for AMS</span>
+          <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">Unsupervised</span>
+        </div>
+        <div class="tags">
+          <span class="tag">AMS Circuit</span>
+          <span class="tag">Unsupervised Learning</span>
+          <span class="tag">Circuit Identification</span>
+          <span class="tag">Dataset Construction</span>
+          <span class="tag">Schematic-to-Netlist</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>🌐 行业动态</h3>
+      <span class="badge-count">3条</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="news-grid">
+
+        <div class="news-card">
+          <div class="src"><span class="dot"></span> SemiEngineering · 2026-04-15</div>
+          <h4>AI 对芯片设计与 EDA 工具影响日益加深：Synopsys Converge 圆桌讨论</h4>
+          <p>Synopsys Converge 会议圆桌深度报道，六位行业专家探讨 Agentic AI 趋势：Intel 指出 EDA 厂商在 Agentic AI 方面落后于客户需求；Nvidia 呼吁 EDA 工具需直接集成 LLM；UC Berkeley 指出 EDA 仿真增速远落后 AI 推理速度。AlphaEvolve 在 EDA 应用仍面临运行时挑战。</p>
+          <a href="https://semiengineering.com/ai-growing-impact-on-chip-design-and-eda-tools/" target="_blank">阅读原文 →</a>
+        </div>
+
+        <div class="news-card">
+          <div class="src"><span class="dot"></span> SEMI ESD Alliance · 2026-04-30</div>
+          <h4>ESD Alliance 2026 Executive Outlook：Agentic AI 将改变芯片设计与验证</h4>
+          <p>6月10日在 Cadence 总部举办，嘉宾来自 Breker、ChipAgents、Moores LabAI、Silimate、Verific，讨论 Agentic AI 工具主流化趋势和传统 EDA 与 AI 初创公司协作机会。</p>
+          <a href="https://www.semi.org/en/semi-press-release/semi-esd-alliance-2026-executive-outlook-explores-how-agentic-ai-will-change-chip-design-and-verification" target="_blank">阅读原文 →</a>
+        </div>
+
+        <div class="news-card">
+          <div class="src"><span class="dot"></span> 中科麒芯 · 2026-04-22</div>
+          <h4>IC Agent Hub：38 个预验证 IC AI Skills 平台</h4>
+          <p>中科麒芯发布 IC Agent Hub，内置 38 个预验证 AI Skills，覆盖芯片设计全生命周期，每个 Skill 通过 5 步严格验证，支持 Claude Code / OpenClaw / Cursor 等主流 AI Agent。个人和高校免费使用。</p>
+          <a href="https://m.163.com/news/article/KR4CC5KD0552IBJ1.html" target="_blank">阅读原文 →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>🔧 开源贡献</h3>
+      <span class="badge-count">更新</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="news-grid">
+
+        <div class="news-card">
+          <div class="src"><span class="dot"></span> VeriRAG · ASP-DAC 2026</div>
+          <h4>VeriRAG：知识图谱增强的 RAG Verilog 自动化框架</h4>
+          <p>VeriRAG 在 ASP-DAC 2026 发表，统一知识图谱与 RAG 用于智能 Verilog 自动化。实现 97% 语法正确率、100% RTL 功能准确率、95% FPV 通过率（SVAs），支持 1000+ 行代码设计。开源框架已在 GitHub 发布。</p>
+          <a href="https://github.com/HArt-Git/VeriRAG" target="_blank">GitHub →</a>
+        </div>
+
+        <div class="news-card">
+          <div class="src"><span class="dot"></span> PipeRTL · CIRCT</div>
+          <h4>PipeRTL 基于 CIRCT 开源框架实现</h4>
+          <p>PipeRTL 在 CIRCT（Circuit IR Compilers and Tools）框架上实例化，采用学习型时序预测器 + 全局最小费用流方法优化流水线寄存器重定位，为开源硬件编译器带来 IR 级时序优化能力。</p>
+          <a href="https://arxiv.org/abs/2605.01836" target="_blank">arXiv →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>

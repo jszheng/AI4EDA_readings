@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<section id="latest-0505">
+  <div class="section-title"><span class="icon">🔥</span> 2026-05-05（周二）最新更新 <span class="badge-hot">2篇新论文 + 3条行业动态</span> <span class="line"></span></div>
+
+  <!-- ── 重点推荐 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>⭐ 今日重点论文（2篇精选）</h3>
+      <span class="badge-count">精选</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2605.01836 · cs.AR · 2026-05-03</div>
+        <h3 class="abs-title">PipeRTL: Timing-Aware Pipeline Optimization at IR-Level for RTL Generation</h3>
+        <p class="abs-authors">Shuo Yin, Fangzhou Liu, Lancheng Zou, Rongliang Fu, Wenqian Zhao, Chen Bai, Tsung-Yi Ho, Yuan Xie, Bei Yu</p>
+        <p class="abs-body">提出<strong>PipeRTL</strong>——基于 CIRCT 的 IR 级流水线优化框架，用于硬件编译器中的 RTL 生成。核心创新：① 在 IR 中显式表达寄存器重定位合法性；② 使用<strong>学习型时序预测器</strong>近似下游延迟行为；③ 将时序感知的寄存器重定位形式化为<strong>全局最小费用流问题</strong>。在商业后端综合流程下评估开源设计，PipeRTL 平均降低关键路径延迟、功耗和面积，同时为后端重定时提供更好的起点。将流水线优化从后端提升到编译器 IR 层面，是 AI 辅助 RTL 优化方向的重要进展。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2605.01836" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-05/2605.01836-PipeRTL-Timing-Aware-Pipeline-RTL.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">Learned Timing Predictor</span>
+          <span style="color:var(--accent4);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent4);border-radius:8px;">CIRCT</span>
+        </div>
+        <div class="tags">
+          <span class="tag">RTL Generation</span>
+          <span class="tag">Pipeline Optimization</span>
+          <span class="tag">Learned Timing Predictor</span>
+          <span class="tag">CIRCT</span>
+          <span class="tag">Min-Cost Flow</span>
+        </div>
+      </div>
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2605.01404 · cs.AR / cs.AI · 2026-05-02</div>
+        <h3 class="abs-title">AMSnet-q: Unsupervised Circuit Identification and Performance Labeling for AMS Circuits</h3>
+        <p class="abs-authors">Ze Zhang, Junzhuo Zhou, Yichen Shi, Zhuofu Tao, Rui Ji, Zhiping Yu, Quan Chen, Ting-Jung Lin, Lei He</p>
+        <p class="abs-body">提出<strong>AMSnet-q</strong>——全自动化、无监督的 AMS 电路数据集构建管线，消除人工标注需求。从原理图图像直接转换为带标签的 AMS 电路数据库，自动完成：原理图→网表转换、拓扑感知测试台生成、仿真验证。在 28nm 工艺下验证，处理 739 张原理图，自动构建 <strong>4 个电路类别、105 种拓扑、89,789 个标注器件配置</strong>的数据库。每种电路类别仅需一次性测试台模板，实现可扩展的自动化 AMS 数据库构建，为 AI 驱动的模拟电路设计奠定数据基础。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2605.01404" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-05/2605.01404-AMSnet-q-Unsupervised-Circuit-Identification.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">AI for AMS</span>
+          <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">Unsupervised</span>
+        </div>
+        <div class="tags">
+          <span class="tag">AMS Circuit</span>
+          <span class="tag">Unsupervised Learning</span>
+          <span class="tag">Circuit Identification</span>
+          <span class="tag">Dataset Construction</span>
+          <span class="tag">Schematic-to-Netlist</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── 今日行业动态 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>🌐 今日行业动态</h3>
+      <span class="badge-count">3条</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="news-grid">
+
+        <div class="news-card">
+          <div class="src"><span class="dot"></span> SemiEngineering · 2026-04-15</div>
+          <h4>AI 对芯片设计与 EDA 工具影响日益加深：Synopsys Converge 圆桌讨论</h4>
+          <p>SemiEngineering 发布 Synopsys Converge 会议圆桌讨论深度报道，六位行业专家（Synopsys VP Thomas Andersen、Intel Sr. Director Sridhar Boinapally、AMD Corporate Fellow Alex Starr、Nvidia VP Stuart Oberman、Microsoft Partner Silvian Goldenberg、UC Berkeley 教授 Borivoje Nikolic）探讨关键趋势：<strong>① Agentic AI 是 EDA 优先方向</strong>，但 EDA 厂商落后于客户需求（Intel 评价）；② 数据中心核心指标转向<strong>性能/吉瓦</strong>；③ 当前 AI Agent 仅基于人类专家知识训练，<strong>自学习设计系统尚远未实现</strong>；④ EDA 仿真工具增速远落后 AI 推理速度，GPU 加速不足；⑤ 设计团队角色融合，团队效率大幅提升。Google DeepMind AlphaEvolve 在 EDA 应用中仍面临运行时挑战。</p>
+          <a href="https://semiengineering.com/ai-growing-impact-on-chip-design-and-eda-tools/" target="_blank">阅读原文 →</a>
+        </div>
+
+        <div class="news-card">
+          <div class="src"><span class="dot"></span> SEMI ESD Alliance · 2026-04-30</div>
+          <h4>ESD Alliance 2026 Executive Outlook：Agentic AI 将如何改变芯片设计与验证</h4>
+          <p>SEMI ESD Alliance 发布 2026 年度 Executive Outlook 活动公告，聚焦 <strong>Agentic AI 在芯片设计和验证中的变革</strong>。6月10日在 Cadence 总部（圣何塞）举办，五位嘉宾来自 Breker（CEO Dave Kelf）、<strong>ChipAgents</strong>（VP Cindy Cui）、<strong>Moores LabAI</strong>（CEO Shelly Henry）、<strong>Silimate</strong>（CEO Ann Wu）、<strong>Verific</strong>（AI 开发负责人 Vince Wong）。讨论主题：Agentic AI 工具的主流化趋势、传统 EDA 公司与 Agentic AI 初创公司的协作机会。标志着行业正式从"AI 辅助"迈向"AI 自主"的拐点。</p>
+          <a href="https://www.semi.org/en/semi-press-release/semi-esd-alliance-2026-executive-outlook-explores-how-agentic-ai-will-change-chip-design-and-verification" target="_blank">阅读原文 →</a>
+        </div>
+
+        <div class="news-card">
+          <div class="src"><span class="dot"></span> 中科麒芯 · 2026-04-22</div>
+          <h4>IC Agent Hub 发布：面向芯片设计的 38 个预验证 AI Skills 平台</h4>
+          <p>中科麒芯（中科南京智能技术研究院）发布 <strong>IC Agent Hub</strong>——专为 IC 设计工程师打造的 AI Agent 平台，内置 <strong>38 个预验证 AI Skills</strong>，覆盖芯片设计全生命周期：规格分析→RTL 生成→功能验证（UVM/SVA）→逻辑综合（SDC 生成/QoR 分析）→物理实现→签收交付。每个 Skill 均通过 5 步严格验证（格式检查→安全扫描→依赖检查→运行时检测→评估报告），提供透明安全报告。支持 Claude Code / OpenCode / OpenClaw / TRAE / Cursor 等主流 AI Agent。个人工程师和高校<strong>免费使用</strong>（每月 20 次下载），企业可私有化部署。</p>
+          <a href="https://m.163.com/news/article/KR4CC5KD0552IBJ1.html" target="_blank">阅读原文 →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 重大事件时间线 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>📅 重大事件时间线</h3>
+      <span class="badge-count">更新</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-date">2026-05-05（今日）</div><h4>2 篇新论文 + SemiEngineering AI-EDA 圆桌 + ESD Alliance Agentic AI 峰会 + IC Agent Hub 发布</h4><p>arXiv cs.AR 今日 AI4EDA 相关 2 篇：<strong>PipeRTL</strong>（2605.01836，学习型时序预测 + CIRCT 流水线优化）和 <strong>AMSnet-q</strong>（2605.01404，无监督 AMS 电路数据集自动构建）。行业动态：SemiEngineering 报道 Synopsys Converge 圆桌，Intel 指出 EDA 厂商在 Agentic AI 方面落后；SEMI ESD Alliance 宣布 6 月 10 日 Agentic AI Executive Outlook 峰会（Breker/ChipAgents/Moores LabAI/Silimate/Verific）；中科麒芯发布 IC Agent Hub（38 个预验证 IC AI Skills）。开源：VeriRAG（知识图谱 + RAG Verilog 自动化）已在 ASP-DAC 2026 发表。</p></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>
