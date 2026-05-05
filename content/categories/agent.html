@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css?v=20260505" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<section id="cat-agent">
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（8篇） <span class="line"></span></div>
+  <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
+  <div class="abstracts">
+    <div class="abs-card">
+          <span class="badge-hot">🔥 历史里程碑</span>
+          <div class="abs-title">Design Conductor — 世界首个自主设计完整可流片 CPU 的 AI Agent</div>
+          <div class="abs-meta">Verkor Team · 2026-02-06（更新 2026-03-11）· cs.AR / cs.AI</div>
+          <div class="abs-body">219 字需求文档，12 小时内全自主完成 RTL 实现 → 测试平台 → 前端调试 → 时序收敛 → GDSII 全流程。VerCore CPU：1.48 GHz（ASAP7 PDK，rv32i-zmmul），CoreMark 3261，性能相当于 2011 年 Intel Celeron SU2300。<strong>首个从规格到 GDSII 全自主构建的工作 CPU。</strong></div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.08716" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-15/2603.08716_Design_Conductor_RISCV_CPU.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title">The Dawn of Agentic EDA — Agentic EDA 首篇系统综述</div>
+          <div class="abs-meta">Zelin Zang 等 9 人 · 2025-12-29（2026-02-07 修订）· eess.SY</div>
+          <div class="abs-body">提出 AI for EDA L2（点优化）→ L3（Agentic EDA 自主编排）范式框架，认知栈分类法（感知-认知-行动），分析前端双循环语法-语义修复与后端编排器，提出 Sim-to-Silicon 基准弥合可信性差距。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2512.23189" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-15/2512.23189_Dawn_of_Agentic_EDA_Survey.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">Retrieve, Schedule, Reflect — 首个 LLM Agent 芯片 QoR 自动调度，媲美人工专家</div>
+          <div class="abs-meta">Yikang Ouyang 等 · 2026-03-14</div>
+          <div class="abs-body">RAG 从自然语言专家知识树检索优化策略 → Agent 直接与 EDA 工具交互编排 pass 顺序 → Pareto 前沿 QoR 反馈语言反思。时序优化 <strong>+10%</strong>，优化速度比 RL 基线 <strong>快 4×</strong>，QoR 媲美人工专家。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.13767" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">CODMAS — 辩证多智能体框架，关键路径延迟降低 25%（EACL 2026）</div>
+          <div class="abs-meta">Che-Ming Chang 等 7 人 · EACL 2026 接收 · RTL优化 / RTLOPT Benchmark</div>
+          <div class="abs-body"><strong>Articulator</strong>（橡皮鸭调试式逐步阐述）+ <strong>Hypothesis Partner</strong>（预测并调和偏差）引导 DCA 生成架构感知 Verilog 编辑，CEA 验证 PPA。关键路径延迟降低约 <strong>25%</strong>（流水线优化），功耗降低约 <strong>22%</strong>（时钟门控），配套 RTLOPT Benchmark（120 组 Verilog 三元组）。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.17204" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title">AutoEDA — MCP 协议微服务架构，准确率提升 9.9×，token 减少 97%</div>
+          <div class="abs-meta">Yiyi Lu 等 11 人 · Duke + UMD · 2025-08-01（v1）/ 2026-02-24（v2）</div>
+          <div class="abs-body">基于 <strong>Model Context Protocol（MCP）</strong> 构建微服务架构，本地微调 LLM 保护设计 IP 隐私，实现自然语言到完整 RTL-to-GDSII 流程端到端自动化。准确率比简单方法 <strong>提升 9.9×</strong>，token 使用量比上下文学习减少约 <strong>97%</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2508.01012" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title">Flexible LLM-Assisted EDA Framework — 支持商业工具的多域框架</div>
+          <div class="abs-meta">Cristian Sestito 等 8 人 · 2026-01-20 · eess.SY</div>
+          <div class="abs-body">不同于只支持开源工具的现有方法，本框架通用性强：生成商业 EDA 工具兼容文件，通过 PPA 报告与工具约束反馈迭代优化，覆盖模拟（OTA）/ 数字（FPGA）/ 射频（贴片天线）三大领域，均验证有效。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2601.14098" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-24/2601.14098-Flexible-LM-Assisted-EDA-Framework.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+        <span class="badge-hot">HIGH VALUE</span><span class="badge-new">NEW</span>
+        <div class="abs-title">FluxEDA: A Unified Execution Infrastructure for Stateful Agentic EDA</div>
+        <div class="abs-meta">arXiv:2603.25243 · cs.AR · 2026-03-26 · Zhengrui Chen, Zixuan Song, Yu Li, Qi Sun, Cheng Zhuo</div>
+        <div class="abs-body">随着 LLM 和自主智能体在 EDA 中的应用增多，现有方案仍基于脚本级调用，无法在真实生产环境中保持工具状态。FluxEDA 提出<strong>有状态 Agentic EDA 统一执行基础设施</strong>：托管网关接口 + 持久化后端工具实例 + 结构化请求-响应机制，支持多步骤分析、状态复用与回滚。在自动布线后<strong>时序 ECO</strong> 和<strong>标准单元子库优化</strong>两个商用后端案例中验证可行性，是 Agentic EDA 工程化落地的核心基础设施层。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.25243" target="_blank">arXiv</a>
+          <a class="local" href="./2026-04-01/2603.25243_FluxEDA.pdf">本地 PDF</a>
+        </div>
+      </div>
+
+    <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-top">战略观点</span>
+          <div class="abs-title">Computer Architecture's AlphaZero Moment：体系结构研究进入自动化发现时代</div>
+          <div class="abs-meta">Karthikeyan Sankaralingam（University of Wisconsin-Madison）· 2026-03-31 · cs.AR</div>
+          <div class="abs-body">摩尔定律终结后，架构创新成为性能提升的主要杠杆，但人类驱动的研究已无法适应新时代。人类团队每代仅能探索 50–100 种设计，采样率不足 <strong>0.001%</strong>，而设计空间已达数百万甚至数十亿量级。作者提出"<strong>自动化创意工厂</strong>"替代方案：多层评估流程每周生成并评估数千候选架构，并利用部署遥测数据形成<strong>持续反馈循环</strong>。初步结果表明，此类系统可将设计周期从数月压缩至数周，探索设计数量远超人类团队。<br><strong>核心预言</strong>：类比 AlphaZero 在棋类领域的突破，<strong>未来两年内纯人类驱动的架构研究将如同人类棋手与引擎对抗般过时</strong>。这是整个计算机体系结构领域的范式转变宣言，对 AI for EDA 研究共同体有深远影响。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.03312" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-07/2604.03312-Architecture-AlphaZero-Moment-Automated-Discovery.pdf">本地 PDF</a>
+          </div>
+        </div>
+  </div>
+</section>
+</body>
+</html>

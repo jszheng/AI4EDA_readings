@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0413')">
+      <h3>📅 2026-04-13 · 今日更新（2篇）— AgileAssert精准断言生成 + R2G电路图基准 · ICCAD 2026 已截止（4月14日） · DAC 2026 程序已公布</h3>
+      <span class="badge-count" style="border-color:var(--accent3);color:var(--accent3);">2 篇 🆕</span>
+      <span class="toggle" id="toggle-g0413">▼</span>
+    </div>
+    <div class="date-body" id="g0413">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="star">★</span> 1</td>
+            <td><strong>From Indiscriminate to Targeted: Efficient RTL Verification via Functionally Key Signal-Driven LLM Assertion Generation</strong></td>
+            <td class="cat">RTL验证 / 关键信号识别 / LLM断言生成 / ABV</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.08932" target="_blank">2604.08932</a></td>
+            <td><a class="pdf-link" href="./2026-04-13/2604.08932-AgileAssert-RTL-Verification-Key-Signal-Assertion.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><strong>R2G: A Multi-View Circuit Graph Benchmark Suite from RTL to GDSII</strong></td>
+            <td class="cat">GNN基准 / 物理设计 / 拥塞预测 / CVPR 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.08810" target="_blank">2604.08810</a></td>
+            <td><a class="pdf-link" href="./2026-04-13/2604.08810-R2G-MultiView-Circuit-Graph-Benchmark-RTL-GDSII.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="abstracts">
+        <!-- AgileAssert -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🎯 精准验证</span> AgileAssert — 关键信号驱动 LLM 断言生成，断言数量减少 66.68%</div>
+          <div class="abs-meta">arXiv: 2604.08932 &nbsp;|&nbsp; 2026-04-10 发布 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; Yonghao Wang, Hongqin Lyu 等11位作者（华为等）</div>
+          <div class="abs-body">
+            功能验证已成为 IC 开发中最耗时的阶段，而 ABV 是缩短调试时间的关键。现有 LLM 断言生成方法追求"盲目验证"——在不考虑信号关键性的情况下最大化覆盖率，而工业实践要求"<strong>最小验证成本下最大覆盖率</strong>"。<br><br>
+            本文提出 <strong>AgileAssert</strong>，关键信号驱动的断言生成框架：<br>
+            ① 构建 <strong>RTL 语义图</strong>；<br>
+            ② 通过<strong>混合评分和选择机制</strong>识别 Top-K 关键信号；<br>
+            ③ 采用<strong>结构感知的 RTL 切片</strong>为 LLM 提供精确目标和上下文；<br>
+            ④ 引导 LLM 生成<strong>紧约束精准断言</strong>，实现高效验证。<br><br>
+            <strong>核心结果（块级 + CPU 级设计验证）</strong>：断言数量减少 <strong>66.68%</strong>，输入 token 消耗降低 <strong>64%</strong>，突变错误检测率超越 3 个 SOTA 方法，同时断言使用量减少 <strong>72.74%</strong>。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.08932" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-13/2604.08932-AgileAssert-RTL-Verification-Key-Signal-Assertion.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+        <!-- R2G -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">CVPR 2026</span> R2G — 首个 RTL-to-GDSII 多视角电路图基准，解锁 GNN 物理设计研究新范式</div>
+          <div class="abs-meta">arXiv: 2604.08810 &nbsp;|&nbsp; 2026-04-09 发布 &nbsp;|&nbsp; cs.CV + cs.LG &nbsp;|&nbsp; Zewei Zhou, Jiajun Zou 等11位作者 | 开源：github.com/ShenShan123/R2G</div>
+          <div class="abs-body">
+            GNN 正越来越多地用于拥塞预测、线长估计等物理设计任务，但由于电路表示不一致和评估协议缺失，进展受阻。R2G 提出：<br>
+            ① 标准化 <strong>5 种阶段感知视角</strong>（信息对等性：每种视角编码相同属性集）；<br>
+            ② 覆盖 <strong>30 个开源 IP 核</strong>（规模达 10⁶ 节点/边）；<br>
+            ③ 端到端 <strong>DEF-to-Graph 流程</strong>（综合 → 布局 → 布线）；<br>
+            ④ 通过<strong>解耦表示选择与模型选择</strong>，消除先前基准的混淆因素。<br><br>
+            <strong>核心发现</strong>：视角选择主导模型选择（R² 差异 >0.3）；节点中心视角泛化最强；<strong>3-4 层解码器头可使 R² > 0.99</strong>。代码与数据集已开源。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.08810" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-13/2604.08810-R2G-MultiView-Circuit-Graph-Benchmark-RTL-GDSII.pdf" target="_blank">本地 PDF</a>
+            <a href="https://github.com/ShenShan123/R2G" target="_blank">GitHub 开源</a>
+          </div>
+        </div>
+      </div>
+
+      <!--
+</body>
+</html>

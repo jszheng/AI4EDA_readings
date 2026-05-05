@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css?v=20260505" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<section id="cat-verify">
+  <div class="section-title"><span class="icon">✅</span> 功能验证（10篇） <span class="line"></span></div>
+  <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
+  <div class="abstracts">
+    <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.22285 · cs.AR / cs.SE · 2026-04-27</div>
+        <h3 class="abs-title">AutoINV: Automated Invariant Generation Framework for Formal Verification on HLS Designs</h3>
+        <p class="abs-authors">Xiaofeng Zhou, Linfeng Du, Guangyu Hu, Sharad Sinha, Hongce Zhang, Wei Zhang</p>
+        <p class="abs-body">利用 HLS 流程中的高级设计特征构建辅助断言引导模型检查器加速验证。开发迭代证明机制重用证明信息选择最优辅助断言集合，相比 vanilla model checking <strong>最高加速 6.05×</strong>（平均 2.23×）。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.22285" target="_blank">📄 arXiv</a>
+          <span style="color:var(--accent4);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent4);border-radius:8px;">HLS + Formal Verification</span>
+        </div>
+      </div>
+
+    <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">QiMeng-CodeV-SVA — DAC 2026，SVA 生成超越 GPT-5 / DeepSeek-R1</div>
+          <div class="abs-meta">Yutong Wu 等 · 中科院计算所 QiMeng 团队 · DAC 2026 接收</div>
+          <div class="abs-body">RTL 引导双向数据合成解决 SVA 数据稀缺问题，SVA↔自然语言双向翻译一致性机制筛选高质量数据。CodeV-SVA-14B 在 NL2SVA-Human 达 Func.@1 <strong>75.8%</strong>，NL2SVA-Machine 达 <strong>84.0%</strong>，<strong>匹配或超越 GPT-5 和 DeepSeek-R1</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.14239" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+        <span class="badge-new">NEW</span>
+        <div class="abs-title">AutoPDR: Circuit-Aware Solver Configuration Prediction for Hardware Model Checking</div>
+        <div class="abs-meta">arXiv:2603.25048 · cs.AR · 2026-03-26 · Guangyu Hu, Chen Chen et al.</div>
+        <div class="abs-body">PDR（Property Directed Reachability）算法广泛用于硬件形式验证，但性能高度依赖参数配置。AutoPDR 通过<strong>图学习</strong>结合电路图表示和静态结构特征，预测特定电路的最优 PDR 求解器配置。引入专家知识约束剪枝，搜索空间缩减约 <strong>78%</strong>；实验显示 AutoPDR 在多个基准测试中显著优于默认配置，能自动识别电路特定参数模式并选择最佳求解策略，开创了 GNN 辅助形式验证调优新方向。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.25048" target="_blank">arXiv</a>
+          <a class="local" href="./2026-04-01/2603.25048_AutoPDR.pdf">本地 PDF</a>
+        </div>
+      </div>
+
+    <div class="abs-card">
+          <span class="badge-new">AI硬件安全</span>
+          <div class="abs-title">AI辅助硬件安全验证综述（VTS 2026）：覆盖资产识别→威胁建模→形式验证全流程，NVDLA案例研究</div>
+          <div class="abs-meta">Khan Thamid Hasan 等 6 位作者 · 2026-04-02 · cs.CR · <strong>IEEE VTS 2026</strong></div>
+          <div class="abs-body">随着硬件系统复杂度持续提升，AI/LLM开始自动化验证工作流的多个阶段：<strong>资产识别、威胁建模、安全测试计划生成、仿真驱动分析、形式验证、防护措施推理</strong>。本综述系统梳理相关进展，以开源 NVDLA 为案例研究，强调 AI 输出须经仿真证据和形式推理验证。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.01572" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-06/2604.01572_AI_Hardware_Security_Verification_Survey.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-top">DAC 2026 · 功能覆盖 +11×</span>
+          <div class="abs-title">ChatSVA（DAC 2026）：多智能体 SVA 生成，语法通过率 98.66%，功能通过率 96.12%，相比前 SOTA 覆盖率提升 11×</div>
+          <div class="abs-meta">Lik Tung Fu, Jie Zhou 等 9 位作者 · 2026-04-03 · cs.AR / cs.AI · <strong>DAC 2026 接收</strong></div>
+          <div class="abs-body">ChatSVA 端到端多智能体框架，核心 <strong>AgentBridge 平台</strong>系统性生成高纯度 SVA 数据集。24 个 RTL 设计实验：语法通过率 <strong>98.66%</strong>，功能通过率 <strong>96.12%</strong>，每设计 SVA <strong>139.5</strong> 条，功能覆盖率 <strong>82.50%</strong>；相比前 SOTA 功能正确性 <strong>+33.3 个百分点</strong>，功能覆盖率 <strong>+11×</strong>。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.02811" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-06/2604.02811_ChatSVA_SVA_Generation_Hardware_Verification.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">Agent4Chip 2026 · VTS 2026</span><span class="badge-top">新 SOTA</span>
+          <div class="abs-title">FVRuleLearner：基于操作符推理树（OP-Tree）的形式验证规则学习，功能正确性提升 31.17%</div>
+          <div class="abs-meta">Lily Jiaxin Wan, Chia-Tung Ho, Yunsheng Bai, Cunxi Yu, Deming Chen, Haoxing Ren（UIUC + NVIDIA Research）· 2026-03-06 · cs.AR + cs.AI + cs.SE · <strong>Agent4Chip Workshop @ ICLR 2026</strong></div>
+          <div class="abs-body">LLM 在形式验证（FV）任务中的 NL-to-SVA 问题仍面临训练数据稀缺和 SVA 操作符内在复杂性的挑战。FVRuleLearner 提出基于新型<strong>操作符推理树（OP-Tree）</strong>的操作符级规则学习框架，将 SVA 生成建模为结构化、可解释的推理过程。分为两个互补阶段：<strong>（1）训练</strong>：构建 OP-Tree，将 NL-to-SVA 对齐分解为细粒度操作符感知问题，组合推理路径生成正确断言；<strong>（2）测试</strong>：执行操作符对齐检索，从已学习 OP-Tree 获取相关推理痕迹，为未见规约生成新规则。<br><strong>关键结果</strong>：与现有最优基线相比，语法正确性平均提升 <strong>+3.95%</strong>，功能正确性平均提升 <strong>+31.17%</strong>；通过功能分类分析，成功将不同操作符类别的 SVA 功能错误平均减少 <strong>70.33%</strong>，确立了 FV 领域特定推理和规则学习新范式。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.03245" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-07/2604.03245-FVRuleLearner-SVA-Formal-Verification-OP-Tree.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">SVA验证 · 覆盖率驱动</span>
+          <div class="abs-title">CoverAssert：覆盖率驱动的迭代式 LLM SVA 断言生成，分支覆盖 +9.57%、翻转覆盖 +15.69%</div>
+          <div class="abs-meta">Yonghao Wang, Yang Yin, Hongqin Lyu 等 10 位作者（华为等）· 2026-04-08 · cs.AR</div>
+          <div class="abs-body">LLM 可根据自然语言规约生成 SystemVerilog Assertion（SVA），但单次生成因缺乏对功能覆盖率的感知，往往产生同质化断言，遗漏关键行为点。<br>
+          CoverAssert 提出三步迭代框架：<br>
+          ① <strong>语法-语义聚类</strong>：对已生成断言提取 AST 结构特征 + 语义嵌入，聚类映射至规约功能点，识别"已覆盖"与"未覆盖"功能区域；<br>
+          ② <strong>覆盖率反馈闭环</strong>：将功能覆盖率仿真结果作为引导信号，提示 LLM 优先生成针对未覆盖功能点的新断言；<br>
+          ③ <strong>兼容现有框架</strong>：可作为插件与 AssertLLM、Spec2Assertion 等集成，无需改变底层 LLM。<br>
+          <strong>实验结果（4个开源设计）</strong>：分支覆盖率 <strong>+9.57%</strong>，语句覆盖率 <strong>+9.64%</strong>，翻转覆盖率 <strong>+15.69%</strong>（相对基线平均）。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.06607" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-09/2604.06607-CoverAssert-LLM-Assertion-Generation-Coverage.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🎯 形式验证</span> SVA Generator（ISEDA 2026）— AST约束注入 + 形式等价检查，深层SVA语义等价率平均提升 22.7 pp</div>
+          <div class="abs-meta">arXiv: 2604.11044 &nbsp;|&nbsp; 2026-04-13 发布 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; Lik Tung Fu, Qihang Wang, Shaokai Ren 等7位作者 &nbsp;|&nbsp; ISEDA 2026</div>
+          <div class="abs-body">
+            功能验证占 IC 开发成本主导，SVA 手工编写耗时且容易出错；直接提示通用 LLM 则语法无效或语义不正确，缺乏高质量领域训练数据使问题加剧。<br><br>
+            SVA Generator 提出<strong>以数据为核心的自动化框架</strong>：① 基于 AST 的约束注入保证结构一致性；② 自动化监督管道通过去重和约束检查减少幻觉；③ 引入按 AST 深度分层的评估基准（D2–D4），使用<strong>形式化属性等价性检查</strong>（双向蕴含关系）单独量化语义正确性，将语义评估与语法有效性完全解耦。<br><br>
+            <strong>关键结果</strong>：在 D2–D4 层级上语义等价率（SER）比最强通用 LLM 基线平均提升 <strong>22.7 个百分点</strong>（D2 +24.5pp，D3 +26.0pp，D4 +17.5pp），语法通过率相当。<br><br>
+            <strong>亮点</strong>：今日为 ICCAD 2026 截稿日，该论文在截稿前一天（4月13日）发布；与 ChatSVA（DAC'26）、CoverAssert、AgileAssert、FVRuleLearner、QiMeng-CodeV-SVA 共同构成 2026 年 AI 驱动 <strong>SVA 生成六强格局</strong>，SVA 验证成为 2026 最活跃 EDA 细分方向之一。形式等价检查评估方法论是本文最具参考价值的创新点。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.11044" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-14/2604.11044-SVAGenerator-LLM-SVA-Generation-ISEDA2026.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🔬 功能验证</span> UCAgent — 31阶段端到端 IC 功能验证 Agent，UART/FPU 达 100% 功能覆盖率，发现未知缺陷</div>
+          <div class="abs-meta">arXiv: 2603.25768 &nbsp;|&nbsp; 2026-03-26 发布 &nbsp;|&nbsp; cs.SE + cs.AR + cs.AI &nbsp;|&nbsp; Junyue Wang 等9位作者</div>
+          <div class="abs-body">
+            功能验证占 IC 开发生命周期约 <strong>70%</strong> 时间，LLM 应用面临三大障碍：① 生成 SystemVerilog 验证代码准确率低；② 多步验证工作流脆弱；③ 规格说明-覆盖模型-测试用例一致性难以维护。<br><br>
+            UCAgent 三大机制：① <strong>纯 Python 验证环境</strong>（Picker + Toffee 工具链），完全规避 LLM 生成 SystemVerilog 代码的不可靠性；② <strong>31阶段细粒度验证工作流</strong>——可配置流程，每阶段配备自动检查器；③ <strong>VCLM 验证一致性标注机制</strong>——对 LLM 生成内容进行层级标注，提升可靠性与可追溯性。<br><br>
+            <strong>关键结果</strong>：UART、FPU（浮点单元）、整数除法器：代码覆盖率最高 <strong>98.5%</strong>、功能覆盖率最高 <strong>100%</strong>；在真实工业设计中发现了此前未被识别的缺陷。<br><br>
+            <strong>亮点</strong>：验证工作流精细化（31阶段）是核心工程亮点，与 AgileAssert 的"精准断言生成"和 CoverAssert 的"覆盖率驱动断言迭代"形成差异化互补——UCAgent 专注<strong>验证流程自动化</strong>，而非断言质量优化本身。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.25768" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-03-26/2603.25768-UCAgent-EndToEnd-IC-Functional-Verification.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">🔍 验证分析</span> Agentic HW Verification Token分析（2026-04-17）— 量化覆盖率上限类型，专业化智能体达 95-99% 覆盖率，Token 降低 4-13 倍</div>
+          <div class="abs-meta">arXiv: 2604.15657 &nbsp;|&nbsp; 2026-04-17 投稿 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; 作者：Vihaan Patel, Vidya Chhabria, Aman Arora</div>
+          <div class="abs-body">
+            基于 LLM 的编码智能体为自动化激励生成提供了有前景的方法，但现有流程未系统分析哪些覆盖率漏洞难以填补、推理时计算资源如何分配。本文提出<strong>两层智能体框架</strong>（通用 Codex + 专业化 LangGraph），并构建覆盖率上限分类法：<br><br>
+            ① <strong>方法论受限上限</strong>：集成硬件边界、不可行边界、死代码（这些是 LLM 无法覆盖的根本性限制）；<br>
+            ② <strong>推理边界</strong>：协议排序、多模块流水线预热、窄时序条件（这些可通过专业化改善）；<br>
+            ③ <strong>6 类 Token 追踪</strong>：系统提示/设计理解/激励生成/覆盖率反馈/错误恢复/智能体开销，揭示专业化如何重定向 Token 分配。<br><br>
+            <strong>关键结果</strong>：增强系统达到 <strong>95-99%</strong> 覆盖率，Token 使用量减少 <strong>4-13 倍</strong>，收敛速度提升 <strong>2-4 倍</strong>。<br><br>
+            <strong>亮点</strong>：首个对 Agentic 验证的 Token 经济学进行系统分析的工作；覆盖率上限分类法对评估任何 LLM 驱动验证系统的极限都具有通用价值；指导未来智能体设计在"投入更多 token"与"人工升级"之间做出正确选择。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.15657" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-22/AgenticHWVerif_TokenAlloc_2604.15657v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0420')">
+      <h3>📅 2026-04-20 · 今日更新（4篇 🆕）— HYPERHEURIST · Spec2Cov · 数据高效 Verilog 微调 · VeriCWEty | Agent4Chip Workshop 已开幕（4月23日）</h3>
+      <span class="badge-count" style="border-color:var(--accent3);color:var(--accent3);">4 篇 🆕</span>
+      <span class="toggle" id="toggle-g0420">▼</span>
+    </div>
+    <div class="date-body" id="g0420">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="star">★</span> 1</td>
+            <td><strong>HYPERHEURIST: Hypergraph-Based Hyper-Heuristic LLM Engine for VLSI Physical Design Optimization</strong></td>
+            <td class="cat">物理设计 / 超图超启发式 / LLM引擎 / DAC+ICCAD双向</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.15642" target="_blank">2604.15642</a></td>
+            <td><a class="pdf-link" href="./2026-04-20/HYPERHEURIST_2604.15642v1.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td><span class="star">★</span> 2</td>
+            <td><strong>Spec2Cov: LLM-Based Coverage-Directed Functional Verification for RTL Designs</strong></td>
+            <td class="cat">功能验证 / 覆盖率导向 / LLM激励生成 / 9.47%冗余消除</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.15606" target="_blank">2604.15606</a></td>
+            <td><a class="pdf-link" href="./2026-04-20/Spec2Cov_2604.15606v1.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><strong>Data-Efficient Fine-Tuning of LLMs for Verilog Generation: Synthetic Data and Small-Scale Pretraining</strong></td>
+            <td class="cat">LLM微调 / 数据高效 / Verilog生成 / 合成数据增强</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.15388" target="_blank">2604.15388</a></td>
+            <td><a class="pdf-link" href="./2026-04-20/Verilog-DataEffFT_2604.15388v1.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong>VeriCWEty: LLM-Based RTL Security Vulnerability Detection Framework</strong></td>
+            <td class="cat">RTL安全 / CWE漏洞检测 / LLM / 优于GPT-4o</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.15375" target="_blank">2604.15375</a></td>
+            <td><a class="pdf-link" href="./2026-04-20/VeriCWEty_2604.15375v1.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="abstracts">
+        <!-- HYPERHEURIST -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🏗️ 物理设计</span> HYPERHEURIST（2026-04-21）— 超图超启发式 LLM 引擎，统一驱动 VLSI 布局布线全流程优化</div>
+          <div class="abs-meta">arXiv: 2604.15642 &nbsp;|&nbsp; 2026-04-20 收录 &nbsp;|&nbsp; cs.AR + cs.AI &nbsp;|&nbsp; 华南理工大学 / 香港大学</div>
+          <div class="abs-body">
+            现有 EDA 超启发式方法（如 AOS/LLaMEA）依赖单一 Python 求解器，难以捕获 VLSI 物理设计问题的<strong>超图结构</strong>（net 连接多 pin）及多层次设计规则。<br><br>
+            HYPERHEURIST 提出<strong>超图感知超启发式 LLM 引擎</strong>：① <strong>超图编码器</strong>将网表结构映射为 LLM 可处理的图语言表示；② <strong>双层超启发式生成</strong>——外层 LLM 生成元启发式框架，内层 LLM 迭代进化算子；③ <strong>工具接口适配层</strong>，支持直接驱动商业 EDA 工具（Cadence / Synopsys）和开源工具（OpenROAD）。<br><br>
+            <strong>关键结果</strong>：在 DAC 2012/ISPD 2011/ICCAD 2014 标准基准上，Placement WL 和 Routing DRC 多目标指标全面优于现有基线（含 DREAMPlace、AutoDMP）。<br><br>
+            <strong>亮点</strong>：超图感知是区分 VLSI 问题与一般图优化的关键，这是首个将超图结构明确编入 LLM 优化框架的工作；DAC+ICCAD 双重场景验证，工业可用性强。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.15642" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-20/HYPERHEURIST_2604.15642v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+        <!-- Spec2Cov -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">✅ 功能验证</span> Spec2Cov（2026-04-21）— LLM 驱动规范到覆盖率的闭环验证，消除 9.47% 冗余激励，覆盖率 +11.2%</div>
+          <div class="abs-meta">arXiv: 2604.15606 &nbsp;|&nbsp; 2026-04-20 收录 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; 上海交通大学 / 华为</div>
+          <div class="abs-body">
+            工业级 RTL 功能验证中，覆盖率驱动验证（CDV）的核心痛点：① 传统激励生成对覆盖分析盲目，导致大量冗余仿真；② 规范文本到测试场景转换需要大量人工。<br><br>
+            Spec2Cov 构建<strong>规范到覆盖率 LLM 闭环框架</strong>：① <strong>规范分析智能体</strong>解析自然语言 RTL 规范，提取可量化的功能意图（接口时序、状态机转移、数据通路规约）；② <strong>覆盖率反馈驱动激励生成</strong>——迭代分析未覆盖分支，定向生成新测试向量；③ <strong>冗余过滤层</strong>，主动识别并剔除已高覆盖区域的冗余激励。<br><br>
+            评估基准：OpenTitan（工业级 RISC-V SoC）、ITC99 基准集。<br><br>
+            <strong>关键结果</strong>：覆盖率提升 +11.2%，冗余激励减少 9.47%，平均验证效率提升 2.3×。<br><br>
+            <strong>亮点</strong>：上海交通大学 + 华为合作；SVAGenerator（ISEDA 2026，4月14日）关注 SVA 断言生成，Spec2Cov 关注覆盖率驱动验证，两者形成验证智能化的互补链路；直接面向工业级 SoC 验证场景，是近期验证方向最具工程价值的预印本之一。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.15606" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-20/Spec2Cov_2604.15606v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+        <!-- Data-Efficient Verilog Fine-Tuning -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">🧠 LLM微调</span> 数据高效 Verilog LLM 微调（2026-04-21）— 合成数据 + 小规模预训练，7B 参数模型达 34B 质量</div>
+          <div class="abs-meta">arXiv: 2604.15388 &nbsp;|&nbsp; 2026-04-20 收录 &nbsp;|&nbsp; cs.AR + cs.CL &nbsp;|&nbsp; Technion（以色列理工学院）</div>
+          <div class="abs-body">
+            专用 Verilog LLM（VerilogEval 基准）训练面临数据稀缺困境：公开高质量 Verilog 代码远少于软件代码，大规模预训练成本高昂。<br><br>
+            本文系统研究<strong>数据高效 Verilog LLM 训练策略</strong>：① <strong>合成数据生成管道</strong>——利用强 LLM 自动生成多样化的 Verilog 问题-答案对，覆盖组合/时序逻辑、FSM、算术模块等类型；② <strong>小规模持续预训练</strong>（Continued Pretraining on Verilog Corpus）在通用 LLM 上注入 Verilog 领域知识；③ 系统消融分析：数据量、数据质量、预训练策略对微调效果的独立贡献。<br><br>
+            <strong>关键结果</strong>（VerilogEval benchmark）：7B 参数模型经数据高效训练后，在功能正确性（pass@1）上<strong>超越 34B 规模的通用基础模型</strong>；合成数据比真实数据量扩展后效果进一步显著提升。<br><br>
+            <strong>亮点</strong>：以色列理工学院；提出的合成数据生成方法可直接应用于 RTLCoder、VerilogCoder 等现有框架；7B 超越 34B 的参数效率结论对资源受限团队（如高校、初创公司）具有重要实践价值。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.15388" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-20/Verilog-DataEffFT_2604.15388v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+        <!-- VeriCWEty -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">🔒 RTL安全</span> VeriCWEty（2026-04-21）— 基于 LLM 的 RTL CWE 安全漏洞检测框架，超越 GPT-4o 基线</div>
+          <div class="abs-meta">arXiv: 2604.15375 &nbsp;|&nbsp; 2026-04-20 收录 &nbsp;|&nbsp; cs.CR + cs.AR &nbsp;|&nbsp; 佛罗里达大学</div>
+          <div class="abs-body">
+            硬件安全 CWE（Common Weakness Enumeration）漏洞——如信息泄露、权限提升、侧信道时序窗口——在 RTL 级别极难自动检测，现有静态分析工具依赖人工规则，覆盖率有限。<br><br>
+            VeriCWEty 提出<strong>LLM 驱动的 RTL CWE 安全漏洞检测框架</strong>：① 将 MITRE CWE 数据库中硬件相关条目（CWE-1190、1231、1233 等）转化为<strong>结构化检测提示（Structured Detection Prompts）</strong>；② 结合<strong>代码上下文窗口扩展</strong>技术处理大型 RTL 设计；③ 双轨输出——漏洞定位（行级）+ 修复建议生成；④ 在 <strong>CWE-Bench-Hardware</strong>（首个硬件 CWE 评估数据集）上全面评估。<br><br>
+            <strong>关键结果</strong>：VeriCWEty 在 CWE-Bench-Hardware 上超越 GPT-4o 零样本基线，在 CWE-1190（信息曝露）和 CWE-1231（不当寄存器锁定）类型上 F1 分数分别提升 +18.3% 和 +22.7%。<br><br>
+            <strong>亮点</strong>：佛罗里达大学硬件安全团队；是近年 RTL 安全方向继 RTLSV（形式化）、TrustLLM-HW（验证）之后，专注 CWE 分类检测的新方向；为芯片安全认证流程（CC/FIPS）提供了 LLM 增强的自动化路径。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.15375" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-20/VeriCWEty_2604.15375v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+      </div><!-- end .abstracts -->
+    </div><!-- end .date-body -->
+  </div><!-- end .date-group 2026-04-20 -->
+</body>
+</html>

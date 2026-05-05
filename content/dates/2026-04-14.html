@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0414')">
+      <h3>📅 2026-04-14 · 今日更新（2篇 + 补漏3篇）— SVA Generator（ISEDA'26）+ CapBench（DAC'26）+ RTLSeek + UCAgent + POET · ICCAD 2026截止日</h3>
+      <span class="badge-count" style="border-color:var(--accent3);color:var(--accent3);">5 篇 🆕</span>
+      <span class="toggle" id="toggle-g0414">▼</span>
+    </div>
+    <div class="date-body" id="g0414">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="star">★</span> 1</td>
+            <td><strong>Automated SVA Generation with LLMs</strong></td>
+            <td class="cat">RTL验证 / SVA生成 / AST约束注入 / ISEDA 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.11044" target="_blank">2604.11044</a></td>
+            <td><a class="pdf-link" href="./2026-04-14/2604.11044-SVAGenerator-LLM-SVA-Generation-ISEDA2026.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><strong>CapBench: A Multi-PDK Dataset for Machine-Learning-Based Post-Layout Capacitance Extraction</strong></td>
+            <td class="cat">物理设计 / 寄生参数提取 / ML基准 / DAC 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.11202" target="_blank">2604.11202</a></td>
+            <td><a class="pdf-link" href="./2026-04-14/2604.11202-CapBench-MultiPDK-Capacitance-Extraction-DAC2026.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="abstracts">
+        <!-- SVA Generator -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🎯 形式验证</span> SVA Generator（ISEDA 2026）— AST约束注入 + 形式等价检查，深层SVA语义等价率平均提升 22.7 pp</div>
+          <div class="abs-meta">arXiv: 2604.11044 &nbsp;|&nbsp; 2026-04-13 发布 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; Lik Tung Fu, Qihang Wang, Shaokai Ren 等7位作者 &nbsp;|&nbsp; ISEDA 2026</div>
+          <div class="abs-body">
+            功能验证占 IC 开发成本主导，SVA 手工编写耗时且容易出错；直接提示通用 LLM 则语法无效或语义不正确，缺乏高质量领域训练数据使问题加剧。<br><br>
+            SVA Generator 提出<strong>以数据为核心的自动化框架</strong>：① 基于 AST 的约束注入保证结构一致性；② 自动化监督管道通过去重和约束检查减少幻觉；③ 引入按 AST 深度分层的评估基准（D2–D4），使用<strong>形式化属性等价性检查</strong>（双向蕴含关系）单独量化语义正确性，将语义评估与语法有效性完全解耦。<br><br>
+            <strong>关键结果</strong>：在 D2–D4 层级上语义等价率（SER）比最强通用 LLM 基线平均提升 <strong>22.7 个百分点</strong>（D2 +24.5pp，D3 +26.0pp，D4 +17.5pp），语法通过率相当。<br><br>
+            <strong>亮点</strong>：今日为 ICCAD 2026 截稿日，该论文在截稿前一天（4月13日）发布；与 ChatSVA（DAC'26）、CoverAssert、AgileAssert、FVRuleLearner、QiMeng-CodeV-SVA 共同构成 2026 年 AI 驱动 <strong>SVA 生成六强格局</strong>，SVA 验证成为 2026 最活跃 EDA 细分方向之一。形式等价检查评估方法论是本文最具参考价值的创新点。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.11044" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-14/2604.11044-SVAGenerator-LLM-SVA-Generation-ISEDA2026.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+        <!-- CapBench -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-top">📊 ML基准</span> CapBench（DAC 2026）— 首个多PDK后布局电容提取ML基准，CNN误差1.75%、GNN速度41.4×</div>
+          <div class="abs-meta">arXiv: 2604.11202 &nbsp;|&nbsp; 2026-04-13 发布 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; Hector R. Rodriguez, Jiechen Huang, Wenjian Yu &nbsp;|&nbsp; DAC 2026（第63届 ACM/IEEE）</div>
+          <div class="abs-body">
+            后布局寄生参数提取（尤其电容）是决定芯片最终 PPA 的关键步骤，机器学习方法受限于缺乏高质量公开数据集。CapBench 构建<strong>首个完全可复现的多 PDK 电容提取数据集</strong>：<br><br>
+            基于开源设计（单核 CPU、SoC、媒体加速器），经 14 次独立 OpenROAD 流程完成布局布线，覆盖 <strong>ASAP7、NanGate45、Sky130HD</strong> 三种工艺节点，提取 <strong>61,855 个三维版图窗口</strong>（三种尺寸等级支持迁移学习），电容标注由 RWCap 生成并经 Raphael 工业验证（总电容 <strong>MAE 仅 0.64%</strong>），同时提供密度图、图表示、点云三种数据格式。<br><br>
+            <strong>关键结果</strong>：系统评测 10 种 ML 架构：CNN 误差最低（<strong>1.75%</strong>），GNN 速度最快（快达 <strong>41.4×</strong>，但误差 10.2%），揭示精度-速度核心权衡。数据集与代码完全开源。<br><br>
+            <strong>亮点</strong>：DAC 2026 接收；全链路依托 OpenROAD 生成数据，与 R2G（CVPR 2026）形成互补，共同推进物理设计 ML 数据基础设施建设。对研究 GNN for Physical Design 的团队，CapBench 是今年 DAC 的重要数据集论文。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.11202" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-14/2604.11202-CapBench-MultiPDK-Capacitance-Extraction-DAC2026.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+      </div><!-- abstracts -->
+    </div><!-- date-body g0414 -->
+  </div><!-- date-group -->
+
+  <!-- ── 2026-03 补漏批次 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0329')">
+      <h3>📅 2026-03-29 / 03-26 / 03-19 · 补漏批次（3篇）— RTLSeek多样性RL + UCAgent验证Agent + POET进化功耗优化</h3>
+      <span class="badge-count" style="border-color:var(--accent2);color:var(--accent2);">3 篇 ↺</span>
+      <span class="toggle" id="toggle-g0329">▼</span>
+    </div>
+    <div class="date-body" id="g0329">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="star">★</span> 1</td>
+            <td><strong>RTLSeek: Boosting the LLM-Based RTL Generation with Multi-Stage Diversity-Oriented Reinforcement Learning</strong></td>
+            <td class="cat">RTL生成 / 多样性强化学习 / 三阶段后训练 / RTLLM基准</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.27630" target="_blank">2603.27630</a></td>
+            <td><a class="pdf-link" href="./2026-03-29/2603.27630-RTLSeek-RL-RTL-Generation-Diversity.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><strong>UCAgent: An End-to-End Agent for Block-Level Functional Verification</strong></td>
+            <td class="cat">RTL验证 / 端到端Agent / 31阶段工作流 / Picker-Toffee</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.25768" target="_blank">2603.25768</a></td>
+            <td><a class="pdf-link" href="./2026-03-26/2603.25768-UCAgent-EndToEnd-IC-Functional-Verification.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><strong>POET: Power-Oriented Evolutionary Tuning for LLM-Based RTL PPA Optimization</strong></td>
+            <td class="cat">RTL PPA优化 / 进化调优 / 差分测试 / 功耗优化</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.19333" target="_blank">2603.19333</a></td>
+            <td><a class="pdf-link" href="./2026-03-19/2603.19333-POET-Power-Oriented-Evolutionary-RTL-PPA.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="abstracts">
+        <!-- RTLSeek -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🔧 RTL生成</span> RTLSeek — 多样性导向三阶段强化学习 RTL 后训练范式，RTLLM 基准超越所有先前方法</div>
+          <div class="abs-meta">arXiv: 2603.27630 &nbsp;|&nbsp; 2026-03-29 发布 &nbsp;|&nbsp; cs.AR + cs.LG &nbsp;|&nbsp; Xinyu Zhang, Zhiteng Chao, Yonghao Wang, Huawei Li 等（华为团队） &nbsp;|&nbsp; 开源</div>
+          <div class="abs-body">
+            LLM 辅助 RTL 生成的核心瓶颈：高质量功能可验证训练数据稀缺，且现有后训练方法对每个设计规格只生成<strong>单一 HDL 实现</strong>，缺乏对多设计目标 RTL 变体的感知能力。<br><br>
+            RTLSeek 提出后训练范式：① <strong>多样性导向强化学习（DORL）</strong>——基于规则的 RL，同时提升 RTL 生成的正确性和多样性；② <strong>多样性中心多目标奖励调度</strong>——融合专家知识与 EDA 工具反馈（仿真/综合结果）构建综合奖励信号；③ <strong>三阶段训练框架</strong>——最大化有限高质量数据的利用率。<br><br>
+            <strong>关键结果</strong>：在 <strong>RTLLM 基准</strong>上超越所有先前方法；消融实验证实多样性探索是质量提升的核心驱动力；验证了 <strong>"生成越多，效果越好"</strong> 原则——鼓励更广的设计空间探索能持续提升最终质量。数据集、源码、模型权重完全开源。<br><br>
+            <strong>亮点</strong>：将 RL 多样性探索原则引入 RTL 微调，是继 CODMAS（辩证多智能体结构化优化）、VeriAgent（进化记忆 PPA 闭环）之后 2026 年 RTL 后训练的第三条路线；与 POET（进化功耗优化）在"进化/多样性"思路上形成呼应。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.27630" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-03-29/2603.27630-RTLSeek-RL-RTL-Generation-Diversity.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+        <!-- UCAgent -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🔬 功能验证</span> UCAgent — 31阶段端到端 IC 功能验证 Agent，UART/FPU 达 100% 功能覆盖率，发现未知缺陷</div>
+          <div class="abs-meta">arXiv: 2603.25768 &nbsp;|&nbsp; 2026-03-26 发布 &nbsp;|&nbsp; cs.SE + cs.AR + cs.AI &nbsp;|&nbsp; Junyue Wang 等9位作者</div>
+          <div class="abs-body">
+            功能验证占 IC 开发生命周期约 <strong>70%</strong> 时间，LLM 应用面临三大障碍：① 生成 SystemVerilog 验证代码准确率低；② 多步验证工作流脆弱；③ 规格说明-覆盖模型-测试用例一致性难以维护。<br><br>
+            UCAgent 三大机制：① <strong>纯 Python 验证环境</strong>（Picker + Toffee 工具链），完全规避 LLM 生成 SystemVerilog 代码的不可靠性；② <strong>31阶段细粒度验证工作流</strong>——可配置流程，每阶段配备自动检查器；③ <strong>VCLM 验证一致性标注机制</strong>——对 LLM 生成内容进行层级标注，提升可靠性与可追溯性。<br><br>
+            <strong>关键结果</strong>：UART、FPU（浮点单元）、整数除法器：代码覆盖率最高 <strong>98.5%</strong>、功能覆盖率最高 <strong>100%</strong>；在真实工业设计中发现了此前未被识别的缺陷。<br><br>
+            <strong>亮点</strong>：验证工作流精细化（31阶段）是核心工程亮点，与 AgileAssert 的"精准断言生成"和 CoverAssert 的"覆盖率驱动断言迭代"形成差异化互补——UCAgent 专注<strong>验证流程自动化</strong>，而非断言质量优化本身。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.25768" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-03-26/2603.25768-UCAgent-EndToEnd-IC-Functional-Verification.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+        <!-- POET -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-top">⚡ PPA优化</span> POET — 差分测试驱动 LLM RTL 功耗进化优化，40个设计全部功能正确 + 最优功耗</div>
+          <div class="abs-meta">arXiv: 2603.19333 &nbsp;|&nbsp; 2026-03-19 发布 &nbsp;|&nbsp; cs.AR + cs.AI &nbsp;|&nbsp; Heng Ping, Peiyu Zhang, Zhenkun Wang, Paul Bogdan, Shahin Nazarian 等</div>
+          <div class="abs-body">
+            LLM 优化 RTL PPA 面临双重挑战：① 确保优化后设计<strong>功能等价性</strong>（LLM 幻觉会引入功能错误）；② 在多目标 PPA 权衡空间中<strong>系统优先降低功耗</strong>。<br><br>
+            POET 双管齐下：<strong>差分测试生成 Testbench</strong>——以原始设计为功能 oracle，用确定性仿真生成黄金参考输出，从而消除验证环节的 LLM 幻觉干扰；<strong>LLM 驱动进化机制</strong>——非支配排序 + 功耗优先级内排名 + 比例幸存者选择，无需手动调权重，自动将搜索引向 Pareto 前沿的低功耗区域。<br><br>
+            <strong>关键结果</strong>：在 RTL-OPT 基准 <strong>40 个多样化 RTL 设计</strong>上：功能正确率 <strong>100%</strong>，<strong>全部 40/40 达最优功耗</strong>，面积与延迟同样具有竞争力。<br><br>
+            <strong>亮点</strong>：以原始设计作为 functional oracle 的差分测试思路优雅解决了 LLM 幻觉验证问题；与 CODMAS（关键路径降低 25%）、VeriAgent（进化记忆 PPA 闭环）共同构成 2026 年 <strong>RTL PPA 优化三大框架</strong>；功耗优先的进化调度策略在芯片功耗墙背景下具有直接产业价值。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.19333" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-03-19/2603.19333-POET-Power-Oriented-Evolutionary-RTL-PPA.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+      </div><!-- abstracts -->
+    </div><!-- date-body g0329 -->
+  </div><!-- date-group -->
+</body>
+</html>

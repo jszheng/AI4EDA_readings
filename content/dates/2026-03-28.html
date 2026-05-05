@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<!-- ── 2026-03-28 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0328')">
+      <h3>📅 2026-03-28 · 3篇</h3>
+      <span class="badge-count">3 篇</span>
+      <span class="toggle" id="toggle-g0328">▼</span>
+    </div>
+    <div class="date-body" id="g0328">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> FluxEDA: A Unified Execution Infrastructure for Stateful Agentic EDA</td>
+            <td class="cat">Agentic EDA/基础设施/状态保持/时序ECO/单元库优化</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.25243" target="_blank">2603.25243</a></td>
+            <td><a class="pdf-link" href="./2026-04-01/2603.25243_FluxEDA.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="star">★</span> AutoPDR: Circuit-Aware Solver Configuration Prediction for Hardware Model Checking</td>
+            <td class="cat">形式验证/图学习/PDR求解器/参数调优/AI辅助验证</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.25048" target="_blank">2603.25048</a></td>
+            <td><a class="pdf-link" href="./2026-04-01/2603.25048_AutoPDR.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><span class="star">★</span> Causal AI For AMS Circuit Design: Interpretable Parameter Effects Analysis</td>
+            <td class="cat">因果AI/模拟混合信号/可解释性/TSMC 65nm/ATE估计</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.24618" target="_blank">2603.24618</a></td>
+            <td><a class="pdf-link" href="./2026-03-28/CausalAI-AMS-Circuit-Design-Interpretable-Parameter-Analysis.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 摘要卡片 -->
+      <div class="abs-card">
+        <span class="badge-hot">HIGH VALUE</span><span class="badge-new">NEW</span>
+        <div class="abs-title">FluxEDA: A Unified Execution Infrastructure for Stateful Agentic EDA</div>
+        <div class="abs-meta">arXiv:2603.25243 · cs.AR · 2026-03-26 · Zhengrui Chen, Zixuan Song, Yu Li, Qi Sun, Cheng Zhuo</div>
+        <div class="abs-body">随着 LLM 和自主智能体在 EDA 中的应用增多，现有方案仍基于脚本级调用，无法在真实生产环境中保持工具状态。FluxEDA 提出<strong>有状态 Agentic EDA 统一执行基础设施</strong>：托管网关接口 + 持久化后端工具实例 + 结构化请求-响应机制，支持多步骤分析、状态复用与回滚。在自动布线后<strong>时序 ECO</strong> 和<strong>标准单元子库优化</strong>两个商用后端案例中验证可行性，是 Agentic EDA 工程化落地的核心基础设施层。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.25243" target="_blank">arXiv</a>
+          <a class="local" href="./2026-04-01/2603.25243_FluxEDA.pdf">本地 PDF</a>
+        </div>
+      </div>
+      <div class="abs-card">
+        <span class="badge-new">NEW</span>
+        <div class="abs-title">AutoPDR: Circuit-Aware Solver Configuration Prediction for Hardware Model Checking</div>
+        <div class="abs-meta">arXiv:2603.25048 · cs.AR · 2026-03-26 · Guangyu Hu, Chen Chen et al.</div>
+        <div class="abs-body">PDR（Property Directed Reachability）算法广泛用于硬件形式验证，但性能高度依赖参数配置。AutoPDR 通过<strong>图学习</strong>结合电路图表示和静态结构特征，预测特定电路的最优 PDR 求解器配置。引入专家知识约束剪枝，搜索空间缩减约 <strong>78%</strong>；实验显示 AutoPDR 在多个基准测试中显著优于默认配置，能自动识别电路特定参数模式并选择最佳求解策略，开创了 GNN 辅助形式验证调优新方向。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.25048" target="_blank">arXiv</a>
+          <a class="local" href="./2026-04-01/2603.25048_AutoPDR.pdf">本地 PDF</a>
+        </div>
+      </div>
+      <div class="abs-card">
+        <span class="badge-new">NEW</span>
+        <div class="abs-title">Causal AI For AMS Circuit Design: Interpretable Parameter Effects Analysis</div>
+        <div class="abs-meta">arXiv:2603.24618 · cs.AR · 2026-03-24 · Mohyeu Hussain, David Koblah, Reiner Dizon-Paradis, Domenic Forte（University of Florida）</div>
+        <div class="abs-body">AMS 电路高度非线性、难以用数据驱动 AI 建模。本文将<strong>因果推断</strong>（DAG + 平均处理效应 ATE）引入模拟混合信号电路参数效应分析。在 TSMC 65nm 下对三种运算放大器（OTA、望远镜式、折叠共源共栅）验证：因果模型 ATE 估计误差 <strong>&lt;25%</strong>，而神经网络误差 >80% 且常预测错误方向。可生成可解释的参数重要性排序与"假设分析"预测，推动 AMS 设计自动化可信化。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.24618" target="_blank">arXiv</a>
+          <a class="local" href="./2026-03-28/CausalAI-AMS-Circuit-Design-Interpretable-Parameter-Analysis.pdf">本地 PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

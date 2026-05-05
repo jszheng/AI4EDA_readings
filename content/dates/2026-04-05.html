@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<!-- ── 2026-04-05 ── -->
+
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0405')">
+      <h3>📅 2026-04-05 · 今日更新（2篇）</h3>
+      <span class="badge-count">2 篇</span>
+      <span class="toggle" id="toggle-g0405">▼</span>
+    </div>
+    <div class="date-body" id="g0405">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> ARCS: Autoregressive Circuit Synthesis with Topology-Aware Graph Attention and Spec Conditioning</td>
+            <td class="cat">模拟电路生成/自回归/GRPO强化学习/GNN/SPICE/NYU</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.29068" target="_blank">2603.29068</a></td>
+            <td><a class="pdf-link" href="./2026-04-05/2603.29068_ARCS_Autoregressive_Circuit_Synthesis.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="star">★</span> From Physics to Surrogate Intelligence: A Unified Electro-Thermo-Optimization Framework for TSV Networks</td>
+            <td class="cat">TSV/GNN替代模型/电热优化/Chiplet/3D IC/IEEE TCAD</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.29268" target="_blank">2603.29268</a></td>
+            <td><a class="pdf-link" href="./2026-04-05/2603.29268_TSV_PhGNN_ElectroThermo.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">NEW</span><span class="badge-top">NYU · 开源</span>
+          <div class="abs-title">ARCS：拓扑感知图注意力 + 规格条件化的自回归模拟电路合成，首次将 GRPO 引入多拓扑 RL 训练</div>
+          <div class="abs-meta">Tushar Dhananjay Pathak · 2026-03-30 · cs.LG · <strong>NYU · GitHub: tusharpathaknyu/ARCS</strong></div>
+          <div class="abs-body">ARCS（自回归电路合成）是一种模拟电路摊销生成系统，<strong>毫秒级</strong>生成完整 SPICE 可仿真设计（拓扑 + 元件值）。混合流水线结合图VAE + 流匹配模型 + SPICE排序，仅需 <strong>8 次 SPICE 评估</strong>即在 32 种拓扑中达 <strong>99.9% 仿真有效性</strong>（奖励 6.43/8.0），比遗传算法少 40× 评估。单模型推理 97ms 达 85% 有效性，比随机搜索快 600×。关键贡献：<strong>GRPO（组相对策略优化）</strong> 按拓扑进行优势归一化，解决 REINFORCE 跨拓扑奖励分布不匹配问题，仅 500 步 RL 训练（比 REINFORCE 少 10×）提升 +9.6 个百分点。语法约束解码 + 拓扑感知令牌掩码保证 100% 结构有效性。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.29068" target="_blank">arXiv</a>
+            <a href="https://github.com/tusharpathaknyu/ARCS" target="_blank">GitHub</a>
+            <a class="local" href="./2026-04-05/2603.29068_ARCS_Autoregressive_Circuit_Synthesis.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">NEW</span><span class="badge-top">投 IEEE TCAD</span>
+          <div class="abs-title">TSV-PhGNN：物理信息 GNN 替代模型驱动的 TSV 阵列电热协同优化，评估时间缩短六个数量级</div>
+          <div class="abs-meta">Mohamed Gharib, Leonid Popryho, Inna Partin-Vaisband · 2026-03-31 · cs.LG · <strong>已投 IEEE TCAD</strong></div>
+          <div class="abs-body">高密度 TSV 是 2.5D/3D 异构集成关键，但电耦合、插入损耗、自热效应带来信号完整性和热可靠性挑战，传统 FEM 计算成本过高。本文提出可扩展框架：① 多导体解析模型计算宽带 S 参数和有效各向异性热导率（15×15 阵列以内 5%–10% RFE）；② <strong>TSV-PhGNN</strong> 在解析数据训练+HFSS微调后泛化到更大阵列，RFE 低于 <strong>2%</strong>，方差几乎恒定；③ 集成多目标帕累托优化（反射系数/插入损耗/NEXT-FEXT/热导率），数百万 TSV 配置数分钟内探索完毕。评估时间比 FEM <strong>缩短超六个数量级</strong>，Ansys HFSS + Mechanical 验证高度一致。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.29268" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-05/2603.29268_TSV_PhGNN_ElectroThermo.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</body>
+</html>

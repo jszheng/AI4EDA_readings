@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<!-- ── 2026-03-17 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0317')">
+      <h3>📅 2026-03-17 · 5 篇</h3>
+      <span class="badge-count">5 篇</span>
+      <span class="toggle" id="toggle-g0317">▼</span>
+    </div>
+    <div id="g0317" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="star">★</span> CellE: Automated Standard Cell Library Extension via Equality Saturation (DAC 2026)</td><td class="cat">标准单元库/形式化/北大+清华</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.12797" target="_blank">2603.12797</a></td><td><a class="pdf-link" href="./2026-03-17/2603.12797-CellE.pdf">📥 PDF</a></td></tr>
+          <tr><td>2</td><td>VeriHGN: Unifying Logical and Physical Layout via Heterogeneous Graphs for Congestion Prediction</td><td class="cat">布局预测/GNN/拥塞</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.11075" target="_blank">2603.11075</a></td><td><a class="pdf-link" href="./2026-03-17/2603.11075-VeriHGN.pdf">📥 PDF</a></td></tr>
+          <tr><td>3</td><td><span class="star">★</span> AutoVeriFix+: High-Correctness RTL Generation via Trace-Aware Causal Fix</td><td class="cat">RTL生成/形式化验证</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.11489" target="_blank">2603.11489</a></td><td><a class="pdf-link" href="./2026-03-17/2603.11489-AutoVeriFix.pdf">📥 PDF</a></td></tr>
+          <tr><td>4</td><td>Helios: Hardware-Software Co-design for 3D-DRAM-based LLM Serving Accelerator</td><td class="cat">LLM加速器/近存计算</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.04797" target="_blank">2603.04797</a></td><td><a class="pdf-link" href="./2026-03-17/2603.04797-Helios-3DDRAM-LLM.pdf">📥 PDF</a></td></tr>
+          <tr><td>5</td><td>Multi-Agent Memory from a Computer Architecture Perspective</td><td class="cat">多智能体/体系结构</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.10062" target="_blank">2603.10062</a></td><td><a class="pdf-link" href="./2026-03-17/2603.10062-MultiAgentMemory.pdf">📥 PDF</a></td></tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-new">DAC 2026</span>
+          <div class="abs-title">CellE — 等式饱和标准单元库自动扩展，面积减少 15.4%（DAC 2026，北大+清华）</div>
+          <div class="abs-meta">Yi Ren 等 · 北京大学 & 清华大学 · 已被 DAC 2026 接收</div>
+          <div class="abs-body">将<strong>等式饱和（Equality Saturation）</strong>应用于映射后网表，生成 e-graph 聚类所有功能等价实现，结合高效模式挖掘选择面积最优标准单元。平均面积减少 <strong>15.41%</strong>（最高 23.64%），商用流程中延迟减少 <strong>8.00%</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.12797" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-title">AutoVeriFix+ — 轨迹感知因果修复，VerilogEval pass@10 达 90.2%</div>
+          <div class="abs-meta">Yan Tan 等 · 2026-03-12</div>
+          <div class="abs-body">三阶段：LLM 生成 Python 参考模型 → 迭代修复语法错误 → <strong>Concolic 测试引擎</strong>深测时序逻辑，通过周期精确执行轨迹为 LLM 提供因果上下文。严格基准功能正确性超过 80%，VerilogEval-machine pass@10 达 <strong>90.2%</strong>，冗余逻辑平均消除 <strong>25%</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.11489" target="_blank">arXiv</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

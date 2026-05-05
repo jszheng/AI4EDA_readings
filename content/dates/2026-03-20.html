@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<!-- ── 2026-03-20 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0320')">
+      <h3>📅 2026-03-20 · 4 篇</h3>
+      <span class="badge-count">4 篇</span>
+      <span class="toggle" id="toggle-g0320">▼</span>
+    </div>
+    <div id="g0320" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="star">★</span> CODMAS: A Dialectic Multi-Agent Collaborative Framework for Structured RTL Optimization</td><td class="cat">RTL优化/Multi-Agent/EACL2026</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17204" target="_blank">2603.17204</a></td><td><a class="pdf-link" href="./2026-03-20/2603.17204-CODMAS-RTL-Optimization-MultiAgent.pdf">📥 PDF</a></td></tr>
+          <tr><td>2</td><td><span class="star">★</span> ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression</td><td class="cat">LLM推理/ASPLOS2026/硬件感知</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17435" target="_blank">2603.17435</a></td><td><a class="pdf-link" href="./2026-03-20/2603.17435-ZipServ-LLM-Inference-Compression.pdf">📥 PDF</a></td></tr>
+          <tr><td>3</td><td>LLM4Cov: Execution-Aware Agentic Learning for High-coverage Testbench Generation</td><td class="cat">硬件验证/Agent学习/Agent4Chip</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2602.16953" target="_blank">2602.16953</a></td><td><a class="pdf-link" href="./2026-03-20/2602.16953-LLM4Cov-Testbench-Generation.pdf">📥 PDF</a></td></tr>
+          <tr><td>4</td><td>HeaRT: A Hierarchical Circuit Reasoning Tree for AMS Design</td><td class="cat">模拟混合信号/Agent/推理树</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2511.19669" target="_blank">2511.19669</a></td><td><a class="pdf-link" href="./2026-03-20/2511.19669-HeaRT-AMS-Hierarchical-Reasoning.pdf">📥 PDF</a></td></tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">CODMAS — 辩证多智能体框架，关键路径延迟降低 25%（EACL 2026）</div>
+          <div class="abs-meta">Che-Ming Chang 等 7 人 · EACL 2026 接收 · RTL优化 / RTLOPT Benchmark</div>
+          <div class="abs-body"><strong>Articulator</strong>（橡皮鸭调试式逐步阐述）+ <strong>Hypothesis Partner</strong>（预测并调和偏差）引导 DCA 生成架构感知 Verilog 编辑，CEA 验证 PPA。关键路径延迟降低约 <strong>25%</strong>（流水线优化），功耗降低约 <strong>22%</strong>（时钟门控），配套 RTLOPT Benchmark（120 组 Verilog 三元组）。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.17204" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">ZipServ — 首个 GPU 上无损压缩且加速 LLM 推理系统（ASPLOS'26）</div>
+          <div class="abs-meta">Ruibo Fan 等 · ASPLOS'26 接收</div>
+          <div class="abs-body">TCA-TBE（Tensor-Core-Aware 固定长度编码）支持并行解码 + ZipGEMM（融合解压-GEMM 内核）消除中间缓冲区。模型大小减少 <strong>30%</strong>，内核级加速 cuBLAS <strong>2.21×</strong>，端到端比 vLLM 加速 <strong>1.22×</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.17435" target="_blank">arXiv</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

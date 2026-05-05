@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0423')">
+      <h3>📅 2026-04-23 · 本次更新（2篇 🆕）— StructuralVerif · ChipCraftBrain | Agent4Chip @ ICLR 2026 开幕 | Synopsys/Cadence × TSMC 双重公告</h3>
+      <span class="badge-count" style="border-color:var(--accent3);color:var(--accent3);">2 篇 🆕</span>
+      <span class="toggle" id="toggle-g0423">▼</span>
+    </div>
+    <div class="date-body" id="g0423">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="star">★</span> 1</td>
+            <td><strong>ChipCraftBrain: Validation-First RTL Generation via Multi-Agent Orchestration</strong></td>
+            <td class="cat">RTL生成 / 混合符号神经推理 / 多智能体 / CVDP工业基准</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.19856" target="_blank">2604.19856</a></td>
+            <td><a class="pdf-link" href="./2026-04-23/ChipCraftBrain_2604.19856v1.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><strong>Structural Verification for Reliable EDA Code Generation without Tool-in-the-Loop Debugging</strong></td>
+            <td class="cat">EDA代码生成 / 结构化验证 / LLM可靠性 / 无工具调试</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.18834" target="_blank">2604.18834</a></td>
+            <td><a class="pdf-link" href="./2026-04-23/StructuralVerif_EDA_2604.18834v1.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span><span class="badge-hot">Agent4Chip日</span> ChipCraftBrain: Validation-First RTL Generation via Multi-Agent Orchestration</div>
+          <div class="abs-meta">arXiv:2604.19856 · 2026-04-23 · RTL代码生成 / Agentic / 工业基准</div>
+          <div class="abs-body">提出 <strong>验证优先</strong>多智能体 RTL 生成框架，结合<strong>混合符号-神经推理</strong>与<strong>自适应多智能体编排</strong>。四项关键创新：(1) 验证第一原则替代 generate-then-fix 范式；(2) 混合符号推理减少语义错误；(3) 自适应多智能体编排降低 API 开销；(4) 针对 NVIDIA CVDP 工业基准（更难）优化。MAGE 在 VerilogEval 达到 95.9% 但在 CVDP 等工业基准上尚未经测试，ChipCraftBrain 填补这一空白并展示综合感知能力。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.19856" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-23/ChipCraftBrain_2604.19856v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span> Structural Verification for Reliable EDA Code Generation without Tool-in-the-Loop Debugging</div>
+          <div class="abs-meta">arXiv:2604.18834 · 2026-04-21（发布）/ 2026-04-23（收录）· EDA代码生成 / LLM可靠性</div>
+          <div class="abs-body">LLM 已能以自然语言驱动 EDA 工作流自动化，但生成脚本的可靠执行仍是瓶颈。本文提出<strong>结构化验证</strong>方法：在执行前强制执行结构一致性，将正确性与工具交互<strong>解耦</strong>，显著提升长流程 EDA 代码生成的可靠性与效率。EDA 任务需要与分层设计数据库交互、组合工具特定 API，且需在紧密耦合的流程阶段保持一致性——本方法针对这一独特挑战设计，区别于软件领域的 LLM 验证方案。作者：Dinithi Jayasuriya, Aravind Saravanan 等，Illinois &amp; Intel。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.18834" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-23/StructuralVerif_EDA_2604.18834v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

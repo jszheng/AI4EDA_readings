@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<!-- ── 2026-04-08 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0408')">
+      <h3>📅 2026-04-08 · 今日更新（2篇）— ICCAD 2026 已截止（4月14日）</h3>
+      <span class="badge-count">2 篇</span>
+      <span class="toggle" id="toggle-g0408">▼</span>
+    </div>
+    <div class="date-body" id="g0408">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> EEspice: A Modular Circuit Simulation Platform with Parallel Device Model Evaluation via Graph Coloring</td>
+            <td class="cat">模拟电路仿真/并行加速/AI辅助模拟优化闭环/开源EDA</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.03079" target="_blank">2604.03079</a></td>
+            <td><a class="pdf-link" href="./2026-04-08/2604.03079-EEspice-Modular-Circuit-Simulation-Graph-Coloring.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="star">★</span> InCoder-32B-Thinking: Industrial Code World Model for Thinking</td>
+            <td class="cat">工业代码推理/Verilog仿真因果/芯片设计LLM/CAD-Coder SOTA</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.03144" target="_blank">2604.03144</a></td>
+            <td><a class="pdf-link" href="./2026-04-08/2604.03144-InCoder-32B-Thinking-Industrial-Code-World-Model.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">开源 · 模拟EDA</span>
+          <div class="abs-title">EEspice：面向 AI 优化闭环的模块化并行电路仿真平台，图着色无锁并行加速 45×</div>
+          <div class="abs-meta">Xuanhao Bao, Danial Chitnis · 2026-04-03 · cs.AR · <strong>开源电路仿真框架</strong></div>
+          <div class="abs-body">随着现代模拟/混合信号设计越来越多地依赖"<strong>AI 或 LLM 辅助的器件尺寸自动优化闭环</strong>"，高效精确的 SPICE 仿真器成为核心基础设施。传统并行方法在矩阵填充阶段存在严重的串行化瓶颈——多核同时更新系统矩阵时产生数据竞争。EEspice 提出<strong>模块化架构 + 图着色（Graph Coloring）并行策略</strong>：将器件模型求解解耦为可独立替换的模块内核，通过图着色将 MOSFET 实例分为颜色组，同组器件并行写入系统矩阵而无需锁竞争。<br><strong>关键结果</strong>：64 核工作站上最高实现 <strong>45× 加速比</strong>（相对单线程），性能与电路拓扑结构相关（冲突越少加速越显著）。开源实现，可作为 AI for Analog EDA 仿真基础设施的高效替代方案。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.03079" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-08/2604.03079-EEspice-Modular-Circuit-Simulation-Graph-Coloring.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-top">CAD-Coder SOTA 84%</span><span class="badge-new">工业代码推理</span>
+          <div class="abs-title">InCoder-32B-Thinking：工业代码世界模型，Verilog 仿真因果推理 + CAD-Coder 芯片设计评测 84%</div>
+          <div class="abs-meta">Jian Yang, Wei Zhang, Jiajun Wu 等 25 位作者 · 2026-04-03 · cs.AR + cs.AI + cs.CL</div>
+          <div class="abs-body">工业软件开发（涵盖<strong>芯片设计、GPU 优化、嵌入式系统</strong>）严重缺乏专家推理轨迹。InCoder-32B-Thinking 提出两大创新框架：<br>① <strong>ECoT（Error-driven Chain-of-Thought）</strong>：通过多轮对话与环境错误反馈合成推理链条，显式建模错误纠正过程；<br>② <strong>ICWM（Industrial Code World Model）</strong>：在 Verilog 仿真、GPU 性能分析等领域的执行轨迹上训练，学习代码影响硬件行为的<strong>因果动态</strong>，并在编译前通过自我验证预测执行结果。所有推理轨迹均通过工业工具链验证，确保与真实任务自然推理深度匹配。<br><strong>关键结果</strong>：<strong>CAD-Coder（芯片设计代码）84.0%</strong>，KernelBench（内核优化）38.0%，LiveCodeBench v5 81.3%，达到开源领域全面领先水平。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.03144" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-08/2604.03144-InCoder-32B-Thinking-Industrial-Code-World-Model.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0415')">
+      <h3>📅 2026-04-15 · 今日更新（2篇 + 补漏2篇）— AgileAssert（RTL断言）+ LLM Analog Sizing + Escaping Flatland（3D-IC）+ GSR-GNN（时序）· ICCAD截稿后首日预印本</h3>
+      <span class="badge-count" style="border-color:var(--accent3);color:var(--accent3);">4 篇 🆕</span>
+      <span class="toggle" id="toggle-g0415">▼</span>
+    </div>
+    <div class="date-body" id="g0415">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="star">★</span> 1</td>
+            <td><strong>AgileAssert: From Indiscriminate to Targeted — Efficient RTL Verification via Key Signal-Driven LLM Assertion Generation</strong></td>
+            <td class="cat">RTL验证 / LLM断言生成 / 关键信号识别 / 断言减量66%</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.08932" target="_blank">2604.08932</a></td>
+            <td><span style="color:var(--muted);font-size:.8rem;">待下载</span></td>
+          </tr>
+          <tr>
+            <td><span class="star">★</span> 2</td>
+            <td><strong>Self-Calibrating LLM-Based Analog Circuit Sizing with Interpretable Design Equations</strong></td>
+            <td class="cat">模拟电路 / LLM设计方程 / 跨节点可移植 / 2-9次仿真收敛</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.07387" target="_blank">2604.07387</a></td>
+            <td><span style="color:var(--muted);font-size:.8rem;">待下载</span></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><strong>Escaping Flatland: LLM-based Multi-Objective Optimization for 3D-IC Floorplanning</strong></td>
+            <td class="cat">3D-IC / 多目标优化 / LLM布图规划 / DAC 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.01078" target="_blank">2604.01078</a></td>
+            <td><a class="pdf-link" href="./2026-04-15/2604.01078-EscapingFlatland-3DFPGA-Placement-DAC2026.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong>GSR-GNN: Graph Signal Reconstruction with GNNs for Post-Route Timing Optimization</strong></td>
+            <td class="cat">物理设计 / GNN时序优化 / 图信号重建 / DAC 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.27156" target="_blank">2603.27156</a></td>
+            <td><a class="pdf-link" href="./2026-04-15/2603.27156-GSR-GNN-DeepGNN-Circuit-Training-Acceleration-DAC2026.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="abstracts">
+        <!-- AgileAssert -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🎯 RTL验证</span> AgileAssert（2026-04-10）— 关键信号驱动的精准LLM断言生成，断言量减少66.68%、token消耗降低64%</div>
+          <div class="abs-meta">arXiv: 2604.08932 &nbsp;|&nbsp; 2026-04-10 发布 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; Yonghao Wang 等10位作者</div>
+          <div class="abs-body">
+            功能验证中，断言生成是 ABV（断言驱动验证）的核心，但现有 LLM 方法存在两个关键缺陷：一是不加选择地对全量 RTL 信号生成断言，导致冗余断言大量增加；二是输入上下文过长，造成 token 浪费和质量下降。<br><br>
+            AgileAssert 提出<strong>关键信号驱动的精准化断言生成框架</strong>：① 基于 RTL 语义图提取 Top-K 关键功能信号；② 结构感知 RTL 切片机制，仅保留关键信号的局部上下文；③ 混合评分选择机制，引导 LLM 专注于高价值断言目标。<br><br>
+            <strong>关键结果</strong>：断言数量减少 <strong>66.68%</strong>，LLM 输入 token 消耗降低 <strong>64%</strong>，突变测试中错误检测率显著提升，断言总使用量减少 72.74%（精准断言质量更高）。<br><br>
+            <strong>亮点</strong>：与 SVA Generator（2604.11044）、CoverAssert（2604.06607）共同构成 ICCAD 截稿后的 <strong>RTL 断言生成三件套</strong>，验证自动化正成为 2026 年 AI for EDA 最活跃的细分赛道之一。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.08932" target="_blank">arXiv 原文</a>
+          </div>
+        </div>
+
+        <!-- LLM Analog Circuit Sizing -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-top">🔬 模拟设计</span> Self-Calibrating LLM Analog Sizing（2026-04-08）— 从网表直接推导设计方程，无需跨节点重训练，2-9次仿真收敛</div>
+          <div class="abs-meta">arXiv: 2604.07387 &nbsp;|&nbsp; 2026-04-08 发布 &nbsp;|&nbsp; cs.AR + cs.AI &nbsp;|&nbsp; Antonio J. Bujana, Aydin I. Karsilayan（德州农工大学）&nbsp;|&nbsp; 提交 IEEE TCAS-I</div>
+          <div class="abs-body">
+            模拟电路尺寸设计（sizing）高度依赖工艺节点专家知识，现有 AI 方法需要大量标注数据且难以跨工艺迁移。<br><br>
+            本文提出<strong>自校准 LLM 模拟电路尺寸框架</strong>：① LLM 从原始电路网表直接推导拓扑特定的解析设计方程，将每个器件尺寸追溯到特定性能约束；② <strong>确定性校准循环</strong>：从单次晶体管级仿真提取工艺相关参数；③ <strong>预测误差反馈机制</strong>：补偿解析不准确性，无需重训练。<br><br>
+            <strong>关键结果</strong>：6种OTA拓扑 × 2种工艺节点（180nm 和 40nm CMOS），12 个组合<strong>全部满足规格</strong>；收敛仅需 <strong>2-9 次仿真</strong>（11/12 案例），跨节点无需修改或重训练。<br><br>
+            <strong>亮点</strong>：以 LLM 的拓扑理解能力替代工艺特定训练数据，是模拟 EDA 中"无数据依赖"设计自动化的重要突破，开源方向有望推动 analog sizing 的大规模标准化。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.07387" target="_blank">arXiv 原文</a>
+          </div>
+        </div>
+
+        <!-- Escaping Flatland -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">🏗️ 物理设计</span> Escaping Flatland（DAC 2026）— LLM驱动的3D-IC多目标布图规划优化</div>
+          <div class="abs-meta">arXiv: 2604.01078 &nbsp;|&nbsp; 2026-04-01 发布 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; DAC 2026（第63届）</div>
+          <div class="abs-body">
+            3D-IC 系统级集成（Floorplanning）面临多目标优化挑战（功耗/热分布/互连长度）。本文将 LLM 引入 3D-IC 布图规划搜索，结合多目标进化算法，实现对三维堆叠 Floorplan 的全局优化探索，DAC 2026 录用。<br><br>
+            <strong>核心价值</strong>：通过 LLM 的自然语言推理能力驱动 3D Chiplet 互连和热分布协同优化，为新一代先进封装设计自动化提供可行路径。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.01078" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-15/2604.01078-EscapingFlatland-3DFPGA-Placement-DAC2026.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+        <!-- GSR-GNN -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">📊 时序优化</span> GSR-GNN（DAC 2026）— 图信号重建 GNN 用于后布线时序优化</div>
+          <div class="abs-meta">arXiv: 2603.27156 &nbsp;|&nbsp; 2026-03 发布 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; DAC 2026（第63届）</div>
+          <div class="abs-body">
+            后布线时序优化（Post-Route Timing Optimization）是芯片流片前的关键步骤，传统方法依赖耗时迭代仿真。GSR-GNN 将电路拓扑建模为图结构，利用<strong>图信号重建（Graph Signal Reconstruction）技术</strong>在 GNN 框架内预测并修正时序违例，显著加速收敛，DAC 2026 录用。<br><br>
+            <strong>核心价值</strong>：GNN + 图信号处理的融合框架为时序驱动的物理设计闭环提供新方法论，与 CapBench 形成后端 ML 基础设施组合。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.27156" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-15/2603.27156-GSR-GNN-DeepGNN-Circuit-Training-Acceleration-DAC2026.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+      </div><!-- abstracts -->
+    </div><!-- date-body g0415 -->
+  </div><!-- date-group -->
+</body>
+</html>

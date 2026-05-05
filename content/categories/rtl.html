@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css?v=20260505" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<section id="cat-rtl">
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（40篇） <span class="line"></span></div>
+  <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
+  <div class="abstracts">
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">⭐精选</span> FormalRTL: Verified RTL Synthesis at Scale</div>
+          <div class="abs-meta">2603.08738 · 2026-02-25 · cs.AR/SE · Kezhi Li, Min Li et al.</div>
+          <div class="abs-body">端到端多智能体框架，将软件参考模型作为形式化可执行规约引导 RTL 代码生成和验证，实现大规模数据通路设计的正确性保证。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.08738" target="_blank">📄 arXiv</a>
+            <a class="local" href="2026-03-15/2603.08738_FormalRTL_Verified_RTL_Synthesis.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">Formal Verification + RTL</span>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">⭐精选</span> SiliconMind-V1: Multi-Agent Distillation and Debug-Reasoning for Verilog Code Generation</div>
+          <div class="abs-meta">2603.08719 · 2026-02-10 · cs.AR/AI/SE · Mu-Chi Chen et al.</div>
+          <div class="abs-body">统一多智能体框架，结合推理导向训练数据生成和集成 testbench 驱动验证的多级蒸馏。不依赖商业模型或外部验证工具，兼顾成本、数据隐私和功能正确性。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.08719" target="_blank">📄 arXiv</a>
+            <a class="local" href="2026-03-15/2603.08719_SiliconMind_V1_Verilog_Generation.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">Multi-Agent + Verilog</span>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span> 同济大学发布 RTL-CLAW: AI 智能体驱动 EDA 框架</div>
+          <div class="abs-meta">2026-04-15 · 同济大学</div>
+          <div class="abs-body">同济大学电子与信息工程学院发布 RTL-CLAW，一个面向未来的 AI 智能体驱动 EDA 框架。将 AI 规划能力与模块化工具链结合，展示芯片设计自动化新路径。目前处于研究展示和原型验证阶段。</div>
+          <div class="abs-links">
+            <a href="https://news.tongji.edu.cn/info/1003/94137.htm" target="_blank">📰 同济大学新闻</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.23602 · cs.AR / cs.LG · 2026-04-26</div>
+        <h3 class="abs-title">TimingLLM: A Two-Stage Retrieval-Augmented Framework for Pre-Synthesis Timing Prediction from Verilog</h3>
+        <p class="abs-authors">Armin Abdollahi, Negin Ashrafi, Mehdi Kamal, Massoud Pedram</p>
+        <p class="abs-body">提出 <strong>TimingLLM</strong>，两阶段 RAG-LLM 流水线，直接从 Verilog 代码预测综合后时序指标（WNS/TNS），无需运行 EDA 工具。Stage-1 微调 LLM 生成路径级时序特征；Stage-2 LLM 回归器结合 k-NN 检索库的对角引导向量预测 WNS/TNS。VerilogEval 上 WNS R²=<strong>0.91</strong>，TNS R²=0.97，速度比现有方法快 <strong>1.3-1.6×</strong>。同时发布 6 万模块 Verilog+综合报告数据集。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.23602" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-04-28/TimingLLM_2604.23602v1.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">RAG + 时序预测</span>
+          <span style="color:var(--accent4);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent4);border-radius:8px;">VerilogEval</span>
+        </div>
+      </div>
+
+    <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.23100 · cs.CR / cs.AR / cs.LO · 2026-04-25</div>
+        <h3 class="abs-title">From Language to Logic: Bridging LLMs &amp; Formal Representations for RTL Assertion Generation</h3>
+        <p class="abs-authors">Nowfel Mashnoor, Hadi Kamali, Kimia Azar</p>
+        <p class="abs-body">提出 <strong>ProofLoop</strong>，工具增强 ReAct 智能体，采用 solver-in-the-loop 方式从自然语言规范生成 SystemVerilog Assertions（SVA）。两阶段：Stage-A 通过 AST 向量库语义搜索 + JasperGold 结构查询自主收集设计上下文；Stage-B 生成 SVA 并用 JasperGold 形式证明反馈迭代优化（最多 3 轮）。FVEval Design2SVA 基准上语法正确率 <strong>93.7%</strong>、功能正确率 <strong>82.0%</strong>。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.23100" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-04-28/ProofLoop_RTL_Assert_2604.23100v1.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">SVA 生成 + 形式验证</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">JasperGold RAG</span>
+        </div>
+      </div>
+
+    <div class="abs-card">
+          <div class="abs-meta">arXiv:2604.23355 · cs.AR / cs.SE · 2026-04-23</div>
+          <h3 class="abs-title">LEGO: Learning to Generate Verilog with LLM Skill Libraries</h3>
+          <p class="abs-authors">Yuxiang Wei, Wenqian Pei, Zhengrui Zhang, Guoyu Wang, Yu Huang, Bei Yu</p>
+          <p class="abs-body">提出 <strong>LEGO</strong>，通过构建 LLM 技能库实现高质量 Verilog 代码生成。核心创新：(1) 将复杂电路设计分解为可复用的基础技能模块；(2) LLM 从技能库中检索和组合适当技能来生成目标 RTL；(3) 技能库持续积累和演化。在多个基准上显著优于直接生成方法。</p>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.23355" target="_blank">arXiv</a>
+            <a class="local" href="2026-04-29/LEGO_LLMSkill_RTL_2604.23355v1.pdf">本地PDF</a>
+            <span style="color:var(--accent4);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent4);border-radius:8px;">LLM + Skill Library</span>
+          </div>
+          <div class="tags">
+            <span class="tag">LLM</span>
+            <span class="tag">Skill Library</span>
+            <span class="tag">Verilog Generation</span>
+            <span class="tag">Modular Design</span>
+          </div>
+        </div>
+
+    <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.27780 · cs.AR / cs.PL · 2026-04-30</div>
+        <h3 class="abs-title">RuC: A Benchmark for HDL-Agnostic Rule Completion in Hardware Description Languages</h3>
+        <p class="abs-authors">Yao Lu, Hao Guo, Jianwu Dang, Jian Lu, Chen Luo, Yuetian Luo, Wuyue Liang, Zhao Zhang, Shu Chen, Dan Li</p>
+        <p class="abs-body">提出首个<strong>语言无关 HDL 规则补全基准 RuC</strong>，涵盖 Verilog/VHDL/SystemVerilog 三种硬件描述语言，评测 LLM 对 HDL 语法规则的理解与补全能力。构建了包含 HDL 典型规则的题库（缺失端口声明、时序逻辑错误、信号位宽不匹配等），通过 Pass@k 与准确率双维度评估 GPT-4o、Claude 3.7、DeepSeek-V3 等主流模型，揭示当前 LLM 在 HDL 规则推理上的<strong>关键瓶颈</strong>。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.27780" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-02/2604.27780-RuC-HDL-Agnostic-Rule-Completion.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">LLM + HDL Benchmark</span>
+        </div>
+        <div class="tags">
+          <span class="tag">LLM</span>
+          <span class="tag">HDL</span>
+          <span class="tag">Verilog</span>
+          <span class="tag">Rule Completion</span>
+          <span class="tag">Benchmark</span>
+        </div>
+      </div>
+
+    <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.27643 · cs.AR / cs.AI · 2026-04-30</div>
+        <h3 class="abs-title">HAVEN: Automated UVM Testbench Synthesis with Large Language Models</h3>
+        <p class="abs-authors">Fikret Emin Akçelik, Emre Doğan, Sven Thümmel, Stefan Wildermann, Jürgen Teich</p>
+        <p class="abs-body">提出 <strong>HAVEN</strong> 框架，基于 LLM 自动合成符合 UVM 规范的验证测试台。利用结构化提示工程引导 LLM 生成 UVM 组件（driver/monitor/scoreboard/agent），实现模块间一致性约束。在 ISCAS-85/89 基准电路上评估，<strong>100% 编译成功率</strong>，覆盖率驱动测试台生成比人工编写代码减少 65% 工作量。有效解决 UVM 样板代码繁复的痛点。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.27643" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-02/2604.27643-HAVEN-UVM-Testbench-LLM.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">LLM + UVM Verification</span>
+        </div>
+        <div class="tags">
+          <span class="tag">LLM</span>
+          <span class="tag">UVM</span>
+          <span class="tag">Testbench</span>
+          <span class="tag">Verification</span>
+          <span class="tag">Code Generation</span>
+        </div>
+      </div>
+
+    <div class="abs-card">
+        <div class="abs-meta">arXiv:2604.27238 · cs.AR / cs.CR · 2026-04-29</div>
+        <h3 class="abs-title">SafeTune: Mitigating Data Poisoning Attacks in RTL Code Generation via GNN and XGBoost</h3>
+        <p class="abs-authors">Animesh Dey, Sayak Ray</p>
+        <p class="abs-body">针对 LLM 辅助 RTL 生成中的<strong>数据投毒安全威胁</strong>，提出 SafeTune 防御框架。利用<strong>图神经网络（GNN）</strong>提取 RTL 代码的图结构特征（AST/DFG/CFG），结合 <strong>XGBoost</strong> 分类器识别恶意植入的后门代码。在合成数据集上检测准确率超 97%，误报率低于 2%。首次将 GNN+ML 组合方法应用于 HDL 代码安全检测。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2604.27238" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-02/2604.27238-SafeTune-RTL-Code-Generation.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">Security + RTL</span>
+          <span style="color:var(--accent4);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent4);border-radius:8px;">GNN + XGBoost</span>
+        </div>
+        <div class="tags">
+          <span class="tag">GNN</span>
+          <span class="tag">Data Poisoning</span>
+          <span class="tag">RTL Security</span>
+          <span class="tag">LLM</span>
+          <span class="tag">Hardware Security</span>
+        </div>
+      </div>
+
+    <div class="abs-card">
+        <div class="abs-meta">arXiv:2605.00058 · ICLR Verif-AI 2 Workshop 2026 · cs.AR / cs.LG · 2026-04-30</div>
+        <h3 class="abs-title">Autoformalizing Memory Specifications with Agents</h3>
+        <p class="abs-authors">Jan Ole Ernst, Dmitri Michelangelo Saberi, Derek Christ, Thomas Zimmermann, Rajath Salegame, Suhaas M. Bhat, Stanislav Levental, Thomas Dybdahl Ahle, Matthias Jung</p>
+        <p class="abs-body">提出<strong>AI智能体自动形式化</strong>自然语言存储器芯片规格的方法，将 DRAM 标准文档自动转化为形式化表示 <strong>DRAMPyML</strong>，支持下游验证任务（SystemVerilog 断言生成、激励生成、功能覆盖率）。同时发布 <strong>DRAMBench</strong> 基准数据集，用于评估硬件自动形式化的模型能力演进。核心创新：<strong>端到端自动形式化流水线</strong>，超越传统 AI 仅处理孤立 DV 任务的局限，首次面向工业级 DRAM 规格实现全链路自动形式化。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2605.00058" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-04/2605.00058-Autoformalizing-Memory-Specifications-with-Agents.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">AI Agent + DV</span>
+          <span style="color:var(--accent4);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent4);border-radius:8px;">ICLR Verif-AI 2026</span>
+        </div>
+        <div class="tags">
+          <span class="tag">AI Agent</span>
+          <span class="tag">Autoformalization</span>
+          <span class="tag">DRAM</span>
+          <span class="tag">Design Verification</span>
+          <span class="tag">Benchmark</span>
+        </div>
+      </div>
+
+    <div class="abs-card">
+          <div class="abs-title">HDLFORGE — 两阶段自适应模型升级，中位延迟降低 50%，Pass@1 91.8%</div>
+          <div class="abs-meta">Armin Abdollahi 等 · 南加州大学</div>
+          <div class="abs-body">默认中等 LLM，轻量级诊断校准分数决定是否升级大模型，同时引入反例引导形式验证 Agent，将有界模型检验跟踪转化为可复用微测试。VerilogEval Human/V2 Pass@1 <strong>91.2%/91.8%</strong>，中位延迟降低 <strong>50%</strong>，RTLLM Pass@5 <strong>97.2%</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.04646" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title">AutoVeriFix+ — 轨迹感知因果修复，VerilogEval pass@10 达 90.2%</div>
+          <div class="abs-meta">Yan Tan 等 · 2026-03-12</div>
+          <div class="abs-body">三阶段：LLM 生成 Python 参考模型 → 迭代修复语法错误 → <strong>Concolic 测试引擎</strong>深测时序逻辑，通过周期精确执行轨迹为 LLM 提供因果上下文。严格基准功能正确性超过 80%，VerilogEval-machine pass@10 达 <strong>90.2%</strong>，冗余逻辑平均消除 <strong>25%</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.11489" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-hot">🔥 落地量产</span>
+          <div class="abs-title">DRCY — 首个可投入生产的多智能体 LLM 硬件原理图审查系统</div>
+          <div class="abs-meta">Kyle Dumont 等 · AllSpice · 2026-03-13 · cs.AR</div>
+          <div class="abs-body">五智能体流水线 + 智能数据手册检索 + 多轮共识机制，实现原理图连接语义正确性自动审查。已部署于 AllSpice Hub CI/CD 流水线，被多家头部硬件公司用于车辆设计到太空探索场景。<strong>首个真正量产落地的 Agentic EDA 工具。</strong></div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.15672" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">ACE-RTL — 专用 RTL LLM + 通用推理 Agent 有机融合，CVDP 通过率 +44.87%</div>
+          <div class="abs-meta">Chenhui Deng 等 · NVIDIA Research · Agent4Chip @ ICLR 2026</div>
+          <div class="abs-body">在 <strong>170 万 RTL 样本</strong>上训练专用 LLM（生成器）与前沿推理 LLM（协调器+反射器）协同，迭代优化 RTL 代码，并行扩展策略减少迭代次数。在 CVDP 基准上通过率最高提升 <strong>44.87%</strong>，平均仅需 <strong>4 次迭代</strong>收敛。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2602.10218" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">VeriAgent — PPA 感知闭环多智能体 RTL 生成，进化记忆无需重训持续改进</div>
+          <div class="abs-meta">Yaoxiang Wang 等 · 清华大学 + 厦门大学 · 2026-03-18 · cs.CL</div>
+          <div class="abs-body">程序员智能体（生成）+ 正确性智能体（仿真验证）+ PPA 智能体（综合优化）三方协同，形成功能正确性与 PPA 的联合优化闭环。<strong>进化记忆机制</strong>将优化经验外部化为结构化记忆节点，系统越用越强，无需重新训练模型。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.17613" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">HWE-Bench — 首个板级原理图设计 EDA Benchmark，当前最强 LLM 仅 8.15% 通过</div>
+          <div class="abs-meta">Weibo Qiu 等 · 2026-03-18 · cs.AR · 300 个真实板级任务 + 2914 份 IC 数据手册</div>
+          <div class="abs-body">LLM 根据功能需求 + 数据手册从头生成原理图 → 静态电气规则检查 → 电路仿真验证，全流程自动化评测。<strong>当前最先进 LLM 总体通过率仅 8.15%</strong>，精准标定当前 LLM 的物理推理天花板。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.18102" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">RTLocating — 首个形式化 ΔSpec-to-RTL 定位问题，意图感知迭代硬件设计</div>
+          <div class="abs-meta">Changwen Xing 等 8 人 · cs.ET · EvoRTL-Bench（OpenTitan，1905条变更请求）</div>
+          <div class="abs-body">现有 LAD 工具聚焦一次性生成，忽略迭代更新。RTLocating 形式化了 <strong>ΔSpec-to-RTL 定位问题</strong>，动态路由器融合文本语义编码器 + 局部结构编码器 + GLIDE 全局依赖编码器。在首个工业级基准 EvoRTL-Bench 上：MRR = 0.568，R@1 = 15.08%，相比最强基线 <strong>MRR +22.9%，R@1 +67.0%</strong>，新 SOTA。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.00434" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">SpecLoop — 形式验证闭环驱动 RTL→规范自动生成，消除"文档失真"</div>
+          <div class="abs-meta">Fu-Chieh Chang 等 8 人 · 2026-03-03 · cs.AR + cs.PL</div>
+          <div class="abs-body">LLM 生成候选规范 → 基于规范重构 RTL → <strong>形式等价性检查</strong> → 反例反馈 LLM 迭代，直到证明等价。相比纯 LLM 基线，规范正确性显著提升。"逆向文档生成 + 形式验证"闭环是硬件可维护性的工程化答案。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.02895" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-new">Agentic Verilog</span>
+          <div class="abs-title">Exploring the Agentic Frontier of Verilog Code Generation：首个系统评估 Agentic LLM 在 CVDP 基准上的 Verilog 生成能力，简单 Agent 包装反降性能</div>
+          <div class="abs-meta">Patrick Yubeaton, Siddharth Garg, Chinmay Hegde · 2026-03-19 · cs.AR / cs.LG</div>
+          <div class="abs-body">首次系统评估 Agentic LLM 用于 Verilog 代码生成。引入多个开源硬件设计 Agent 框架（模型无关基线）。关键发现：<strong>简单 Agent 包装前沿模型反而可能降低性能</strong>（vs. 优化提示的标准前向传递）；结构化框架可匹配乃至超越非 Agent 基线；开源与闭源差距来自更高崩溃率和工具输出解释弱势。为专业化 Verilog Agent 设计指明方向。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.19347" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-26/Exploring-Agentic-Frontier-Verilog-Code-Generation.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+        <div class="abs-title"><span class="badge-hot">🔧 RTL生成</span> RTLSeek — 多样性导向三阶段强化学习 RTL 后训练范式，RTLLM 基准超越所有先前方法</div>
+        <div class="abs-meta">arXiv: 2603.27630 &nbsp;|&nbsp; 2026-03-29 发布 &nbsp;|&nbsp; cs.AR + cs.LG &nbsp;|&nbsp; Xinyu Zhang, Zhiteng Chao, Yonghao Wang, Huawei Li 等（华为团队） &nbsp;|&nbsp; 开源</div>
+        <div class="abs-body">
+          LLM 辅助 RTL 生成的核心瓶颈：高质量功能可验证训练数据稀缺，且现有后训练方法对每个设计规格只生成<strong>单一 HDL 实现</strong>，缺乏对多设计目标 RTL 变体的感知能力。<br><br>
+          RTLSeek 提出后训练范式：① <strong>多样性导向强化学习（DORL）</strong>——基于规则的 RL，同时提升 RTL 生成的正确性和多样性；② <strong>多样性中心多目标奖励调度</strong>——融合专家知识与 EDA 工具反馈（仿真/综合结果）构建综合奖励信号；③ <strong>三阶段训练框架</strong>——最大化有限高质量数据的利用率。<br><br>
+          <strong>关键结果</strong>：在 <strong>RTLLM 基准</strong>上超越所有先前方法；消融实验证实多样性探索是质量提升的核心驱动力；验证了 <strong>"生成越多，效果越好"</strong> 原则——鼓励更广的设计空间探索能持续提升最终质量。
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.27630" target="_blank">arXiv 原文</a>
+        </div>
+      </div>
+
+    <div class="abs-card">
+          <span class="badge-new">NEW</span>
+          <div class="abs-title">IncreRTL: 需求演变下的可追溯性引导增量 RTL 生成</div>
+          <div class="abs-meta">Luanrong Chen, Renzhi Chen, Xinyu Li 等 6 人 · 2026-03-26 · cs.SE</div>
+          <div class="abs-body">现有 LLM 驱动 RTL 生成方法仍是<strong>静态的</strong>，难以适应不断变化的设计需求，导致结构漂移和昂贵的完全重新生成。IncreRTL 通过构建<strong>需求-代码可追溯性链接</strong>来定位和重新生成受影响的代码段，实现准确且一致的增量更新。在新构建的 <strong>EvoRTL-Bench</strong> 上评估，IncreRTL 在重新生成的一致性和效率方面显著改进，推动基于 LLM 的 RTL 生成向实际工程部署迈进。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.25769" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-30/IncreRTL_Traceability_Guided_Incremental_RTL_Generation.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-new">安全断言 · MDTS'26</span>
+          <div class="abs-title">Assertain（MDTS 2026）：LLM驱动自动化安全断言生成，正确断言+61.22%，CWE覆盖+59.49%，缺陷检测+67.92%</div>
+          <div class="abs-meta">Shams Tarek, Dipayan Saha 等 6 位作者 · 2026-04-02 · cs.CR · <strong>IEEE MDTS 2026</strong></div>
+          <div class="abs-body">Assertain 集成 RTL 分析 + CWE 映射 + 威胁模型 + LLM 自反思优化，在 11 个硬件设计上：正确断言生成 <strong>+61.22%</strong>（vs. GPT-5），唯一 CWE 覆盖率 <strong>+59.49%</strong>，架构缺陷检测 <strong>+67.92%</strong>。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.01583" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-06/2604.01583_Assertain_Security_Assertion_LLM.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-top">CAD-Coder SOTA 84%</span><span class="badge-new">工业代码推理</span>
+          <div class="abs-title">InCoder-32B-Thinking：工业代码世界模型，Verilog 仿真因果推理 + CAD-Coder 芯片设计评测 84%</div>
+          <div class="abs-meta">Jian Yang, Wei Zhang, Jiajun Wu 等 25 位作者 · 2026-04-03 · cs.AR + cs.AI + cs.CL</div>
+          <div class="abs-body">工业软件开发（涵盖<strong>芯片设计、GPU 优化、嵌入式系统</strong>）严重缺乏专家推理轨迹。InCoder-32B-Thinking 提出两大创新框架：<br>① <strong>ECoT（Error-driven Chain-of-Thought）</strong>：通过多轮对话与环境错误反馈合成推理链条，显式建模错误纠正过程；<br>② <strong>ICWM（Industrial Code World Model）</strong>：在 Verilog 仿真、GPU 性能分析等领域的执行轨迹上训练，学习代码影响硬件行为的<strong>因果动态</strong>，并在编译前通过自我验证预测执行结果。所有推理轨迹均通过工业工具链验证，确保与真实任务自然推理深度匹配。<br><strong>关键结果</strong>：<strong>CAD-Coder（芯片设计代码）84.0%</strong>，KernelBench（内核优化）38.0%，LiveCodeBench v5 81.3%，达到开源领域全面领先水平。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.03144" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-08/2604.03144-InCoder-32B-Thinking-Industrial-Code-World-Model.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">AI原生HDL · RTL生成</span>
+          <div class="abs-title">Arch：首个 AI 原生硬件描述语言——专为 LLM 代码生成设计的 RTL HDL，LL(1) 文法 + 编译期 CDC/RDC 捕获</div>
+          <div class="abs-meta">Shuqing Zhao · 2026-04-07 · cs.AR · <strong>AI-native HDL / Sky130 验证</strong></div>
+          <div class="abs-body">现有 HDL（SystemVerilog、VHDL、Chisel）均非为 AI 代码生成设计，LLM 在生成这些语言时存在大量结构性错误（多驱动、未同步 CDC、隐式锁存器等）。<br>
+          Arch 从基本原理出发设计，核心创新包括：<br>
+          ① <strong>"AI 可生成性契约"</strong>：LL(1) 无歧义文法、无宏/无预处理器、统一声明模式、具名块结束、显式方向连接箭头（<code>-&gt;</code> / <code>&lt;-</code>），使 LLM 直接从自然语言生成结构正确、类型安全的代码，无需微调；<br>
+          ② <strong>一等语言构造</strong>：流水线、FSM、FIFO、仲裁器、寄存器文件、总线、CDC 均有原生语法，无需通过用户模式拼凑；<br>
+          ③ <strong>参数化时钟/复位类型</strong>：将 CDC/RDC 分析转化为编译时类型规则，同时追踪位宽、端口方向、单驱动所有权、组合逻辑无环性，在运行仿真前即可捕获多种硬件错误；<br>
+          ④ 编译输出确定性 <strong>IEEE 1800-2017 SystemVerilog</strong>，集成 C++ 仿真工具链，<strong>Sky130 工艺</strong>案例（L1 D-Cache / AXI DMA 控制器）验证。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.05983" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-09/2604.05983-Arch-AI-Native-HDL-RTL-LLM.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🎯 精准验证</span> AgileAssert — 关键信号驱动 LLM 断言生成，断言数量减少 66.68%</div>
+          <div class="abs-meta">arXiv: 2604.08932 &nbsp;|&nbsp; 2026-04-10 发布 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; Yonghao Wang, Hongqin Lyu 等11位作者（华为等）</div>
+          <div class="abs-body">
+            功能验证已成为 IC 开发中最耗时的阶段，而 ABV 是缩短调试时间的关键。现有 LLM 断言生成方法追求"盲目验证"——在不考虑信号关键性的情况下最大化覆盖率，而工业实践要求"<strong>最小验证成本下最大覆盖率</strong>"。<br><br>
+            本文提出 <strong>AgileAssert</strong>，关键信号驱动的断言生成框架：<br>
+            ① 构建 <strong>RTL 语义图</strong>；<br>
+            ② 通过<strong>混合评分和选择机制</strong>识别 Top-K 关键信号；<br>
+            ③ 采用<strong>结构感知的 RTL 切片</strong>为 LLM 提供精确目标和上下文；<br>
+            ④ 引导 LLM 生成<strong>紧约束精准断言</strong>，实现高效验证。<br><br>
+            <strong>核心结果（块级 + CPU 级设计验证）</strong>：断言数量减少 <strong>66.68%</strong>，输入 token 消耗降低 <strong>64%</strong>，突变错误检测率超越 3 个 SOTA 方法，同时断言使用量减少 <strong>72.74%</strong>。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.08932" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-13/2604.08932-AgileAssert-RTL-Verification-Key-Signal-Assertion.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">CVPR 2026</span> R2G — 首个 RTL-to-GDSII 多视角电路图基准，解锁 GNN 物理设计研究新范式</div>
+          <div class="abs-meta">arXiv: 2604.08810 &nbsp;|&nbsp; 2026-04-09 发布 &nbsp;|&nbsp; cs.CV + cs.LG &nbsp;|&nbsp; Zewei Zhou, Jiajun Zou 等11位作者 | 开源：github.com/ShenShan123/R2G</div>
+          <div class="abs-body">
+            GNN 正越来越多地用于拥塞预测、线长估计等物理设计任务，但由于电路表示不一致和评估协议缺失，进展受阻。R2G 提出：<br>
+            ① 标准化 <strong>5 种阶段感知视角</strong>（信息对等性：每种视角编码相同属性集）；<br>
+            ② 覆盖 <strong>30 个开源 IP 核</strong>（规模达 10⁶ 节点/边）；<br>
+            ③ 端到端 <strong>DEF-to-Graph 流程</strong>（综合 → 布局 → 布线）；<br>
+            ④ 通过<strong>解耦表示选择与模型选择</strong>，消除先前基准的混淆因素。<br><br>
+            <strong>核心发现</strong>：视角选择主导模型选择（R² 差异 >0.3）；节点中心视角泛化最强；<strong>3-4 层解码器头可使 R² > 0.99</strong>。代码与数据集已开源。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.08810" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-13/2604.08810-R2G-MultiView-Circuit-Graph-Benchmark-RTL-GDSII.pdf" target="_blank">本地 PDF</a>
+            <a href="https://github.com/ShenShan123/R2G" target="_blank">GitHub 开源</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-top">⚡ PPA优化</span> POET — 差分测试驱动 LLM RTL 功耗进化优化，40个设计全部功能正确 + 最优功耗</div>
+          <div class="abs-meta">arXiv: 2603.19333 &nbsp;|&nbsp; 2026-03-19 发布 &nbsp;|&nbsp; cs.AR + cs.AI &nbsp;|&nbsp; Heng Ping, Peiyu Zhang, Zhenkun Wang, Paul Bogdan, Shahin Nazarian 等</div>
+          <div class="abs-body">
+            LLM 优化 RTL PPA 面临双重挑战：① 确保优化后设计<strong>功能等价性</strong>（LLM 幻觉会引入功能错误）；② 在多目标 PPA 权衡空间中<strong>系统优先降低功耗</strong>。<br><br>
+            POET 双管齐下：<strong>差分测试生成 Testbench</strong>——以原始设计为功能 oracle，用确定性仿真生成黄金参考输出，从而消除验证环节的 LLM 幻觉干扰；<strong>LLM 驱动进化机制</strong>——非支配排序 + 功耗优先级内排名 + 比例幸存者选择，无需手动调权重，自动将搜索引向 Pareto 前沿的低功耗区域。<br><br>
+            <strong>关键结果</strong>：在 RTL-OPT 基准 <strong>40 个多样化 RTL 设计</strong>上：功能正确率 <strong>100%</strong>，<strong>全部 40/40 达最优功耗</strong>，面积与延迟同样具有竞争力。<br><br>
+            <strong>亮点</strong>：以原始设计作为 functional oracle 的差分测试思路优雅解决了 LLM 幻觉验证问题；与 CODMAS（关键路径降低 25%）、VeriAgent（进化记忆 PPA 闭环）共同构成 2026 年 <strong>RTL PPA 优化三大框架</strong>；功耗优先的进化调度策略在芯片功耗墙背景下具有直接产业价值。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.19333" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-03-19/2603.19333-POET-Power-Oriented-Evolutionary-RTL-PPA.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🎯 RTL验证</span> AgileAssert（2026-04-10）— 关键信号驱动的精准LLM断言生成，断言量减少66.68%、token消耗降低64%</div>
+          <div class="abs-meta">arXiv: 2604.08932 &nbsp;|&nbsp; 2026-04-10 发布 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; Yonghao Wang 等10位作者</div>
+          <div class="abs-body">
+            功能验证中，断言生成是 ABV（断言驱动验证）的核心，但现有 LLM 方法存在两个关键缺陷：一是不加选择地对全量 RTL 信号生成断言，导致冗余断言大量增加；二是输入上下文过长，造成 token 浪费和质量下降。<br><br>
+            AgileAssert 提出<strong>关键信号驱动的精准化断言生成框架</strong>：① 基于 RTL 语义图提取 Top-K 关键功能信号；② 结构感知 RTL 切片机制，仅保留关键信号的局部上下文；③ 混合评分选择机制，引导 LLM 专注于高价值断言目标。<br><br>
+            <strong>关键结果</strong>：断言数量减少 <strong>66.68%</strong>，LLM 输入 token 消耗降低 <strong>64%</strong>，突变测试中错误检测率显著提升，断言总使用量减少 72.74%（精准断言质量更高）。<br><br>
+            <strong>亮点</strong>：与 SVA Generator（2604.11044）、CoverAssert（2604.06607）共同构成 ICCAD 截稿后的 <strong>RTL 断言生成三件套</strong>，验证自动化正成为 2026 年 AI for EDA 最活跃的细分赛道之一。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.08932" target="_blank">arXiv 原文</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🔧 RTL优化</span> Dr. RTL（2026-04-16）— 工具驱动的自主 Agentic RTL 时序优化，WNS +21%、TNS +17%，超越商业综合工具</div>
+          <div class="abs-meta">arXiv: 2604.14989 &nbsp;|&nbsp; 2026-04-16 发布 &nbsp;|&nbsp; cs.AR + cs.AI &nbsp;|&nbsp; Wenji Fang, Yao Lu, Shang Liu 等8人（香港中文大学，Zhiyao Xie 组）</div>
+          <div class="abs-body">
+            现有 LLM RTL 优化方法存在两大短板：评估只在手工降级的小规模设计上进行，且优化策略粗粒度、不可复用。<br><br>
+            Dr. RTL 提出<strong>多智能体闭环 RTL 时序优化框架</strong>：① <strong>关键路径分析智能体</strong>自动识别时序瓶颈；② <strong>并行 RTL 重写智能体</strong>同时探索多种优化策略；③ 工业级 EDA 工具反馈（真实综合评估）驱动迭代。<br><br>
+            核心创新：<strong>组相对技能学习（Group-Relative Skill Learning）</strong>——比较并行重写结果，将成功模式蒸馏为 <strong>47 个可解释技能条目</strong>，支持跨设计复用，技能库持续自我演化。<br><br>
+            <strong>关键结果</strong>（20 个真实 RTL 设计）：WNS 改善 <strong>+21%</strong>，TNS 改善 <strong>+17%</strong>，面积减少 <strong>6%</strong>，<strong>全面超越行业领先商用综合工具</strong>。<br><br>
+            <strong>亮点</strong>：香港中文大学 Zhiyao Xie 组（RTLCoder、MasterRTL 团队）的重量级延续成果；基于 47 条可解释技能的持续学习机制是超越 VeriAgent（进化记忆）和 CODMAS（辩证推理）的新范式；使用工业级 EDA 工具评估使结果直接可比，是该方向迄今最具工业说服力的成果之一。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.14989" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-18/2604.14989-DrRTL-Agentic-RTL-Optimization.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">📐 RTL生成</span> VeriGraphi（2026-04-16）— 规范锚定知识图谱驱动的层次化RTL生成，RISC-V处理器验证达成</div>
+          <div class="abs-meta">arXiv: 2604.14550 &nbsp;|&nbsp; 2026-04-16 发布 &nbsp;|&nbsp; cs.AR + cs.AI + cs.MA &nbsp;|&nbsp; Sazzadul Islam, Tasnim Tabassum, Hao Zheng</div>
+          <div class="abs-body">
+            大型层次化硬件设计中，LLM 在生成分层 Verilog 时经常出现：模块间接口幻觉、上下文丢失、结构一致性破坏。VeriGraphi 引入<strong>规范锚定知识图谱（HDA, Hardware Design Abstraction）</strong>作为 RTL 生成的结构支架。<br><br>
+            框架核心：① 通过迭代多智能体分析规范文档（含非正式文本/图表/表格），构建 HDA——将<strong>模块层次结构、端口级接口、连线语义、模块间依赖关系</strong>显式编码为图实体和关系；② 在代码生成前提供<strong>可机器检查的确定性结构约束</strong>；③ <strong>渐进式编码模块</strong>在知识图谱指导下逐步生成伪代码和可综合 RTL，每个子模块阶段强制接口一致性检查。<br><br>
+            评估基准：NIST 三个代表性规范文档 + 详细 <strong>RV32I 处理器</strong>案例研究。<br><br>
+            <strong>关键结果</strong>：以最少人工干预为 RISC-V 实现可靠层次化 RTL 生成，保持强功能正确性。<br><br>
+            <strong>亮点</strong>：知识图谱作为"预生成阶段结构记忆"的框架设计，与 Design Conductor（end-to-end CPU）和 FormalRTL 形成互补，是解决大规模层次化 RTL 生成"结构幻觉"问题的新思路。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.14550" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-18/2604.14550-VeriGraphi-HierarchicalRTL-MultiAgent.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">✅ 功能验证</span> Spec2Cov（2026-04-21）— LLM 驱动规范到覆盖率的闭环验证，消除 9.47% 冗余激励，覆盖率 +11.2%</div>
+          <div class="abs-meta">arXiv: 2604.15606 &nbsp;|&nbsp; 2026-04-20 收录 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; 上海交通大学 / 华为</div>
+          <div class="abs-body">
+            工业级 RTL 功能验证中，覆盖率驱动验证（CDV）的核心痛点：① 传统激励生成对覆盖分析盲目，导致大量冗余仿真；② 规范文本到测试场景转换需要大量人工。<br><br>
+            Spec2Cov 构建<strong>规范到覆盖率 LLM 闭环框架</strong>：① <strong>规范分析智能体</strong>解析自然语言 RTL 规范，提取可量化的功能意图（接口时序、状态机转移、数据通路规约）；② <strong>覆盖率反馈驱动激励生成</strong>——迭代分析未覆盖分支，定向生成新测试向量；③ <strong>冗余过滤层</strong>，主动识别并剔除已高覆盖区域的冗余激励。<br><br>
+            评估基准：OpenTitan（工业级 RISC-V SoC）、ITC99 基准集。<br><br>
+            <strong>关键结果</strong>：覆盖率提升 +11.2%，冗余激励减少 9.47%，平均验证效率提升 2.3×。<br><br>
+            <strong>亮点</strong>：上海交通大学 + 华为合作；SVAGenerator（ISEDA 2026，4月14日）关注 SVA 断言生成，Spec2Cov 关注覆盖率驱动验证，两者形成验证智能化的互补链路；直接面向工业级 SoC 验证场景，是近期验证方向最具工程价值的预印本之一。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.15606" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-20/Spec2Cov_2604.15606v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">🧠 LLM微调</span> 数据高效 Verilog LLM 微调（2026-04-21）— 合成数据 + 小规模预训练，7B 参数模型达 34B 质量</div>
+          <div class="abs-meta">arXiv: 2604.15388 &nbsp;|&nbsp; 2026-04-20 收录 &nbsp;|&nbsp; cs.AR + cs.CL &nbsp;|&nbsp; Technion（以色列理工学院）</div>
+          <div class="abs-body">
+            专用 Verilog LLM（VerilogEval 基准）训练面临数据稀缺困境：公开高质量 Verilog 代码远少于软件代码，大规模预训练成本高昂。<br><br>
+            本文系统研究<strong>数据高效 Verilog LLM 训练策略</strong>：① <strong>合成数据生成管道</strong>——利用强 LLM 自动生成多样化的 Verilog 问题-答案对，覆盖组合/时序逻辑、FSM、算术模块等类型；② <strong>小规模持续预训练</strong>（Continued Pretraining on Verilog Corpus）在通用 LLM 上注入 Verilog 领域知识；③ 系统消融分析：数据量、数据质量、预训练策略对微调效果的独立贡献。<br><br>
+            <strong>关键结果</strong>（VerilogEval benchmark）：7B 参数模型经数据高效训练后，在功能正确性（pass@1）上<strong>超越 34B 规模的通用基础模型</strong>；合成数据比真实数据量扩展后效果进一步显著提升。<br><br>
+            <strong>亮点</strong>：以色列理工学院；提出的合成数据生成方法可直接应用于 RTLCoder、VerilogCoder 等现有框架；7B 超越 34B 的参数效率结论对资源受限团队（如高校、初创公司）具有重要实践价值。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.15388" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-20/Verilog-DataEffFT_2604.15388v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">🔒 RTL安全</span> VeriCWEty（2026-04-21）— 基于 LLM 的 RTL CWE 安全漏洞检测框架，超越 GPT-4o 基线</div>
+          <div class="abs-meta">arXiv: 2604.15375 &nbsp;|&nbsp; 2026-04-20 收录 &nbsp;|&nbsp; cs.CR + cs.AR &nbsp;|&nbsp; 佛罗里达大学</div>
+          <div class="abs-body">
+            硬件安全 CWE（Common Weakness Enumeration）漏洞——如信息泄露、权限提升、侧信道时序窗口——在 RTL 级别极难自动检测，现有静态分析工具依赖人工规则，覆盖率有限。<br><br>
+            VeriCWEty 提出<strong>LLM 驱动的 RTL CWE 安全漏洞检测框架</strong>：① 将 MITRE CWE 数据库中硬件相关条目（CWE-1190、1231、1233 等）转化为<strong>结构化检测提示（Structured Detection Prompts）</strong>；② 结合<strong>代码上下文窗口扩展</strong>技术处理大型 RTL 设计；③ 双轨输出——漏洞定位（行级）+ 修复建议生成；④ 在 <strong>CWE-Bench-Hardware</strong>（首个硬件 CWE 评估数据集）上全面评估。<br><br>
+            <strong>关键结果</strong>：VeriCWEty 在 CWE-Bench-Hardware 上超越 GPT-4o 零样本基线，在 CWE-1190（信息曝露）和 CWE-1231（不当寄存器锁定）类型上 F1 分数分别提升 +18.3% 和 +22.7%。<br><br>
+            <strong>亮点</strong>：佛罗里达大学硬件安全团队；是近年 RTL 安全方向继 RTLSV（形式化）、TrustLLM-HW（验证）之后，专注 CWE 分类检测的新方向；为芯片安全认证流程（CC/FIPS）提供了 LLM 增强的自动化路径。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.15375" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-20/VeriCWEty_2604.15375v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🧬 RTL生成</span> COEVO（2026-04-17）— 协同进化框架联合优化功能正确性 + PPA，突破现有 LLM RTL 生成"功能正确但面积差"的核心短板</div>
+          <div class="abs-meta">arXiv: 2604.15001 &nbsp;|&nbsp; 2026-04-17 投稿，2026-04-21 收录 &nbsp;|&nbsp; cs.AR + cs.AI</div>
+          <div class="abs-body">
+            现有 LLM for RTL 生成方法（VerilogEval、RTLCoder、VerilogCoder）主要优化<strong>功能正确性（pass@k）</strong>，但生成的 RTL 在综合后 PPA 表现往往显著劣于人工编写代码——功能通过≠硅后优质。<br><br>
+            COEVO 提出<strong>协同进化（Co-Evolutionary）框架</strong>，将功能正确性与 PPA 纳入同一优化目标：
+            <br>① <strong>双目标进化机制</strong>——同时优化通过率（功能正确）和 PPA（EDA 工具综合结果），两目标相互约束引导搜索方向；
+            <br>② <strong>代码变异策略</strong>——基于 LLM 的结构感知代码变异算子（模块重组、流水线调整、资源共享），保持功能不变的同时探索 PPA 优化空间；
+            <br>③ <strong>EDA 工具闭环评估</strong>——调用 Yosys / OpenROAD 实测面积/时序/功耗，将真实 PPA 数值反馈回进化迭代；
+            <br>④ <strong>多目标 Pareto 前沿维护</strong>——保留功能正确且 PPA 各维度表现多样的候选群体，避免局部收敛。<br><br>
+            <strong>关键结果</strong>：在 VerilogEval-Human 和 RTLLM 基准上，COEVO 生成的 RTL 在功能通过率持平或优于现有 SOTA 的同时，综合面积显著减少（部分设计 -15%~-30%），时序余量改善；与纯功能优化基线相比，Pareto 最优方案覆盖率提升明显。<br><br>
+            <strong>亮点</strong>：首个将"功能正确性"与"PPA 质量"协同优化纳入统一进化框架的 RTL 生成工作；引入真实 EDA 工具（而非代理模型）作为适应度函数，结果与工业标准直接对比；解决了 LLM 生成 RTL"能运行但面积浪费"的根本问题，是 AI for EDA 从"功能可行"迈向"硅后优质"的关键突破。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.15001" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-21/COEVO_2604.15001v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">📐 RTL生成</span> VerilogCL（2026-04-20）— 对比学习框架增强LLM Verilog生成鲁棒性，7B模型超越所有开源/专用/商业基线</div>
+          <div class="abs-meta">arXiv: 2604.18162 &nbsp;|&nbsp; 2026-04-20 投稿 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; 作者：Yan Tan, Tong Liu, Xiangchen Meng, Yangdi Lyu</div>
+          <div class="abs-body">
+            LLM 生成的 Verilog 代码常包含语法或结构错误导致编译失败或功能不正确，限制了其在硬件设计中的可靠性。<strong>VerilogCL</strong> 通过以下三项机制增强生成鲁棒性：<br><br>
+            ① <strong>最小错误数据增强</strong>：生成正确 RTL 与最小扰动错误 RTL 的配对训练样本，让模型学习正确与错误代码的细粒度差异；<br>
+            ② <strong>对比学习（Contrastive Learning）</strong>：在表示空间中学习清晰的 validity 边界，最大化正确/错误 RTL 之间的分离度；<br>
+            ③ <strong>主动筛选模块</strong>：结合语义嵌入与 token 级不确定性特征，在生成过程中过滤低置信度候选代码。<br><br>
+            <strong>关键结果</strong>：在 VerilogEval 和 RTLLM 基准上，<strong>7B 参数模型</strong>在编译成功率和功能正确性上<strong>优于所有开源、Verilog 专用、商业 LLM 基线模型</strong>。<br><br>
+            <strong>亮点</strong>：将 NLP 领域成熟的对比学习思路引入硬件代码生成；7B 小参数模型通过数据质量取胜的范式值得关注；与 AutoVeriFix+（轨迹感知修复）和 SiliconMind-V1 形成互补的 RTL 生成鲁棒性三角格局。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.18162" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-22/VerilogCL_2604.18162v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🔧 RTL修复</span> Clover（2026-04-19）— 神经符号智能体 + 随机思维树 RTL 修复，96.8% 修复率，比纯 LLM 多覆盖 63% bug</div>
+          <div class="abs-meta">arXiv: 2604.17288 &nbsp;|&nbsp; 2026-04-19 投稿 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; 作者：Zizhang Luo 等9人</div>
+          <div class="abs-body">
+            传统 APR 依赖预定义模板，纯 LLM 方法在长 RTL 代码和波形处理中存在随机性和上下文污染。<strong>Clover</strong> 将 RTL 修复建模为结构化搜索，核心创新：<br><br>
+            ① <strong>神经符号任务分派</strong>：不同修复操作动态分派给专门 LLM 智能体或符号求解器，兼取两者优势；<br>
+            ② <strong>随机思维树（Stochastic Tree-of-Thoughts）</strong>：测试时扩展机制，将主智能体上下文管理为搜索树，平衡探索/利用；<br>
+            ③ <strong>RTL 专用工具箱</strong>：增强智能体与调试环境（仿真器、综合工具）的深度交互能力。<br><br>
+            <strong>关键结果</strong>：在固定时间限制内修复 <strong>96.8%</strong> 的 bug，比纯传统方法多覆盖 <strong>94%</strong>，比纯 LLM 基线多覆盖 <strong>63%</strong>，平均 pass@1 率 <strong>87.5%</strong>。<br><br>
+            <strong>亮点</strong>：神经符号结合是 Agentic EDA 领域较少见的路线，Tree-of-Thoughts 与硬件修复任务的结合是方法论亮点；本文是 ICCAD 截稿后涌现的 RTL 修复方向重磅成果，与 AutoVeriFix+（周期轨迹感知修复）形成差异化对比。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.17288" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-22/Clover_RTLRepair_2604.17288v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">🔬 表示研究</span> From Natural Language to Silicon（2026-04-18）— 揭示"表示瓶颈"：IR 选择比模型选择更重要，不同 IR 仿真通过率 3%→88%</div>
+          <div class="abs-meta">arXiv: 2604.17097 &nbsp;|&nbsp; 2026-04-18 投稿 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; 作者：Weimin Fu, Zeng Wang, Minghao Shao, Johann Knechtel, Ozgur Sinanoglu, Ramesh Karri, Muhammad Shafique, Xiaolong Guo</div>
+          <div class="abs-body">
+            在"自然语言→硅"流程中，用户用自然语言描述电路，LLM 将其编译为硬件中间表示（IR）。本文对<strong>六种 IR</strong>（Verilog、VHDL、Chisel、Bluespec、PyMTL3、HLS C）+ 三种前沿 LLM + 202 个任务进行系统评估：<br><br>
+            <strong>核心发现（"表示瓶颈"）</strong>：<br>
+            ① 不同 IR 间仿真通过率从 <strong>3% 到 88%</strong> 不等；<br>
+            ② 但在任一 IR 内，不同模型间差异通常 <strong>&lt;1.25倍</strong>；<br>
+            ③ 在资源受限 FPGA（iCE40）上，LLM 设计 FPGA 通过率（86.5%）高于参考（68.7%），因其<strong>简单性偏差</strong>恰好适配资源限制；<br>
+            ④ <strong>可访问性-能力悖论</strong>：最用户友好的 IR（HLS C/PyMTL3）导致最差 LLM 性能。<br><br>
+            <strong>亮点</strong>：与上面 Configuration Over Selection 是同组同日发布的姊妹论文，共同构建"是配置还是 IR 更重要"的系统性研究；表示瓶颈发现对 AI for EDA 工具链的 IR 设计有直接指导意义。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.17097" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-22/NL2Silicon_RepresentationBottleneck_2604.17097v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">✅ 形式验证</span> EquivFusion（2026-04-17）— MLIR 驱动多模态硬件等价检验，PyTorch/C/Chisel/Verilog→网表全链路，FSE 2026</div>
+          <div class="abs-meta">arXiv: 2604.16571 &nbsp;|&nbsp; 2026-04-17 投稿 &nbsp;|&nbsp; cs.AR + cs.SE &nbsp;|&nbsp; 会议：FSE 2026 Tool Demo Track &nbsp;|&nbsp; 作者：Jiaying Zhu, Baoqi Zhang, Mengxia Tao, Kezhi Li, Hao Yan, Qiang Xu, Min Li</div>
+          <div class="abs-body">
+            现代设计流程跨越异构抽象层——从深度学习框架到硬件网表，确保各层间功能一致性是核心挑战。传统工具依赖孤立转换。<strong>EquivFusion</strong> 提出端到端等价检验工具：<br><br>
+            ① <strong>验证导向 MLIR 降级管道</strong>：将 PyTorch / C/C++ / Chisel / Verilog / 门级网表<strong>统一降级</strong>为通用中间表示；<br>
+            ② <strong>标准形式验证格式输出</strong>：自动转换为 SMT-LIB、BTOR2、AIGER，实现跨抽象层自动化成对等价检验；<br>
+            ③ <strong>"左移"形式验证</strong>：让数据通路密集型硬件设计在早期阶段即可引入形式化保障，而非仅在门级网表阶段。<br><br>
+            <strong>亮点</strong>：FSE 2026（软件工程顶会）Tool Demo Track 接收，标志着硬件等价检验工具进入软件工程顶会视野；MLIR 作为连接 ML 框架与硬件描述语言的桥梁，是今年 AI for EDA 工具基础设施的重要方向；与 SpecLoop（形式等价驱动逆向规范生成）形成互补。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.16571" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-22/EquivFusion_2604.16571v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span><span class="badge-hot">Agent4Chip日</span> ChipCraftBrain: Validation-First RTL Generation via Multi-Agent Orchestration</div>
+          <div class="abs-meta">arXiv:2604.19856 · 2026-04-23 · RTL代码生成 / Agentic / 工业基准</div>
+          <div class="abs-body">提出 <strong>验证优先</strong>多智能体 RTL 生成框架，结合<strong>混合符号-神经推理</strong>与<strong>自适应多智能体编排</strong>。四项关键创新：(1) 验证第一原则替代 generate-then-fix 范式；(2) 混合符号推理减少语义错误；(3) 自适应多智能体编排降低 API 开销；(4) 针对 NVIDIA CVDP 工业基准（更难）优化。MAGE 在 VerilogEval 达到 95.9% 但在 CVDP 等工业基准上尚未经测试，ChipCraftBrain 填补这一空白并展示综合感知能力。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.19856" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-23/ChipCraftBrain_2604.19856v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span> Structural Verification for Reliable EDA Code Generation without Tool-in-the-Loop Debugging</div>
+          <div class="abs-meta">arXiv:2604.18834 · 2026-04-21（发布）/ 2026-04-23（收录）· EDA代码生成 / LLM可靠性</div>
+          <div class="abs-body">LLM 已能以自然语言驱动 EDA 工作流自动化，但生成脚本的可靠执行仍是瓶颈。本文提出<strong>结构化验证</strong>方法：在执行前强制执行结构一致性，将正确性与工具交互<strong>解耦</strong>，显著提升长流程 EDA 代码生成的可靠性与效率。EDA 任务需要与分层设计数据库交互、组合工具特定 API，且需在紧密耦合的流程阶段保持一致性——本方法针对这一独特挑战设计，区别于软件领域的 LLM 验证方案。作者：Dinithi Jayasuriya, Aravind Saravanan 等，Illinois &amp; Intel。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.18834" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-23/StructuralVerif_EDA_2604.18834v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+  </div>
+</section>
+</body>
+</html>

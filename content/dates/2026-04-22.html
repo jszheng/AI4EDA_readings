@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0422')">
+      <h3>📅 2026-04-22 · 今日更新（6篇 🆕）— VerilogCL · Clover · Config>Selection · NL2Silicon · EquivFusion · Agentic HW Verif Token | Agent4Chip @ ICLR 2026 已开幕（4月23日）</h3>
+      <span class="badge-count" style="border-color:var(--accent3);color:var(--accent3);">6 篇 🆕</span>
+      <span class="toggle" id="toggle-g0422">▼</span>
+    </div>
+    <div class="date-body" id="g0422">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="star">★</span> 1</td>
+            <td><strong>VerilogCL: A Contrastive Learning Framework for Robust LLM-Based Verilog Generation</strong></td>
+            <td class="cat">RTL生成 / 对比学习 / 7B超越所有基线</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.18162" target="_blank">2604.18162</a></td>
+            <td><a class="pdf-link" href="./2026-04-22/VerilogCL_2604.18162v1.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td><span class="star">★</span> 2</td>
+            <td><strong>Clover: A Neural-Symbolic Agentic Harness with Stochastic Tree-of-Thoughts for Verified RTL Repair</strong></td>
+            <td class="cat">RTL修复 / 神经符号 / 随机思维树 / 96.8%修复率</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.17288" target="_blank">2604.17288</a></td>
+            <td><a class="pdf-link" href="./2026-04-22/Clover_RTLRepair_2604.17288v1.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><strong>Configuration Over Selection: Hyperparameter Sensitivity Exceeds Model Differences in Open-Source LLMs for RTL Generation</strong></td>
+            <td class="cat">LLM RTL生成 / 超参数分析 / 26个模型 / 108种配置</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.17102" target="_blank">2604.17102</a></td>
+            <td><a class="pdf-link" href="./2026-04-22/ConfigOverSelection_2604.17102v1.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong>From Natural Language to Silicon: The Representation Bottleneck in LLM Hardware Design</strong></td>
+            <td class="cat">LLM硬件设计 / IR选择 / FPGA / 6种IR对比</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.17097" target="_blank">2604.17097</a></td>
+            <td><a class="pdf-link" href="./2026-04-22/NL2Silicon_RepresentationBottleneck_2604.17097v1.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><strong>EquivFusion: Unifying Hardware Equivalence Checking from Algorithms to Netlists via MLIR</strong></td>
+            <td class="cat">形式验证 / 等价检验 / 多模态 / MLIR / FSE 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.16571" target="_blank">2604.16571</a></td>
+            <td><a class="pdf-link" href="./2026-04-22/EquivFusion_2604.16571v1.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><strong>Understanding Inference-Time Token Allocation and Coverage Limits in Agentic Hardware Verification</strong></td>
+            <td class="cat">智能体硬件验证 / Token分析 / 覆盖率95-99% / 4-13×降耗</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.15657" target="_blank">2604.15657</a></td>
+            <td><a class="pdf-link" href="./2026-04-22/AgenticHWVerif_TokenAlloc_2604.15657v1.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="abstracts">
+        <!-- VerilogCL -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">📐 RTL生成</span> VerilogCL（2026-04-20）— 对比学习框架增强LLM Verilog生成鲁棒性，7B模型超越所有开源/专用/商业基线</div>
+          <div class="abs-meta">arXiv: 2604.18162 &nbsp;|&nbsp; 2026-04-20 投稿 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; 作者：Yan Tan, Tong Liu, Xiangchen Meng, Yangdi Lyu</div>
+          <div class="abs-body">
+            LLM 生成的 Verilog 代码常包含语法或结构错误导致编译失败或功能不正确，限制了其在硬件设计中的可靠性。<strong>VerilogCL</strong> 通过以下三项机制增强生成鲁棒性：<br><br>
+            ① <strong>最小错误数据增强</strong>：生成正确 RTL 与最小扰动错误 RTL 的配对训练样本，让模型学习正确与错误代码的细粒度差异；<br>
+            ② <strong>对比学习（Contrastive Learning）</strong>：在表示空间中学习清晰的 validity 边界，最大化正确/错误 RTL 之间的分离度；<br>
+            ③ <strong>主动筛选模块</strong>：结合语义嵌入与 token 级不确定性特征，在生成过程中过滤低置信度候选代码。<br><br>
+            <strong>关键结果</strong>：在 VerilogEval 和 RTLLM 基准上，<strong>7B 参数模型</strong>在编译成功率和功能正确性上<strong>优于所有开源、Verilog 专用、商业 LLM 基线模型</strong>。<br><br>
+            <strong>亮点</strong>：将 NLP 领域成熟的对比学习思路引入硬件代码生成；7B 小参数模型通过数据质量取胜的范式值得关注；与 AutoVeriFix+（轨迹感知修复）和 SiliconMind-V1 形成互补的 RTL 生成鲁棒性三角格局。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.18162" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-22/VerilogCL_2604.18162v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+        <!-- Clover -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🔧 RTL修复</span> Clover（2026-04-19）— 神经符号智能体 + 随机思维树 RTL 修复，96.8% 修复率，比纯 LLM 多覆盖 63% bug</div>
+          <div class="abs-meta">arXiv: 2604.17288 &nbsp;|&nbsp; 2026-04-19 投稿 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; 作者：Zizhang Luo 等9人</div>
+          <div class="abs-body">
+            传统 APR 依赖预定义模板，纯 LLM 方法在长 RTL 代码和波形处理中存在随机性和上下文污染。<strong>Clover</strong> 将 RTL 修复建模为结构化搜索，核心创新：<br><br>
+            ① <strong>神经符号任务分派</strong>：不同修复操作动态分派给专门 LLM 智能体或符号求解器，兼取两者优势；<br>
+            ② <strong>随机思维树（Stochastic Tree-of-Thoughts）</strong>：测试时扩展机制，将主智能体上下文管理为搜索树，平衡探索/利用；<br>
+            ③ <strong>RTL 专用工具箱</strong>：增强智能体与调试环境（仿真器、综合工具）的深度交互能力。<br><br>
+            <strong>关键结果</strong>：在固定时间限制内修复 <strong>96.8%</strong> 的 bug，比纯传统方法多覆盖 <strong>94%</strong>，比纯 LLM 基线多覆盖 <strong>63%</strong>，平均 pass@1 率 <strong>87.5%</strong>。<br><br>
+            <strong>亮点</strong>：神经符号结合是 Agentic EDA 领域较少见的路线，Tree-of-Thoughts 与硬件修复任务的结合是方法论亮点；本文是 ICCAD 截稿后涌现的 RTL 修复方向重磅成果，与 AutoVeriFix+（周期轨迹感知修复）形成差异化对比。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.17288" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-22/Clover_RTLRepair_2604.17288v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+        <!-- Configuration Over Selection -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">📊 方法论</span> Configuration Over Selection（2026-04-18）— 超参数敏感度超过模型选择差异，同模型最佳/最差配置差 25.5%，是平均模型间差距 5 倍</div>
+          <div class="abs-meta">arXiv: 2604.17102 &nbsp;|&nbsp; 2026-04-18 投稿 &nbsp;|&nbsp; cs.AR + cs.AI &nbsp;|&nbsp; 作者：Minghao Shao, Zeng Wang, Weimin Fu, Johann Knechtel, Ozgur Sinanoglu, Ramesh Karri, Muhammad Shafique</div>
+          <div class="abs-body">
+            当前 LLM RTL 生成基准测试聚焦"选哪个模型"，而忽视推理时解码配置。本文在 26 个开源 LLM 和 VerilogEval/RTLLM 基准上系统研究了这个被忽视的维度：<br><br>
+            <strong>核心发现</strong>：对三个代表性模型进行 <strong>108 种超参数配置</strong>的大规模扫描，结果显示：<br>
+            ① 同一 LLM 最佳与最差配置间绝对通过率差距高达 <strong>25.5%</strong>，是平均模型间差距的 <strong>5 倍</strong>；<br>
+            ② 不同基准间最优配置 Spearman ρ 排名接近零，即<strong>最优配置不可跨基准迁移</strong>；<br>
+            ③ 在默认超参数下的基准测试混淆了"模型能力"与"配置效果"，导致排名失真。<br><br>
+            <strong>结论</strong>：充分发挥开源 LLM 在 RTL 生成上的潜力，需要<strong>架构感知和基准感知的超参数选择方法</strong>。<br><br>
+            <strong>亮点</strong>：NYU 团队（Ramesh Karri、Ozgur Sinanoglu）出品；对领域评测体系的方法论批判，直接影响后续论文的实验设计规范；与同组的 VeriInteresting（2026-03-16）和 Synthesis-in-the-Loop（2026-03-15）评测系列形成递进关系。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.17102" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-22/ConfigOverSelection_2604.17102v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+        <!-- From NL to Silicon -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">🔬 表示研究</span> From Natural Language to Silicon（2026-04-18）— 揭示"表示瓶颈"：IR 选择比模型选择更重要，不同 IR 仿真通过率 3%→88%</div>
+          <div class="abs-meta">arXiv: 2604.17097 &nbsp;|&nbsp; 2026-04-18 投稿 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; 作者：Weimin Fu, Zeng Wang, Minghao Shao, Johann Knechtel, Ozgur Sinanoglu, Ramesh Karri, Muhammad Shafique, Xiaolong Guo</div>
+          <div class="abs-body">
+            在"自然语言→硅"流程中，用户用自然语言描述电路，LLM 将其编译为硬件中间表示（IR）。本文对<strong>六种 IR</strong>（Verilog、VHDL、Chisel、Bluespec、PyMTL3、HLS C）+ 三种前沿 LLM + 202 个任务进行系统评估：<br><br>
+            <strong>核心发现（"表示瓶颈"）</strong>：<br>
+            ① 不同 IR 间仿真通过率从 <strong>3% 到 88%</strong> 不等；<br>
+            ② 但在任一 IR 内，不同模型间差异通常 <strong>&lt;1.25倍</strong>；<br>
+            ③ 在资源受限 FPGA（iCE40）上，LLM 设计 FPGA 通过率（86.5%）高于参考（68.7%），因其<strong>简单性偏差</strong>恰好适配资源限制；<br>
+            ④ <strong>可访问性-能力悖论</strong>：最用户友好的 IR（HLS C/PyMTL3）导致最差 LLM 性能。<br><br>
+            <strong>亮点</strong>：与上面 Configuration Over Selection 是同组同日发布的姊妹论文，共同构建"是配置还是 IR 更重要"的系统性研究；表示瓶颈发现对 AI for EDA 工具链的 IR 设计有直接指导意义。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.17097" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-22/NL2Silicon_RepresentationBottleneck_2604.17097v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+        <!-- EquivFusion -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">✅ 形式验证</span> EquivFusion（2026-04-17）— MLIR 驱动多模态硬件等价检验，PyTorch/C/Chisel/Verilog→网表全链路，FSE 2026</div>
+          <div class="abs-meta">arXiv: 2604.16571 &nbsp;|&nbsp; 2026-04-17 投稿 &nbsp;|&nbsp; cs.AR + cs.SE &nbsp;|&nbsp; 会议：FSE 2026 Tool Demo Track &nbsp;|&nbsp; 作者：Jiaying Zhu, Baoqi Zhang, Mengxia Tao, Kezhi Li, Hao Yan, Qiang Xu, Min Li</div>
+          <div class="abs-body">
+            现代设计流程跨越异构抽象层——从深度学习框架到硬件网表，确保各层间功能一致性是核心挑战。传统工具依赖孤立转换。<strong>EquivFusion</strong> 提出端到端等价检验工具：<br><br>
+            ① <strong>验证导向 MLIR 降级管道</strong>：将 PyTorch / C/C++ / Chisel / Verilog / 门级网表<strong>统一降级</strong>为通用中间表示；<br>
+            ② <strong>标准形式验证格式输出</strong>：自动转换为 SMT-LIB、BTOR2、AIGER，实现跨抽象层自动化成对等价检验；<br>
+            ③ <strong>"左移"形式验证</strong>：让数据通路密集型硬件设计在早期阶段即可引入形式化保障，而非仅在门级网表阶段。<br><br>
+            <strong>亮点</strong>：FSE 2026（软件工程顶会）Tool Demo Track 接收，标志着硬件等价检验工具进入软件工程顶会视野；MLIR 作为连接 ML 框架与硬件描述语言的桥梁，是今年 AI for EDA 工具基础设施的重要方向；与 SpecLoop（形式等价驱动逆向规范生成）形成互补。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.16571" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-22/EquivFusion_2604.16571v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+        <!-- Agentic HW Verification Token -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">🔍 验证分析</span> Agentic HW Verification Token分析（2026-04-17）— 量化覆盖率上限类型，专业化智能体达 95-99% 覆盖率，Token 降低 4-13 倍</div>
+          <div class="abs-meta">arXiv: 2604.15657 &nbsp;|&nbsp; 2026-04-17 投稿 &nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; 作者：Vihaan Patel, Vidya Chhabria, Aman Arora</div>
+          <div class="abs-body">
+            基于 LLM 的编码智能体为自动化激励生成提供了有前景的方法，但现有流程未系统分析哪些覆盖率漏洞难以填补、推理时计算资源如何分配。本文提出<strong>两层智能体框架</strong>（通用 Codex + 专业化 LangGraph），并构建覆盖率上限分类法：<br><br>
+            ① <strong>方法论受限上限</strong>：集成硬件边界、不可行边界、死代码（这些是 LLM 无法覆盖的根本性限制）；<br>
+            ② <strong>推理边界</strong>：协议排序、多模块流水线预热、窄时序条件（这些可通过专业化改善）；<br>
+            ③ <strong>6 类 Token 追踪</strong>：系统提示/设计理解/激励生成/覆盖率反馈/错误恢复/智能体开销，揭示专业化如何重定向 Token 分配。<br><br>
+            <strong>关键结果</strong>：增强系统达到 <strong>95-99%</strong> 覆盖率，Token 使用量减少 <strong>4-13 倍</strong>，收敛速度提升 <strong>2-4 倍</strong>。<br><br>
+            <strong>亮点</strong>：首个对 Agentic 验证的 Token 经济学进行系统分析的工作；覆盖率上限分类法对评估任何 LLM 驱动验证系统的极限都具有通用价值；指导未来智能体设计在"投入更多 token"与"人工升级"之间做出正确选择。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.15657" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-22/AgenticHWVerif_TokenAlloc_2604.15657v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+      </div><!-- end .abstracts -->
+    </div><!-- end .date-body -->
+  </div><!-- end .date-group 2026-04-22 -->
+</body>
+</html>

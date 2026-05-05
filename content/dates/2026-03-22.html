@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<!-- ── 2026-03-22 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0322')">
+      <h3>📅 2026-03-22 · 3 篇</h3>
+      <span class="badge-count">3 篇</span>
+      <span class="toggle" id="toggle-g0322">▼</span>
+    </div>
+    <div id="g0322" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="star">★</span> RTLocating: Intent-aware RTL Localization for Hardware Design Iteration</td><td class="cat">RTL迭代/意图感知/工业基准</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.00434" target="_blank">2603.00434</a></td><td><a class="pdf-link" href="./2026-03-22/2603.00434-RTLocating-RTL-Localization-Hardware-Iteration.pdf">📥 PDF</a></td></tr>
+          <tr><td>2</td><td><span class="star">★</span> SpecLoop: An Agentic RTL-to-Specification Framework with Formal Verification Feedback Loop</td><td class="cat">RTL→规范/形式验证/Agent</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.02895" target="_blank">2603.02895</a></td><td><a class="pdf-link" href="./2026-03-22/2603.02895-SpecLoop-RTL-to-Spec-Formal-Verification.pdf">📥 PDF</a></td></tr>
+          <tr><td>3</td><td>AutoEDA: Enabling EDA Flow Automation through Microservice-Based LLM Agents</td><td class="cat">EDA全流程/MCP协议/微服务</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2508.01012" target="_blank">2508.01012</a></td><td><a class="pdf-link" href="./2026-03-22/2508.01012-AutoEDA-EDA-Flow-Automation-LLM-Agents.pdf">📥 PDF</a></td></tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">RTLocating — 首个形式化 ΔSpec-to-RTL 定位问题，意图感知迭代硬件设计</div>
+          <div class="abs-meta">Changwen Xing 等 8 人 · cs.ET · EvoRTL-Bench（OpenTitan，1905条变更请求）</div>
+          <div class="abs-body">现有 LAD 工具聚焦一次性生成，忽略迭代更新。RTLocating 形式化了 <strong>ΔSpec-to-RTL 定位问题</strong>，动态路由器融合文本语义编码器 + 局部结构编码器 + GLIDE 全局依赖编码器。在首个工业级基准 EvoRTL-Bench 上：MRR = 0.568，R@1 = 15.08%，相比最强基线 <strong>MRR +22.9%，R@1 +67.0%</strong>，新 SOTA。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.00434" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">SpecLoop — 形式验证闭环驱动 RTL→规范自动生成，消除"文档失真"</div>
+          <div class="abs-meta">Fu-Chieh Chang 等 8 人 · 2026-03-03 · cs.AR + cs.PL</div>
+          <div class="abs-body">LLM 生成候选规范 → 基于规范重构 RTL → <strong>形式等价性检查</strong> → 反例反馈 LLM 迭代，直到证明等价。相比纯 LLM 基线，规范正确性显著提升。"逆向文档生成 + 形式验证"闭环是硬件可维护性的工程化答案。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.02895" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-title">AutoEDA — MCP 协议微服务架构，准确率提升 9.9×，token 减少 97%</div>
+          <div class="abs-meta">Yiyi Lu 等 11 人 · Duke + UMD · 2025-08-01（v1）/ 2026-02-24（v2）</div>
+          <div class="abs-body">基于 <strong>Model Context Protocol（MCP）</strong> 构建微服务架构，本地微调 LLM 保护设计 IP 隐私，实现自然语言到完整 RTL-to-GDSII 流程端到端自动化。准确率比简单方法 <strong>提升 9.9×</strong>，token 使用量比上下文学习减少约 <strong>97%</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2508.01012" target="_blank">arXiv</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

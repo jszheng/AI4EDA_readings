@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<!-- ── 2026-04-01 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0401')">
+      <h3>📅 2026-04-01 · 今日更新（1篇）— AP-DRL：Versal ACAP深度强化学习自动任务划分</h3>
+      <span class="badge-count">1 篇</span>
+      <span class="toggle" id="toggle-g0401">▼</span>
+    </div>
+    <div class="date-body" id="g0401">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>AP-DRL: A Synergistic Algorithm-Hardware Framework for Automatic Task Partitioning of Deep Reinforcement Learning on Versal ACAP</td>
+            <td class="cat">深度强化学习/硬件加速/Versal ACAP/任务划分/ILP</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.29369" target="_blank">2603.29369</a></td>
+            <td><a class="pdf-link" href="./2026-04-01/2603.29369_AP-DRL.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-new">DRL加速 · Versal</span>
+          <div class="abs-title">AP-DRL：面向 Versal ACAP 的 DRL 自动任务划分框架，ILP 分区 + BF16/FP16/FP32 混合精度，最高加速 4.17×</div>
+          <div class="abs-meta">Enlai Li, Zhe Lin, Sharad Sinha, Wei Zhang · 2026-03-31 · cs.AR / cs.LG</div>
+          <div class="abs-body">AP-DRL 利用 AMD Versal ACAP 异构架构（CPU + FPGA + AI 引擎），通过 <strong>ILP 划分模型</strong>将 DRL 操作按计算强度匹配最优计算单元，配合 FP32/FP16/BF16 三精度协同解决 DRL 宽动态范围量化误差。相比 PL 基线加速 <strong>4.17×</strong>，相比 AIE 基线 <strong>3.82×</strong>，同时保持训练收敛性。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.29369" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-01/2603.29369_AP-DRL.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

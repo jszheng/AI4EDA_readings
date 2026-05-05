@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<!-- ── 2026-04-09 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0409')">
+      <h3>📅 2026-04-09 · 今日更新（2篇）— ICCAD 2026 已截止（4月14日）· DAC 2026 程序 4月17日公布</h3>
+      <span class="badge-count">2 篇</span>
+      <span class="toggle" id="toggle-g0409">▼</span>
+    </div>
+    <div class="date-body" id="g0409">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> Arch: An AI-Native Hardware Description Language for Register-Transfer Clocked Hardware Design</td>
+            <td class="cat">AI原生HDL/LLM代码生成/RTL类型系统/CDC分析/OpenEDA</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.05983" target="_blank">2604.05983</a></td>
+            <td><a class="pdf-link" href="./2026-04-09/2604.05983-Arch-AI-Native-HDL-RTL-LLM.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="star">★</span> CoverAssert: Iterative LLM Assertion Generation Driven by Functional Coverage via Syntax-Semantic Representations</td>
+            <td class="cat">SVA断言生成/功能覆盖率反馈/形式验证/LLM硬件验证</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.06607" target="_blank">2604.06607</a></td>
+            <td><a class="pdf-link" href="./2026-04-09/2604.06607-CoverAssert-LLM-Assertion-Generation-Coverage.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">AI原生HDL · RTL生成</span>
+          <div class="abs-title">Arch：首个 AI 原生硬件描述语言——专为 LLM 代码生成设计的 RTL HDL，LL(1) 文法 + 编译期 CDC/RDC 捕获</div>
+          <div class="abs-meta">Shuqing Zhao · 2026-04-07 · cs.AR · <strong>AI-native HDL / Sky130 验证</strong></div>
+          <div class="abs-body">现有 HDL（SystemVerilog、VHDL、Chisel）均非为 AI 代码生成设计，LLM 在生成这些语言时存在大量结构性错误（多驱动、未同步 CDC、隐式锁存器等）。<br>
+          Arch 从基本原理出发设计，核心创新包括：<br>
+          ① <strong>"AI 可生成性契约"</strong>：LL(1) 无歧义文法、无宏/无预处理器、统一声明模式、具名块结束、显式方向连接箭头（<code>-&gt;</code> / <code>&lt;-</code>），使 LLM 直接从自然语言生成结构正确、类型安全的代码，无需微调；<br>
+          ② <strong>一等语言构造</strong>：流水线、FSM、FIFO、仲裁器、寄存器文件、总线、CDC 均有原生语法，无需通过用户模式拼凑；<br>
+          ③ <strong>参数化时钟/复位类型</strong>：将 CDC/RDC 分析转化为编译时类型规则，同时追踪位宽、端口方向、单驱动所有权、组合逻辑无环性，在运行仿真前即可捕获多种硬件错误；<br>
+          ④ 编译输出确定性 <strong>IEEE 1800-2017 SystemVerilog</strong>，集成 C++ 仿真工具链，<strong>Sky130 工艺</strong>案例（L1 D-Cache / AXI DMA 控制器）验证。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.05983" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-09/2604.05983-Arch-AI-Native-HDL-RTL-LLM.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">SVA验证 · 覆盖率驱动</span>
+          <div class="abs-title">CoverAssert：覆盖率驱动的迭代式 LLM SVA 断言生成，分支覆盖 +9.57%、翻转覆盖 +15.69%</div>
+          <div class="abs-meta">Yonghao Wang, Yang Yin, Hongqin Lyu 等 10 位作者（华为等）· 2026-04-08 · cs.AR</div>
+          <div class="abs-body">LLM 可根据自然语言规约生成 SystemVerilog Assertion（SVA），但单次生成因缺乏对功能覆盖率的感知，往往产生同质化断言，遗漏关键行为点。<br>
+          CoverAssert 提出三步迭代框架：<br>
+          ① <strong>语法-语义聚类</strong>：对已生成断言提取 AST 结构特征 + 语义嵌入，聚类映射至规约功能点，识别"已覆盖"与"未覆盖"功能区域；<br>
+          ② <strong>覆盖率反馈闭环</strong>：将功能覆盖率仿真结果作为引导信号，提示 LLM 优先生成针对未覆盖功能点的新断言；<br>
+          ③ <strong>兼容现有框架</strong>：可作为插件与 AssertLLM、Spec2Assertion 等集成，无需改变底层 LLM。<br>
+          <strong>实验结果（4个开源设计）</strong>：分支覆盖率 <strong>+9.57%</strong>，语句覆盖率 <strong>+9.64%</strong>，翻转覆盖率 <strong>+15.69%</strong>（相对基线平均）。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.06607" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-09/2604.06607-CoverAssert-LLM-Assertion-Generation-Coverage.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

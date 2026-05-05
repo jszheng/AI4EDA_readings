@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<!-- ── 2026-04-06 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0406')">
+      <h3>📅 2026-04-06 · 今日更新（3篇）— AI硬件安全验证综述 + Assertain安全断言生成 + ChatSVA SVA验证</h3>
+      <span class="badge-count">3 篇</span>
+      <span class="toggle" id="toggle-g0406">▼</span>
+    </div>
+    <div class="date-body" id="g0406">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>AI-Assisted Hardware Security Verification: A Survey and AI Accelerator Case Study</td>
+            <td class="cat">硬件安全验证/AI辅助/LLM/综述/VTS 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.01572" target="_blank">2604.01572</a></td>
+            <td><a class="pdf-link" href="./2026-04-06/2604.01572_AI_Hardware_Security_Verification_Survey.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Assertain: Automated Security Assertion Generation Using Large Language Models</td>
+            <td class="cat">安全断言生成/LLM/CWE覆盖/MDTS 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.01583" target="_blank">2604.01583</a></td>
+            <td><a class="pdf-link" href="./2026-04-06/2604.01583_Assertain_Security_Assertion_LLM.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><span class="star">★</span> ChatSVA: Bridging SVA Generation for Hardware Verification via Task-Specific LLMs</td>
+            <td class="cat">SVA断言生成/硬件验证/多智能体/DAC 2026</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.02811" target="_blank">2604.02811</a></td>
+            <td><a class="pdf-link" href="./2026-04-06/2604.02811_ChatSVA_SVA_Generation_Hardware_Verification.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-new">AI硬件安全</span>
+          <div class="abs-title">AI辅助硬件安全验证综述（VTS 2026）：覆盖资产识别→威胁建模→形式验证全流程，NVDLA案例研究</div>
+          <div class="abs-meta">Khan Thamid Hasan 等 6 位作者 · 2026-04-02 · cs.CR · <strong>IEEE VTS 2026</strong></div>
+          <div class="abs-body">随着硬件系统复杂度持续提升，AI/LLM开始自动化验证工作流的多个阶段：<strong>资产识别、威胁建模、安全测试计划生成、仿真驱动分析、形式验证、防护措施推理</strong>。本综述系统梳理相关进展，以开源 NVDLA 为案例研究，强调 AI 输出须经仿真证据和形式推理验证。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.01572" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-06/2604.01572_AI_Hardware_Security_Verification_Survey.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-new">安全断言 · MDTS'26</span>
+          <div class="abs-title">Assertain（MDTS 2026）：LLM驱动自动化安全断言生成，正确断言+61.22%，CWE覆盖+59.49%，缺陷检测+67.92%</div>
+          <div class="abs-meta">Shams Tarek, Dipayan Saha 等 6 位作者 · 2026-04-02 · cs.CR · <strong>IEEE MDTS 2026</strong></div>
+          <div class="abs-body">Assertain 集成 RTL 分析 + CWE 映射 + 威胁模型 + LLM 自反思优化，在 11 个硬件设计上：正确断言生成 <strong>+61.22%</strong>（vs. GPT-5），唯一 CWE 覆盖率 <strong>+59.49%</strong>，架构缺陷检测 <strong>+67.92%</strong>。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.01583" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-06/2604.01583_Assertain_Security_Assertion_LLM.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-top">DAC 2026 · 功能覆盖 +11×</span>
+          <div class="abs-title">ChatSVA（DAC 2026）：多智能体 SVA 生成，语法通过率 98.66%，功能通过率 96.12%，相比前 SOTA 覆盖率提升 11×</div>
+          <div class="abs-meta">Lik Tung Fu, Jie Zhou 等 9 位作者 · 2026-04-03 · cs.AR / cs.AI · <strong>DAC 2026 接收</strong></div>
+          <div class="abs-body">ChatSVA 端到端多智能体框架，核心 <strong>AgentBridge 平台</strong>系统性生成高纯度 SVA 数据集。24 个 RTL 设计实验：语法通过率 <strong>98.66%</strong>，功能通过率 <strong>96.12%</strong>，每设计 SVA <strong>139.5</strong> 条，功能覆盖率 <strong>82.50%</strong>；相比前 SOTA 功能正确性 <strong>+33.3 个百分点</strong>，功能覆盖率 <strong>+11×</strong>。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.02811" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-06/2604.02811_ChatSVA_SVA_Generation_Hardware_Verification.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

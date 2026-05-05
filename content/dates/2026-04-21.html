@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0421')">
+      <h3>📅 2026-04-21 · 今日更新（1篇 🆕）— COEVO: Co-Evolutionary RTL Generation for Functional Correctness + PPA | Cadence 目标价上调至 $400</h3>
+      <span class="badge-count" style="border-color:var(--accent3);color:var(--accent3);">1 篇 🆕</span>
+      <span class="toggle" id="toggle-g0421">▼</span>
+    </div>
+    <div class="date-body" id="g0421">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="star">★</span> 1</td>
+            <td><strong>COEVO: Co-Evolutionary Framework for Joint Functional Correctness and PPA Optimization in LLM-Based RTL Generation</strong></td>
+            <td class="cat">RTL生成 / 协同进化 / 功能正确性 + PPA 联合优化 / LLM</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2604.15001" target="_blank">2604.15001</a></td>
+            <td><a class="pdf-link" href="./2026-04-21/COEVO_2604.15001v1.pdf" target="_blank">↓ PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="abstracts">
+        <!-- COEVO -->
+        <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">🧬 RTL生成</span> COEVO（2026-04-17）— 协同进化框架联合优化功能正确性 + PPA，突破现有 LLM RTL 生成"功能正确但面积差"的核心短板</div>
+          <div class="abs-meta">arXiv: 2604.15001 &nbsp;|&nbsp; 2026-04-17 投稿，2026-04-21 收录 &nbsp;|&nbsp; cs.AR + cs.AI</div>
+          <div class="abs-body">
+            现有 LLM for RTL 生成方法（VerilogEval、RTLCoder、VerilogCoder）主要优化<strong>功能正确性（pass@k）</strong>，但生成的 RTL 在综合后 PPA 表现往往显著劣于人工编写代码——功能通过≠硅后优质。<br><br>
+            COEVO 提出<strong>协同进化（Co-Evolutionary）框架</strong>，将功能正确性与 PPA 纳入同一优化目标：
+            <br>① <strong>双目标进化机制</strong>——同时优化通过率（功能正确）和 PPA（EDA 工具综合结果），两目标相互约束引导搜索方向；
+            <br>② <strong>代码变异策略</strong>——基于 LLM 的结构感知代码变异算子（模块重组、流水线调整、资源共享），保持功能不变的同时探索 PPA 优化空间；
+            <br>③ <strong>EDA 工具闭环评估</strong>——调用 Yosys / OpenROAD 实测面积/时序/功耗，将真实 PPA 数值反馈回进化迭代；
+            <br>④ <strong>多目标 Pareto 前沿维护</strong>——保留功能正确且 PPA 各维度表现多样的候选群体，避免局部收敛。<br><br>
+            <strong>关键结果</strong>：在 VerilogEval-Human 和 RTLLM 基准上，COEVO 生成的 RTL 在功能通过率持平或优于现有 SOTA 的同时，综合面积显著减少（部分设计 -15%~-30%），时序余量改善；与纯功能优化基线相比，Pareto 最优方案覆盖率提升明显。<br><br>
+            <strong>亮点</strong>：首个将"功能正确性"与"PPA 质量"协同优化纳入统一进化框架的 RTL 生成工作；引入真实 EDA 工具（而非代理模型）作为适应度函数，结果与工业标准直接对比；解决了 LLM 生成 RTL"能运行但面积浪费"的根本问题，是 AI for EDA 从"功能可行"迈向"硅后优质"的关键突破。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.15001" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-21/COEVO_2604.15001v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+      </div><!-- end .abstracts -->
+    </div><!-- end .date-body -->
+  </div><!-- end .date-group 2026-04-21 -->
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css?v=20260505" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<section id="cat-analog">
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（15篇） <span class="line"></span></div>
+  <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
+  <div class="abstracts">
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">⭐精选</span> ChipLight: Cross-Layer Optimization of Chiplet Design with Optical Interconnects for LLM Training</div>
+          <div class="abs-meta">2604.18909 · 2026-04-20 · cs.AR · Kangbo Bai, Zhantong Zhu et al.</div>
+          <div class="abs-body">针对大规模 LLM 训练的通信瓶颈，结合 Chiplet 与光电互连（OI）技术进行跨层优化。探索 package 内和 package 间互连的联合优化，覆盖网络拓扑、路由和带宽分配。直接命中 <strong>AI for Multi-Die/Chiplets</strong> 方向。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.18909" target="_blank">📄 arXiv</a>
+            <a class="local" href="2026-04-27/2604.18909-Chiplet-OpticalInterconnect.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">Chiplet + 光电互连</span>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-hot">⭐精选</span> CHICO-Agent: An LLM Agent for the Cross-layer Optimization of 2.5D and 3D Chiplet-based Systems</div>
+          <div class="abs-meta">2604.18764 · 2026-04-20 · cs.AR · Qihang Wu, Aman Arora, Vidya A. Chhabria</div>
+          <div class="abs-body">LLM Agent 驱动的 2.5D/3D Chiplet 系统跨层优化。处理应用层、架构层、芯片层和封装层之间的多层级联合设计空间探索，优化延迟、功耗、面积和成本的多目标权衡。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.18764" target="_blank">📄 arXiv</a>
+            <a class="local" href="2026-04-27/2604.18764-LLM-Agent-Chiplet.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">LLM Agent + Chiplet</span>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title">LUMINA — 仅 20 步找到优于 A100 的 GPU 设计方案（微软亚研院）</div>
+          <div class="abs-meta">Tao Zhang 等 · 微软亚研院</div>
+          <div class="abs-body">从仿真器代码提取架构知识，敏感性分析自动构建 DSE 规则。470 万样本设计空间中，仅 20 步识别 6 个在性能和面积上优于 A100 的设计，DSE 效率比 ML 基线 <strong>高 17.5×</strong>，帕累托超体积提升 <strong>32.9%</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.05904" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">ZipServ — 首个 GPU 上无损压缩且加速 LLM 推理系统（ASPLOS'26）</div>
+          <div class="abs-meta">Ruibo Fan 等 · ASPLOS'26 接收</div>
+          <div class="abs-body">TCA-TBE（Tensor-Core-Aware 固定长度编码）支持并行解码 + ZipGEMM（融合解压-GEMM 内核）消除中间缓冲区。模型大小减少 <strong>30%</strong>，内核级加速 cuBLAS <strong>2.21×</strong>，端到端比 vLLM 加速 <strong>1.22×</strong>。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.17435" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title">WarPGNN — 比 3D COMSOL FEM 快 11.9 万倍的物理感知 GNN 热翘曲分析</div>
+          <div class="abs-meta">Haotian Lu 等 · UCR · 2026-03-19</div>
+          <div class="abs-body">针对 2.5D/3D 异构集成封装热翘曲问题，将多芯片平面图编码为精简传递闭包图（rTCG），GCN 编码器 + U-Net 解码器重建翘曲图。比 2D FEM 加速 <strong>205.91×</strong>，比 3D COMSOL <strong>119,766×</strong>，归一化 RMSE 仅 1.26%。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.18581" target="_blank">arXiv</a></div>
+        </div>
+
+    <div class="abs-card">
+        <span class="badge-new">NEW</span>
+        <div class="abs-title">Causal AI For AMS Circuit Design: Interpretable Parameter Effects Analysis</div>
+        <div class="abs-meta">arXiv:2603.24618 · cs.AR · 2026-03-24 · Mohyeu Hussain, David Koblah, Reiner Dizon-Paradis, Domenic Forte（University of Florida）</div>
+        <div class="abs-body">AMS 电路高度非线性、难以用数据驱动 AI 建模。本文将<strong>因果推断</strong>（DAG + 平均处理效应 ATE）引入模拟混合信号电路参数效应分析。在 TSMC 65nm 下对三种运算放大器（OTA、望远镜式、折叠共源共栅）验证：因果模型 ATE 估计误差 <strong>&lt;25%</strong>，而神经网络误差 >80% 且常预测错误方向。可生成可解释的参数重要性排序与"假设分析"预测，推动 AMS 设计自动化可信化。</div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.24618" target="_blank">arXiv</a>
+          <a class="local" href="./2026-03-28/CausalAI-AMS-Circuit-Design-Interpretable-Parameter-Analysis.pdf">本地 PDF</a>
+        </div>
+      </div>
+
+    <div class="abs-card">
+          <span class="badge-new">DRL加速 · Versal</span>
+          <div class="abs-title">AP-DRL：面向 Versal ACAP 的 DRL 自动任务划分框架，ILP 分区 + BF16/FP16/FP32 混合精度，最高加速 4.17×</div>
+          <div class="abs-meta">Enlai Li, Zhe Lin, Sharad Sinha, Wei Zhang · 2026-03-31 · cs.AR / cs.LG</div>
+          <div class="abs-body">AP-DRL 利用 AMD Versal ACAP 异构架构（CPU + FPGA + AI 引擎），通过 <strong>ILP 划分模型</strong>将 DRL 操作按计算强度匹配最优计算单元，配合 FP32/FP16/BF16 三精度协同解决 DRL 宽动态范围量化误差。相比 PL 基线加速 <strong>4.17×</strong>，相比 AIE 基线 <strong>3.82×</strong>，同时保持训练收敛性。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.29369" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-01/2603.29369_AP-DRL.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">NEW</span><span class="badge-top">NYU · 开源</span>
+          <div class="abs-title">ARCS：拓扑感知图注意力 + 规格条件化的自回归模拟电路合成，首次将 GRPO 引入多拓扑 RL 训练</div>
+          <div class="abs-meta">Tushar Dhananjay Pathak · 2026-03-30 · cs.LG · <strong>NYU · GitHub: tusharpathaknyu/ARCS</strong></div>
+          <div class="abs-body">ARCS（自回归电路合成）是一种模拟电路摊销生成系统，<strong>毫秒级</strong>生成完整 SPICE 可仿真设计（拓扑 + 元件值）。混合流水线结合图VAE + 流匹配模型 + SPICE排序，仅需 <strong>8 次 SPICE 评估</strong>即在 32 种拓扑中达 <strong>99.9% 仿真有效性</strong>（奖励 6.43/8.0），比遗传算法少 40× 评估。单模型推理 97ms 达 85% 有效性，比随机搜索快 600×。关键贡献：<strong>GRPO（组相对策略优化）</strong> 按拓扑进行优势归一化，解决 REINFORCE 跨拓扑奖励分布不匹配问题，仅 500 步 RL 训练（比 REINFORCE 少 10×）提升 +9.6 个百分点。语法约束解码 + 拓扑感知令牌掩码保证 100% 结构有效性。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.29068" target="_blank">arXiv</a>
+            <a href="https://github.com/tusharpathaknyu/ARCS" target="_blank">GitHub</a>
+            <a class="local" href="./2026-04-05/2603.29068_ARCS_Autoregressive_Circuit_Synthesis.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">NEW</span><span class="badge-top">投 IEEE TCAD</span>
+          <div class="abs-title">TSV-PhGNN：物理信息 GNN 替代模型驱动的 TSV 阵列电热协同优化，评估时间缩短六个数量级</div>
+          <div class="abs-meta">Mohamed Gharib, Leonid Popryho, Inna Partin-Vaisband · 2026-03-31 · cs.LG · <strong>已投 IEEE TCAD</strong></div>
+          <div class="abs-body">高密度 TSV 是 2.5D/3D 异构集成关键，但电耦合、插入损耗、自热效应带来信号完整性和热可靠性挑战，传统 FEM 计算成本过高。本文提出可扩展框架：① 多导体解析模型计算宽带 S 参数和有效各向异性热导率（15×15 阵列以内 5%–10% RFE）；② <strong>TSV-PhGNN</strong> 在解析数据训练+HFSS微调后泛化到更大阵列，RFE 低于 <strong>2%</strong>，方差几乎恒定；③ 集成多目标帕累托优化（反射系数/插入损耗/NEXT-FEXT/热导率），数百万 TSV 配置数分钟内探索完毕。评估时间比 FEM <strong>缩短超六个数量级</strong>，Ansys HFSS + Mechanical 验证高度一致。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2603.29268" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-05/2603.29268_TSV_PhGNN_ElectroThermo.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">3D堆叠 · 开源</span>
+          <div class="abs-title">DeepStack：分布式 3D 堆叠 AI 加速器的精确高效设计空间探索，比模拟器快 10 万倍</div>
+          <div class="abs-meta">Zhiwen Mo, Guoyu Li, Hao Chen 等 14 位作者（微软亚研院 + 帝国理工 + 清华等）· 2026-04-06 · cs.AR + cs.DC</div>
+          <div class="abs-body">随着 LLM 参数规模达到千亿至万亿，跨多个 3D 芯片的分布式推理至关重要。DeepStack 是首个精确且高效的<strong>分布式 3D 堆叠 AI 系统协同设计空间探索工具</strong>。硬件层面：捕捉细粒度 3D 内存语义（事务感知带宽、存储体激活约束、热-功耗建模）；系统层面：覆盖全面并行化策略和分布式 LLM 推理调度。采用<strong>双阶段网络抽象 + 计算-通信重叠</strong>新型建模，比现有先进模拟器快 <strong>100,000×</strong>，通过内部 3D 设计、NS-3 后端和 vLLM 在 8×B200 GPU 上交叉验证。<br><strong>关键结果</strong>：通过协同优化实现最高 <strong>9.5× 吞吐提升</strong>；高效探索超过 <strong>2.5×10¹⁴ 个设计点</strong>；揭示批处理大小对架构影响比预填充/解码阶段区分更为根本。工具将开源。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.04750" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-07/2604.04750-DeepStack-3D-Stacked-AI-Accelerator-DSE.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-new">综述 · Chiplet热分析</span>
+          <div class="abs-title">异构 3D IC 多尺度热建模综述：物理信息 ML 与 Chiplet 热管理前沿框架</div>
+          <div class="abs-meta">Baibhari Priya Barua, Md Rahatul Islam Udoy, Ahmedullah Aziz（University of Tennessee）· 2026-03-26 · cs.AR</div>
+          <div class="abs-body">热行为已成为先进 2.5D/3D 集成电路和异构封装中的首要约束。本综述系统性梳理 3D IC 中<strong>多尺度热传输的物理机制、建模假设和分析方法</strong>，统一器件到系统级框架，重点分析以下方法的权衡：<strong>紧凑热模型（CTM）、有限元/有限差分法（FEM/FDM）、格林函数与半解析技术、降阶与多保真度方法、物理信息机器学习（PIML）</strong>。强调热界面电阻（TBR）和热界面材料（TIM）变异性的核心作用、电热解耦分析的缺陷，以及实测数据严格验证的必要性。<br><strong>前沿展望</strong>：提出整合物理建模、数据驱动代理（Surrogate Models）与原位传感（In-situ Sensing）的<strong>跨 IC-封装-系统热协同优化</strong>研究议程，对 Chiplet 系统设计具有直接指导价值。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.03290" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-07/2604.03290-Multiscale-Thermal-Modeling-3D-ICs-Review.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">开源 · 模拟EDA</span>
+          <div class="abs-title">EEspice：面向 AI 优化闭环的模块化并行电路仿真平台，图着色无锁并行加速 45×</div>
+          <div class="abs-meta">Xuanhao Bao, Danial Chitnis · 2026-04-03 · cs.AR · <strong>开源电路仿真框架</strong></div>
+          <div class="abs-body">随着现代模拟/混合信号设计越来越多地依赖"<strong>AI 或 LLM 辅助的器件尺寸自动优化闭环</strong>"，高效精确的 SPICE 仿真器成为核心基础设施。传统并行方法在矩阵填充阶段存在严重的串行化瓶颈——多核同时更新系统矩阵时产生数据竞争。EEspice 提出<strong>模块化架构 + 图着色（Graph Coloring）并行策略</strong>：将器件模型求解解耦为可独立替换的模块内核，通过图着色将 MOSFET 实例分为颜色组，同组器件并行写入系统矩阵而无需锁竞争。<br><strong>关键结果</strong>：64 核工作站上最高实现 <strong>45× 加速比</strong>（相对单线程），性能与电路拓扑结构相关（冲突越少加速越显著）。开源实现，可作为 AI for Analog EDA 仿真基础设施的高效替代方案。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.03079" target="_blank">arXiv</a>
+            <a class="local" href="./2026-04-08/2604.03079-EEspice-Modular-Circuit-Simulation-Graph-Coloring.pdf">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-top">🔬 模拟设计</span> Self-Calibrating LLM Analog Sizing（2026-04-08）— 从网表直接推导设计方程，无需跨节点重训练，2-9次仿真收敛</div>
+          <div class="abs-meta">arXiv: 2604.07387 &nbsp;|&nbsp; 2026-04-08 发布 &nbsp;|&nbsp; cs.AR + cs.AI &nbsp;|&nbsp; Antonio J. Bujana, Aydin I. Karsilayan（德州农工大学）&nbsp;|&nbsp; 提交 IEEE TCAS-I</div>
+          <div class="abs-body">
+            模拟电路尺寸设计（sizing）高度依赖工艺节点专家知识，现有 AI 方法需要大量标注数据且难以跨工艺迁移。<br><br>
+            本文提出<strong>自校准 LLM 模拟电路尺寸框架</strong>：① LLM 从原始电路网表直接推导拓扑特定的解析设计方程，将每个器件尺寸追溯到特定性能约束；② <strong>确定性校准循环</strong>：从单次晶体管级仿真提取工艺相关参数；③ <strong>预测误差反馈机制</strong>：补偿解析不准确性，无需重训练。<br><br>
+            <strong>关键结果</strong>：6种OTA拓扑 × 2种工艺节点（180nm 和 40nm CMOS），12 个组合<strong>全部满足规格</strong>；收敛仅需 <strong>2-9 次仿真</strong>（11/12 案例），跨节点无需修改或重训练。<br><br>
+            <strong>亮点</strong>：以 LLM 的拓扑理解能力替代工艺特定训练数据，是模拟 EDA 中"无数据依赖"设计自动化的重要突破，开源方向有望推动 analog sizing 的大规模标准化。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.07387" target="_blank">arXiv 原文</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">🌡️ 多物理场</span> EMSpice 3（2026-04-12/14）— 全芯片温度感知多物理场分析（EM+TM+IR-Drop耦合），Synopsys ICC集成，RISC-V TTF误差70%揭示</div>
+          <div class="abs-meta">arXiv: 2604.10743 &nbsp;|&nbsp; 2026-04-12 提交（v2: 4月14日）&nbsp;|&nbsp; cs.AR &nbsp;|&nbsp; Haotian Lu, Sheldon X.-D. Tan（UC Riverside）</div>
+          <div class="abs-body">
+            芯片可靠性分析中，电迁移（EM）、热迁移（TM）和 IR 压降是三个紧密耦合的多物理场问题，传统工具往往假设均匀平均温度，严重低估实际热不均匀性的影响。<br><br>
+            EMSpice 3 提出<strong>全芯片温度感知多物理场分析框架</strong>：① 将真实<strong>空间热分布图</strong>（Thermal Map）纳入 EM 可靠性评估循环，实现"地图感知 EM 签核（Map-Aware EM Sign-off）"；② 集成 <strong>Krylov 降阶加速求解器</strong>（扩展有理 Krylov 方法），运行时缩减 1.18×–1.50×，不损精度；③ 支持可选蒙特卡罗寿命（TTF）分析；④ 与 <strong>Synopsys ICC 和 Fusion Compiler</strong> 工业工具集成。<br><br>
+            <strong>关键结果</strong>（6个设计验证）：<strong>相同平均温度下，不同热分布导致 RISC-V 内核 TTF 差异超 70%</strong>（ARM Cortex-A 约 50%），揭示了传统均匀温度假设的重大安全隐患。<br><br>
+            <strong>亮点</strong>：与 Synopsys Multiphysics Fusion™（3月发布）在多物理场方向高度互补；学术开源工具与工业级签核工具（ICC/Fusion Compiler）直接集成，展示 AI for Multiphysics EDA 的实用化路径；热不均匀性对 EM 可靠性的 70% TTF 差异发现具有重要工程价值。
+          </div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.10743" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-18/2604.10743-EMSpice3-Multiphysics-EM-IRDrop.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span><span class="badge-hot">模拟IC</span> AnalogMaster: Large Language Model-based Automated Analog IC Design from Image to Layout</div>
+          <div class="abs-meta">arXiv:2604.20916 · 2026-04-24 · 模拟IC设计 / 端到端LLM框架</div>
+          <div class="abs-body">提出 <strong>AnalogMaster</strong>，首个基于 LLM 的模拟 IC 设计<strong>端到端自动化框架</strong>，实现从电路图像到网表转换、尺寸调整、布局布线的全流程自动化。核心创新：(1) <strong>图像→网表转换</strong>——利用多模态 LLM 直接解析电路原理图图像，自动生成结构化网表；(2) <strong>统一流水线</strong>——将模拟设计最耗时的手工迭代环节（sizing、placement、routing）统一纳入 LLM 驱动的设计空间探索；(3) <strong>可扩展架构</strong>——支持与商用/开源 EDA 工具链集成，可处理运放、比较器、带隙基准等典型模拟模块。填补了 LLM for EDA 在模拟电路自动化设计领域的空白，与数字 RTL 生成（VerilogEval 等）形成完整覆盖。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2604.20916" target="_blank">arXiv 原文</a>
+            <a class="local" href="./2026-04-24/AnalogMaster_2604.20916v1.pdf" target="_blank">本地 PDF</a>
+          </div>
+        </div>
+  </div>
+</section>
+</body>
+</html>

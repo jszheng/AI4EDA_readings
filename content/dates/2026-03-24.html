@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<!-- ── 2026-03-24 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0324')">
+      <h3>📅 2026-03-24 · 补录论文（3篇）</h3>
+      <span class="badge-count">3 篇</span>
+      <span class="toggle" id="toggle-g0324">▼</span>
+    </div>
+    <div id="g0324" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Large Language Models (LLMs) for Electronic Design Automation (EDA)</td>
+            <td class="cat">综述 / LLM for EDA</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2508.20030" target="_blank">2508.20030</a></td>
+            <td><a class="pdf-link" href="./2026-03-24/2508.20030-LLMs-for-EDA-Survey.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>A Flexible Language Model-Assisted Electronic Design Automation Framework</td>
+            <td class="cat">LLM 辅助 / 商业EDA / 多域</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2601.14098" target="_blank">2601.14098</a></td>
+            <td><a class="pdf-link" href="./2026-03-24/2601.14098-Flexible-LM-Assisted-EDA-Framework.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Advancing Routing-Awareness in Analog ICs Floorplanning</td>
+            <td class="cat">模拟IC / 布图 / RL + GNN</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2510.15387" target="_blank">2510.15387</a></td>
+            <td><a class="pdf-link" href="./2026-03-24/2510.15387-Advancing-Routing-Awareness-Analog-Floorplan.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <div class="abs-title">LLMs for Electronic Design Automation — IEEE SOCC 录用综述</div>
+          <div class="abs-meta">Kangwei Xu 等 13 人 · 2025-08-27 · eess.SY / cs.AI / cs.AR</div>
+          <div class="abs-body">全面综述 LLM 应用于 EDA 的现状，覆盖从硬件设计、测试到优化的完整流程。通过三个案例研究展示 LLM 能力，并指出未来发展方向与挑战。为有意利用先进 AI 技术推进 EDA 的研究人员提供宝贵参考。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2508.20030" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-24/2508.20030-LLMs-for-EDA-Survey.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-title">Flexible LLM-Assisted EDA Framework — 支持商业工具的多域框架</div>
+          <div class="abs-meta">Cristian Sestito 等 8 人 · 2026-01-20 · eess.SY</div>
+          <div class="abs-body">不同于只支持开源工具的现有方法，本框架通用性强：生成商业 EDA 工具兼容文件，通过 PPA 报告与工具约束反馈迭代优化，覆盖模拟（OTA）/ 数字（FPGA）/ 射频（贴片天线）三大领域，均验证有效。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2601.14098" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-24/2601.14098-Flexible-LM-Assisted-EDA-Framework.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-title">Advancing Routing-Awareness in Analog ICs Floorplanning — RL + RGNN</div>
+          <div class="abs-meta">Davide Basso 等 4 人 · 2025-10-17 · cs.AI / cs.LG</div>
+          <div class="abs-body">针对模拟 IC 布图布线感知问题，提出强化学习 + 关系图卷积神经网络（RGNN）自动布局引擎，通过提高网格分辨率、精确集成引脚信息和动态布线资源估计实现工业标准。<strong>死区减少 13.8%，线长减少 40.6%，布线成功率提升 73.4%。</strong></div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2510.15387" target="_blank">arXiv</a>
+            <a class="local" href="./2026-03-24/2510.15387-Advancing-Routing-Awareness-Analog-Floorplan.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

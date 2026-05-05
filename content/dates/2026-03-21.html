@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<!-- ── 2026-03-21 ── -->
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0321')">
+      <h3>📅 2026-03-21 · 4 篇</h3>
+      <span class="badge-count">4 篇</span>
+      <span class="toggle" id="toggle-g0321">▼</span>
+    </div>
+    <div id="g0321" class="date-body">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>类别</th><th>arXiv</th><th>本地</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="star">★</span> VeriAgent: A Tool-Integrated Multi-Agent System with Evolving Memory for PPA-Aware RTL Code Generation</td><td class="cat">RTL生成/PPA优化/Multi-Agent</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.17613" target="_blank">2603.17613</a></td><td><a class="pdf-link" href="./2026-03-21/2603.17613-VeriAgent-PPA-Aware-RTL-MultiAgent.pdf">📥 PDF</a></td></tr>
+          <tr><td>2</td><td><span class="star">★</span> HWE-Bench: Can Language Models Perform Board-level Schematic Designs?</td><td class="cat">Benchmark/板级设计/EDA</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.18102" target="_blank">2603.18102</a></td><td><a class="pdf-link" href="./2026-03-21/2603.18102-HWE-Bench-Board-Level-Schematic-Design.pdf">📥 PDF</a></td></tr>
+          <tr><td>3</td><td>WarPGNN: A Parametric Thermal Warpage Analysis Framework with Physics-aware GNN</td><td class="cat">封装/热翘曲/GNN/EDA工具</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.18581" target="_blank">2603.18581</a></td><td><a class="pdf-link" href="./2026-03-21/2603.18581-WarPGNN-Thermal-Warpage-GNN.pdf">📥 PDF</a></td></tr>
+          <tr><td>4</td><td>MatrixFlow: Mitigating the Bandwidth Wall via Data-Streaming System-Accelerator Co-Design</td><td class="cat">硬件加速/协同设计/Transformer</td><td><a class="arxiv-link" href="https://arxiv.org/abs/2603.19057" target="_blank">2603.19057</a></td><td><a class="pdf-link" href="./2026-03-21/2603.19057-MatrixFlow-BandwidthWall-SystemAccelerator.pdf">📥 PDF</a></td></tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">VeriAgent — PPA 感知闭环多智能体 RTL 生成，进化记忆无需重训持续改进</div>
+          <div class="abs-meta">Yaoxiang Wang 等 · 清华大学 + 厦门大学 · 2026-03-18 · cs.CL</div>
+          <div class="abs-body">程序员智能体（生成）+ 正确性智能体（仿真验证）+ PPA 智能体（综合优化）三方协同，形成功能正确性与 PPA 的联合优化闭环。<strong>进化记忆机制</strong>将优化经验外部化为结构化记忆节点，系统越用越强，无需重新训练模型。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.17613" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-top">🏆 重点</span>
+          <div class="abs-title">HWE-Bench — 首个板级原理图设计 EDA Benchmark，当前最强 LLM 仅 8.15% 通过</div>
+          <div class="abs-meta">Weibo Qiu 等 · 2026-03-18 · cs.AR · 300 个真实板级任务 + 2914 份 IC 数据手册</div>
+          <div class="abs-body">LLM 根据功能需求 + 数据手册从头生成原理图 → 静态电气规则检查 → 电路仿真验证，全流程自动化评测。<strong>当前最先进 LLM 总体通过率仅 8.15%</strong>，精准标定当前 LLM 的物理推理天花板。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.18102" target="_blank">arXiv</a></div>
+        </div>
+        <div class="abs-card">
+          <div class="abs-title">WarPGNN — 比 3D COMSOL FEM 快 11.9 万倍的物理感知 GNN 热翘曲分析</div>
+          <div class="abs-meta">Haotian Lu 等 · UCR · 2026-03-19</div>
+          <div class="abs-body">针对 2.5D/3D 异构集成封装热翘曲问题，将多芯片平面图编码为精简传递闭包图（rTCG），GCN 编码器 + U-Net 解码器重建翘曲图。比 2D FEM 加速 <strong>205.91×</strong>，比 3D COMSOL <strong>119,766×</strong>，归一化 RMSE 仅 1.26%。</div>
+          <div class="abs-links"><a href="https://arxiv.org/abs/2603.18581" target="_blank">arXiv</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

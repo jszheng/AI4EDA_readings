@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<!-- 2026-03-29 -->
+<div class="date-group">
+  <div class="date-header" onclick="toggleGroup('g0329')">
+    <h3>📅 2026-03-29 · 补漏批次（1篇）</h3>
+    <span class="badge-count" style="border-color:var(--accent2);color:var(--accent2);">1 篇 ↺</span>
+    <span class="toggle" id="toggle-g0329">▼</span>
+  </div>
+  <div class="date-body" id="g0329">
+    <table class="paper-table">
+      <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="star">★</span> 1</td>
+          <td><strong>RTLSeek: Boosting the LLM-Based RTL Generation with Multi-Stage Diversity-Oriented Reinforcement Learning</strong></td>
+          <td class="cat">RTL生成 / 多样性强化学习 / 三阶段后训练 / RTLLM基准</td>
+          <td><a class="arxiv-link" href="https://arxiv.org/abs/2603.27630" target="_blank">2603.27630</a></td>
+          <td><a class="pdf-link" href="./2026-03-29/2603.27630-RTLSeek-RL-RTL-Generation-Diversity.pdf" target="_blank">↓ PDF</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="abstracts">
+      <div class="abs-card">
+        <div class="abs-title"><span class="badge-hot">🔧 RTL生成</span> RTLSeek — 多样性导向三阶段强化学习 RTL 后训练范式，RTLLM 基准超越所有先前方法</div>
+        <div class="abs-meta">arXiv: 2603.27630 &nbsp;|&nbsp; 2026-03-29 发布 &nbsp;|&nbsp; cs.AR + cs.LG &nbsp;|&nbsp; Xinyu Zhang, Zhiteng Chao, Yonghao Wang, Huawei Li 等（华为团队） &nbsp;|&nbsp; 开源</div>
+        <div class="abs-body">
+          LLM 辅助 RTL 生成的核心瓶颈：高质量功能可验证训练数据稀缺，且现有后训练方法对每个设计规格只生成<strong>单一 HDL 实现</strong>，缺乏对多设计目标 RTL 变体的感知能力。<br><br>
+          RTLSeek 提出后训练范式：① <strong>多样性导向强化学习（DORL）</strong>——基于规则的 RL，同时提升 RTL 生成的正确性和多样性；② <strong>多样性中心多目标奖励调度</strong>——融合专家知识与 EDA 工具反馈（仿真/综合结果）构建综合奖励信号；③ <strong>三阶段训练框架</strong>——最大化有限高质量数据的利用率。<br><br>
+          <strong>关键结果</strong>：在 <strong>RTLLM 基准</strong>上超越所有先前方法；消融实验证实多样性探索是质量提升的核心驱动力；验证了 <strong>"生成越多，效果越好"</strong> 原则——鼓励更广的设计空间探索能持续提升最终质量。
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2603.27630" target="_blank">arXiv 原文</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
