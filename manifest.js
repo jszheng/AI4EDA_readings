@@ -60,10 +60,6 @@ window.SITE_MANIFEST = {
     { date: "2026-03-15", title: "2026-03-15", count: 10, file: "content/dates/2026-03-15.html" }
   ],
 
-  news: [
-    { date: "all", title: "🌍 全部行业动态", file: "content/news/index.html" }
-  ],
-
   /* 侧边栏「按分类」视图 */
   categories: {
     papers: [
@@ -71,8 +67,7 @@ window.SITE_MANIFEST = {
       { key: "verify",   title: "功能验证",    icon: "✅", file: "content/categories/verify.html" },
       { key: "physical", title: "物理设计",    icon: "📐", file: "content/categories/physical.html" },
       { key: "analog",   title: "模拟与架构",  icon: "🔬", file: "content/categories/analog.html" },
-      { key: "agent",    title: "AI Agent",    icon: "🤖", file: "content/categories/agent.html" },
-      { key: "industry", title: "行业应用",    icon: "🏭", file: "content/categories/industry.html" }
+      { key: "agent",    title: "AI Agent",    icon: "🤖", file: "content/categories/agent.html" }
     ],
     news:      { title: "🌍 行业动态",   icon: "🌍", file: "content/news/index.html" },
     tracking:  { title: "📌 待追踪",     icon: "📌", file: "content/tracking.html" }

@@ -76,14 +76,6 @@
         }
       });
     }
-
-    /* 行业动态分组 */
-    if (manifest.news && manifest.news.length) {
-      addGroupLabel(nav, '📰 行业动态');
-      manifest.news.forEach(function (item) {
-        addNavItem(nav, item.file, item.title || item.date, item.date);
-      });
-    }
   }
 
   /* ---- 按分类视图 ---- */
