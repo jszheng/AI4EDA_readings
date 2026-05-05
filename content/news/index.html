@@ -4,6 +4,19 @@
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="../style.css" />
   <script src="../toggle.js"></script>
+<style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .date-group { margin-bottom: 40px; }
+    .date-header { display: flex; align-items: center; gap: 12px; background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #4f46e5; border-radius: 10px; padding: 12px 18px; margin-bottom: 16px; cursor: pointer; user-select: none; transition: box-shadow .2s; box-shadow: 0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04); }
+  </style>
 </head>
 <body>
 <header>
@@ -75,16 +88,16 @@
       <span class="toggle">▼</span>
     </div>
     <div class="date-body">
-      <div class="news-grid">
+      <div class="abstracts">
 
-        <div class="news-card">
+        <div class="abs-card">
           <div class="src"><span class="dot"></span> Synopsys · 2026-04-29</div>
           <h4>Synopsys.ai 五大 Copilot 商用发布：2-5× 芯片设计效率提升</h4>
           <p>Synopsys 正式发布 <strong>5 款 Synopsys.ai Copilot</strong>：Knowledge Assistant（RAG 虚拟专家，加速 70%）、Workflow Assistant（PrimeTime/Fusion Compiler 零代码脚本生成，最高 20×）、<strong>Code Advisor（自然语言→RTL 代码生成 + Euclide 实时 lint）</strong>、Formal Advisor（自然语言→形式化验证测试台，4-5×）、Lint Advisor（自动修复 lint 违规）。同时展示 <strong>AgentEngineer™ 技术</strong>——行业首个 L4 多智能体自适应学习工作流，在 Synopsys Converge 2026 上演示。</p>
           <a href="https://www.synopsys.com/blogs/chip-design/synopsys-ai-copilots-chip-design.html" target="_blank">阅读原文 →</a>
         </div>
 
-        <div class="news-card">
+        <div class="abs-card">
           <div class="src"><span class="dot"></span> Altera (Intel) · 2026-04-30</div>
           <h4>Altera FPGA AI Suite 2026.1.1：空间编译器架构实现 ASIC 级 AI 推理</h4>
           <p>Altera 发布 <strong>FPGA AI Suite 2026.1.1</strong>，引入全新<strong>空间编译器架构</strong>，将神经网络直接映射到 FPGA 硅片上，采用流式数据流并行处理替代传统顺序执行，实现<strong>确定性低延迟</strong>推理性能。支持 PyTorch/TensorFlow/OpenVINO，覆盖 Agilex 3/5/7/9 全系列 FPGA，免许可可运行 10 万次推理。面向机器人、视觉分析、边缘语言模型等物理 AI 场景。</p>
@@ -335,23 +348,23 @@
       <span class="toggle">▼</span>
     </div>
     <div class="date-body">
-      <div class="news-grid">
+      <div class="abstracts">
 
-        <div class="news-card">
+        <div class="abs-card">
           <div class="src"><span class="dot"></span> Cadence × TSMC · 2026-04-22</div>
           <h4>Cadence × TSMC 扩大合作：Agentic AI 加速 3D-IC 与 AI 芯片设计</h4>
           <p>Cadence 将 EDA 从逐工具工作流转向<strong>目标驱动的 Agentic 执行</strong>。Cerebrus 优化支持 TSMC NanoFlex™ Pro 架构（N2/A16/A14），Virtuoso Studio 嵌入 agentic AI 电路优化。Integrity 3D-IC 平台支持 TSMC-COUPE™ 硅光子参考流程，Pegasus 验证异构系统。IP 组合新增 DDR5 MRDIMM 12.8G、PCIe 6.0、HBM4E 等。</p>
           <a href="https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-collaborates-with-tsmc-to-accelerate-design-of-next.html" target="_blank">阅读原文 →</a>
         </div>
 
-        <div class="news-card">
+        <div class="abs-card">
           <div class="src"><span class="dot"></span> Synopsys × TSMC · 2026-04-22</div>
           <h4>Synopsys × TSMC 深化合作：AI-Powered EDA Flows 覆盖 A14/A16</h4>
           <p>Synopsys Fusion Compiler 引入 <strong>Agentic Run Assistance</strong>（TSMC A14），自动识别时序改进机会提升 PPA。IC Validator AI 辅助物理验证加速 DRC 修复。3DIC Compiler 支持 5.5× reticle interposer CoWoS®。IP 里程碑：M-PHY v6.0 N2P 首发低功耗、64G UCIe 流片完成、224G 共封装光学。电源完整性平台 RedHawk-SC 扩展至 A14。</p>
           <a href="https://news.synopsys.com/2026-04-22-Synopsys-Partners-with-TSMC-to-Power-Next-Generation-AI-Systems-with-Silicon-Proven-IP-and-Certified-EDA-Flows" target="_blank">阅读原文 →</a>
         </div>
 
-        <div class="news-card">
+        <div class="abs-card">
           <div class="src"><span class="dot"></span> Siemens EDA × TSMC · 2026-04-22</div>
           <h4>Siemens Fuse™ EDA AI System × TSMC：多步骤跨工具 AI 自动化</h4>
           <p>Siemens 新推 <strong>Fuse™ EDA AI System</strong>（综合性领域范围 Agentic AI 系统），实现 Calibre DRC 自动化修复、Aprisa 数字设计周期加速（快速设计信息访问 + 引导推荐 + 实时命令执行）。Calibre 3DStack 支持 3Dblox 语法的四大 3D 验证流程（Interface/DRC/Antenna/3DPERC）。Calibre 3DThermal 热分析获 TSMC 认证（静态+瞬态）。工具链认证覆盖 N3A/N3C/N2P/A16/A14。</p>
@@ -1646,20 +1659,20 @@
       <!-- 行业动态 2026-04-13 -->
       <div style="margin-top:20px;">
         <div class="section-title" style="font-size:1rem;margin-bottom:12px;"><span>🌐</span> 行业动态（2026-04-13）<span class="line"></span></div>
-        <div class="news-grid">
-          <div class="news-card">
+        <div class="abstracts">
+          <div class="abs-card">
             <div class="src"><span class="dot"></span> ICCAD 2026 | iccad.com/2026</div>
             <h4>🚨 ICCAD 2026 完整论文截止：明日（4月14日 AoE）</h4>
             <p>第 65 届 IEEE/ACM ICCAD（11月8-12日，San Jose）完整论文截止在即。本届覆盖 AI for EDA 全谱：布局布线、形式化验证、RTL 综合、时序分析。预计今明两天仍有预印本密集发布（今日已观测到 AgileAssert 等）。</p>
             <a href="https://iccad.com/2026/authors/call-for-papers" target="_blank">→ 查看 Call for Papers</a>
           </div>
-          <div class="news-card">
+          <div class="abs-card">
             <div class="src"><span class="dot"></span> MLCAD 2026 | asu-vda-lab.github.io</div>
             <h4>🏆 MLCAD 2026 竞赛：LLM 驱动时序优化 · Alpha 截止 4月30日</h4>
             <p>ASU VDA Lab 主办，基于 <strong>OpenROAD 开源代码</strong>，挑战"设计自适应时序优化工具——用 LLM/Agent 工作流发现、生成或演进优化方案"，平衡功耗、可布线性与运行时。Alpha 提交 4月30日，结果公布 6月15日，NVIDIA GPU 奖励。</p>
             <a href="https://asu-vda-lab.github.io/MLCAD26-Contest/" target="_blank">→ 竞赛主页</a>
           </div>
-          <div class="news-card">
+          <div class="abs-card">
             <div class="src"><span class="dot"></span> OpenClaw | 浙大卓成 · 赖晓铮直播</div>
             <h4>📡 OpenClaw for FPGA 直播（明日 4月16日）</h4>
             <p>华南理工大学赖晓铮教授将于 4月16日（明天）进行 <strong>OpenClaw for FPGA</strong> 系列技术直播，展示 AI 智能体驱动 FPGA 设计流程的最新进展，关注浙大-同济-华工三校 OpenClaw 生态协同。</p>
@@ -2741,29 +2754,29 @@
   <div class="section-title"><span class="icon">🌍</span> 行业动态 <span class="line"></span></div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-05-04 · 周一 · 1篇新论文 · Synopsys.ai Copilot 商用发布 · Altera FPGA AI Suite 重大更新）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Synopsys Blog · 2026-04-29</div>
       <h4>🤖 Synopsys.ai 五大 Copilot 商用发布：2-5× 芯片设计效率提升</h4>
       <p>Synopsys 正式发布 <strong>5 款 Synopsys.ai Copilot</strong>，数千名用户已在领先半导体公司使用。Assistive 类：<strong>Knowledge Assistant</strong>（RAG 虚拟专家，加速 70% 答案获取）、<strong>Workflow Assistant</strong>（PrimeTime/Fusion Compiler 零代码脚本，最高 20×）。Creative 类：<strong>Code Advisor</strong>（自然语言→RTL 代码生成 + Euclide 实时 lint，+30%）、<strong>Formal Advisor</strong>（自然语言→形式化验证测试台，4-5×）、<strong>Lint Advisor</strong>（自动修复 lint 违规）。同时展示 <strong>AgentEngineer™ 技术</strong>——行业首个 L4 编排多智能体自适应学习工作流，已在 Synopsys Converge 2026 演示自主执行工程工作流。</p>
       <a href="https://www.synopsys.com/blogs/chip-design/synopsys-ai-copilots-chip-design.html" target="_blank">→ Synopsys 官方博客</a>
     </div>
 
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Altera (Intel) · 2026-04-30</div>
       <h4>⚡ Altera FPGA AI Suite 2026.1.1：空间编译器架构实现 ASIC 级 AI 推理</h4>
       <p>Altera 发布 <strong>FPGA AI Suite 2026.1.1</strong>，引入全新<strong>空间编译器架构</strong>（Spatial Compiler Architecture），将神经网络直接映射到 FPGA 硅片，采用流式数据流并行处理替代传统顺序执行，实现<strong>确定性低延迟</strong>推理性能可比 ASIC。支持 PyTorch/TensorFlow/OpenVINO，覆盖 Agilex 3/5/7/9 全系列 FPGA，免许可可运行 10 万次推理。面向机器人、视觉分析、边缘语言模型等物理 AI 场景。配合 Quartus Prime Pro Edition 26.1。</p>
       <a href="https://www.altera.com/newsroom/news/press-release/altera-fpga-ai-suite-26-1-1-deterministic-physical-ai-spatial-architecture" target="_blank">→ Altera 官方公告</a>
     </div>
 
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>DAC / IEEE CEDA · 2026-05-03</div>
       <h4>📅 DAC 2026（7/26-29，长滩）技术程序持续更新，AI for EDA 论文完整入选名单公布</h4>
       <p>DAC 2026 官网持续更新技术程序内容，AI for EDA 相关论文入选名单已完整披露。重点关注：<strong>ChatSVA</strong>（多智能体 SVA 生成）、<strong>GSR-GNN</strong>（图信号重建 GNN 后布线时序优化）、<strong>CapBench</strong>（多 PDK 电容提取 ML 基准）、<strong>RL Expert Placement</strong>、<strong>FlowPlace</strong>（流匹配芯片布局）等 DAC 2026 论文已公开 arXiv 预印本。大会注册开放中。</p>
       <a href="https://dac.com/2026/eda" target="_blank">→ DAC 2026 EDA Program</a>
     </div>
 
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>ChipAgents / DVCon 2026 · 2026-03</div>
       <h4>🤖 ChipAgents 在 DVCon 2026 展示业界首个多智能体 AI 根因分析（RCA）</h4>
       <p>Alpha Design AI 在 DVCon 2026 上展示 <strong>ChipAgents</strong> 多智能体 AI 团队驱动的<strong>根因分析（RCA）</strong>功能——业界首个多智能体 AI 团队应用于芯片设计验证场景。同时推出 AI 驱动的 RTL 设计/验证生产力工具，目标 10× 效率提升。创始人 William Wang 获 IEEE Laplace Award/DARPA Young Faculty Award/NSF CAREER Award。</p>
@@ -2773,15 +2786,15 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-28 · 周二 · 4篇新论文 · Cadence 上调全年营收预期 · Cadence Q1 2026 业绩超预期 · MLCAD Alpha 已截止（4月30日））</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Reuters / The Star · 2026-04-28（今日）</div>
       <h4>💰 Cadence 上调全年营收预期至 $6.13-6.23B，Q1 业绩双超预期</h4>
       <p>Cadence Design Systems 于 4月28日发布 Q1 2026 业绩并上调全年指引：<strong>全年营收预期由 $5.9-6.0B 上调至 $6.13-6.23B</strong>（+约 3.9亿美元），理由是 AI 芯片设计需求持续高涨，Google、Amazon、NVIDIA 等客户加速复杂 SoC 与 AI 加速器设计。Q1 营收 <strong>$1.47B</strong>（超预期 $1.45B），调整后 EPS $1.96（超预期 $1.90）。盘后股价上涨 >1%。注：因 Hexagon AB 工程业务 €2.7B 收购，调整后 EPS 全年指引小幅下调。Cadence 今年已推出早期芯片设计 AI Agent，并与 NVIDIA 合作推进机器人物理引擎+AI 训练集成。</p>
       <a href="https://www.thestar.com.my/tech/tech-news/2026/04/28/cadence-lifts-annual-revenue-forecast-on-sustained-ai-chip-design-boom" target="_blank">→ Reuters / The Star 报道</a>
     </div>
 
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Synopsys News / PRNewswire · 2026-04-22</div>
       <h4>🤝 Synopsys × TSMC：A14/A16/N2/N3 AI EDA 全面深化，agentic run assistance 上线</h4>
       <p>Synopsys 与 TSMC 宣布覆盖最先进制程的全面合作：<strong>Fusion Compiler</strong> 在 A14 节点上线 <strong>Agentic Run Assistance</strong>（NanoFlex Pro 架构）；<strong>3DIC Compiler</strong> 支持 CoWoS 5.5× 光罩尺寸中介层，生产力提升 5.5×；<strong>首款低功耗 M-PHY v6.0 IP</strong> 在 N2P 硅验证；224G/PCIe 7.0/HBM4/DDR5 MRDIMM Gen2 等接口 IP 里程碑全面推进；多物理场设计覆盖 COUPE 共封装光学（光子+电气+热）。</p>
@@ -2791,26 +2804,26 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-23 · 周四 · 2篇新论文 · Agent4Chip @ ICLR 2026 今日开幕 🎉 · Synopsys/Cadence × TSMC 双重公告 · MLCAD Alpha 已截止（4月30日））</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Agent4Chip Workshop / ICLR 2026 · 2026-04-23（今日正式开幕）</div>
       <h4>🎉 Agent4Chip Workshop @ ICLR 2026 今日正式开幕 — Riocentro 里约热内卢</h4>
       <p>ICLR 2026 主会 + Agent4Chip Workshop 今日（4月23日）在里约热内卢 Riocentro 正式开幕。Workshop 全天日程：<strong>主题演讲</strong>——Google DeepMind VP Parthasarathy Ranganathan「<em>Centaurs in the Cloud: A Chipper Future</em>」；<strong>Session 1</strong> Agentic EDA 基础；<strong>Session 2</strong> 工业界视角；<strong>Session 3</strong> 前沿学术研究；<strong>晚间海报展示</strong>——23篇接收论文现场亮相，重点：PRO-V-R1、ASPEN、GACO、ACE-RTL、EDAForge、HeaRT、ChipBench、VeriTrace 等。AI for EDA 年度最大聚会，ICLR 2026（1.9万篇投稿，录取率28%）同期举行。</p>
       <a href="https://ai4eda-workshop.github.io/2026/accepted_papers.html" target="_blank">→ Workshop 论文名单</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Synopsys 官方新闻稿 · 2026-04-22</div>
       <h4>🔥 Synopsys × TSMC 重磅公告：AI 驱动 EDA 流程覆盖 N3/N2/A16/A14 全节点</h4>
       <p>Synopsys（SNPS）宣布与 TSMC 扩大合作，提供在 TSMC N3、N2、A16、A14 工艺节点上经过 silicon-proven 验证的 IP 库、<strong>AI 驱动 EDA 流程</strong>及系统级设计使能。核心亮点：AgentEngineer™ 功能扩展，支持 AI 智能体自主执行 RTL→综合→物理设计迭代；先进封装（CoWoS、SoIC）设计工具链整合；2nm/埃米级工艺下 PPA 优化 AI 流程首次获 TSMC OIP 生态认证。定位：让下一代 AI 芯片（推理/训练加速器）设计周期从 18 个月压缩至 10 个月以内。</p>
       <a href="https://news.synopsys.com/2026-04-22-Synopsys-Partners-with-TSMC-to-Power-Next-Generation-AI-Systems-with-Silicon-Proven-IP-and-Certified-EDA-Flows" target="_blank">→ Synopsys 新闻稿</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Cadence 官方新闻稿 · 2026-04-22</div>
       <h4>🔥 Cadence × TSMC Agentic AI 公告：从工具流到目标驱动 Agentic 执行</h4>
       <p>Cadence（CDNS）宣布扩展与 TSMC 合作，核心突破是将 EDA 工作流从"工具逐步执行"升级为<strong>目标驱动的 Agentic 执行</strong>。覆盖 TSMC N3/N2/A16/A14 节点，Cadence Cerebrus AI + ChipStack AI SuperAgent 赋能 3D-IC 及先进封装设计；经认证的 AI 流程可自动减少设计迭代次数、加速 tapeout；3D-IC 路由数量从数千增至数万，AI 自动管理互连复杂度。CEO Devgan："EDA 正从卖工具转向卖结果（芯片按时出硅）"。与 Synopsys 同日发布，显示 EDA 双巨头在 TSMC 2026 OIP 生态峰会前的战略协同。</p>
       <a href="https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-collaborates-with-tsmc-to-accelerate-design-of-next.html" target="_blank">→ Cadence 新闻稿</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-04-23（今日 · 2篇新论文）</div>
       <h4>📄 今日 2 篇新论文 — ChipCraftBrain（验证优先多智能体RTL）/ StructuralVerif（EDA代码结构化验证）</h4>
       <p>今日 arXiv 收录 2 篇 AI for EDA 核心论文：<strong>ChipCraftBrain（2604.19856）</strong>——验证优先多智能体 RTL 生成，混合符号-神经推理 + 自适应编排，首次在 NVIDIA CVDP 工业难度基准上系统评测，突破现有 VerilogEval 只测 95.9% 但工业场景未知的局限；<strong>StructuralVerif（2604.18834）</strong>——无工具循环调试的 EDA 代码结构化验证，执行前强制结构一致性，显著提升 LLM 生成 EDA 脚本的长流程可靠性。ICCAD 截稿后第五批预印本持续涌现，Agent4Chip 开幕日。</p>
@@ -2819,26 +2832,26 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 昨日动态（2026-04-22 · 周三 · 6篇新论文 · Agent4Chip @ ICLR 2026 已开幕（4月23日） · MLCAD Alpha 已截止（4月30日））</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Agent4Chip Workshop / ICLR 2026 · 2026-04-22（已开幕（4月23日）</div>
       <h4>🎉 Agent4Chip Workshop @ ICLR 2026 明日正式开幕 — 主讲 Google VP Parthasarathy Ranganathan</h4>
       <p>ICLR 2026 主会 + Agent4Chip Workshop 明日（4月23日）在里约热内卢 Riocentro 正式开幕。Workshop 首日日程：<strong>主题演讲</strong> — Google 副总裁 Parthasarathy Ranganathan 主讲「<em>Centaurs in the Cloud: A Chipper Future</em>」（09:00-09:45 里约时间）；<strong>Session 1</strong>（10:30-12:00）聚焦 Agentic EDA 基础与早期体验；<strong>Session 2</strong>（13:15-15:00）芯片设计工业界视角；<strong>Session 3</strong>（15:00-17:00）最新学术研究；<strong>晚间招待会 + 23篇海报展示</strong>（17:00-19:30）。预计重点展示 PRO-V-R1、ASPEN、GACO、ACE-RTL、EDAForge、HeaRT 等顶会接收论文，值得深夜追看推文直播。</p>
       <a href="https://ai4eda-workshop.github.io/2026/schedule.html" target="_blank">→ Workshop 日程</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Morningstar/MarketWatch · 2026-04-20（持续发酵）</div>
       <h4>💰 Cadence"ChatGPT时刻"持续发酵 — 代理式 AI 有潜力将效率提升最高 1000 倍</h4>
       <p>Needham 分析师 Charles Shi 最新报告（4月20日，Morningstar/MarketWatch）指出：Cadence 代理式 AI EDA 工具有潜力将芯片设计效率提升 <strong>10×–1000×</strong>；过去三年 AI 与芯片设计工具之间存在脱节，现已被 Agentic AI 打通。同期 Cadence CEO Anirudh Devgan 揭示新一代 <strong>AgentStack 层级架构</strong>（1 主 Agent→5 超级 Agent→200+ 微 Agent），并公开三种新收费模式（席位许可 / Agent 工作量 / 消费量计费）。Cadence 股价从 4月10日低点反弹 <strong>18.5%</strong>。</p>
       <a href="https://www.morningstar.com/news/marketwatch/20260420338/why-cadences-chatgpt-moment-may-have-already-arrived" target="_blank">→ MarketWatch 报道</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-04-22（今日 · 6篇新论文）</div>
       <h4>📄 今日 6 篇新论文 — VerilogCL / Clover / Config>Selection / NL2Silicon / EquivFusion / AgenticToken</h4>
       <p>今日 arXiv cs.AR 收录 6 篇 AI for EDA 核心论文：<strong>VerilogCL</strong>（对比学习增强7B模型超越所有基线）、<strong>Clover</strong>（神经符号+随机思维树RTL修复，96.8%修复率）、<strong>Configuration Over Selection</strong>（26个LLM 108配置扫描，超参数重要性5×模型选择）、<strong>From NL to Silicon</strong>（IR选择决定成功，通过率3%→88%）、<strong>EquivFusion</strong>（MLIR多模态等价检验，FSE 2026）、<strong>Agentic HW Verification Token 分析</strong>（覆盖率上限分类法，95-99%覆盖，Token降4-13倍）。ICCAD 2026截稿后第四批预印本持续爆发。</p>
       <a href="https://arxiv.org/list/cs.AR/recent" target="_blank">→ arXiv cs.AR 最新列表</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>morethanmoore / 半导体行业观察 · 2026-04-16</div>
       <h4>🔍 两大 EDA 巨头 CEO 深度分享：从"辅助工具"到"自主智能体工程师"时代</h4>
       <p>新思科技 CEO <strong>Sassine Ghazi</strong> 与 Cadence CEO <strong>Anirudh Devgan</strong> 分别阐述 AI EDA 核心判断：Ghazi 强调<strong>智能体工程师</strong>概念（AI 管理 AI，人类仅分配任务+审核）+ 多物理场协同设计是先进封装时代的必备能力；Devgan 揭示 AgentStack 超级智能体架构 + 三种 AI 收费模式演进（EDA 从"卖软件许可"向"按消费量计费"SaaS 化转变）。双方均指出：芯片设计复杂度急升（3D IC + Chiplet + 先进工艺），上市时间压缩（18-24月→12月内），倒逼 AI Agentic 路线成为唯一可行解。</p>
@@ -2847,20 +2860,20 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 前日动态（2026-04-21 · COEVO 1篇新论文 · Agent4Chip 已开幕（4月23日） · MLCAD Alpha 已截止（4月30日））</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Needham × Cadence · 2026-04-21（华尔街看多）</div>
       <h4>💰 Needham 上调 Cadence 目标价至 $400 — 称 EDA 行业迎来"ChatGPT 时刻"</h4>
       <p>华尔街投行 Needham 将 Cadence Design Systems（CDNS）目标价从 <strong>$330 上调至 $400</strong>（涨幅 +21%），维持"买入"评级。分析师将此轮 AI 赋能定性为 EDA 行业的 <strong>"ChatGPT 时刻"</strong>——就像 ChatGPT 对 SaaS 软件行业的冲击一样，AI Agent 将颠覆传统 EDA 工具的使用模式和商业模式。分析师指出：<strong>ChipStack AI Super Agent × Google Gemini</strong> 合作深化，将推动 Cadence 在云端 EDA 的新增收入超预期；Cadence 与 NVIDIA 在 GPU 加速 EDA 全系（Innovus/Tempus/Voltus/Spectre X）和 Omniverse 数字孪生的合作，将打开超越传统 EDA 授权的新市场。Cadence 股价回应上涨 <strong>2%+</strong>。</p>
       <a href="https://www.morningstar.com/news/marketwatch/20260420338/why-cadences-chatgpt-moment-may-have-already-arrived" target="_blank">→ 分析师报告</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-04-21（今日）</div>
       <h4>📄 COEVO — 首个功能正确性 + PPA 协同进化框架，突破 LLM RTL 生成"写得出≠面积好"</h4>
       <p>今日 arXiv 收录 1 篇核心 AI for EDA 论文：<strong>COEVO（arXiv:2604.15001）</strong>——提出协同进化框架，将 <strong>RTL 功能正确性（pass@k）</strong>与 <strong>PPA（Power/Performance/Area）</strong>纳入同一优化目标，通过双目标进化机制 + LLM 结构感知代码变异 + EDA 工具（Yosys/OpenROAD）真实反馈，首次实现"功能通过且面积优秀"的全链路 AI RTL 设计。部分设计综合面积减少 15-30%，时序余量改善，同时功能通过率持平或优于现有 SOTA。<strong>Agent4Chip Workshop @ ICLR 2026 于4月23日已开幕。</strong></p>
       <a href="https://arxiv.org/abs/2604.15001" target="_blank">→ arXiv 原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>ICLR 2026 / Agent4Chip Workshop · 2026-04-21（已开幕（4月23日）</div>
       <h4>⏳ Agent4Chip Workshop @ ICLR 2026 后天开幕 — 23篇论文涵盖最前沿 Agentic EDA</h4>
       <p>Agent4Chip Workshop（ICLR 2026 同期，<strong>4月23-27日，里约热内卢 Riocentro</strong>）后天正式开幕。23篇接收论文代表 2026 年 Agentic EDA 最前沿成果，重点包括：<strong>PRO-V-R1</strong>（RTL验证推理增强Agent，UCSD+NVIDIA）、<strong>ASPEN</strong>（E-Graph重写数据通路优化）、<strong>GACO</strong>（图增强HLS代码优化）、<strong>EDAForge</strong>（模拟电路合成多智能体）、<strong>HeaRT</strong>（AMS层级推理树，UT Austin+NVIDIA）、<strong>ACE-RTL</strong>（NVIDIA，专用LLM+Agent融合）、<strong>FVRuleLearner</strong>（OP-Tree规则学习，UIUC+NVIDIA）等。Agentic EDA 领域一年来最集中的学术展示即将开始。</p>
@@ -2869,26 +2882,26 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 前日动态（2026-04-20 · 4篇新论文 · Agent4Chip 已开幕（4月23日） · MLCAD Alpha 已截止（4月30日））</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>DAC 2026 · 2026-04-17（今日）</div>
       <h4>🔥 DAC 2026 完整技术程序今日正式公布 — AI for EDA 专场完整入选名单披露</h4>
       <p>第63届 ACM/IEEE Design Automation Conference（<strong>DAC 2026</strong>，7月26-29日，长滩加州）技术程序今日正式公布。本届大会提交量较去年增长 <strong>26.34%</strong>，超过 55% 内容聚焦 AI &amp; Design。已确认接收的 AI for EDA 论文包括：<strong>ChatSVA</strong>（多智能体SVA生成，DAC'26）、<strong>CellE</strong>（等式饱和标准单元库扩展，北大+清华）、<strong>GSR-GNN</strong>（深层GNN电路图训练加速，南开）、<strong>Escaping Flatland</strong>（3D FPGA布局流程，Georgia Tech+UCSD）、<strong>CapBench</strong>（多PDK电容提取ML基准）等。诺贝尔物理奖得主 John Martinis（2025年量子计算）和高通 CTO Baaziz Achour 主题演讲。<strong>ChipAgents.ai、Ricursive Intelligence、Bronco AI</strong> 为白金赞助商，NVIDIA Timothy Costa 受邀 SkyTalk。</p>
       <a href="https://www.dac.com/2026" target="_blank">→ DAC 2026 官网</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Cadence × NVIDIA · 2026-04-15（持续发酵）</div>
       <h4>🆕 Cadence × NVIDIA 扩展合作进一步落地：三星、SK Hynix、本田、Argonne 已投入使用</h4>
       <p>CadenceLIVE Silicon Valley 2026（4月15-16日）双重合作公告在科技媒体持续发酵：<strong>① Cadence × Google Cloud + Gemini</strong>：ChipStack AI Super Agent 与 Google Gemini LLM 深度集成，Cadence 股价单日上涨逾 4%；<strong>② Cadence × NVIDIA 全面扩展</strong>：新增 Omniverse 数字孪生（机器人/自驾仿真）、Physical AI 仿真（Fidelity CFD + Celsius 热分析）、GB200/B200 GPU 加速 EDA 全系（Innovus/Tempus/Voltus/Spectre X）。已证实早期用户：三星（先进工艺验证）、SK Hynix（HBM 设计）、本田（发动机 CFD 仿真）、Argonne 国家实验室（科学仿真）、Ascendence 等。</p>
       <a href="https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-and-nvidia-expand-partnership-to-reinvent-engineering.html" target="_blank">→ Cadence 官方公告</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>华大九天 / CITE 2026 · 2026-04-09（深圳）</div>
       <h4>🇨🇳 华大九天 AI 特征化提取工具荣获 CITE 2026 创新奖 — 国产 EDA × AI 双突破</h4>
       <p>第14届中国电子信息博览会（<strong>CITE 2026</strong>，4月9-11日，深圳）期间，<strong>华大九天</strong>（A股 301269）凭借 <strong>AI 赋能 EDA 关键技术——AI 特征化提取工具</strong> 斩获 2026 CITE 创新奖。该工具核心功能：基于 AI 从晶体管级 SPICE 仿真中自动提取紧凑参数化特征，显著加速 EDA 中性能预测和设计优化环节。这是继合见工软 UDA 2.0（3月）之后，本月第二家国产 EDA 厂商在 AI 赋能方向获得国内权威认可。标志着国产 EDA 从"功能复制"向"AI 原生创新"转型提速。</p>
       <a href="https://eda.eetrend.com/content/2026/100600258.html" target="_blank">→ EEtrend 报道</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>ICLR 2026 / ai4eda-workshop.github.io · 2026-04-17（已开幕（4月23日）</div>
       <h4>⏳ Agent4Chip Workshop @ ICLR 2026 倒计时 6 天 — 23篇论文阵容完整，PRO-V-R1、ASPEN 等即将亮相</h4>
       <p><strong>Agent4Chip Workshop 2026</strong>（ICLR 2026 同期，4月23-27日，里约热内卢 Riocentro）即将开幕。23篇接收论文代表 2026 年 Agentic EDA 最前沿成果：<strong>PRO-V-R1</strong>（RTL验证推理增强Agent，UCSD+NVIDIA）、<strong>ASPEN</strong>（E-Graph重写数据通路优化，Cornell+NVIDIA）、<strong>GACO</strong>（图增强HLS代码优化）、<strong>EDAForge</strong>（模拟电路合成多智能体）、<strong>HeaRT</strong>（AMS层级推理树，UT Austin+NVIDIA）、<strong>ACE-RTL</strong>（专用LLM+Agent融合，NVIDIA Research）、<strong>LLM4Cov</strong>（离线Agent学习测试平台生成）、<strong>VeriTrace</strong>（Verilog Agent时序探索）等全部可在 arXiv 预读。</p>
@@ -2897,26 +2910,26 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 前日动态（2026-04-16 · CadenceLIVE SV Day2 · OpenClaw FPGA 直播 · SemiEngineering AI EDA报道）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Cadence / Google Cloud · 2026-04-15（CadenceLIVE SV 2026）</div>
       <h4>🔥🔥 Cadence × Google Cloud — ChipStack AI Super Agent + Gemini 战略合作正式发布</h4>
       <p>CadenceLIVE Silicon Valley 2026 重磅公告：<strong>Cadence ChipStack™ AI Super Agent</strong> 将与 <strong>Google Gemini LLM</strong> 在 Google Cloud 上深度集成。技术架构：Gemini 大上下文窗口（处理百万行 Verilog 代码库）+ Cadence EDA 工具链领域调用接口 + ChipStack 端到端验证工作流。目标延续已在 Altera/NVIDIA/Tenstorrent 验证的 <strong>10× 验证效率提升</strong>。Cadence 股价公告后上涨逾 4%。这是 Cadence 第二次与三大云厂商（Google/Microsoft/NVIDIA）中的一家达成 AI EDA 战略绑定。</p>
       <a href="https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-and-google-collaborate-to-scale-ai-driven-chip-design.html" target="_blank">→ Cadence 官方公告</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>EEtrend 贸泽直播 · 2026-04-16（昨晚 19:00）</div>
       <h4>📡 OpenClaw for FPGA 直播已播出 — 赖晓铮教授展示 FPGA 设计全流程 Agent 自动化</h4>
       <p>华南理工大学副教授<strong>赖晓铮</strong>主讲的 OpenClaw for FPGA 系列技术直播于昨晚 19:00 正式播出（贸泽电子"芯英雄联盟"直播间），主题"用龙虾进行芯片及FPGA开发"。核心展示：① Agent 设计 RTL 的最新进展（超越对话交互）；② Agent 做 RTL 验证的新突破；③ Agent 时代工程师/学生如何应对。OpenClaw 已形成浙大-同济-华工生态体系，RTL-CLAW（同济）等均基于 OpenClaw 构建。可在 EEtrend 回放。</p>
       <a href="https://v.eetrend.com/content/2026/100600151.html" target="_blank">→ 直播回放</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>SemiEngineering · 2026-04-15</div>
       <h4>📊 SemiEngineering：AI 对芯片设计的影响持续增长，Agentic EDA 工具向"目标驱动自主执行"演进</h4>
       <p>SemiEngineering 深度报道《AI's Growing Impact on Chip Design and EDA Tools》（4月15日）核心洞察：数据中心工作负载高度定制化推动 Agentic EDA 工具需求激增；大型系统公司（超大规模云厂商）正推动工具向<strong>"可编程设计代理"</strong>演进；传统 EDA 厂商面临"功能升级 vs AI原生重建"两难；<strong>AI Agent 使 EDA 工具从"参数化配置"转向"目标驱动自主执行"</strong>——这正是 Cadence/Synopsys 近期大举发布 Agentic EDA 平台的底层逻辑。</p>
       <a href="https://semiengineering.com/ai-growing-impact-on-chip-design-and-eda-tools/" target="_blank">→ SemiEngineering</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>中科院软件所 KLSS Seminar · 2026-04-14</div>
       <h4>🇨🇳 iEDA × AiEDA 开源智能 EDA 联合报告 — 国内最完整 AI for EDA 研究基础设施</h4>
       <p>中科院软件所 KLSS Seminar（4月14日）：东南大学<strong>李兴权博士</strong>报告 <strong>iEDA + AiEDA + iDATA</strong> 三位一体平台：<strong>iEDA</strong> 覆盖 RTL-to-GDSII 全流程开源 EDA；<strong>AiEDA</strong> Python 库提供机器学习模型训练、电路数据提取、模型接入验证全链路；<strong>iDATA</strong> 向量数据集为国内 AI for EDA 研究提供开放基础数据。与国际 OpenROAD+CircuitNet 形成对应，更聚焦国内工艺库和工业适配。是国内最完整的开源 AI for EDA 研究基础设施。</p>
@@ -2925,26 +2938,26 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 近日动态（2026-04-14 · ICCAD截止日 · OpenClaw for FPGA明日直播 · MLCAD 46队参赛 · DAC程序3天后）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>ICCAD 2026 · 2026-04-14（今日）</div>
       <h4>🚨 ICCAD 2026 完整论文今日截止（AoE 23:59） — 预印本爆发潮开启，明日大量论文预计公开</h4>
       <p>IEEE/ACM ICCAD 2026（第 65 届，11月8-12日，San Jose）完整论文截止日：<strong>2026年4月14日（周二，23:59 AoE）</strong>，即北京时间 4月15日 7:59。今日（4月13日）已出现 SVA Generator、CapBench 等预印本，预计 4月15-16日将有更大批 AI for EDA 论文集中上传 arXiv。录用通知预计 <strong>7月11日</strong>。</p>
       <a href="https://iccad.com/2026/authors/call-for-papers" target="_blank">→ ICCAD 2026 CFP</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>EEtrend · 2026-04-14（明日直播）</div>
       <h4>📡 OpenClaw for FPGA 直播：华南理工赖晓铮教授主讲"用龙虾进行芯片及FPGA开发"</h4>
       <p><strong>明日（4月16日）19:00–20:30</strong>，贸泽电子"芯英雄联盟"直播间，华南理工大学副教授<strong>赖晓铮</strong>主讲。核心议题：① Agent 设计 RTL，除对话还有什么新玩法？② Agent 做 RTL 验证的最新进展？③ Agent 时代工程师和学生如何应对？OpenClaw 是浙大卓成团队开源的 Agentic EDA 框架，已被同济 RTL-CLAW、FluxEDA 等多个团队采用，该直播代表 OpenClaw 生态在 FPGA 方向的最新拓展。</p>
       <a href="https://www.eetrend.com/content/2026/100600150.html" target="_blank">→ 直播预约</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>MLCAD 2026 Contest · 2026-04-14（最新进展）</div>
       <h4>🏆 MLCAD 2026 竞赛报名已关闭：46 支全球队伍入列，Alpha 4月30日截止</h4>
       <p>MLCAD 2026 LLM驱动时序优化竞赛报名已于 <strong>4月10日正式关闭</strong>，共 <strong>46支队伍</strong>成功注册（含 UCSD、复旦大学、上海交通大学、香港中文大学、东京大学等全球高校）。比昨日报告的 41 支增加 5 支。任务：用 LLM/Agent 修改 OpenROAD 内部算法，实现"设计感知"时序优化。下一里程碑：<strong>Alpha 提交 4月30日</strong>；Beta 5月5日–6月5日；结果公布 6月15日；NVIDIA GPU 奖励。</p>
       <a href="https://asu-vda-lab.github.io/MLCAD26-Contest/" target="_blank">→ 竞赛官网</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>DAC 2026 · 2026-04-14（已开幕（4月23日）</div>
       <h4>⏳ DAC 2026 完整论文程序将于本周五（4月17日）公布 — 已知接收 AI EDA 论文 6+ 篇</h4>
       <p>DAC 2026（7月26-29日，长滩）程序将于 <strong>4月17日（周五）</strong>正式公布。已确认接收的 AI for EDA 论文：<strong>ChatSVA</strong>（多智能体 SVA，功能通过率 96.12%）、<strong>CellE</strong>（等式饱和标准单元库扩展）、<strong>GSR-GNN</strong>（深度 GNN 电路图训练加速）、<strong>Escaping Flatland</strong>（3D FPGA 布局）、<strong>GEMM-GS</strong>（3D 高斯溅射加速，ISCA 2026 同期）、<strong>CapBench</strong>（多 PDK 电容提取 ML 基准，今日发布）。总接收量 500+ 篇，55% 内容聚焦 AI & Design。</p>
@@ -2953,26 +2966,26 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 昨日动态（2026-04-13 · MLCAD竞赛 · ICCAD已截止 · Agent4Chip已开幕 · DAC 2026 程序已公布）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>TechCrunch / TechStartups · 2026-04-07（本周重磅）</div>
       <h4>🔥 Intel 正式加入 Elon Musk Terafab：与 Tesla/SpaceX/xAI 合建 $250 亿 AI 芯片超级工厂</h4>
       <p>Intel 宣布加入 Elon Musk 主导的 <strong>Terafab 项目</strong>，担任主代工合作伙伴，联合 Tesla、SpaceX、xAI 在德克萨斯州建设 <strong>$250 亿 AI 芯片超级制造工厂</strong>，目标年产 <strong>1 TW（太瓦）算力</strong>，用于 AI 推理和机器人控制芯片。Terafab 首次披露：3月23日 Musk 宣布，4月7日 Intel 确认参与（"负责芯片设计、制造和封装"）。Intel 亦同期扩展与 Google 合作（Xeon+ASIC IPU）。这是半导体制造格局近年最大规模产能重组事件之一，也是 AI 算力军备竞赛在晶圆厂层面的直接体现。</p>
       <a href="https://techcrunch.com/2026/04/07/intel-signs-on-to-elon-musks-terafab-chips-project/" target="_blank">→ TechCrunch 报道</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>EEtrend · 2026-04-10</div>
       <h4>🆕 OpenClaw for FPGA &amp; 芯片开发：华南理工大学赖晓铮教授 4月16日直播</h4>
       <p>贸泽电子 "芯英雄联盟" 直播预告：华南理工大学副教授<strong>赖晓铮</strong>将于 <strong>4月16日晚19:00</strong> 就 <strong>OpenClaw AI Agent 框架用于 FPGA 与芯片开发</strong>进行直播分享。OpenClaw 是 2026 年全球开源 AI Agent 领域现象级项目，已在北京亦庄举办 AI for 芯片设计研讨会（3月），GitHub 星标数快速增长。该直播将是 OpenClaw 在硬件设计领域落地应用的重要内容。</p>
       <a href="https://www.eetrend.com/content/2026/100600150.html" target="_blank">→ 直播预告</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>SemiEngineering · 2026-04-10</div>
       <h4>🔥 Intel 加入 Elon Musk Terafab 项目：联合 Tesla/SpaceX/xAI 年产 1TW 算力芯片制造</h4>
       <p>SemiEngineering 周报（4月10日）报道：<strong>Intel 正式加入 Elon Musk 主导的 Terafab 项目</strong>，将帮助重构硅晶圆厂技术（refactor silicon fab technology），合作方包括 Tesla、SpaceX、xAI，目标年产 <strong>1 TW（太瓦）算力</strong>用于 AI 和机器人应用。同期：Intel 与 Google 扩展多年期合作——Xeon 处理器继续为 Google Cloud 提供动力，同步扩大 <strong>定制 ASIC IPU（基础设施处理单元）</strong>联合研发。</p>
       <a href="https://semiengineering.com/chip-industry-week-in-review-133/" target="_blank">→ SemiEngineering 周报</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>同济大学电信学院 · 2026-04-04（本周更新）</div>
       <h4>同济大学发布 RTL-CLAW："一句话搞定芯片设计" AI自动化集成电路协同工具</h4>
       <p>同济大学电子与信息工程学院宣布开源 <strong>RTL-CLAW</strong>，定位 AI 智能体驱动的集成电路设计协同工具链。支持：一句话自动调用 Yosys 完成逻辑综合（目标 ASAP7 工艺库）；RTL 生成→验证→综合全自动流程；以 OpenClaw AI Agent 框架为底层引擎；同济大学 EDA Lab + CUHK Qiang Xu 组联合推进。</p>
@@ -2981,26 +2994,26 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 近日动态（2026-04-10 · Cognichip融资 · ChatSVA/RL-ASIC · ICCAD截止倒计时）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>TechCrunch · 2026-04-01</div>
       <h4>🔥 Cognichip 完成 $6000 万融资，英特尔 CEO Lip-Bu Tan 跟投加入董事会</h4>
       <p>AI for Chip Design 初创公司 Cognichip 宣布完成 <strong>6000 万美元新一轮融资</strong>（Seligman Ventures 领投），<strong>英特尔 CEO Lip-Bu Tan 个人跟投并加入董事会</strong>。公司累计融资达 <strong>9300 万美元</strong>（自 2024 年成立以来）。核心定位：基于芯片设计数据训练的专用 AI 模型，宣称降低开发成本 <strong>75%</strong>、周期缩短 <strong>50%</strong> 以上。AI for EDA 创企赛道 2026 Q1 融资总额已超 <strong>$4.7 亿</strong>。</p>
       <a href="https://techcrunch.com/2026/04/01/cognichip-wants-ai-to-design-the-chips-that-power-ai-and-just-raised-60m-to-try/" target="_blank">→ TechCrunch 报道</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>IBM Research · arXiv:2603.25719 · 2026-03-31</div>
       <h4>🆕 IBM Agent Factory for HLS：通用 Agent 无需领域训练，HLS 硬件优化平均加速 8.27×</h4>
       <p>IBM Research 发布 <strong>Agent Factories for HLS</strong>，验证通用编程 Agent（Claude Code + AMD Vitis HLS）在硬件优化的能力边界。两阶段流水线：① 子内核分解 + ILP 全局最优配置；② N 个专家 Agent 并行跨函数优化。12 个 HLS 基准，从 1–10 个 Agent 扩展：<strong>平均加速 8.27×</strong>，streamcluster 超过 <strong>20×</strong>。</p>
       <a href="https://arxiv.org/abs/2603.25719" target="_blank">→ arXiv 论文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-04-10 新增</div>
       <h4>🆕 今日4篇：RL-ASIC 端侧 · ChatSVA(DAC'26) · 模拟电路自校准 · ATLAS 3D-DRAM</h4>
       <p>今日收录 4 篇 AI for EDA 核心论文：<strong>RL-ASIC（2604.07526）</strong>：RL 驱动编译器联合优化架构/内存/工作负载，7 节点自动适配，Llama 3.1 8B 达 29,809 tok/s；<strong>ChatSVA（2604.02811）</strong>：DAC 2026 接收，SVA 功能通过率 96.12%，覆盖率提升 11× 新 SOTA；<strong>LLM 模拟电路尺寸调整（2604.07387）</strong>：解析方程 + 单次仿真自校准，100% 成功；<strong>ATLAS（2604.08044）</strong>：首个硅验证 3D-DRAM LLM 加速器全栈仿真，误差 ≤8.57%，开源计划公布。</p>
       <a href="https://arxiv.org/list/cs.AR/recent" target="_blank">→ cs.AR 最新列表</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>ICCAD 2026 官网</div>
       <h4>⏰ ICCAD 2026 完整论文已于4月14日截止</h4>
       <p>ICCAD 2026 完整论文截止日 <strong>2026-04-14（4月14日，AoE）</strong> 仅剩 4 天。本周是 AI for EDA 预印本密集发布期，已确认的方向：布局布线 AI（多篇）、时序分析与收敛、Agentic EDA 工作流、RTL 验证、GNN 物理设计等。会议将于 <strong>2026年11月8-12日</strong>在美国圣何塞举行，录用通知 7 月 11 日。ICCAD 2026 CAD Contest 三题注册截止 5 月 8 日：Cadence（LLM Netlist 探索）、Synopsys（回归失败分桶）、Intel（SoC Floorplanning）。</p>
@@ -3009,38 +3022,38 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 今日动态（2026-04-11 · DAC 2026 赞助商阵容揭晓 · ChatHLS ACL 2026 · Intel Terafab · Siemens×NVIDIA Veloce · ICCAD截止已开幕（4月23日）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>dac.com · 2026-04-11</div>
       <h4>🔥 DAC 2026 赞助商阵容大揭晓：量子诺贝尔奖得主 + AI EDA 三巨头初创企业云集</h4>
       <p>DAC 2026 官网今日更新完整赞助商和演讲阵容。<strong>白金赞助商</strong>：Bronco AI（半导体AI智能体）、ChipAgents.ai（多智能体RTL验证，宣称10×生产力）；<strong>银牌赞助商</strong>：Ricursive Intelligence（AlphaChip团队，ASP-DAC 2026最佳论文）、Cadence（传统EDA巨头）。主题演讲：<strong>John Martinis</strong>（Qolab CTO，<strong>2025年诺贝尔物理学奖得主</strong>，Google量子霸权）、Qualcomm CTO Baaziz Achour；SkyTalk：NVIDIA Timothy Costa（AI加速+量子计算）、Intel Lalitha Immaneni（先进封装/Chiplet）、IBM Dr. Huiming Bu（2nm/1.4nm工艺）。</p>
       <a href="https://dac.com/2026" target="_blank">→ DAC 2026 官网</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>ICCAD 2026 官网 · 2026-04-11</div>
       <h4>⏰ ICCAD 2026 完整论文已于4月14日截止</h4>
       <p>ICCAD 2026 完整论文截止日 <strong>2026-04-14（周二，AoE）</strong> 已于4月14日截止。本周末是预印本最后冲刺期，预计今明两天将有大量 AI for EDA 预印本发布（布局布线、时序收敛、Agentic EDA）。注意：OpenReview 显示注册截止已于 <strong>4月8日（5PM AoE）</strong>关闭，目前仅受理已注册论文的完整稿件。会议将于 <strong>2026年11月8-12日</strong>在圣何塞举行，录用通知7月11日。</p>
       <a href="https://iccad.com/2026" target="_blank">→ ICCAD 2026 官网</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Siemens EDA × NVIDIA · 2026-04-09~10</div>
       <h4>🔥 Siemens × NVIDIA Veloce proFPGA CS 万亿级验证突破：数天完成万亿周期预硅验证</h4>
       <p>Siemens 官宣（2026-04-09，普莱诺，TX）：<strong>Veloce™ proFPGA CS 硬件辅助验证系统</strong>结合 NVIDIA 性能优化芯片架构，实现数天内捕获<strong>数万亿次预硅设计周期</strong>，远超传统仿真工具（百亿级极限）。适用范围：从单 FPGA IP 验证到数十亿门 Chiplet 设计，直接解决 AI SoC（超 1000 亿晶体管）的验证瓶颈。NVIDIA VP Narendra Konda：「AI 和计算架构日益复杂，半导体团队需要高性能验证解决方案」。这是 Siemens×NVIDIA 2026 年第四次重要合作公告。</p>
       <a href="https://news.siemens.com/en-us/siemens-nvidia-veloce/" target="_blank">→ 西门子官方公告</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>EEtrend · 2026-04-10</div>
       <h4>🆕 OpenClaw for FPGA &amp; 芯片开发：华南理工大学赖晓铮教授 4月16日直播</h4>
       <p>贸泽电子 "芯英雄联盟" 直播预告：华南理工大学副教授<strong>赖晓铮</strong>将于 <strong>4月16日晚19:00</strong> 就 <strong>OpenClaw AI Agent 框架用于 FPGA 与芯片开发</strong>进行直播分享（主题：用龙虾进行芯片及FPGA开发）。OpenClaw 是 2026 年全球开源 AI Agent 领域现象级项目，已在北京亦庄举办 AI for 芯片设计研讨会（3月），GitHub 星标数快速增长。该直播将是 OpenClaw 在硬件设计领域落地应用的重要内容。</p>
       <a href="https://www.eetrend.com/content/2026/100600150.html" target="_blank">→ 直播预告</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>同济大学电信学院 · 2026-04-04（本周更新）</div>
       <h4>同济大学发布 RTL-CLAW："一句话搞定芯片设计" AI自动化集成电路协同工具</h4>
       <p>同济大学电子与信息工程学院宣布开源 <strong>RTL-CLAW</strong>，定位 AI 智能体驱动的集成电路设计协同工具链。支持：一句话自动调用 Yosys 完成逻辑综合（目标 ASAP7 工艺库）；RTL 生成→验证→综合全自动流程；以 OpenClaw AI Agent 框架为底层引擎；同济大学 EDA Lab + CUHK Qiang Xu 组联合推进。该工具在 GitHub 持续推进，代表国内高校在 AI-native EDA 工具链方向的原创探索。</p>
       <a href="https://see.tongji.edu.cn/info/1143/14621.htm" target="_blank">→ 官方新闻</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>SemiEngineering · 2026-04-10</div>
       <h4>🔥 Intel 加入 Elon Musk Terafab 项目：联合 Tesla/SpaceX/xAI 年产 1TW 算力芯片制造</h4>
       <p>SemiEngineering 周报（4月10日）报道：<strong>Intel 正式加入 Elon Musk 主导的 Terafab 项目</strong>，将帮助重构硅晶圆厂技术（refactor silicon fab technology），合作方包括 Tesla、SpaceX、xAI，目标年产 <strong>1 TW（太瓦）算力</strong>用于 AI 和机器人应用。同期：Intel 与 Google 扩展多年期合作——Xeon 处理器继续为 Google Cloud 提供动力，同步扩大 <strong>定制 ASIC IPU（基础设施处理单元）</strong>联合研发；Broadcom 将为 Google 开发下一代 TPU，Anthropic/Google/Broadcom 三方预订多千兆瓦 TPU 产能（2027年上线，美国本土）。</p>
@@ -3049,80 +3062,80 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 昨日动态（2026-04-09 · DAC 2026 程序4月17日公布 · Synopsys Multiphysics-Fusion · Agent4Chip@ICLR 2026 已开幕（4月23日）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>DAC 2026 · dac.com · 2026-04-09</div>
       <h4>🆕 DAC 2026：AI &amp; Design 占比55%，投稿量增长26.34%，程序将于4月17日正式公布</h4>
       <p>DAC 2026（7月26-29日 · 长滩）官网披露：研究论文轨投稿量增长 <strong>26.34%</strong>，工程论文轨增长 <strong>26%</strong>，且 <strong>55% 的会议内容聚焦 AI &amp; Design</strong>。程序将于 <strong>4月17日正式发布</strong>。主题演讲阵容：NVIDIA Timothy Costa（AI与量子计算）、Qualcomm Dr. Baaziz Achour（通信与芯片）、UC Berkeley Jan Rabaey（低功耗集成电路）。重要 TechTalk：Siemens Amit Gupta（AI定制IC设计）、<strong>ChipAgents.ai William Wang（多智能体AI芯片验证）</strong>。</p>
       <a href="https://dac.com/2026" target="_blank">→ DAC 2026 官网</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Synopsys Converge 2026 · 2026-03-11 发布</div>
       <h4>🆕 Synopsys Multiphysics-Fusion™：首个 EDA × Ansys 多物理场融合平台发布，AgentEngineer™ 驱动自动化设计</h4>
       <p>新思科技 Converge 2026 大会（3月11日）重磅发布：<strong>Synopsys Multiphysics-Fusion™</strong>——首款将 Ansys 领先多物理场仿真直接集成到芯片设计环境的产品，支持热/机械/电磁仿真与 EDA 流程深度融合，直接应对 3D-IC、Chiplet 封装的多物理场挑战。同期发布 <strong>AgentEngineer™ 技术</strong>（业界首个软件定义硬件辅助验证方案）+ <strong>Ansys 2026 R1</strong>（AI驱动多物理场求解、数字孪生）。</p>
       <a href="https://news.synopsys.com/2026-03-11-Synopsys-Outlines-Vision-for-Engineering-the-Future" target="_blank">→ Synopsys 新闻稿</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Agent4Chip Workshop @ ICLR 2026 · 2026-04-23~27</div>
       <h4>🆕 Agent4Chip Workshop @ ICLR 2026 即将开幕（4月23-27日 · 里约热内卢）：23篇论文</h4>
       <p>Agent4Chip 研讨会将于 ICLR 2026 期间在巴西里约热内卢举行（4月23-27日），共接收 <strong>23篇论文</strong>。高价值亮点：ASPEN（LLM+E-Graph RTL数据通路优化，Cornell+NVIDIA）、GACO（图增强HLS代码优化）、PRO-V-R1（推理增强RTL验证智能体）、LACE（RISC-V指令扩展多智能体）、HeaRT（模拟电路分层推理树）、VeriTrace（人类时序探索Agentic框架）、ChipBench（下一代LLM芯片设计评测）。FVRuleLearner（UIUC+NVIDIA，SVA形式验证）同步接收。</p>
       <a href="https://ai4eda-workshop.github.io/2026/accepted_papers.html" target="_blank">→ Agent4Chip 2026 论文列表</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Siemens EDA × NVIDIA · 2026-04-06</div>
       <h4>🚨 Siemens × NVIDIA 推出 Veloce proFPGA CS：硅前验证可在数天内执行万亿级设计周期</h4>
       <p>Siemens EDA 联合 NVIDIA 推出 Veloce proFPGA CS 硬件加速验证系统，单芯片生产前可在<strong>数天内完成万亿（Trillion）级设计周期验证</strong>，远超传统仿真工具（百亿级极限）。系统整合 Siemens FPGA 原型硬件与 NVIDIA GPU 加速架构，验证已超 1000 亿晶体管的 AI SoC。这是两家公司当年内第三次合作公告，也是 EDA 向 GPU 加速验证迁移的关键里程碑。</p>
       <a href="https://www.thelec.net/news/articleView.html?idxno=6368" target="_blank">→ THE ELEC 报道</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>IIC Shanghai 2026 · 2026-04-07~08</div>
       <h4>🏆 IIC Shanghai 2026 EDA/AI峰会：Cadence 重磅展示 ChipStack AI SuperAgent + 3D-IC 平台</h4>
       <p>2026中国IC领袖峰会于4月7日启幕，2500+现场观众、3万+线上直播。Cadence 展示三大核心方向：① <strong>ChipStack™ AI SuperAgent</strong>（基于"心智模型"的自主设计/验证AI）；② <strong>JedAI平台</strong>（统一跨工具AI能力调度）；③ <strong>Integrity 3D-IC多芯粒平台</strong>（AI驱动互连布局优化）。同期举行EDA/IP与IC设计、边缘AI与算力芯片等多轨技术论坛，并揭晓2026中国IC设计成就奖。</p>
       <a href="https://iic.eet-china.com/iic-sh2026/index.html" target="_blank">→ IIC Shanghai 2026</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>ICCAD 2026 CAD Contest · 2026-04-01 公布</div>
       <h4>🏅 ICCAD 2026 CAD Contest 三题公布：LLM Netlist探索 + SoC Floorplanning + 回归失败分桶</h4>
       <p>三大赛题已公布：<strong>Problem A（Cadence）</strong>：LLM 辅助 Netlist 探索与变换；<strong>Problem B（Synopsys）</strong>：回归失败分桶（Regression Failure Bucketing）；<strong>Problem C（Intel）</strong>：数据驱动 SoC Floorplanning（FloorSet Challenge）。注册截止 <strong>5月8日</strong>，最终提交 8月21日，颁奖 11月。学生团队可获每题最高 NT$70,000 奖金。</p>
       <a href="https://www.iccad-contest.org/2026/index.html" target="_blank">→ ICCAD 2026 Contest</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Synopsys · 持续更新</div>
       <h4>Synopsys AI EDA 全套布局：DSO.ai + VSO.ai + TSO.ai + AgentEngineer™ 持续迭代</h4>
       <p>Synopsys.ai 套件覆盖设计全流程：<strong>DSO.ai</strong>（芯片 RTL-to-GDSII 设计优化）、<strong>VSO.ai</strong>（验证覆盖率提升，功能覆盖提升 33%，回归 2-7× 压缩）、<strong>TSO.ai</strong>（测试最大缺陷覆盖）、<strong>ASO.ai</strong>（模拟设计加速）。AgentEngineer™ 持续更新，RTL Architect 实现业界首个物理感知 RTL 分析，整合 Verdi 调试系统。Synopsys + Ansys 2026 R1 整合多物理场仿真与 Agentic AI 能力。</p>
       <a href="https://www.synopsys.com/ai/ai-powered-eda.html" target="_blank">→ Synopsys AI EDA</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>ICCAD 2026 · 截止日期 2026-04-07（昨日截止）</div>
       <h4>🚨 ICCAD 2026 摘要已截止（昨日4月7日）· 完整论文截止 4月14日</h4>
       <p>ICCAD 2026 摘要注册已于<strong>昨日（4月7日，AoE）截止</strong>，完整论文截止 <strong>4月14日</strong>。接下来一周将是 AI for EDA 方向预印本集中涌现期，FVRuleLearner/DeepStack/AlphaZero Moment 等论文正是本批次代表作。会议将于 <strong>2026年11月8-12日在美国圣何塞</strong>举行，录用通知 7月11日。</p>
       <a href="https://iccad.com/2026" target="_blank">→ ICCAD 2026 官网</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Ricursive Intelligence · 2026-01~04（ICCAD 2026 赞助商）</div>
       <h4>Ricursive Intelligence 完成 $3.35 亿融资、估值 $40 亿，成 ICCAD 2026 核心赞助商</h4>
       <p>由 AlphaChip 原班人马（Anna Goldie & Azalia Mirhoseini，前 Google DeepMind）创立的 Ricursive Intelligence 完成 <strong>$3.35 亿融资，估值 $40 亿</strong>（Sequoia/Lightspeed/NVentures 领投），以 ICCAD 2026 黄金赞助商身份亮相，定位"递归自我改进的全栈半导体设计平台"。其 <strong>C3PO 布局算法获 ASP-DAC 2026 最佳论文</strong>，核心成果包括 AlphaChip（Nature 2021）、RL-CCD（DAC 最佳 2023）、Insta（DAC 最佳 2025）。</p>
       <a href="https://www.ricursive.com/" target="_blank">→ Ricursive Intelligence 官网</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-04-07（今日重点论文）</div>
       <h4>今日 4 篇新论文 — FVRuleLearner · AlphaZero Moment · DeepStack · 3D热分析综述</h4>
       <p>今日收录 4 篇高质量 AI for EDA 论文：<strong>FVRuleLearner</strong>（UIUC+NVIDIA，SVA形式验证功能正确性+31.17%）；<strong>Computer Architecture's AlphaZero Moment</strong>（Wisconsin，架构研究范式转变宣言）；<strong>DeepStack</strong>（微软亚研+帝国理工+清华，3D堆叠加速器DSE快10万倍）；<strong>3D IC热分析综述</strong>（Tennessee，物理信息ML方法系统梳理）。</p>
       <a href="https://arxiv.org/list/cs.AR/recent" target="_blank">→ 查看 cs.AR 完整列表</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Agent4Chip Workshop @ ICLR 2026 · 即将举行（4月23-27，里约）</div>
       <h4>Agent4Chip Workshop @ ICLR 2026：23篇论文，4月23-27 里约热内卢</h4>
       <p>AI for Chip Design 领域首个 ICLR 级研讨会将于 <strong>4月23-27日在里约热内卢</strong>与 ICLR 2026 同期举行。已接收 23 篇海报论文，包括：ACE-RTL（NVIDIA），LLM4Cov（UCSD+NVIDIA），VeriTrace，FVRuleLearner（UIUC+NVIDIA），HeaRT（UT Austin+NVIDIA）等。本次研讨会将展示 Agentic EDA 从学术到工业的最新进展，距今仅约 2 周。</p>
       <a href="https://ai4eda-workshop.github.io/2026/accepted_papers.html" target="_blank">→ 接收论文列表</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Synopsys AI · 持续更新（商用 AI EDA）</div>
       <h4>Synopsys AI Solutions 官网更新：面向 AI 芯片设计的端到端 AI 解决方案</h4>
       <p>Synopsys AI 官网（synopsys.com/ai）今日更新，展示其 AgentEngineer™ L4 级自主工作流在 RTL-to-Sign-off 全流程的最新进展。涵盖与 AMD、Microsoft、NVIDIA 的差异化合作，以及 Multiphysics Fusion™ 多物理场联合分析平台的量产落地情况。EDA 三巨头中 Synopsys 的 AI 布局最为广域（EDA + Ansys 仿真）。</p>
       <a href="https://www.synopsys.com/ai.html" target="_blank">→ Synopsys AI 解决方案</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>ChipAgents / Alpha Design AI · 2026-03-05（行业要闻）</div>
       <h4>ChipAgents 完成 $7400 万 A 轮融资，多智能体 AI 芯片验证首独角兽</h4>
       <p>ChipAgents（Alpha Design AI）宣布完成 <strong>7400 万美元 A 轮融资</strong>，专注于多智能体 AI 驱动芯片验证和调试。核心产品：多智能体根因分析（RCA）、CoverAgent 覆盖率优化。已在 DVCon 2026 展示，顾问包括前 Synopsys CTO Raúl Camposano、前 Cadence CEO Jack Harding。</p>
@@ -3131,14 +3144,14 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 昨日动态（2026-04-06 · ChatSVA DAC 2026 + Assertain硬件安全断言 + ICCAD 2026摘要截止明日）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-04-06（昨日重点论文）</div>
       <h4>昨日 3 篇新论文 — ChatSVA · Assertain · AI硬件安全验证综述</h4>
       <p>2026-04-06 收录 3 篇高质量 AI for EDA 论文，聚焦<strong>硬件安全验证 + LLM断言生成</strong>方向：<strong>ChatSVA</strong>（DAC 2026录用，SVA自动生成SOTA，98.66%语法通过率）；<strong>Assertain</strong>（IEEE MDTS 2026，超越GPT-5 67.92%）；<strong>AI辅助硬件安全验证综述</strong>（IEEE VTS 2026，NVDLA案例，六大阶段全流程梳理）。</p>
       <a href="https://arxiv.org/list/cs.AR/current" target="_blank">→ 查看 cs.AR 完整列表</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Cadence · 持续更新（商用工具进展）</div>
       <h4>Cadence Cerebrus AI Studio 三星落地案例：4× 生产力提升 + 8-11% PPA 提升</h4>
       <p>Cadence Cerebrus AI Studio 最新客户验证：<strong>三星 SARC+ACL</strong>实现整体 4× 生产力提升；<strong>三星 SSIR</strong>在 SoC 子系统上实现 <strong>8%-11% PPA 提升</strong>；STMicroelectronics 强调其多设计多用户 SoC 子系统优化能力。Cerebrus AI Studio 已成为头部芯片厂商标准化工具。</p>
@@ -3147,38 +3160,38 @@
       <p>Partcl 与 Hudson River Trading 联合举办宏单元布局算法竞赛，总奖金 $49,000。评估基于 IBM ICCAD04 基准（18个设计）和 OpenROAD 流程，代理成本 = 1.0×线长 + 0.5×密度 + 0.5×拥塞。前7名进入 NG45 真实流程验证，截止日期 2026年5月21日。允许 SA / RL / GNN / 解析法，代码须开源。</p>
       <a href="https://github.com/partcleda/macro-place-challenge-2026" target="_blank">→ GitHub 参赛入口</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>合见工软 · 2026-03-18（重磅国内动态）</div>
       <h4>合见工软发布 UDA 2.0 — 国内首款Agentic AI自研EDA平台</h4>
       <p>上海合见工业软件集团（UniVista）发布第二代数字设计AI智能平台 UDA 2.0，国内首款基于完全自主研发EDA架构的 Agentic AI 智能体平台。支持自然语言自主完成RTL设计→验证→综合全流程（Level 4自主），深度融合 LLM 与自研UVS+/UVD+/UVSYN工具链，适配DeepSeek等国产大模型，实现软硬件国产全栈替代。</p>
       <a href="https://www.univista-isg.com/site/news_detail/512" target="_blank">→ 官方新闻</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>embedded.com · 2026-04-01（行业深度分析）</div>
       <h4>EDA三巨头Agentic AI竞争格局深度分析：AI工程工作流的未来</h4>
       <p>embedded.com 发布深度文章，系统梳理 Cadence（ChipStack AI SuperAgent）、Siemens（Fuse EDA AI Agent）、Synopsys（AgentEngineer）三大巨头的 Agentic AI 多年期规划。Cadence 侧重多芯片协同设计自动化；Siemens 强调 MCP 开放架构与企业级安全治理；Synopsys 押注 DSO.ai RL 物理优化 + Ansys 多物理场 AI 联动。三者均宣称可将芯片设计周期缩短 50% 以上。</p>
       <a href="https://www.embedded.com/a-look-at-agentic-ai-in-the-eda-engineering-workflow/" target="_blank">→ 原文链接</a>
     </div>
 
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>TechCrunch · 2026-04-02（今日重磅）</div>
       <h4>🔥 Cognichip 完成 $6000 万融资，用 AI 设计驱动 AI 的芯片，宣称降本 75%</h4>
       <p>半导体 AI 初创公司 <strong>Cognichip</strong> 宣布完成 6000 万美元融资。公司核心使命：用 AI 自动化并优化专用于 AI 工作负载的芯片设计流程。宣称可将芯片开发成本降低 <strong>75% 以上</strong>、缩短开发周期 <strong>一半以上</strong>，有望降低定制 AI 芯片准入门槛并打破大厂市场垄断。这是本周 AI for EDA 领域最重磅的投资事件。</p>
       <a href="https://techcrunch.com/2026/04/01/cognichip-wants-ai-to-design-the-chips-that-power-ai-and-just-raised-60m-to-try/" target="_blank">→ 阅读 TechCrunch 报道</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-04-02（今日）</div>
       <h4>arXiv 今日新提交 6 篇 — GSR-GNN + RePart + Escaping Flatland 三篇 AI/EDA 重点</h4>
       <p>今日 cs.AR 发布 6 篇新论文（均已被 DAC/ISEDA 2026 录用）。重点论文：① <strong>GSR-GNN</strong>（DAC 2026）深度 GNN 训练框架，电路图内存降低 87.2%、训练加速 30×；② <strong>RePart</strong>（ISEDA 2026）多FPGA超图划分新SOTA，跳数降低 52.3%、速度提升 11×；③ <strong>Escaping Flatland</strong>（DAC 2026）首个3D FPGA专用布局流程，关键路径最高降低 18% 并将开源。</p>
       <a href="https://arxiv.org/list/cs.AR/2026-04" target="_blank">→ 查看 cs.AR 四月列表</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Siemens EDA · 持续更新（2026-04-02）</div>
       <h4>Siemens Fuse EDA AI Agent：端到端 EDA 工作流自主编排，开放式 MCP 架构对接第三方工具</h4>
       <p>Siemens 持续推进 <strong>Fuse EDA AI Agent</strong>，关键能力：① 从设计构思到制造签收的完整 EDA 工作流自主编排；② 内置专为 EDA 构建的领域智能（格式解析器 + 验证机制）；③ 通过可扩展 MCP 架构支持第三方工具集成（真正多供应商方案）；④ 支持空气间隙本地部署或混合云（Azure/AWS/GCP）。在 SEMICON China 2026 发布后持续吸引客户关注。</p>
       <a href="https://www.siemens.com/en-us/products/fuse-eda-ai-system/agent/" target="_blank">→ 查看 Fuse EDA AI Agent</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Cadence · 2026-03-02（持续发酵）</div>
       <h4>Cadence ChipStack AI SuperAgent：全球首个前端芯片设计 Agentic AI，Altera 验证 10× 效率提升</h4>
       <p>Cadence 于 2026-02-10 发布、3-2 在 SEMICON China 正式宣推的 <strong>ChipStack™ AI SuperAgent</strong>，是全球首个面向前端芯片设计和验证的 Agentic AI 解决方案，整合功能验证/测试基准编码/测试计划/调试全流程。<strong>Altera</strong> 工程高级总监证实在部分领域验证工作量缩减约 <strong>10 倍</strong>。与 NVIDIA NeMo + Nemotron 模型深度集成，支持多智能体编排。</p>
@@ -3187,8 +3200,8 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">📰</span> 昨日动态（2026-04-01 · arXiv cs.AR 9篇新提交）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-04-01（昨日）</div>
       <h4>arXiv 昨日新提交 9 篇 — FluxEDA + AP-DRL + AutoPDR 三篇 AI for EDA 重点论文</h4>
       <p>昨日 cs.AR 共提交 9 篇新论文。重点论文：<strong>FluxEDA</strong>（浙大/同济）提出有状态 Agentic EDA 基础设施，支持真实后端的多步优化与状态回滚；<strong>AP-DRL</strong>（HKUST）在 Versal ACAP 上实现 DRL 训练 4.17× 加速；<strong>AutoPDR</strong>（港科大等，ISEDA 2026）图学习驱动 PDR 求解器智能配置，代码已开源。</p>
@@ -3196,14 +3209,14 @@
     </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;"><span class="icon">📰</span> 更早动态（2026-03-30）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-03-30</div>
       <h4>arXiv 今日新提交 11 篇 — UCAgent 领衔验证智能体突破</h4>
       <p>今日 cs.AR 提交 11 篇新论文。重点论文：<strong>UCAgent</strong>（中科院计算所/国防科大）提出 31 级细粒度验证工作流 + VCLM 标签机制，实现 98.5% 代码覆盖率并发现未识别缺陷；<strong>IncreRTL</strong> 通过需求-代码可追溯性解决增量 RTL 生成的结构漂移问题；<strong>Wattchmen</strong>（ICS 2026 录用）提出 GPU 能耗建模新方法，MAPE 降至 11%。</p>
       <a href="https://arxiv.org/list/cs.AR/recent" target="_blank">→ 查看 cs.AR 完整列表</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>NVIDIA GTC 2026 · 2026-03-16~20</div>
       <h4>复旦大学 FudanGAN 团队 GTC 2026 论文展示：面向芯片设计的 AI 生成</h4>
       <p>FudanGAN 团队在 GTC 2026 展示面向芯片设计的生成式 AI 最新成果，涵盖硬件设计自动化、版图生成等方向。GTC 2026 吸引全球 190+ 国家、3 万余名开发者参会，核心议题从模型训练转向 AI 智能体与工程应用。</p>
@@ -3212,14 +3225,14 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🎓</span> 顶会动态（2026-03-28 · ISPD 2026 闭幕汇总）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>ISPD 2026 · 德国波恩 · 2026-03-15~18（本周闭幕）</div>
       <h4>ISPD 2026 Keynote：AI/ML 重塑 EDA 工程仿真 + Agentic AI 专题圆桌</h4>
       <p>Ansys/Synopsys EVP <strong>Prith Banerjee</strong> 主题演讲（Keynote 8）全面阐述 AI/ML 在 EDA 与工程仿真中的应用，涵盖强化学习布局布线、神经网络时序预测；专设<strong>Agentic AI 圆桌讨论</strong>，NVIDIA/Cadence/Siemens 代表探讨 LLM 自主代理在物理设计算法演进中的路径。Session 9 "AI/LLM in Physical Design" 收录 AstroTune（跨阶段 AST+LLM 参数调优）和 CHASE（Chiplet 多保真度仿真探索框架）等重点论文，MultiRAG 邀请报告系统梳理三种 EDA 知识注入 LLM 路径。</p>
       <a href="https://ispd.cc/ispd2026/index.php?page=program" target="_blank">→ 查看完整论文程序</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv / semi-insights.com · 2026-03-27~28</div>
       <h4>2026 年将成 AI-EDA 工作流从"概念"到"部署"的关键转折点</h4>
       <p>半导体行业观察报道：尽管 AI 在多领域爆发，但受半导体复杂性影响发展更循序渐进。<strong>2026 年是关键一年</strong>——AI 驱动的工作流正从概念阶段走向正式部署，主要驱动力包括：① EDA 巨头 Agentic 产品实际落地、② 开源工具链（OpenROAD）AI 集成成熟、③ 硅验证加速催生对 AI 辅助验证的真实需求。同期，arXiv 新论文 FluxEDA（有状态 Agentic 执行基础设施）和 AutoPDR（GNN 辅助形式验证调优）为这一趋势提供了技术支撑。</p>
@@ -3228,20 +3241,20 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌐</span> 国际动态（2026-03-27 · 今日更新）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Siemens EDA · 2026-03-26（SEMICON China 2026 开幕主题演讲）</div>
       <h4>Siemens EDA 宣言：Agentic AI 目标将芯片设计周期缩短一半</h4>
       <p>Siemens EDA IC 产品 EVP Ankur Gupta 在 SEMICON China 2026 主题演讲中宣布：传统 EDA 软件已不足应对挑战，未来必须是 AI 驱动的。提出<strong>三层技术架构</strong>（算力基础设施 / 物理建模 / 设计流程），目标是通过 Agentic AI 将芯片设计周期<strong>缩短一半</strong>，并重点攻克大语言模型"幻觉"问题，推进数字孪生应用于制造全生命周期。</p>
       <a href="https://www.digitimes.com/news/a20260326VL206/siemens-eda-design-semicon-china-2026-ic.html" target="_blank">→ 阅读 Digitimes 报道</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>SEMI 中国 · 2026-03-26（SEMICON/FPD China 2026）</div>
       <h4>全球半导体产业规模 2026 年底有望提前达 1 万亿美元</h4>
       <p>SEMI 中国总裁冯莉在开幕式披露：2025 年全球半导体销售额达 <strong>7,917 亿美元</strong>（同比 +25.6%），预计 2026 年将达 9,750 亿美元，比此前"2030 年破万亿"的预测<strong>提前 4 年</strong>。本届展会展览面积超 10 万㎡，1,500 家展商，18 万预计专业观众。AI 算力、HBM 存储、先进封装三大趋势主导全场。</p>
       <a href="https://www.semi.org.cn/site/semi/article/5e3371028a90451298f3476f622217a5.html" target="_blank">→ 阅读 SEMI 官方报道</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>ChipAgents（Alpha Design AI）· 2026-02-17 / 2026-03-05</div>
       <h4>ChipAgents 获 $7400 万融资，在 DVCon 2026 展示多智能体根本原因分析</h4>
       <p>初创公司 ChipAgents（Alpha Design AI）宣布获得 <strong>7,400 万美元</strong>融资，加速其面向芯片设计的 Agentic AI 平台。在 DVCon 2026（3月5日）演示了业界首个<strong>多智能体 AI 团队驱动的根本原因分析（RCA）</strong>技术，目标将 RTL 设计和验证效率提升 10 倍，顾问委员会包含 Synopsys、Cadence、Mentor Graphics 前 CEO/CTO。</p>
@@ -3250,14 +3263,14 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🇨🇳</span> 国内动态（2026-03-27 · 今日更新）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>上海证券报 · 2026-03-26</div>
       <h4>AI 驱动半导体产业升级，EDA 工具重要性随芯片设计成本飙升而凸显</h4>
       <p>上证报报道：先进工艺节点芯片研发成本高达 <strong>50亿~80亿美元</strong>，AI 技术正重塑 EDA 行业。Cadence（铿腾电子）45% 营收已来自系统级客户；AI 芯片公司沐曦股份 2025 年营收超 16 亿元（2022 年不足 50 万元）；中国在全球半导体制造产能份额预计从 32%（2025）提升至 42%（2028），设备市场增速将高于全球均值。</p>
       <a href="https://paper.cnstock.com/html/2026-03/26/content_2192390.htm" target="_blank">→ 阅读上证报原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>SEMICON China 2026 · 2026-03-24~25</div>
       <h4>芯和半导体启动成立 16 年来最重大品牌升级：聚焦"AI 时代系统级 EDA"</h4>
       <p>国内 EDA 领先企业芯和半导体（Xpeedic）在 SEMICON China 2026 相关论坛期间召开品牌发布会，宣布启动<strong>定位升级</strong>：以"AI 时代系统级 EDA 平台"为核心，向 AI 驱动的系统级仿真与物理验证方向全面转型，覆盖 PCB / IC 封装 / SiP / 毫米波等多领域，强调国产替代与先进封装时代的系统级设计需求。</p>
@@ -3266,20 +3279,20 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌐</span> 国际动态（2026-03-26 更新）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>NVIDIA Research · 2026-03-19（GTC 2026 主题演讲）</div>
       <h4>NVIDIA 内部揭秘：强化学习一夜生成标准单元库 / 内部 LLM 导航设计历史</h4>
       <p>GTC 2026 首席科学家 Bill Dally 公开披露：NVIDIA 正在使用<strong>强化学习系统一夜之间生成标准单元库</strong>（传统需数月人工），并以内部 LLM 训练几十年设计历史，助力初级工程师快速导航架构知识。下一代平台 Vera Rubin 和 Feynman 架构同步发布。</p>
       <a href="https://blogs.nvidia.com/blog/gtc-2026-news/" target="_blank">→ 阅读 GTC 2026 新闻汇总</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>NVIDIA / Cadence / Synopsys / Siemens · 2026-03-16~17（GTC 2026）</div>
       <h4>NVIDIA 宣布与四大工业软件巨头（含 Cadence、Synopsys、Siemens）深化 AI 智能体合作</h4>
       <p>NVIDIA 与 Cadence、Dassault Systèmes、Siemens、Synopsys 联合发布：基于 <strong>NVIDIA CUDA-X、Omniverse、NeMo、GPU 加速</strong>构建新一代 AI 智能体，用于复杂芯片和系统工作流的规划、优化和验证。Cadence 在 Millennium M2000（GB200）上实现吞吐量提升 <strong>最高 80×</strong>。</p>
       <a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Global-Industrial-Software-Giants-Bring-Design-Engineering-and-Manufacturing-Into-the-AI-Era/default.aspx" target="_blank">→ 阅读 NVIDIA 新闻稿</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-03-26（今日新提交）</div>
       <h4>arXiv cs.AR 今日新论文：TsetlinWiSARD（DAC 2026 录用）片上训练权重神经网络</h4>
       <p>今日 cs.AR 新提交 2 篇，交叉列表 2 篇。重点：<strong>TsetlinWiSARD（DAC 2026 录用）</strong>：在 FPGA 上实现权重神经网络（WNN）片上训练，相比传统 WiSARD 实现超 1000× 训练加速，针对边缘 AI 自适应性 / 隐私 / 安全需求；PowerFlow-DNN：编译器驱动的边缘 AI 推理精细化功耗编排框架，自动发现满足截止时间约束的能耗最优调度。</p>
@@ -3288,14 +3301,14 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🇨🇳</span> 国内动态（2026-03-26 更新）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>USC 郑昆旺等 · 2026-03-19（arXiv）</div>
       <h4>POET 框架：LLM 进化调优首次实现 RTL PPA 全样本最优功耗 + 100% 功能正确</h4>
       <p>USC Shahin Nazarian 组提出 POET（Power-Oriented Evolutionary Tuning），在 40 个 RTL 设计上获得<strong>全部最佳功耗结果 + 100% 功能正确</strong>，同时面积和延迟保持竞争力。差分测试基准生成技术彻底消除 LLM 幻觉对验证的影响。</p>
       <a href="https://arxiv.org/abs/2603.19333" target="_blank">→ 查看论文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>NYU · 2026-03-24（arXiv v2）</div>
       <h4>Agentic Verilog 系统化评测：简单智能体化封装反而降低性能，结构化框架是关键</h4>
       <p>NYU 首次系统评测 Agentic LLM 用于 Verilog 生成（基于 CVDP 基准），关键发现：智能体化封装不等于性能提升，结构化工具使用和提示设计更重要；开源模型与闭源差距主要来自崩溃率与工具输出解释能力，为设计专用 Verilog 智能体提供实证方向。</p>
@@ -3304,14 +3317,14 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌐</span> 国际动态（2026-04-15 · 今日最新）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>DAC 2026 官网 · 2026-04-15（明日程序发布）</div>
       <h4>🔥 DAC 2026 完整程序明日（4月17日）正式公布 — 论文投稿创历史新高</h4>
       <p>DAC 2026（第63届，7月26-29日·长滩）宣布完整技术程序将于 <strong>4月17日</strong>正式上线。本届投稿创历史纪录：Research Track 增长 <strong>26.34%</strong>，Engineering Track 增长 <strong>26%</strong>，<strong>55%</strong> 的内容聚焦 AI &amp; Design 方向。三位 Keynote 嘉宾：诺贝尔物理奖得主 <strong>John Martinis</strong>（Qolab CTO，量子计算与芯片未来）、高通执行副总裁兼 CTO <strong>Baaziz Achour</strong>（AI定义的系统）、UC Berkeley 荣誉教授 <strong>Jan M. Rabaey</strong>（硬件智能化）。已知 AI for EDA 接收论文：GSR-GNN、Escaping Flatland、CapBench、ChatSVA、CellE 等。</p>
       <a href="https://dac.com/2026" target="_blank">→ 查看 DAC 2026 官网</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv cs.AR · 2026-04-15（ICCAD截稿后第一日）</div>
       <h4>🆕 ICCAD 2026 截稿后预印本爆发潮开启 — AgileAssert、LLM Analog Sizing 等新论文涌现</h4>
       <p>ICCAD 2026 完整论文截止（4月14日 AoE）后首日，今日 arXiv cs.AR 涌现多篇新提交：<strong>AgileAssert</strong>（2604.08932，关键信号驱动断言生成，减量66.68%）、<strong>Self-Calibrating LLM Analog Sizing</strong>（2604.07387，跨节点无重训练，2-9次仿真收敛）等。预计未来1-2周内，ICCAD 2026 相关预印本将持续爆发。与 SVA Generator、CoverAssert 共同构成今年 AI 驱动验证的最新成果矩阵。</p>
@@ -3320,14 +3333,14 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🇨🇳</span> 国内动态（2026-04-15 · 今日最新）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>同济大学电信学院 · 2026-04-04（今日发现）</div>
       <h4>🆕 同济大学发布 RTL-CLAW — 基于 OpenClaw 框架的 AI EDA 协同工具，自然语言驱动全流程</h4>
       <p>同济大学叶雨阳、贺青、邱雷团队与香港中文大学余备团队联合发布 <strong>RTL-CLAW</strong>，基于 <strong>OpenClaw 框架</strong>（面向复杂任务的智能体操作系统）构建。用户可通过自然语言指令直接驱动 RTL 分析、分区、优化、验证、逻辑综合（集成 Yosys），规划接入 DreamPlace/OpenROAD 后端流程及 3D IC 设计支持。已在交通灯控制器分区等场景完成实战演示，全部开源。与华南理工 OpenClaw for FPGA（明日 4月16日直播）构成国内 <strong>Agentic EDA 双线推进格局</strong>。</p>
       <a href="https://see.tongji.edu.cn/info/1143/14621.htm" target="_blank">→ 阅读同济官方报道</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>知乎 · 2026-04-12（近日更新）</div>
       <h4>🔥 2026 AI EDA 企业格局全景：国产与海外双线加速，Agentic AI 成核心战场</h4>
       <p>最新分析梳理 2026 年 AI EDA 企业格局：海外三巨头（Cadence ChipStack™ Super Agent、Synopsys AgentEngineer™、Siemens Questa One Agentic）全面推进 Agentic AI；国内 Cadence 营收 45% 来自系统级客户，合见工软 UDA 2.0、华大九天等持续升级，AI 对 EDA 工具链的重构从"优化局部"向"自主全流程"演进。国产 EDA 在 AI 驱动阶段迎来追赶机遇期。</p>
@@ -3336,14 +3349,14 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌐</span> 国际动态（2026-04-12 · 今日最新）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Siemens / NVIDIA · 2026-04-09~10（今日更新）</div>
       <h4>🔥 西门子 × NVIDIA：Veloce proFPGA CS 实现万亿周期级 AI 芯片验证突破</h4>
       <p>西门子与 NVIDIA 宣布重大验证里程碑：<strong>Veloce™ proFPGA CS 硬件辅助验证系统</strong>在 NVIDIA 性能优化芯片架构加持下，实现<strong>数万亿次预硅设计周期</strong>（trillion-cycle scale）的捕获——这一任务此前被认为不可能完成，常规仿真器仅能处理百万至数十亿周期。该方案支持 AI/ML SoC 大规模工作负载验证，使 NVIDIA 团队能在<strong>数天内</strong>完成此前数月才能跑完的验证任务。Jean-Marie Brunet（西门子 HAV 副总裁）："NVIDIA 与西门子在推进基于 FPGA 原型设计方面深度合作，以应对高度复杂 AI/ML SoC 的验证挑战。" Narendra Konda（NVIDIA 硬件工程 VP）："验证规模达万亿周期，为下一代 AI 芯片的可靠性提供保障。"</p>
       <a href="https://news.siemens.com/en-us/siemens-nvidia-veloce/" target="_blank">→ 阅读西门子官方公告</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>ASU VDA Lab · 2026-04-09</div>
       <h4>🔥 MLCAD 2026 竞赛正式启动：41 支队伍参赛，LLM 驱动时序优化算法发现</h4>
       <p>ASU VDA Lab 主办 <strong>MLCAD 2026 竞赛</strong>正式开赛，主题为"基于 LLM 的时序优化算法发现"（LLM-based Algorithm Discovery for Timing Optimization）。<strong>41 支全球队伍</strong>已注册（含 ASU 内部团队，但 ASU 团队不参与评奖），来自亚利桑那州立大学、加州大学圣地亚哥分校、复旦大学、上海交通大学、东京大学等名校。竞赛基于 OpenROAD 基准代码，要求参赛队用 LLM 驱动的工作流设计自适应时序优化算法，Alpha 提交截止 4月30日，NVIDIA GPU 大奖。获奖团队将在 <strong>9月7-9日 MLCAD 2026（韩国济州岛）</strong>现场展示。</p>
@@ -3352,32 +3365,32 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌐</span> 国际动态（2026-04-03 · 历史）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>The Institution of Electronics · 2026-04-01</div>
       <h4>深度剖析：AI 在 EDA 中真正值得解决的是什么？（SystemVerilog 共同创建者执笔）</h4>
       <p>Simon Davidmann（SystemVerilog 联合创始人）在 EDN 发表深度分析，揭示 EDA 三巨头（Cadence/Synopsys/Siemens）的 AI 产品仍是"营销叙事+增量优化"，而非解决验证能力的根本突破。核心论点：真正值得 AI 解决的 EDA 问题是如何验证万亿周期、软硬件一体的复杂系统，而非优化现有流程。开放生态协作是唯一出路。</p>
       <a href="https://institutionofelectronics.ac.uk/what-is-the-eda-problem-worth-solving-with-ai/" target="_blank">→ 阅读原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Normal Computing · 2026-03-28</div>
       <h4>Normal Computing 获三星催化剂基金领投 5000 万美元，攻克 AI 硬件能耗危机</h4>
       <p>通过随机热力学计算原理重构硅设计流程，解决 AI 算力能耗危机，三星催化剂基金领投 5000 万美元融资，是继 Cognichip（6000 万，4月2日）之后又一重磅 AI 硬件初创公司融资事件。</p>
       <a href="https://www.asicpro.com/2026/04/02/semiconductor-news-march-2026/" target="_blank">→ 阅读报道</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Siemens / AsicPro · 2026-03-31</div>
       <h4>Siemens Questa One Agentic Toolkit 正式发布 — 芯片验证工作流全面自动化</h4>
       <p>Siemens 推出 Questa One Agentic Toolkit，专注自动化芯片验证工作流，与 Fuse EDA AI Agent 协同，覆盖半导体、3D IC、PCB 全流程验证任务，目标将验证工程师的重复性操作降至最低。</p>
       <a href="https://news.siemens.com/en-us/questa-one-agentic-ai-toolkit/" target="_blank">→ 阅读原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Synopsys / AsicPro · 2026-03-27</div>
       <h4>Synopsys 推出电子数字孪生平台 — 加速物理 AI 系统开发（软件定义硬件辅助验证）</h4>
       <p>Synopsys 发布用于物理 AI 系统（机器人、自动驾驶）的数字孪生平台，实现从芯片仿真到系统级协同验证的全链路。同步推出软件定义硬件辅助验证方案，支持 AI 芯片大规模部署场景的验证需求。Ansys 多物理场工具与 Agentic AI 的整合（Ansys 2026 R1）持续推进。</p>
       <a href="https://www.synopsys.com/ai/ai-powered-eda.html" target="_blank">→ 了解更多</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Samsung + Synopsys · 2026-03-30</div>
       <h4>三星 × Synopsys 战略合作深化 — 共同推进 Multi-Die / Chiplet 设计创新</h4>
       <p>三星与 Synopsys 宣布扩大战略合作，重点聚焦 Multi-Die 和 Chiplet 架构设计，对接先进封装可靠性验证需求，将 AI 工具深度整合到 2.5D/3D IC 协同设计流程中。</p>
@@ -3386,20 +3399,20 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌍</span> 国际动态（2026-04-02 · 历史）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Synopsys · 2026-03-11~19（Converge 2026）</div>
       <h4>Synopsys AgentEngineer™ 正式发布 — 业界首个 L4 多智能体芯片设计与验证工作流</h4>
       <p>Synopsys Converge 2026 大会发布 AgentEngineer™ 技术，演示业界首套精心编排的多智能体设计与验证工作流（L4 级高度自主），同步发布 Multiphysics-Fusion™（首批 Ansys 收购后集成产品），与 NVIDIA 战略合作实现 <strong>34 倍计算加速</strong>，提升设计效率 2-5 倍。</p>
       <a href="https://www.synopsys.com/zh-tw/taiwan/press-releases/2026-press-release/2026-03-18-snps-vision-for-engineering-the-future.html" target="_blank">→ 阅读官方公告</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv · 2026-03-25（cs.AR 列表）</div>
       <h4>arXiv cs.AR 今日新提交 13 篇 — MINISA、IMMSched 等 AI 加速器研究</h4>
       <p>今日 arXiv 硬件架构类新提交包括：MINISA（下一代可重构推理加速器最小指令集架构，ISPASS 2026）、IMMSched（多 DNN 调度并行粒子子图同构）、COmPOSER（DAC 2026，RF/毫米波 AI 优化）、DS2SC-Agent（Chiplet 自动建模）等，共 13 篇。</p>
       <a href="https://arxiv.org/list/cs.AR/recent" target="_blank">→ 查看 cs.AR 新论文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>NVIDIA Research · 2026-03-21</div>
       <h4>ACE-RTL（NVIDIA）修订发布 — 170 万 RTL 样本驱动的专用域 LLM</h4>
       <p>NVIDIA EDA 研究团队的 ACE-RTL 完成修订版发布（v2）。基于 170 万条 RTL 样本训练专用域模型，结合前沿推理 LLM 的智能体协调，在 CVDP 基准上 Pass Rate 较 14 个竞品最高提升 <strong>41.02%</strong>，树立硬件代码生成新 SOTA。</p>
@@ -3408,20 +3421,20 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🇨🇳</span> 国内动态（2026-03-25 · 历史）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>合见工软 · 2026-03-18</div>
       <h4>合见工软发布国内首款 Agentic AI EDA 平台 UDA 2.0 — 全流程自主设计闭环</h4>
       <p>上海合见工业软件正式发布第二代数字设计 AI 智能平台 UniVista Design Agent（UDA）2.0，是国内首款 Agentic AI 自研 EDA 平台。支持自主解析 RTL / 网表 / 时序报告，多维度 PPA 折中探索，约束收敛自治完成，并兼容 DeepSeek 模型与国产 GPU 全栈适配。</p>
       <a href="https://www.guancha.cn/GongSi/2026_03_19_810641.shtml" target="_blank">→ 阅读报道</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>清华 + 厦大 · 2026-03-18</div>
       <h4>VeriAgent：国内学术团队发布 PPA 感知 RTL 多智能体系统，进化记忆机制首创</h4>
       <p>清华 + 厦大团队发布 VeriAgent，首次引入<strong>进化记忆机制</strong>（Evolving Memory），将优化经验外化为结构化记忆节点，实现无需重训练的持续改进，被认为是国内 LLM for EDA 学术研究的最新力作之一。</p>
       <a href="https://arxiv.org/abs/2603.17613" target="_blank">→ 查看论文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>上交 + 复旦 · 2026-03-22</div>
       <h4>DS2SC-Agent：首个 Chiplet 数据手册→SystemC 全自动建模流水线，复旦上交联合发布</h4>
       <p>直接将非结构化数据手册转换为 SystemC Chiplet 模型，覆盖模拟（LNA）/ 数字（FFT）/ 射频（PA）三类芯片。为国内在先进封装 / Chiplet 异构集成 AI 辅助设计领域的重要进展。</p>
@@ -3430,68 +3443,68 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin-bottom:14px;margin-top:28px;"><span class="icon">🌐</span> 国际动态（历史）</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>西门子 · 2026-03-16（GTC 2026）</div>
       <h4>西门子发布 Fuse EDA AI Agent — 跨领域自主智能体</h4>
       <p>覆盖半导体数字设计（前端+物理）+ 3D IC + PCB 系统全流程，MCP 驱动分层规划（Supervisor + Worker Agents）+ 可执行 Playbook，三星电子和 NVIDIA 自身均为早期用户。</p>
       <a href="https://news.siemens.com/en-us/siemens-fuse-eda-ai-agent/" target="_blank">→ 阅读原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Cadence / NVIDIA · 2026-03-26（最新）</div>
       <h4>Cadence × NVIDIA 再度扩大合作 — Millennium M2000 超算 + 全系 EDA 工具 GPU 加速</h4>
       <p>Cadence 宣布扩大与 NVIDIA 的战略合作，推出 Millennium™ M2000 超算（Grace CPU + Blackwell GPU），Innovus/Celsius/Voltus/EMX 全系物理设计工具 GPU 加速，吞吐量高达 80×，功耗降低 20×。Micron HBM 设计流已集成，Honda 全涡扇发动机仿真（Fidelity CFD）实现完整工程化落地。ChipStack™ AI Super Agent 与 NVIDIA NemoClaw 开源栈深度融合。</p>
       <a href="https://www.engineering.com/cadence-expands-ai-design-collaboration-with-nvidia/" target="_blank">→ 阅读原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Siemens EDA · 2026-03-24（最新）</div>
       <h4>Siemens Fuse EDA AI System — AI 代理自动化设计工作流，Aprisa 效率提升 10×</h4>
       <p>Siemens 发布 Fuse EDA AI 系统最新白皮书《三波 AI 代理开启 EDA 的下一个时代》。核心能力：Fuse EDA AI 代理协调复杂多工具工作流，集中式多模态 EDA 数据湖（向量化所有 EDA 格式），安全 RAG 框架支持本地/云部署。Aprisa（IC 布局布线）效率提升 10×，Calibre（制造验证）运行时间加速 60-400%，HyperLynx（PCB 仿真）仿真时间缩短 100,000×。</p>
       <a href="https://www.siemens.com/zh-cn/products/fuse-eda-ai-system/" target="_blank">→ 产品页面</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Cadence / NVIDIA · 2026-03-18</div>
       <h4>Cadence ChipStack™ AI Super Agent — 首个前端芯片设计 AI 超级智能体</h4>
       <p>与 NVIDIA NemoClaw 深度集成，全系 EDA 工具 GPU 加速，吞吐量提升最高 80×，Clarity 3D Solver 在 Millennium M2000 上快 5×。联发科、Micron HBM 等已在使用。</p>
       <a href="https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-and-nvidia-unveil-accelerated-engineering-solutions.html" target="_blank">→ 阅读原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Synopsys / NVIDIA · 2026-03-16</div>
       <h4>Synopsys AgentEngineer™ — L4 级自主 EDA 工作流（Converge 2026 / GTC 2026）</h4>
       <p>首个行业演示 L4 级自主 EDA 工作流（设计+验证），多智能体 RTL-to-Sign-off，Astera Labs 仿真加速 3.5×，Applied Materials 量子化学加速 30×。</p>
       <a href="https://news.synopsys.com/2026-03-16-Synopsys-Showcases-NVIDIA-Partnership-Impact-and-Ecosystem-Innovation-at-GTC-2026" target="_blank">→ 阅读原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Adafruit Blog · 2026-03-22</div>
       <h4>Design Conductor：AI Agent 12 小时从提示词到可流片 RISC-V CPU</h4>
       <p>Verkor 团队发布 arXiv:2603.08716，从 219 字需求文档出发，自主完成 Verilog 编写、综合、布局布线、时序收敛到 GDSII 全流程，是已知首个自主构建的可工作 CPU。</p>
       <a href="https://blog.adafruit.com/2026/03/22/prompt-to-tape-out-autonomous-ai-agent-builds-1-5-ghz-risc-v-cpu/" target="_blank">→ 阅读原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>Rapidus · 2026-03-19</div>
       <h4>Rapidus Raads — 日本 2nm 晶圆厂自研 AI 设计代理，3 家公司在用</h4>
       <p>Generator（NL→RTL）+ Predictor（早期PPA预测）+ SynthCast（上游优化）三件套，直接利用自家 2nm 生产线制造数据训练，目标设计时间缩短 50%，成本降低 30%。</p>
       <a href="https://kantenna.com/topic/rapidus-ai-agent-semiconductor-design-raads-three-companies" target="_blank">→ 阅读原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>SemiEngineering · 2026-03-17</div>
       <h4>AI 如何自动化芯片设计：Cadence VP 提出五级自动化分类法</h4>
       <p>Cadence VP Ziyad Hanna 提出芯片设计自动化五级分类法（镜像汽车自动驾驶），成为行业参考。核心挑战：可追溯性与可解释性——AI 的设计决策如何能被人类工程师审查和复现。</p>
       <a href="https://semiengineering.com/how-ai-will-automate-chip-design/" target="_blank">→ 阅读原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>NSF / UCLA · 2026-03-13</div>
       <h4>NSF Workshop on Agents for Chip Design Automation（UCLA）</h4>
       <p>NVIDIA Mark Ho、UT Austin David Z. Pan、UCSD Jishen Zhao、UCLA Jason Cong、Cornell Zhiru Zhang 等顶级学者出席。NSF 级别认可标志着 Agentic EDA 升级为国家科研战略方向。</p>
       <a href="https://ai4eda-workshop.github.io/2026/" target="_blank">→ 会议页面</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>DAC 2026 · 2026-03-19</div>
       <h4>DAC 2026（第 63 届）接收论文 ID 公布，约 500+ 篇</h4>
       <p>AI/EDA 方向录用包含：QiMeng-CodeV-SVA（中科院计算所）、DUET（Mamba-Transformer 加速器）、CellE（北大+清华）、UT Austin Meng Li 组 7 篇等。完整程序预计 4 月发布。</p>
       <a href="https://www.dac.com/2026/accepted-paper-ids" target="_blank">→ 查看接收列表</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>ICLR 2026 Agent4Chip Workshop · 4月23-27</div>
       <h4>Agent4Chip Workshop @ ICLR 2026 全部 23 篇论文公开</h4>
       <p>精选：ACE-RTL（NVIDIA）、LLM4Cov（UCSD+NVIDIA）、VeriTrace（Utah）、EDAForge（TAMU）、HeaRT（UT Austin+NVIDIA）、PRO-V-R1（UCSD+NVIDIA）、NoTB（Columbia）等。</p>
@@ -3500,32 +3513,32 @@
   </div>
 
   <div class="section-title" style="font-size:1rem;margin:28px 0 14px;"><span class="icon">🇨🇳</span> 国内动态</div>
-  <div class="news-grid">
-    <div class="news-card">
+  <div class="abstracts">
+    <div class="abs-card">
       <div class="src"><span class="dot" style="background:var(--accent3)"></span>新华网 · 2026-03-19</div>
       <h4>合见工软发布 UniVista Design Agent 2.0 — 国产首款 L4 Agentic EDA</h4>
       <p>从 L2 对话辅助跨越至 L4 智能体自主工作流，自主完成 RTL 设计→验证→纠错→优化闭环，全面支持 DeepSeek 等国产大模型，适配国产 GPU，全栈软硬件国产化。已开放商用试用。</p>
       <a href="https://www.xinhuanet.com/tech/20260319/d8c0b88848874b96b23f9c5dddf2bbb5/c.html" target="_blank">→ 阅读原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot" style="background:var(--accent3)"></span>腾讯新闻 · 2026-03-22</div>
       <h4>200字指令，Agent 设计出首个可流片 CPU，半天做完人类 18 个月工作</h4>
       <p>国内媒体报道 Verkor Design Conductor 突破，强调 AI 智能体已能完成从需求到 GDSII 全流程，挑战"数百人团队、18–36 个月开发周期"的芯片设计传统范式。</p>
       <a href="https://news.qq.com/rain/a/20260322A069R900" target="_blank">→ 阅读原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot" style="background:var(--accent3)"></span>中科院计算所 · 2025-12-23</div>
       <h4>中科院"启蒙"（QiMeng）系统 6 项成果获 NeurIPS25 / AAAI26 顶会录用</h4>
       <p>陈云霁/郭崎团队。NeurIPS25：CodeV-R1（Verilog RL生成 +12-20%）、SALV（信号级RL +10.9%）、MuPa（代码并行化）、NeuComBack（IR→汇编自演化）；AAAI26：CRUX（NL→Verilog结构化中间表达）、Kernel（GPU核宏观-微观编码，速度+7.3×）。</p>
       <a href="https://sklp.ict.ac.cn/yjcg/202512/t20251223_813082.html" target="_blank">→ 阅读原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot" style="background:var(--accent3)"></span>复旦大学 · 2026-03-18</div>
       <h4>复旦朱可人：AI 赋能 EDA，MAGICAL 系统实现模拟版图全自动化</h4>
       <p>MAGICAL 系统从网表到版图全流程自动化，性能接近或超越人工，设计周期从小时级缩至秒级，入选 2025 年 MIT TR35 亚太区，已与多家企业合作推动产业落地。</p>
       <a href="https://news.fudan.edu.cn/2026/0318/c31a148445/page.htm" target="_blank">→ 阅读原文</a>
     </div>
-    <div class="news-card">
+    <div class="abs-card">
       <div class="src"><span class="dot" style="background:var(--accent3)"></span>中科院 · 2024-08 → 2025-06</div>
       <h4>"启蒙1号/2号"：全球首颗全自动设计处理器芯片及超标量处理器核</h4>
       <p>"启蒙1号"：全球首颗无人工干预全自动设计处理器，可运行 Linux，性能达 Intel 486。"启蒙2号"：国际首个全自动设计超标量处理器核，性能达 ARM Cortex A53，1700 万逻辑门。</p>
