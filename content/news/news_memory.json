@@ -1,8 +1,88 @@
 {
-  "lastUpdate": "2026-05-05",
+  "lastUpdate": "2026-05-06",
   "cutoffDate": "2025-11-05",
-  "totalItems": 55,
+  "totalItems": 59,
   "items": [
+    {
+      "date": "2026-05-06",
+      "company": "SemiEngineering",
+      "title": "🔧 AI Agent 在芯片和系统运行时监控仪表盘：Ed Sperling 解析新应用场景",
+      "link": "https://semiengineering.com/using-ai-to-monitor-dashboards-in-chips-and-systems/",
+      "keywords": [
+        "SemiEngineering",
+        "AI",
+        "Agent",
+        "芯片",
+        "系统",
+        "运行时监控",
+        "仪表盘",
+        "Ed",
+        "Sperling",
+        "2026-05-06"
+      ]
+    },
+    {
+      "date": "2026-05-06",
+      "company": "SemiEngineering",
+      "title": "🔥 AI 能否从规格说明生成硬件？EDA 老兵 30 年经验深度剖析",
+      "link": "https://semiengineering.com/hardware-from-specifications-using-ai/",
+      "keywords": [
+        "SemiEngineering",
+        "AI",
+        "硬件生成",
+        "规格说明",
+        "Brian",
+        "Bailey",
+        "HLS",
+        "ESL",
+        "验证",
+        "2026-05-06",
+        "Specification"
+      ]
+    },
+    {
+      "date": "2026-05-04",
+      "company": "SemiEngineering / Arm / Cadence / Siemens / Synopsys",
+      "title": "🤖 Agentic 边缘 AI 正在重塑芯片设计：Arm/Cadence/Siemens EDA/Synopsys 圆桌讨论",
+      "link": "https://semiengineering.com/designing-chips-in-the-context-of-rapidly-evolving-ai/",
+      "keywords": [
+        "SemiEngineering",
+        "Agentic",
+        "边缘AI",
+        "Arm",
+        "Cadence",
+        "Siemens",
+        "EDA",
+        "Synopsys",
+        "MoE",
+        "KV",
+        "Cache",
+        "圆桌讨论",
+        "2026-05-04"
+      ]
+    },
+    {
+      "date": "2026-03-02",
+      "company": "Normal Computing / CIRCT",
+      "title": "🤖 AI 智能体 43 天提交 2,968 次：CIRCT 分支新增开源 Verilog 仿真器、cocotb 集成",
+      "link": "https://www.normalcomputing.com/blog/building-an-open-source-verilog-simulator-with-ai-580k-lines-in-43-days",
+      "keywords": [
+        "Normal",
+        "Computing",
+        "CIRCT",
+        "Verilog",
+        "仿真器",
+        "AI",
+        "智能体",
+        "Claude",
+        "Codex",
+        "cocotb",
+        "UVM",
+        "BMC",
+        "LEC",
+        "2026-03-02"
+      ]
+    },
     {
       "date": "",
       "company": "MLCAD 2026 | asu-vda-lab.github.io",
