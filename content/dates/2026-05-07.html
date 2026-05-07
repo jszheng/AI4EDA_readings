@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<section id="date-0507">
+  <div class="section-title"><span class="icon">📅</span> 2026-05-07（周三）<span class="badge-hot">2篇论文</span> <span class="line"></span></div>
+
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>📝 学术论文</h3>
+      <span class="badge-count">2篇</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2605.05170 · cs.AR + cs.AI · 2026-05-06</div>
+        <h3 class="abs-title">Design Conductor 2.0: An Agent Builds a TurboQuant Inference Accelerator in 80 Hours</h3>
+        <p class="abs-authors">Ravi Krishna, Suresh Krishna, David Chin (Verkor Team)</p>
+        <p class="abs-body">提出 <strong>Design Conductor 2.0</strong>——基于前沿 LLM（2026年4月发布）的多智能体硬件设计系统。相比 2025年12月前作（12小时构建RISC-V CPU），2.0版本可处理 <strong>80倍更大规模</strong>任务，全程无需人工干预。系统自主设计出 VerTQ 推理加速器：240级流水线、5129个FP16/32计算单元、125 MHz FPGA实现、TSMC 16FF下5.7 mm²面积，展示了智能体在复杂计算架构设计上的实际工程能力。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2605.05170" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-07/2605.05170-Design-Conductor-2-TurboQuant-Accelerator.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">LLM Agent</span>
+          <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">RTL Generation</span>
+        </div>
+        <div class="tags">
+          <span class="tag">RTL Generation</span>
+          <span class="tag">LLM Agent</span>
+          <span class="tag">Multi-agent System</span>
+          <span class="tag">Hardware Design Automation</span>
+          <span class="tag">Inference Accelerator</span>
+          <span class="tag">TurboQuant</span>
+        </div>
+      </div>
+
+      <div class="abs-card">
+        <div class="abs-meta">arXiv:2605.04704 · cs.AR + cs.SE · DAC 2026 · 2026-05-06</div>
+        <h3 class="abs-title">UVMarvel: An Automated LLM-aided UVM Machine for Subsystem-level RTL Verification</h3>
+        <p class="abs-authors">Junhao Ye, Dingrong Pan, Hanyuan Liu, Yuchen Hu, Jie Zhou, Ke Xu, Xinwei Fang, Xi Wang, Nan Guan, Zhe Jiang</p>
+        <p class="abs-body">提出 <strong>UVMarvel</strong>——首个利用 LLM 自动构建子系统级 RTL UVM 测试平台的验证框架。核心创新：① <strong>中间表示（IR）+ 总线协议库</strong>，将异构规范转化为协议正确的 UVM 测试平台；② <strong>信号追踪器 + Verilog 补丁库</strong>指导 LLM 激励优化。实现平均 95.65% 代码覆盖率，将原本数天的验证流程压缩至仅 <strong>4.5 小时</strong>，已被 DAC 2026 接收。</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2605.04704" target="_blank">📄 arXiv</a>
+          <a class="local" href="2026-05-07/2605.04704-UVMarvel-LLM-aided-UVM-Machine.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent4);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent4);border-radius:8px;">DAC 2026</span>
+          <span style="color:var(--accent5);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent5);border-radius:8px;">UVM</span>
+        </div>
+        <div class="tags">
+          <span class="tag">RTL Verification</span>
+          <span class="tag">LLM</span>
+          <span class="tag">UVM</span>
+          <span class="tag">Testbench Generation</span>
+          <span class="tag">Subsystem-level</span>
+          <span class="tag">DAC 2026</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>🌐 行业动态</h3>
+      <span class="badge-count">无新增</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <p style="color:var(--text-muted);padding:12px 16px;">今日无新增行业新闻（搜索结果均为已收录条目或未来活动预告）。</p>
+    </div>
+  </div>
+
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>🔧 开源贡献</h3>
+      <span class="badge-count">提及</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="news-grid">
+        <div class="news-card">
+          <div class="src"><span class="dot"></span> Design Conductor 2.0</div>
+          <h4>Verkor Team 开源 Design Conductor 多智能体硬件设计框架</h4>
+          <p>Design Conductor 2.0 展示了基于前沿 LLM（2026年4月发布）的多智能体协同设计能力，系统可自主完成从论文理解到 RTL 设计、FPGA 映射的完整流程。</p>
+          <a href="https://arxiv.org/abs/2605.05170" target="_blank">arXiv →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>
