@@ -1,8 +1,29 @@
 {
-  "lastUpdate": "2026-05-06",
+  "lastUpdate": "2026-05-08",
   "cutoffDate": "2025-11-05",
-  "totalItems": 59,
+  "totalItems": 60,
   "items": [
+    {
+      "date": "2026-05-07",
+      "company": "SEMI ESD Alliance / Design-Reuse",
+      "title": "🎯 SEMI ESD Alliance 2026 Executive Outlook：探索 Agentic AI 如何改变芯片设计与验证",
+      "link": "https://www.design-reuse.com/news/202530467-semi-esd-alliance-2026-executive-outlook-explores-how-agentic-ai-will-change-chip-design-and-verification/",
+      "keywords": [
+        "SEMI",
+        "ESD",
+        "Alliance",
+        "Agentic",
+        "AI",
+        "芯片设计",
+        "验证",
+        "Executive",
+        "Outlook",
+        "2026",
+        "06",
+        "10",
+        "2026-05-07"
+      ]
+    },
     {
       "date": "2026-05-06",
       "company": "SemiEngineering",
