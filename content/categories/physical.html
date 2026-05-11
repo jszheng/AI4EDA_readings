@@ -7,9 +7,36 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（19篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（21篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划</p>
   <div class="abstracts">
+    <div class="abs-card">
+      <div class="abs-meta">arXiv:2605.06952 · cs.AR · 2026-05-07</div>
+      <h3 class="abs-title"><span class="badge-new">NEW</span> EDA-Schema-V2: A Multimodal Schema, Open Datasets, and Benchmarks for ML in Digital Physical Design</h3>
+      <p class="abs-authors">Pratik Shrestha, Alec Aversa, Ioannis Savidis</p>
+      <p class="abs-body">首个开放的<strong>多模态模式与基准数据集</strong>用于数字物理设计中的机器学习。采用 4 个开源 PDK（SkyWater 130nm、Nangate 45nm、IHP SG13G2 130nm、ASAP 7nm）+ OpenROAD 工具流，生成 <strong>7,776 个设计实例</strong>（18 个基准电路、2.75 亿门、7500 万网络、3600 万条时序路径）。定义 12 个代表性预测任务（时序、功耗、面积、布线），建立从综合到详细布线的阶段级可预测性基线。</p>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2605.06952" target="_blank">📄 arXiv</a>
+        <a class="local" href="2026-05-11/2605.06952_EDA_Schema_V2.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">基准数据集</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">OpenROAD</span>
+      </div>
+    </div>
+
+    <div class="abs-card">
+      <div class="abs-meta">arXiv:2605.06936 · cs.AR / cs.AI / cs.MA · 2026-05-07</div>
+      <h3 class="abs-title"><span class="badge-new">NEW</span> PostEDA-Bench: A Hierarchical Benchmark for PPA Convergence and DRC Fixing</h3>
+      <p class="abs-authors">Pengju Liu, Nuo Xu, Jinwei Tang, Yu Cao, Caiwen Ding</p>
+      <p class="abs-body">首个针对芯片设计"最后一公里"的层次化基准——<strong>PPA 收敛和 DRC 修复</strong>。包含 145 任务，分为 DRC-Essential、DRC-Reasoning、PPA-Mono、PPA-Multi 四类。8 个 LLM 评测显示：最佳 DRC-Reasoning 成功率 <strong>36.66%</strong>，PPA-Multi 仅 <strong>20.00%</strong>。权衡推理能力是 PPA-Multi 的主要瓶颈。</p>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2605.06936" target="_blank">📄 arXiv</a>
+        <a class="local" href="2026-05-11/2605.06936_PostEDA_Bench.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRC修复</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">PPA优化</span>
+        <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">LLM Agent</span>
+      </div>
+    </div>
+
     <div class="abs-card">
           <div class="abs-title"><span class="badge-hot">⭐精选</span> GR-Evolve: Design-Adaptive Global Routing via LLM-Driven Algorithm Evolution</div>
           <div class="abs-meta">2604.22234 · 2026-04-24 · cs.AR · Taizun Jafri, Vidya A. Chhabria</div>

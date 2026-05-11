@@ -1,8 +1,37 @@
 {
-  "lastUpdate": "2026-05-08",
+  "lastUpdate": "2026-05-11",
   "cutoffDate": "2025-11-05",
-  "totalItems": 60,
+  "totalItems": 61,
   "items": [
+    {
+      "date": "2026-05-08",
+      "company": "SemiEngineering",
+      "title": "📰 Chip Industry Week In Review：AI 基础设施爆发、Q1 全球半导体 $299B",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-137/",
+      "keywords": [
+        "SemiEngineering",
+        "Chip",
+        "Industry",
+        "Week",
+        "Review",
+        "AI",
+        "基础设施",
+        "NVIDIA",
+        "IREN",
+        "SpaceX",
+        "Anthropic",
+        "Siemens",
+        "EDA",
+        "Veloce",
+        "Strato",
+        "CS",
+        "Arm",
+        "AGI",
+        "CPU",
+        "验证",
+        "2026-05-08"
+      ]
+    },
     {
       "date": "2026-05-07",
       "company": "SEMI ESD Alliance / Design-Reuse",
