@@ -1,8 +1,28 @@
 {
-  "lastUpdate": "2026-05-11",
+  "lastUpdate": "2026-05-12",
   "cutoffDate": "2025-11-05",
-  "totalItems": 61,
+  "totalItems": 62,
   "items": [
+    {
+      "date": "2026-05-12",
+      "company": "MLCAD 2026 / ASU VDA Lab",
+      "title": "🏆 MLCAD 2026 Alpha 结果公布：东南大学 SEUTiming 总分第一，6月15日最终揭晓",
+      "link": "https://asu-vda-lab.github.io/MLCAD26-Contest/",
+      "keywords": [
+        "MLCAD",
+        "2026",
+        "Alpha",
+        "结果公布",
+        "东南大学",
+        "SEUTiming",
+        "team17",
+        "总分第一",
+        "2.81",
+        "Beta",
+        "阶段",
+        "2026-05-12"
+      ]
+    },
     {
       "date": "2026-05-08",
       "company": "SemiEngineering",
