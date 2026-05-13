@@ -1,8 +1,49 @@
 {
-  "lastUpdate": "2026-05-12",
-  "cutoffDate": "2025-11-05",
-  "totalItems": 62,
+  "lastUpdate": "2026-05-13",
+  "cutoffDate": "2025-11-06",
+  "totalItems": 64,
   "items": [
+    {
+      "date": "2026-05-13",
+      "company": "The Institution of Electronics / DATE 2026",
+      "title": "🏛️ DATE 2026 回顾：下一波EDA浪潮 — AI深度融入设计/验证/安全全链条",
+      "link": "https://institutionofelectronics.ac.uk/the-next-eda-wave-lessons-from-date-2026/",
+      "keywords": [
+        "DATE",
+        "2026",
+        "EDA",
+        "Nexus",
+        "PrimisAI",
+        "ChatTest",
+        "AgenticTCAD",
+        "SimFuzz",
+        "RISC-V",
+        "RTL",
+        "验证",
+        "多智能体",
+        "2026-05-13"
+      ]
+    },
+    {
+      "date": "2026-05-13",
+      "company": "SemiEngineering / Brian Bailey",
+      "title": "📊 Creating Agentic EDA Methodologies：Cadence/Siemens/Synopsys/Normal Computing 共论智能体EDA标准化挑战",
+      "link": "https://semiengineering.com/creating-agentic-eda-methodologies/",
+      "keywords": [
+        "SemiEngineering",
+        "Agentic",
+        "EDA",
+        "方法论",
+        "Cadence",
+        "Siemens",
+        "Synopsys",
+        "Normal",
+        "Computing",
+        "标准化",
+        "前端设计",
+        "2026-05-13"
+      ]
+    },
     {
       "date": "2026-05-12",
       "company": "MLCAD 2026 / ASU VDA Lab",
