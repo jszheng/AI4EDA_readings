@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css?v=20260514" />
+</head>
+<body>
+  <!-- ========== 2605.12857 ChipMATE ========== -->
+  <div class="abs-card">
+    <div class="abs-meta">
+      <span class="badge-new">NEW</span>
+      &nbsp;arXiv:2605.12857 · cs.AR + cs.AI + cs.MA + cs.LG · 2026-05-13
+    </div>
+    <div class="abs-title">ChipMATE: Multi-Agent Training via Reinforcement Learning for Enhanced RTL Generation</div>
+    <div class="abs-body">
+      <p>首个<strong>自训练多智能体RTL生成框架</strong>，解决工业实践中的关键痛点：（1）不依赖golden testbench即可自我验证；（2）无API调用需求，适合空隔离（air-gapped）安全环境；（3）可在厂商私有RTL代码库上训练。采用Verilog Agent + Python参考模型双智能体互验架构，基于回溯（backtrack）推理工作流防止错误传播。两阶段训练：单智能体饱和训练→团队协同微调。64,400样本的混合数据生成管道。<br>
+      <strong>核心结果</strong>：ChipMATE-4B达VerilogEval V2 pass@1 <strong>75.0%</strong>，ChipMATE-9B达<strong>80.1%</strong>，超越所有自训练模型，甚至优于1600B参数的DeepSeek V4。<br>
+      <strong>作者</strong>：Zhongkai Yu, Yichen Lin, Chenyang Zhou, Yuwei Zhang, Kun Zhou, Junxia Cui, Haotian Ye, Zhengding Hu, Zaifeng Pan, Ruiyi Wang, Yujie Zhao, Hejia Zhang, Jingbo Shang, Jishen Zhao, Yufei Ding（15人，UCSD主导）</p>
+    </div>
+    <div class="abs-links">
+      <a href="https://arxiv.org/abs/2605.12857" target="_blank">📄 arXiv</a>
+      <a href="https://github.com/zhongkaiyu/ChipMATE" target="_blank">🐙 GitHub</a>
+      <a class="local" href="./2026-05-14/2605.12857-ChipMATE-RL-RTL-Generation.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">Multi-Agent + RL</span>
+      <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">RTL Generation</span>
+    </div>
+  </div>
+
+  <!-- ========== 2605.13501 RWOPD ========== -->
+  <div class="abs-card">
+    <div class="abs-meta">
+      <span class="badge-new">NEW</span>
+      &nbsp;arXiv:2605.13501 · cs.AR + cs.LG · 2026-05-13
+    </div>
+    <div class="abs-title">Reward-Weighted On-Policy Distillation with an Open Property-Equivalence Verifier for NL-to-SVA Generation</div>
+    <div class="abs-body">
+      <p>针对自然语言到SystemVerilog断言（NL-to-SVA）生成问题。揭示现有基准的<strong>时序盲区</strong>：聚合指标下强模型在有界延迟和活性规范上仍会崩溃，根本原因是监督微调（SFT）优化token级模仿而非属性等价性。<br>
+      提出<strong>RWOPD</strong>（奖励加权在线策略蒸馏）：① 在线策略 rollout；② 开源属性等价验证器（SymbiYosys+Z3）；③ 仅对形式验证通过的rollout施加冻结14B教师模型的正向KL散度梯度。将CodeV-SVA-14B教师蒸馏至Qwen2.5-Coder-7B-Instruct学生（参数减半），在NL2SVA-Human和NL2SVA-Machine上均达SOTA，超越671B通用模型。<br>
+      <strong>作者</strong>：Qingyun Zou, Yingze Li, Tianen Liu, Bingsheng He, Weng-Fai Wong（NUS主导）</p>
+    </div>
+    <div class="abs-links">
+      <a href="https://arxiv.org/abs/2605.13501" target="_blank">📄 arXiv</a>
+      <a class="local" href="./2026-05-14/2605.13501-RWOPD-NL-to-SVA.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">Formal Verification</span>
+      <span style="color:var(--accent3);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent3);border-radius:8px;">NL-to-SVA</span>
+    </div>
+  </div>
+
+  <div style="margin-top:24px;padding:16px 20px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;font-size:.82rem;color:#475569;line-height:1.6;">
+    <strong style="color:#1e293b;">📅 本批次包含 2 篇论文</strong> · 更新于 2026-05-14<br>
+    · ChipMATE → RTL生成分类（多智能体+强化学习）<br>
+    · RWOPD → 功能验证分类（形式验证+NL-to-SVA）
+  </div>
+</body>
+</html>
