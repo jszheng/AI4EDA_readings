@@ -1,8 +1,44 @@
 {
-  "lastUpdate": "2026-05-14",
+  "lastUpdate": "2026-05-15",
   "cutoffDate": "2025-11-06",
-  "totalItems": 66,
+  "totalItems": 68,
   "items": [
+    {
+      "date": "2026-05-15",
+      "company": "Siemens EDA",
+      "title": "Siemens 推出 AI 驱动 Solido Characterizer，加速 Liberty 文件生成",
+      "link": "https://news.siemens.com/",
+      "keywords": [
+        "Siemens",
+        "EDA",
+        "Solido",
+        "Characterizer",
+        "AI",
+        "驱动",
+        "库特征化",
+        "Liberty",
+        "文件生成",
+        "2026-05-15"
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "company": "OpenAI",
+      "title": "OpenAI Daybreak：Agentic AI 网络安全防御平台正式发布",
+      "link": "https://openai.com/index/introducing-daybreak/",
+      "keywords": [
+        "OpenAI",
+        "Daybreak",
+        "Agentic",
+        "AI",
+        "网络安全",
+        "防御平台",
+        "Codex",
+        "Agent",
+        "框架",
+        "2026-05-15"
+      ]
+    },
     {
       "date": "2026-05-14",
       "company": "ISEDA 2026 / EDA² / IEEE CEDA / ACM SIGDA",
