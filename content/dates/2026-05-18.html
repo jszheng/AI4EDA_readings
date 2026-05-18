@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css?v=20260518" />
+</head>
+<body>
+  <!-- ========== 2605.15237 A3D ========== -->
+  <div class="abs-card">
+    <div class="abs-meta">
+      <span class="badge-new">NEW</span>
+      &nbsp;arXiv:2605.15237 · cs.AR + cs.AI · 2026-05-14
+    </div>
+    <div class="abs-title">A3D: Agentic AI Flow for End-to-End Automation of Hardware Accelerator Design</div>
+    <div class="abs-body">
+      <p>首个面向复杂<strong>硬件加速器端到端自动化设计</strong>的智能体AI框架，解决HLS方法在复杂应用上的局限性（大多数方案只能处理规则可预测数据流）。A3D通过<strong>多专家智能体分工</strong>（specialist agents）配合<strong>验证智能体</strong>（verifier agents）实现全流程自主：工作负载分析→性能瓶颈识别→HLS兼容代码重构→微架构生成→速度-面积权衡空间探索。采用Agentic RAG检索EDA工具文档和代码库。实现基于<strong>Claude Sonnet 4.5 + Catapult HLS</strong>，在LAMMPS（分子动力学）和QMCPACK（量子化学）等复杂不规则科学应用上实现零人工干预的加速器设计。<br>
+      <strong>作者</strong>：Abinand Nallathambi, Christopher Knight, Shantanu Ganguly, Wilfried Haensch, Anand Raghunathan</p>
+    </div>
+    <div class="abs-links">
+      <a href="https://arxiv.org/abs/2605.15237" target="_blank">📄 arXiv</a>
+      <a class="local" href="./2026-05-18/2605.15237-A3D-Agentic-AI-Accelerator.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">AI Agent</span>
+    </div>
+  </div>
+
+  <!-- ========== 2605.15226 Phoenix-bench ========== -->
+  <div class="abs-card">
+    <div class="abs-meta">
+      <span class="badge-new">NEW</span>
+      &nbsp;arXiv:2605.15226 · cs.AR + cs.AI + cs.SE · 2026-05-13
+    </div>
+    <div class="abs-title">Is Agentic AI Ready for Real-World Hardware Engineering? A Deep Dive with Phoenix-bench</div>
+    <div class="abs-body">
+      <p>首个评估<strong>Agentic AI在真实硬件工程任务</strong>上能力差距的研究。研究揭示软件AI迁移到硬件工程时性能下降<strong>37%~58%</strong>（SWE-bench Verified→Phoenix-bench），根本原因是硬件bug通过信号流跨并行实例化模块传播（不同于软件的调用图模式）。提出<strong>Phoenix-bench</strong>：511个Verilator验证实例（来自114个GitHub仓库），需联合完成代码库导航→层级感知定位→EDA工具验证→维护式补丁。要求Docker固定EDA环境以排除工具链差异。失败主要集中在：设计控制流/FSM bug、验证testbench bug、跨层级信号流追踪。<strong>单轮测试用例反馈</strong>可将解决率提升<strong>42%~45%</strong>。<br>
+      <strong>作者</strong>：Qingyun Zou, Feng Yu, Hongshi Tan, Bingsheng He, Wong-Fai Wong（NUS主导）</p>
+    </div>
+    <div class="abs-links">
+      <a href="https://arxiv.org/abs/2605.15226" target="_blank">📄 arXiv</a>
+      <a class="local" href="./2026-05-18/2605.15226-Phoenix-bench-Agentic-AI-HW-Engineering.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">AI Agent</span>
+    </div>
+  </div>
+
+  <!-- ========== 2605.15223 GenAI RISC-V Supply Chain ========== -->
+  <div class="abs-card">
+    <div class="abs-meta">
+      <span class="badge-new">NEW</span>
+      &nbsp;arXiv:2605.15223 · cs.AR + cs.AI · 2026-05-13
+    </div>
+    <div class="abs-title">GenAI-Driven Approach to RISC-V Supply Chain Exploration</div>
+    <div class="abs-body">
+      <p>将<strong>生成式AI（LLM + 视觉语言模型VLM）+ 模型驱动工程（MDE）</strong>应用于RISC-V半导体供应链透明化分析。流程：① LLM处理非结构化文本，VLM从图表/扫描文档提取信息；② 构建表示供应链实体及依赖关系的<strong>知识图谱</strong>；③ MDE约束建模进行形式化验证、瓶颈检测和风险评估；④ 人机交互界面支持专家查询验证。在RISC-V生态系统场景验证，可生成可操作洞察、增强透明度、支持供应链决策。<br>
+      <strong>作者</strong>：Nenad Petrovic, Andre Schamschurko, Yingjie Xu, Alois Knoll</p>
+    </div>
+    <div class="abs-links">
+      <a href="https://arxiv.org/abs/2605.15223" target="_blank">📄 arXiv</a>
+      <a class="local" href="./2026-05-18/2605.15223-GenAI-RISC-V-Supply-Chain.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI应用</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">RISC-V生态</span>
+    </div>
+  </div>
+
+  <div style="margin-top:24px;padding:16px 20px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;font-size:.82rem;color:#475569;line-height:1.6;">
+    <strong style="color:#1e293b;">📅 本批次包含 3 篇论文</strong> · 更新于 2026-05-18<br>
+    · A3D → RTL生成分类（多专家Agentic AI + HLS加速器自动化）<br>
+    · Phoenix-bench → 功能验证分类（Agentic AI基准测试，揭示软硬件差距）<br>
+    · GenAI for RISC-V Supply Chain → AI应用分类（知识图谱+RISC-V生态）
+  </div>
+</body>
+</html>

@@ -1,8 +1,32 @@
 {
-  "lastUpdate": "2026-05-15",
-  "cutoffDate": "2025-11-06",
-  "totalItems": 68,
+  "lastUpdate": "2026-05-18",
+  "cutoffDate": "2025-11-09",
+  "totalItems": 69,
   "items": [
+    {
+      "date": "2026-05-18",
+      "company": "SEMI ESD Alliance / Cadence HQ",
+      "title": "🎯 SEMI ESD Alliance 2026 Executive Outlook：聚焦 Agentic AI 如何重塑芯片设计与验证（6/10，Cadence HQ）",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-140/",
+      "keywords": [
+        "SEMI",
+        "ESD",
+        "Alliance",
+        "Agentic",
+        "AI",
+        "芯片设计",
+        "验证",
+        "Ed",
+        "Sperling",
+        "Breker",
+        "ChipAgents",
+        "Moores",
+        "LabAI",
+        "Silimate",
+        "Verific",
+        "2026-05-18"
+      ]
+    },
     {
       "date": "2026-05-15",
       "company": "Siemens EDA",
