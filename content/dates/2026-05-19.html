@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css?v=20260519" />
+</head>
+<body>
+  <!-- ========== 2605.17892 CPPL ========== -->
+  <div class="abs-card">
+    <div class="abs-meta">
+      <span class="badge-new">NEW</span>
+      &nbsp;arXiv:2605.17892 · cs.AR · 2026-05-19
+    </div>
+    <div class="abs-title">CPPL: A Circuit Prompt Programming Language</div>
+    <div class="abs-body">
+      <p>提出面向电路设计的<strong>提示编程语言 CPPL</strong>，解决 LLM 无法直接生成编译器 IR（MLIR/CIRCT）的核心瓶颈。核心思路：设计一种<strong>对编译器可见、对 LLM 友好</strong>的 JSON 格式电路中间表示（CPPL IR），结合 Python 前端 DSL 声明模块接口和层次结构，编译器自动推断位宽并验证生成的 IR，最终确定性地降级到 CIRCT 生成可综合 Verilog。在 RTLLM benchmark 上，CPPL 相比直接生成 Verilog 和直接生成 CIRCT IR，功能正确性显著提升；CIRCT 优化有效减少综合后的 AIG 节点数量。<br>
+      <strong>作者</strong>：Shuo Yin, Yihe Wang, Lancheng Zou, Xufeng Yao, Tinghuan Chen, Chen Bai, Zhengrong Wang, Tsung-Yi Ho, Bei Yu（CUHK + SJTU）</p>
+    </div>
+    <div class="abs-links">
+      <a href="https://arxiv.org/abs/2605.17892" target="_blank">📄 arXiv</a>
+      <a href="https://github.com/SawyDust1228/CPPL" target="_blank">🐙 GitHub</a>
+      <a class="local" href="./2026-05-19/2605.17892-CPPL-Circuit-Prompt-Programming-Language.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">LLM+CIRCT</span>
+    </div>
+  </div>
+</body>
+</html>

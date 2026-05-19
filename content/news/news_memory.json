@@ -1,8 +1,54 @@
 {
-  "lastUpdate": "2026-05-18",
+  "lastUpdate": "2026-05-19",
   "cutoffDate": "2025-11-09",
-  "totalItems": 69,
+  "totalItems": 71,
   "items": [
+    {
+      "date": "2026-05-19",
+      "company": "SemiEngineering / Applied Materials / TSMC",
+      "title": "🔬 Applied Materials × TSMC EPIC 研究中心：AI × 材料工程融合加速先进节点设计",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-138/",
+      "keywords": [
+        "Applied Materials",
+        "TSMC",
+        "EPIC",
+        "材料工程",
+        "AI",
+        "工艺建模",
+        "良率预测",
+        "先进节点",
+        "ASU",
+        "RPI",
+        "Stanford",
+        "Infineon",
+        "d-Matrix",
+        "AI",
+        "推理",
+        "2026-05-19"
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "company": "ECTC 2026",
+      "title": "📦 ECTC 2026（5/26-29，奥兰多）：先进封装与 Chiplet 互联技术盛会",
+      "link": "https://www.ectc.net/",
+      "keywords": [
+        "ECTC",
+        "2026",
+        "先进封装",
+        "Chiplet",
+        "互联",
+        "2.5D",
+        "3D",
+        "堆叠",
+        "封装",
+        "AI",
+        "加速器",
+        "热管理",
+        "奥兰多",
+        "2026-05-19"
+      ]
+    },
     {
       "date": "2026-05-18",
       "company": "SEMI ESD Alliance / Cadence HQ",
