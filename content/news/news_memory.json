@@ -1,8 +1,48 @@
 {
-  "lastUpdate": "2026-05-19",
-  "cutoffDate": "2025-11-09",
-  "totalItems": 71,
+  "lastUpdate": "2026-05-20",
+  "cutoffDate": "2025-11-10",
+  "totalItems": 73,
   "items": [
+    {
+      "date": "2026-05-20",
+      "company": "SemiEngineering / Synopsys / Intel / Samsung SSI / Credo",
+      "title": "🔗 Chiplet 互联标准化新进展：CXL/PCIe/UALink/UCIe 多标准共存格局加速成形",
+      "link": "https://semiengineering.com/options-grow-for-standardizing-data-movement-and-sharing-resources/",
+      "keywords": [
+        "Chiplet",
+        "互联",
+        "标准化",
+        "CXL",
+        "PCIe",
+        "UALink",
+        "UCIe",
+        "Synopsys",
+        "Intel",
+        "Samsung",
+        "RAS",
+        "互操作性",
+        "IMAPS",
+        "2026-05-20"
+      ]
+    },
+    {
+      "date": "2026-05-20",
+      "company": "SemiEngineering / Bryon Moyer",
+      "title": "📦 Chiplets Need A New Workflow：先进封装驱动的EDA工具链重构需求",
+      "link": "https://semiengineering.com/chiplets-need-a-new-workflow/",
+      "keywords": [
+        "Chiplet",
+        "EDA",
+        "工作流",
+        "先进封装",
+        "多物理场",
+        "协同设计",
+        "信号完整性",
+        "热仿真",
+        "SemiEngineering",
+        "2026-05-20"
+      ]
+    },
     {
       "date": "2026-05-19",
       "company": "SemiEngineering / Applied Materials / TSMC",
