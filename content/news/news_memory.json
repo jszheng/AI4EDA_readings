@@ -1,8 +1,30 @@
 {
-  "lastUpdate": "2026-05-20",
-  "cutoffDate": "2025-11-10",
-  "totalItems": 73,
+  "lastUpdate": "2026-05-21",
+  "cutoffDate": "2025-11-11",
+  "totalItems": 74,
   "items": [
+    {
+      "date": "2026-05-21",
+      "company": "Siemens EDA / SemiEngineering",
+      "title": "🛡️ Siemens EDA 详述 Calibre AI IC Signoff 策略：确定性核心 + AI 增强工作流",
+      "link": "https://semiengineering.com/harnessing-artificial-intelligence-for-trusted-ic-signoff/",
+      "keywords": [
+        "Siemens",
+        "EDA",
+        "Calibre",
+        "AI",
+        "Signoff",
+        "IC",
+        "物理验证",
+        "DRC",
+        "LVS",
+        "Calibre Vision AI",
+        "Check Assist",
+        "Run Advisor",
+        "Fuse EDA AI",
+        "2026-05-21"
+      ]
+    },
     {
       "date": "2026-05-20",
       "company": "SemiEngineering / Synopsys / Intel / Samsung SSI / Credo",
