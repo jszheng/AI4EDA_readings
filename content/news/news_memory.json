@@ -1,8 +1,50 @@
 {
-  "lastUpdate": "2026-05-21",
-  "cutoffDate": "2025-11-11",
-  "totalItems": 74,
+  "lastUpdate": "2026-05-22",
+  "cutoffDate": "2025-11-12",
+  "totalItems": 76,
   "items": [
+    {
+      "date": "2026-05-22",
+      "company": "SemiAnalysis",
+      "title": "📊 SemiAnalysis 深度报告：EDA市场格局全景 — AI Agent重塑芯片设计商业模型",
+      "link": "https://newsletter.semianalysis.com/p/eda-market-primer",
+      "keywords": [
+        "SemiAnalysis",
+        "EDA",
+        "市场",
+        "Cadence",
+        "Cerebrus",
+        "Synopsys",
+        "Siemens",
+        "Agentic",
+        "AI",
+        "虚拟工程师",
+        "1000+流片",
+        "数据飞轮",
+        "Ansys",
+        "中国EDA",
+        "2026-05-22"
+      ]
+    },
+    {
+      "date": "2026-05-22",
+      "company": "EDN / DATE 2026",
+      "title": "🏗️ DATE 2026 回顾：EDA 研究社区以真正动力迈入AI时代",
+      "link": "https://www.edn.com/the-next-eda-wave-lessons-from-date-2026/",
+      "keywords": [
+        "DATE",
+        "2026",
+        "EDA",
+        "AI",
+        "Nexus",
+        "PrimisAI",
+        "ChatTest",
+        "AgenticTCAD",
+        "SimFuzz",
+        "416项研究",
+        "2026-05-22"
+      ]
+    },
     {
       "date": "2026-05-21",
       "company": "Siemens EDA / SemiEngineering",

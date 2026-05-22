@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css?v=20260522" />
+</head>
+<body>
+  <!-- ========== 2605.21810 Trace2Skill ========== -->
+  <div class="abs-card">
+    <div class="abs-meta">
+      <span class="badge-new">NEW</span>
+      &nbsp;arXiv:2605.21810 · cs.AI + cs.MA · 2026-05-20
+    </div>
+    <div class="abs-title">Trace2Skill: Verifier-Guided Skill Evolution for Long-Context EDA Agents</div>
+    <div class="abs-body">
+      <p>提出<strong>Trace2Skill</strong>，一种无需RTL专用模型微调的<strong>测试时扩展框架</strong>，通过将智能体的自然语言技能视为可演化策略，从rollout轨迹中挖掘成功/失败模式，转化为密集诊断信息和oracle经验，经<strong>oracle→mutator→selector</strong>循环生成任务专属技能，指导后续搜索、编辑、验证与恢复。支持<strong>有界运行时密集验证器反馈</strong>，在不泄露隐藏测试套件的前提下返回功能性中间观测，弥补稀疏通过/失败标签的不足。在击败种子CVDP智能体和前沿编码智能体的困难Verilog设计任务上实现<strong>突破性通过率</strong>——全程无需微调数据、专用RTL模型训练或权重更新。<br>
+      <strong>作者</strong>：Zijian Du, Nathaniel Pinckney</p>
+    </div>
+    <div class="abs-links">
+      <a href="https://arxiv.org/abs/2605.21810" target="_blank">📄 arXiv</a>
+      <a class="local" href="./2026-05-22/2605.21810-Trace2Skill-Skill-Evolution-EDA-Agents.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">AI Agent</span>
+    </div>
+  </div>
+
+  <!-- ========== 2605.15537 RTL-BenchMT ========== -->
+  <div class="abs-card">
+    <div class="abs-meta">
+      <span class="badge-new">NEW</span>
+      &nbsp;arXiv:2605.15537 · cs.AI · 2026-05-15 · DAC 2026
+    </div>
+    <div class="abs-title">RTL-BenchMT: Dynamic Maintenance of RTL Generation Benchmark Through Agent-Assisted Analysis and Revision</div>
+    <div class="abs-body">
+      <p>提出<strong>RTL-BenchMT</strong>，首个面向RTL生成基准<strong>动态维护</strong>的智能体框架。当前RTL基准面临两大核心挑战：① 基准中存在<strong>缺陷案例</strong>（flawed cases）；② 模型对基准<strong>过拟合</strong>（overfitting）。RTL-BenchMT通过自动化智能体框架系统性解决：自动识别并修订缺陷案例，自动检测并更新过拟合案例。产出经过深度分析的<strong>精炼基准套件</strong>，将向社区开源发布。<strong>已被DAC 2026接收</strong>。<br>
+      <strong>作者</strong>：Jing Wang, Shang Liu, Hangan Zhou, Zhiyao Xie</p>
+    </div>
+    <div class="abs-links">
+      <a href="https://arxiv.org/abs/2605.15537" target="_blank">📄 arXiv</a>
+      <a class="local" href="./2026-05-22/2605.15537-RTL-BenchMT-Dynamic-Maintenance-Benchmark.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL基准</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">DAC 2026</span>
+    </div>
+  </div>
+
+  <div style="margin-top:24px;padding:16px 20px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;font-size:.82rem;color:#475569;line-height:1.6;">
+    <strong style="color:#1e293b;">📅 本批次包含 2 篇论文</strong> · 更新于 2026-05-22<br>
+    · Trace2Skill → RTL生成 + AI Agent分类（测试时技能演化，无需微调）<br>
+    · RTL-BenchMT → RTL生成分类（DAC 2026，动态基准维护框架）
+  </div>
+</body>
+</html>
