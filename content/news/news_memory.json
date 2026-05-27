@@ -1,8 +1,43 @@
 {
-  "lastUpdate": "2026-05-25",
-  "cutoffDate": "2025-11-15",
-  "totalItems": 79,
+  "lastUpdate": "2026-05-27",
+  "cutoffDate": "2025-11-18",
+  "totalItems": 81,
   "items": [
+    {
+      "date": "2026-05-27",
+      "company": "ASE",
+      "title": "📦 ASE 业界首条自动化310mm面板级封装产线：2027H1量产，推动万亿晶体管SiP",
+      "link": "https://www.semiconductor-digest.com/ase-launches-automated-310mm-panel-level-packaging-to-accelerate-ai-innovation/",
+      "keywords": [
+        "ASE",
+        "日月光",
+        "310mm",
+        "面板级封装",
+        "FOCoS",
+        "ECTC",
+        "2026",
+        "AI",
+        "HPC",
+        "Chiplet",
+        "SiP"
+      ]
+    },
+    {
+      "date": "2026-05-27",
+      "company": "SemiEngineering",
+      "title": "📰 SemiEngineering Blog Review May 27：曲线掩模检测、高NA EUV、6G协同设计",
+      "link": "https://semiengineering.com/",
+      "keywords": [
+        "SemiEngineering",
+        "Blog",
+        "Review",
+        "May27",
+        "EUV",
+        "掩模",
+        "6G",
+        "协同设计"
+      ]
+    },
     {
       "date": "2026-05-25",
       "company": "SemiEngineering",
