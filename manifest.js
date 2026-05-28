@@ -4,14 +4,15 @@
  */
 window.SITE_MANIFEST = {
   stats: {
-    papers: 143,
-    batches: 57,
-    news: 81,
-    lastUpdate: "2026-05-27"
+    papers: 146,
+    batches: 58,
+    news: 82,
+    lastUpdate: "2026-05-28"
   },
 
   /* 侧边栏「按日期」视图 */
   latest: [
+    { date: "2026-05-28", title: "🔥 05-28 最新",  file: "content/latest/2026-05-28.html" },
     { date: "2026-05-27", title: "🔥 05-27 最新",  file: "content/latest/2026-05-27.html" },
     { date: "2026-05-22", title: "🔥 05-22 最新",  file: "content/latest/2026-05-22.html" },
     { date: "2026-05-20", title: "🔥 05-20 最新",  file: "content/latest/2026-05-20.html" },
@@ -26,11 +27,11 @@ window.SITE_MANIFEST = {
     { date: "2026-05-05", title: "📅 05-05 更新",  file: "content/latest/2026-05-05.html" },
     { date: "2026-05-04", title: "📅 05-04 更新",  file: "content/latest/2026-05-04.html" },
     { date: "2026-05-02", title: "📅 05-02 更新",  file: "content/latest/2026-05-02.html" },
-    { date: "2026-04-29", title: "📅 04-29 更新",  file: "content/latest/2026-04-29.html" },
-    { date: "2026-04-28", title: "📅 04-28 更新",  file: "content/latest/2026-04-28.html" }
+    { date: "2026-04-29", title: "📅 04-29 更新",  file: "content/latest/2026-04-29.html" }
   ],
 
   dates: [
+    { date: "2026-05-28", title: "2026-05-28", count: 3,  file: "content/dates/2026-05-28.html" },
     { date: "2026-05-27", title: "2026-05-27", count: 4,  file: "content/dates/2026-05-27.html" },
     { date: "2026-05-22", title: "2026-05-22", count: 2,  file: "content/dates/2026-05-22.html" },
     { date: "2026-05-20", title: "2026-05-20", count: 1,  file: "content/dates/2026-05-20.html" },

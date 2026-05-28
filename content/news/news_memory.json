@@ -1,8 +1,32 @@
 {
-  "lastUpdate": "2026-05-27",
-  "cutoffDate": "2025-11-18",
-  "totalItems": 81,
+  "lastUpdate": "2026-05-28",
+  "cutoffDate": "2025-11-20",
+  "totalItems": 82,
   "items": [
+    {
+      "date": "2026-05-28",
+      "company": "SemiEngineering / Bryon Moyer",
+      "title": "🔄 Swapping Out Chiplets: I/Os Vs. Compute — Chiplet替换策略：保持计算还是保持I/O？Cadence/Synopsys/Arteris/Keysight/ChipAgents等十多家企业参与讨论",
+      "link": "https://semiengineering.com/swapping-out-chiplets-i-os-vs-compute/",
+      "keywords": [
+        "SemiEngineering",
+        "Chiplet",
+        "替换策略",
+        "I/O",
+        "Compute",
+        "Cadence",
+        "Synopsys",
+        "Arteris",
+        "Keysight",
+        "ChipAgents",
+        "2.5D",
+        "UCIe",
+        "PCIe",
+        "CXL",
+        "封装",
+        "2026-05-28"
+      ]
+    },
     {
       "date": "2026-05-27",
       "company": "ASE",

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+</head>
+<body>
+<!-- ── 2026-05-28 ── -->
+
+  <div class="date-group">
+    <div class="date-header" onclick="toggleGroup('g0528')">
+      <h3>📅 2026-05-28 · 今日更新（3篇）</h3>
+      <span class="badge-count">3 篇</span>
+      <span class="toggle" id="toggle-g0528">▼</span>
+    </div>
+    <div class="date-body" id="g0528">
+      <table class="paper-table">
+        <thead><tr><th>#</th><th>标题</th><th>方向</th><th>arXiv</th><th>PDF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="star">★</span> FT-Pilot: Automated Fault-Tolerant RTL Rewriting via Vulnerability-Guided LLMs</td>
+            <td class="cat">RTL容错/GNN脆弱性分析/LLM重写/RAG/双知识库</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2605.28169" target="_blank">2605.28169</a></td>
+            <td><a class="pdf-link" href="./2026-05-28/2605.28169.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="star">★</span> AssertLLM2: A Comprehensive LLM Benchmark for Assertion Generation from Design Specifications</td>
+            <td class="cat">硬件验证/断言生成/LLM基准/SVA/83真实设计</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2605.27472" target="_blank">2605.27472</a></td>
+            <td><a class="pdf-link" href="./2026-05-28/2605.27472.pdf">📥 PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><span class="star">★</span> CLIPGen: A Chiplet Link IP Modeling and Generation Framework for 2.5D Architecture Exploration</td>
+            <td class="cat">Chiplet/2.5D SiP/IP生成/UCIe/架构探索/NYU</td>
+            <td><a class="arxiv-link" href="https://arxiv.org/abs/2605.27757" target="_blank">2605.27757</a></td>
+            <td><a class="pdf-link" href="./2026-05-28/2605.27757.pdf">📥 PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="abstracts">
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">NEW</span><span class="badge-top">RTL + GNN + LLM</span>
+          <div class="abs-title">FT-Pilot：GNN脆弱性引导 + LLM重写 → 自动化RTL容错加固，双知识库RAG + 自动修复</div>
+          <div class="abs-meta">Weixing Liu, Zizhen Liu, Jing Ye, Naixing Wang, Cheng Liu, Huawei Li, Xiaowei Li · 2026-05-27 · cs.AR</div>
+          <div class="abs-body">FT-Pilot 首次在 <strong>RTL 级别</strong>结合 GNN 脆弱性分析与 LLM 代码重写实现自动化软错误加固。框架核心：① <strong>GNN 阶段</strong>直接在RTL识别关键脆弱资产；② <strong>LLM驱动重写引擎</strong>含分析器+重写器，结合<strong>双知识库RAG</strong>（容错模式知识库 + 设计约束知识库）和<strong>自动修复机制</strong>，执行RTL级容错代码重写。实验：自动生成<strong>语法正确、功能正确、可综合</strong>的加固RTL设计，软错误场景下显著降低输出错误率。属于 shift-left reliability optimization 方向的典型工作。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2605.28169" target="_blank">arXiv</a>
+            <a class="local" href="./2026-05-28/2605.28169.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">NEW</span><span class="badge-top">验证/基准</span>
+          <div class="abs-title">AssertLLM2：面向真实硬件验证断言生成的综合 LLM 基准 — 83个设计/13类功能/双场景评估</div>
+          <div class="abs-meta">Yuchao Wu, Wenji Fang, Jing Wang, Wenkai Li, Ziyan Guo, Zhiyao Xie · 2026-05-26 · cs.AR + cs.AI</div>
+          <div class="abs-body">AssertLLM2 解决现有 LLM 断言生成基准脱离真实场景的问题：① <strong>83 个真实设计</strong>覆盖 13 个功能类别，每个配结构化规格说明+验证过的黄金RTL+系统化变异错误RTL；② 支持 <strong>bug-prevention</strong>（从规格预防性生成断言）和 <strong>bug-hunting</strong>（生成断言暴露预期 vs 错误行为差异）双场景；③ 首个显式用错误RTL评估错误检测能力的基准；④ 评估涵盖语法有效性、形式可证明性、覆盖率、基于变异的错误检测四维度。<strong>来自 HKUST 谢知遥团队</strong>，是 LLM for Verification 方向最系统的基准之一。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2605.27472" target="_blank">arXiv</a>
+            <a class="local" href="./2026-05-28/2605.27472.pdf">本地 PDF</a>
+          </div>
+        </div>
+        <div class="abs-card">
+          <span class="badge-hot">TODAY</span><span class="badge-new">NEW</span><span class="badge-top">NYU · Chiplet</span>
+          <div class="abs-title">CLIPGen：2.5D Chiplet IP 自动建模与生成框架 — UCIe 接口案例 + 架构级 PPA 探索</div>
+          <div class="abs-meta">Zhengping Zhu, Austin Rovinski · 2026-05-26 · cs.AR · <strong>New York University</strong></div>
+          <div class="abs-body">CLIPGen 填补 2.5D 系统架构探索阶段工具空白——介于过于详细的封装级仿真与过于抽象的粗略估算之间。核心贡献：① <strong>自动化芯粒IP生成框架</strong>，为各种 2.5D 封装和通信配置提供 PPA 估算；② 输出标准交付物：<strong>Verilog RTL、Liberty (.lib)、LEF、Datasheet</strong>，覆盖从高级仿真到布局布线全层次；③ <strong>UCIe 接口案例研究</strong>，多封装选项下对比分析；④ 支持封装-芯粒架构协同优化，使架构师可快速评估不同封装策略的 PPA 权衡。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2605.27757" target="_blank">arXiv</a>
+            <a class="local" href="./2026-05-28/2605.27757.pdf">本地 PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
