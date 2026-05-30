@@ -1,8 +1,73 @@
 {
-  "lastUpdate": "2026-05-28",
-  "cutoffDate": "2025-11-20",
-  "totalItems": 82,
+  "lastUpdate": "2026-05-30",
+  "cutoffDate": "2025-12-01",
+  "totalItems": 85,
   "items": [
+    {
+      "date": "2026-05-29",
+      "company": "SemiEngineering",
+      "title": "📰 Chip Industry Week In Review #140 — ECTC封装创新、Intel×IMEC 200nm混合键合、Cadence Intel 18A认证",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-140/",
+      "keywords": [
+        "SemiEngineering",
+        "Week In Review",
+        "ECTC 2026",
+        "ASE",
+        "Imec",
+        "EV Group",
+        "Cadence",
+        "Intel 18A",
+        "SK Hynix",
+        "HBM",
+        "heat dissipation",
+        "Huawei",
+        "Tau scaling",
+        "NNME",
+        "NSF",
+        "RESOLVE",
+        "GlobalPlatform",
+        "Pavona",
+        "2026-05-29"
+      ]
+    },
+    {
+      "date": "2026-05-28",
+      "company": "SemiEngineering / Brian Bailey",
+      "title": "🤖 Toward Agentic Verification — AI 智能体重塑芯片验证流程：48小时完成传统2个月工作",
+      "link": "https://semiengineering.com/toward-agentic-verification/",
+      "keywords": [
+        "SemiEngineering",
+        "Agentic",
+        "Verification",
+        "AI",
+        "智能体",
+        "芯片验证",
+        "UVM",
+        "覆盖率收敛",
+        "Brian Bailey",
+        "2026-05-28"
+      ]
+    },
+    {
+      "date": "2026-05-28",
+      "company": "SemiEngineering / Ann Mutschler",
+      "title": "🛡️ Observability Is Essential For Modern Silicon — 片内可观测性成先进封装与AI芯片关键",
+      "link": "https://semiengineering.com/observability-is-essential-for-modern-silicon/",
+      "keywords": [
+        "SemiEngineering",
+        "Observability",
+        "On-Die",
+        "可观测性",
+        "Chiplet",
+        "先进封装",
+        "Arteris",
+        "Cadence",
+        "Siemens EDA",
+        "Synopsys",
+        "Ann Mutschler",
+        "2026-05-28"
+      ]
+    },
     {
       "date": "2026-05-28",
       "company": "SemiEngineering / Bryon Moyer",
