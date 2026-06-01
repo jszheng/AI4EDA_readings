@@ -1,8 +1,48 @@
 {
-  "lastUpdate": "2026-05-30",
+  "lastUpdate": "2026-06-01",
   "cutoffDate": "2025-12-01",
-  "totalItems": 85,
+  "totalItems": 87,
   "items": [
+    {
+      "date": "2026-06-01",
+      "company": "Cadence / NVIDIA",
+      "title": "🤖🤖 Cadence × NVIDIA: ChipStack AI Super Agent 升级 Level-5 — 行业首个全自主 AI 虚拟芯片设计工程师",
+      "link": "https://www.businesswire.com/news/home/20260531072918/en/Cadence-Unveils-Industrys-First-Fully-Autonomous-Virtual-Engineer-for-Chip-Design-powered-by-NVIDIA",
+      "keywords": [
+        "Cadence",
+        "NVIDIA",
+        "ChipStack",
+        "Level-5",
+        "全自主",
+        "AI虚拟工程师",
+        "Agentic",
+        "Computex",
+        "2026",
+        "Nemotron",
+        "OpenShell",
+        "RTL验证40倍提速"
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "company": "NVIDIA",
+      "title": "🔧 NVIDIA Agent Toolkit: NemoClaw/Nemotron 3 Ultra(550B MoE)/OpenShell — EDA三巨头全线集成",
+      "link": "https://nvidianews.nvidia.com/news/enterprise-software-leaders-build-ai-agents-with-nvidia",
+      "keywords": [
+        "NVIDIA",
+        "Agent Toolkit",
+        "NemoClaw",
+        "Nemotron",
+        "OpenShell",
+        "CUDA-X",
+        "Siemens",
+        "Fuse EDA",
+        "Synopsys",
+        "EDA",
+        "AI Agent",
+        "2026-06-01"
+      ]
+    },
     {
       "date": "2026-05-29",
       "company": "SemiEngineering",

@@ -5,13 +5,14 @@
 window.SITE_MANIFEST = {
   stats: {
     papers: 146,
-    batches: 58,
-    news: 85,
-    lastUpdate: "2026-05-30"
+    batches: 59,
+    news: 87,
+    lastUpdate: "2026-06-01"
   },
 
   /* 侧边栏「按日期」视图 */
   latest: [
+    { date: "2026-06-01", title: "🔥 06-01 最新",  file: "content/latest/2026-06-01.html" },
     { date: "2026-05-29", title: "🔥 05-29 最新",  file: "content/latest/2026-05-29.html" },
     { date: "2026-05-28", title: "🔥 05-28 最新",  file: "content/latest/2026-05-28.html" },
     { date: "2026-05-27", title: "🔥 05-27 最新",  file: "content/latest/2026-05-27.html" },
