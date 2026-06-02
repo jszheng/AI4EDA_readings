@@ -1,8 +1,74 @@
 {
-  "lastUpdate": "2026-06-01",
-  "cutoffDate": "2025-12-01",
-  "totalItems": 87,
+  "lastUpdate": "2026-06-02",
+  "cutoffDate": "2025-12-05",
+  "totalItems": 90,
   "items": [
+    {
+      "date": "2026-06-02",
+      "company": "MLCAD 2026 / ASU VDA Lab",
+      "title": "🏆 MLCAD 2026 竞赛 Beta Testcase 1 结果：team_39 反超领先 50.2 分",
+      "link": "https://asu-vda-lab.github.io/MLCAD26-Contest/",
+      "keywords": [
+        "MLCAD",
+        "2026",
+        "Beta",
+        "Testcase",
+        "1",
+        "结果",
+        "team_39",
+        "反超",
+        "领先",
+        "50.2",
+        "team_14",
+        "Alpha",
+        "冠军",
+        "退居第二",
+        "2026-06-02"
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "company": "NVIDIA × TSMC",
+      "title": "🏭 NVIDIA × TSMC: AI 全面导入晶圆厂 — cuLitho/cuEST/FabTwin",
+      "link": "https://blogs.nvidia.com/blog/taiwan-ecosystem-ai-infrastructure/",
+      "keywords": [
+        "NVIDIA",
+        "TSMC",
+        "AI",
+        "晶圆厂",
+        "cuLitho",
+        "cuEST",
+        "FabTwin",
+        "Metropolis",
+        "缺陷检测",
+        "Omniverse",
+        "GTC",
+        "Taipei",
+        "2026-06-01"
+      ]
+    },
+    {
+      "date": "2026-05-27",
+      "company": "北京大学集成电路学院",
+      "title": "🧮 北京大学团队\"韬定律\"真3D EDA工具原型：线长缩减30%",
+      "link": "https://eda.eetrend.com/content/2026/100601388.html",
+      "keywords": [
+        "北京大学",
+        "韬定律",
+        "真3D",
+        "EDA",
+        "GPU加速",
+        "布局",
+        "线长缩减",
+        "30%",
+        "WNS",
+        "6%",
+        "热感知",
+        "3D-IC",
+        "Chiplet",
+        "2026-05-27"
+      ]
+    },
     {
       "date": "2026-06-01",
       "company": "Cadence / NVIDIA",
