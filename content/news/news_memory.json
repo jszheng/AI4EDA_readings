@@ -1,7 +1,7 @@
 {
-  "lastUpdate": "2026-06-02",
-  "cutoffDate": "2025-12-05",
-  "totalItems": 90,
+  "lastUpdate": "2026-06-04",
+  "cutoffDate": "2025-12-06",
+  "totalItems": 91,
   "items": [
     {
       "date": "2026-06-02",
@@ -24,6 +24,33 @@
         "冠军",
         "退居第二",
         "2026-06-02"
+      ]
+    },
+    {
+      "date": "2026-06-03",
+      "company": "SemiEngineering / Synopsys / Cadence / Siemens EDA / Keysight",
+      "title": "📰 SemiEngineering Blog Review Jun. 3 — Synopsys多芯片AI路径、Cadence PCIe 7.0 AI加速、Siemens验证IP评估、Keysight AI数据基础",
+      "link": "https://semiengineering.com/blog-review-jun-3/",
+      "keywords": [
+        "SemiEngineering",
+        "Blog Review",
+        "June 3",
+        "Synopsys",
+        "multi-chip",
+        "Cadence",
+        "PCIe 7.0",
+        "Siemens EDA",
+        "Verification IP",
+        "Keysight",
+        "AI data foundation",
+        "Lam Research",
+        "digital twin",
+        "GAA",
+        "verification debug",
+        "Baya Systems",
+        "wafer-scale",
+        "chiplet",
+        "2026-06-03"
       ]
     },
     {
