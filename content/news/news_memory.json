@@ -1,8 +1,28 @@
 {
-  "lastUpdate": "2026-06-04",
-  "cutoffDate": "2025-12-06",
-  "totalItems": 91,
+  "lastUpdate": "2026-06-05",
+  "cutoffDate": "2025-12-07",
+  "totalItems": 92,
   "items": [
+    {
+      "date": "2026-06-05",
+      "company": "Silvaco",
+      "title": "🤖 Silvaco 部署 Agentic AI 芯片设计 — CEO Wally Rhines 将在 ESD Alliance Executive Outlook 展示新方案",
+      "link": "https://www.linkedin.com/posts/silvaco_join-silvacos-ceo-walden-c-wally-rhines-activity-7465889564218261504-gKmM",
+      "keywords": [
+        "Silvaco",
+        "Agentic",
+        "AI",
+        "芯片设计",
+        "Wally",
+        "Rhines",
+        "ESD",
+        "Alliance",
+        "Executive",
+        "Outlook",
+        "6月10日",
+        "2026-06-05"
+      ]
+    },
     {
       "date": "2026-06-02",
       "company": "MLCAD 2026 / ASU VDA Lab",

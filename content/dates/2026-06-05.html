@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" "../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-06-05 论文 & 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 1 条行业动态 · 来源：arXiv cs.AR + 行业新闻</p>
+</header>
+<section>
+  <div class="abstracts">
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.04246 · cs.AR · 2026-06-04 · DAC 2026</div>
+      <h4>StepPRM-RTL: Stepwise Process-Reward Guided LLM Fine-Tuning for Enhanced RTL Synthesis</h4>
+      <p>提出<strong>StepPRM-RTL</strong>框架，首次将<strong>分步过程奖励建模（PRM）</strong>与<strong>检索增强微调（RAFT）</strong>结合，同时引入蒙特卡洛树搜索（MCTS）探索推理路径，解决传统LLM微调仅关注最终结果、忽略中间推理步骤可靠性的问题。从规范化解决方案构建分步推理轨迹，每步包含推理过程和增量代码修改；PRM对中间步骤提供密集反馈；MCTS探索替代推理路径丰富训练数据。在标准Verilog和VHDL基准上功能正确性和推理保真度<strong>比SOTA高出10%以上</strong>，可跨RTL语言泛化。<strong>DAC 2026接收</strong>。<br>
+      <strong>作者</strong>：Prashanth Vijayaraghavan, Apoorva Nitsure, Luyao Shi, Ehsan Degan, Vandana Mukherjee</p>
+      <a href="https://arxiv.org/abs/2606.04246" target="_blank">📄 arXiv</a>
+      <a class="local" href="2606.04246.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PRM+RAFT</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">DAC 2026</span>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.04126 · cs.AR · 2026-06-02 · UC Santa Cruz</div>
+      <h4>HighTide: An Agent-Curated Open-Source VLSI Benchmark Suite</h4>
+      <p>首个<strong>AI智能体策展</strong>的开源VLSI基准测试套件，四大核心贡献：① 覆盖多种设计语言和工艺节点的多样化开源基准集合；② 基于Bazel的增量式RTL到GDS编译，支持远程缓存；③ <strong>12种智能体技能</strong>覆盖设计生命周期、流程优化、工具参考和元维护，每个设计维护决策日志作为长期记忆；④ 具备RTL编译验证功能的稳定版本发布基础设施。让智能体可复用历史调优经验，解决VLSI基准维护成本高、经验难以沉淀的问题。<br>
+      <strong>作者</strong>：Benjamin Goldblatt, Paolo Pedroso, Farhad Modaresi, Ethan Sifferman, Matthew R. Guthaus</p>
+      <a href="https://arxiv.org/abs/2606.04126" target="_blank">📄 arXiv</a>
+      <a class="local" href="2606.04126.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VLSI基准</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">AI Agent</span>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Silvaco · ESD Alliance · 2026-06-04</div>
+      <h4>🤖 Silvaco 部署 Agentic AI 芯片设计 — CEO Wally Rhines 将在 ESD Alliance Executive Outlook 展示新方案</h4>
+      <p>Silvaco Group 宣布部署 <strong>Agentic AI</strong> 技术以革新芯片设计流程。公司CEO <strong>Wally Rhines</strong>（前Mentor Graphics CEO）将在 <strong>6月10日 SEMI ESD Alliance 2026 Executive Outlook</strong>（San Jose, Cadence HQ）上展示新方案。该活动将汇集EDA老牌公司与新兴Agentic AI创业公司，共同讨论AI智能体如何变革芯片设计与验证工作流。</p>
+      <a href="https://www.linkedin.com/posts/silvaco_join-silvacos-ceo-walden-c-wally-rhines-activity-7465889564218261504-gKmM" target="_blank">→ Silvaco LinkedIn 公告</a>
+      <a href="https://discover.semi.org/2026-esd-alliance-executive-outlook-registration.html" target="_blank" style="margin-left:12px;">→ ESD Alliance 注册页</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Agentic AI</span>
+    </div>
+  </div>
+</section>
+</body>
+</html>
