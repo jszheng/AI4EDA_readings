@@ -1,8 +1,98 @@
 {
-  "lastUpdate": "2026-06-05",
-  "cutoffDate": "2025-12-07",
-  "totalItems": 92,
+  "lastUpdate": "2026-06-08",
+  "cutoffDate": "2025-12-10",
+  "totalItems": 96,
   "items": [
+    {
+      "date": "2026-06-06",
+      "company": "SemiEngineering",
+      "title": "📰 Chip Industry Week In Review #141 — Computex AI生态全景、GF收购Synopsys ARC IP、Intel Xeon 6+ 18A Agentic AI机架、苹果Chiplet时代、Cadence全自主AI虚拟工程师",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-141/",
+      "keywords": [
+        "SemiEngineering",
+        "Week",
+        "Review",
+        "141",
+        "Computex",
+        "AI",
+        "生态",
+        "GF",
+        "Synopsys",
+        "ARC",
+        "IP",
+        "Intel",
+        "Xeon",
+        "18A",
+        "Agentic",
+        "苹果",
+        "Chiplet",
+        "Cadence",
+        "全自主",
+        "AI",
+        "虚拟工程师",
+        "Nikon",
+        "1.5μm",
+        "Siemens",
+        "工业AI",
+        "IIT",
+        "Delhi",
+        "2026-06-06"
+      ]
+    },
+    {
+      "date": "2026-06-06",
+      "company": "Cadence / Ausdia",
+      "title": "💰 Cadence 收购 Ausdia — TimeVision 时序约束管理方案补全 Tempus 签核平台，端到端时序闭环成形",
+      "link": "https://community.cadence.com/cadence_blogs_8/b/di/posts/cadence-welcomes-ausdia-and-timevision-timing-constraints-management-solution",
+      "keywords": [
+        "Cadence",
+        "收购",
+        "Ausdia",
+        "TimeVision",
+        "时序约束",
+        "Tempus",
+        "签核",
+        "STA",
+        "端到端",
+        "2026-06-06"
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "company": "GlobalFoundries / Synopsys",
+      "title": "🏭 GlobalFoundries 完成收购 Synopsys ARC 处理器 IP 业务 — 整合 MIPS + RISC-V，打造 Physical AI 全栈平台",
+      "link": "https://gf.com/news-and-events/news/globalfoundries-completes-acquisition-of-synopsys-processor-ip-solutions-business-delivering-a-holistic-technology-platform-for-physical-ai/",
+      "keywords": [
+        "GlobalFoundries",
+        "Synopsys",
+        "ARC",
+        "RISC-V",
+        "MIPS",
+        "Physical",
+        "AI",
+        "处理器IP",
+        "收购",
+        "2026-06-04"
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "company": "Intel",
+      "title": "🔧 Intel 发布 Xeon 6+ — 首款 18A 工艺数据中心 CPU，专为 Agentic AI 工作负载设计",
+      "link": "https://newsroom.intel.com/data-center/intel-puts-agentic-ai-xeon-6-networking-ai-systems",
+      "keywords": [
+        "Intel",
+        "Xeon",
+        "6+",
+        "18A",
+        "Agentic",
+        "AI",
+        "数据中心",
+        "CPU",
+        "Computex",
+        "2026-06-04"
+      ]
+    },
     {
       "date": "2026-06-05",
       "company": "Silvaco",
