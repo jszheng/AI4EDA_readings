@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" "../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-06-09 论文 & 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 3 条行业动态 · 来源：arXiv cs.AR + 行业新闻</p>
+</header>
+<section>
+  <div class="abstracts">
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.06530 · cs.AR · 2026-06-03 · ETH Zurich / BFH</div>
+      <h4>RTLScout: Joint Agentic Code and Synthesis Optimization for Efficient Digital Circuits</h4>
+      <p>提出<strong>RTLScout</strong>自主系统，将<strong>LLM驱动的智能体设计</strong>与<strong>电路级综合优化、算术架构遍历</strong>相结合。LLM智能体通过工具调用迭代编写、评估和优化RTL设计，由Yosys和OpenROAD提供的量化PPA反馈引导。引入<strong>多轮精英池框架</strong>，最优设计和经验总结作为后续智能体运行的种子。流程包含四个互补阶段：智能体代码优化、智能体门级重写、算术架构遍历、可选高成本门级优化。在IEEE-754标准16位浮点乘法器上，<strong>面积降低35%、延迟降低45%</strong>，最终帕累托前沿优于商用工具参考设计。<br>
+      <strong>作者</strong>：Felix Arnold, Ryan Amaudruz, Dimitrios Tsaras, Renzo Andri, Lukas Cavigelli</p>
+      <a href="https://arxiv.org/abs/2606.06530" target="_blank">📄 arXiv</a>
+      <a class="local" href="2606.06530.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL优化</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">AI Agent</span>
+      <span style="color:#f59e0b;font-size:.75rem;padding:3px 8px;border:1px solid #f59e0b;border-radius:8px;">PPA+35%/-45%</span>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.07246 · cs.AR · 2026-06-05 · NTUA Athens</div>
+      <h4>MailoHLS: Multi-Adapter Structure-Aware Learning for Pareto-Driven HLS Pragma Optimization</h4>
+      <p>提出<strong>MailoHLS</strong>混合框架，结合<strong>LLM语义推理 + GNN结构建模</strong>实现面向目标的HLS指令优化。通过交叉注意力整合结构嵌入，结合PEFT参数高效微调、目标条件化LoRA适配器和帕累托驱动优化，同时对代码语义、结构和设计权衡进行联合推理。在已见和未见内核上延迟优化最高<strong>12.42x和8.4x加速</strong>（几何均值9.48x和4.97x），在完全未见应用上最高<strong>10.2x加速</strong>（几何均值6.58x），性能优于高端大模型和过往方法。<br>
+      <strong>作者</strong>：Elena Vouvali, Dimosthenis Masouros, Aggelos Ferikoglou, Dimitrios Soudris, Sotirios Xydis</p>
+      <a href="https://arxiv.org/abs/2606.07246" target="_blank">📄 arXiv</a>
+      <a class="local" href="2606.07246.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HLS优化</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">LLM+GNN</span>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.06515 · cs.AR · cs.AI · cs.ET · 2026-06-02 · NYU Abu Dhabi / TU Wien</div>
+      <h4>DxPTA: Architecture Design Space Exploration with Optical Dataflow-guided Strategy for HW/SW Co-Design of Photonic Transformer Accelerators</h4>
+      <p>提出<strong>DxPTA</strong>设计空间探索方法，用于光子Transformer加速器（PTA）的软硬件协同设计。通过三步实现：①基于相干光数据流识别PTA架构参数；②分析参数显著性；③约束感知架构搜索算法。在50mm²/5W/50mJ/10ms约束下可找到满足约束的PTA架构（最高26mm²/4.8W/39mJ/6ms），<strong>搜索速度比穷举快15.2x</strong>，覆盖DeiT-T/S/B和BERT-B/L等多种Transformer模型。<br>
+      <strong>作者</strong>：Rachmad Vidya Wicaksana Putra, Solomon Micheal Serunjogi, Mahmoud Rasras, Muhammad Shafique</p>
+      <a href="https://arxiv.org/abs/2606.06515" target="_blank">📄 arXiv</a>
+      <a class="local" href="2606.06515.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DSE</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">光子加速器</span>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Siemens EDA · 2026-06-09</div>
+      <h4>🏢 Siemens EDA IC Forum 2026 慕尼黑站 — AI Agent 驱动 IC 设计全流程自动化</h4>
+      <p>Siemens EDA IC Forum 2026 欧洲巡回<strong>慕尼黑站（6月9日）</strong>今日举行。议题聚焦 Fuse EDA AI Agent + NemoClaw/OpenShell 多工具工作流编排、Calibre AI Signoff 策略、Questa One Agentic Toolkit 验证自动化。</p>
+      <a href="https://semiengineering.com/semi_events/siemens-eda-ic-forum-2026/" target="_blank">→ 活动详情</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>NVIDIA Blog · 2026-06-02</div>
+      <h4>🔧 NVIDIA NemoClaw EDA 深度落地 — Cadence RTL工程师/Ansys Icepak散热/Siemens Fuse EDA Agent</h4>
+      <p>NemoClaw 自主 AI 工程师蓝图详细落地：Cadence 自主 RTL 工程师（验证从数周→数小时）、Siemens Fuse EDA AI Agent 跨域编排、Synopsys/Ansys Icepak 电子散热全流程自动化、Dassault 3DEXPERIENCE 智能体平台。</p>
+      <a href="https://blogs.nvidia.com/blog/industrial-software-leaders-secure-autonomous-ai-engineers-nemoclaw/" target="_blank">→ NVIDIA 博客</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">NemoClaw</span>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Qualcomm / ByteDance · 2026-05-26</div>
+      <h4>💰 Qualcomm × ByteDance AI ASIC — 数百万颗定制 AI 推理芯片</h4>
+      <p>Qualcomm 向 ByteDance 供应数百万颗定制 AI 推理 ASIC，用于抖音/TikTok 核心推理计算。字节跳动应对 GPU 供应不确定性建立自主推理算力，Qualcomm 从移动 SoC 向数据中心推理芯片扩展。</p>
+      <a href="https://hothardware.com/news/qualcomm-lands-bytedance-asic-deal" target="_blank">→ HotHardware 报道</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI ASIC</span>
+    </div>
+  </div>
+</section>
+</body>
+</html>

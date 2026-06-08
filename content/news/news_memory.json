@@ -1,8 +1,110 @@
 {
-  "lastUpdate": "2026-06-08",
-  "cutoffDate": "2025-12-10",
-  "totalItems": 96,
+  "lastUpdate": "2026-06-09",
+  "cutoffDate": "2025-12-11",
+  "totalItems": 101,
   "items": [
+    {
+      "date": "2026-06-09",
+      "company": "Qualcomm / ByteDance",
+      "title": "💰 Qualcomm × ByteDance AI ASIC 供应协议 — 数百万颗定制 AI 推理芯片，字节跳动自主 AI 算力突围",
+      "link": "https://hothardware.com/news/qualcomm-lands-bytedance-asic-deal",
+      "keywords": [
+        "Qualcomm",
+        "ByteDance",
+        "字节跳动",
+        "AI",
+        "ASIC",
+        "推理",
+        "芯片",
+        "定制",
+        "数据中心",
+        "2026-06-09"
+      ]
+    },
+    {
+      "date": "2026-06-09",
+      "company": "Siemens EDA",
+      "title": "🏢 Siemens EDA IC Forum 2026 慕尼黑站今日举行 — 聚焦 AI Agent 驱动 IC 设计全流程自动化",
+      "link": "https://semiengineering.com/semi_events/siemens-eda-ic-forum-2026/",
+      "keywords": [
+        "Siemens",
+        "EDA",
+        "IC",
+        "Forum",
+        "2026",
+        "慕尼黑",
+        "AI",
+        "Agent",
+        "Fuse",
+        "EDA",
+        "NemoClaw",
+        "OpenShell",
+        "Calibre",
+        "Questa",
+        "One",
+        "2026-06-09"
+      ]
+    },
+    {
+      "date": "2026-06-02",
+      "company": "NVIDIA / Cadence / Siemens / Synopsys / Dassault",
+      "title": "🔧 NVIDIA NemoClaw EDA 深度落地：Cadence/Siemens/Synopsys/Dassault 基于 NemoClaw + OpenShell 构建自主 AI 工程师",
+      "link": "https://blogs.nvidia.com/blog/industrial-software-leaders-secure-autonomous-ai-engineers-nemoclaw/",
+      "keywords": [
+        "NVIDIA",
+        "NemoClaw",
+        "OpenShell",
+        "Cadence",
+        "Siemens",
+        "Synopsys",
+        "Dassault",
+        "自主",
+        "AI",
+        "工程师",
+        "EDA",
+        "RTL",
+        "验证",
+        "2026-06-02"
+      ]
+    },
+    {
+      "date": "2026-05-26",
+      "company": "Qualcomm / ByteDance",
+      "title": "💰 Qualcomm × ByteDance AI ASIC 供应协议 — 数百万颗定制 AI 推理芯片，字节跳动自主 AI 算力突围",
+      "link": "https://hothardware.com/news/qualcomm-lands-bytedance-asic-deal",
+      "keywords": [
+        "Qualcomm",
+        "ByteDance",
+        "字节跳动",
+        "AI",
+        "ASIC",
+        "推理芯片",
+        "定制",
+        "数百万颗",
+        "2026-05-26"
+      ]
+    },
+    {
+      "date": "2026-06-08",
+      "company": "SemiEngineering / Brian Bailey",
+      "title": "🔄 Disturbance In Verification — Agentic AI 引发验证领域史上最大变革，验证工程师角色定位与技能要求面临根本性重建",
+      "link": "https://semiengineering.com/disturbance-in-verification/",
+      "keywords": [
+        "SemiEngineering",
+        "Brian",
+        "Bailey",
+        "Agentic",
+        "Verification",
+        "验证",
+        "UVM",
+        "SystemVerilog",
+        "自然语言",
+        "智能体",
+        "验证工程师",
+        "角色变革",
+        "2026-06-08"
+      ]
+    },
     {
       "date": "2026-06-06",
       "company": "SemiEngineering",
