@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-06-06 行业动态</h1>
+  <p class="subtitle">共 2 条行业动态 · 来源：SemiEngineering · Cadence Blog</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · 2026-06-06</div>
+      <h4>📰 Chip Industry Week In Review #141 — Computex AI生态全景、GF收购Synopsys ARC IP、Intel Xeon 6+ Agentic AI机架、苹果Chiplet时代开启、Nikon 1.5μm光刻突破</h4>
+      <p>SemiEngineering 第141期芯片行业周报（2026-06-06）核心动态：</p>
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>Computex AI 生态全景</strong>：Cadence 发布业界首个全自主 AI 虚拟芯片设计工程师（Level-5）；NVIDIA 发布 Agent Toolkit + Nemotron 3 Ultra（550B MoE）+ OpenShell 安全运行时；NVIDIA×TSMC AI全面导入晶圆厂（cuLitho/cuEST/FabTwin）</li>
+        <li><strong>GlobalFoundries 收购 Synopsys ARC 处理器 IP 业务</strong>：6月2日完成，将 RISC-V 处理器 IP + MIPS + 先进制造整合为 Physical AI 全栈平台，覆盖汽车/工业/边缘 AI 场景</li>
+        <li><strong>Intel Xeon 6+ 基于 18A 工艺发布</strong>：ComputeX发布首款 Intel 18A 数据中心 CPU，专为 Agentic AI 工作负载设计，高密度横向扩展 + 能效优化</li>
+        <li><strong>Cadence 收购 Ausdia</strong>：整合 TimeVision 时序约束管理方案至 Tempus 签核平台，形成从约束开发到 STA 签核的端到端时序闭环</li>
+        <li><strong>苹果 Chiplet 时代</strong>：M7 Ultra 芯片采用 UltraFusion 2.5D 封装互联两颗 M7 Max die，标志 Apple 正式进入 Chiplet 架构时代</li>
+        <li><strong>Siemens 工业 AI 编排软件</strong>：Intelligence Center X，支持人类与 AI Agent 在共享工作流中协同</li>
+        <li><strong>Nikon 1.5μm L/S 光刻</strong>：新型扫描光刻机实现 1.5μm 线宽/间距，瞄准先进封装与面板级封装市场</li>
+        <li><strong>IIT Delhi × Cadence AI 实验室</strong>：印度理工学院德里分校联合 Cadence 建立 AI 赋能半导体创新实验室，培养芯片设计人才</li>
+      </ul>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-141/" target="_blank">→ 阅读 SemiEngineering Week #141 完整报道</a>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Cadence Blog · 2026-06-06</div>
+      <h4>💰 Cadence 收购 Ausdia 时序约束管理方案 — TimeVision 补全 Tempus 签核平台，端到端时序闭环成形</h4>
+      <p>Cadence 正式宣布收购 <strong>Ausdia</strong>，将其旗舰产品 <strong>TimeVision 时序约束管理解决方案</strong> 整合至 Cadence Tempus 时序签核平台（2026年4月16日生效）：</p>
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>技术核心</strong>：TimeVision 融合<strong>结构分析 + 时序分析 + 形式验证</strong>三类技术，自动识别从 RTL 到签核全流程中的约束错误（缺失/错误/不一致）</li>
+        <li><strong>行业痛点</strong>：先进节点下，签核失败核心原因从工具本身转向<strong>输入时序约束质量问题</strong>；百万级时序路径的人工排查已不可行</li>
+        <li><strong>客户价值</strong>：设计早期捕获约束问题 → 避免代价高昂的流片失败；自动化约束管理减少人工调试 → 加速签核收敛</li>
+        <li><strong>战略意义</strong>：补全 Cadence 数字签核产品矩阵 — 从约束开发管理到最终 STA 签核的<strong>端到端时序闭环</strong></li>
+      </ul>
+      <a href="https://community.cadence.com/cadence_blogs_8/b/di/posts/cadence-welcomes-ausdia-and-timevision-timing-constraints-management-solution" target="_blank">→ Cadence 官方博客</a>
+      <a href="https://news.qq.com/rain/a/20260606A02XYY00" target="_blank" style="margin-left:12px;">→ 中文科技媒体报道</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-06-08 论文 &amp; 动态</h1>
+  <p class="subtitle">共 1 篇论文 · 1 条行业动态 · 来源：arXiv cs.PL + SemiEngineering</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.05680 · cs.PL · 2026-06-04 · LAD '26</div>
+      <h4>CASS-RTL: Correctness-Aware Subspace Steering for RTL Generation with LLMs</h4>
+      <p>提出首个用于发现并利用 LLMs <strong>正确性感知组件</strong>、引导 RTL 生成走向功能准确输出的框架。核心三步：(i) 识别激活模式能持续区分正确与错误 RTL 的<strong>注意力头</strong>；(ii) 构建捕获正确性相关信号的<strong>低维子空间</strong>；(iii) 轻量级几何感知干预方法在推理时引导模型。完全模型无关，无需额外监督或重新训练。<br>
+      <strong>结果</strong>：VerilogEval 上 pass@1/5/10 提升 <strong>10%–20%</strong>，CVDP 提升 <strong>5%</strong>。<strong>LAD '26 接收</strong>。<br>
+      <strong>作者</strong>：Mohammad Akyash, Nowfel Mashnoor, Kimia Azar, Hadi Kamali</p>
+      <a href="https://arxiv.org/abs/2606.05680" target="_blank">📄 arXiv</a>
+      <a class="local" href="dates/2026-06-08/2606.05680.pdf" style="margin-left:12px;">📥 本地PDF</a>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Brian Bailey · 2026-06-08</div>
+      <h4>🔄 Disturbance In Verification — Agentic AI 引发验证领域史上最大变革，验证工程师角色面临根本性重建</h4>
+      <p>SemiEngineering 资深编辑 Brian Bailey（从业30+年）深度剖析：智能体验证（Agentic Verification）正引发验证领域<strong>自行业诞生以来最大变革</strong>。核心观点：</p>
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>变革本质</strong>：验证技术史的核心是"人力成本 vs 算力成本"的权衡循环；每次都是将人力成本向算力转移</li>
+        <li><strong>Agentic冲击</strong>：工程师不再手动编写验证代码，而是向 AI 智能体下发目标并检查结果</li>
+        <li><strong>技能门槛瓦解</strong>：UVM/SystemVerilog 曾构成验证工程师核心壁垒，Agentic 验证允许通过自然语言完成工作</li>
+        <li><strong>Bailey 判断</strong>：这是他从业以来验证领域最大变革，工程师角色定位和技能要求必然发生根本性变化</li>
+      </ul>
+      <a href="https://semiengineering.com/disturbance-in-verification/" target="_blank">→ 阅读 SemiEngineering 完整评论</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
