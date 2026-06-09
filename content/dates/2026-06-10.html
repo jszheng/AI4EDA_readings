@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" "../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-06-10 论文 & 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 1 条行业动态 · 来源：arXiv cs.AR + DAC 2026</p>
+</header>
+<section>
+  <div class="abstracts">
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.08944 · cs.AR · cs.PL · 2026-06-08 · CUHK / CUHK(SZ)</div>
+      <h4>LongRTL: Graph-Similarity-Guided LLM-driven Long Context RTL Optimization</h4>
+      <p>提出<strong>LongRTL</strong>框架，解决工业级长上下文RTL设计超出LLM上下文窗口限制的核心挑战。创新性地引入<strong>三智能体协同架构</strong>：① <strong>分区智能体</strong>：基于AST图相似度匹配可复用设计模板，将长RTL代码拆分为语义独立的AST子树；② <strong>优化智能体</strong>：基于多模态检索增强生成（RAG，同时融合AST结构知识和RTL代码先验），对每个子树生成优化后RTL子模块；③ <strong>重构智能体</strong>：按逻辑依赖顺序重新组装，结合图RAG提示验证全局功能等价性。该框架填补了玩具级示例与工业级硬件代码库之间的差距，实现对长上下文RTL设计的鲁棒、结构感知优化。已被<strong>DATE 2026</strong>会议接收。<br>
+      <strong>作者</strong>：Yuyang Ye, Che-Kuan Shen, Xiangfei Hu, Yuchen Liu, Shuo Yin, Xufeng Yao, Bei Yu, Tsung-Yi Ho</p>
+      <a href="https://arxiv.org/abs/2606.08944" target="_blank">📄 arXiv</a>
+      <a class="local" href="2606.08944.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL优化</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">多智能体</span>
+      <span style="color:#f59e0b;font-size:.75rem;padding:3px 8px;border:1px solid #f59e0b;border-radius:8px;">DATE 2026</span>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.08161 · cs.LG · cs.AR · cs.NA · 2026-06-06 · 清华大学 (THU-numbda)</div>
+      <h4>AttentionCap: Transformer Based Capacitance Matrix Learning Toward Full-Chip Extraction</h4>
+      <p>提出<strong>AttentionCap</strong>，首个面向全芯片寄生参数提取的<strong>定制化Transformer模型</strong>。核心创新：①利用电容矩阵与注意力机制的内在相似性设计专用Transformer架构；②<strong>Gram表示框架</strong>适配电容提取任务；③<strong>物理对齐的对称注意力输出层</strong>保证输出电容矩阵的对称性；④<strong>归一化拉普拉斯损失函数</strong>；⑤<strong>工艺节点嵌入</strong>支持多节点联合训练。在多层多节点设置下，对未见真实设计实现<strong>自电容误差0.67%、耦合电容误差3.99%</strong>，较CNN-Cap基线自电容误差降低4.6x、耦合电容误差降低5.7x，<strong>推理速度快192x</strong>。预训练模型仅需5K样本+4K微调步数即可迁移到全新工艺节点。已被<strong>DAC 2026</strong>正式接收，代码开源。<br>
+      <strong>作者</strong>：Jiechen Huang, Hector R. Rodriguez, Dingcheng Yang, Zuochang Ye, Yibo Lin, Wenjian Yu</p>
+      <a href="https://arxiv.org/abs/2606.08161" target="_blank">📄 arXiv</a>
+      <a href="https://github.com/THU-numbda/AttentionCap" target="_blank">💻 GitHub</a>
+      <a class="local" href="2606.08161.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">寄生参数提取</span>
+      <span style="color:#f59e0b;font-size:.75rem;padding:3px 8px;border:1px solid #f59e0b;border-radius:8px;">DAC 2026</span>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>MLCAD 2026 · ASU VDA Lab · 2026-06-10</div>
+      <h4>🏆 MLCAD 2026 Beta Testcase 2 部分结果公布 — nvdla_a 60.69分暂居最高，多项设计待澄清</h4>
+      <p>MLCAD 2026 竞赛 Beta 阶段测试用例2的部分结果已公布，新增7项设计评测：<strong>nvdla_a 60.69分</strong>（已确认，当前最高）、<strong>nvdla_p 60.53分</strong>（待澄清）、<strong>aes_cipher_top 47.07分</strong>（已确认）、<strong>jpeg_encoder 38.19分</strong>（待澄清）、<strong>nvdla_c 26.91分</strong>（已确认）、<strong>ariane 25.29分</strong>（已确认）、<strong>mempool_group 11.91分</strong>（待澄清）。<strong>当前总积分领先者仍为 team_39（Beta Testcase 1 总分50.2）</strong>，最终总得分将在6月14日Testcase 3截止、6月22日结果公布后确定。</p>
+      <a href="https://asu-vda-lab.github.io/MLCAD26-Contest/" target="_blank">→ MLCAD 2026 竞赛页面</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">竞赛更新</span>
+    </div>
+  </div>
+</section>
+</body>
+</html>

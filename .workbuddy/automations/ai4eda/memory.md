@@ -1,5 +1,39 @@
 # AI4EDA Automation Memory
 
+## 2026-06-09 Execution Summary
+
+**Status:** ✅ Success
+
+**New Papers Added (3 items):**
+- RTLScout (arXiv:2606.06530) — Joint Agentic Code + Synthesis Optimization, LLM agent + PPA feedback, FP16 multiplier area -35%/delay -45%
+- MailoHLS (arXiv:2606.07246) — LLM+GNN hybrid for HLS Pragma Pareto optimization, up to 12.42x latency speedup
+- DxPTA (arXiv:2606.06515) — Optical dataflow-guided DSE for Photonic Transformer Accelerators, 15.2x faster than exhaustive
+
+**New News Added (3 items):**
+- Siemens EDA IC Forum 2026 Munich (June 9): Fuse EDA AI Agent + NemoClaw/OpenShell, Calibre AI Signoff, Questa One
+- NVIDIA NemoClaw EDA detailed deployment: Cadence RTL engineer, Ansys Icepak thermal, Siemens Fuse EDA Agent, Dassault 3DEXPERIENCE
+- Qualcomm × ByteDance AI ASIC supply deal: millions of custom inference chips
+
+**Files Updated:**
+- content/dates/2026-06-09.html — New date page with 3 papers + 3 news cards
+- content/latest/2026-06-09.html — New latest page
+- content/dates/2026-06-09/ — 3 PDF files (2606.06530, 2606.07246, 2606.06515)
+- content/news/index.html — Added June 9 section (3 cards)
+- content/news/news_memory.json — Updated: totalItems→101, lastUpdate→2026-06-09
+- manifest.js — Updated stats (papers 151, news 99, lastUpdate 2026-06-09)
+- Git pushed successfully
+
+**Key Findings:**
+- RTLScout is a significant RTL optimization paper: LLM agent + synthesis + arithmetic sweeps with PPA feedback loop
+- MailoHLS combines LLM+GNN for HLS pragma optimization — innovative hybrid approach
+- Siemens EDA IC Forum Munich today highlights Fuse EDA AI Agent as key product
+- NemoClaw detailed deployment confirms EDA is primary use case: Cadence RTL verification, Ansys Icepak thermal, Siemens multi-domain orchestration
+- Qualcomm × ByteDance deal validates AI ASIC custom chip demand → drives EDA tool demand
+- MLCAD 2026 — Beta Testcase 2 & 3 results still pending, Testcase 3 deadline June 14, Final June 22
+- ESD Alliance Executive Outlook tomorrow (June 10) — Silvaco Wally Rhines keynote
+
+**Next Check:** ESD Alliance Executive Outlook results (June 10), MLCAD Beta Testcase 3 (June 14), DAC 2026 program updates
+
 ## 2026-06-08 Execution Summary
 
 **Status:** ✅ Success

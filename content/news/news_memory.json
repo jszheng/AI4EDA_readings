@@ -1,8 +1,31 @@
 {
-  "lastUpdate": "2026-06-09",
-  "cutoffDate": "2025-12-11",
+  "lastUpdate": "2026-06-10",
+  "cutoffDate": "2025-12-13",
   "totalItems": 101,
   "items": [
+    {
+      "date": "2026-06-10",
+      "company": "MLCAD 2026 / ASU VDA Lab",
+      "title": "🏆 MLCAD 2026 竞赛 Beta Testcase 2 部分结果公布 — nvdla_a 60.69分暂居最高，Testcase 3 6月14日截止",
+      "link": "https://asu-vda-lab.github.io/MLCAD26-Contest/",
+      "keywords": [
+        "MLCAD",
+        "2026",
+        "Beta",
+        "Testcase",
+        "2",
+        "结果",
+        "nvdla_a",
+        "60.69",
+        "aes_cipher_top",
+        "mempool_group",
+        "Testcase",
+        "3",
+        "6月14日",
+        "6月22日",
+        "2026-06-10"
+      ]
+    },
     {
       "date": "2026-06-09",
       "company": "Qualcomm / ByteDance",
@@ -65,23 +88,6 @@
         "RTL",
         "验证",
         "2026-06-02"
-      ]
-    },
-    {
-      "date": "2026-05-26",
-      "company": "Qualcomm / ByteDance",
-      "title": "💰 Qualcomm × ByteDance AI ASIC 供应协议 — 数百万颗定制 AI 推理芯片，字节跳动自主 AI 算力突围",
-      "link": "https://hothardware.com/news/qualcomm-lands-bytedance-asic-deal",
-      "keywords": [
-        "Qualcomm",
-        "ByteDance",
-        "字节跳动",
-        "AI",
-        "ASIC",
-        "推理芯片",
-        "定制",
-        "数百万颗",
-        "2026-05-26"
       ]
     },
     {

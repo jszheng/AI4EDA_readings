@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" "../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🔥 2026-06-10 最新</h1>
+  <p class="subtitle">LongRTL (DATE 2026) + AttentionCap (DAC 2026) + MLCAD Beta Testcase 2 更新</p>
+</header>
+<section>
+  <h3>📄 学术论文（2篇）</h3>
+  <div class="abstracts">
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.08944 · cs.AR · cs.PL · 2026-06-08 · CUHK / CUHK(SZ)</div>
+      <h4>LongRTL: Graph-Similarity-Guided LLM-driven Long Context RTL Optimization</h4>
+      <p>三智能体协同（分区+优化+重构）实现长上下文RTL的结构感知优化，填补玩具级与工业级RTL之间的差距。DATE 2026 接收。</p>
+      <a href="https://arxiv.org/abs/2606.08944" target="_blank">📄 arXiv</a>
+    </div>
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.08161 · cs.LG · cs.AR · 2026-06-06 · 清华大学 (THU-numbda)</div>
+      <h4>AttentionCap: Transformer Based Capacitance Matrix Learning Toward Full-Chip Extraction</h4>
+      <p>定制化Transformer模型实现全芯片寄生参数提取，自电容误差0.67%，较CNN-Cap推理快192x。DAC 2026 正式接收，代码开源。</p>
+      <a href="https://arxiv.org/abs/2606.08161" target="_blank">📄 arXiv</a>
+      <a href="https://github.com/THU-numbda/AttentionCap" target="_blank">💻 GitHub</a>
+    </div>
+  </div>
+
+  <h3 style="margin-top:28px;">🌍 行业动态（1条）</h3>
+  <div class="abstracts">
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>MLCAD 2026 · ASU VDA Lab · 2026-06-10</div>
+      <h4>🏆 MLCAD 2026 Beta Testcase 2 部分结果公布 — nvdla_a 60.69分暂居最高</h4>
+      <p>新增7项设计评测公布，nvdla_a 60.69分当前最高。最终总得分等待6月14日Testcase 3截止后确定。</p>
+      <a href="https://asu-vda-lab.github.io/MLCAD26-Contest/" target="_blank">→ 竞赛页面</a>
+    </div>
+  </div>
+</section>
+</body>
+</html>
