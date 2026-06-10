@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" "../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🔥 2026-06-11 最新</h1>
+  <p class="subtitle">EstRTL (协作智能体RTL生成) + OpenRTLSet (13.1万开源Verilog数据集) + ChipAgents多智能体ASIC流程</p>
+</header>
+<section>
+  <h3>📄 学术论文（2篇）</h3>
+  <div class="abstracts">
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.09867 · cs.AR · cs.AI · 2026-06-01 · NUDT</div>
+      <h4>EstRTL: Functional Estimation Guided RTL Code Generation</h4>
+      <p>生成-估计-修正三阶段协作智能体框架，功能估计智能体静态评估后决定输出/重生成/修正，通用LLM正确性提升3.2%-9.0%，代码开源。</p>
+      <a href="https://arxiv.org/abs/2606.09867" target="_blank">📄 arXiv</a>
+    </div>
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.10285 · cs.CL · 2026-06-09 · UIUC (Deming Chen)</div>
+      <h4>OpenRTLSet: A Fully Open-Source Dataset for LLM-based Verilog Module Design</h4>
+      <p>最大全开源Verilog数据集（13.1万样本），整合GitHub+VHDL翻译+C翻译三类来源，DeepSeek-R1生成配对描述，证明开源方案可超越闭源。ICLAD'25接收。</p>
+      <a href="https://arxiv.org/abs/2606.10285" target="_blank">📄 arXiv</a>
+    </div>
+  </div>
+
+  <h3 style="margin-top:28px;">🌍 行业动态（1条）</h3>
+  <div class="abstracts">
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Ed Sperling · 2026-06-10</div>
+      <h4>🤖 Building Multi-Agent Systems For ASIC Flows — ChipAgents 分享多智能体分治ASIC流程</h4>
+      <p>ChipAgents 研究负责人 Kexun Zhang 分享如何利用多智能体系统分治IC设计问题，探讨智能体编排和协作效率。</p>
+      <a href="https://semiengineering.com/building-multi-agent-systems-for-asic-flows/" target="_blank">→ SemiEngineering</a>
+    </div>
+  </div>
+</section>
+</body>
+</html>

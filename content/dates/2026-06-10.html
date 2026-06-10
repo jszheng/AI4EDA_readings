@@ -18,7 +18,7 @@
 <body>
 <header>
   <h1>📅 2026-06-10 论文 & 动态</h1>
-  <p class="subtitle">共 2 篇论文 · 1 条行业动态 · 来源：arXiv cs.AR + DAC 2026</p>
+  <p class="subtitle">共 3 篇论文 · 2 条行业动态 · 来源：arXiv cs.AR + DAC 2026 + SemiEngineering</p>
 </header>
 <section>
   <div class="abstracts">
@@ -48,11 +48,32 @@
     </div>
 
     <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.09867 · cs.AR · cs.AI · 2026-06-10</div>
+      <h4>EstRTL: Functional Estimation Guided RTL Code Generation</h4>
+      <p>提出<strong>EstRTL</strong>——基于静态功能得分估计的LLM驱动RTL代码生成协作智能体框架。核心创新：<strong>三阶段范式</strong>（生成→估计→修正），由<strong>功能估计智能体</strong>静态评估生成代码质量，输出量化得分和需求对比，根据得分决定直接输出、重新生成或代码修正。该框架可灵活适配各类RTL生成LLM，无需重新训练模型即可提升正确性。实验表明，EstRTL可将通用LLM的RTL代码生成正确性<strong>提升3.2%~9.0%</strong>，填补了现有方法对功能正确性关注不足的空白。代码开源。<br>
+      <strong>作者</strong>：Qi Xiong, Renzhi Chen, Bowei Wang, Yuqing Xiong, Libo Huang, Lei Wang</p>
+      <a href="https://arxiv.org/abs/2606.09867" target="_blank">📄 arXiv</a>
+      <a href="https://anonymous.4open.science/status/EstRTL-E200/" target="_blank">💻 Code (OpenScience)</a>
+      <a class="local" href="2606.09867.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">功能估计</span>
+      <span style="color:#f59e0b;font-size:.75rem;padding:3px 8px;border:1px solid #f59e0b;border-radius:8px;">LLM Agent</span>
+    </div>
+
+    <div class="abs-card">
       <div class="src"><span class="dot"></span>MLCAD 2026 · ASU VDA Lab · 2026-06-10</div>
       <h4>🏆 MLCAD 2026 Beta Testcase 2 部分结果公布 — nvdla_a 60.69分暂居最高，多项设计待澄清</h4>
       <p>MLCAD 2026 竞赛 Beta 阶段测试用例2的部分结果已公布，新增7项设计评测：<strong>nvdla_a 60.69分</strong>（已确认，当前最高）、<strong>nvdla_p 60.53分</strong>（待澄清）、<strong>aes_cipher_top 47.07分</strong>（已确认）、<strong>jpeg_encoder 38.19分</strong>（待澄清）、<strong>nvdla_c 26.91分</strong>（已确认）、<strong>ariane 25.29分</strong>（已确认）、<strong>mempool_group 11.91分</strong>（待澄清）。<strong>当前总积分领先者仍为 team_39（Beta Testcase 1 总分50.2）</strong>，最终总得分将在6月14日Testcase 3截止、6月22日结果公布后确定。</p>
       <a href="https://asu-vda-lab.github.io/MLCAD26-Contest/" target="_blank">→ MLCAD 2026 竞赛页面</a>
       <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">竞赛更新</span>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Ed Sperling · ChipAgents · 2026-06-10</div>
+      <h4>🤖 Building Multi-Agent Systems For ASIC Flows — ChipAgents 探讨多智能体编排在 ASIC 设计中的核心作用</h4>
+      <p>SemiEngineering 主编 Ed Sperling 专访 ChipAgents 研究负责人 <strong>Kexun Zhang</strong>，深入探讨多智能体系统在 ASIC 设计流程中的应用。核心观点：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>多智能体加速前提</strong>：多个 AI 智能体确实可以更快解决问题，但前提是每个智能体有<strong>明确定义的角色和目标</strong>，否则反而可能出现效率损耗</li><li><strong>编排器（Orchestrator）的核心作用</strong>：编排器是多智能体系统的关键组件，负责分配角色、协调协作流程、避免任务冲突</li><li><strong>问题拆解策略</strong>：复杂 IC 设计问题需合理拆解为边界清晰的子任务，才能匹配不同智能体能力，实现"分而治之"</li></ul>
+      <a href="https://semiengineering.com/building-multi-agent-systems-for-asic-flows/" target="_blank">→ 阅读 SemiEngineering 完整文章</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span>
     </div>
   </div>
 </section>

@@ -21,15 +21,16 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-10 · 涵盖 2025-12 → 2026-06-10 · 已去重整理</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-11 · 涵盖 2025-12 → 2026-06-10 · 已去重整理</p>
   <div class="stats">
     <div class="stat"><div class="num">153</div><div class="label">论文收录</div></div>
     <div class="stat"><div class="num">64</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">101</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">102</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
   <a href="#2026-06-10">260610 🏆 MLCAD 2026 Beta Testcase 2 结果公布</a>
+  <a href="#2026-06-10b">260610 🤖 多智能体系统用于ASIC流程 — ChipAgents</a>
   <a href="#2026-06-09">260609 🏢 Siemens EDA IC Forum 慕尼黑</a>
   <a href="#2026-06-09b">260609 🔧 NVIDIA NemoClaw EDA深度落地</a>
   <a href="#2026-06-09c">260609 💰 Qualcomm × ByteDance AI ASIC</a>
@@ -90,11 +91,11 @@
 <div class="container">
 
 <section id="2026-06-10">
-  <div class="section-title"><span class="icon">🏆</span> 2026-06-10 <span class="badge-new">1条新闻</span> <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🏆</span> 2026-06-10 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
   <div class="date-group">
     <div class="date-header" onclick="toggleDate(this)">
-      <h3>2026-06-10 行业动态（1条）</h3>
-      <span class="badge-count">1</span>
+      <h3>2026-06-10 行业动态（2条）</h3>
+      <span class="badge-count">2</span>
       <span class="toggle">▼</span>
     </div>
     <div class="date-body">
@@ -104,6 +105,13 @@
       <h4 id="2026-06-10">🏆 MLCAD 2026 Beta Testcase 2 部分结果公布 — nvdla_a 60.69分暂居最高，多项设计评测待澄清，Testcase 3 6月14日截止</h4>
       <p>MLCAD 2026 竞赛 Beta 阶段<strong>测试用例2（Testcase 2）</strong>的部分结果已公布，新增7项设计评测：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>已确认结果</strong>：nvdla_a 60.6854分（当前最高）、aes_cipher_top 47.0726分、ariane 25.2867分、nvdla_c 26.9085分</li><li><strong>待澄清结果</strong>：nvdla_p 60.5264分、jpeg_encoder 38.1876分、mempool_group 11.9135分</li><li><strong>当前领先格局</strong>：team_39 凭借 Testcase 1（总分50.2）仍居积分榜第一，但 Testcase 2 最新数据可能改写排名</li><li><strong>后续节点</strong>：Testcase 3 6月14日提交截止 → 6月22日最终结果公布 → 7月26日 DAC 2026 长滩颁奖</li><li><strong>参赛规模</strong>：全球46支队伍，46进1决赛将在7月22日举行</li></ul>
       <a href="https://asu-vda-lab.github.io/MLCAD26-Contest/" target="_blank">→ MLCAD 2026 竞赛页面</a>
+    </div>
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Ed Sperling · ChipAgents · 2026-06-10</div>
+      <h4 id="2026-06-10b">🤖 Building Multi-Agent Systems For ASIC Flows — ChipAgents 研究负责人详解多智能体编排在 ASIC 设计中的核心作用</h4>
+      <p>SemiEngineering 主编 Ed Sperling 专访 ChipAgents 研究负责人 <strong>Kexun Zhang</strong>，围绕多智能体系统在 ASIC 设计流程中的应用展开深度讨论：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>核心结论</strong>：多个 AI 智能体确实可以比单个智能体更快解决问题，但前提是每个智能体有<strong>明确定义的角色和目标</strong>，否则多智能体协作反而可能出现效率损耗</li><li><strong>编排器的关键地位</strong>：调度器（Orchestrator）是多智能体 AI 系统的核心组件，负责为不同智能体分配角色、协调协作流程、避免任务冲突和资源浪费</li><li><strong>问题拆解策略</strong>：复杂 IC 设计问题需要合理拆解为多个边界清晰的子任务，匹配不同智能体的能力，实现"分而治之"的规模化效果</li><li><strong>技术背景</strong>：ChipAgents 是专注于芯片设计与验证的 Agentic AI 平台，此前已在 DVCon 2026 上推出了业界首个多智能体团队驱动的根因分析（RCA）功能</li><li><strong>AI for EDA 相关性</strong>：多智能体编排是大规模 ASIC 设计流程中 LLM Agent 落地的核心技术挑战，直接影响从 RTL 生成到验证闭环的全流程效率</li></ul>
+      <a href="https://semiengineering.com/building-multi-agent-systems-for-asic-flows/" target="_blank">→ 阅读 SemiEngineering 完整访谈</a>
+      <a href="https://chipagents.ai/" target="_blank" style="margin-left:12px;">→ ChipAgents 官网</a>
     </div>
       </div>
     </div>

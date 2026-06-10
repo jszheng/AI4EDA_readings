@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" "../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-06-11 论文 & 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 1 条行业动态 · 来源：arXiv cs.AR + SemiEngineering</p>
+</header>
+<section>
+  <div class="abstracts">
+    <!-- ========== 2606.09867 EstRTL ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.09867 · cs.AR · cs.AI · 2026-06-01 · NUDT 国防科技大学</div>
+      <h4>EstRTL: Functional Estimation Guided RTL Code Generation</h4>
+      <p>提出<strong>EstRTL</strong>，基于静态功能得分估计的LLM驱动RTL代码生成协作智能体框架。采用<strong>生成-估计-修正三阶段范式</strong>：功能估计智能体对生成代码进行静态评估，基于得分和评估结果决定直接输出、返回重新生成或转发给代码修正智能体。该框架可应用于各类面向RTL代码生成的LLM，进一步提升生成代码的功能正确性；同时通过量化得分和可读的需求对比结果提升AI辅助RTL代码生成的透明度。实验表明，EstRTL使通用LLM的RTL代码生成<strong>正确性提升3.2%-9.0%</strong>，代码已开源。<br>
+      <strong>作者</strong>：Qi Xiong, Renzhi Chen, Bowei Wang, Yuqing Xiong, Libo Huang, Lei Wang</p>
+      <a href="https://arxiv.org/abs/2606.09867" target="_blank">📄 arXiv</a>
+      <a class="local" href="2606.09867_EstRTL.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">多智能体</span>
+    </div>
+
+    <!-- ========== 2606.10285 OpenRTLSet ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.10285 · cs.CL · 2026-06-09 · UIUC (Deming Chen)</div>
+      <h4>OpenRTLSet: A Fully Open-Source Dataset for Large Language Model-based Verilog Module Design</h4>
+      <p>发布面向硬件设计领域<strong>最大的全开源数据集</strong>，提供超过<strong>13.1万份</strong>多样化Verilog代码样本，整合三类无专有使用限制资源：10.2万份GitHub Verilog模块、5千份VHDL翻译模块、2.4万份可综合C/C++翻译模块。使用DeepSeek-R1为每个样本生成配对自然语言描述，支持Qwen/Granite等多模型家族微调。探索多种优化：Verilator生成C++作为标注上下文、INT4 vs BF16量化、7B-32B参数量级差异。实验证明<strong>开源方案在硬件设计任务中可实现更优性能</strong>，为可访问研究和商业应用建立新基础。已被<strong>ICLAD'25</strong>接收。<br>
+      <strong>作者</strong>：Jinghua Wang, Lily Jiaxin Wan, Sanjana Pingali, Scott Smith, Manvi Jha, Shalini Sivakumar, Xing Zhao, Kaiwen Cao, Deming Chen</p>
+      <a href="https://arxiv.org/abs/2606.10285" target="_blank">📄 arXiv</a>
+      <a class="local" href="2606.10285_OpenRTLSet.pdf">📥 本地PDF</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span>
+      <span style="color:#22c55e;font-size:.75rem;padding:3px 8px;border:1px solid #22c55e;border-radius:8px;">数据集</span>
+      <span style="color:#f59e0b;font-size:.75rem;padding:3px 8px;border:1px solid #f59e0b;border-radius:8px;">ICLAD'25</span>
+    </div>
+
+    <!-- ========== SemiEngineering Multi-Agent Systems ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Ed Sperling · 2026-06-10</div>
+      <h4>🤖 Building Multi-Agent Systems For ASIC Flows — ChipAgents 分享多智能体系统分治ASIC设计流程</h4>
+      <p>SemiEngineering 主编 Ed Sperling 报道，<strong>ChipAgents</strong> 研究负责人 Kexun Zhang 分享如何利用多智能体系统<strong>分治IC设计问题</strong>。文章探讨多智能体协作相比单智能体在解决复杂ASIC设计流程中的优势，以及智能体编排（orchestrator）在多智能体系统中的关键作用。如何将复杂问题拆解，最大化多智能体协作效率，解决原本需要大量资深工程师才能处理的复杂设计任务。标签涵盖：<strong>agent orchestration、agentic AI、LLMs、multi-agent systems</strong>。</p>
+      <a href="https://semiengineering.com/building-multi-agent-systems-for-asic-flows/" target="_blank">→ SemiEngineering 原文</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Agentic EDA</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">ChipAgents</span>
+    </div>
+  </div>
+</section>
+</body>
+</html>
