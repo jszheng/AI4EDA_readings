@@ -18,10 +18,22 @@
 <body>
 <header>
   <h1>📅 2026-06-11 论文 & 动态</h1>
-  <p class="subtitle">共 2 篇论文 · 1 条行业动态 · 来源：arXiv cs.AR + SemiEngineering</p>
+  <p class="subtitle">共 3 篇论文 · 2 条行业动态 · 来源：arXiv cs.AR + cs.LG + SemiEngineering</p>
 </header>
 <section>
   <div class="abstracts">
+    <!-- ========== 2606.11247 Physics-Informed GenAI ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.11247 · cs.LG · cs.AR · 2026-06-11 · University of British Columbia</div>
+      <h4>Physics-informed generative AI for semiconductor manufacturing: Enforcing hard physical constraints in generative models by construction</h4>
+      <p>系统综述生成式AI在<strong>半导体制造中物理约束执行</strong>的技术框架。针对生成式AI在掩模、布局、缺陷数据生成中必须满足严格物理约束的需求，提出应从<strong>架构层面原生嵌入物理约束</strong>而非事后过滤。梳理了物理信息扩散模型、PDE约束变分模型、守恒律生成网络等工具集，提出生成模型与物理仿真器的<strong>4种集成模式</strong>（内嵌、共训练、混合、判别器引导），以及物理保真度基准、可微仿真器基础设施、物理设计多模态基础模型等研究方向。论证原生嵌入物理约束的架构在物理有效性为首要目标的场景下性能更优，对AI辅助EDA后端物理设计具有重要指导意义。<br>
+      <strong>作者</strong>：Yaser Mike Banad, Sarah Sharif</p>
+      <a href="https://arxiv.org/abs/2606.11247" target="_blank">📄 arXiv</a>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">物理设计</span>
+      <span style="color:#f59e0b;font-size:.75rem;padding:3px 8px;border:1px solid #f59e0b;border-radius:8px;">生成式AI</span>
+      <span style="color:#8b5cf6;font-size:.75rem;padding:3px 8px;border:1px solid #8b5cf6;border-radius:8px;">制造</span>
+    </div>
+
     <!-- ========== 2606.09867 EstRTL ========== -->
     <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv:2606.09867 · cs.AR · cs.AI · 2026-06-01 · NUDT 国防科技大学</div>
@@ -55,6 +67,16 @@
       <a href="https://semiengineering.com/building-multi-agent-systems-for-asic-flows/" target="_blank">→ SemiEngineering 原文</a>
       <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Agentic EDA</span>
       <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">ChipAgents</span>
+    </div>
+
+    <!-- ========== SemiEngineering Can AI Create Missing Models ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Brian Bailey · 2026-06-11</div>
+      <h4>🤖 Can AI Create Missing Models? — Brian Bailey 深度剖析 AI 在 EDA 模型构建中的能力与局限</h4>
+      <p>SemiEngineering EDA技术编辑 <strong>Brian Bailey</strong> 撰文深度探讨 AI 在解决 EDA 流程中模型创建、维护成本高的问题上的能力与边界。涵盖 AI 在模拟混合信号行为建模（仿真从数周→数小时）、数字后端 PPA 优化（DSO.ai/Cerebrus RL）、验证流程（LLM生成验证计划/断言/PSS模型）三大应用场景，分析了两大路线分歧（精度分层 vs 端到端），以及数据缺陷/物理意识不足/持续维护成本/能耗等关键局限。多位行业专家（Normal Computing/Synopsys/Keysight/Southampton）提供权威观点。</p>
+      <a href="https://semiengineering.com/can-ai-create-missing-models/" target="_blank">→ SemiEngineering 原文</a>
+      <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI模型</span>
+      <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">SemiEngineering</span>
     </div>
   </div>
 </section>

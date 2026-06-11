@@ -21,16 +21,17 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-12 · 涵盖 2025-12 → 2026-06-11 · 已去重整理</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-12 · 涵盖 2025-12 → 2026-06-11 · 已去重整理 · 新增 Brian Bailey "AI创建EDA模型"深度分析</p>
   <div class="stats">
     <div class="stat"><div class="num">155</div><div class="label">论文收录</div></div>
     <div class="stat"><div class="num">65</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">104</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">105</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
   <a href="#2026-06-11">260611 🌐 Agentic AI 重塑数据中心架构 — SemiEngineering</a>
   <a href="#2026-06-11b">260611 🇨🇳 华大九天 Chiplet EDA 全流程重大突破</a>
+  <a href="#2026-06-11c">260611 🤖 AI创建EDA模型的能力与局限 — Brian Bailey</a>
   <a href="#2026-06-10">260610 🏆 MLCAD 2026 Beta Testcase 2 结果公布</a>
   <a href="#2026-06-10b">260610 🤖 多智能体系统用于ASIC流程 — ChipAgents</a>
   <a href="#2026-06-09">260609 🏢 Siemens EDA IC Forum 慕尼黑</a>
@@ -93,11 +94,11 @@
 <div class="container">
 
 <section id="2026-06-11">
-  <div class="section-title"><span class="icon">🌐</span> 2026-06-11 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🌐</span> 2026-06-11 <span class="badge-new">3条新闻</span> <span class="line"></span></div>
   <div class="date-group">
     <div class="date-header" onclick="toggleDate(this)">
-      <h3>2026-06-11 行业动态（2条）</h3>
-      <span class="badge-count">2</span>
+      <h3>2026-06-11 行业动态（3条）</h3>
+      <span class="badge-count">3</span>
       <span class="toggle">▼</span>
     </div>
     <div class="date-body">
@@ -114,6 +115,12 @@
       <p>华大九天 6月9日在投资者互动平台宣布国产 EDA 在 Chiplet 领域的里程碑式突破：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>先进封装 EDA 全流程</strong>：平台已全面具备支撑<strong>高端 AI 芯片、GPU、高性能处理器芯片等 Chiplet 芯粒设计</strong>的能力，是目前<strong>国内唯一</strong>覆盖异构集成三维芯片协同设计到验证全流程的 EDA 提供商</li><li><strong>Argus 3DIC 物理验证平台</strong>：首款 3DIC 物理验证产品，全面支持 2.5D/3D 异构集成封装设计，独创 <strong>3D 数据编织技术</strong>可一次性完成全量 3D 数据验证，大幅缩短高端 3D 堆叠芯片全链路验证周期</li><li><strong>Storm 先进封装设计平台</strong>：由原自动布线工具升级而来，支持硅基/有机 RDL 工艺，以及硅桥+RDL 异构整合等新工艺，可实现多芯片间大规模互联布线</li><li><strong>企业实力</strong>：2025年营收 13.25 亿元（EDA 软件销售占比 81.1%），研发投入占比高达 64.84%，服务国内超 700 家客户</li><li><strong>AI for EDA 相关性</strong>：国产 EDA 在 Chiplet/3DIC 领域实现全流程闭环，标志着中国 EDA 在 AI 芯片设计基础设施上迈出关键一步，直接支撑国内 AI 芯片和 Chiplet 生态的 EDA 自主化</li></ul>
       <a href="https://finance.sina.com.cn/tech/discovery/2026-06-10/doc-iniavfsr5046912.shtml" target="_blank">→ 快科技/新浪财经报道</a>
       <a href="http://www.zqrb.cn/gscy/ggkx/2026-06-09/A1780993224073.html" target="_blank" style="margin-left:12px;">→ 证券日报报道</a>
+    </div>
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Brian Bailey · 2026-06-11</div>
+      <h4 id="2026-06-11c">🤖 AI 能否解决 EDA 模型"缺失"之痛？— Brian Bailey 深度剖析 AI 在模型构建中的能力与局限</h4>
+      <p>SemiEngineering EDA技术编辑 <strong>Brian Bailey</strong> 撰文深度探讨 AI 是否能解决 EDA 流程中模型创建成本高、维护难的问题：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>核心痛点</strong>：传统 EDA 模型（行为级模型、架构性能模型、测试平台模型等）的创建、验证、维护成本极高，导致很多先进流程因模型成本过高被放弃，业界普遍认为短期内无法实现从规格直接到流片</li><li><strong>AI 应用进展</strong>：AI 已在模拟混合信号行为建模（仿真从数周压缩到数小时）、数字后端 PPA 优化（RL 工具如 DSO.ai/Cerebrus 通过数千次试验学习最优配置）、验证流程（LLM 生成验证计划、断言、PSS 模型）等场景展现降本提效价值</li><li><strong>核心争议</strong>：行业存在两种路线分歧——一派认为应构建不同精度层级的模型按需选择（规划用高精度，实现用中精度，分析用低精度），另一派认为应端到端训练直接拟合物理过程，跳过中间代理模型</li><li><strong>AI 模型的局限</strong>：训练数据覆盖不足会导致关键故障场景静默出错（如 DRAM 时序违规 corner case 在常规仿真中占比极低）；LLM 生成的 RTL 缺乏时序收敛、复位策略等物理实现意识；AI 模型需持续维护（PDK 更新导致重训练）；能耗成本尚未有严谨量化研究</li><li><strong>行业共识</strong>：Normal Computing 专家强调行为模型是最终结果的代理，强化学习能获得更优起始点；Synopsys 专家建议智能体应根据目标选择合适精度模型避免资源浪费；Simon Davidmann 强调没有确定性验证环节的 AI 生成流程不是生产流程，只是研究原型</li><li><strong>AI for EDA 相关性</strong>：该文系统梳理了 AI 在 EDA 模型构建全流程的能力边界，是了解 AI for EDA 落地现状与挑战的权威参考</li></ul>
+      <a href="https://semiengineering.com/can-ai-create-missing-models/" target="_blank">→ 阅读 SemiEngineering 完整分析</a>
     </div>
       </div>
     </div>

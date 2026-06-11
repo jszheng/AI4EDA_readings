@@ -1,8 +1,31 @@
 {
   "lastUpdate": "2026-06-12",
   "cutoffDate": "2025-12-14",
-  "totalItems": 104,
+  "totalItems": 105,
   "items": [
+    {
+      "date": "2026-06-11",
+      "company": "SemiEngineering / Brian Bailey",
+      "title": "🤖 AI 能否解决 EDA 模型\"缺失\"之痛？— Brian Bailey 深度剖析 AI 在模型构建中的能力与局限",
+      "link": "https://semiengineering.com/can-ai-create-missing-models/",
+      "keywords": [
+        "SemiEngineering",
+        "Brian Bailey",
+        "AI",
+        "EDA",
+        "模型",
+        "行为模型",
+        "代理模型",
+        "DSO.ai",
+        "Cerebrus",
+        "强化学习",
+        "LLM",
+        "RTL",
+        "验证",
+        "物理约束",
+        "2026-06-11"
+      ]
+    },
     {
       "date": "2026-06-11",
       "company": "SemiEngineering / Ann Mutschler",
