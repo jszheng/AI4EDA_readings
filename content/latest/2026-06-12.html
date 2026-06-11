@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🔥 2026-06-12 最新</h1>
+  <p class="subtitle">共 0 篇论文 · 2 条行业动态 · 来源：SemiEngineering + 华大九天/快科技</p>
+</header>
+<section>
+  <div class="abstracts">
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Ann Mutschler · 2026-06-11</div>
+      <h4>🌐 Agentic AI 正在重塑数据中心芯片架构</h4>
+      <p>Agentic AI 时代数据中心芯片架构范式转移：独立 GPU 正被集成 CPU/GPU/NPU 的<strong>异构 SoC 和 Chiplet</strong> 替代，CPU 角色重新崛起负责编排推理循环。PCIe 需求爆发（100+ 通道），验证复杂度剧增需同时应对功能/性能验证和 3D-IC 热管理，安全新挑战需硬件层内置访问控制。</p>
+      <a href="https://semiengineering.com/agentic-ai-is-changing-data-center-architectures/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>华大九天 · 快科技/证券日报 · 2026-06-09（6月10-11日广泛报道）</div>
+      <h4>🇨🇳 华大九天先进封装 EDA 平台实现重大突破 — Chiplet 设计全流程</h4>
+      <p>国产 EDA 里程碑：华大九天先进封装 EDA 平台已全面具备支撑<strong>高端 AI 芯片、GPU、Chiplet 芯粒设计</strong>能力，为<strong>国内唯一</strong>覆盖异构集成三维芯片协同设计到验证全流程的 EDA 提供商。推出首款 <strong>Argus 3DIC 物理验证平台</strong>（3D 数据编织技术大幅缩短验证周期）和 <strong>Storm 先进封装设计平台</strong>。2025年营收 13.25 亿元，研发投入占比 64.84%。</p>
+      <a href="https://finance.sina.com.cn/tech/discovery/2026-06-10/doc-iniavfsr5046912.shtml" target="_blank">→ 快科技/新浪财经报道</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="http://www.zqrb.cn/gscy/ggkx/2026-06-09/A1780993224073.html" target="_blank">→ 证券日报报道</a>
+    </div>
+  </div>
+</section>
+</body>
+</html>

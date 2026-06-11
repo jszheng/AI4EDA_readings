@@ -1,8 +1,53 @@
 {
-  "lastUpdate": "2026-06-11",
-  "cutoffDate": "2025-12-13",
-  "totalItems": 102,
+  "lastUpdate": "2026-06-12",
+  "cutoffDate": "2025-12-14",
+  "totalItems": 104,
   "items": [
+    {
+      "date": "2026-06-11",
+      "company": "SemiEngineering / Ann Mutschler",
+      "title": "🌐 Agentic AI 正在重塑数据中心芯片架构 — 异构 SoC/Chiplet 替代独立 GPU，CPU 角色重新崛起，验证复杂度剧增",
+      "link": "https://semiengineering.com/agentic-ai-is-changing-data-center-architectures/",
+      "keywords": [
+        "SemiEngineering",
+        "Ann Mutschler",
+        "Agentic AI",
+        "数据中心",
+        "Chiplet",
+        "异构SoC",
+        "CPU",
+        "GPU",
+        "NPU",
+        "PCIe",
+        "验证",
+        "3D-IC",
+        "HBM",
+        "热管理",
+        "2026-06-11"
+      ]
+    },
+    {
+      "date": "2026-06-09",
+      "company": "华大九天",
+      "title": "🇨🇳 华大九天先进封装 EDA 平台重大突破 — 打通 Chiplet 设计全流程，推出国内首款 Argus 3DIC 物理验证平台",
+      "link": "https://finance.sina.com.cn/tech/discovery/2026-06-10/doc-iniavfsr5046912.shtml",
+      "keywords": [
+        "华大九天",
+        "先进封装",
+        "EDA",
+        "Chiplet",
+        "3DIC",
+        "Argus",
+        "物理验证",
+        "Storm",
+        "RDL",
+        "全流程",
+        "国产替代",
+        "AI芯片",
+        "GPU",
+        "2026-06-09"
+      ]
+    },
     {
       "date": "2026-06-10",
       "company": "SemiEngineering / ChipAgents",

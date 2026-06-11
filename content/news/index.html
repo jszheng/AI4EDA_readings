@@ -21,14 +21,16 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-11 · 涵盖 2025-12 → 2026-06-10 · 已去重整理</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-12 · 涵盖 2025-12 → 2026-06-11 · 已去重整理</p>
   <div class="stats">
-    <div class="stat"><div class="num">153</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">64</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">102</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">155</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">65</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">104</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-06-11">260611 🌐 Agentic AI 重塑数据中心架构 — SemiEngineering</a>
+  <a href="#2026-06-11b">260611 🇨🇳 华大九天 Chiplet EDA 全流程重大突破</a>
   <a href="#2026-06-10">260610 🏆 MLCAD 2026 Beta Testcase 2 结果公布</a>
   <a href="#2026-06-10b">260610 🤖 多智能体系统用于ASIC流程 — ChipAgents</a>
   <a href="#2026-06-09">260609 🏢 Siemens EDA IC Forum 慕尼黑</a>
@@ -89,6 +91,34 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-06-11">
+  <div class="section-title"><span class="icon">🌐</span> 2026-06-11 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-06-11 行业动态（2条）</h3>
+      <span class="badge-count">2</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Ann Mutschler · 2026-06-11</div>
+      <h4 id="2026-06-11">🌐 Agentic AI 正在重塑数据中心芯片架构 — 异构 SoC/Chiplet 替代独立 GPU，CPU 角色重新崛起</h4>
+      <p>SemiEngineering 高级执行编辑 <strong>Ann Mutschler</strong> 撰文深度分析智能体 AI 时代数据中心芯片架构的范式转变：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>架构范式转移</strong>：独立 GPU 正被集成了 CPU/GPU/NPU 的<strong>异构 SoC 和 Chiplet</strong> 替代，通过统一内存和更紧密耦合消除内存瓶颈、降低延迟、提升效率</li><li><strong>CPU 角色重新崛起</strong>：Agentic AI 需要 CPU 负责长周期推理循环编排、上下文管理、内存和数据移动，GPU 仅承担最重数值计算，CPU 重要性显著回升</li><li><strong>互联需求爆发</strong>：PCIe 需求从 GPU-CPU 简单连接升级为 CPU-GPU-外设（网卡/SSD）高频多向交互，部分芯片设计需要<strong>100+条 PCIe 通道</strong>（传统 AI 训练场景的 5 倍）</li><li><strong>验证复杂度剧增</strong>：异构 Chiplet 芯片需同时完成功能验证和性能验证，还要应对 3D-IC 堆叠、HBM 热管理、物理效应问题，大规模仿真和原型验证需求显著增加</li><li><strong>安全新挑战</strong>：Agentic AI 的自主性带来安全风险，需在硬件层内置安全访问控制和安全/可靠性监控模块，防止 AI 智能体访问未授权数据或执行不可信代码</li><li><strong>AI for EDA 相关性</strong>：Agentic AI 驱动的芯片架构变革直接推动多物理场 Chiplet 设计、异构验证、PCIe/CXL/UCIe 互连优化等 EDA 工具链的新需求爆发</li></ul>
+      <a href="https://semiengineering.com/agentic-ai-is-changing-data-center-architectures/" target="_blank">→ 阅读 SemiEngineering 完整分析</a>
+    </div>
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>华大九天 · 快科技/证券日报 · 2026-06-09（6月10-11日广泛报道）</div>
+      <h4 id="2026-06-11b">🇨🇳 华大九天先进封装 EDA 平台实现重大突破 — 打通 Chiplet 设计全流程，推出国内首款 Argus 3DIC 物理验证平台</h4>
+      <p>华大九天 6月9日在投资者互动平台宣布国产 EDA 在 Chiplet 领域的里程碑式突破：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>先进封装 EDA 全流程</strong>：平台已全面具备支撑<strong>高端 AI 芯片、GPU、高性能处理器芯片等 Chiplet 芯粒设计</strong>的能力，是目前<strong>国内唯一</strong>覆盖异构集成三维芯片协同设计到验证全流程的 EDA 提供商</li><li><strong>Argus 3DIC 物理验证平台</strong>：首款 3DIC 物理验证产品，全面支持 2.5D/3D 异构集成封装设计，独创 <strong>3D 数据编织技术</strong>可一次性完成全量 3D 数据验证，大幅缩短高端 3D 堆叠芯片全链路验证周期</li><li><strong>Storm 先进封装设计平台</strong>：由原自动布线工具升级而来，支持硅基/有机 RDL 工艺，以及硅桥+RDL 异构整合等新工艺，可实现多芯片间大规模互联布线</li><li><strong>企业实力</strong>：2025年营收 13.25 亿元（EDA 软件销售占比 81.1%），研发投入占比高达 64.84%，服务国内超 700 家客户</li><li><strong>AI for EDA 相关性</strong>：国产 EDA 在 Chiplet/3DIC 领域实现全流程闭环，标志着中国 EDA 在 AI 芯片设计基础设施上迈出关键一步，直接支撑国内 AI 芯片和 Chiplet 生态的 EDA 自主化</li></ul>
+      <a href="https://finance.sina.com.cn/tech/discovery/2026-06-10/doc-iniavfsr5046912.shtml" target="_blank">→ 快科技/新浪财经报道</a>
+      <a href="http://www.zqrb.cn/gscy/ggkx/2026-06-09/A1780993224073.html" target="_blank" style="margin-left:12px;">→ 证券日报报道</a>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-06-10">
   <div class="section-title"><span class="icon">🏆</span> 2026-06-10 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
