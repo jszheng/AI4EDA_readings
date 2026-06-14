@@ -2,6 +2,40 @@
 
 **Status:** ✅ Success
 
+**New Paper Added (1 item):**
+- Alpha-RTL (arXiv:2606.05253) — Peilong Zhou, Ying Wang (CAS) — First per-design test-time training framework (TTT-RTL) closing the loop between LLM policy and EDA pipeline for RTL optimization; PPA product reduced 65.1% on RTLLM v2.0; 59.4% ADP reduction on Xuantie C910 FPU; adaptive KL budget controller for stable policy updates
+
+**New News Added (1 item):**
+- Cadence × Intel Foundry multi-year DTCO partnership — Agentic AI-driven EDA + Design IP for Intel 14A process optimization, targeting HPC and mobile designs (announced June 8, widely reported June 8-11)
+
+**Files Updated:**
+- content/dates/2026-06-15.html — Added Alpha-RTL paper + Cadence×Intel 14A news (now 1 paper + 2 news)
+- content/latest/2026-06-15.html — Updated with Alpha-RTL + Cadence×Intel news
+- content/dates/2026-06-15/ — 1 new PDF (2606.05253_Alpha-RTL)
+- content/news/index.html — Added Cadence×Intel 14A card in June 8 section (now 2 items)
+- content/news/news_memory.json — Added 2 items (Alpha-RTL + Cadence×Intel 14A), totalItems→107
+- content/categories/rtl.html — Added Alpha-RTL (54 papers now)
+- content/categories/agent.html — Added Alpha-RTL (17 papers now)
+- manifest.js — Updated stats (papers 157, batches 67, news 107, lastUpdate 2026-06-15)
+- Git pushed successfully
+
+**Key Findings:**
+- Alpha-RTL is a landmark paper for RTL generation: first test-time training framework for per-design RTL optimization, demonstrating that LLMs can go beyond functional correctness to physical-level optimization when given EDA feedback loops
+- Cadence × Intel 14A DTCO partnership extends Agentic AI from design tools to foundry collaboration, showing the industry trend toward AI-driven co-optimization of process and design
+- Si2 AI for EDA Ontology (already added in earlier run on June 15) — Apache 2.0 ontology + MCP server for formal EDA reasoning
+- MLCAD 2026 Testcase 3 deadline is June 18 (not June 14 as previously recorded), final results June 25
+- No new SemiEngineering articles since June 11; WIR #143 expected around June 19
+- arXiv cs.AR June 12-15 had no new AI4EDA papers (weekend + no relevant new submissions)
+- DAC 2026 registration open (July 26-29, Long Beach)
+
+**Next Check:** MLCAD Testcase 3 deadline (June 18), SemiEngineering WIR #143 (~June 19), DAC 2026 program updates, Synopsys/Cadence/Siemens EDA new product announcements
+
+---
+
+## 2026-06-15 Execution Summary (earlier run)
+
+**Status:** ✅ Success
+
 **New News Added (1 item):**
 - Si2 AI for EDA Ontology — Si2 (Siemens EDA/Synopsys/Qualcomm/NXP/IBM/ASU/Drexel/NCSU) — Industry's first formal EDA domain ontology for AI agents; Apache 2.0 open source; includes MCP server for agent discovery & reasoning; GitHub: si2org/AIML_Schema_Ontology (from WIR #142, June 12)
 
