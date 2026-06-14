@@ -1,8 +1,52 @@
 {
   "lastUpdate": "2026-06-15",
   "cutoffDate": "2025-12-17",
-  "totalItems": 106,
+  "totalItems": 107,
   "items": [
+    {
+      "date": "2026-06-15",
+      "company": "Alpha-RTL / arXiv",
+      "title": "📄 Alpha-RTL: 测试时训练实现 RTL 硬件优化 — 首个 LLM+EDA 反馈闭环框架，PPA 乘积降低 65.1%",
+      "link": "https://arxiv.org/abs/2606.05253",
+      "keywords": [
+        "Alpha-RTL",
+        "TTT-RTL",
+        "测试时训练",
+        "RTL",
+        "LLM",
+        "EDA",
+        "反馈闭环",
+        "PPA",
+        "65.1%",
+        "强化学习",
+        "RTLLM",
+        "v2.0",
+        "2026-06-03"
+      ]
+    },
+    {
+      "date": "2026-06-08",
+      "company": "Cadence / Intel Foundry",
+      "title": "🔧 Cadence × Intel Foundry 深化多年期 DTCO 合作 — Agentic AI 驱动 EDA + 设计 IP 推进 Intel 14A",
+      "link": "https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-announces-collaboration-with-intel-foundry-to-accelerate.html",
+      "keywords": [
+        "Cadence",
+        "Intel",
+        "Foundry",
+        "14A",
+        "DTCO",
+        "Agentic",
+        "AI",
+        "EDA",
+        "设计IP",
+        "多年期",
+        "HPC",
+        "移动",
+        "PPA",
+        "PDK",
+        "2026-06-08"
+      ]
+    },
     {
       "date": "2026-06-12",
       "company": "Si2 / Siemens EDA / Synopsys / Qualcomm / NXP / IBM / ASU / Drexel / NCSU",

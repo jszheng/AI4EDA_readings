@@ -18,10 +18,36 @@
 <body>
 <header>
   <h1>📅 2026-06-15 论文 & 动态</h1>
-  <p class="subtitle">共 0 篇论文 · 1 条行业动态 · 来源：SemiEngineering WIR #142 → Si2 AI for EDA Ontology</p>
+  <p class="subtitle">共 1 篇论文 · 2 条行业动态 · 来源：arXiv + Cadence/Intel + Si2</p>
 </header>
 <section>
   <div class="abstracts">
+    <!-- ========== Alpha-RTL Paper ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.05253 · cs.LG / cs.AR · 2026-06-03</div>
+      <h4>Alpha-RTL: Test-Time Training for RTL Hardware Optimization</h4>
+      <p><strong>作者：</strong>Peilong Zhou, Zhirong Chen, Cangyuan Li, Haoyu Gao, Kaiyan Chang, Ziming Qu, Ying Wang</p>
+      <p>提出 <strong>TTT-RTL</strong>（Test-Time Training for RTL），据我们所知，这是首个针对每个设计的测试时训练框架，实现了 LLM 策略与 RTL 优化 EDA 流程之间的闭环。TTT-RTL 采样候选实现，通过语法检查和仿真验证，使用综合得到的 PPA 乘积评分，通过 PUCT 索引的设计状态池复用高奖励变体，并通过熵策略梯度目标更新策略。在 RTLLM v2.0 基准上，TTT-RTL 相比参考设计的 PPA 乘积几何平均值降低了 <strong>65.1%</strong>，优于最强冻结策略智能体基线（26.1%）。在玄铁 C910 FPU 前导零预测单元上实现 <strong>59.4%</strong> ADP 降低。这表明结合可执行 EDA 反馈的测试时训练可以让基于 LLM 的 RTL 生成超越功能正确性，实现物理层面优化。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">测试时训练</span>
+        <span class="tag">强化学习</span>
+        <span class="tag">EDA反馈闭环</span>
+        <span class="tag">PPA优化</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.05253" target="_blank">📄 arXiv 原文</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-15/2606.05253_Alpha-RTL.pdf" target="_blank">📥 本地PDF</a>
+    </div>
+
+    <!-- ========== Cadence × Intel 14A DTCO ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Cadence / Intel Foundry · Business Wire · 2026-06-08</div>
+      <h4>🔧 Cadence × Intel Foundry 深化多年期合作 — Agentic AI 驱动 EDA + 设计 IP 推进 Intel 14A DTCO</h4>
+      <p>Cadence 与英特尔代工签署<strong>多年期合作协议</strong>，以 Intel 14A 先进制程为起点推进设计技术协同优化（DTCO）。双方结合 Cadence 的<strong>代理 AI（Agentic AI）驱动 EDA 工具和设计 IP 解决方案</strong>与英特尔的制程创新和先进设计能力，旨在实现行业领先的性能、功耗、面积（PPA）表现，帮助客户缩短产品上市时间、降低设计风险。合作覆盖 DTCO、IP 就绪、设计支持三大领域，面向高性能计算（HPC）和移动端低功耗场景。Cadence CEO Anirudh Devgan 称此为双方关系升级的重要里程碑。</p>
+      <a href="https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-announces-collaboration-with-intel-foundry-to-accelerate.html" target="_blank">📄 Cadence 官方新闻稿</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="https://www.engineering.com/cadence-intel-expand-dtco-work-for-intel-14a/" target="_blank">📄 Engineering.com 报道</a>
+    </div>
+
     <!-- ========== Si2 AI for EDA Ontology ========== -->
     <div class="abs-card">
       <div class="src"><span class="dot"></span>Si2 · Siemens EDA/Synopsys/Qualcomm/NXP/IBM/ASU/Drexel/NCSU · 2026-06-08（WIR #142 6月12日报道）</div>
@@ -30,7 +56,7 @@
       <a href="https://si2.org/introducing-si2-ai-for-eda-ontology/" target="_blank">📄 Si2 官方公告</a>
       <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="https://semiengineering.com/chip-industry-week-in-review-142/" target="_blank">📄 SemiEngineering WIR #142</a>
     </div>
-    <p style="font-size:.84rem;color:#94a3b8;margin-top:20px;">📝 注：6月13-15日为周末，arXiv 无新论文，SemiEngineering 无新文章。MLCAD Testcase 3 提交截止日期为 6 月 18 日（非此前记录的 6 月 14 日），结果将于 6 月 25 日公布。</p>
+    <p style="font-size:.84rem;color:#94a3b8;margin-top:20px;">📝 注：MLCAD Testcase 3 提交截止日期为 6 月 18 日，结果将于 6 月 25 日公布。DAC 2026 注册已开放（7/26-29，长滩）。</p>
   </div>
 </section>
 </body>
