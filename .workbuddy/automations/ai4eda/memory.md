@@ -1,3 +1,32 @@
+## 2026-06-12 Execution Summary
+
+**Status:** ✅ Success
+
+**New Paper Added (1 item):**
+- Physics-informed GenAI for Semiconductor Manufacturing (arXiv:2606.11247) — UBC — Systematic review of enforcing physical constraints in generative models for EDA; 4 integration patterns for genAI + physics simulators; directly relevant to AI-assisted backend physical design
+
+**New News Added (1 item):**
+- Can AI Create Missing Models? — SemiEngineering/Brian Bailey — Deep analysis of AI's capability in EDA model creation: analog behavioral modeling (weeks→hours), RL for PPA optimization, LLM for verification plans; covers data deficiency, physical awareness gaps, and maintenance cost challenges
+
+**Files Updated:**
+- content/dates/2026-06-11.html — Added Physics-Informed GenAI paper + Brian Bailey news (now 3 papers + 2 news)
+- content/latest/2026-06-11.html — Updated with new paper and news
+- content/news/index.html — June 11 section expanded to 3 cards (added Brian Bailey article)
+- content/news/news_memory.json — Added 1 item, totalItems→105
+- manifest.js — Updated stats (papers 156, news 105, lastUpdate 2026-06-12)
+- Git pushed successfully
+
+**Key Findings:**
+- Brian Bailey's "Can AI Create Missing Models?" is a landmark article synthesizing AI's current capabilities and limitations across the entire EDA model landscape — essential reading for understanding AI-for-EDA's practical boundaries
+- Physics-informed GenAI paper bridges the gap between generative AI research and semiconductor manufacturing constraints — significant for guiding AI-assisted physical design verification
+- MLCAD contest: Testcase 3 deadline June 14 (unchanged), final results June 22, no new results today
+- arXiv cs.AR June 11 had mostly chiplet/LLM-serving papers, not strongly AI4EDA; cs.LG had no AI4EDA papers
+- No ESD Alliance Executive Outlook post-event coverage found yet
+
+**Next Check:** MLCAD Testcase 3 deadline (June 14), SemiEngineering WIR #142 (expected June 13), DAC 2026 program, ESD Alliance post-event coverage
+
+---
+
 ## 2026-06-11 Execution Summary
 
 **Status:** ✅ Success

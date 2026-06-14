@@ -1,8 +1,35 @@
 {
-  "lastUpdate": "2026-06-12",
-  "cutoffDate": "2025-12-14",
-  "totalItems": 105,
+  "lastUpdate": "2026-06-15",
+  "cutoffDate": "2025-12-17",
+  "totalItems": 106,
   "items": [
+    {
+      "date": "2026-06-12",
+      "company": "Si2 / Siemens EDA / Synopsys / Qualcomm / NXP / IBM / ASU / Drexel / NCSU",
+      "title": "📐 Si2 发布 AI for EDA 本体标准：开源本体 + MCP 服务器，为 Agentic EDA 奠定形式化推理基础",
+      "link": "https://si2.org/introducing-si2-ai-for-eda-ontology/",
+      "keywords": [
+        "Si2",
+        "AI for EDA",
+        "本体",
+        "Ontology",
+        "MCP",
+        "Agentic EDA",
+        "语义推理",
+        "开源",
+        "Apache 2.0",
+        "Siemens EDA",
+        "Synopsys",
+        "Qualcomm",
+        "NXP",
+        "IBM",
+        "ASU",
+        "Drexel",
+        "NCSU",
+        "标准化",
+        "2026-06-12"
+      ]
+    },
     {
       "date": "2026-06-11",
       "company": "SemiEngineering / Brian Bailey",
