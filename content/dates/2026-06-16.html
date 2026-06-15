@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet"="../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-06-16 论文 & 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 2 条行业动态 · 来源：arXiv + Samsung Foundry + NVIDIA</p>
+</header>
+<section>
+  <div class="abstracts">
+    <!-- ========== VHDLSuite Paper ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.13735 · cs.AR / cs.AI / cs.LG / cs.PL · 2026-06-11</div>
+      <h4>VHDLSuite: Unified Pipeline for LLM VHDL Generation with Data Synthesis and Evaluation</h4>
+      <p><strong>作者：</strong>Yijun Shen, Minghao Shao, Yichen Zhao, Zhuoyan Yu, Boyuan Chen, Yik-Cheung Tam, Muhammad Shafique</p>
+      <p>提出 <strong>VHDLSuite</strong>，一个以基准测试为核心的、可扩展的 VHDL 生成评估基础设施。首先，提出一条自动化数据 pipeline，可将 Verilog 设计及其配套的测试平台转换为可执行的 VHDL 基准实例，通过 VUnit/GHDL 完成验证，确保每个任务在 VHDL 环境中可编译、可运行、可一致性检查。其次，提出 <strong>VHDLBench</strong> 基准测试集，包含 <strong>200+</strong> 覆盖不同复杂度级别的、带有完整且经过验证的测试平台的 VHDL 问题。第三，对前沿 LLM 进行广泛评估，揭示了 LLM 辅助 VHDL 生成特有的关键挑战。数据 pipeline、基准测试集和评估框架将开源。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">VHDL</span>
+        <span class="tag">基准测试</span>
+        <span class="tag">数据合成</span>
+        <span class="tag">LLM评估</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.13735" target="_blank">📄 arXiv 原文</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-16/2606.13735_VHDLSuite.pdf" target="_blank">📥 本地PDF</a>
+    </div>
+
+    <!-- ========== HierSVA Paper ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.13706 · cs.AR / cs.AI · 2026-06-09</div>
+      <h4>HierSVA: A Data Synthesis Pipeline, Dataset, and Benchmark for LLM-Driven Hierarchical Hardware Formal Verification</h4>
+      <p><strong>作者：</strong>Maohua Nie, Jiang Zhu, Jingqun Zhang, Zhichen Zeng, Jiayi Wang, Sibo Zhang, Jialin Wang, C.-J. Richard Shi</p>
+      <p>提出 <strong>HierSVA</strong>，一套为 LLM 驱动的分层硬件形式化验证设计的集成套件。HierSVA-SP 整合了 RTL 预处理工具链和 LLM 参与的形式化验证流程，可生成分层 RTL 的参考 SystemVerilog 断言（SVA）。应用于 BaseJump STL 标准库后得到 HierSVA-DS 数据集（<strong>342 个模块</strong>，0-9 层级深度，含 28 组模块-缺陷对）。HierSVA-B 将断言质量拆解为 <strong>6 个度量维度</strong>：语法正确性、断言证明成功率、空断言率、规格符合度、突变覆盖率和形式化核心覆盖率。对 12 个近期 LLM 评测发现：模块级编译率 67.1%，非空断言 82.1% 可证明但仅检测 70.2% 的注入故障；缺陷检测召回率 0.87 但精确率仅 0.60（误报率 40%）；Agent 模式提升可证明性但存在平台期。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">功能验证</span>
+        <span class="tag">形式化验证</span>
+        <span class="tag">SVA生成</span>
+        <span class="tag">LLM</span>
+        <span class="tag">基准测试</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.13706" target="_blank">📄 arXiv 原文</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-16/2606.13706_HierSVA.pdf" target="_blank">📥 本地PDF</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="https://github.com/HierSVAAnon/HierSVACodeAndArtifacts" target="_blank">💻 GitHub</a>
+    </div>
+
+    <!-- ========== BigPower Paper ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.13747 · cs.AR / cs.LG · 2026-06-11</div>
+      <h4>BigPower: Hierarchical Source-Level Module Power Estimation for CPUs with Large Language Models</h4>
+      <p><strong>作者：</strong>Honghua Zhu, Chunjie Luo, Jianfeng Zhan</p>
+      <p>提出 <strong>BigPower</strong>，一种用于 CPU 设计阶段细粒度模块级功耗估计的分层源码级替代模型。BigPower 利用基于大语言模型的表征，结合架构层次、模块连接性、配置参数和工作负载上下文，可直接从源码级设计信息估计模块级功耗，推理阶段无需额外仿真。在开源<strong>香山处理器</strong>家族上的实验表明，该方法可在不同配置和工作负载下实现实用的细粒度功耗估计，为传统基于仿真的流程提供了高效替代方案。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">功耗估计</span>
+        <span class="tag">LLM表征</span>
+        <span class="tag">CPU设计</span>
+        <span class="tag">香山处理器</span>
+        <span class="tag">源码级分析</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.13747" target="_blank">📄 arXiv 原文</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-16/2606.13747_BigPower.pdf" target="_blank">📥 本地PDF</a>
+    </div>
+
+    <!-- ========== Samsung 2nm EDA Certification ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Samsung Foundry / Synopsys / Cadence / Siemens EDA · Design-Reuse · 2026-06-08</div>
+      <h4>🏭 三大 EDA 巨头同步官宣 Samsung 2nm (SF2Z) 全流程认证 — AI 驱动 EDA 覆盖全节点</h4>
+      <p>Samsung Foundry Forum 2026 上，<strong>Synopsys、Cadence、Siemens EDA</strong> 同时宣布扩展认证设计流程、IP 产品组合和 AI 驱动能力于 Samsung 2nm 级工艺（SF2Z/SF2P）。Synopsys 覆盖 Synopsys.ai EDA 全套（数字/模拟/3DIC），Cadence 扩展 Allegro X/Tempus/Virtuoso 认证并增强 3D-IC 协同设计，Siemens 推进 Calibre/Doulos/Apsil 实现 AI 增强签核。三巨头均在 Samsung Foundry 的先进 GAA 工艺节点上实现了 AI-driven PPA 优化，标志着代工厂开始从"工具支持"转向"<strong>AI 驱动的协同优化</strong>"模式。</p>
+      <a href="https://www.design-reuse.com/news/202530618-samsung-s-2nm-advance-draws-on-eda-innovation-from-cadence-siemens-and-synopsys/" target="_blank">📄 Design-Reuse 报道</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="https://futurumgroup.com/insights/samsungs-2nm-advance-draws-on-eda-innovation-from-cadence-siemens-and-synopsys/" target="_blank">📄 Futurum 分析</a>
+    </div>
+
+    <!-- ========== NVIDIA SkillSpector ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>NVIDIA · GitHub · 2026-06-13</div>
+      <h4>🛡️ NVIDIA 开源 SkillSpector：AI Agent 技能安全扫描器 — 26.1% 公开技能含漏洞</h4>
+      <p>NVIDIA 发布开源安全扫描工具 <strong>SkillSpector</strong>，用于在安装 AI Agent 技能（Claude Code、Codex CLI、Gemini CLI 等）前检测漏洞、恶意模式和安全风险。研究发现 <strong>26.1% 的公开技能包含漏洞，5.2% 显示可能恶意行为</strong>。SkillSpector 通过 64 种漏洞模式检测 + 可选 LLM 深度分析，支持集成到 CI/CD 流程。这对构建 EDA AI Agent 技能生态具有重要意义——随着 Agentic EDA 工具链（Siemens Fuse EDA、Cadence ChipStack 等）的技能化趋势加速，安全扫描成为必要基础设施。GitHub: <a href="https://github.com/nvidia/skillspector" target="_blank">nvidia/skillspector</a></p>
+      <a href="https://github.com/nvidia/skillspector" target="_blank">📄 GitHub 仓库</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="https://docs.nvidia.com/skills/scanning-agent-skills" target="_blank">📄 NVIDIA 文档</a>
+    </div>
+
+    <p style="font-size:.84rem;color:#94a3b8;margin-top:20px;">📝 注：MLCAD Testcase 3 提交截止 6月18日（后天），结果 6月25日公布。DAC 2026 注册已开放（7/26-29，长滩）。Si2 将在 DAC 举办 "Agentic AI in EDA: Who's in Control?" 圆桌（7/27 16:00-16:45）。</p>
+  </div>
+</section>
+</body>
+</html>

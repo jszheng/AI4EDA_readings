@@ -21,14 +21,16 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-15 · 涵盖 2025-12 → 2026-06-15 · 已去重整理 · 新增 Alpha-RTL + Cadence×Intel 14A</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-16 · 涵盖 2025-12 → 2026-06-16 · 已去重整理 · 新增 Samsung 2nm EDA + NVIDIA SkillSpector</p>
   <div class="stats">
-    <div class="stat"><div class="num">157</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">67</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">107</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">160</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">68</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">109</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-06-16">260616 🛡️ NVIDIA SkillSpector AI Agent 技能安全扫描器</a>
+  <a href="#2026-06-16b">260616 🏭 三大 EDA 巨头同步官宣 Samsung 2nm 全流程认证</a>
   <a href="#2026-06-12">260612 📐 Si2 发布 AI for EDA 本体标准 — MCP 服务器开源</a>
   <a href="#2026-06-08b">260608 🔧 Cadence × Intel 14A DTCO Agentic AI 合作</a>
   <a href="#2026-06-11">260611 🌐 Agentic AI 重塑数据中心架构 — SemiEngineering</a>
@@ -94,6 +96,37 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-06-16">
+  <div class="section-title"><span class="icon">🛡️</span> 2026-06-16 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-06-16 行业动态（2条）</h3>
+      <span class="badge-count">2</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>NVIDIA · GitHub · 2026-06-13</div>
+      <h4 id="2026-06-16">🛡️ NVIDIA 开源 SkillSpector：AI Agent 技能安全扫描器 — 26.1% 公开技能含漏洞</h4>
+      <p>NVIDIA 发布开源安全扫描工具 <strong>SkillSpector</strong>，用于在安装 AI Agent 技能（Claude Code、Codex CLI、Gemini CLI 等）前检测漏洞、恶意模式和安全风险。研究发现 <strong>26.1%</strong> 的公开技能包含漏洞，<strong>5.2%</strong> 显示可能恶意行为。SkillSpector 通过 <strong>64 种漏洞模式</strong>检测 + 可选 LLM 深度分析，支持集成到 CI/CD 流程。随着 Agentic EDA 工具链（Siemens Fuse EDA、Cadence ChipStack 等）的技能化趋势加速，安全扫描成为必要基础设施。GitHub: <a href="https://github.com/nvidia/skillspector" target="_blank">nvidia/skillspector</a></p>
+      <a href="https://github.com/nvidia/skillspector" target="_blank">→ GitHub 仓库</a>
+      <a href="https://docs.nvidia.com/skills/scanning-agent-skills" target="_blank" style="margin-left:12px;">→ NVIDIA 文档</a>
+    </div>
+
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>Samsung Foundry / Synopsys / Cadence / Siemens EDA · Design-Reuse · 2026-06-08</div>
+      <h4 id="2026-06-16b">🏭 三大 EDA 巨头同步官宣 Samsung 2nm (SF2Z) 全流程认证 — AI 驱动 EDA 覆盖全节点</h4>
+      <p>Samsung Foundry Forum 2026 上，<strong>Synopsys、Cadence、Siemens EDA</strong> 同时宣布扩展认证设计流程、IP 产品组合和 AI 驱动能力于 Samsung 2nm 级工艺（SF2Z/SF2P）。三巨头各自亮点：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>Synopsys</strong>：Synopsys.ai EDA 全套面向 Samsung SF2P 数字/模拟流程，支持 AI-driven design space exploration、3DIC Compiler 多裸片设计</li><li><strong>Cadence</strong>：扩展 Allegro X/Tempus/Virtuoso 认证，增强 3D-IC 协同设计，推进 Memory/Interface IP 在 Samsung 2nm 上的落地</li><li><strong>Siemens EDA</strong>：推进 Calibre/Doulos/Apsil 实现 AI 增强签核，覆盖 Samsung GAA 先进节点验证</li></ul><p>三大巨头均在 Samsung Foundry GAA 工艺上实现了 AI-driven PPA 优化，标志着代工厂从"工具支持"转向"<strong>AI 驱动协同优化</strong>"模式。Cadence CEO Anirudh Devgan 称此为三星合作的重要里程碑。</p>
+      <a href="https://www.design-reuse.com/news/202530618-samsung-s-2nm-advance-draws-on-eda-innovation-from-cadence-siemens-and-synopsys/" target="_blank">→ Design-Reuse 报道</a>
+      <a href="https://futurumgroup.com/insights/samsungs-2nm-advance-draws-on-eda-innovation-from-cadence-siemens-and-synopsys/" target="_blank" style="margin-left:12px;">→ Futurum 分析</a>
+      <a href="https://www.businesswire.com/news/home/20260528147066/en/Cadence-and-Samsung-Foundry-Deepen-2nm-and-3DIC-Collaboration-to-Meet-Surging-AI-Infrastructure-and-Physical-AI-Demand" target="_blank" style="margin-left:12px;">→ Cadence×Samsung 新闻稿</a>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-06-12">
   <div class="section-title"><span class="icon">📐</span> 2026-06-12 <span class="badge-new">1条新闻</span> <span class="line"></span></div>

@@ -1,8 +1,58 @@
 {
-  "lastUpdate": "2026-06-15",
+  "lastUpdate": "2026-06-16",
   "cutoffDate": "2025-12-17",
-  "totalItems": 107,
+  "totalItems": 109,
   "items": [
+    {
+      "date": "2026-06-16",
+      "company": "NVIDIA",
+      "title": "🛡️ NVIDIA 开源 SkillSpector：AI Agent 技能安全扫描器 — 26.1% 公开技能含漏洞",
+      "link": "https://github.com/nvidia/skillspector",
+      "keywords": [
+        "NVIDIA",
+        "SkillSpector",
+        "开源",
+        "安全扫描器",
+        "AI",
+        "Agent",
+        "技能",
+        "漏洞",
+        "恶意模式",
+        "CI/CD",
+        "Claude",
+        "Codex",
+        "Gemini",
+        "26.1%",
+        "5.2%",
+        "64种漏洞模式",
+        "2026-06-13"
+      ]
+    },
+    {
+      "date": "2026-06-08",
+      "company": "Samsung Foundry / Synopsys / Cadence / Siemens EDA",
+      "title": "🏭 三大 EDA 巨头同步官宣 Samsung 2nm (SF2Z) 全流程认证 — AI 驱动 EDA 覆盖全节点",
+      "link": "https://www.design-reuse.com/news/202530618-samsung-s-2nm-advance-draws-on-eda-innovation-from-cadence-siemens-and-synopsys/",
+      "keywords": [
+        "Samsung",
+        "Foundry",
+        "2nm",
+        "SF2Z",
+        "SF2P",
+        "GAA",
+        "Synopsys",
+        "Cadence",
+        "Siemens",
+        "EDA",
+        "AI",
+        "认证",
+        "设计流程",
+        "IP",
+        "3D-IC",
+        "Futurum",
+        "2026-06-08"
+      ]
+    },
     {
       "date": "2026-06-15",
       "company": "Alpha-RTL / arXiv",
