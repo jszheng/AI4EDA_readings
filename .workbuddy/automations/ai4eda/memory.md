@@ -1,3 +1,39 @@
+## 2026-06-16 Execution Summary
+
+**Status:** ✅ Success
+
+**New Papers Added (3 items):**
+- VHDLSuite (arXiv:2606.13735) — Yijun Shen, Muhammad Shafique (NYU Abu Dhabi) — First unified pipeline for LLM VHDL generation with data synthesis and evaluation; VHDLBench with 200+ VHDL problems; automatic Verilog→VHDL conversion pipeline via VUnit/GHDL; submitted June 11, 2026
+- HierSVA (arXiv:2606.13706) — Maohua Nie, C.-J. Richard Shi (UW) — LLM-driven hierarchical hardware formal verification; data synthesis pipeline for SystemVerilog assertions; 342 modules from BaseJump STL; 6-dimension assertion quality benchmark; 12 LLMs evaluated; key finding: recall 0.87 but precision only 0.60 (40% false positive); Agent mode has plateau; GitHub: HierSVAAnon/HierSVACodeAndArtifacts; submitted June 9, 2026
+- BigPower (arXiv:2606.13747) — Honghua Zhu, Jianfeng Zhan (ICT CAS) — LLM-based hierarchical source-level CPU module power estimation; no simulation needed at inference; evaluated on XiangShan processor family; submitted June 11, 2026
+
+**New News Added (2 items):**
+- Samsung 2nm (SF2Z) EDA certification — Synopsys/Cadence/Siemens EDA simultaneously announced expanded certified design flows, IP, and AI-driven capabilities on Samsung Foundry's 2nm GAA processes (SF2Z/SF2P); from Samsung Foundry Forum, widely reported June 8; Futurum analysis published June 1
+- NVIDIA SkillSpector — Open-source security scanner for AI agent skills; 26.1% of public skills contain vulnerabilities, 5.2% likely malicious; 64 vulnerability patterns + optional LLM analysis; supports Claude Code/Codex CLI/Gemini CLI; released June 13, 2026
+
+**Files Updated:**
+- content/dates/2026-06-16.html — New date page (3 papers + 2 news)
+- content/latest/2026-06-16.html — New latest page
+- content/dates/2026-06-16/ — 3 new PDFs (2606.13735, 2606.13706, 2606.13747)
+- content/news/index.html — Added June 16 section with 2 cards (Samsung 2nm + SkillSpector)
+- content/news/news_memory.json — Added 2 items, totalItems→109
+- content/categories/rtl.html — Added VHDLSuite (55 papers now)
+- content/categories/verify.html — Added HierSVA (15 papers now)
+- content/categories/physical.html — Added BigPower (25 papers now)
+- manifest.js — Updated stats (papers 160, batches 68, news 109, lastUpdate 2026-06-16)
+- Git pushed successfully
+
+**Key Findings:**
+- VHDLSuite fills the VHDL gap in LLM-for-hardware evaluation — while Verilog dominates research, VHDL is critical in defense/aerospace and this is the first systematic benchmark
+- HierSVA reveals a fundamental precision problem in LLM-generated formal verification: high recall (0.87) but low precision (0.60) due to 40% false positive rate — this is a significant practical barrier for adoption
+- BigPower from ICT CAS (Jianfeng Zhan group) shows LLM representations can replace simulation for power estimation — directly relevant to AI-assisted physical design
+- Samsung 2nm EDA certification by all three major vendors marks the shift from "tool support" to "AI-driven co-optimization" at foundry level
+- NVIDIA SkillSpector is directly relevant to Agentic EDA security — as EDA tools become skill-based (Siemens Fuse EDA, Cadence ChipStack), security scanning becomes essential infrastructure
+
+**Next Check:** MLCAD Testcase 3 deadline (June 18, day after tomorrow), SemiEngineering WIR #143 (expected ~June 19), DAC 2026 program updates, Si2 DAC panel "Agentic AI in EDA: Who's in Control?" (July 27)
+
+---
+
 ## 2026-06-15 Execution Summary
 
 **Status:** ✅ Success
