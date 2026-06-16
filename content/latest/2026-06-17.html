@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🔥 2026-06-17 最新</h1>
+  <p class="subtitle">LLM4RTL 工具辅助RTL生成 + PANDA LLM模拟设计 + eda-agent Altium MCP</p>
+</header>
+<section>
+  <h3>📄 论文（2篇）</h3>
+  <div class="abstracts">
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.15500 · cs.AR / cs.AI / eess.SY · 2026-06-13</div>
+      <div class="abs-title">LLM4RTL：工具辅助 LLM RTL 生成 — JRCRC 数据精炼流水线 + 小模型媲美 GPT-4o</div>
+      <p>提出 JRCRC pipeline 分层精炼训练数据 + 工具辅助架构弥补 LLM 逻辑推理弱点。在 VerilogEval 上超越多个 SOTA，以显著更小的 LLM 达到 GPT-4o 水平。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">工具辅助</span>
+        <span class="tag">VerilogEval</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.15500" target="_blank">→ arXiv</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-17/2606.15500_LLM4RTL.pdf" target="_blank">📥 本地PDF</a>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.15052 · cs.AR / cs.AI · 2026-06-13</div>
+      <div class="abs-title">PANDA：LLM 增强性能驱动模拟设计框架 — 从设计意图到布局生成，周转时间缩短至数小时</div>
+      <p>北大林亦波团队提出意图中心协同设计框架，通过引导式拓扑合成 + 子结构感知尺寸调整 + 约束驱动布局生成，将模拟设计周转从天/周缩短至小时。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">模拟设计</span>
+        <span class="tag">LLM</span>
+        <span class="tag">布局生成</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.15052" target="_blank">→ arXiv</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-17/2606.15052_PANDA.pdf" target="_blank">📥 本地PDF</a>
+    </div>
+  </div>
+
+  <h3>📰 行业动态（1条）</h3>
+  <div class="abstracts">
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>salitronic / eda-agent · GitHub · 2026-06-15</div>
+      <h4>🔧 eda-agent：开源 Altium Designer MCP 服务器 — 300+ 工具 AI Agent 全流程 PCB 设计</h4>
+      <p>Apache-2.0 开源项目，通过 MCP 协议让 AI 直接操控 Altium Designer。300+ 工具覆盖原理图/PCB/库/项目/设计代理/布线全链路，批量操作效率提升 10-100x。含 19 个设计代理工具支持从 DesignPlan JSON 自动生成原理图布局。</p>
+      <a href="https://github.com/salitronic/eda-agent" target="_blank">→ GitHub</a>
+    </div>
+    <p style="font-size:.84rem;color:#94a3b8;margin-top:20px;">📝 MLCAD Testcase 3 截止 6月18日（明天），SemiEngineering WIR #143 预计 6月19日。</p>
+  </div>
+</section>
+</body>
+</html>

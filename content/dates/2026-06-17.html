@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-06-17 论文 & 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 1 条行业动态 · 来源：arXiv + GitHub</p>
+</header>
+<section>
+  <div class="abstracts">
+    <!-- ========== LLM4RTL Paper ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.15500 · cs.AR / cs.AI / eess.SY · 2026-06-13</div>
+      <h4>LLM4RTL: Tool-Assisted LLM for RTL Generation</h4>
+      <p><strong>作者：</strong>Jing Jin, Robert Chu, Ning Yan, Masood S. Mortazavi</p>
+      <p>提出 <strong>LLM4RTL</strong>，一种工具辅助的 LLM RTL 生成架构。核心贡献：(1) 提出 <strong>JRCRC（Judge-Renew-Check-Renew-Check）pipeline</strong>，利用分层商业 LLM（不同成本与能力）对公开数据集进行成本效益驱动的过滤和精炼，构建高质量训练数据集；(2) 识别出 LLM 在基于规则的推理和逻辑推断方面的常见弱点（尤其在 RTL 代码生成中），开发了一种 <strong>工具辅助架构</strong>，通过预处理工具动态辅助 LLM 从表格数据格式中推断逻辑关系。实验表明，LLM4RTL 在 <strong>VerilogEval</strong> 基准上取得显著整体性能提升，超越多个 SOTA 方法，并以<strong>显著更小的 LLM</strong> 达到与 <strong>GPT-4o</strong> 相当的性能。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">工具辅助</span>
+        <span class="tag">VerilogEval</span>
+        <span class="tag">数据精炼</span>
+        <span class="tag">JRCRC</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.15500" target="_blank">📄 arXiv 原文</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-17/2606.15500_LLM4RTL.pdf" target="_blank">📥 本地PDF</a>
+    </div>
+
+    <!-- ========== PANDA Paper ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.15052 · cs.AR / cs.AI · 2026-06-13</div>
+      <h4>PANDA: An LLM-Enhanced Performance-Driven Analog Design Framework Bridging Design Intent and Layout Generation</h4>
+      <p><strong>作者：</strong>Haoyi Zhang, Weijian Fan, Xiaohan Gao, Bingyang Liu, Runsheng Wang, Yibo Lin</p>
+      <p>提出 <strong>PANDA</strong>，一个 LLM 增强的性能驱动模拟电路设计框架，从高层设计意图直接桥接到最终布局。PANDA 通过引导式拓扑合成、子结构感知尺寸调整和约束驱动的布局生成，<strong>主动管理跨阶段依赖关系</strong>。这将自动化从"算法中心执行"转变为"<strong>意图中心协同设计</strong>"，将周转时间从数天/数周缩短至<strong>数小时</strong>，同时提升设计性能。来自北京大学林亦波团队。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">模拟设计</span>
+        <span class="tag">LLM</span>
+        <span class="tag">布局生成</span>
+        <span class="tag">意图驱动</span>
+        <span class="tag">北京大学</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.15052" target="_blank">📄 arXiv 原文</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-17/2606.15052_PANDA.pdf" target="_blank">📥 本地PDF</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="https://zhywhite.github.io/paper/PANDA.pdf" target="_blank">📄 作者主页PDF</a>
+    </div>
+
+    <!-- ========== eda-agent MCP Server ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>salitronic / eda-agent · GitHub · Apache-2.0 · 2026-06-15</div>
+      <h4>🔧 eda-agent：开源 Altium Designer MCP 服务器 — 300+ 工具覆盖原理图/PCB/库全流程</h4>
+      <p>开源项目 <strong>eda-agent</strong> 提供了一个 MCP 服务器，可在 AI（或任何 MCP 兼容客户端）与正在运行的 Altium Designer 会话之间建立实时交互通道。提供 <strong>300+ 工具</strong>，覆盖原理图（93 工具）、PCB（104 工具）、元件库（36 工具）、项目管理（53 工具）、设计代理（19 工具）和布线（2 工具）六大类。核心亮点包括：批量操作效率提升 10-100x、31 项设计审计检查、从 DesignPlan JSON 自动生成原理图/布局/网表、离线 A* 布线 + DRC 修复。通过 DelphiScript 桥接实现文件 IPC 通信，支持 10ms 活跃/100ms 空闲双模式轮询。最新提交修复 AD26 兼容性问题。这是 Agentic EDA 在 PCB 设计领域的重要开源实践。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI Agent</span>
+        <span class="tag">MCP服务器</span>
+        <span class="tag">Altium Designer</span>
+        <span class="tag">PCB设计</span>
+        <span class="tag">开源</span>
+      </div>
+      <a href="https://github.com/salitronic/eda-agent" target="_blank">💻 GitHub 仓库</a>
+    </div>
+
+    <p style="font-size:.84rem;color:#94a3b8;margin-top:20px;">📝 注：MLCAD Testcase 3 提交截止 6月18日（明天），结果 6月25日公布。SemiEngineering WIR #143 预计 6月19日左右发布。DAC 2026 注册已开放（7/26-29，长滩）。</p>
+  </div>
+</section>
+</body>
+</html>

@@ -21,14 +21,16 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-16 · 涵盖 2025-12 → 2026-06-16 · 已去重整理 · 新增 Samsung 2nm EDA + NVIDIA SkillSpector</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-17 · 涵盖 2025-12 → 2026-06-17 · 已去重整理 · 新增 Futurum Agentic EDA 深度分析</p>
   <div class="stats">
-    <div class="stat"><div class="num">160</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">68</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">109</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">162</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">69</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">110</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-06-17">260617 📊 Futurum 深度分析：Cadence vs Synopsys Agentic EDA</a>
+  <a href="#2026-06-17b">260617 🔧 eda-agent Altium Designer MCP 服务器</a>
   <a href="#2026-06-16">260616 🛡️ NVIDIA SkillSpector AI Agent 技能安全扫描器</a>
   <a href="#2026-06-16b">260616 🏭 三大 EDA 巨头同步官宣 Samsung 2nm 全流程认证</a>
   <a href="#2026-06-12">260612 📐 Si2 发布 AI for EDA 本体标准 — MCP 服务器开源</a>
@@ -96,6 +98,35 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-06-17">
+  <div class="section-title"><span class="icon">📊</span> 2026-06-17 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-06-17 行业动态（2条）</h3>
+      <span class="badge-count">2</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>Futurum Group · Brendan Burke · 2026-06-11</div>
+      <h4 id="2026-06-17">📊 Futurum 深度分析：Cadence vs Synopsys Agentic EDA 竞赛加速 — 验证自主性 vs 多物理场广度两条路线</h4>
+      <p>Computex 2026 期间 GTC Taipei 上 Agentic EDA 竞赛分化为两条路线：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>Cadence</strong>：走<strong>验证深度路线</strong>，ChipStack AI Super Agent 推至 Level-5 自主性，NVIDIA 报告 <strong>RTL 验证提速 40 倍</strong>（5 周循环缩短至 1 天内），基于 NVIDIA Nemotron 模型和 OpenShell 运行时，首批用户包括 MediaTek/NVIDIA/Altera/Qualcomm/Tenstorrent</li><li><strong>Synopsys</strong>：走<strong>多物理场广度路线</strong>，在 NemoClaw 中展示 Ansys IcePak 热代理自动优化 GPU 散热，将自主工作流从 RTL 前端推进到<strong>热和物理收敛</strong>——即重流片根源所在</li></ul><p>双方共识：<strong>护城河是紧密工具集成和 token 高效的结构化数据，而非模型本身</strong>，EDA 在位者而非前沿实验室将主导自主芯片设计。分析师关注点：Cadence 模拟/后端智能体 ViraStack/InnoStack 尚未 GA，Synopsys 缺少对应 Ansys 的多物理场栈是 Cadence 结构性缺口。</p>
+      <a href="https://futurumgroup.com/insights/cadence-and-synopsys-accelerate-agentic-eda-race-at-computex/" target="_blank">→ Futurum Group 原文</a>
+      <a href="https://techstrongsemi.com/article/cadence-and-synopsys-accelerate-agentic-eda-race-at-computex/" target="_blank" style="margin-left:12px;">→ Techstrong Semi 转载</a>
+    </div>
+
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>salitronic / eda-agent · GitHub · Apache-2.0 · 2026-06-15</div>
+      <h4 id="2026-06-17b">🔧 eda-agent：开源 Altium Designer MCP 服务器 — 300+ 工具 AI Agent 全流程 PCB 设计</h4>
+      <p>开源项目 <strong>eda-agent</strong> 提供 MCP 服务器，让 AI（或任何 MCP 兼容客户端如 Claude Code）直接操控运行中的 <strong>Altium Designer</strong>。提供 <strong>300+ 工具</strong>，覆盖原理图（93）、PCB（104）、元件库（36）、项目管理（53）、设计代理（19）、布线（2）六大类。核心亮点：批量操作效率提升 <strong>10-100x</strong>、31 项设计审计检查、从 DesignPlan JSON 自动生成原理图/布局/网表、离线 A* 布线 + DRC 修复。通过 DelphiScript 桥接实现文件 IPC，支持 10ms 活跃/100ms 空闲双模式。这是 Agentic EDA 在 PCB 设计领域的重要开源实践。GitHub: <a href="https://github.com/salitronic/eda-agent" target="_blank">salitronic/eda-agent</a></p>
+      <a href="https://github.com/salitronic/eda-agent" target="_blank">→ GitHub 仓库</a>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-06-16">
   <div class="section-title"><span class="icon">🛡️</span> 2026-06-16 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
