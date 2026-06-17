@@ -1,8 +1,58 @@
 {
-  "lastUpdate": "2026-06-17",
-  "cutoffDate": "2025-12-17",
-  "totalItems": 111,
+  "lastUpdate": "2026-06-18",
+  "cutoffDate": "2025-12-18",
+  "totalItems": 113,
   "items": [
+    {
+      "date": "2026-06-18",
+      "company": "blwfish / kicad-mcp",
+      "title": "🔧 kicad-mcp：开源 KiCad MCP 服务器 — 17 工具 AI Agent 全流程 PCB 设计自动化",
+      "link": "https://github.com/blwfish/kicad-mcp",
+      "keywords": [
+        "kicad-mcp",
+        "KiCad",
+        "MCP",
+        "服务器",
+        "开源",
+        "MIT",
+        "PCB",
+        "17",
+        "工具",
+        "Claude Code",
+        "Cursor",
+        "Gemini",
+        "FreeRouter",
+        "DRC",
+        "自动布线",
+        "制造导出",
+        "LCSC",
+        "JLCPCB",
+        "2026-06-15"
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "company": "算苗科技 / SUNMMIO",
+      "title": "🇨🇳 算苗科技全国产 3D TokenPU 芯片正式流片 — 3D 混合堆叠架构 + 16TB/s 超大带宽",
+      "link": "https://www.chinaventure.com.cn/news/64-20260617-391893.html",
+      "keywords": [
+        "算苗科技",
+        "SUNMMIO",
+        "3D TokenPU",
+        "A4E",
+        "3D",
+        "混合堆叠",
+        "流片",
+        "国产",
+        "芯片",
+        "大模型",
+        "推理",
+        "16TB/s",
+        "A4S",
+        "2027",
+        "2026-06-17"
+      ]
+    },
     {
       "date": "2026-06-17",
       "company": "salitronic / eda-agent",

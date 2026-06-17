@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-06-18 论文 & 动态</h1>
+  <p class="subtitle">共 7 篇论文 · 2 条行业动态 · 来源：arXiv + GitHub + 行业媒体</p>
+</header>
+<section>
+  <div class="abstracts">
+    <!-- ========== AUTOGATE Paper ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.17461 · cs.AR / cs.AI / cs.LG · 2026-06-16</div>
+      <h4>AUTOGATE: Automated Clock Gating via Toggling-Aware LLM-based RTL Rewriting</h4>
+      <p><strong>作者：</strong>Yiting Wang, Chenhui Deng, Chia-Tung Ho, Yanqing Zhang, Zhuo Feng, Cunxi Yu, Ang Li, Gang Qu, Brucek Khailany</p>
+      <p>首个面向工业级 RTL 功耗优化的<strong>Agentic 框架</strong>，实现负载感知的自动时钟门控。AUTOGATE 提出 <strong>ML-LLM 协同设计</strong>：ML 聚类算法将原始波形翻转轨迹蒸馏为紧凑结构化表示，引导 LLM 进行 RTL 重写——避免 LLM 直接处理原始波形数据的瓶颈。采用<strong>分层多智能体架构</strong>，将大型设计分解为独立可优化模块，实现深层设计层次间的协调优化。小设计套件平均<strong>动态功耗降低 49.31%</strong>；NVDLA 降低 19.34%，BlackParrot 降低 7.96%，高度优化的量产设计降低最高 6.86%。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL优化</span>
+        <span class="tag">LLM重写</span>
+        <span class="tag">时钟门控</span>
+        <span class="tag">ML-LLM协同</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">功耗优化</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.17461" target="_blank">📄 arXiv 原文</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-18/2606.17461_AUTOGATE.pdf" target="_blank">📥 本地PDF</a>
+    </div>
+
+    <!-- ========== PDAGENT-BENCH Paper ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.17253 · cs.AR · 2026-06-15</div>
+      <h4>PDAGENT-BENCH: Characterizing, Grounding, and Architecting LLM Agents for VLSI Physical Design</h4>
+      <p><strong>作者：</strong>Qiufeng Li, Rongqian Chen, Quan Cheng, Chengxuan Wang, Sizhe Tang, Wuxi Li, Duo Ding, Chia-Tung Ho, Haoxing Ren, David Z. Pan, Tian Lan, Weidong Cao</p>
+      <p>首个全面、多维度的<strong>LLM/VLM 智能体物理设计基准</strong>。PDAGENT-BENCH 包含 <strong>353 个精选问题</strong>，覆盖五大能力维度：基础知识、报告理解、根因分析、脚本生成、全流程实现。对 <strong>11 个 SOTA 模型</strong>评测发现：LLM/VLM 在概念任务上表现竞争力，但在<strong>工具中心执行</strong>方面仍然严重受限（Innovus 脚本生成仅 42.2%），长时距多阶段推理能力不足。研究表明<strong>人类技能增强的智能体工作流</strong>显著提升端到端物理设计性能。基准和框架即将开源。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">物理设计</span>
+        <span class="tag">LLM基准</span>
+        <span class="tag">AI Agent</span>
+        <span class="tag">VLSI</span>
+        <span class="tag">工具执行</span>
+        <span class="tag">353题</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.17253" target="_blank">📄 arXiv 原文</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-18/2606.17253_PDAGENT-BENCH.pdf" target="_blank">📥 本地PDF</a>
+    </div>
+
+    <!-- ========== Shift-Left HLS Verification Paper ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.17128 · cs.AR · 2026-06-15</div>
+      <h4>Shift-Left High-Level Synthesis Verification via Knowledge-Augmented LLM Agent</h4>
+      <p><strong>作者：</strong>Zhihan Xiao, Zhe Zhao, Luke Ztz Hu, Songping Mai</p>
+      <p>提出<strong>知识增强、智能体驱动的左移验证框架</strong>，在综合前自动检查 golden C 与 HLS-C 实现间的功能一致性。引入 <strong>双层一致性检查机制</strong>（静态结构对齐 + 动态行为等价），结合符号执行和覆盖率驱动精炼提升验证完整性。构建<strong>异构 HLS 验证知识图谱</strong>提供拓扑感知推理先验，设计自主验证智能体协调迭代精炼和故障诊断。107 个 HLS 基准对上<strong>平均覆盖率 98.26%，动态一致性 95.33%</strong>，显著超越 AST-based、RAG 和迭代 Agent 基线。GitHub: <a href="https://github.com/cz-5f/HLS-LeVeri.git" target="_blank">cz-5f/HLS-LeVeri</a></p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">HLS验证</span>
+        <span class="tag">LLM Agent</span>
+        <span class="tag">知识图谱</span>
+        <span class="tag">左移验证</span>
+        <span class="tag">一致性检查</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.17128" target="_blank">📄 arXiv 原文</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-18/2606.17128_HLS-LeVeri.pdf" target="_blank">📥 本地PDF</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="https://github.com/cz-5f/HLS-LeVeri.git" target="_blank">💻 GitHub</a>
+    </div>
+
+    <!-- ========== CUTh-Solver Paper ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.17850 · cs.AR · 2026-06-16</div>
+      <h4>CUTh-Solver: GPU-Accelerated Sparse Matrix Solver for High-Resolution Thermal Simulation of 3D ICs</h4>
+      <p><strong>作者：</strong>Chenghan Wang, Zhen Zhuang, Shui Jiang, Siyuan Liang, Xiaoman Yang, Kai Zhu, Darong Huang, Luis Costero, Rongmei Chen, Tsung-Wei Huang, David Atienza, Tsung-Yi Ho</p>
+      <p>提出面向<strong>3D IC 高分辨率稳态和瞬态热仿真</strong>的协同设计 GPU 加速 PCG 稀疏求解器框架。核心优化：(1) 浓缩 DIA 存储格式去除冗余；(2) 对角线 SpMV 实现合并内存访问；(3) 高并行化预处理策略；(4) 自适应细粒度混合精度策略避免资源竞争。实验表明 CUTh-Solver 相比 GPU 加速的 COMSOL Multiphysics 6.4 达到<strong>最高 25.8x 加速</strong>，相比 NVIDIA 原生通用库（AmgX/cuSPARSE/cuDSS）加速<strong>超过 3x</strong>。代码开源：<a href="https://github.com/Chenghan-Wang/CUTh-Solver" target="_blank">GitHub</a></p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">3D IC</span>
+        <span class="tag">热仿真</span>
+        <span class="tag">GPU加速</span>
+        <span class="tag">稀疏求解</span>
+        <span class="tag">多物理场</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.17850" target="_blank">📄 arXiv 原文</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-18/2606.17850_CUTh-Solver.pdf" target="_blank">📥 本地PDF</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="https://github.com/Chenghan-Wang/CUTh-Solver" target="_blank">💻 GitHub</a>
+    </div>
+
+    <!-- ========== ComPart Paper ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.18131 · cs.AR · DAC 2026 · 2026-06-16</div>
+      <h4>ComPart: Community-Guided Post-Coarsening for High-Quality Hypergraph Partitioning</h4>
+      <p><strong>作者：</strong>Yugao Zhu, Zhicheng Guo, Yuchao Wu, Mengming Li, Jing Wang, Zhiyao Xie</p>
+      <p>提出将多种社区检测方法集成到<strong>后粗化阶段</strong>（初始划分和去粗化）的通用超图划分框架。发现社区结构在去粗化阶段可帮助逃离局部最优、探索全局有意义的解空间子域。首次将<strong>局部密集分解</strong>从图域严格推广到超图域，用于引导初始划分获得更优起点。实验在标准基准上<strong>持续超越 SOTA 方法</strong>。<strong>DAC 2026 接收</strong>。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">超图划分</span>
+        <span class="tag">EDA算法</span>
+        <span class="tag">DAC 2026</span>
+        <span class="tag">社区检测</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.18131" target="_blank">📄 arXiv 原文</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-18/2606.18131_ComPart.pdf" target="_blank">📥 本地PDF</a>
+    </div>
+
+    <!-- ========== IMPart Paper ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.18117 · cs.AR · 2026-06-16</div>
+      <h4>IMPart: Integration of Memetic Operations into Multi-Level Framework for Large-k-Way Hypergraph Partitioning</h4>
+      <p><strong>作者：</strong>Yugao Zhu, Zhicheng Guo, Shang Liu, Mengming Li, Jing Wang, Zhiyao Xie</p>
+      <p>将<strong>模因操作（重组和突变）</strong>直接集成到多级框架的去粗化阶段，而非像传统方法那样调用独立多级划分器。这使得不同粒度的局部搜索转变为<strong>协作搜索</strong>，有效逃离局部最优并探索全局解空间。在大 k-way 超图划分问题上<strong>大幅超越所有现有超图划分器</strong>，为先进划分器开发提出新范式。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">超图划分</span>
+        <span class="tag">模因算法</span>
+        <span class="tag">大k-way</span>
+        <span class="tag">EDA算法</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.18117" target="_blank">📄 arXiv 原文</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-18/2606.18117_IMPart.pdf" target="_blank">📥 本地PDF</a>
+    </div>
+
+    <!-- ========== PCB GenAI Survey Paper ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.17074 · cs.AR / cs.AI · 2026-06-10 · 33页 / 11表</div>
+      <h4>Surveying GenAI-based Automation in Printed Circuit Board Design and Test</h4>
+      <p><strong>作者：</strong>Sahana Srinivasan, Benjamin Turnbull, Hammond Pearce</p>
+      <p>首篇<strong>系统综述 PCB 设计 GenAI 应用</strong>的论文。硬件领域 GenAI 此前主要聚焦 IC 与 HDL，本文则将视野扩展到<strong>印刷电路板（PCB）全生命周期</strong>：供应链 → 系统规格 → 电路设计 → 布局与优化 → 验证与测试 → 装配与分发。提出 PCB GenAI 工作分类法（按意图与贡献），识别核心挑战（<strong>领域数据稀缺、与现有 PCB 工具集成支持有限</strong>），并指明未来方向。这是 AI for EDA 从 IC 走向更广义电子设计自动化的标志性综述，PCB EDA 市场（Altium / KiCad / Cadence Allegro）与 AI Agent 生态正在加速融合。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">综述</span>
+        <span class="tag">PCB设计</span>
+        <span class="tag">GenAI</span>
+        <span class="tag">EDA工具集成</span>
+        <span class="tag">数据稀缺</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.17074" target="_blank">📄 arXiv 原文</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="2026-06-18/2606.17074_PCB-GenAI-Survey.pdf" target="_blank">📥 本地PDF</a>
+    </div>
+
+    <!-- ========== KiCad MCP News ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>blwfish / kicad-mcp · GitHub · MIT · 2026-06-15</div>
+      <h4>🔧 kicad-mcp：开源 KiCad MCP 服务器 — 17 工具 AI Agent 全流程 PCB 设计自动化</h4>
+      <p>开源项目 <strong>kicad-mcp</strong> 提供一个 MCP 服务器，让 AI Agent（如 Claude）直接操控 KiCad 完成电路设计和 PCB 布局。提供 <strong>17 个工具</strong>，覆盖原理图创建/编辑、PCB 布局/布线、DRC 检查/自动修复、自动布线（FreeRouter 集成）、元件库搜索、制造文件导出（Gerber/BOM/CPL）、LCSC/JLCPCB 元件搜索、设计分析等全流程。采用 FastMCP + KiCad Python 子进程桥接实现。2,000+ 测试覆盖所有模块。支持 Claude Code/Cursor/Gemini 等主流 MCP 客户端。核心亮点：用户只需描述需求（如"设计一个 ESP32 开发板"），AI Agent 即可自动完成原理图→PCB布局→布线→验证→制造导出的完整流程。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI Agent</span>
+        <span class="tag">MCP服务器</span>
+        <span class="tag">KiCad</span>
+        <span class="tag">PCB设计</span>
+        <span class="tag">开源</span>
+        <span class="tag">MIT</span>
+      </div>
+      <a href="https://github.com/blwfish/kicad-mcp" target="_blank">💻 GitHub 仓库</a>
+    </div>
+
+    <!-- ========== 算苗科技 3D TokenPU News ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>算苗科技 (SUNMMIO) · 2026-06-17</div>
+      <h4>🇨🇳 算苗科技全国产 3D TokenPU 芯片正式流片 — 3D 混合堆叠架构 + 16TB/s 超大带宽，面向大模型推理</h4>
+      <p>专注 3D 架构 AI 云端大算力芯片的<strong>算苗科技</strong>宣布，旗下面向大模型推理的 <strong>3D TokenPU 芯片 A4E</strong>已于 6 月 15 日正式流片。这是中国首颗基于<strong>国产供应链</strong>、采用 <strong>3D 混合堆叠架构</strong>的大模型专用处理器落地，通过多层晶圆垂直堆叠缩短存储与计算单元数据传输路径，搭载 <strong>16TB/s 超大带宽</strong>。第二代芯片 A4S 方案已敲定，计划 2027 年 2 月流片。3D 混合堆叠架构直接关联 <strong>3D-IC EDA 工具需求</strong>（热仿真、布局规划、互连优化等）。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">3D-IC</span>
+        <span class="tag">流片</span>
+        <span class="tag">国产芯片</span>
+        <span class="tag">大模型推理</span>
+        <span class="tag">混合堆叠</span>
+      </div>
+      <a href="https://www.chinaventure.com.cn/news/64-20260617-391893.html" target="_blank">📰 投中网报道</a>
+      <a style="margin-left:12px;color:#0ea5e9;text-decoration:none;font-size:.8rem;font-weight:500;" href="https://m.ithome.com/html/965426.htm" target="_blank">📰 IT之家</a>
+    </div>
+
+    <p style="font-size:.84rem;color:#94a3b8;margin-top:20px;">📝 注：MLCAD Testcase 3 提交截止今日（6月18日），结果 6月25日公布。SemiEngineering WIR #143 预计 6月19日左右发布。DAC 2026 注册已开放（7/26-29，长滩）。</p>
+  </div>
+</section>
+</body>
+</html>

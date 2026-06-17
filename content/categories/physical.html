@@ -7,9 +7,73 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（25篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（29篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划</p>
   <div class="abstracts">
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2606.17253 · cs.AR · 2026-06-15 · David Z. Pan / Weidong Cao
+        </div>
+        <div class="abs-title">PDAGENT-BENCH: Characterizing, Grounding, and Architecting LLM Agents for VLSI Physical Design</div>
+        <div class="abs-body">
+          <p>首个全面、多维度的 <strong>LLM/VLM 智能体物理设计基准</strong>。包含 <strong>353 个精选问题</strong>，覆盖五大能力维度：基础知识、报告理解、根因分析、脚本生成、全流程实现。对 <strong>11 个 SOTA 模型</strong>评测发现：LLM/VLM 在概念任务上竞争力强，但<strong>工具中心执行</strong>严重受限（Innovus 脚本生成仅 42.2%），长时距多阶段推理能力不足。<strong>人类技能增强的智能体工作流</strong>显著提升端到端物理设计性能。基准和框架即将开源。<br>
+          <strong>核心创新</strong>：首个物理设计Agent基准 + 5维能力评估 + 人技增强Agent工作流<br>
+          <strong>标签</strong>：物理设计 · LLM基准 · AI Agent · VLSI · 工具执行 · 353题</p>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2606.17253" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2026-06-18/2606.17253_PDAGENT-BENCH.pdf">📥 本地PDF</a>
+          </div>
+        </div>
+      </div>
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2606.17850 · cs.AR · 2026-06-16 · Tsung-Yi Ho / David Atienza
+        </div>
+        <div class="abs-title">CUTh-Solver: GPU-Accelerated Sparse Matrix Solver for High-Resolution Thermal Simulation of 3D ICs</div>
+        <div class="abs-body">
+          <p>面向 <strong>3D IC 高分辨率稳态和瞬态热仿真</strong>的协同设计 GPU 加速 PCG 稀疏求解器。核心优化：DIA 存储压缩 + 对角线 SpMV 合并内存访问 + 高并行化预处理 + 自适应细粒度混合精度。相比 COMSOL Multiphysics 6.4 <strong>最高 25.8x 加速</strong>，相比 NVIDIA AmgX/cuSPARSE/cuDSS <strong>超过 3x</strong>。开源：<a href="https://github.com/Chenghan-Wang/CUTh-Solver" target="_blank">GitHub</a><br>
+          <strong>核心创新</strong>：GPU协同设计3D IC热仿真求解器 + 自适应混合精度<br>
+          <strong>标签</strong>：3D IC · 热仿真 · GPU加速 · 稀疏求解 · 多物理场</p>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2606.17850" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2026-06-18/2606.17850_CUTh-Solver.pdf">📥 本地PDF</a>
+            <a href="https://github.com/Chenghan-Wang/CUTh-Solver" target="_blank">💻 GitHub</a>
+          </div>
+        </div>
+      </div>
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2606.18131 · cs.AR · DAC 2026 · 2026-06-16 · Zhiyao Xie
+      </div>
+      <div class="abs-title">ComPart: Community-Guided Post-Coarsening for High-Quality Hypergraph Partitioning</div>
+      <div class="abs-body">
+        <p>将社区检测方法集成到<strong>后粗化阶段</strong>的超图划分框架。社区结构在去粗化阶段帮助逃离局部最优。首次将<strong>局部密集分解</strong>从图域推广到超图域。DAC 2026 接收。<br>
+        <strong>核心创新</strong>：后粗化社区引导 + 超图域局部密集分解<br>
+        <strong>标签</strong>：超图划分 · EDA算法 · DAC 2026 · 社区检测</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2606.18131" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2026-06-18/2606.18131_ComPart.pdf">📥 本地PDF</a>
+        </div>
+      </div>
+    </div>
+    <div class="abs-card">
+      <div class="abs-meta">
+        &nbsp;arXiv:2606.18117 · cs.AR · 2026-06-16 · Zhiyao Xie
+      </div>
+      <div class="abs-title">IMPart: Integration of Memetic Operations into Multi-Level Framework for Large-k-Way Hypergraph Partitioning</div>
+      <div class="abs-body">
+        <p>将<strong>重组和突变</strong>直接集成到去粗化阶段，协作搜索替代独立调用多级划分器。大 k-way 划分大幅超越所有现有划分器。<br>
+        <strong>核心创新</strong>：模因操作集成去粗化 + 协作搜索新范式<br>
+        <strong>标签</strong>：超图划分 · 模因算法 · 大k-way · EDA算法</p>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2606.18117" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2026-06-18/2606.18117_IMPart.pdf">📥 本地PDF</a>
+        </div>
+      </div>
+    </div>
     <div class="abs-card">
         <div class="abs-meta">
           <span class="badge-new">NEW</span>

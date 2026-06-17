@@ -1,3 +1,37 @@
+## 2026-06-17 Execution Summary
+
+**Status:** ✅ Success
+
+**New Papers Added (2 items):**
+- LLM4RTL (arXiv:2606.15500) — Jing Jin, Robert Chu, Ning Yan, Masood S. Mortazavi — Tool-assisted LLM for RTL generation with JRCRC data refinement pipeline; identifies LLM logic reasoning weaknesses; develops preprocessing tool architecture; achieves GPT-4o comparable performance on VerilogEval with much smaller LLM; submitted June 13, 2026
+- PANDA (arXiv:2606.15052) — Haoyi Zhang, Weijian Fan, Xiaohan Gao, Bingyang Liu, Runsheng Wang, Yibo Lin (PKU) — LLM-enhanced performance-driven analog design framework; bridges design intent to layout via guided topology synthesis, substructure-aware sizing, constraint-driven layout generation; turnaround time from days/weeks to hours; submitted June 13, 2026
+
+**New News Added (1 item):**
+- eda-agent (salitronic/eda-agent on GitHub) — Open-source MCP server for Altium Designer with 300+ tools; Apache 2.0; covers schematic/PCB/library/project/design-agent/routing; batch operations 10-100x faster; 31 design audit checks; DesignPlan JSON auto-generation; latest commit June 15 fixing AD26 compatibility
+
+**Files Updated:**
+- content/dates/2026-06-17.html — New date page (2 papers + 1 news)
+- content/latest/2026-06-17.html — New latest page
+- content/dates/2026-06-17/ — 2 new PDFs (2606.15500_LLM4RTL, 2606.15052_PANDA)
+- content/news/index.html — Added eda-agent card in June 17 section (now 2 items)
+- content/news/news_memory.json — Added 1 item, totalItems→111
+- content/categories/rtl.html — LLM4RTL already present (57 papers)
+- content/categories/analog.html — PANDA already present (20 papers + 1)
+- manifest.js — Updated stats (papers 162, batches 69, news 111, lastUpdate 2026-06-17)
+- Git pushed successfully
+
+**Key Findings:**
+- LLM4RTL's JRCRC pipeline is a novel contribution: using a hierarchy of commercial LLMs with different cost/capability tradeoffs to filter and refine training data, then adding tool-assisted preprocessing to compensate for LLM logic reasoning weaknesses — this is a practical approach that could benefit many LLM-for-hardware systems
+- PANDA from Yibo Lin's group at PKU is significant: first framework to bridge design intent directly to layout in analog design using LLM, managing cross-stage dependencies proactively rather than treating each stage in isolation
+- eda-agent is a major open-source contribution for PCB design: 300+ MCP tools for Altium Designer means AI agents can now fully automate PCB design workflows — directly relevant to the "AI skills/agents for EDA" focus
+- Futurum analysis of Cadence vs Synopsys Agentic EDA was already added (from earlier update): Cadence pursuing verification depth (Level-5 autonomy), Synopsys pursuing multi-physics breadth
+- No SemiEngineering WIR #143 yet (expected ~June 19)
+- MLCAD Testcase 3 deadline is tomorrow (June 18), results June 25
+
+**Next Check:** MLCAD Testcase 3 results (June 25), SemiEngineering WIR #143 (expected June 19), DAC 2026 program updates, arXiv cs.AR new papers after weekend
+
+---
+
 ## 2026-06-16 Execution Summary
 
 **Status:** ✅ Success
