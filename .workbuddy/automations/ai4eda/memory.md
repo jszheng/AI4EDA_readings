@@ -1,3 +1,45 @@
+## 2026-06-18 Execution Summary
+
+**Status:** ✅ Success
+
+**New Papers Added (6 items):**
+- AUTOGATE (arXiv:2606.17461) — Yiting Wang, Chenhui Deng, Chia-Tung Ho, Yanqing Zhang, Zhuo Feng, Cunxi Yu, Ang Li, Gang Qu, Brucek Khailany — First agentic framework for industry-grade RTL power optimization via LLM-based clock gating; ML-LLM co-design (ML clustering distills waveform traces → LLM RTL rewriting); hierarchical multi-agent architecture; 49.31% dynamic power reduction (small), 19.34% on NVDLA, 7.96% on BlackParrot, up to 6.86% on production designs; submitted June 16
+- PDAGENT-BENCH (arXiv:2606.17253) — Qiufeng Li, Rongqian Chen, Quan Cheng, Chengxuan Wang, Sizhe Tang, Wuxi Li, Duo Ding, Chia-Tung Ho, Haoxing Ren, David Z. Pan, Tian Lan, Weidong Cao — First comprehensive LLM/VLM agent benchmark for VLSI physical design; 353 curated problems; 5 capability dimensions; 11 SOTA models evaluated; key finding: LLMs competitive on conceptual tasks but severely limited in tool-centric execution (42.2% on Innovus script generation); human-skill-enhanced agentic workflows significantly improve performance; submitted June 15
+- Shift-Left HLS Verification (arXiv:2606.17128) — Zhihan Xiao, Zhe Zhao, Luke Ztz Hu, Songping Mai — Knowledge-augmented, agent-driven shift-left verification for HLS; Dual-Tier Consistency Checking (static+dynamic); HLS Verification Knowledge Graph; autonomous verification agent; 98.26% coverage, 95.33% consistency on 107 pairs; GitHub: cz-5f/HLS-LeVeri; submitted June 15
+- CUTh-Solver (arXiv:2606.17850) — Chenghan Wang, Zhen Zhuang, Shui Jiang, Siyuan Liang, Xiaoman Yang, Kai Zhu, Darong Huang, Luis Costero, Rongmei Chen, Tsung-Wei Huang, David Atienza, Tsung-Yi Ho — GPU-accelerated sparse solver for 3D IC thermal simulation; co-designed PCG framework; DIA storage compression + diagonal SpMV + high-parallelism preconditioning + adaptive mixed-precision; 25.8x faster than COMSOL, 3x faster than NVIDIA AmgX/cuSPARSE/cuDSS; GitHub: Chenghan-Wang/CUTh-Solver; submitted June 16
+- ComPart (arXiv:2606.18131) — DAC 2026 accepted — Yugao Zhu, Zhicheng Guo, Yuchao Wu, Mengming Li, Jing Wang, Zhiyao Xie — Community-guided post-coarsening for hypergraph partitioning; first locally-dense decomposition extension to hypergraph domain; submitted June 16
+- IMPart (arXiv:2606.18117) — Yugao Zhu, Zhicheng Guo, Shang Liu, Mengming Li, Jing Wang, Zhiyao Xie — Memetic operations integrated into multi-level uncoarsening for large-k-way hypergraph partitioning; collaborative search paradigm; submitted June 16
+
+**New News Added (2 items):**
+- kicad-mcp (blwfish/kicad-mcp on GitHub) — Open-source MCP server for KiCad with 17 tools; AI agent-driven full PCB design workflow (schematic→PCB→routing→verification→manufacturing); MIT license; FreeRouter v2.2.4+ integration; 2,000+ tests; supports Claude Code/Cursor/Gemini; June 15
+- 算苗科技 3D TokenPU tape-out — First Chinese domestic 3D mixed-stacking AI inference processor A4E taped out on June 15; 16TB/s bandwidth; full domestic supply chain; second chip A4S planned for Feb 2027
+
+**Files Updated:**
+- content/dates/2026-06-18.html — New date page (6 papers + 2 news)
+- content/latest/2026-06-18.html — New latest page
+- content/dates/2026-06-18/ — 7 new PDFs (AUTOGATE, PDAGENT-BENCH, HLS-LeVeri, CUTh-Solver, ComPart, IMPart, PCB-GenAI-Survey)
+- content/news/index.html — Added June 18 section with 2 cards (kicad-mcp + 算苗科技)
+- content/news/news_memory.json — Added 2 items, totalItems→113
+- content/categories/rtl.html — Added AUTOGATE (58 papers now)
+- content/categories/physical.html — Added PDAGENT-BENCH, CUTh-Solver, ComPart, IMPart (29 papers now)
+- content/categories/verify.html — Added HLS-LeVeri (16 papers now)
+- content/categories/agent.html — Added AUTOGATE, PDAGENT-BENCH, HLS-LeVeri (19 papers now)
+- manifest.js — Updated stats (papers 168, batches 70, news 113, lastUpdate 2026-06-18)
+- Git pushed successfully
+
+**Key Findings:**
+- AUTOGATE is a landmark for RTL power optimization: first ML-LLM co-design framework that bridges waveform-level analysis and RTL rewriting, solving the fundamental bottleneck of LLMs processing millions of waveform cycles — practical and results are strong (49.31% on small designs, 19.34% on NVDLA)
+- PDAGENT-BENCH fills a critical gap in the ecosystem: while LLM-for-hardware benchmarks have focused on RTL/code generation, there was no standardized benchmark for physical design agents — this reveals that tool-centric execution (42.2% on Innovus scripts) is the key bottleneck, not conceptual understanding
+- HLS-LeVeri demonstrates that knowledge graphs + dual-tier consistency checking can achieve near-perfect verification coverage (98.26%) for HLS — the shift-left approach is practical
+- CUTh-Solver achieves 25.8x over COMSOL for 3D IC thermal simulation — directly relevant to multi-physics AI analysis for chiplet/3D-IC design
+- ComPart/IMPart are DAC 2026 accepted hypergraph partitioning papers — algorithmic advances rather than AI, but relevant to EDA floorplanning
+- kicad-mcp is significant: it's the second major open-source MCP server for EDA (after eda-agent for Altium), specifically for KiCad — showing the MCP-based Agentic EDA trend expanding beyond commercial tools
+- 算苗科技 3D TokenPU tape-out confirms the industry shift toward 3D mixed-stacking architecture, directly driving demand for 3D-IC EDA tools
+
+**Next Check:** MLCAD Testcase 3 results (June 25), SemiEngineering WIR #143 (expected June 19), DAC 2026 program updates, arXiv cs.AR new papers after weekend
+
+---
+
 ## 2026-06-17 Execution Summary
 
 **Status:** ✅ Success

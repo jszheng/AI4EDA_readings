@@ -1,7 +1,7 @@
 {
   "lastUpdate": "2026-06-18",
   "cutoffDate": "2025-12-18",
-  "totalItems": 113,
+  "totalItems": 115,
   "items": [
     {
       "date": "2026-06-18",
@@ -2368,6 +2368,48 @@
         "AAAI26",
         "顶会录用",
         "中科院计算所"
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "company": "Synopsys",
+      "title": "🔬 Synopsys 推出首波 Multiphysics Fusion 多物理场融合解决方案 — AI 驱动 EDA + 半导体物理 + 系统仿真",
+      "link": "https://semiwiki.com/",
+      "keywords": [
+        "Synopsys",
+        "Multiphysics",
+        "Fusion",
+        "多物理场",
+        "融合",
+        "Ansys",
+        "收购",
+        "AI",
+        "驱动",
+        "EDA",
+        "3D IC",
+        "Chiplet"
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "company": "瑞穗证券 (Mizuho)",
+      "title": "📈 瑞穗：Agentic AI 将重估 EDA 商业模式 — 工具价值 → 劳动力价值，CDNS/SNPS 受益",
+      "link": "https://news.qq.com/rain/a/20260617A07N5U00",
+      "keywords": [
+        "瑞穗",
+        "Mizuho",
+        "Agentic",
+        "AI",
+        "EDA",
+        "商业模式",
+        "重估",
+        "工具价值",
+        "劳动力价值",
+        "Cadence",
+        "Synopsys",
+        "ChipStack",
+        "AgentStack",
+        "AgentEngineer"
       ]
     }
   ]
