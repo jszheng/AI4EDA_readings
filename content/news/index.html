@@ -21,14 +21,17 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-18 · 涵盖 2025-12 → 2026-06-18 · 已去重整理 · 新增 Synopsys Multiphysics Fusion + 瑞穗 Agentic AI EDA 报告</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-22 · 涵盖 2025-12 → 2026-06-22 · 已去重整理 · 新增 ChipAgents Renoir 专用芯片大模型 + Architect Labs $2400万种子轮</p>
   <div class="stats">
-    <div class="stat"><div class="num">169</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">70</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">115</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">172</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">71</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">118</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-06-19">260619 🤖 ChipAgents 推出芯片设计专用大模型 Renoir</a>
+  <a href="#2026-06-19b">260619 💰 Architect Labs 完成 $2400万种子轮 — 端到端AI芯片设计+可证明验证</a>
+  <a href="#2026-06-19c">260619 📰 Chip Industry Week In Review #143 — VLSI Symposium AI全栈突破</a>
   <a href="#2026-06-18">260618 🔧 kicad-mcp KiCad MCP 服务器 AI Agent PCB设计</a>
   <a href="#2026-06-18b">260618 🇨🇳 算苗科技 3D TokenPU 全国产流片</a>
   <a href="#2026-06-18c">260618 🔬 Synopsys Multiphysics Fusion 解决方案</a>
@@ -101,6 +104,42 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-06-19">
+  <div class="section-title"><span class="icon">🤖</span> 2026-06-19 <span class="badge-new">3条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-06-19 行业动态（3条）</h3>
+      <span class="badge-count">3</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>ChipAgents · 官方博客 · 2026-06-17</div>
+      <h4 id="2026-06-19">🤖 ChipAgents 推出芯片设计专用大模型 Renoir — 内部基准逼近 Claude Opus 4.6，成本减半，支持完全本地化部署</h4>
+      <p>ChipAgents 正式发布首款<strong>芯片设计专用大语言模型 Renoir</strong>，基于开源 MoE 架构 LLM 微调，专为半导体设计工作流优化。核心亮点：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>性能</strong>：ChipAgents 内部芯片设计基准（覆盖 RTL 生成、Bug 定位、规格书转代码）上逼近 <strong>Claude Opus 4.6</strong>，成本降低 50%+</li><li><strong>安全部署</strong>：支持完全<strong>本地化/气隙环境</strong>部署，无需将设计 IP 发送至第三方云端，满足半导体公司严格安全要求</li><li><strong>数据策略</strong>：采用混合手动自动方法从硬件仓库、技术文档、开源设计中提取训练数据，通过自动任务生成管线转化为高优先级芯片设计场景</li><li><strong>路线图</strong>：后续将支持基于客户自有数据的定制化训练，模型在客户环境中训练、部署、永久留存</li></ul><p>这是 EDA 领域首次有创业公司推出专用芯片设计 LLM。ChipAgents 联合创始人 <strong>William Wang</strong>（CEO）将出席 DAC 2026 TechTalks。联系: <code>kexun@alphadesign.ai</code></p>
+      <a href="https://chipagents.ai/blogs/introducing-renoir" target="_blank">→ ChipAgents 官方博客</a>
+    </div>
+
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>Architect Labs · 官方博客 · Business Wire · 2026-06-18</div>
+      <h4 id="2026-06-19b">💰 Architect Labs 完成 $2400 万种子轮融资 — 从零重构芯片设计流程，打造端到端 AI 芯片设计+可证明验证系统</h4>
+      <p>Architect Labs 正式出山，定位为<strong>计算系统基础 AI 实验室</strong>，首个目标是构建能<strong>端到端设计并可证明验证芯片</strong>的 AI 系统。关键信息：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>融资</strong>：$2400 万种子轮，Kindred Ventures 领投，Race Capital、TQ Ventures、Together Fund 参投；天使投资人包括 Srinivas Narayanan、Kunle Olukotun、Lukasz Kaiser、Aravind Srinivas 等</li><li><strong>创始团队</strong>：累计完成 <strong>80+ 次流片</strong>，核心成员来自 Anthropic、xAI、Google DeepMind、Meta、NVIDIA、Synopsys</li><li><strong>差异化路径</strong>：不停留在为碎片化流程构建 AI 智能体，而是<strong>从零重构芯片设计全流程</strong>，使 AI 作为一等公民嵌入设计方法论</li><li><strong>落地进展</strong>：已与半导体公司合作部署，AI 生成的设计预计年内于<strong>前沿代工节点流片</strong></li></ul><p>Architect Labs 提出了"无设计（Designless）半导体产业"愿景，类比当年 Fabless 革命。这篇声明直指现有 Agentic EDA 路线的根本缺陷——为碎片化流程打补丁。</p>
+      <a href="https://architectlabs.com/blog/seed" target="_blank">→ Architect Labs 官方博客</a>
+      <a href="https://www.morningstar.com/news/business-wire/20260618895194/architect-labs-raises-24m-seed-to-democratize-custom-chip-design" target="_blank" style="margin-left:12px;">→ Morningstar/Business Wire</a>
+    </div>
+
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · 2026-06-19</div>
+      <h4 id="2026-06-19c">📰 Chip Industry Week In Review #143 — VLSI Symposium 2026 AI 全栈技术突破 + EDA 生态加速</h4>
+      <p>本周产业动态聚焦 <strong>VLSI Symposium 2026</strong>（夏威夷）：<strong>Intel 18A-P</strong> 进入风险生产（CFET/钌互连等长期研究披露），<strong>TSMC A16</strong> 埃米级 GAA + Super Power Rail BPD，<strong>Samsung 42nm 3D堆叠FET</strong> 展示。EDA/AI 相关关键动态：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>ChipAgents Renoir</strong>：首款专用芯片设计 LLM 发布（见上方卡片）</li><li><strong>Architect Labs</strong>：$2400 万种子轮打造端到端 AI 芯片设计（见上方卡片）</li><li><strong>Amazon</strong>：拟对外销售自研 Trainium AI 加速芯片，Google 此前已商用 TPU</li><li><strong>Qualcomm</strong>：据报洽谈收购 AI 芯片公司 Tenstorrent</li><li><strong>Keysight</strong>：完成收购 VPIphotonics，补强光子设计自动化</li><li><strong>Enflame（燧原科技）</strong>：腾讯投资的 AI 芯片厂商获上交所 IPO 批准</li><li><strong>SK hynix</strong>：向主要客户交付 12 层 HBM4E 样品</li><li><strong>韩国政府</strong>：推出 $5.2 亿端侧 AI 芯片研发计划</li></ul>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-143/" target="_blank">→ SemiEngineering WIR #143</a>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-06-18">
   <div class="section-title"><span class="icon">🔧</span> 2026-06-18 <span class="badge-new">4条新闻</span> <span class="line"></span></div>

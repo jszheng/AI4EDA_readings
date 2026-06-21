@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🔥 2026-06-19 最新</h1>
+  <p class="subtitle">3 篇论文 · 3 条行业动态</p>
+</header>
+<section>
+  <div class="abstracts">
+    <!-- Papers -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.06530 · cs.AR · 2026-06-03</div>
+      <h4>RTLScout: Joint Agentic Code and Synthesis Optimization for Efficient Digital Circuits</h4>
+      <p><strong>作者：</strong>Felix Arnold, Ryan Amaudruz, Dimitrios Tsaras, Renzo Andri, Lukas Cavigelli</p>
+      <p>LLM 智能体驱动的自主系统，通过迭代 RTL 编写+综合优化实现 PPA 协同优化。IEEE-754 FP16 乘法器面积-35%、延迟-45%，帕累托前沿超越商用工具。引入多轮精英池框架。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL优化</span><span class="tag">LLM Agent</span><span class="tag">逻辑综合</span><span class="tag">PPA优化</span><span class="tag">自主设计</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.06530" target="_blank">📄 arXiv</a>
+      <a style="margin-left:12px" href="2026-06-19/2606.06530_RTLScout.pdf" target="_blank">📥 PDF</a>
+    </div>
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.07246 · cs.AR · 2026-06-05</div>
+      <h4>MailoHLS: Multi-Adapter Structure-Aware Learning for Pareto-Driven HLS Pragma Optimization</h4>
+      <p><strong>作者：</strong>Elena Vouvali, Dimosthenis Masouros, Aggelos Ferikoglou, Dimitrios Soudris, Sotirios Xydis</p>
+      <p>LLM+GNN 混合框架用于 HLS 编译指示优化。LoRA+Pareto 驱动，最高 12.42× 加速，持续生成近帕累托最优设计，超越高端 LLM 和先前方法。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">HLS优化</span><span class="tag">LLM+GNN</span><span class="tag">LoRA</span><span class="tag">帕累托</span><span class="tag">FPGA</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.07246" target="_blank">📄 arXiv</a>
+      <a style="margin-left:12px" href="2026-06-19/2606.07246_MailoHLS.pdf" target="_blank">📥 PDF</a>
+    </div>
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv:2606.04126 · cs.AR/AI/SE · 2026-06-02</div>
+      <h4>HighTide: An Agent-Curated Open-Source VLSI Benchmark Suite</h4>
+      <p><strong>作者：</strong>Benjamin Goldblatt, Paolo Pedroso, Farhad Modaresi, Ethan Sifferman, Matthew R. Guthaus (UCSC)</p>
+      <p>AI Agent 辅助维护的演进式 VLSI 基准套件。12 个 AI 技能覆盖设计全生命周期，Bazel 增量编译，决策日志作为长期调优记忆。首个将 AI Agent 嵌入基准维护的工作。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">VLSI基准</span><span class="tag">AI Agent</span><span class="tag">开源</span><span class="tag">RTL-to-GDS</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.04126" target="_blank">📄 arXiv</a>
+      <a style="margin-left:12px" href="2026-06-19/2606.04126_HighTide.pdf" target="_blank">📥 PDF</a>
+    </div>
+    <!-- News -->
+    <div class="abs-card">
+      <div class="src"><span class="dot" style="background:#f59e0b;"></span>ChipAgents · 2026-06-17</div>
+      <h4>🤖 ChipAgents 推出芯片设计专用大模型 Renoir — 逼近 Claude Opus 4.6，成本减半，本地化部署</h4>
+      <p>首款专为半导体设计优化的 MoE LLM。RTL 生成/Bug 定位/规格书转代码基准逼近 Claude Opus 4.6，支持气隙环境部署。</p>
+      <a href="https://chipagents.ai/blogs/introducing-renoir" target="_blank">→ 官方博客</a>
+    </div>
+    <div class="abs-card">
+      <div class="src"><span class="dot" style="background:#f59e0b;"></span>Architect Labs · 2026-06-18</div>
+      <h4>💰 Architect Labs $2400万种子轮 — 从零重构芯片设计流程，打造端到端AI芯片设计+可证明验证</h4>
+      <p>Kindred Ventures 领投。80+ 次流片经验的团队。不从碎片化流程打补丁，而是重构设计全流程使 AI 成为一等公民。年内前沿节点流片。</p>
+      <a href="https://architectlabs.com/blog/seed" target="_blank">→ 官方博客</a>
+    </div>
+    <div class="abs-card">
+      <div class="src"><span class="dot" style="background:#f59e0b;"></span>SemiEngineering · 2026-06-19</div>
+      <h4>📰 Chip Industry Week In Review #143 — VLSI Symposium AI全栈突破</h4>
+      <p>VLSI 2026：Intel 18A-P 风险生产 / TSMC A16 GAA / Samsung 3D堆叠FET。ChipAgents/Architect Labs/Keysight VPIphotonics/Amazon Trainium/Qualcomm Tenstorrent。</p>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-143/" target="_blank">→ SemiEngineering</a>
+    </div>
+  </div>
+</section>
+</body>
+</html>
