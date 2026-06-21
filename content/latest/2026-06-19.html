@@ -13,68 +13,52 @@
     .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
     .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
     .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; }
   </style>
 </head>
 <body>
 <header>
-  <h1>🔥 2026-06-19 最新</h1>
-  <p class="subtitle">3 篇论文 · 3 条行业动态</p>
+  <h1>🔥 2026-06-19 最新动态</h1>
+  <p class="subtitle">共 3 条行业动态 · ChipAgents Renoir + Architect Labs $24M + SemiEngineering WIR #143</p>
 </header>
 <section>
   <div class="abstracts">
-    <!-- Papers -->
+
     <div class="abs-card">
-      <div class="src"><span class="dot"></span>arXiv:2606.06530 · cs.AR · 2026-06-03</div>
-      <h4>RTLScout: Joint Agentic Code and Synthesis Optimization for Efficient Digital Circuits</h4>
-      <p><strong>作者：</strong>Felix Arnold, Ryan Amaudruz, Dimitrios Tsaras, Renzo Andri, Lukas Cavigelli</p>
-      <p>LLM 智能体驱动的自主系统，通过迭代 RTL 编写+综合优化实现 PPA 协同优化。IEEE-754 FP16 乘法器面积-35%、延迟-45%，帕累托前沿超越商用工具。引入多轮精英池框架。</p>
+      <div class="src"><span class="dot"></span>ChipAgents · 2026-06-17</div>
+      <h4>🤖 ChipAgents 推出芯片设计专用大模型 Renoir — 内部基准逼近 Claude Opus 4.6，成本减半，支持完全本地化部署</h4>
+      <p>ChipAgents 正式发布首款<strong>芯片设计专用大语言模型 Renoir</strong>，基于开源 MoE 架构 LLM 微调。内部芯片设计基准（覆盖 RTL 生成、Bug 定位、规格书转代码）上逼近 Claude Opus 4.6，成本降低 50%+。支持完全本地化/气隙环境部署，满足半导体公司严格安全要求。这是 EDA 领域首次有创业公司推出专用芯片设计 LLM。</p>
       <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
-        <span class="tag">RTL优化</span><span class="tag">LLM Agent</span><span class="tag">逻辑综合</span><span class="tag">PPA优化</span><span class="tag">自主设计</span>
+        <span class="tag">芯片设计LLM</span>
+        <span class="tag">Renoir</span>
+        <span class="tag">RTL生成</span>
       </div>
-      <a href="https://arxiv.org/abs/2606.06530" target="_blank">📄 arXiv</a>
-      <a style="margin-left:12px" href="2026-06-19/2606.06530_RTLScout.pdf" target="_blank">📥 PDF</a>
+      <a href="https://chipagents.ai/blogs/introducing-renoir" target="_blank">→ ChipAgents 官方博客</a>
     </div>
+
     <div class="abs-card">
-      <div class="src"><span class="dot"></span>arXiv:2606.07246 · cs.AR · 2026-06-05</div>
-      <h4>MailoHLS: Multi-Adapter Structure-Aware Learning for Pareto-Driven HLS Pragma Optimization</h4>
-      <p><strong>作者：</strong>Elena Vouvali, Dimosthenis Masouros, Aggelos Ferikoglou, Dimitrios Soudris, Sotirios Xydis</p>
-      <p>LLM+GNN 混合框架用于 HLS 编译指示优化。LoRA+Pareto 驱动，最高 12.42× 加速，持续生成近帕累托最优设计，超越高端 LLM 和先前方法。</p>
+      <div class="src"><span class="dot"></span>Architect Labs · 2026-06-18</div>
+      <h4>💰 Architect Labs 完成 $2400 万种子轮融资 — 从零重构芯片设计流程，打造端到端 AI 芯片设计+可证明验证系统</h4>
+      <p>Architect Labs 正式出山，定位为计算系统基础 AI 实验室，构建能<strong>端到端设计并可证明验证芯片</strong>的 AI 系统。$2400 万种子轮，Kindred Ventures 领投。创始团队累计 <strong>80+ 次流片</strong>，核心成员来自 Anthropic、xAI、DeepMind、Meta、NVIDIA。提出了"无设计（Designless）半导体产业"愿景。</p>
       <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
-        <span class="tag">HLS优化</span><span class="tag">LLM+GNN</span><span class="tag">LoRA</span><span class="tag">帕累托</span><span class="tag">FPGA</span>
+        <span class="tag">AI芯片设计</span>
+        <span class="tag">端到端</span>
+        <span class="tag">$2400万</span>
       </div>
-      <a href="https://arxiv.org/abs/2606.07246" target="_blank">📄 arXiv</a>
-      <a style="margin-left:12px" href="2026-06-19/2606.07246_MailoHLS.pdf" target="_blank">📥 PDF</a>
+      <a href="https://architectlabs.com/blog/seed" target="_blank">→ Architect Labs 官方博客</a>
     </div>
+
     <div class="abs-card">
-      <div class="src"><span class="dot"></span>arXiv:2606.04126 · cs.AR/AI/SE · 2026-06-02</div>
-      <h4>HighTide: An Agent-Curated Open-Source VLSI Benchmark Suite</h4>
-      <p><strong>作者：</strong>Benjamin Goldblatt, Paolo Pedroso, Farhad Modaresi, Ethan Sifferman, Matthew R. Guthaus (UCSC)</p>
-      <p>AI Agent 辅助维护的演进式 VLSI 基准套件。12 个 AI 技能覆盖设计全生命周期，Bazel 增量编译，决策日志作为长期调优记忆。首个将 AI Agent 嵌入基准维护的工作。</p>
+      <div class="src"><span class="dot"></span>SemiEngineering · 2026-06-19</div>
+      <h4>📰 Chip Industry Week In Review #143 — VLSI Symposium AI 全栈技术突破 + EDA 生态加速</h4>
+      <p>VLSI Symposium 2026：Intel 18A-P 风险生产、TSMC A16 GAA + BPD、Samsung 42nm 3D堆叠FET。ChipAgents Renoir 芯片设计LLM、Architect Labs $2400万、Amazon Trainium 外销、Qualcomm 洽谈收购 Tenstorrent、燧原科技 IPO 获批、韩国 $5.2亿端侧AI计划。</p>
       <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
-        <span class="tag">VLSI基准</span><span class="tag">AI Agent</span><span class="tag">开源</span><span class="tag">RTL-to-GDS</span>
+        <span class="tag">Week In Review</span>
+        <span class="tag">VLSI Symposium</span>
       </div>
-      <a href="https://arxiv.org/abs/2606.04126" target="_blank">📄 arXiv</a>
-      <a style="margin-left:12px" href="2026-06-19/2606.04126_HighTide.pdf" target="_blank">📥 PDF</a>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-143/" target="_blank">→ SemiEngineering WIR #143</a>
     </div>
-    <!-- News -->
-    <div class="abs-card">
-      <div class="src"><span class="dot" style="background:#f59e0b;"></span>ChipAgents · 2026-06-17</div>
-      <h4>🤖 ChipAgents 推出芯片设计专用大模型 Renoir — 逼近 Claude Opus 4.6，成本减半，本地化部署</h4>
-      <p>首款专为半导体设计优化的 MoE LLM。RTL 生成/Bug 定位/规格书转代码基准逼近 Claude Opus 4.6，支持气隙环境部署。</p>
-      <a href="https://chipagents.ai/blogs/introducing-renoir" target="_blank">→ 官方博客</a>
-    </div>
-    <div class="abs-card">
-      <div class="src"><span class="dot" style="background:#f59e0b;"></span>Architect Labs · 2026-06-18</div>
-      <h4>💰 Architect Labs $2400万种子轮 — 从零重构芯片设计流程，打造端到端AI芯片设计+可证明验证</h4>
-      <p>Kindred Ventures 领投。80+ 次流片经验的团队。不从碎片化流程打补丁，而是重构设计全流程使 AI 成为一等公民。年内前沿节点流片。</p>
-      <a href="https://architectlabs.com/blog/seed" target="_blank">→ 官方博客</a>
-    </div>
-    <div class="abs-card">
-      <div class="src"><span class="dot" style="background:#f59e0b;"></span>SemiEngineering · 2026-06-19</div>
-      <h4>📰 Chip Industry Week In Review #143 — VLSI Symposium AI全栈突破</h4>
-      <p>VLSI 2026：Intel 18A-P 风险生产 / TSMC A16 GAA / Samsung 3D堆叠FET。ChipAgents/Architect Labs/Keysight VPIphotonics/Amazon Trainium/Qualcomm Tenstorrent。</p>
-      <a href="https://semiengineering.com/chip-industry-week-in-review-143/" target="_blank">→ SemiEngineering</a>
-    </div>
+
   </div>
 </section>
 </body>

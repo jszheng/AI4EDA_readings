@@ -1,3 +1,38 @@
+## 2026-06-22 Execution Summary
+
+**Status:** ✅ Success (git push pending verification)
+
+**New Papers Added (3 items):**
+- RTLScout (arXiv:2606.06530) — Felix Arnold, Ryan Amaudruz, Dimitrios Tsaras, Renzo Andri, Lukas Cavigelli — LLM-driven agentic system for joint RTL code + synthesis co-optimization; multi-run elite pool framework; 4 complementary phases; 35% area reduction, 45% delay reduction on FP16 multiplier; Pareto front outperforms commercial tool; submitted June 3
+- MailoHLS (arXiv:2606.07246) — Elena Vouvali, Dimosthenis Masouros, Aggelos Ferikoglou, Dimitrios Soudris, Sotirios Xydis — LLM+GNN hybrid framework for HLS pragma optimization; cross-attention fusion + LoRA adapters + Pareto-driven optimization; up to 12.42x speedup; submitted June 5
+- HighTide (arXiv:2606.04126) — Benjamin Goldblatt, Paolo Pedroso, Farhad Modaresi, Ethan Sifferman, Matthew R. Guthaus (UCSC) — Agent-curated VLSI benchmark suite; 12 AI agent skills for design lifecycle; Bazel RTL-to-GDS with remote caching; decision logs as long-term tuning memory; submitted June 2
+
+**New News Added (3 items):**
+- ChipAgents Renoir — First chip-design-specific fine-tuned LLM; MoE architecture; approaches Claude Opus 4.6 on internal benchmarks (RTL gen/bug localization/spec-to-code); 50%+ cost reduction; air-gapped on-premises deployment; June 17
+- Architect Labs $24M seed — AI system for end-to-end chip design + provable verification; Kindred Ventures lead; founding team 80+ tapeouts from Anthropic/xAI/DeepMind/Meta/NVIDIA; "designless semiconductor industry" vision; already deployed with customers, tapeouts expected this year; June 18
+- SemiEngineering WIR #143 — VLSI Symposium 2026 coverage: Intel 18A-P risk production, TSMC A16 GAA, Samsung 42nm 3D stacked FET; ChipAgents/Architect Labs/Amazon Trainium/Qualcomm-Tenstorrent/Keysight VPIphotonics; June 19
+
+**Files Updated:**
+- content/news/index.html — Added June 19 section with 3 cards (ChipAgents Renoir, Architect Labs, WIR #143)
+- content/news/news_memory.json — Added 3 items, totalItems→118
+- content/dates/2026-06-19.html — New date page (3 papers + 3 news)
+- content/latest/2026-06-19.html — New latest page
+- content/dates/2026-06-19/ — 3 new PDFs (RTLScout, MailoHLS, HighTide)
+- manifest.js — Updated stats (papers 172, batches 71, news 118, lastUpdate 2026-06-22)
+- Git pushed pending verification (large PDF upload may require retry)
+
+**Key Findings:**
+- ChipAgents Renoir is a landmark for Domain-Specific LLMs in EDA: first startup to ship a chip-design-specific LLM, proving that fine-tuned open-weight models can be competitive with frontier closed models on semiconductor tasks while enabling air-gapped deployment — this directly addresses the IP-security bottleneck holding back enterprise AI adoption in EDA
+- Architect Labs' "designless semiconductor" thesis is the most radical counterpoint to the "Agentic EDA" narrative: instead of building agents for existing fragmented flows, they're rebuilding the design flow itself with AI as first-class citizen. $24M seed with 80+ tapeout experience and tier-1 AI talent from Anthropic/DeepMind/Meta makes them the most credible challenger to Cadence/Synopsys/Siemens
+- RTLScout is the first system to truly unify LLM-driven design exploration with synthesis-level optimization in a closed loop, demonstrating that LLM agents + EDA tools can co-optimize rather than just generate functionally-correct RTL
+- MailoHLS's LLM+GNN hybrid architecture is a blueprint for future AI4EDA systems: LLMs understand code semantics and intent, GNNs model structural dependencies — this dual-pathway approach overcomes the fundamental limitation of purely text-based LLM reasoning about hardware structure
+- HighTide from UCSC's VLSI-DA group is the first work to embed AI agents directly into benchmark curation — this points toward a future where EDA benchmarks self-maintain and evolve, reducing the maintenance burden that has historically caused benchmark stagnation
+- arXiv cs.AR June 19-22 (weekend) was quiet for AI4EDA: most new submissions were AI accelerator hardware designs, not EDA methodology papers
+
+**Next Check:** MLCAD Testcase 3 results (June 25), DAC 2026 full program schedule (July 26-29), Si2 "Agentic AI in EDA: Who's in Control?" panel at DAC (July 27), SemiEngineering WIR #144 (expected ~June 26), arXiv cs.AR papers after weekend
+
+---
+
 ## 2026-06-18 Execution Summary
 
 **Status:** ✅ Success
