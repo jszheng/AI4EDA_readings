@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-06-23 论文 & 动态</h1>
+  <p class="subtitle">共 0 篇论文 · 1 条行业动态 · 来源：SemiEngineering</p>
+</header>
+<section>
+  <div class="abstracts">
+    <!-- ========== SemiEngineering Designing Chips That Can Explain Themselves ========== -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · 专家圆桌 · 2026-06-17</div>
+      <h4>🔬 芯片如何"自我解释" — 片上遥测+AI 分析重塑芯片可观测性与设计闭环</h4>
+      <p>SemiEngineering 召集多位行业专家展开深度圆桌讨论，核心议题为芯片的<strong>可自我解释能力</strong>——如何通过片上遥测、本地 AI 分析和全生命周期数据让芯片架构师弥合设计意图与实际硅片行为之间的差距。关键观点：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>三层数据架构</strong>：本地硬件响应层（纳秒-微秒实时操作）→ 片上处理层（DVFS/限流/路由策略本地闭环）→ 队列级学习层（跨设备分析、长期可靠性预测）</li><li><strong>数字孪生+AI</strong>：片上实时数据持续反哺数字孪生模型，边缘侧部署轻量 AI 模型匹配高实时性需求</li><li><strong>设计余量压缩</strong>：片上实时监控可量化实际硅片行为，大幅压缩不必要 guard band，提升 PPA</li><li><strong>形式化方法融合</strong>：AI 智能体从需求中生成形式化属性，实现主动安全/一致性偏离判断</li><li><strong>全生命周期闭环</strong>：硅片验证→量产分析→下一代设计反馈的正向飞轮</li></ul><p>监控器已成先进制程/AI 数据中心等场景<strong>必备基础设施</strong>，优先级与 PLL/DFT 相当。</p>
+      <a href="https://semiengineering.com/designing-chips-that-can-explain-themselves/" target="_blank">📄 SemiEngineering 原文</a>
+    </div>
+  </div>
+</section>
+</body>
+</html>

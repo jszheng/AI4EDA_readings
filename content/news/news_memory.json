@@ -1,8 +1,29 @@
 {
-  "lastUpdate": "2026-06-22",
-  "cutoffDate": "2025-12-22",
-  "totalItems": 118,
+  "lastUpdate": "2026-06-23",
+  "cutoffDate": "2025-12-23",
+  "totalItems": 119,
   "items": [
+    {
+      "date": "2026-06-23",
+      "company": "SemiEngineering",
+      "title": "🔬 芯片如何\"自我解释\" — SemiEngineering 专家圆桌：片上遥测+AI分析重塑芯片可观测性与设计闭环",
+      "link": "https://semiengineering.com/designing-chips-that-can-explain-themselves/",
+      "keywords": [
+        "SemiEngineering",
+        "芯片自我解释",
+        "片上遥测",
+        "可观测性",
+        "AI分析",
+        "数字孪生",
+        "形式化方法",
+        "设计余量",
+        "PPA优化",
+        "全生命周期闭环",
+        "监控器",
+        "先进制程",
+        "2026-06-17"
+      ]
+    },
     {
       "date": "2026-06-19",
       "company": "ChipAgents",
