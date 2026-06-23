@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet"="../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🔥 2026-06-24 最新</h1>
+  <p class="subtitle">共 6 篇论文 · 来源：arXiv cs.AR / cs.SE / cs.LG</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE · 2026-06-16 · David Z. Pan</div>
+      <h4>⚡ HWGen：LLM + 形式方法逐步精化实现可解释可验证 RTL 生成</h4>
+      <p>LLM 创造力 + 形式方法数学严谨性，转换规则覆盖设计决策，迭代应用将规格→RTL，保证正确性。首次将形式化逐步精化与 LLM 生成结合用于 RTL。</p>
+      <a href="https://arxiv.org/abs/2606.19387" target="_blank">📄 arXiv</a>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE · 2026-06-18 · Bei Yu</div>
+      <h4>🤖 Agentic EDA 交接视角综述 — 82 系统 + 五层 EACP 协议</h4>
+      <p>交接有效性为组织原则，82系统分三类边界（Stage-Bound / Flow-Bound / Organization-Bound），提出 EACP 五层协议统一 Agentic EDA 词汇与研究议程。</p>
+      <a href="https://arxiv.org/abs/2606.19795" target="_blank">📄 arXiv</a>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · ICML 2026 · Bei Yu/Ping Luo</div>
+      <h4>📐 LithoGRPO：GRPO强化+流匹配快速逆光刻 — 130× shot计数加速</h4>
+      <p>首个流匹配+RL统一掩模优化框架，GRPO强化利用物理奖励函数，快速shot计数算法130×加速。ICML 2026接收。</p>
+      <a href="https://arxiv.org/abs/2606.00228" target="_blank">📄 arXiv</a>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-06-19</div>
+      <h4>✅ LLM RTL断言 + 形式验证闭环 — 变异引导精化+求解器选择+因果解释</h4>
+      <p>轻量开源框架三合一闭环：变异引导拒绝弱断言、RTL结构选择SMT求解器、因果叙述合成解释失败。质量感知闭环而非单纯断言生成是关键缺失步骤。</p>
+      <a href="https://arxiv.org/abs/2606.21451" target="_blank">📄 arXiv</a>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · MLArchSys @ ISCA 2026 · Harvard</div>
+      <h4>🤖 AgentDSE：LLM驱动架构DSE — 100× 更少评估达到竞争力设计</h4>
+      <p>LLM编程智能体仿真器在环DSE，无需微调/预计算数据库/领域优化器代码，架构推理闭环自动探索，两个数量级更少评估。ISCA 2026接收。</p>
+      <a href="https://arxiv.org/abs/2606.21836" target="_blank">📄 arXiv</a>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-06-18 · Deming Chen (UIUC)</div>
+      <h4>📦 A3C3：AI算法+加速器协同设计/搜索/生成方法论（Springer书章）</h4>
+      <p>联合优化NN架构+硬件实现，算法与加速器设计空间参数化联合搜索，自动生成模型-加速器对平衡精度/延迟/能效。嵌入式ML手册书章。</p>
+      <a href="https://arxiv.org/abs/2606.20869" target="_blank">📄 arXiv</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
