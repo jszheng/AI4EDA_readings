@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-06-25 论文 & 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 来源：arXiv</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2606.23759 VeriPilot -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.SE · 2026-06-22</div>
+      <h4>🐛 VeriPilot：LLM 驱动的 Verilog 调试框架 — 黄金参考模型 + CDFG 实现 Bug 自动定位与修复</h4>
+      <p>提出<strong>VeriPilot</strong>，一个基于 LLM 的 Verilog 调试框架。核心创新：(1) 利用<strong>黄金参考模型</strong>（如 C 模型）生成期望行为，通过对比仿真输出定位 Bug；(2) 构建<strong>控制数据流图（CDFG）</strong>缩小错误搜索空间，将 Bug 定位到具体信号和代码行；(3) LLM 基于精确定位信息生成针对性修复补丁。在 NVIDIA CVDP 基准上评估：将 GPT-4o 修复成功率从 <strong>54.3% 提升至 85.71%</strong>，平均调试时间减少<strong>62%</strong>。框架支持多种 LLM 后端，开源 GitHub：YihanWn/VeriPilot。<br>
+      <strong>核心创新</strong>：黄金参考模型对比 + CDFG Bug 定位 + LLM 精确定向修复 + 85.71% 成功率</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Verilog调试</span>
+        <span class="tag">LLM</span>
+        <span class="tag">CDFG</span>
+        <span class="tag">Bug定位</span>
+        <span class="tag">NVIDIA CVDP</span>
+        <span class="tag">开源</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.23759" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2606.23759_VeriPilot.pdf" class="local">📥 本地PDF</a>
+      &nbsp;<a href="https://github.com/YihanWn/VeriPilot" target="_blank">💻 GitHub</a>
+    </div>
+
+    <!-- 2606.23704 PCB-QA -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-06-10</div>
+      <h4>🖥️ PCB-QA：首个 PCB 设计 QA 数据集 — 480 对问答 + 8 个开源硬件项目，评估 LLM 电路设计理解</h4>
+      <p>提出<strong>PCB-QA</strong>，首个面向<strong>PCB 设计领域的大语言模型问答评测数据集</strong>。核心贡献：(1) 从 <strong>8 个开源硬件项目</strong>中提取 <strong>480 对问答</strong>，覆盖原理图理解、布局规则、元器件选型、信号完整性等真实 PCB 设计场景；(2) 系统评估 GPT-4o、Claude、Gemini 3 Flash Preview 等主流 LLM 的电路设计理解能力；(3) <strong>Gemini 3 Flash Preview 达到 93% 准确率</strong>，揭示 LLM 在硬件设计自动化方面的巨大潜力。数据集和评测框架开源，为 EDA 领域 LLM 基准测试提供新维度。<br>
+      <strong>核心创新</strong>：首个 PCB 设计 QA 数据集 + 480 对真实问答 + Gemini 3 Flash Preview 93% 准确率</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">PCB设计</span>
+        <span class="tag">QA数据集</span>
+        <span class="tag">LLM评测</span>
+        <span class="tag">开源硬件</span>
+        <span class="tag">Gemini 3</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.23704" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2606.23704_PCB-QA.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
