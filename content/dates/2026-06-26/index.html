@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-06-26 论文 & 动态</h1>
+  <p class="subtitle">共 1 篇论文 · 来源：arXiv</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2606.25296 SafeGen -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-06-24</div>
+      <h4>🛡️ SafeGen：LLM 驱动断言生成与故障关键性评估，助力汽车芯片功能安全</h4>
+      <p>提出 <strong>SafeGen</strong>，首个面向<strong>汽车芯片功能安全</strong>的 LLM 驱动、形式验证辅助的故障关键性评估框架。核心创新：(1) 利用 <strong>Hyper Knowledge Graph（HyperKG）</strong> 融合 FMEDA 指南，从设计和安全文档中提取可验证规格；(2) 结合 RTL 信息生成<strong>功能安全断言（FSAs）</strong>，每个断言与规格关联，实现全过程可追溯；(3) 门级到 RTL 的故障映射机制（支持 stuck-at 和 bridging 故障），结合 <strong>形式属性验证（FPV）</strong> 实现基于语义层面的故障关键性分级；(4) 数字-物理联合仿真平台验证 FOC 系统。实验表明 SafeGen 生成的断言质量优于现有 LLM 断言生成框架，同时提供比传统仿真方法更高的语义可解释性。<br>
+      <strong>核心创新</strong>：HyperKG + FMEDA 融合 + LLM 驱动 FSA 生成 + 门级到 RTL 故障映射 + FPV 语义级关键性评估</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">功能安全</span>
+        <span class="tag">断言生成</span>
+        <span class="tag">LLM</span>
+        <span class="tag">形式验证</span>
+        <span class="tag">故障关键性</span>
+        <span class="tag">FMEDA</span>
+        <span class="tag">汽车芯片</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.25296" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2606.25296_SafeGen.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
