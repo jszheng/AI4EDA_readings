@@ -1,7 +1,7 @@
 {
-  "lastUpdate": "2026-06-25",
-  "cutoffDate": "2025-12-25",
-  "totalItems": 122,
+  "lastUpdate": "2026-06-26",
+  "cutoffDate": "2025-12-26",
+  "totalItems": 123,
   "items": [
     {
       "date": "2026-06-25",
@@ -52,7 +52,41 @@
         "Verilog",
         "2026-06-25"
       ]
-    },      "keywords": [
+    },
+    {
+      "date": "2026-06-25",
+      "company": "SemiEngineering / Liz Allan",
+      "title": "🔗 AI 数据中心与 HPC 集群的 I/O 设计挑战加剧 — 物理接口成系统瓶颈，Agent AI辅助解决复杂物理问题",
+      "link": "https://semiengineering.com/i-o-design-challenges-grow-in-ai-data-centers-and-hpc-clusters/",
+      "keywords": [
+        "SemiEngineering",
+        "Liz Allan",
+        "I/O",
+        "设计挑战",
+        "AI数据中心",
+        "HPC",
+        "Chiplet",
+        "3D封装",
+        "跨物理域耦合",
+        "Agent AI",
+        "physics-based AI",
+        "OCP",
+        "MRC",
+        "Cadence",
+        "Arteris",
+        "Keysight",
+        "Synopsys",
+        "信号完整性",
+        "热管理",
+        "2026-06-25"
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "company": "Alfonso Marco / LinkedIn",
+      "title": "📊 Siemens Fuse EDA AI vs Synopsys.ai vs Cadence.AI — DFT 工程师视角下三大 EDA 巨头 AI 平台深度对比",
+      "link": "https://www.linkedin.com/pulse/siemens-fuse-eda-ai-vs-synopsysai-cadenceai-dft-alfonso-marco-crske",
+      "keywords": [
         "Siemens",
         "Fuse",
         "EDA",

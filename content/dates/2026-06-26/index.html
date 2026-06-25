@@ -19,16 +19,16 @@
 <body>
 <header>
   <h1>📅 2026-06-26 论文 & 动态</h1>
-  <p class="subtitle">共 1 篇论文 · 来源：arXiv</p>
+  <p class="subtitle">共 3 篇论文 · 3 条新闻 · 来源：arXiv / SemiEngineering</p>
 </header>
 <section>
   <div class="abstracts">
 
     <!-- 2606.25296 SafeGen -->
     <div class="abs-card">
-      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-06-24</div>
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · DAC 2026 · 2026-06-24 · Xuanyi Tan / Arjun Chaudhuri / Rubin Parekhji / Krishnendu Chakrabarty</div>
       <h4>🛡️ SafeGen：LLM 驱动断言生成与故障关键性评估，助力汽车芯片功能安全</h4>
-      <p>提出 <strong>SafeGen</strong>，首个面向<strong>汽车芯片功能安全</strong>的 LLM 驱动、形式验证辅助的故障关键性评估框架。核心创新：(1) 利用 <strong>Hyper Knowledge Graph（HyperKG）</strong> 融合 FMEDA 指南，从设计和安全文档中提取可验证规格；(2) 结合 RTL 信息生成<strong>功能安全断言（FSAs）</strong>，每个断言与规格关联，实现全过程可追溯；(3) 门级到 RTL 的故障映射机制（支持 stuck-at 和 bridging 故障），结合 <strong>形式属性验证（FPV）</strong> 实现基于语义层面的故障关键性分级；(4) 数字-物理联合仿真平台验证 FOC 系统。实验表明 SafeGen 生成的断言质量优于现有 LLM 断言生成框架，同时提供比传统仿真方法更高的语义可解释性。<br>
+      <p>提出 <strong>SafeGen</strong>，首个面向<strong>汽车芯片功能安全</strong>的 LLM 驱动、形式验证辅助的故障关键性评估框架。核心创新：(1) 利用 <strong>Hyper Knowledge Graph（HyperKG）</strong> 融合 FMEDA 指南，从设计和安全文档中提取可验证规格；(2) 结合 RTL 信息生成<strong>功能安全断言（FSAs）</strong>，每个断言与规格关联，实现全过程可追溯；(3) 门级到 RTL 的故障映射机制（支持 stuck-at 和 bridging 故障），结合 <strong>形式属性验证（FPV）</strong> 实现基于语义层面的故障关键性分级；(4) 数字-物理联合仿真平台验证 FOC 系统。实验表明 SafeGen 生成的断言质量优于现有 LLM 断言生成框架，同时提供比传统仿真方法更高的语义可解释性。<strong>DAC 2026 接收</strong>。<br>
       <strong>核心创新</strong>：HyperKG + FMEDA 融合 + LLM 驱动 FSA 生成 + 门级到 RTL 故障映射 + FPV 语义级关键性评估</p>
       <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
         <span class="tag">功能安全</span>
@@ -38,9 +38,70 @@
         <span class="tag">故障关键性</span>
         <span class="tag">FMEDA</span>
         <span class="tag">汽车芯片</span>
+        <span class="tag">DAC 2026</span>
       </div>
       <a href="https://arxiv.org/abs/2606.25296" target="_blank">📄 arXiv</a>
       &nbsp;<a href="2606.25296_SafeGen.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+    <!-- 2606.25753 Inverse Lithography -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG / cs.AI / math.OC · 2026-06-24 · Vasiliy A. Es'kin / Egor V. Ivanov</div>
+      <h4>🔬 Gradient-based Inverse Lithography for EUV Masks via Waveguide Method and Physics-Informed Neural Operator</h4>
+      <p>提出基于<strong>梯度优化</strong>的 EUV 掩模逆光刻技术（ILT），结合<strong>波导方法（Waveguide Method）</strong>和<strong>物理信息神经算子（WGNO）</strong>作为端到端物理引擎。核心创新：(1) 将可微波导方法和 WGNO 视为<strong>可微分正向衍射模型</strong>，通过<strong>自动微分</strong>恢复掩模吸收层（TaBN/La/U）的介电常数；(2) 在 λ=11.2nm EUV 波长下，对<strong>2D 和 3D 吸收层结构</strong>进行数值验证；(3) 框架可从目标晶圆场分布<strong>反向优化掩模结构</strong>，实现物理约束下的掩模设计自动化。<br>
+      <strong>核心创新</strong>：可微分波导方法 + 物理信息神经算子（WGNO） + 自动微分 + EUV掩模逆向设计</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">逆光刻</span>
+        <span class="tag">EUV掩模</span>
+        <span class="tag">物理信息神经算子</span>
+        <span class="tag">波导方法</span>
+        <span class="tag">自动微分</span>
+        <span class="tag">梯度优化</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.25753" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2606.25753_InverseLithography.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+    <!-- 2606.25532 Agentic Physically Constrained -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.AR / cs.LG / cs.MA · 2026-06-24 · Jiangwei Zhang / Wen Sun / Chong Wang / Yu Wang / Rui Hou</div>
+      <h4>🤖 Agentic Evolution of Physically Constrained Foundation Models — 物理约束基础模型的智能体演化引擎</h4>
+      <p>提出<strong>物理约束多智能体发现引擎</strong>，自主设计硬件兼容计算系统。核心创新：(1) <strong>演化知识图谱</strong>（Evolutionary Knowledge Graph）结构化过往科学创新，提取<strong>算法思维链（algorithmic Chain-of-Thought）</strong>将盲随机搜索转化为定向结构演化；(2) 针对基础模型部署极端场景，演化出两种<strong>硬件感知压缩方法</strong>：<strong>Q-Enhance</strong>缓解长上下文精度损失，<strong>MoE-Salient-AQ</strong>在 sub-3-bit 水准下超越 SOTA 手动稀疏 MoE 设计 3.7%；(3) 利用<strong>带宽高效敏感性谱</strong>将 235B 参数模型部署至受限双 A100 服务器，内存需求降低 75%，精度仅损 0.64%；(4) 将<strong>无约束组合搜索</strong>转化为<strong>知识驱动自主</strong>，建立可扩展<strong>硬件-软件协同设计范式</strong>。<br>
+      <strong>核心创新</strong>：演化知识图谱 + 算法 CoT + 物理约束多智能体 + 硬件感知压缩 + 235B→双A100部署</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">多智能体</span>
+        <span class="tag">物理约束</span>
+        <span class="tag">硬件感知</span>
+        <span class="tag">演化知识图谱</span>
+        <span class="tag">软硬件协同设计</span>
+        <span class="tag">模型压缩</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.25532" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2606.25532_AgenticPhysicallyConstrained.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+    <!-- News 1: Executive Outlook -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · ESD Alliance Executive Outlook · 2026-06-25</div>
+      <h4>🎯 Executive Outlook: Agentic AI 对芯片设计的冲击 — 行业高管圆桌讨论</h4>
+      <p>SemiEngineering 在 ESD Alliance 2026 Executive Outlook 上召集六位行业高管（ChipAgents、Silvaco、Moores Lab AI、Breker、Verific、Silimate）展开圆桌讨论，核心议题：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>Agentic AI 将重塑整个设计流程</strong>：从 DV 到 RTL 生成、UVM、formal 到前后端，已在加速设计周期</li><li><strong>组织变革挑战</strong>：技术本身不是瓶颈，如何教育工程师接受新方案、建立团队协作才是真正的挑战</li><li><strong>信任与质量</strong>：芯片设计是精确科学，不能容忍 1% 的错误。人类在环（human-in-the-loop）在可预见未来仍是规则</li><li><strong>效率衡量</strong>：从个人工程师提速到整个组织信任加速，最终目标是自进化工程系统——从过往经验中学习、持续收集反馈、不断进化</li><li><strong>生态合作</strong>：若各厂商各自为战，可能全盘皆输；需要建立共同基准、流程理解和协作框架，实现"做大蛋糕"</li></ul><p>文章强调 <strong>benchmark 和共识</strong>是 Agentic EDA 从概念走向实用的关键基础设施。</p>
+      <a href="https://semiengineering.com/executive-outlook-agentic-ais-impact-on-chip-design/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+    <!-- News 2: Verification Methodologies -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Brian Bailey · 2026-06-25</div>
+      <h4>🔄 验证方法论跟不上 AI 的步伐 — 工程师淹没在新能力中，如何最优部署成为核心挑战</h4>
+      <p>SemiEngineering Brian Bailey 深度分析 AI 对验证方法论的冲击：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>AI 军备竞赛</strong>：Synopsys 的 Bradley Geden 指出，高管层担心错过 AI 浪潮——如果竞争对手 6 个月流片而你需 18 个月，就输了</li><li><strong>Agentic 工作流</strong>：ChipAgents CEO William Wang 称早期客户经验显示，agentic 工作流可将 150 人验证团队等效为 400+ 人产出</li><li><strong>质量不能牺牲</strong>：Siemens EDA 的 Abhi Kolpekwar 强调"质量不由 AI 决定"，30-40 年经验的验证工程师应是质量审计员</li><li><strong>谁受益最多？</strong>：初级工程师 vs 高级工程师之争。Cadence 的 Hamid Shojaei 将 AI Agent 定位为"非常初级的验证工程师"，需要高级工程师指导；Moores Lab AI 的 Shelly Henry 则认为通用 AI 工具能力面向资深人员，初级工程师可能完全迷失</li><li><strong>技能重塑</strong>：未来初级验证工程师需要学习新技能——写好的 agent spec、理解 signoff、给 agent 反馈、审查结果，而非传统的 Verilog/UVM 编码</li></ul><p>文章最后指出，目前还没有人知道如何最佳部署 AI 以持续可靠地提供明确收益，其对团队组织和方法论演进的影响仍在演变中。</p>
+      <a href="https://semiengineering.com/verification-methodologies-struggle-to-keep-up-with-ai/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+    <!-- News 3: I/O Design Challenges -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Liz Allan · 2026-06-25</div>
+      <h4>🔗 AI 数据中心与 HPC 集群的 I/O 设计挑战加剧 — 物理接口成系统瓶颈，跨域协同成关键</h4>
+      <p>SemiEngineering Liz Allan 深度分析 AI/HPC 场景下 I/O 设计面临的多重挑战：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>系统级数据流动效率优先</strong>：AI/HPC 需求驱动设计重心从"单芯片最快"转向"系统级数据传输优化"，I/O 接口和互连协议直接决定 AI 芯片商业成败</li><li><strong>多芯片封装复杂度暴增</strong>：chiplet/2.5D/3D 封装增加接口、时钟域、电源域数量，异构集成（不同工艺节点 die）的 PDK/可靠性模型/热系数不一致，跨域协同仿真困难</li><li><strong>跨物理域耦合效应</strong>：热、机械、电气各域单域仿真成熟，但双向耦合时空尺度差异大，现有工具无法跨域协同，多芯片项目常因此延期数月</li><li><strong>Agent AI 辅助设计</strong>：Cadence、Arteris、Keysight、Synopsys 等开始在流程中引入 AI Agent 解决复杂物理问题（如热管理），physics-based AI 正逐步落地</li><li><strong>OCP MRC 协议创新</strong>：开放计算项目发布多路径可靠连接协议，基于 RDMA 实现流量分散和负载均衡，单链路故障不影响训练任务，大幅提升集群容错</li></ul><p>文章强调 I/O 设计是多维度权衡过程，需结合工作负载、成本、性能目标做定制化选择，<strong>Agent AI 和 physics-based AI</strong> 正成为解决复杂物理问题的关键手段。</p>
+      <a href="https://semiengineering.com/i-o-design-challenges-grow-in-ai-data-centers-and-hpc-clusters/" target="_blank">→ SemiEngineering 原文</a>
     </div>
 
   </div>

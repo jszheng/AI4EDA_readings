@@ -21,15 +21,16 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-25 · 涵盖 2025-12 → 2026-06-25 · 已去重整理 · 新增 Agentic AI 高管圆桌 + 验证方法论变革</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-26 · 涵盖 2025-12 → 2026-06-26 · 已去重整理 · 新增 Agentic AI 高管圆桌 + 验证方法论变革 + I/O设计挑战</p>
   <div class="stats">
-    <div class="stat"><div class="num">180</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">74</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">122</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">183</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">75</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">123</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
   <a href="#2026-06-25">260625 🎯 Agentic AI 高管圆桌 + 验证方法论变革</a>
+  <a href="#2026-06-25c">260625 🔗 I/O设计挑战加剧 — AI数据中心物理瓶颈</a>
   <a href="#2026-06-24">260624 📊 Siemens vs Synopsys vs Cadence AI 对比</a>
   <a href="#2026-06-23">260623 🔬 芯片如何"自我解释" — 片上遥测+AI分析重塑芯片可观测性</a>
   <a href="#2026-06-19">260619 🤖 ChipAgents 推出芯片设计专用大模型 Renoir</a>
@@ -109,11 +110,11 @@
 <div class="container">
 
 <section id="2026-06-25">
-  <div class="section-title"><span class="icon">🎯</span> 2026-06-25 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🎯</span> 2026-06-25 <span class="badge-new">3条新闻</span> <span class="line"></span></div>
   <div class="date-group">
     <div class="date-header" onclick="toggleDate(this)">
-      <h3>2026-06-25 行业动态（2条）</h3>
-      <span class="badge-count">2</span>
+      <h3>2026-06-25 行业动态（3条）</h3>
+      <span class="badge-count">3</span>
       <span class="toggle">▼</span>
     </div>
     <div class="date-body">
@@ -130,6 +131,13 @@
       <h4 id="2026-06-25b">🔄 验证方法论跟不上 AI 的步伐 — 工程师淹没在新能力中，如何最优部署成为核心挑战</h4>
       <p>SemiEngineering Brian Bailey 深度分析 AI 对验证方法论的冲击：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>AI 军备竞赛</strong>：Synopsys 的 Bradley Geden 指出，高管层担心错过 AI 浪潮——如果竞争对手 6 个月流片而你需 18 个月，就输了</li><li><strong>Agentic 工作流</strong>：ChipAgents CEO William Wang 称早期客户经验显示，agentic 工作流可将 150 人验证团队等效为 400+ 人产出</li><li><strong>质量不能牺牲</strong>：Siemens EDA 的 Abhi Kolpekwar 强调"质量不由 AI 决定"，30-40 年经验的验证工程师应是质量审计员</li><li><strong>谁受益最多？</strong>：初级工程师 vs 高级工程师之争。Cadence 的 Hamid Shojaei 将 AI Agent 定位为"非常初级的验证工程师"，需要高级工程师指导；Moores Lab AI 的 Shelly Henry 则认为通用 AI 工具能力面向资深人员，初级工程师可能完全迷失</li><li><strong>技能重塑</strong>：未来初级验证工程师需要学习新技能——写好的 agent spec、理解 signoff、给 agent 反馈、审查结果，而非传统的 Verilog/UVM 编码</li></ul><p>文章最后指出，目前还没有人知道如何最佳部署 AI 以持续可靠地提供明确收益，其对团队组织和方法论演进的影响仍在演变中。</p>
       <a href="https://semiengineering.com/verification-methodologies-struggle-to-keep-up-with-ai/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Liz Allan · 2026-06-25</div>
+      <h4 id="2026-06-25c">🔗 AI 数据中心与 HPC 集群的 I/O 设计挑战加剧 — 物理接口成系统瓶颈，跨域协同成关键</h4>
+      <p>SemiEngineering Liz Allan 深度分析 AI/HPC 场景下 I/O 设计面临的多重挑战：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>系统级数据流动效率优先</strong>：AI/HPC 需求驱动设计重心从"单芯片最快"转向"系统级数据传输优化"，I/O 接口和互连协议直接决定 AI 芯片商业成败</li><li><strong>多芯片封装复杂度暴增</strong>：chiplet/2.5D/3D 封装增加接口、时钟域、电源域数量，异构集成（不同工艺节点 die）的 PDK/可靠性模型/热系数不一致</li><li><strong>跨物理域耦合效应</strong>：热、机械、电气各域仿真成熟但双向耦合时空尺度差异大，多芯片项目常因此延期数月</li><li><strong>Agent AI 辅助设计</strong>：Cadence、Arteris、Keysight、Synopsys 等开始在流程中引入 AI Agent 解决复杂物理问题，physics-based AI 正逐步落地</li><li><strong>OCP MRC 协议创新</strong>：开放计算项目发布多路径可靠连接协议，基于 RDMA 实现流量分散和负载均衡，提升集群容错</li></ul><p>文章强调 I/O 设计是多维度权衡过程，<strong>Agent AI 和 physics-based AI</strong> 正成为解决复杂物理问题的关键手段。</p>
+      <a href="https://semiengineering.com/i-o-design-challenges-grow-in-ai-data-centers-and-hpc-clusters/" target="_blank">→ SemiEngineering 原文</a>
     </div>
       </div>
     </div>
