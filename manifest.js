@@ -4,10 +4,10 @@
  */
 window.SITE_MANIFEST = {
   stats: {
-    papers: 183,
+    papers: 184,
     batches: 75,
-    news: 123,
-    lastUpdate: "2026-06-26"
+    news: 124,
+    lastUpdate: "2026-06-29"
   },
 
   /* 侧边栏「按日期」视图 */
@@ -51,7 +51,7 @@ window.SITE_MANIFEST = {
   ],
 
   dates: [
-    { date: "2026-06-26", title: "2026-06-26", count: 6,  file: "content/dates/2026-06-26/index.html" },
+    { date: "2026-06-26", title: "2026-06-26", count: 7,  file: "content/dates/2026-06-26/index.html" },
     { date: "2026-06-25", title: "2026-06-25", count: 2,  file: "content/dates/2026-06-25.html" },
     { date: "2026-06-24", title: "2026-06-24", count: 6,  file: "content/dates/2026-06-24.html" },
     { date: "2026-06-23", title: "2026-06-23", count: 1,  file: "content/dates/2026-06-23.html" },

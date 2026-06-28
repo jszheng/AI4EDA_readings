@@ -1,8 +1,30 @@
 {
-  "lastUpdate": "2026-06-26",
-  "cutoffDate": "2025-12-26",
-  "totalItems": 123,
+  "lastUpdate": "2026-06-29",
+  "cutoffDate": "2025-12-29",
+  "totalItems": 124,
   "items": [
+    {
+      "date": "2026-06-27",
+      "company": "UC Berkeley Architecture Research / GitHub",
+      "title": "🏗️ UC Berkeley 发布 CHIA：首个将软硬件协同设计工作流作为一等公民的 Agentic AI 开源框架",
+      "link": "https://github.com/ucb-bar/chia",
+      "keywords": [
+        "UC Berkeley",
+        "CHIA",
+        "Agentic AI",
+        "软硬件协同设计",
+        "开源框架",
+        "CHIA Loop",
+        "Chipyard",
+        "gem5",
+        "Hammer",
+        "Vivado",
+        "RTL生成",
+        "EDA工具链",
+        "BSD许可证",
+        "2026-06-27"
+      ]
+    },
     {
       "date": "2026-06-25",
       "company": "SemiEngineering / ESD Alliance Executive Outlook",

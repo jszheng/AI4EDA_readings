@@ -21,14 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-26 · 涵盖 2025-12 → 2026-06-26 · 已去重整理 · 新增 Agentic AI 高管圆桌 + 验证方法论变革 + I/O设计挑战</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-29 · 涵盖 2025-12 → 2026-06-29 · 已去重整理 · 新增 UC Berkeley CHIA 开源框架 + Agentic AI 高管圆桌 + 验证方法论变革 + I/O设计挑战</p>
   <div class="stats">
-    <div class="stat"><div class="num">183</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">184</div><div class="label">论文收录</div></div>
     <div class="stat"><div class="num">75</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">123</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">124</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-06-27">260627 🏗️ UC Berkeley CHIA 开源 — Agentic AI 软硬件协同设计框架</a>
   <a href="#2026-06-25">260625 🎯 Agentic AI 高管圆桌 + 验证方法论变革</a>
   <a href="#2026-06-25c">260625 🔗 I/O设计挑战加剧 — AI数据中心物理瓶颈</a>
   <a href="#2026-06-24">260624 📊 Siemens vs Synopsys vs Cadence AI 对比</a>
@@ -108,6 +109,31 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-06-27">
+  <div class="section-title"><span class="icon">🏗️</span> 2026-06-27 <span class="badge-new">1条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-06-27 行业动态（1条）</h3>
+      <span class="badge-count">1</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · UC Berkeley Architecture Research (ucb-bar) · 2026-06-27 公开发布</div>
+      <h4 id="2026-06-27">🏗️ UC Berkeley 发布 CHIA：首个将软硬件协同设计工作流作为一等公民的 Agentic AI 开源框架</h4>
+      <p>UC Berkeley Architecture Research 团队（Yakun Sophia Shao / Borivoje Nikolic / Christopher W. Fletcher / Sagar Karandikar 等）在 arXiv 论文 (2606.27350) 发布次日即<strong>开源 CHIA 框架</strong>。核心亮点：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>CHIA Loop 核心概念</strong>：将协同设计工作流抽象为有向循环图，节点执行各类 EDA 工具，边定义数据与依赖流转——将"设计流本身"作为一等对象管理</li><li><strong>工具广度</strong>：内置 Chipyard、gem5、ChampSim、FireSim、Hammer（可通过 Hammer 调用 Cadence/Synopsys 等 <strong>商业 ASIC CAD 工具</strong>）、Vivado、AlphaEvolve、AdaEvolve 等节点</li><li><strong>工程严谨性</strong>：AI 模型与硬件工具隔离执行、内置 profiling 机制、容错执行、跨数百异构系统（CPU/FPGA/GPU，含公有云/本地）<strong>规模化可靠性</strong></li><li><strong>五大战术验证</strong>：自动 RTL-to-gem5 模拟器对齐、LLM 驱动微架构 RTL 实现、IPC 感知关键路径优化、演化架构发现、维护者友好 Agentic GitHub Issue 修复</li><li><strong>开源信息</strong>：BSD 许可证、Python 3.10.19、Docker 化部署、完整文档（docs.chialoops.ai）</li></ul><p>CHIA 的独特之处在于它不只是"又一个 LLM-for-RTL 工具"，而是面向 <strong>Agentic EDA 研究的基础设施</strong>——让研究者可以系统性地设计、部署和评估 AI agent 驱动的协同设计工作流，而无需从零搭建工具集成层。这是 <strong>Agentic EDA 从单点 demo 走向系统化研究的里程碑式基础设施</strong>。</p>
+      <a href="https://github.com/ucb-bar/chia" target="_blank">→ GitHub</a>
+      <span style="margin:0 8px;color:#94a3b8;">|</span>
+      <a href="https://arxiv.org/abs/2606.27350" target="_blank">→ arXiv Paper (2606.27350)</a>
+      <span style="margin:0 8px;color:#94a3b8;">|</span>
+      <a href="https://docs.chialoops.ai" target="_blank">→ 文档</a>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-06-25">
   <div class="section-title"><span class="icon">🎯</span> 2026-06-25 <span class="badge-new">3条新闻</span> <span class="line"></span></div>
