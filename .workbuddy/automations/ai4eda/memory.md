@@ -1,3 +1,49 @@
+## 2026-06-29 Execution Summary
+
+**Status:** ✅ Success (1 new paper + 1 new open-source project news)
+
+**New Paper Added (1 item):**
+- CHIA (2606.27350) — UC Berkeley (Shao/Nikolic/Fletcher/Karandikar) — First open-source framework treating co-design workflows as first-class citizens; CHIA Loop directed cyclic graph abstraction; integrates Chipyard/gem5/Hammer (commercial ASIC CAD)/Vivado/AlphaEvolve/AdaEvolve; AI-hardware isolation + profiling + fault tolerance; 5 case studies including auto RTL-to-gem5 alignment, LLM-driven microarchitecture RTL, IPC-aware optimization, evolutionary discovery, agentic issue fixing; submitted June 25, cs.AR
+
+**New News Added (1 item):**
+- UC Berkeley CHIA GitHub Release — Open-source Agentic AI hardware/software co-design framework; BSD license; Python 3.10.19; Docker deployment; documentation at docs.chialoops.ai; GitHub: ucb-bar/chia (public June 27)
+
+**No Content from June 27-29 (Weekend):**
+- arXiv: No new cs.AR/cs.LG/cs.SE submissions during weekend
+- SemiEngineering WIR #144 not yet published (WIR #143 was June 19 — now overdue by ~2 weeks)
+- MLCAD 2026 final results still not posted (overdue since June 25 — "Best total score will be updated after Test Case 3 evaluation")
+- No new EDA vendor announcements (Cadence/Synopsys/Siemens quiet during weekend)
+- DAC 2026 program appears finalized, no major updates (conference July 26-29, Long Beach)
+
+**Files Updated:**
+- content/latest/2026-06-26/index.html — Added CHIA paper (now 4 papers + 3 news)
+- content/dates/2026-06-26/index.html — Added CHIA paper (count 6→7)
+- content/dates/2026-06-26/2606.27350_CHIA.pdf — Downloaded
+- content/news/index.html — Added June 27 section with CHIA GitHub card
+- content/news/news_memory.json — Added CHIA item, totalItems→124, lastUpdate→2026-06-29
+- content/categories/rtl.html — Added CHIA (60→61 papers)
+- content/categories/agent.html — Added CHIA (24→25 papers)
+- manifest.js — Updated stats (papers 184, news 124, lastUpdate 2026-06-29)
+- Git: Committed (859da37) and pushed to origin/main
+
+**Key Observations:**
+- CHIA is a landmark infrastructure contribution: unlike all prior LLM-for-RTL tools, CHIA doesn't solve a specific EDA task — it provides the *research infrastructure* for systematically designing, deploying, and evaluating agentic AI-driven co-design workflows. This fills the critical gap between individual demos and reproducible research
+- CHIA's integration with Hammer enables commercial ASIC CAD tool access (Cadence/Synopsys) within agentic workflows — bridging open-source research with industrial EDA
+- The 5 CHIA loop case studies demonstrate the framework's breadth: from RTL generation to simulation alignment to evolutionary architecture discovery to maintenance automation
+- June 27-29 (Friday PM through Sunday) is structurally quiet: no new arXiv submissions, no press releases, no SemiEngineering articles
+- MLCAD 2026 final results now 4 days overdue — continue monitoring
+- SemiEngineering WIR #144 ~2 weeks overdue — may indicate WIR series is paused or rescheduled
+
+**Next Check:**
+- MLCAD 2026 Contest final results (urgently overdue)
+- SemiEngineering WIR #144 (overdue ~2 weeks)
+- DAC 2026 program (July 26-29, Long Beach — ~4 weeks away)
+- arXiv cs.AR/cs.SE/cs.LG new papers (June 30 window)
+- ICML 2026 proceedings (late July)
+- Si2 "Agentic AI in EDA: Who's in Control?" panel at DAC (July 27)
+
+---
+
 ## 2026-06-26 Execution Summary
 
 **Status:** ✅ Success (3 new papers + 3 new industry news)

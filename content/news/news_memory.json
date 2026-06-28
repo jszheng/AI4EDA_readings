@@ -1,8 +1,37 @@
 {
   "lastUpdate": "2026-06-29",
   "cutoffDate": "2025-12-29",
-  "totalItems": 124,
+  "totalItems": 125,
   "items": [
+    {
+      "date": "2026-06-26",
+      "company": "SemiEngineering",
+      "title": "📰 Chip Industry Week In Review #144 — IBM 7Å 晶体管 + ChipAgents×AWS + Si2 RTL基准更新 + OpenAI×博通定制芯片",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-144/",
+      "keywords": [
+        "SemiEngineering",
+        "Week In Review",
+        "144",
+        "ChipAgents",
+        "AWS",
+        "Si2",
+        "RTL",
+        "benchmark",
+        "IBM",
+        "7Å",
+        "纳米片",
+        "OpenAI",
+        "博通",
+        "Qualcomm",
+        "3D堆叠",
+        "Gartner",
+        "AI编码成本",
+        "Micron",
+        "Anthropic",
+        "Groq",
+        "2026-06-26"
+      ]
+    },
     {
       "date": "2026-06-27",
       "company": "UC Berkeley Architecture Research / GitHub",

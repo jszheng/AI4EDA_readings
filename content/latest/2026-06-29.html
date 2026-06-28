@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🔥 06-29 最新</h1>
+  <p class="subtitle">共 1 篇论文 · 1 条新闻 · 周末窗口</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2606.26383 SOLAR -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG / cs.AI / cs.AR · 2026-06-24 · Qijing Huang / Sana Damani / Zhifan Ye / Athinagoras Skiadopoulos / Siva Kumar Sastry Hari / Jason Clemons / Sahil Modi / Jingquan Wang / Aditya Kane / Edward C Lin / Humphrey Shi / Christos Kozyrakis (NVIDIA / Stanford)</div>
+      <h4>⚡ SOLAR：AI 驱动的光速性能分析框架 — LLM 前端 + 确定性后端自动推导深度学习模型理论执行下限</h4>
+      <p>提出 <strong>SOLAR</strong>，首个自动推导深度学习模型<strong>光速（Speed-of-Light）性能边界</strong>的 AI 驱动框架。核心创新：(1) <strong>LLM 前端</strong> — 将任意 PyTorch/JAX 源码翻译为可执行 <strong>Affine Loop IR</strong>，并通过输出比较验证正确性；(2) <strong>确定性后端</strong> — IR 提升为 einsum 图，分析后端计算 unfused/fused/cache-aware 三层 SOL 边界；(3) <strong>多保真分析</strong> — 提供不同精度级别的前端分析、优化机会识别、跨平台探索和反 Roofline 硬件供应评估；(4) 全面算子与语言覆盖，<strong>零 SOL 违规</strong>验证。在 KernelBench、JAX/Flax 模型和机器人工作负载上验证。<br>
+      <strong>核心创新</strong>：LLM 翻译源码→Affine Loop IR + einsum 图提升 + 三层SOL边界 + 多保真分析 + 已验证零违规</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">性能分析</span>
+        <span class="tag">LLM前端</span>
+        <span class="tag">光速分析</span>
+        <span class="tag">硬件架构</span>
+        <span class="tag">DL优化</span>
+        <span class="tag">NVIDIA</span>
+        <span class="tag">Stanford</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.26383" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2606.26383_SOLAR.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+    <!-- News: WIR #144 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · 行业周报 · 2026-06-26</div>
+      <h4>📰 Chip Industry Week In Review #144 — IBM 7Å 晶体管突破 + ChipAgents × AWS + Si2 RTL 基准更新</h4>
+      <p>SemiEngineering 第 144 期行业周报（6/26）核心 AI4EDA 要点：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>🤖 ChipAgents 加入 AWS 合作伙伴网络</strong>：代理式 AI 芯片设计平台获云原生规模化部署支持</li><li><strong>🔧 Si2 更新开源 RTL/验证 LLM 评测基准</strong>：Comprehensive Verilog Design Problems 更新版</li><li><strong>🧬 IBM 7Å 晶体管架构</strong>：交错堆叠纳米片，性能+50%/功耗-70%，SRAM +40%</li><li><strong>💡 OpenAI × 博通</strong>：联合开发 LLM 推理定制芯片</li><li><strong>⚠️ Gartner</strong>：2028 年 AI 编码代理成本将超过普通开发者薪资</li></ul>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-144/" target="_blank">→ SemiEngineering WIR #144</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
