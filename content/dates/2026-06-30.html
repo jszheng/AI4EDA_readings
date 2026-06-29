@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-06-30 论文 & 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 3 条新闻 · 来源：arXiv / AgentMarketCap / ChipAgents / GitHub</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News: Siemens Fuse EDA AI Agent -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>AgentMarketCap · 行业分析 · 2026-06-27</div>
+      <h4>🤖 Siemens Fuse EDA AI Agent：从 RTL 到签核的端到端自主芯片设计智能体</h4>
+      <p>AgentMarketCap 在 NVIDIA GTC 2026 和 Semicon China 2026 后发布 Siemens Fuse EDA AI Agent 深度分析，核心要点：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>端到端自主流</strong>：Fuse 不是 CAD 工具上的聊天机器人，而是横跨架构探索、RTL 编码、验证、布局布线、时序收敛到制造签核的完整流程编排智能体</li><li><strong>三层架构</strong>：Foundation（多模态 EDA 数据 RAG，包括原理图、网表、波形、版图几何、时序报告）、Orchestration（MCP 安全智能体编排 + Agent Skills）、Tool-Agent（RTL Code Agent、Lint Agent、CDC Agent、Testbench/Debug Agent、Place-and-Route/Timing Agent）</li><li><strong>工具覆盖</strong>：Catapult（前端）、Questa One（验证）、Aprisa（物理实现）、Solido（定制设计）、Veloce（硬件辅助验证）</li><li><strong>推理基座</strong>：基于 NVIDIA Llama Nemotron 模型和 NIM 微服务，支持 NVIDIA Agent Toolkit</li><li><strong>市场定位</strong>：Siemens 押注跨工具编排和 MCP 互操作性，与 Cadence ChipStack（JedAI 平台深度整合）和 Synopsys AgentEngineer（L2→L5 能力阶梯）形成三种 agent 架构路线</li><li><strong>落地观察</strong>：Samsung 在发布首日即背书；独立第三方 tape-out 数据预计要到 2026 Q3 以后才会出现</li></ul><p>文章认为 EDA 的 agentic 转变不是渐进升级，而是 40 年来首次工具流本身变得智能，而非由工程师驱动工具流。Fuse 的采购评估关键信号：端到端周期时间、跨工具交接质量、waiver-to-fix 比率。</p>
+      <a href="https://agentmarketcap.ai/blog/2026/06/27/siemens-fuse-eda-ai-agent-industrial-hardware-design-automation" target="_blank">→ AgentMarketCap 原文</a>
+    </div>
+
+    <!-- 2606.28279 HORIZON -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · 2026-06-26 · Cunxi Yu / Chenhui Deng / Nathaniel Pinckney / Brucek Khailany (NVIDIA)</div>
+      <h4>🤖 HORIZON：将硬件设计视为仓库级代码演化的自演化智能体框架 — ChipBench / RTLLM / Verilog-Eval 100% 完成率</h4>
+      <p>提出 <strong>HORIZON</strong>，首个将硬件设计视为<strong>仓库级代码演化</strong>的自演化 Agent 框架。核心创新：(1) 把 Markdown 测试 harness 编译为项目包（领域知识 + 可执行评估器 + 验收谓词 + git/运行时策略）；(2) 免手动 Agent 循环在隔离 git worktree 中演化设计，利用仓库操作进行状态管理、追踪与重放；(3) 在 <strong>ChipBench、RTLLM、Verilog-Eval 和 9 类 CVDP</strong> 上实现<strong>100% 基准完成率</strong>。论文同时强调这仍是受控代理，Agentic AI for Hardware Design 远未解决，并讨论开放挑战。<br>
+      <strong>核心创新</strong>：仓库级代码演化视角 + 自演化 Agent 循环 + 100% 主流 RTL 基准完成率<br>
+      <strong>标签</strong>：Agentic AI · RTL生成 · 仓库级演化 · 自演化 · 硬件设计 · RTLLM · Verilog-Eval</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Agentic AI</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">仓库级演化</span>
+        <span class="tag">自演化</span>
+        <span class="tag">RTLLM</span>
+        <span class="tag">Verilog-Eval</span>
+        <span class="tag">NVIDIA</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.28279" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2606.28279_HORIZON.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+    <!-- 2606.27666 MultModLM -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-06-26 · Dhruv Kulkarni / Sai Manoj Pudukotai Dinkarrao</div>
+      <h4>🎨 MultModLM：首个面向 LLM 硬件原理图生成的多模态基准 — 99 个 RTL 模块 + 多阶段评估框架</h4>
+      <p>提出 <strong>MultModLM</strong>，首个评估大语言模型从 RTL 描述生成硬件原理图的多模态基准。数据集包含 <strong>99 个多样 RTL 模块</strong>，覆盖算术、控制与状态机设计。针对原理图非唯一表示难题，提出多阶段评估框架：评分标准 + 自评估 + 跨模型评估 + 盲评 + 人工验证。实验发现：模型能生成视觉可解释的原理图，但功能正确性受限；且 LLM 评估器与人工评分<strong>几乎零一致</strong>，揭示 LLM-as-a-judge 在结构精确领域不可靠，亟需领域感知的结构评估与形式等价检查工具。<br>
+      <strong>核心创新</strong>：多模态硬件原理图生成基准 + 非唯一表示评估框架 + LLM-as-judge 可靠性分析<br>
+      <strong>标签</strong>：RTL生成 · 多模态基准 · 硬件原理图 · LLM评估 · 形式等价检查</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">多模态</span>
+        <span class="tag">硬件原理图</span>
+        <span class="tag">基准测试</span>
+        <span class="tag">LLM-as-judge</span>
+        <span class="tag">形式等价</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.27666" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2606.27666_MultModLM.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+    <!-- News: ChipAgents Award -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>ChipAgents Blog · 公司动态 · 2026-06-23</div>
+      <h4>🏆 ChipAgents 创始人兼 CEO William Wang 获 South Coast 商业与技术奖「年度企业家」</h4>
+      <p>ChipAgents 创始人/CEO William Wang 在 South Coast Business & Technology Awards 上荣获 Entrepreneur of the Year。表彰其在构建定义品类的前沿技术、推动半导体产业发展以及回馈社区方面的贡献。ChipAgents 作为 Agentic AI 芯片设计与验证平台，目前已服务全球前 80 大半导体公司，其 Renoir 模型、ChipStack 多智能体系统与 Waveform Agent 等产品持续落地。<br>
+      <strong>意义</strong>：Agentic AI 芯片设计赛道持续获得行业认可，头部创业公司生态影响力提升。</p>
+      <a href="https://chipagents.ai/blogs/entrepreneur-of-the-year-award" target="_blank">→ ChipAgents Blog</a>
+    </div>
+
+    <!-- News: kicad-happy -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · 开源项目 · 2026-06-15（v1.3.2）</div>
+      <h4>🔧 kicad-happy：AI 编码代理的 KiCad 电子设计技能套件 — 12 项技能 / 零依赖 / 5,800+ 项目验证</h4>
+      <p>开源项目 <strong>kicad-happy</strong> 为 Claude Code、OpenAI Codex 等 AI 编码代理提供 <strong>12 项 KiCad EDA 技能</strong>，覆盖原理图/PCB/Gerber 分析、SPICE 仿真、EMC 预合规（44 项规则）、BOM 与采购、JLCPCB/PCBWay 制造导出等全流程。纯 Python 3.10+、零必需依赖，无需安装 KiCad 即可解析其开放 S-expression 文件格式。已在 <strong>5,800+ 真实 KiCad 项目</strong>、312,956 元器件、531,418 网络上测试，808K+ 回归断言 100% 通过。<br>
+      <strong>落地价值</strong>：AI 代理可直接参与电子设计审查、DFM 检查、数据手册交叉验证与制造准备，是 KiCad MCP 生态外又一重要开源能力。</p>
+      <a href="https://github.com/aklofas/kicad-happy" target="_blank">💻 GitHub</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

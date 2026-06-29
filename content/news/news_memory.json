@@ -1,8 +1,36 @@
 {
-  "lastUpdate": "2026-06-29",
-  "cutoffDate": "2025-12-29",
-  "totalItems": 125,
+  "lastUpdate": "2026-06-30",
+  "cutoffDate": "2026-01-01",
+  "totalItems": 126,
   "items": [
+    {
+      "date": "2026-06-30",
+      "company": "AgentMarketCap",
+      "title": "🤖 Siemens Fuse EDA AI Agent：从 RTL 到签核的端到端自主芯片设计智能体",
+      "link": "https://agentmarketcap.ai/blog/2026/06/27/siemens-fuse-eda-ai-agent-industrial-hardware-design-automation",
+      "keywords": [
+        "Siemens",
+        "Fuse",
+        "EDA",
+        "AI",
+        "Agent",
+        "AgentMarketCap",
+        "端到端",
+        "RTL",
+        "签核",
+        "Catapult",
+        "Questa",
+        "Aprisa",
+        "Solido",
+        "Veloce",
+        "MCP",
+        "Agent Skills",
+        "NVIDIA",
+        "Nemotron",
+        "Samsung",
+        "2026-06-27"
+      ]
+    },
     {
       "date": "2026-06-26",
       "company": "SemiEngineering",
@@ -2604,24 +2632,6 @@
         "Alpha",
         "Design",
         "AI"
-      ]
-    },
-    {
-      "date": "2025-12-23",
-      "company": "中科院计算所",
-      "title": "中科院\"启蒙\"（QiMeng）系统 6 项成果获 NeurIPS25 / AAAI26 顶会录用",
-      "link": "https://sklp.ict.ac.cn/yjcg/202512/t20251223_813082.html",
-      "keywords": [
-        "中科院",
-        "启蒙",
-        "QiMeng",
-        "系统",
-        "6",
-        "项成果获",
-        "NeurIPS25",
-        "AAAI26",
-        "顶会录用",
-        "中科院计算所"
       ]
     },
     {

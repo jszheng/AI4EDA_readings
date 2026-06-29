@@ -21,14 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-29 · 涵盖 2025-12 → 2026-06-29 · 已去重整理 · 新增 SOLAR AI性能分析 + WIR #144 (ChipAgents×AWS + Si2 RTL基准更新)</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-06-30 · 涵盖 2026-01 → 2026-06-30 · 已去重整理 · 新增 HORIZON 仓库级 RTL 演化 + MultModLM 多模态原理图基准 + Siemens Fuse EDA AI Agent 深度解析</p>
   <div class="stats">
-    <div class="stat"><div class="num">185</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">76</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">125</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">187</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">77</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">126</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-06-30">260630 🤖 Siemens Fuse EDA AI Agent + ChipAgents 年度企业家 + kicad-happy 开源技能套件</a>
   <a href="#2026-06-27">260627 🏗️ UC Berkeley CHIA 开源 — Agentic AI 软硬件协同设计框架</a>
   <a href="#2026-06-26b">260626 📰 WIR #144 — ChipAgents×AWS + Si2 RTL基准更新</a>
   <a href="#2026-06-25">260625 🎯 Agentic AI 高管圆桌 + 验证方法论变革</a>
@@ -110,6 +111,43 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-06-30">
+  <div class="section-title"><span class="icon">🤖</span> 2026-06-30 <span class="badge-new">3条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-06-30 行业动态（3条）</h3>
+      <span class="badge-count">3</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>AgentMarketCap · 行业分析 · 2026-06-27</div>
+      <h4 id="2026-06-30">🤖 Siemens Fuse EDA AI Agent：从 RTL 到签核的端到端自主芯片设计智能体</h4>
+      <p>AgentMarketCap 在 NVIDIA GTC 2026 和 Semicon China 2026 后发布 Siemens Fuse EDA AI Agent 深度分析，核心要点：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>端到端自主流</strong>：Fuse 不是 CAD 工具上的聊天机器人，而是横跨架构探索、RTL 编码、验证、布局布线、时序收敛到制造签核的完整流程编排智能体</li><li><strong>三层架构</strong>：Foundation（多模态 EDA 数据 RAG，包括原理图、网表、波形、版图几何、时序报告）、Orchestration（MCP 安全智能体编排 + Agent Skills）、Tool-Agent（RTL Code Agent、Lint Agent、CDC Agent、Testbench/Debug Agent、Place-and-Route/Timing Agent）</li><li><strong>工具覆盖</strong>：Catapult（前端）、Questa One（验证）、Aprisa（物理实现）、Solido（定制设计）、Veloce（硬件辅助验证）</li><li><strong>推理基座</strong>：基于 NVIDIA Llama Nemotron 模型和 NIM 微服务，支持 NVIDIA Agent Toolkit</li><li><strong>市场定位</strong>：Siemens 押注跨工具编排和 MCP 互操作性，与 Cadence ChipStack（JedAI 平台深度整合）和 Synopsys AgentEngineer（L2→L5 能力阶梯）形成三种 agent 架构路线</li><li><strong>落地观察</strong>：Samsung 在发布首日即背书；独立第三方 tape-out 数据预计要到 2026 Q3 以后才会出现</li></ul><p>文章认为 EDA 的 agentic 转变不是渐进升级，而是 40 年来首次工具流本身变得智能，而非由工程师驱动工具流。Fuse 的采购评估关键信号：端到端周期时间、跨工具交接质量、waiver-to-fix 比率。</p>
+      <a href="https://agentmarketcap.ai/blog/2026/06/27/siemens-fuse-eda-ai-agent-industrial-hardware-design-automation" target="_blank">→ AgentMarketCap 原文</a>
+    </div>
+
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>ChipAgents Blog · 公司动态 · 2026-06-23</div>
+      <h4 id="2026-06-30b">🏆 ChipAgents 创始人兼 CEO William Wang 获 South Coast 商业与技术奖「年度企业家」</h4>
+      <p>ChipAgents 创始人/CEO William Wang 在 South Coast Business & Technology Awards 上荣获 Entrepreneur of the Year。表彰其在构建定义品类的前沿技术、推动半导体产业发展以及回馈社区方面的贡献。ChipAgents 作为 Agentic AI 芯片设计与验证平台，目前已服务全球前 80 大半导体公司，其 Renoir 模型、ChipStack 多智能体系统与 Waveform Agent 等产品持续落地。<br>
+      <strong>意义</strong>：Agentic AI 芯片设计赛道持续获得行业认可，头部创业公司生态影响力提升。</p>
+      <a href="https://chipagents.ai/blogs/entrepreneur-of-the-year-award" target="_blank">→ ChipAgents Blog</a>
+    </div>
+
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · 开源项目 · 2026-06-15（v1.3.2）</div>
+      <h4 id="2026-06-30c">🔧 kicad-happy：AI 编码代理的 KiCad 电子设计技能套件 — 12 项技能 / 零依赖 / 5,800+ 项目验证</h4>
+      <p>开源项目 <strong>kicad-happy</strong> 为 Claude Code、OpenAI Codex 等 AI 编码代理提供 <strong>12 项 KiCad EDA 技能</strong>，覆盖原理图/PCB/Gerber 分析、SPICE 仿真、EMC 预合规（44 项规则）、BOM 与采购、JLCPCB/PCBWay 制造导出等全流程。纯 Python 3.10+、零必需依赖，无需安装 KiCad 即可解析其开放 S-expression 文件格式。已在 <strong>5,800+ 真实 KiCad 项目</strong>、312,956 元器件、531,418 网络上测试，808K+ 回归断言 100% 通过。<br>
+      <strong>落地价值</strong>：AI 代理可直接参与电子设计审查、DFM 检查、数据手册交叉验证与制造准备，是 KiCad MCP 生态外又一重要开源能力。</p>
+      <a href="https://github.com/aklofas/kicad-happy" target="_blank">💻 GitHub</a>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-06-27">
   <div class="section-title"><span class="icon">🏗️</span> 2026-06-27 <span class="badge-new">1条新闻</span> <span class="line"></span></div>
@@ -1992,26 +2030,6 @@
   </div>
 </section>
 
-<section id="2025-12-23">
-  <div class="section-title"><span class="icon">🌐</span> 2025-12-23 <span class="badge-hot">1条新闻</span> <span class="line"></span></div>
-  <div class="date-group">
-    <div class="date-header" onclick="toggleDate(this)">
-      <h3>2025-12-23 行业动态（1条）</h3>
-      <span class="badge-count">1</span>
-      <span class="toggle">▼</span>
-    </div>
-    <div class="date-body">
-      <div class="abstracts">
-        <div class="abs-card">
-      <div class="src"><span class="dot" style="background:var(--accent3)"></span>中科院计算所 · 2025-12-23</div>
-      <h4>中科院"启蒙"（QiMeng）系统 6 项成果获 NeurIPS25 / AAAI26 顶会录用</h4>
-      <p>陈云霁/郭崎团队。NeurIPS25：CodeV-R1（Verilog RL生成 +12-20%）、SALV（信号级RL +10.9%）、MuPa（代码并行化）、NeuComBack（IR→汇编自演化）；AAAI26：CRUX（NL→Verilog结构化中间表达）、Kernel（GPU核宏观-微观编码，速度+7.3×）。</p>
-      <a href="https://sklp.ict.ac.cn/yjcg/202512/t20251223_813082.html" target="_blank">→ 阅读原文</a>
-    </div>
-      </div>
-    </div>
-  </div>
-</section>
 </div>
 </body>
 </html>
