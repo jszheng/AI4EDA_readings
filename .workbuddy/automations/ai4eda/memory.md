@@ -1,4 +1,50 @@
-## 2026-06-29 Execution Summary
+## 2026-06-30 Execution Summary
+
+**Status:** ✅ Success (2 new papers + 3 new industry news)
+
+**New Papers Added (2 items):**
+- HORIZON (arXiv:2606.28279) — NVIDIA — Self-evolving RTL agent framework for repository-level code evolution; three stages (Experience Collection, Skill Learning, Inference) with LLM judge + quality filter; achieves 64% Pass@1 on repository-level Verilog refactoring; solves out-of-context memory and task distribution shift in LLM-for-RTL; submitted June 29, cs.AR
+- MultModLM (arXiv:2606.27666) — University of Texas at Austin, Columbia University, UCLA — First multimodal benchmark for LLM hardware schematic generation; 1,231 problems across 6 categories; best model reaches 73.0% overall but only 19.1% on layout-conditional generation; reveals schematic understanding as bottleneck; submitted June 28, cs.AR
+
+**New News Added (3 items):**
+- Siemens Fuse EDA AI Agent — AgentMarketCap deep analysis — End-to-end autonomous chip design agent from RTL to signoff; MCP orchestration + Agent Skills; 18 autonomous sub-agents; runs in isolated sandbox; integrates Calibre/Valor/Tessent; tracks tasks/skills/artifacts via reasoning graph; industrial deployment with guardrails
+- ChipAgents 2026 Entrepreneur of the Year — TSMC 2026 OIP Ecosystem Forum — Recognized for AI-native chip design innovation; multi-agent system deployed across multiple tapeouts; annual event in Santa Clara
+- kicad-happy — GitHub open-source skill suite — Multi-agent AI workflow for KiCad; 5 specialized skills (schematic/layout/pcb/review/export); auto ERC/DRC; Gerber/drill/BOM generation; joins growing ecosystem of open-source EDA agent skills
+
+**Files Updated:**
+- content/dates/2026-06-30.html — New date page (2 papers + 1 news)
+- content/latest/2026-06-30.html — New latest page
+- content/papers/index.html — New redirect page to latest date
+- content/dates/2606.28279_HORIZON.pdf — Downloaded (NVIDIA, 581KB)
+- content/dates/2606.27666_MultModLM.pdf — Downloaded (UT Austin/Columbia/UCLA, 313KB)
+- content/news/index.html — Added 2026-06-30 section with 3 cards (Siemens Fuse + ChipAgents award + kicad-happy)
+- content/news/news_memory.json — Added 3 items, reconciled totalItems→126, lastUpdate→2026-06-30
+- content/categories/rtl.html — Added HORIZON + MultModLM (61→63 papers)
+- content/categories/agent.html — Added HORIZON (24→26 papers)
+- manifest.js — Updated stats (papers 187, batches 77, news 126, lastUpdate 2026-06-30); added 2026-06-30 to latest and dates arrays
+- Git: Committed (8536239 "auto update: 2026-06-30") and pushed to origin/main
+
+**Key Findings:**
+- HORIZON is a major step toward repository-level RTL agent systems: unlike prior single-file generation work, it learns reusable skills from historical edits and applies them across an evolving codebase — directly addressing the maintenance-and-refactoring gap that dominates real semiconductor design work
+- MultModLM establishes the first rigorous multimodal benchmark for hardware schematic generation and reveals that even the best models struggle with layout-conditioned generation (19.1%), highlighting visual-spatial reasoning as the next frontier for LLM hardware agents
+- Siemens Fuse EDA AI Agent represents the most concrete industrial "end-to-end autonomous chip design" system described publicly to date, with explicit MCP orchestration, sandboxed tool execution, and reasoning-graph tracking — it bridges academic Agentic EDA discourse with industrial deployment reality
+- ChipAgents' OIP Entrepreneur of the Year award signals TSMC's recognition of AI-native design startups as a strategic ecosystem pillar, not just tool vendors
+- kicad-happy shows the open-source EDA agent skill ecosystem is diversifying beyond single MCP servers toward coordinated multi-skill workflows, mirroring Siemens' industrial agent architecture at the hobbyist/small-team level
+- arXiv cs.AR June 29-30 produced a strong AI4EDA crop (12 relevant submissions, 2 selected); cs.LG and cs.SE had no EDA-relevant papers in this window, confirming cs.AR as the primary source
+- SemiEngineering WIR #145 returned 404 (still not published or URL changed) — continue monitoring; WIR #144 from June 26 was already captured
+- Count reconciliation: discovered and fixed inconsistency between news/index.html (128), manifest.js (125), and news_memory.json totalItems (125); actual count is 126 unique items, now aligned across all three files
+
+**Next Check:**
+- SemiEngineering WIR #145 (still pending)
+- MLCAD 2026 final results (overdue; Beta Testcase 2 published, final results expected soon)
+- arXiv cs.AR new papers (July 1 window)
+- DAC 2026 program updates (July 26-29, Long Beach)
+- Si2 "Agentic AI in EDA: Who's in Control?" panel at DAC (July 27)
+- ICML 2026 proceedings (late July)
+
+---
+
+
 
 **Status:** ✅ Success (1 new paper + 1 new open-source project news)
 

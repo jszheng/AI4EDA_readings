@@ -32,6 +32,39 @@
       ]
     },
     {
+      "date": "2026-06-30",
+      "company": "ChipAgents",
+      "title": "🏆 ChipAgents William Wang 获 EY 年度企业家奖",
+      "link": "https://chipagents.ai/blogs/ey-entrepreneur-of-the-year-2026",
+      "keywords": [
+        "ChipAgents",
+        "William Wang",
+        "EY",
+        "年度企业家奖",
+        "Entrepreneur of the Year",
+        "2026-06-24"
+      ]
+    },
+    {
+      "date": "2026-06-30",
+      "company": "kiwihawg / GitHub",
+      "title": "🔧 kicad-happy：开源 KiCad AI Agent 技能套件 — 12 技能覆盖 5,800+ 真实项目验证",
+      "link": "https://github.com/kiwihawg/kicad-happy",
+      "keywords": [
+        "kicad-happy",
+        "KiCad",
+        "AI Agent",
+        "技能套件",
+        "开源",
+        "PCB",
+        "MCP",
+        "技能",
+        "5,800+",
+        "项目验证",
+        "2026-06-30"
+      ]
+    },
+    {
       "date": "2026-06-26",
       "company": "SemiEngineering",
       "title": "📰 Chip Industry Week In Review #144 — IBM 7Å 晶体管 + ChipAgents×AWS + Si2 RTL基准更新 + OpenAI×博通定制芯片",
