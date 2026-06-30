@@ -1,8 +1,24 @@
 {
-  "lastUpdate": "2026-06-30",
+  "lastUpdate": "2026-07-01",
   "cutoffDate": "2026-01-01",
-  "totalItems": 126,
+  "totalItems": 129,
   "items": [
+    {
+      "date": "2026-07-01",
+      "company": "Synopsys",
+      "title": "🌐 Physical AI：连接硅芯片、软件与现实世界 — Synopsys 定义 AI 驱动芯片设计新范式",
+      "link": "https://www.synopsys.com/blogs/chip-design/physical-ai-silicon-software-robots.html",
+      "keywords": [
+        "Synopsys",
+        "Physical AI",
+        "AI for EDA",
+        "Multiphysics Fusion",
+        "硅芯片",
+        "软件",
+        "现实世界",
+        "2026-06-30"
+      ]
+    },
     {
       "date": "2026-06-30",
       "company": "AgentMarketCap",

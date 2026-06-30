@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-01 论文 & 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 1 条新闻 · 来源：arXiv / Synopsys Blog</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News: Synopsys Physical AI -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Synopsys Blog · 技术趋势 · 2026-06-30</div>
+      <h4>🌐 Physical AI：连接硅芯片、软件与现实世界 — Synopsys 定义 AI 驱动芯片设计新范式</h4>
+      <p>Synopsys 博客发布 <strong>Physical AI</strong> 概念解读，提出将硅芯片、软件与物理现实世界无缝连接的技术范式。文章指出，随着 AI 从数字世界延伸至物理世界（机器人、自动驾驶、工业控制等），芯片设计必须同时考虑算法、硬件、传感器、执行器与真实环境的闭环。多物理场融合（Multiphysics Fusion）与 AI 驱动的 EDA 工具成为实现 Physical AI 系统的关键基础设施，覆盖从架构探索、RTL 实现、验证签核到系统级协同优化的全链路。<br>
+      <strong>核心看点</strong>：Physical AI 作为 AI for EDA 的延伸场景，强调芯片设计工具需要理解并建模真实物理约束，而非仅优化数字指标。</p>
+      <a href="https://www.synopsys.com/blogs/chip-design/physical-ai-silicon-software-robots.html" target="_blank">→ Synopsys Blog 原文</a>
+    </div>
+
+    <!-- 2606.28409 Evidence-Driven LLM Agent -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · 2026-06-25 · Zhe Zhao / Hongbing Lang / Zhihan Xiao / Luke Ztz Hu / John Imoleayo Adebisi / Songping Mai</div>
+      <h4>🧠 Evidence-Driven LLM Agent：面向 HLS 的 C-to-Synthesizable-C 转换与验证智能体</h4>
+      <p>提出首个面向<strong>高层次综合（HLS）工具链</strong>的端到端 LLM Agent 框架，将 C 到 HLS-C（可综合 C 子集）的转换形式化为闭环的<strong>生成-验证-诊断-修复</strong>问题。核心贡献：(1) 四阶段验证器（编译、CSim、综合、CoSim）在严格证据隔离下闭环的协作 Agent 工作流；(2) <strong>渐进式不匹配定位链（PMLC）</strong>，通过日志归一化、AST 后向切片和双轨迹插桩定位 CSim/CoSim 不一致；(3) 基于自演化、族路由修复卡池的<strong>类型查询两阶段证据 RAG</strong>。实验显示该工作流显著优于现有 SOTA 模型。<br>
+      <strong>核心创新</strong>：HLS 全流程闭环 Agent + 证据隔离 + 渐进式不匹配定位 + 自演化修复 RAG<br>
+      <strong>标签</strong>：HLS验证 · LLM Agent · 证据驱动 · RAG · 生成-验证-诊断-修复</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">HLS验证</span>
+        <span class="tag">LLM Agent</span>
+        <span class="tag">证据驱动</span>
+        <span class="tag">RAG</span>
+        <span class="tag">C-to-Synthesizable-C</span>
+        <span class="tag">高层次综合</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.28409" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2606.28409_EvidenceDriven.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+    <!-- 2606.28754 SHIFT -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.ET · 2026-06-27 · Arvin Delavari / Leonid Popryho / Inna Partin-Vaisband / Boris Vaisband</div>
+      <h4>🔗 SHIFT：通信感知 Chiplet 系统动态计算重定位框架</h4>
+      <p>提出 <strong>SHIFT</strong>，一种拓扑无关的 Chiplet 系统运行时方法，通过将计算节点上下文与数据迁移到通信更优位置，而非像传统 NoC 仅迁移数据，来缓解大规模异构系统的通信瓶颈。基于细间距集成平台评估，采用多层路由连接功能/存储 Chiplet 与作为智能路由/计算重定位节点的 utility Chiplet，并结合<strong>轻量级 ML 辅助策略</strong>推断流量状况以提升自适应性。仿真显示重定位成功率 75.2%–97.9%，平均延迟改善 16.4%–62.5%，吞吐最高提升 12.5x，每比特能耗最高降低 58.3%。在 LLM 工作负载上，运行时、吞吐、能效分别平均提升 4.9x、5.9x、1.8x。<br>
+      <strong>核心创新</strong>：拓扑无关计算重定位 + 多层 Chiplet 路由 + ML 辅助流量推断 + 通信感知布局<br>
+      <strong>标签</strong>：Chiplet · 动态计算重定位 · 通信感知 · 多层路由 · ML辅助策略</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Chiplet</span>
+        <span class="tag">动态计算重定位</span>
+        <span class="tag">通信感知</span>
+        <span class="tag">多层路由</span>
+        <span class="tag">ML辅助策略</span>
+        <span class="tag">物理设计</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.28754" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2606.28754_SHIFT.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+    <!-- 2506.15066 v5 ChatModel -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.MA · v5 2026-06-29 · Jianmin Ye / Tianyang Liu / Qi Tian / Shengchu Su / Zhe Jiang / Xi Wang</div>
+      <h4>🤖 ChatModel v5：LLM 驱动的参考模型自动生成与验证平台（重大更新）</h4>
+      <p>提出 <strong>ChatModel</strong>，一个 LLM 辅助的敏捷参考模型生成与验证平台，解决 IC 设计复杂度上升导致功能验证越来越困难的挑战。通过<strong>设计标准化</strong>和<strong>分层敏捷建模</strong>简化从设计规格到完整功能参考模型的过渡；采用<strong>构建块生成策略</strong>增强 LLM 对参考模型的设计能力并提升验证效率。在 300 个不同复杂度设计上评估：峰值性能提升 58.99%，参考模型设计能力提升 9.18x，设计验证周期平均加速 7.11x。v5 版本于 2026-06-29 发布，论文大幅精简并更新实验结果。<br>
+      <strong>核心创新</strong>：参考模型自动生成 + 分层敏捷建模 + 构建块生成策略 + 验证加速<br>
+      <strong>标签</strong>：参考模型 · LLM · 验证 · 敏捷建模 · 层次化建模</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">参考模型</span>
+        <span class="tag">LLM</span>
+        <span class="tag">验证</span>
+        <span class="tag">敏捷建模</span>
+        <span class="tag">层次化建模</span>
+      </div>
+      <a href="https://arxiv.org/abs/2506.15066" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2506.15066_ChatModel.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
