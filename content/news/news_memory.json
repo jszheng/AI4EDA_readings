@@ -1,8 +1,94 @@
 {
   "lastUpdate": "2026-07-02",
   "cutoffDate": "2026-01-03",
-  "totalItems": 132,
+  "totalItems": 137,
   "items": [
+    {
+      "date": "2026-07-01",
+      "company": "piyushbag / GitHub",
+      "title": "📦 awesome-pcb-workflow：7 月月度更新，新增 PCB 全流程开源工具",
+      "link": "https://github.com/piyushbag/awesome-pcb-workflow",
+      "keywords": [
+        "awesome-pcb-workflow",
+        "PCB",
+        "open source tools",
+        "AI-assisted EDA",
+        "KiCad",
+        "OrCAD",
+        "DFM",
+        "workflow",
+        "2026-07-01"
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "company": "zhouyoukang1234-spec / GitHub",
+      "title": "🤖 Dao-PCB-Design-Agent：PCB 设计 Agent 实现 4 层板全链闭环 DRC 0/0",
+      "link": "https://github.com/zhouyoukang1234-spec/Dao-PCB-Design-Agent",
+      "keywords": [
+        "Dao-PCB-Design-Agent",
+        "PCB",
+        "AI Agent",
+        "KiCad",
+        "嘉立创EDA",
+        "MCP",
+        "DNA 模板",
+        "open source",
+        "2026-07-02"
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "company": "taciturnaxolotl / GitHub",
+      "title": "🔧 solder-mcp：新增 KiCad 9→10 迁移修复工具",
+      "link": "https://github.com/taciturnaxolotl/solder-mcp",
+      "keywords": [
+        "solder-mcp",
+        "KiCad",
+        "MCP",
+        "EDA",
+        "AI Agent",
+        "Solderable",
+        "open source",
+        "KiCad 10",
+        "2026-07-02"
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "company": "dshills / GitHub",
+      "title": "🔧 KiCadAI：全新 AI 辅助 KiCad 设计工具包（Go CLI）",
+      "link": "https://github.com/dshills/KiCadAI",
+      "keywords": [
+        "KiCadAI",
+        "KiCad",
+        "AI",
+        "PCB",
+        "Go",
+        "open source",
+        "dshills",
+        "结构化意图",
+        "2026-07-02"
+      ]
+    },
+    {
+      "date": "2026-06-30",
+      "company": "The OpenROAD Project",
+      "title": "⚡ OpenROAD 全局布局器引入 Kokkos GPU 加速：RTX 5090 上 6 倍加速",
+      "link": "https://github.com/The-OpenROAD-Project/OpenROAD/pull/10511",
+      "keywords": [
+        "OpenROAD",
+        "Kokkos",
+        "GPU",
+        "placement",
+        "gpl",
+        "Nesterov",
+        "physical design",
+        "EDA",
+        "open source",
+        "2026-06-30"
+      ]
+    },
     {
       "date": "2026-07-02",
       "company": "SemiEngineering",

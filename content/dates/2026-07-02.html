@@ -19,7 +19,7 @@
 <body>
 <header>
   <h1>📅 2026-07-02 论文 & 动态</h1>
-  <p class="subtitle">共 2 篇论文 · 3 条新闻 · 来源：arXiv / SemiEngineering</p>
+  <p class="subtitle">共 2 篇论文 · 8 条新闻 · 来源：arXiv / SemiEngineering</p>
 </header>
 <section>
   <div class="abstracts">
@@ -50,6 +50,41 @@
       <strong>核心看点</strong>：GPU 加速计算光刻与 NVIDIA cuLitho 路线互补，Siemens EDA 在制造端 AI 加速布局持续加码。</p>
       <a href="https://resources.sw.siemens.com/en-US/technical-paper-a-massively-parallel-gpu-rasterizer-for-next-generation-computational/" target="_blank">→ Siemens 技术论文</a>
       &nbsp;<a href="https://semiengineering.com/a-massively-parallel-gpu-rasterizer-for-next-generation-computational-lithography/" target="_blank">→ SemiEngineering 摘要</a>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>The OpenROAD Project · 开源更新 · 2026-06-30</div>
+      <h4>⚡ OpenROAD 全局布局器引入 Kokkos GPU 加速：RTX 5090 上 6 倍加速</h4>
+      <p>OpenROAD 合并 PR #10511，为全局布局器（gpl）的 Nesterov 优化循环引入<strong>可选 GPU 加速</strong>，基于 Kokkos 框架。在 RTX 5090 上 medium03（98k 单元）实现 <strong>6 倍加速</strong>，large01（274k 单元）<strong>2.25 倍加速</strong>，默认关闭时不影响现有构建。为 AI 驱动的大规模物理设计提供基础设施级加速。</p>
+      <a href="https://github.com/The-OpenROAD-Project/OpenROAD/pull/10511" target="_blank">→ GitHub / 项目链接</a>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>dshills / GitHub · 开源更新 · 2026-07-02</div>
+      <h4>🔧 KiCadAI：全新 AI 辅助 KiCad 设计工具包（Go CLI）</h4>
+      <p>开源 <strong>AI 辅助 KiCad 设计工具包</strong>，使用 Go 语言编写，通过结构化意图让 AI 代理构建和审查 KiCad 原生项目。最新提交 7 月 2 日，规划确定性多端点路由树，推进 I2C KiCad 夹具布线证据。</p>
+      <a href="https://github.com/dshills/KiCadAI" target="_blank">→ GitHub / 项目链接</a>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>taciturnaxolotl / GitHub · 开源更新 · 2026-07-02</div>
+      <h4>🔧 solder-mcp：新增 KiCad 9→10 迁移修复工具</h4>
+      <p>KiCad/EDA <strong>MCP 服务器</strong>，含远程 Agent 桥接（GPT-5.5、Claude、Gemini 布局模型）。7 月 2 日新增 <strong>kicad_fix_v10_sheets</strong> 工具，修复 KiCad 9 迁移到 10 过程中 sheet 级旋转参数移除导致的解析失败。</p>
+      <a href="https://github.com/taciturnaxolotl/solder-mcp" target="_blank">→ GitHub / 项目链接</a>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>zhouyoukang1234-spec / GitHub · 开源更新 · 2026-07-02</div>
+      <h4>🤖 Dao-PCB-Design-Agent：PCB 设计 Agent 实现 4 层板全链闭环 DRC 0/0</h4>
+      <p>PCB 设计 Agent，含 <strong>21 个 DNA 模板</strong>和 <strong>16 个 MCP 工具</strong>。最新提交 7 月 2 日，实现 4 层板（dao_duino，对标 Arduino Nano）纯代码全链虚拟闭环，<strong>DRC 0/0 可投产</strong>，深度融合 KiCad 9 IPC API。</p>
+      <a href="https://github.com/zhouyoukang1234-spec/Dao-PCB-Design-Agent" target="_blank">→ GitHub / 项目链接</a>
+    </div>
+
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>piyushbag / GitHub · 开源更新 · 2026-07-01</div>
+      <h4>📦 awesome-pcb-workflow：7 月月度更新，新增 PCB 全流程开源工具</h4>
+      <p>开源 PCB 设计全流程工具集（<strong>80+ 工具 / 12 阶段</strong>），覆盖 AI 辅助 EDA、原理图、SPICE 仿真、信号完整性、布局自动化、DFM、硬件测试 Agent。7 月 1 日执行月度自动化更新，通过 GitHub API 发现新工具并刷新本月精选。</p>
+      <a href="https://github.com/piyushbag/awesome-pcb-workflow" target="_blank">→ GitHub / 项目链接</a>
     </div>
 
     <!-- 2606.30949 AgRefactor -->
