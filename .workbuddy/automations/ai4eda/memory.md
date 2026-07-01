@@ -1,3 +1,95 @@
+## 2026-07-02 Execution Summary
+
+**Status:** ✅ Success (2 new papers + 3 new industry news)
+
+**New Papers Added (2 items):**
+- AgRefactor (arXiv:2606.30949) — Yang Zou, Zijian Ding, Yizhou Sun, Jason Cong (UCLA) — Self-evolving agentic workflow for HLS compatibility and performance; multi-agent LLM system that refactors real-world software into HLS-compatible high-performance code; self-evolving memory system accumulates factual and strategic knowledge across tasks; integrates automated refactoring tools to balance LLM rewriting with tool-based transformation; outperforms SOTA on 9 of 11 real-world benchmarks, handling designs 5–10× longer than prior work; 6.51× geometric mean speedup after agentic performance optimization with <20% resource increase; fully automated and open-source; submitted June 29, cs.AI/cs.AR
+- 3.5D Heterogeneous Packages (arXiv:2606.26176) — Chi Fei Chung (Dollarchip Technology Inc.) — Pre-silicon firmware co-optimization for mitigating process-induced performance degradation in Intel 3.5D heterogeneous packages (Foveros Direct 3D + PowerVia + EMIB-T + UCIe + HBM5); XRM-SSD V24/V7.0 framework based on 90,000-step LLM reasoning thermal-electrical co-simulation; 20–50 ms lookahead workload-density thermal prompts for PowerVia rail pre-positioning; R² = 0.9911 thermal load correlation, CPO spectral drift compensation <0.36 nm (21% of TSMC budget), HBM leakage <1 MB/hr; 2,000 Monte Carlo runs verify process variation robustness; V7.0 introduces N×N thermal coupling matrix and dual-pole kernel; releases 20–30% compute capability and reduces 65–68% EDA guardband; submitted June 26, cs.AR
+
+**New News Added (3 items):**
+- Observability in AI-Era Chiplet Design — SemiEngineering Experts At The Table (July 1) — Nine experts from Arteris, Axiomise, Baya Systems, Cadence, Keysight EDA, Movellus, Siemens EDA, Synopsys, and Vinci discuss in-silicon observability as a missing architectural layer for chiplet systems; AI excels at analysis but requires consistent cross-die telemetry infrastructure; standardization and security frameworks are the key bottlenecks; package-level visibility is critical for commercial chiplet markets
+- Cadence Reality Digital Twin + NVIDIA Omniverse — Cadence technical brief / SemiEngineering (July 1) — Cadence Reality Digital Twin Platform integrates with NVIDIA Omniverse / OpenUSD via the Reality DT Experience extension; unifies physics-based CFD simulation with Omniverse scene description for AI data center lifecycle optimization; bridges fragmented toolchains across design, build, and operations; enables thermal, airflow, power, and layout co-optimization at physical fidelity
+- Siemens EDA Massively Parallel GPU Rasterizer — Siemens EDA technical paper / SemiEngineering (July 1) — GPU rasterizer for next-generation computational lithography; GPU-friendly algorithms ensure high resolution, sub-pixel coverage, and geometric connectivity; on NVIDIA H100 achieves up to 290× speedup for Manhattan shapes and 45× for curved shapes vs highly optimized CPU, with <1% absolute error; complementary to NVIDIA cuLitho and strengthens Siemens EDA manufacturing-side AI acceleration
+
+**Files Updated:**
+- content/dates/2026-07-02.html — New date page (2 papers + 3 news)
+- content/latest/2026-07-02.html — New latest page
+- content/dates/2606.30949_AgRefactor.pdf — Downloaded (1.1MB)
+- content/dates/2606.26176_3.5D_Packages_CoOpt.pdf — Downloaded (1.5MB)
+- content/news/index.html — Added 2026-07-02 section with 3 cards
+- content/news/news_memory.json — Added 3 items, totalItems→132, lastUpdate→2026-07-02, cutoffDate→2026-01-03
+- content/categories/agent.html — Added AgRefactor (26→27 papers)
+- content/categories/physical.html — Added 3.5D Heterogeneous Packages (33→34 papers)
+- manifest.js — Updated stats (papers 190→192, batches 78→79, news 129→132, lastUpdate 2026-07-02); added 2026-07-02 to latest and dates arrays
+- content/papers/index.html — Updated redirect to 2026-07-02
+- Git: Committed ("auto update: 2026-07-02") and pushed to origin/main
+
+**Key Findings:**
+- AgRefactor advances the HLS agent frontier: unlike prior C-to-HLS tools that generate code once, it uses a self-evolving memory of factual and strategic knowledge across tasks, making it robust to unseen programs and scalable to much larger designs — the 6.51× speedup with minimal resource overhead shows agentic performance optimization can be practical
+- 3.5D package co-optimization paper is unusual for arXiv cs.AR: it sits at the intersection of pre-silicon EDA, firmware, and advanced packaging; the use of LLM-generated reasoning datasets for thermal-electrical simulation and the 20–30% compute release demonstrates how AI can tighten EDA guardbands rather than merely accelerate existing tools
+- Chiplet observability is emerging as a structural bottleneck: the consensus across nine EDA/architecture firms is that AI cannot compensate for the lack of a standardized, cross-die telemetry plane — this points to a new infrastructure layer for commercial chiplet markets and a potential standardization opportunity (similar to UCIe but for observability)
+- Cadence × NVIDIA integration in digital twins for AI data centers confirms the "physical AI" trend: from chip-level EDA to facility-level physics-based optimization, the same AI/physics co-simulation stack is being applied across scales — this is a major market expansion for EDA vendors beyond silicon
+- Siemens GPU rasterizer for computational lithography shows a manufacturing-side acceleration arms race: while NVIDIA cuLitho dominates mindshare, Siemens is building a complementary GPU pipeline for mask rasterization; the 290× figure suggests GPU acceleration in manufacturing is becoming table stakes
+- SemiEngineering WIR #145 still not published (expected ~July 3); no new arXiv cs.AR/cs.SE/cs.LG/cs.AI 2607.* papers were available on the morning of July 2
+- All counts now aligned: manifest.js (192 papers, 79 batches, 132 news), news_memory.json (132 items), news/index.html (132 displayed), category counts (RTL 63, Verify 21, Physical 34, Analog 21, Agent 27)
+
+**Next Check:**
+- SemiEngineering WIR #145 (expected ~July 3)
+- arXiv cs.AR/cs.SE/cs.LG/cs.AI 2607.* new papers (July 2–3 window)
+- MLCAD 2026 contest final results (still pending)
+- DAC 2026 program updates (July 26–29, Long Beach)
+- Si2 "Agentic AI in EDA: Who's in Control?" panel at DAC (July 27)
+- ICML 2026 proceedings (late July)
+
+---
+
+## 2026-07-01 Execution Summary
+
+**Status:** ✅ Success (3 new papers + 1 new industry news)
+
+**New Papers Added (3 items):**
+- Evidence-Driven LLM Agent (2606.28409) — Zhe Zhao, Hongbing Lang, Zhihan Xiao, Luke Ztz Hu, John Imoleayo Adebisi, Songping Mai — First end-to-end LLM Agent framework for HLS toolchain; C-to-Synthesizable-C conversion formalized as closed-loop generation-verification-diagnosis-repair problem; four-stage verifier under strict evidence isolation; Progressive Mismatch Localization Chain (PMLC) via log normalization + AST backward slicing + dual-trace instrumentation; typed-query two-stage evidence RAG backed by self-evolving family-routed repair-card pool; submitted to IEEE TCAD; submitted June 25, cs.AR/cs.AI
+- SHIFT (2606.28754) — Arvin Delavari, Leonid Popryho, Inna Partin-Vaisband, Boris Vaisband — Topology-agnostic dynamic compute relocation framework for Chiplet-based systems; transfers compute node context+data to suitably positioned nodes (not just data); multi-layered routing between functional/memory chiplets and utility chiplets; lightweight ML-assisted policy for traffic inference; relocation success 75.2%-97.9%; latency improvement 16.4%-62.5%; throughput up to 12.5x; LLM workload: runtime 4.9x, throughput 5.9x, energy-efficiency 1.8x improvement; submitted June 27, cs.AR/cs.ET
+- ChatModel v5 (2506.15066) — Jianmin Ye, Tianyang Liu, Qi Tian, Shengchu Su, Zhe Jiang, Xi Wang — LLM-aided agile reference model generation and verification platform; design standardization + hierarchical agile modeling + building-block generation strategy; peak performance improvement 58.99%; reference model design capacity 9.18x increase; design-validation cycle acceleration 7.11x; v5 major revision (June 29, 2026) with streamlined paper and updated results; originally submitted June 2025, cs.AR/cs.MA
+
+**New News Added (1 item):**
+- Synopsys Physical AI — Synopsys Blog (June 30) — Concept article defining Physical AI paradigm: connecting silicon chips, software, and physical reality world; Multiphysics Fusion + AI-driven EDA tools as key infrastructure; chip design tools must model real physical constraints beyond digital metrics; https://www.synopsys.com/blogs/chip-design/physical-ai-silicon-software-robots.html
+
+**Files Updated:**
+- content/dates/2026-07-01.html — New date page (3 papers + 1 news)
+- content/latest/2026-07-01.html — New latest page
+- content/dates/2606.28409_EvidenceDriven.pdf — Downloaded (1.4MB)
+- content/dates/2606.28754_SHIFT.pdf — Downloaded (2.4MB)
+- content/dates/2506.15066_ChatModel.pdf — Downloaded (4.5MB)
+- content/news/index.html — Added 2026-07-01 section with Synopsys Physical AI card
+- content/news/news_memory.json — Added 1 item, totalItems→129, lastUpdate→2026-07-01
+- content/categories/physical.html — Added SHIFT (33 papers now)
+- content/categories/verify.html — Added EvidenceDriven + ChatModel (19→21 papers)
+- manifest.js — Updated stats (papers 187→190, batches 77→78, news 128→129, lastUpdate 2026-07-01); added 2026-07-01 to latest and dates arrays
+- content/papers/index.html — Updated redirect to 2026-07-01
+- Git: Committed (64ff5dc "auto update: 2026-07-01") and pushed to origin/main
+
+**Key Findings:**
+- Evidence-Driven LLM Agent is significant for HLS verification: first framework treating C-to-HLS-C as a closed-loop problem with strict evidence isolation — the PMLC approach bridges tool log analysis with AST-level structural reasoning, providing precise mismatch localization that raw log dumping cannot achieve
+- SHIFT contributes to Chiplet interconnect optimization: rather than moving data (traditional NoC), it relocates compute context+data — this "compute relocation" paradigm is novel for Chiplet systems and the ML-assisted traffic policy makes it adaptive; LLM workload results (4.9x runtime improvement) directly validate applicability to AI infrastructure
+- ChatModel v5 is a major update of an important verification paper: reference model generation is the bottleneck in functional verification — ChatModel's building-block strategy and hierarchical modeling approach achieves 9.18x design capacity increase, making LLM-generated reference models practically viable
+- Synopsys Physical AI blog post signals the next frontier: beyond "AI for digital EDA" toward "AI for physical-world EDA" — multiphysics fusion (thermal, electromagnetic, mechanical) with AI agents becomes essential for Physical AI systems (robots, autonomous vehicles, industrial control)
+- OpenROAD project shows deep AI-assisted development integration: Claude Opus 4.8 co-authored commits and Gemini code review on June 30 — this is notable but was not added as a separate news item since it's an incremental development practice, not a major product release
+- SemiEngineering WIR #145 not yet published (expected ~July 3)
+- arXiv cs.AR July 1 (2607.*) papers not yet available; no new cs.SE/cs.AI EDA-relevant papers
+- MLCAD 2026 contest final results still partial (Beta Testcase 2 with pending clarification; Testcase 3 evaluation ongoing)
+
+**Next Check:**
+- SemiEngineering WIR #145 (expected ~July 3)
+- arXiv cs.AR/cs.SE 2607.* new papers (July 1-2 window)
+- MLCAD 2026 contest final results (Testcase 3 evaluation pending)
+- DAC 2026 program updates (July 26-29, Long Beach)
+- Si2 "Agentic AI in EDA: Who's in Control?" panel at DAC (July 27)
+- ICML 2026 proceedings (late July)
+- OpenROAD AI-assisted development trend (Claude Opus 4.8/Gemini co-authoring)
+
+---
+
 ## 2026-06-30 Execution Summary
 
 **Status:** ✅ Success (2 new papers + 3 new industry news)

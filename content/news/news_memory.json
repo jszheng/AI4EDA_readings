@@ -1,8 +1,65 @@
 {
-  "lastUpdate": "2026-07-01",
-  "cutoffDate": "2026-01-01",
-  "totalItems": 129,
+  "lastUpdate": "2026-07-02",
+  "cutoffDate": "2026-01-03",
+  "totalItems": 132,
   "items": [
+    {
+      "date": "2026-07-02",
+      "company": "SemiEngineering",
+      "title": "🔍 可观测性：AI 时代 Chiplet 设计缺失的关键层",
+      "link": "https://semiengineering.com/observability-is-a-missing-layer-in-ai-era-chiplet-design/",
+      "keywords": [
+        "SemiEngineering",
+        "Observability",
+        "Chiplet",
+        "AI",
+        "In-silicon",
+        "可观测性",
+        "遥测",
+        "封装内可见性",
+        "Arteris",
+        "Cadence",
+        "Synopsys",
+        "Siemens EDA",
+        "2026-07-01"
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "company": "Cadence / NVIDIA",
+      "title": "🌐 Cadence Reality 数字孪生平台集成 NVIDIA Omniverse — AI 数据中心全生命周期物理级优化",
+      "link": "https://semiengineering.com/cadence-reality-digital-twin-platform-and-nvidia-omniverse-integration/",
+      "keywords": [
+        "Cadence",
+        "NVIDIA",
+        "Omniverse",
+        "Digital Twin",
+        "Reality",
+        "CFD",
+        "OpenUSD",
+        "AI数据中心",
+        "物理级优化",
+        "2026-07-01"
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "company": "Siemens EDA",
+      "title": "⚡ Siemens EDA 发布大规模并行 GPU 光栅化器：下一代计算光刻加速 290 倍",
+      "link": "https://semiengineering.com/a-massively-parallel-gpu-rasterizer-for-next-generation-computational-lithography/",
+      "keywords": [
+        "Siemens EDA",
+        "GPU",
+        "Rasterizer",
+        "Computational Lithography",
+        "OPC",
+        "光刻",
+        "NVIDIA H100",
+        "290x",
+        "45x",
+        "2026-07-01"
+      ]
+    },
     {
       "date": "2026-07-01",
       "company": "Synopsys",

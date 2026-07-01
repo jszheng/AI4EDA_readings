@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-02 论文 & 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 3 条新闻 · 来源：arXiv / SemiEngineering</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News 1: Observability in AI-Era Chiplet Design -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Experts At The Table · 2026-07-01</div>
+      <h4>🔍 可观测性：AI 时代 Chiplet 设计缺失的关键层</h4>
+      <p>SemiEngineering 召集 Arteris、Axiomise、Baya Systems、Cadence、Keysight EDA、Movellus、Siemens EDA、Synopsys 和 Vinci 九位专家，探讨 AI 时代 Chiplet 架构中<strong>片内可观测性（In-silicon Observability）</strong>的缺失与挑战。核心观点：</p><ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;"><li><strong>可观测性必须作为一等架构能力</strong>：在芯粒架构中，需要与通信架构对齐的跨芯片遥测平面，才能在封装边界上关联流量、延迟、拥塞和故障行为</li><li><strong>AI 的角色定位</strong>：AI 在分析和优化阶段价值巨大，但无法替代结构化的架构设计；前提是存在一致的可观测性基础设施</li><li><strong>标准化是关键瓶颈</strong>：多供应商芯粒生态需要统一的遥测数据格式和安全访问框架，当前监控数据格式高度碎片化</li><li><strong>性能影响可控</strong>：通过独立观察路径、分层机制和形式化验证，可将监控对系统性能的影响降至极低</li><li><strong>未来三大方向</strong>：属性感知遥测、硅片与形式化模型的双向链接、静默数据损坏的跨层因果分析</li><li><strong>封装内可见性</strong>是解锁商用芯粒市场的关键——需要实时定位凸点、基板等中间层面故障，避免供应商间互相推诿</li></ul><p>文章强调，<strong>没有一致、与架构对齐的跨芯片可见性，AI 无从发挥</strong>；可观测性应作为设计的前置输入而非事后补充。</p>
+      <a href="https://semiengineering.com/observability-is-a-missing-layer-in-ai-era-chiplet-design/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+    <!-- News 2: Cadence Reality Digital Twin + NVIDIA Omniverse -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Cadence / SemiEngineering · 技术简报 · 2026-07-01</div>
+      <h4>🌐 Cadence Reality 数字孪生平台集成 NVIDIA Omniverse — AI 数据中心全生命周期物理级优化</h4>
+      <p>Cadence 发布技术简报，介绍 <strong>Cadence Reality Digital Twin Platform</strong> 与 <strong>NVIDIA Omniverse / OpenUSD</strong> 的集成方案。通过 Cadence Reality DT Experience 扩展，将基于物理的 CFD 仿真与 Omniverse 统一场景描述打通，构建从概念原型到运营容量规划的统一、物理精确的数字孪生解决方案。该方案针对 AI 时代数据中心的快速扩张，解决传统工具链碎片化、缺少全运营上下文的问题，覆盖设计、建造、运营全生命周期，实现热管理、气流、能耗与布局的物理级协同优化。<br>
+      <strong>核心看点</strong>：AI 基础设施的物理设计正从单工具优化转向数字孪生驱动的系统级协同，Cadence 与 NVIDIA 在数据中心/物理 AI 场景持续加深整合。</p>
+      <a href="https://www.cadence.com/en_US/home/resources/technical-briefs/cadence-reality-digital-twin-platform-and-nvidia-omniverse-integration-tb.html" target="_blank">→ Cadence 技术简报</a>
+      &nbsp;<a href="https://semiengineering.com/cadence-reality-digital-twin-platform-and-nvidia-omniverse-integration/" target="_blank">→ SemiEngineering 摘要</a>
+    </div>
+
+    <!-- News 3: Siemens GPU Rasterizer for Computational Lithography -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Siemens EDA / SemiEngineering · 技术论文 · 2026-07-01</div>
+      <h4>⚡ Siemens EDA 发布大规模并行 GPU 光栅化器：下一代计算光刻加速 290 倍</h4>
+      <p>Siemens EDA 在 SemiEngineering 发布技术论文，介绍面向下一代计算光刻的<strong>大规模并行 GPU 光栅化器</strong>。针对先进节点掩模合成、光刻仿真与光学邻近修正（OPC）对纳米级精度与海量数据的高要求，提出 GPU 友好算法，确保高分辨率、亚像素覆盖与几何连通性。在 NVIDIA H100 GPU 上相比高度优化的 CPU 算法实现<strong>Manhattan 图形最高 290 倍、曲线图形最高 45 倍加速</strong>，绝对误差低于 1%。该方法为下一代光刻的严苛计算需求提供稳健解决方案，有望缩短上市时间并提升设计质量。<br>
+      <strong>核心看点</strong>：GPU 加速计算光刻与 NVIDIA cuLitho 路线互补，Siemens EDA 在制造端 AI 加速布局持续加码。</p>
+      <a href="https://resources.sw.siemens.com/en-US/technical-paper-a-massively-parallel-gpu-rasterizer-for-next-generation-computational/" target="_blank">→ Siemens 技术论文</a>
+      &nbsp;<a href="https://semiengineering.com/a-massively-parallel-gpu-rasterizer-for-next-generation-computational-lithography/" target="_blank">→ SemiEngineering 摘要</a>
+    </div>
+
+    <!-- 2606.30949 AgRefactor -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.AR · 2026-06-29 · Yang Zou / Zijian Ding / Yizhou Sun / Jason Cong (UCLA)</div>
+      <h4>🔄 AgRefactor：自进化多智能体工作流，将软件自动重构为 HLS 兼容高性能代码</h4>
+      <p>提出 <strong>AgRefactor</strong>，一个基于 LLM 的多智能体工作流，用于将真实软件自动重构为<strong>高层次综合（HLS）兼容</strong>的程序。核心创新：(1) <strong>自进化记忆系统</strong>，跨任务积累并检索事实性与策略性知识，提升对未见程序的鲁棒性和效率；(2) 集成自动化重构工具，使智能体在 LLM 驱动的重写与高效工具型转换之间平衡，降低成本并增强可扩展性；(3) 在 11 个挑战性真实基准中的 9 个上超过或匹敌 SOTA 自动化重构工具和强 LLM 基线，且处理的设计比先前工作最复杂案例长 5–10 倍。进一步经智能体性能优化后，在开源设计上实现 <strong>6.51 倍几何平均加速</strong>（对比 SOTA 指令调优工具），资源开销增加不到 20%。<strong>完全自动化并已开源</strong>。<br>
+      <strong>核心创新</strong>：自进化记忆 + 多智能体 HLS 重构 + 工具-LLM 混合转换 + 开源<br>
+      <strong>标签</strong>：HLS · 多智能体 · 自进化记忆 · 软件重构 · 开源</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">HLS</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">自进化记忆</span>
+        <span class="tag">软件重构</span>
+        <span class="tag">开源</span>
+        <span class="tag">UCLA</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.30949" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2606.30949_AgRefactor.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+    <!-- 2606.26176 3.5D Heterogeneous Packages -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-06-26 · Chi Fei Chung (Dollarchip Technology Inc.)</div>
+      <h4>🧊 3.5D 异构封装工艺退化缓解：预硅固件协同优化释放 20–30% 计算与 65–68% EDA 裕量</h4>
+      <p>提出针对 Intel 3.5D 异构集成封装（Foveros Direct 3D + PowerVia + EMIB-T + UCIe + HBM5）的<strong>预硅固件协同优化</strong>方案 XRM-SSD V24/V7.0。通过 90,000 步 LLM 推理数据集上的热-电协同仿真，展示基于工作负载密度的热提示（20–50 ms 前瞻）可实现 PowerVia 电压轨预定位。关键结果：热负载相关性 R² = 0.9911，补偿 CPO 光谱漂移低于 0.36 nm（占 TSMC 容差预算 21%），HBM 漏电流在所有负载状态下低于 1 MB/hr；2,000 次蒙特卡洛分析验证工艺变化鲁棒性。V7.0 扩展至多 Tile 架构，引入 N×N 热耦合矩阵和双极点核。研究表明该方法可释放 <strong>20–30% 计算能力</strong>并降低 <strong>65–68% EDA 保护带</strong>。<br>
+      <strong>核心创新</strong>：预硅热-电协同仿真 + 前瞻固件热提示 + 多 Tile 热耦合矩阵 + 工艺变异鲁棒性<br>
+      <strong>标签</strong>：3.5D封装 · Chiplet · 热管理 · 固件协同优化 · 预硅分析</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">3.5D封装</span>
+        <span class="tag">Chiplet</span>
+        <span class="tag">热管理</span>
+        <span class="tag">固件协同优化</span>
+        <span class="tag">预硅分析</span>
+        <span class="tag">物理设计</span>
+      </div>
+      <a href="https://arxiv.org/abs/2606.26176" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2606.26176_3.5D_Packages_CoOpt.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
