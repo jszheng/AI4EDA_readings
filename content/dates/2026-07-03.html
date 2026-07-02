@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-03 论文 & 动态</h1>
+  <p class="subtitle">共 1 篇论文 · 1 条行业动态 · 1 项开源更新 · 来源：arXiv / DAC / Preprints.org</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News 1: DAC 2026 Agentic AI TechTalks -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>DAC 2026 · TechTalks · 2026-07-02</div>
+      <h4>🎤 DAC 2026 发布三场 Agentic AI TechTalk：从工具到智能体、AI 原生 EDA 栈、从炒作到落地</h4>
+      <p>DAC 2026（7 月 26–29，长滩）正式公布三场聚焦 <strong>Agentic AI 在芯片设计中的实战</strong> 的 TechTalk：<br>
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>7 月 27 日（周一）</strong>：「From Tools to Agents: Realizing Fully Autonomous EDA Workflows」— <strong>Da Yang</strong>（NVIDIA, Sr. Director Semiconductor/EDA）+ <strong>Amit Gupta</strong>（Siemens, Sr. VP EDA AI & Custom IC）</li>
+        <li><strong>7 月 28 日（周二）</strong>：「Towards a Fully AI-Native EDA Stack」— <strong>Jeffrey Z. Pan</strong>（Bronco AI, Co-Founder & CTO）</li>
+        <li><strong>7 月 29 日（周三）</strong>：「From Hype to Impact: Where Agentic AI Actually Delivers Value in Chip Design Today」— <strong>Nimay Shah</strong>（Analog Devices）+ <strong>William Wang</strong>（ChipAgents, CEO & Founder）</li>
+      </ul>
+      三场 Talk 覆盖从工业级自主工作流实现（NVIDIA/Siemens）到全新 AI 原生架构（Bronco AI）再到当前实际交付价值验证（ADI/ChipAgents），完整呈现 Agentic EDA 从愿景到实践的演进路线。<br>
+      <strong>核心看点</strong>：DAC 正式将 Agentic AI 作为独立专题纳入展会日程，EDA 巨头 + AI 创业公司联合发声，标志着「自主芯片设计」从学术讨论进入产业标准议程。</p>
+      <a href="https://www.dac.com/2026/program/2026-techtalks-speakers" target="_blank">→ DAC 2026 TechTalks 页面</a>
+    </div>
+
+    <!-- 2607.00055 HySpecPro -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · DAC 2026 Accepted · 2026-06-30 · Rongjian Liang / Zhuo Feng (Stevens) / Haoxing Ren (NVIDIA)</div>
+      <h4>📐 HySpecPro：谱投影优化实现可扩展超图分割 — DAC 2026 接收，GPU 加速线性复杂度</h4>
+      <p>提出 <strong>HySpecPro</strong>，一种基于<strong>谱投影优化</strong>的单级超图分割器，在谱嵌入空间中进行端到端优化，无需传统的多层粗化-细化流程。构建<strong>二部 Laplacian 嵌入</strong>，通过高效投影搜索实现分割，并提供<strong>全 GPU 加速实现</strong>。实验表明 HySpecPro 在切割质量上与 SOTA 多层方法可比，且随总超边度数<strong>线性扩展</strong>，解决了多层方法在高度超边场景下粗化阶段信息扭曲导致的性能瓶颈。<br>
+      <strong>核心创新</strong>：单级谱投影 + 二部 Laplacian 嵌入 + GPU 全加速 + 线性复杂度 + DAC 2026<br>
+      <strong>标签</strong>：超图分割 · 谱方法 · GPU 加速 · 物理设计 · DAC2026</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">超图分割</span>
+        <span class="tag">谱方法</span>
+        <span class="tag">GPU 加速</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">DAC2026</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.00055" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.00055_HySpecPro.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- Open Source: OpenLane Parameter Sweep -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Preprints.org / GitHub · 开源工具 · 2026-07-02</div>
+      <h4>🔧 OpenLane 参数扫描框架：SkyWater 130 nm 上 1,440 次 RTL-to-GDSII 自动时序收敛实验</h4>
+      <p>发布 <strong>openlane-parameter-sweep</strong>，一个针对 OpenLane / OpenROAD 流程的自动化参数网格搜索框架，目标平台为 SkyWater 130 nm PDK（SKY130A）。系统地变化 <code>CLOCK_PERIOD</code>、<code>FP_CORE_UTIL</code>、<code>PL_TARGET_DENSITY</code> 和 <code>SYNTH_STRATEGY</code> 四个关键参数，在 SPM、PicoRV32 和 CNN MAC 阵列三个设计上共执行 <strong>1,440 次完全自动化的 RTL-to-GDSII 运行</strong>。框架包含容错的 Python 编排层，驱动 OpenLane Docker 容器，自动提取时序、面积和功耗指标，并通过 CSV 日志支持断点续跑和磁盘自动清理。<br>
+      <strong>核心发现</strong>：SPM 在 100–250 MHz 全频率下实现时序收敛；PicoRV32 在 200 MHz 与 222 MHz 之间存在尖锐收敛边界；CNN MAC 阵列最高可运行约 192 MHz；<code>SYNTH_STRATEGY</code> 对复杂设计类别至关重要。<br>
+      <strong>核心看点</strong>：为 OpenLane 用户提供可复现、可扩展的参数调优基准数据集，助力后续 ML/RL 驱动的时序收敛代理研究。</p>
+      <a href="https://www.preprints.org/manuscript/202607.0137" target="_blank">→ Preprints.org 论文</a>
+      &nbsp;<a href="https://github.com/alvi-codes/openlane-parameter-sweep" target="_blank">💻 GitHub 仓库</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

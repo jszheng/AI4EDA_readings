@@ -21,14 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-02 · 涵盖 2026-01 → 2026-07-02 · 已去重整理 · 新增 Chiplet 可观测性 + Cadence×NVIDIA 数字孪生 + Siemens GPU 光刻加速 + AgRefactor + 3.5D 固件协同优化 + 5 项开源更新</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-03 · 涵盖 2026-01 → 2026-07-03 · 已去重整理 · 新增 DAC 2026 Agentic AI TechTalks + HySpecPro 超图分割</p>
   <div class="stats">
-    <div class="stat"><div class="num">192</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">79</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">132</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">193</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">80</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">139</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-07-03">260703 🎤 DAC 2026 Agentic AI TechTalks + 🔬 Synopsys Multiphysics Fusion 上线</a>
   <a href="#2026-07-02">260702 🔍 Chiplet 可观测性 + Cadence×NVIDIA 数字孪生 + Siemens GPU 光刻加速 + 5 项开源更新</a>
   <a href="#2026-07-01">260701 🌐 Synopsys Physical AI：连接硅芯片、软件与现实世界</a>
   <a href="#2026-06-30">260630 🤖 Siemens Fuse EDA AI Agent + ChipAgents 年度企业家 + kicad-happy 开源技能套件</a>
@@ -113,6 +114,43 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-07-03">
+  <div class="section-title"><span class="icon">🎤</span> 2026-07-03 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-07-03 行业动态（2条）</h3>
+      <span class="badge-count">2</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>DAC 2026 · TechTalks · 2026-07-02</div>
+      <h4 id="2026-07-03">🎤 DAC 2026 发布三场 Agentic AI TechTalk：从工具到智能体、AI原生EDA栈、从炒作到落地</h4>
+      <p>DAC 2026（7月26–29，长滩）正式公布三场聚焦 <strong>Agentic AI 在芯片设计中的实战</strong> 的 TechTalk：<br>
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>7月27日（周一）</strong>：「From Tools to Agents: Realizing Fully Autonomous EDA Workflows」— <strong>Da Yang</strong>（NVIDIA, Sr. Director Semiconductor/EDA）+ <strong>Amit Gupta</strong>（Siemens, Sr. VP EDA AI & Custom IC）</li>
+        <li><strong>7月28日（周二）</strong>：「Towards a Fully AI-Native EDA Stack」— <strong>Jeffrey Z. Pan</strong>（Bronco AI, Co-Founder & CTO）</li>
+        <li><strong>7月29日（周三）</strong>：「From Hype to Impact: Where Agentic AI Actually Delivers Value in Chip Design Today」— <strong>Nimay Shah</strong>（Analog Devices）+ <strong>William Wang</strong>（ChipAgents, CEO & Founder）</li>
+      </ul>
+      三场 Talk 覆盖了从工业级自主工作流实现（NVIDIA/Siemens）到全新 AI 原生架构（Bronco AI）到当前实际交付价值验证（ADI/ChipAgents），完整呈现 Agentic EDA 从愿景到实践的演进路线。<br>
+      <strong>核心看点</strong>：DAC 正式将 Agentic AI 作为独立专题纳入展会日程，EDA 巨头 + AI 创业公司联合发声，标志着「自主芯片设计」从学术讨论进入产业标准议程。</p>
+      <a href="https://www.dac.com/2026/program/2026-techtalks-speakers" target="_blank">→ DAC 2026 TechTalks 页面</a>
+    </div>
+
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>Synopsys · 产品发布 · 2026-06-17</div>
+      <h4 id="2026-07-03b">🔬 Synopsys Multiphysics Fusion 首波解决方案正式上线：覆盖时序签核/设计收敛/多芯片/AMS/光子五大领域</h4>
+      <p>Synopsys 宣布 <strong>Multiphysics Fusion™</strong> 首波解决方案正式可用（production deployment），将 Synopsys 领先的硅设计工具与 Ansys 黄金标准签核分析能力深度融合，覆盖<strong>五大关键领域</strong>：时序签核、设计收敛、多芯片设计、AMS 设计、光子设计。配套博客（6月17日/7月1日）强调<strong>过设计的代价</strong>（先进节点 20–45% 功率惩罚 + 20–35% 硅面积浪费），提出<strong>多物理场必须成为核心设计输入而非下游验证步骤</strong>的新范式。<br>
+      <strong>核心看点</strong>：Multiphysics Fusion 是 Synopsys 收购 Ansys 后的首个整合产品交付，标志着「多物理场协同设计」从概念进入生产部署阶段；与 Physical AI 理念一致——物理不再是验证终点，而是设计起点。</p>
+      <a href="https://news.synopsys.com/2026-06-17-Synopsys-Announces-Availability-of-the-First-Wave-of-Multiphysics-Fusion-Solutions" target="_blank">→ Synopsys 新闻稿</a>
+      &nbsp;<a href="https://www.synopsys.com/blogs/chip-design/multiphysics-chip-design-challenges.html" target="_blank">→ Synopsys 博客</a>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-07-02">
   <div class="section-title"><span class="icon">🔍</span> 2026-07-02 <span class="badge-new">8条新闻</span> <span class="line"></span></div>
