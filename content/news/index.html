@@ -21,7 +21,7 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-03 · 涵盖 2026-01 → 2026-07-03 · 已去重整理 · 新增 DAC 2026 Agentic AI TechTalks + HySpecPro 超图分割</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-03 · 涵盖 2026-01 → 2026-07-03 · 已去重整理 · 新增 DAC 2026 Agentic AI TechTalks + HySpecPro 超图分割 + OpenLane 参数扫描开源框架</p>
   <div class="stats">
     <div class="stat"><div class="num">193</div><div class="label">论文收录</div></div>
     <div class="stat"><div class="num">80</div><div class="label">更新批次</div></div>
@@ -29,7 +29,7 @@
   </div>
 </header>
 <nav>
-  <a href="#2026-07-03">260703 🎤 DAC 2026 Agentic AI TechTalks + 🔬 Synopsys Multiphysics Fusion 上线</a>
+  <a href="#2026-07-03">260703 🎤 DAC 2026 Agentic AI TechTalks + 🔧 OpenLane 参数扫描开源框架</a>
   <a href="#2026-07-02">260702 🔍 Chiplet 可观测性 + Cadence×NVIDIA 数字孪生 + Siemens GPU 光刻加速 + 5 项开源更新</a>
   <a href="#2026-07-01">260701 🌐 Synopsys Physical AI：连接硅芯片、软件与现实世界</a>
   <a href="#2026-06-30">260630 🤖 Siemens Fuse EDA AI Agent + ChipAgents 年度企业家 + kicad-happy 开源技能套件</a>
@@ -140,12 +140,13 @@
     </div>
 
         <div class="abs-card">
-      <div class="src"><span class="dot"></span>Synopsys · 产品发布 · 2026-06-17</div>
-      <h4 id="2026-07-03b">🔬 Synopsys Multiphysics Fusion 首波解决方案正式上线：覆盖时序签核/设计收敛/多芯片/AMS/光子五大领域</h4>
-      <p>Synopsys 宣布 <strong>Multiphysics Fusion™</strong> 首波解决方案正式可用（production deployment），将 Synopsys 领先的硅设计工具与 Ansys 黄金标准签核分析能力深度融合，覆盖<strong>五大关键领域</strong>：时序签核、设计收敛、多芯片设计、AMS 设计、光子设计。配套博客（6月17日/7月1日）强调<strong>过设计的代价</strong>（先进节点 20–45% 功率惩罚 + 20–35% 硅面积浪费），提出<strong>多物理场必须成为核心设计输入而非下游验证步骤</strong>的新范式。<br>
-      <strong>核心看点</strong>：Multiphysics Fusion 是 Synopsys 收购 Ansys 后的首个整合产品交付，标志着「多物理场协同设计」从概念进入生产部署阶段；与 Physical AI 理念一致——物理不再是验证终点，而是设计起点。</p>
-      <a href="https://news.synopsys.com/2026-06-17-Synopsys-Announces-Availability-of-the-First-Wave-of-Multiphysics-Fusion-Solutions" target="_blank">→ Synopsys 新闻稿</a>
-      &nbsp;<a href="https://www.synopsys.com/blogs/chip-design/multiphysics-chip-design-challenges.html" target="_blank">→ Synopsys 博客</a>
+      <div class="src"><span class="dot"></span>Preprints.org / GitHub · 开源工具 · 2026-07-02</div>
+      <h4 id="2026-07-03b">🔧 OpenLane 参数扫描框架：SkyWater 130 nm 上 1,440 次 RTL-to-GDSII 自动时序收敛实验</h4>
+      <p>发布 <strong>openlane-parameter-sweep</strong>，一个针对 OpenLane / OpenROAD 流程的自动化参数网格搜索框架，目标平台为 SkyWater 130 nm PDK（SKY130A）。系统地变化 <code>CLOCK_PERIOD</code>、<code>FP_CORE_UTIL</code>、<code>PL_TARGET_DENSITY</code> 和 <code>SYNTH_STRATEGY</code> 四个关键参数，在 SPM、PicoRV32 和 CNN MAC 阵列三个设计上共执行 <strong>1,440 次完全自动化的 RTL-to-GDSII 运行</strong>。框架包含容错的 Python 编排层，驱动 OpenLane Docker 容器，自动提取时序、面积和功耗指标，并通过 CSV 日志支持断点续跑和磁盘自动清理。<br>
+      <strong>核心发现</strong>：SPM 在 100–250 MHz 全频率下实现时序收敛；PicoRV32 在 200 MHz 与 222 MHz 之间存在尖锐收敛边界；CNN MAC 阵列最高可运行约 192 MHz；<code>SYNTH_STRATEGY</code> 对复杂设计类别至关重要。<br>
+      <strong>核心看点</strong>：为 OpenLane 用户提供可复现、可扩展的参数调优基准数据集，助力后续 ML/RL 驱动的时序收敛代理研究。</p>
+      <a href="https://www.preprints.org/manuscript/202607.0137" target="_blank">→ Preprints.org 论文</a>
+      &nbsp;<a href="https://github.com/alvi-codes/openlane-parameter-sweep" target="_blank">💻 GitHub 仓库</a>
     </div>
       </div>
     </div>
@@ -437,11 +438,12 @@
     </div>
 
         <div class="abs-card">
-      <div class="src"><span class="dot"></span>Synopsys · SemiWiki · 2026-06-17</div>
-      <h4 id="2026-06-18c">🔬 Synopsys 推出首波 Multiphysics Fusion 多物理场融合解决方案 — AI 驱动 EDA + 半导体物理 + 系统仿真</h4>
-      <p>Synopsys 正式发布第一波<strong>多物理场融合（Multiphysics Fusion）解决方案</strong>，这是 2025 年 7 月 Ansys 收购完成（350 亿美元）后近 11 个月的工程化结晶。核心定位：<strong>将 EDA、半导体物理、系统仿真与 AI 驱动优化</strong>打通为统一工程环境，覆盖<strong>电、热、机械、光学</strong>四大物理场协同分析。原生集成 AI 优化能力，基于多物理场仿真数据自动迭代设计参数，大幅缩短人工试错周期。主要应用：3D IC / Chiplet 异构集成、高功耗 AI 芯片、硅光子、汽车 / 工业高可靠性系统。这是 Synopsys 从"EDA 工具厂商"向"芯片到系统仿真平台"战略转型的关键里程碑。</p>
-      <a href="https://semiwiki.com/" target="_blank">→ SemiWiki 报道</a>
-      <a href="https://www.synopsys.com/blogs/chip-design/multiphysics-fusion-chip-design.html" target="_blank" style="margin-left:12px;">→ Synopsys 官方博客</a>
+      <div class="src"><span class="dot"></span>Synopsys · 产品发布 · 2026-06-17</div>
+      <h4 id="2026-06-18c">🔬 Synopsys Multiphysics Fusion 首波解决方案正式上线：覆盖时序签核/设计收敛/多芯片/AMS/光子五大领域</h4>
+      <p>Synopsys 宣布 <strong>Multiphysics Fusion™</strong> 首波解决方案正式可用（production deployment），将 Synopsys 领先的硅设计工具与 Ansys 黄金标准签核分析能力深度融合，覆盖<strong>五大关键领域</strong>：时序签核、设计收敛、多芯片设计、AMS 设计、光子设计。配套博客强调<strong>过设计的代价</strong>（先进节点 20–45% 功率惩罚 + 20–35% 硅面积浪费），提出<strong>多物理场必须成为核心设计输入而非下游验证步骤</strong>的新范式。<br>
+      <strong>核心看点</strong>：Multiphysics Fusion 是 Synopsys 收购 Ansys 后的首个整合产品交付，标志着「多物理场协同设计」从概念进入生产部署阶段；与 Physical AI 理念一致——物理不再是验证终点，而是设计起点。</p>
+      <a href="https://news.synopsys.com/2026-06-17-Synopsys-Announces-Availability-of-the-First-Wave-of-Multiphysics-Fusion-Solutions" target="_blank">→ Synopsys 新闻稿</a>
+      &nbsp;<a href="https://www.synopsys.com/blogs/chip-design/multiphysics-chip-design-challenges.html" target="_blank" style="margin-left:12px;">→ Synopsys 博客</a>
     </div>
 
         <div class="abs-card">

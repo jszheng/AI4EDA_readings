@@ -1,25 +1,8 @@
 {
   "lastUpdate": "2026-07-03",
   "cutoffDate": "2026-01-03",
-  "totalItems": 141,
+  "totalItems": 139,
   "items": [
-    {
-      "date": "2026-07-02",
-      "company": "DAC 2026",
-      "title": "🎤 DAC 2026 发布三场 Agentic AI TechTalk：从工具到智能体、AI 原生 EDA 栈、从炒作到落地",
-      "link": "https://www.dac.com/2026/program/2026-techtalks-speakers",
-      "keywords": [
-        "DAC",
-        "TechTalks",
-        "Agentic AI",
-        "NVIDIA",
-        "Siemens",
-        "Bronco AI",
-        "ChipAgents",
-        "ADI",
-        "2026-07-02"
-      ]
-    },
     {
       "date": "2026-07-02",
       "company": "alvi-codes / Preprints.org",
@@ -61,27 +44,6 @@
         "自主芯片设计",
         "长滩",
         "2026-07-02"
-      ]
-    },
-    {
-      "date": "2026-07-03",
-      "company": "Synopsys",
-      "title": "🔬 Synopsys Multiphysics Fusion 首波解决方案正式上线：覆盖时序签核/设计收敛/多芯片/AMS/光子五大领域",
-      "link": "https://news.synopsys.com/2026-06-17-Synopsys-Announces-Availability-of-the-First-Wave-of-Multiphysics-Fusion-Solutions",
-      "keywords": [
-        "Synopsys",
-        "Multiphysics",
-        "Fusion",
-        "Ansys",
-        "生产部署",
-        "时序签核",
-        "设计收敛",
-        "多芯片",
-        "AMS",
-        "光子",
-        "过设计",
-        "Physical AI",
-        "2026-06-17"
       ]
     },
     {

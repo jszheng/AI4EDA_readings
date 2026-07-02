@@ -22,11 +22,11 @@
 - Remove news older than 180 days
 - Git commit: "auto update: YYYY-MM-DD" then push to origin/main
 
-## Key Data (as of 2026-07-02)
-- Papers: 192
-- Batches: 79
-- News: 132
-- Categories: RTL(63), Verify(21), Physical(34), Analog(21), Agent(27)
+## Key Data (as of 2026-07-03)
+- Papers: 193
+- Batches: 80
+- News: 139
+- Categories: RTL(63), Verify(21), Physical(35), Analog(21), Agent(27)
 
 ## Priority Search Sources
 - arXiv cs.AR (primary), cs.SE, cs.AI, cs.LG
