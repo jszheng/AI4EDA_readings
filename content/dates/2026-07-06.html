@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-06 动态</h1>
+  <p class="subtitle">共 0 篇论文 · 2 条行业动态 · 来源：SemiEngineering</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News 1: WIR #145 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Week In Review · 2026-07-03</div>
+      <h4>📰 Chip Industry Week In Review #145 — 韩国All In AI半导体 + 英飞凌德累斯顿智能功率晶圆厂开业 + Etched $8亿AI芯片融资</h4>
+      <p>本期 WIR 覆盖全球半导体产业 2026 年 7 月初重大动态：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>🇰🇷 韩国大举投资 AI 半导体</strong>：三星计划 2600 亿美元投建光州新晶圆厂、360 亿美元 HBM 晶圆厂；SK 海力士规划约 7140 亿美元中长期投资</li>
+        <li><strong>🏭 英飞凌德累斯顿 57 亿美元智能功率晶圆厂提前数月开业</strong>：全球最大智能功率半导体和模拟/混合信号工厂</li>
+        <li><strong>💰 Etched 获 8 亿美元融资</strong>用于 AI 芯片；Reed Semiconductor 获 1 亿美元用于 AI 基础设施电源管理</li>
+        <li><strong>🔬 AI4EDA 论文亮点</strong>：UC Berkeley CHIA Agentic AI 驱动 HW/SW 协同设计框架（arXiv 2606.27350）、CMU/UCLA AgRefactor Agentic HLS 工作流（arXiv 2606.30949）、NVIDIA HySpecPro 超图分割（arXiv 2607.00055）</li>
+        <li><strong>🔧 Keysight × Win Semiconductors</strong> 联合发布 MMIC GaN 设计流程，集成片上多域仿真+3D布局验证</li>
+        <li><strong>📊 专题报告</strong>：SemiEngineering "Rethinking Chip Verification" 规范工程重塑芯片验证</li>
+      </ul>
+      <strong>核心看点</strong>：韩国启动史无前例的 AI 半导体投资（近万亿美元级），全球成熟节点产能趋紧，AI 数据中心电源管理成新融资热点。</p>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-145/" target="_blank">→ SemiEngineering WIR #145 全文</a>
+    </div>
+
+    <!-- Rethinking Chip Verification -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · 深度专题 · 2026-06-29 · Ann Mutschler</div>
+      <h4>🔬 芯片验证的重新思考 — 规范工程（Specification Engineering）成为破解验证瓶颈的关键</h4>
+      <p>SemiEngineering 召集 Axiomise、ChipAgents、Vinci、Arteris、Synopsys、Siemens EDA、Keysight EDA 七家代表，深度探讨 AI 时代芯片验证的根本性变革。核心论点：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>AI 缓解但未解决根本问题</strong>：AI 工具缓解了验证痛点，但未解决复杂设计中的底层瓶颈</li>
+        <li><strong>「黄金规范」（Golden Specification）正在构建</strong>：业界正探索在 RTL 之上创建精确、完整、可追溯、AI 可读的单一参考点，驱动 AI 原生芯片设计验证流程</li>
+        <li><strong>首次流片成功率仅 14%</strong>：70% 的重新流片可追溯到设计错误——这是<strong>规范保真度问题</strong>而非验证覆盖率问题</li>
+        <li><strong>多芯粒架构带来 "规范爆炸"</strong>：每个裸片边界都成为标准合规前沿，规范需求指数级增长</li>
+        <li><strong>规范工程（Specification Engineering）成新兴学科</strong>：利用 AI 连接所有规范并检查一致性，实现从人类可读文档向 AI 可执行基础的演进</li>
+      </ul>
+      <strong>核心看点</strong>：行业共识从"验证覆盖率不足"转向"规范保真度不足"——规范工程代表了从「通过测试实现正确性」到「通过构造实现正确性」的范式转变，对 Agentic EDA 工具体系提出更高要求。</p>
+      <a href="https://semiengineering.com/rethinking-chip-verification/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
