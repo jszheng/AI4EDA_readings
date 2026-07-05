@@ -21,15 +21,16 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-06 · 涵盖 2026-01 → 2026-07-06 · 已去重整理 · 新增 WIR #145 韩国AI半导体大布局 + Rethinking Chip Verification 规范工程专题</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-06 · 涵盖 2026-01 → 2026-07-06 · 已去重整理 · 新增 Etched $800M AI芯片 + Oxmiq Labs $35M GPU架构 + WIR #145 + 芯片验证重新思考</p>
   <div class="stats">
     <div class="stat"><div class="num">193</div><div class="label">论文收录</div></div>
     <div class="stat"><div class="num">80</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">141</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">143</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
-  <a href="#2026-07-06">260706 📰 WIR #145 — 韩国AI半导体大布局 + 🔬 规范工程重塑芯片验证</a>
+  <a href="#2026-07-06c">260706 💰 Etched $800M AI推理芯片</a>  <a href="#2026-07-06d">260706 💰 Oxmiq Labs $35M GPU架构</a>
+  <a href="#2026-07-06">260706 📰 WIR #145 + 🔬 规范工程重塑芯片验证</a>
   <a href="#2026-07-03">260703 🎤 DAC 2026 Agentic AI TechTalks + 🔧 OpenLane 参数扫描开源框架</a>
   <a href="#2026-07-02">260702 🔍 Chiplet 可观测性 + Cadence×NVIDIA 数字孪生 + Siemens GPU 光刻加速 + 5 项开源更新</a>
   <a href="#2026-07-01">260701 🌐 Synopsys Physical AI：连接硅芯片、软件与现实世界</a>
@@ -117,15 +118,35 @@
 <div class="container">
 
 <section id="2026-07-06">
-  <div class="section-title"><span class="icon">📰</span> 2026-07-06 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📰</span> 2026-07-06 <span class="badge-new">4条新闻</span> <span class="line"></span></div>
   <div class="date-group">
     <div class="date-header" onclick="toggleDate(this)">
-      <h3>2026-07-06 行业动态（2条）</h3>
-      <span class="badge-count">2</span>
+      <h3>2026-07-06 行业动态（4条）</h3>
+      <span class="badge-count">4</span>
       <span class="toggle">▼</span>
     </div>
     <div class="date-body">
       <div class="abstracts">
+        <!-- Etched $800M -->
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>Etched · 产品发布 · 2026-06-30</div>
+      <h4 id="2026-07-06c">💰 Etched 出隐形：$800M 融资 + Sohu Transformer 专用推理芯片已跑通 A0 流片 + $1B+ 客户合同</h4>
+      <p>AI 推理芯片创业公司 <strong>Etched</strong> 正式出隐形，宣布已完成总计 <strong>$8 亿融资</strong>（四轮未公开），首款 Transformer 专用推理芯片 <strong>Sohu</strong> 已成功跑通 A0 流片并产出可工作的硅片，同时签署超 <strong>$10 亿客户合同</strong>。<br>
+      <strong>Sohu 核心特性</strong>：专为 Transformer 架构设计的硬连线推理芯片，非通用 GPU 架构；rack-scale 预填充+解码双工作负载架构；低电压推理 + 集群级内存。<br>
+      <strong>行业意义</strong>：继 Cerebras、Groq、Tenstorrent 之后又一家"非 GPU 路线"AI 芯片公司产出可工作硅片，证明 Transformer 专用架构的可行性。直接挑战 NVIDIA GPU 在推理市场的垄断地位，推动 AI 芯片设计从"通用加速"转向"架构专用"范式。</p>
+      <a href="https://www.etched.com/" target="_blank">→ Etched 官网</a>
+    </div>
+
+        <!-- Oxmiq Labs $35M -->
+        <div class="abs-card">
+      <div class="src"><span class="dot"></span>Oxmiq Labs · 融资 · 2026-07-01</div>
+      <h4 id="2026-07-06d">💰 Oxmiq Labs 完成 $35M Series A — Raja Koduri 创立可授权 GPU 架构公司 OxCore，chiplet 模块化定制 AI 计算</h4>
+      <p>GPU 架构创业公司 <strong>Oxmiq Labs</strong>（由前 Intel GPU 首席架构师、前 AMD Radeon 技术集团首席 <strong>Raja Koduri</strong> 创立）完成 <strong>$3500 万 Series A</strong> 融资，用于扩展其可授权 GPU 架构 <strong>OxCore</strong>。<br>
+      <strong>OxCore 核心特性</strong>：可授权 GPU 架构，采用模块化 chiplet 设计 + 完整软件栈；为半导体公司和 AI 基础设施建设者提供定制 AI 计算能力的替代路径，无需从零构建完整 GPU 项目即可获得定制化芯片。<br>
+      <strong>行业意义</strong>：Raja Koduri（Intel Arc / AMD Radeon 首席架构师）的可授权 chiplet GPU IP 模式代表了 AI 芯片设计的新路径——卖架构 IP，让客户自行定制。对 EDA 工具链而言，chiplet 模块化 GPU IP 验证和集成需要新的工具支持。</p>
+      <a href="https://oxmiq.ai/blog-oxmiq-raises-35m-series-a" target="_blank">→ Oxmiq Labs 官方公告</a>
+    </div>
+
         <div class="abs-card">
       <div class="src"><span class="dot"></span>SemiEngineering · Week In Review · 2026-07-03</div>
       <h4 id="2026-07-06">📰 Chip Industry Week In Review #145 — 韩国All In AI半导体 + 英飞凌德累斯顿智能功率晶圆厂开业 + Etched $8亿AI芯片融资</h4>

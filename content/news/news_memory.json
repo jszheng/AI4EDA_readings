@@ -1,8 +1,52 @@
 {
   "lastUpdate": "2026-07-06",
   "cutoffDate": "2026-01-03",
-  "totalItems": 141,
+  "totalItems": 143,
   "items": [
+    {
+      "date": "2026-06-30",
+      "company": "Etched",
+      "title": "💰 Etched 出隐形：$800M 融资 + Sohu Transformer 专用推理芯片已跑通 A0 流片 + $1B+ 客户合同",
+      "link": "https://www.etched.com/",
+      "keywords": [
+        "Etched",
+        "Sohu",
+        "$800M",
+        "AI芯片",
+        "Transformer专用",
+        "推理芯片",
+        "出隐形",
+        "A0流片",
+        "$1B客户合同",
+        "rack-scale",
+        "预填充解码",
+        "非GPU架构",
+        "2026-06-30"
+      ]
+    },
+    {
+      "date": "2026-07-01",
+      "company": "Oxmiq Labs",
+      "title": "💰 Oxmiq Labs 完成 $35M Series A — Raja Koduri 创立可授权 GPU 架构公司 OxCore，chiplet 模块化定制 AI 计算",
+      "link": "https://oxmiq.ai/blog-oxmiq-raises-35m-series-a",
+      "keywords": [
+        "Oxmiq Labs",
+        "OxCore",
+        "Raja Koduri",
+        "$35M",
+        "Series A",
+        "可授权GPU架构",
+        "chiplet",
+        "模块化",
+        "AI芯片",
+        "定制计算",
+        "Intel",
+        "AMD",
+        "Radeon",
+        "GPU IP",
+        "2026-07-01"
+      ]
+    },
     {
       "date": "2026-07-03",
       "company": "SemiEngineering",
