@@ -1,8 +1,32 @@
 {
-  "lastUpdate": "2026-07-06",
-  "cutoffDate": "2026-01-03",
-  "totalItems": 143,
+  "lastUpdate": "2026-07-07",
+  "cutoffDate": "2026-01-08",
+  "totalItems": 139,
   "items": [
+    {
+      "date": "2026-07-06",
+      "company": "SemiEngineering / Geoff Tate",
+      "title": "🌐 数据中心 AI 增长面临严峻瓶颈 — 先进晶圆/封装、HBM、电力、光互连激光器成为四大瓶颈",
+      "link": "https://semiengineering.com/data-center-ai-growth-faces-challenging-bottlenecks/",
+      "keywords": [
+        "SemiEngineering",
+        "Geoff Tate",
+        "Data Center AI",
+        "AI growth",
+        "bottlenecks",
+        "TSMC",
+        "CoWoS",
+        "CoPoS",
+        "HBM",
+        "ABF",
+        "power",
+        "optical interconnect",
+        "Lumentum",
+        "Coherent",
+        "AI chip",
+        "2026-07-06"
+      ]
+    },
     {
       "date": "2026-06-30",
       "company": "Etched",
@@ -1939,119 +1963,6 @@
         "BMC",
         "LEC",
         "2026-03-02"
-      ]
-    },
-    {
-      "date": "",
-      "company": "MLCAD 2026 | asu-vda-lab.github.io",
-      "title": "🏆 MLCAD 2026 竞赛：LLM 驱动时序优化 · Alpha 截止 4月30日",
-      "link": "https://asu-vda-lab.github.io/MLCAD26-Contest/",
-      "keywords": [
-        "MLCAD",
-        "2026",
-        "竞赛",
-        "LLM",
-        "驱动时序优化",
-        "Alpha",
-        "截止",
-        "4月30日",
-        "MLCAD",
-        "2026",
-        "asu",
-        "vda",
-        "lab",
-        "github",
-        "io"
-      ]
-    },
-    {
-      "date": "",
-      "company": "Synopsys  持续更新",
-      "title": "Synopsys AI EDA 全套布局：DSO.ai + VSO.ai + TSO.ai + AgentEngineer™ 持续迭代",
-      "link": "https://www.synopsys.com/ai/ai-powered-eda.html",
-      "keywords": [
-        "Synopsys",
-        "AI",
-        "EDA",
-        "全套布局",
-        "DSO",
-        "ai",
-        "VSO",
-        "ai",
-        "TSO",
-        "ai",
-        "AgentEngineer",
-        "持续迭代",
-        "Synopsys",
-        "持续更新"
-      ]
-    },
-    {
-      "date": "",
-      "company": "Ricursive Intelligence  2026-01~04",
-      "title": "Ricursive Intelligence 完成 $3.35 亿融资、估值 $40 亿，成 ICCAD 2026 核心赞助商",
-      "link": "https://www.ricursive.com/",
-      "keywords": [
-        "Ricursive",
-        "Intelligence",
-        "完成",
-        "3",
-        "35",
-        "亿融资",
-        "估值",
-        "40",
-        "亿",
-        "成",
-        "ICCAD",
-        "2026",
-        "核心赞助商",
-        "Ricursive",
-        "Intelligence",
-        "2026",
-        "01",
-        "04"
-      ]
-    },
-    {
-      "date": "",
-      "company": "Cadence  持续更新",
-      "title": "Cadence Cerebrus AI Studio 三星落地案例：4× 生产力提升 + 8-11% PPA 提升",
-      "link": "https://www.cadence.com/zh_CN/home/tools/digital-design-and-signoff/soc-implementation-and-floorplanning/cadence-cerebrus-ai-studio.html",
-      "keywords": [
-        "Cadence",
-        "Cerebrus",
-        "AI",
-        "Studio",
-        "三星落地案例",
-        "4",
-        "生产力提升",
-        "8",
-        "11",
-        "PPA",
-        "提升",
-        "Cadence",
-        "持续更新"
-      ]
-    },
-    {
-      "date": "",
-      "company": "ICLR 2026 Agent4Chip Workshop  4月23-27",
-      "title": "Agent4Chip Workshop @ ICLR 2026 全部 23 篇论文公开",
-      "link": "https://ai4eda-workshop.github.io/2026/accepted_papers.html",
-      "keywords": [
-        "Agent4Chip",
-        "Workshop",
-        "ICLR",
-        "2026",
-        "全部",
-        "23",
-        "篇论文公开",
-        "ICLR",
-        "2026",
-        "Agent4Chip",
-        "Workshop",
-        "4月23",
-        "27"
       ]
     },
     {

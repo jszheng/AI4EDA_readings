@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-07 动态</h1>
+  <p class="subtitle">共 0 篇论文 · 1 条行业动态 · 来源：SemiEngineering</p>
+</header>
+<section>
+  <div class="abstracts">
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Opinion · 2026-07-06 · Geoff Tate</div>
+      <h4>🌐 数据中心 AI 增长面临严峻瓶颈 — 先进晶圆/封装、HBM、电力、光互连激光器成为四大瓶颈</h4>
+      <p>SemiEngineering 刊发 Geoff Tate 观点文章，指出 AI 数据中心需求激增正遭遇四大供应链瓶颈，直接决定 AI 芯片设计方向与产业投资：<br>
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>先进晶圆与先进封装产能</strong>：TSMC 几乎垄断数据中心 AI 算力制造，CoWoS 产能 2022-2027 CAGR 80%，并开发 CoPoS 面板级封装；Intel/Samsung 暂难替代；ABF 载板由味之素垄断 95% 以上供应，2026 年涨价 30%，2027 年预计缺口超 20%</li>
+        <li><strong>HBM 与 DRAM 产能</strong>：HBM 主要由 SK 海力士、Samsung、Micron 供应，JEDEC 已批准采用玻璃基板的新版 HBM 以缓解 ABF 短缺，但大规模应用仍需数年</li>
+        <li><strong>数据中心电力</strong>：电力已成为最大约束，亚马逊 CEO 称其为第一限制；电网、天然气、燃料电池、太阳能+储能、变压器/高压断路器等全链条短缺</li>
+        <li><strong>光互连激光器</strong>：CPO 与可插拔光模块需求推动 Lumentum/Coherent 产能售罄，NVIDIA 已向两家各投资 $20 亿锁定供应</li>
+      </ul>
+      <strong>核心看点</strong>：AI 算力需求在先进制程、封装、HBM、电力、光互连等环节同时遇到硬约束，这将深刻影响未来 AI 芯片架构选择（chiplet、CPO、背面供电、低功耗设计）以及 EDA 工具在 DTCO、多物理场、系统级优化方面的优先级。</p>
+      <a href="https://semiengineering.com/data-center-ai-growth-faces-challenging-bottlenecks/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+  </div>
+</section>
+</body>
+</html>

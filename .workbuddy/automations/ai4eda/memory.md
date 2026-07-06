@@ -1,3 +1,106 @@
+## 2026-07-07（第 N+42 次执行）
+- 搜索来源：arXiv cs.AR/cs.AI/cs.LG/cs.SE/cs.ET（7/4-7/7 窗口）+ SemiEngineering 首页 + GitHub/OpenROAD/OpenLane
+- 新增论文：**0 篇**（arXiv 最新 listing 仍为 2026-07-02，无新提交；Preprints.org 网格搜索 timing closure 文章已作为开源框架收录，未重复计数）
+- 行业动态：**1 条新增**
+  - 🌐 SemiEngineering "Data Center AI Growth Faces Challenging Bottlenecks"（7/6）— Geoff Tate 分析 AI 数据中心需求面临的四大瓶颈：先进晶圆/封装产能、HBM/DRAM 产能、数据中心电力、光互连激光器，直接影响 AI 芯片架构与 EDA 工具优先级
+- 过期清理：✅ 按 180 天规则清理 5 条旧闻（cutoffDate 2026-01-03 → 2026-01-08），news_memory 143 → 139 条
+- manifest.js 更新：✅ papers 193 不变，batches 80→81，news 143→139，lastUpdate 2026-07-07；dates 2026-07-07 count 1
+- content/dates/2026-07-07.html / content/latest/2026-07-07.html：✅ 新建（0 篇论文 + 1 条新闻）
+- content/news/index.html：✅ 新增 2026-07-07 section，同步 header 统计 193/81/139
+- news_memory.json 更新：✅ 新增 1 条 + 清理 5 条，totalItems 139，cutoffDate 2026-01-08
+- content/papers/index.html：✅ meta refresh 指向 2026-07-07.html
+- Git commit: 待提交（auto update: 2026-07-07）
+- Git push: 待推送
+- 注意事项：本次为节假日后周一窗口，arXiv 无新 AI4EDA 论文；重点收录 SemiEngineering 对 AI 数据中心瓶颈的宏观分析，并执行了半年期新闻清理。
+
+---
+
+## 2026-07-07 Execution Summary
+
+**Status:** ✅ Success (0 new papers + 0 new industry news — quiet day)
+
+**New Papers Added: 0**
+- arXiv cs.AR/cs.SE/cs.AI/cs.LG July 6-7 window: No AI4EDA-relevant papers found
+- 2607.* ID range cs.AR papers (12 total): mostly AI accelerator hardware (NPU, FPGA, Ising machine, crypto) and 3D logic stacking, not EDA methodology
+- cs.SE had 50 2607.* papers but none related to EDA/chip design
+- cs.AI had 228+ 2607.* papers, none EDA-relevant (mostly LLM agents, multi-agent systems, safety, code generation for software)
+- ChipSeek (2507.04736, ACL 2026 accepted) reviewed but NOT new — originally submitted July 2025 (v1), revised April 2026 (v2); already around for a year
+
+**New News Added: 0**
+- SemiEngineering WIR #146: 404 (not yet published; expected ~July 10)
+- SemiEngineering Blog Review July 7: 404 (not yet published; typically published on Tuesdays, may appear later today or tomorrow)
+- SemiEngineering Research Bits July 6: neural net predicts semiconductor properties (tandem NN from Institute of Science Tokyo for inferring physical parameters from transistor I-V curves); evaluated as borderline — ML for semiconductor characterization but not qualifying as industry dynamics (no company/product announcement) and not an arXiv paper
+- SemiEngineering "Data Center AI Growth Faces Challenging Bottlenecks" (July 6, Geoff Tate/Flex Logix CEO): supply chain analysis (foundry/HBM/power/optical bottlenecks); NOT AI4EDA-relevant (semiconductor business/supply chain, not EDA tools/methods)
+- NVIDIA newsroom: no new EDA-related announcements (BioNeMo Agent Toolkit for life sciences June 30, ICML open models July 6 — both not EDA)
+- Cadence/Synopsys/Siemens EDA blogs: no new posts from July 6-7
+- GitHub: EDA-agent (cemigo114) reviewed but created August 2025, not recent; MCP4EDA (NellyW8) already reviewed (last updated July 2025); no new AI EDA MCP servers or skills found
+- DAC 2026: No new program updates; conference July 26-29 Long Beach; TechTalks with Agentic AI theme already captured; registration open
+
+**Files Updated:** None (quiet day — no new content to add)
+
+**Key Findings:**
+- July 6-7 window is structurally quiet for AI4EDA: no new arXiv papers, no WIR, no vendor announcements
+- ChipSeek is a significant paper (ACL 2026, EDA-integrated RL for Verilog PPA optimization, hierarchical reward mechanism, CDPO) but NOT from current window — originally submitted July 2025
+- SemiEngineering WIR series continues: #145 (July 3) → #146 expected ~July 10
+- DAC 2026 conference approaches: 19 days until July 26 opening; Agentic AI is a major theme with dedicated TechTalks across 3 days
+- Data center bottleneck analysis by Geoff Tate provides useful industry context: TSMC near-monopoly for AI compute, HBM shortage (80% from South Korea), ABF substrate supply gap >20% in 2027, power/transformer constraints, optical interconnect laser supply (Lumentum/Coherent $60B+ market cap each)
+
+**Next Check:**
+- SemiEngineering WIR #146 (expected ~July 10)
+- SemiEngineering Blog Review July 8 (expected next Tuesday)
+- arXiv cs.AR/cs.SE/cs.AI 2607.* new papers (July 7-8 window after weekend quiet period)
+- DAC 2026 full program updates and any pre-conference announcements (July 26-29 approaching)
+- Si2 "Agentic AI in EDA: Who's in Control?" panel at DAC (July 27)
+- MLCAD 2026 contest final results (still pending)
+
+---
+
+## 2026-07-06 Execution Summary
+
+**Status:** ✅ Success (0 new papers + 4 new industry news)
+
+**New Papers Added: 0**
+- arXiv cs.AR/cs.SE/cs.AI/cs.LG July 3-6 window: No AI4EDA-relevant papers found
+- 2607.* ID range cs.AR papers are mostly AI accelerator hardware designs, not EDA methodology
+- cs.SE had 50 papers but none related to EDA/chip design
+- cs.AI and cs.LG similarly had no EDA-relevant papers
+
+**New News Added (4 items):**
+- SemiEngineering WIR #145 (July 3) — South Korea AI semiconductor mega-investment (Samsung $260B, SK hynix $714B); Infineon Dresden smart power fab; Etched $800M AI chip; Keysight×Win Semiconductors MMIC GaN design flow; Wave Photonics×Synopsys OptoCompiler PDK; CoreWeave ARIA research agent
+- SemiEngineering "Rethinking Chip Verification" (July 3) — Special report on specification engineering; 7 experts (ChipAgents/Axiomise/Synopsys/Siemens EDA/Arteris/Keysight/Vinci); key thesis: golden specification must evolve from human-readable to AI-readable/executable for Agentic EDA systems; first-pass silicon success dropped to 14%; 70% re-spin caused by design errors = spec fidelity problem
+- Etched $800M emergence (June 30) — Transformer-specific inference chip Sohu with working A0 silicon; $1B+ customer contracts; rack-scale prefill+decode architecture; challenges NVIDIA GPU inference dominance
+- Oxmiq Labs $35M Series A (July 1) — Raja Koduri (ex-Intel GPU chief, ex-AMD Radeon) founding licensable GPU architecture company OxCore; modular chiplet + software stack; new path for custom AI silicon without full GPU program
+
+**Files Updated:**
+- content/dates/2026-07-06.html — New date page (4 news items, 0 papers)
+- content/latest/2026-07-06.html — New latest page (4 news, 0 papers)
+- content/news/index.html — Added 2026-07-06 section (4 cards: WIR #145 + Rethinking Verification + Etched + Oxmiq)
+- content/news/news_memory.json — Added 4 items (Etched + Oxmiq + WIR #145 + Rethinking Verification), totalItems 139→143, lastUpdate→2026-07-06
+- manifest.js — Updated stats (papers 193 unchanged, news 139→143, lastUpdate 2026-07-06); 2026-07-06 count 2→4
+- content/papers/index.html — Updated redirect to 2026-07-06
+- Git: Committed (05a7a63 "auto update: 2026-07-06") and pushed to origin/main
+
+**Key Findings:**
+- July 3-6 arXiv window is quiet for AI4EDA: no relevant papers across cs.AR/cs.SE/cs.AI/cs.LG categories
+- WIR #145 is the first new WIR since #144 (June 26), confirming the series is continuing
+- Etched represents the "Transformer-specific chip" paradigm gaining real silicon validation — directly relevant to AI chip design methodology
+- Oxmiq Labs' licensable GPU IP approach mirrors Tenstorrent's strategy but focuses on GPU+AI full stack — chiplet modularity creates EDA toolchain challenges
+- "Rethinking Chip Verification" marks a significant paradigm shift: the bottleneck is spec fidelity, not verification coverage; golden spec must become AI-executable foundation — directly impacts how Agentic EDA tools consume specifications
+- Hawk (2607.01590, NPU kernel generation) and LIB-TRAP (2607.01526, standard cell HW Trojan) were reviewed but not AI4EDA-relevant enough to include
+- MCP4EDA (NellyW8/MCP4EDA) reviewed but last updated July 2025, not recent
+
+**Next Check:**
+- arXiv cs.AR/cs.SE/cs.AI 2607.* new papers (July 6-7 window after weekend)
+- SemiEngineering WIR #146 (expected ~July 10)
+- SemiEngineering Blog Review July 8 (expected next Tuesday)
+- DAC 2026 full program updates (July 26-29 approaching)
+- Si2 "Agentic AI in EDA: Who's in Control?" panel at DAC (July 27)
+- Etched Sohu chip benchmarks and customer deployment details
+- Oxmiq Labs OxCore architecture specification details
+- MLCAD 2026 contest final results (Testcase 3 still pending)
+
+---
+
 ## 2026-07-03 Execution Summary
 
 **Status:** ✅ Success (1 new paper + 2 new industry news)
