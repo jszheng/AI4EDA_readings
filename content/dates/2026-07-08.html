@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-08 论文 & 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 0 条行业动态 · 来源：arXiv (cs.AR / cs.AI)</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2607.04758 AgenticPD -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 2026-07-06 · Shuo Ren, Zijin Cheng, Yaohui Han, Libo Shen, Leilei Jin, Wanting Tian, Rongliang Fu, Chao Wang, Bei Yu, Tsung-Yi Ho</div>
+      <h4>🤖 AgenticPD：面向物理设计 QoR 优化的阶段感知智能体框架（Bei Yu / Tsung-Yi Ho）</h4>
+      <p>物理设计质量-of-results（QoR）优化困难且昂贵，单阶段决策会波及后续阶段，每次评估都需昂贵的全流程 EDA 运行。现有方法仍把优化当作<strong>扁平参数调优</strong>或 <strong>LLM 脚本生成任务</strong>。本文提出 <strong>AgenticPD</strong>，一个以物理设计流程<strong>阶段边界</strong>组织的阶段感知（stage-aware）智能体框架：<strong>Judge Agent</strong> 负责导航搜索，阶段专属智能体利用<strong>阶段局部工具</strong>在各自阶段内做局部决策；agent harness 提供结构化观测、执行历史与上下文管理。系统可从先前中间状态分支、<strong>复用 checkpoint</strong> 续优化，每个候选均在 <strong>post-route signoff</strong> 评估。相比基线，AgenticPD 在保持功耗与面积竞争力的同时取得更强的 post-route 时序。<br>
+      <strong>核心创新</strong>：阶段边界组织 + Judge Agent 导航 + 阶段专属智能体 + checkpoint 复用 + post-route 统一签核<br>
+      <strong>标签</strong>：物理设计 · 智能体 · 时序收敛 · Post-Route Signoff · 多智能体 · Bei Yu</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">物理设计</span>
+        <span class="tag">智能体</span>
+        <span class="tag">时序收敛</span>
+        <span class="tag">Post-Route Signoff</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">Bei Yu</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.04758" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.04758_AgenticPD.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+    <!-- 2607.03701 SABLE -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.CR / cs.LG · 2026-07-04 · Xunqi Li, Chris H. Kim</div>
+      <h4>🔬 SABLE：面向工业 EDA 流程的 NDA 安全闭环 LLM 模拟电路优化框架</h4>
+      <p>LLM 可提出电路优化决策，但工业模拟流程无法向云端暴露代工 <strong>PDK 内容、专有原理图、绝对仿真路径或 license 工具状态</strong>。本文提出 <strong>SABLE</strong>（Safe Analog Boundary for LLM-driven EDA），一个 <strong>NDA 安全</strong>的闭环框架，让 LLM 通过 Cadence <strong>Virtuoso / Maestro / Spectre</strong> 优化模拟电路，仅回传清洗后的拓扑意图、数值指标、工作点摘要与受控写回状态。"NDA 安全"指在"好奇但被动"云服务商威胁模型下的强制约束（非形式化非干扰证明）。框架含明确威胁模型、<strong>28 个受控 SKILL 入口白名单</strong>、每条返回路径的 PDK/路径/模型清洗、结构化 Maestro 设置与写回、带 6 个机器检查停止条件的严格 JSON 动作契约、最优状态保持。在两个真实闭环任务（20GHz LC-VCO 调谐曲线、两级运放）上以 PVT 三角验证：LC-VCO 任务 11 个模型中 7 个通过；更难的运放任务（最差角所有指标须保持、相位裕度门限剔除不稳定高增益点）在 15 轮预算内 11 个中 4 个通过。反馈路径消融显示移除任一清洗通道会静默削弱规格或劣化搜索。<br>
+      <strong>核心创新</strong>：NDA 安全边界 + 28 SKILL 白名单 + 路径清洗 + JSON 动作契约 + PVT 多角闭环验证<br>
+      <strong>标签</strong>：模拟电路 · LLM闭环 · NDA安全 · Cadence Virtuoso · 工业EDA · 多角验证</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">模拟电路</span>
+        <span class="tag">LLM闭环</span>
+        <span class="tag">NDA安全</span>
+        <span class="tag">Cadence Virtuoso</span>
+        <span class="tag">工业EDA</span>
+        <span class="tag">多角验证</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.03701" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.03701_SABLE.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+    <!-- 2607.03601 ArchEval -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-03 · Chenyu Wang, Zishen Wan, Jeffrey Ma, Shvetank Prakash, Zhenting Qi, Haebin Do, Andy Cheng, Arya Tschand, Jiahe Shi, Yilun Du, Vijay Janapa Reddi</div>
+      <h4>🤖 ArchEval：评测 AI 智能体作为计算机架构师的能力基准与平台</h4>
+      <p>计算机架构长期依赖基准驱动进步，而 LLM 智能体带来不同的度量难题：成功不只是写代码或调参，还要<strong>解读工作负载、选择机制、使用模拟器、预测性能、满足硬约束并决定哪个可行设计值得评估</strong>。本文提出 <strong>ArchEval</strong>，评测 LLM 智能体在计算机架构设计与优化上的基准与平台：含 CPU 核机制、系统架构、存储系统、加速器、存内计算 5 大类 <strong>20 个挑战</strong>，背靠 <strong>8 个模拟器</strong>；每个挑战设三种设置——L1 完整 harness（有重复模拟器反馈）、L2 模拟器-代码容器（需自行组装工作流）、L3 仅智能体（提交前无可用反馈）。每轮报告<strong>基线归一化验证性能</strong>并记录完整轨迹，关联工作负载分析、模拟器工具使用、预测、约束处理与产物完整性。初测显示清晰边界：L1 下 4 个智能体均达/超基线并改进真实设计；移除支持后暴露弱点（多数无法将模拟器源码转为有用实验，L3 预测常与验证结果不符）；L3 仅 <strong>GPT-5.5 + Codex</strong> 高于基线（1.21x 几何均值、65% 胜率），其性能建模通过率仅 15%。ArchEval 将今日智能体定位为<strong>有用优化助手而非自主架构师</strong>。<br>
+      <strong>核心创新</strong>：架构师智能体基准 + 20 挑战/8 模拟器 + L1/L2/L3 三档设置 + 轨迹级评测<br>
+      <strong>标签</strong>：智能体基准 · 计算机架构 · DSE · 模拟器工具使用 · 多智能体 · Yilun Du</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">智能体基准</span>
+        <span class="tag">计算机架构</span>
+        <span class="tag">DSE</span>
+        <span class="tag">模拟器工具使用</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">Yilun Du</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.03601" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.03601_ArchEval.pdf" class="local">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

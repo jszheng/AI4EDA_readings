@@ -7,9 +7,20 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（20篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（21篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+    <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span> SABLE: An NDA-Safe Closed-Loop LLM Framework for Analog Circuit Optimization in Industrial EDA Flows</div>
+          <div class="abs-meta">arXiv:2607.03701 · cs.AR / cs.CR / cs.LG · 2026-07-04 · Xunqi Li, Chris H. Kim</div>
+          <div class="abs-body">提出 <strong>SABLE</strong>（Safe Analog Boundary for LLM-driven EDA），一个 <strong>NDA 安全</strong>的闭环 LLM 框架，让 LLM 通过 Cadence <strong>Virtuoso / Maestro / Spectre</strong> 优化模拟电路，仅回传清洗后的拓扑意图、数值指标、工作点摘要与受控写回状态。含明确威胁模型、<strong>28 个受控 SKILL 入口白名单</strong>、每条返回路径的 PDK/路径/模型清洗、结构化 Maestro 设置与写回、严格 JSON 动作契约（6 个机器检查停止条件）、最优状态保持。两个真实闭环任务（20GHz LC-VCO 调谐曲线、两级运放）以 PVT 三角验证：LC-VCO 任务 11 个模型中 7 个通过；更难的运放任务在 15 轮预算内 11 个中 4 个通过。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2607.03701" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2607.03701_SABLE.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟电路</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">NDA安全闭环</span>
+          </div>
+    </div>
     <div class="abs-card">
           <div class="abs-title"><span class="badge-new">NEW</span> PANDA: An LLM-Enhanced Performance-Driven Analog Design Framework Bridging Design Intent and Layout Generation</div>
           <div class="abs-meta">2606.15052 · 2026-06-13 · cs.AR / cs.AI · Haoyi Zhang, Weijian Fan, Xiaohan Gao, Bingyang Liu, Runsheng Wang, Yibo Lin (PKU)</div>

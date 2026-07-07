@@ -1,3 +1,26 @@
+## 2026-07-08（第 N+43 次执行）
+- 搜索来源：arXiv cs.AR/cs.AI/cs.LG/cs.SE/cs.ET（7/3-7/6 窗口 2607.*）+ SemiEngineering 首页 + GitHub/OpenROAD/OpenLane + NVIDIA/Cadence/Synopsys/Siemens 博客
+- 新增论文：**3 篇**（均为 AI4EDA 相关，arXiv 2607.* 7/3-7/6 提交）：
+  - 🤖 ArchEval (arXiv:2607.03601, cs.AR, 7/3) — 评测 LLM 智能体作为计算机架构师的基准与平台；5 大类 20 挑战 / 8 模拟器 / L1-L3 三档设置；初测显示 L3 仅 GPT-5.5+Codex 高于基线（1.21x）；Yilun Du + Vijay Janapa Reddi → 归入 Agent 分类
+  - 🔬 SABLE (arXiv:2607.03701, cs.AR/cs.CR/cs.LG, 7/4) — NDA 安全闭环 LLM 模拟电路优化框架，经 Cadence Virtuoso/Maestro/Spectre；28 受控 SKILL 白名单 + 路径清洗 + JSON 动作契约（6 停止条件）；20GHz LC-VCO 任务 11 模型中 7 通过、运放任务 15 轮内 4/11 通过 → 归入 Analog 分类
+  - 🤖 AgenticPD (arXiv:2607.04758, cs.AI, 7/6) — 阶段感知智能体框架做物理设计 QoR 优化：Judge Agent 导航 + 阶段专属智能体 + checkpoint 复用 + post-route signoff 统一评估；Bei Yu + Tsung-Yi Ho → 归入 Physical + Agent 分类
+- **排除项**：FAPlace (arXiv:2607.02610) — 确定性 footprint-aware mask 引导 chiplet 放置算法，无 ML/RL/GNN，不符合 "AI for EDA" 范围，不收录（仅见并发实例下载了 PDF，无对应卡片）
+- 行业动态：**0 条新增**（WIR #146 仍未发布，预计 ~7/10；Blog Review 7/8 未出；Cadence/Synopsys/Siemens 博客 7/7-8 无新文；GitHub 无新 AI EDA MCP/agent 仓库）
+- 过期清理：✅ 无需清理（cutoffDate 2026-01-08，所有条目均在 180 天窗口内）
+- manifest.js 更新：✅ papers 193→196，batches 81→82，news 139 不变，lastUpdate 2026-07-08；dates/latest 数组顶部新增 2026-07-08（count 3）
+- content/dates/2026-07-08.html / content/latest/2026-07-08.html：✅ 新建（3 篇论文 + 0 新闻）
+- content/news/index.html：✅ 更新头部统计（196/82/139）+ 副标题
+- content/categories/agent.html：✅ 新增 ArchEval + AgenticPD（27→29 篇）
+- content/categories/physical.html：✅ 新增 AgenticPD（35→36 篇）
+- content/categories/analog.html：✅ 新增 SABLE（20→21 篇）
+- content/papers/index.html：✅ meta refresh 指向 2026-07-08.html
+- news_memory.json：✅ 无新增（totalItems 139，lastUpdate/cutoffDate 不变）
+- PDF 下载：✅ ArchEval 2.69MB / SABLE 862KB / AgenticPD 1.55MB 至 content/dates/
+- Git commit: auto update: 2026-07-08（待提交/推送）
+- 注意事项：本次 arXiv 7/3-7/6 窗口出现多篇 AI4EDA 论文但 7/7 晨间 listing 尚未收录（HySpecPro 2607.00055 之后 2607.03601/03701/04758 为新增）；AgenticPD 与 PDAGENT-BENCH 同属"物理设计智能体"方向，Bei Yu 团队持续高产；SABLE 是首篇明确处理工业 NDA/PDK 约束的 LLM 模拟闭环框架，对 Agentic EDA 落地有重要参考。
+
+---
+
 ## 2026-07-07（第 N+42 次执行）
 - 搜索来源：arXiv cs.AR/cs.AI/cs.LG/cs.SE/cs.ET（7/4-7/7 窗口）+ SemiEngineering 首页 + GitHub/OpenROAD/OpenLane
 - 新增论文：**0 篇**（arXiv 最新 listing 仍为 2026-07-02，无新提交；Preprints.org 网格搜索 timing closure 文章已作为开源框架收录，未重复计数）
