@@ -1,8 +1,31 @@
 {
-  "lastUpdate": "2026-07-07",
+  "lastUpdate": "2026-07-08",
   "cutoffDate": "2026-01-08",
-  "totalItems": 139,
+  "totalItems": 140,
   "items": [
+    {
+      "date": "2026-07-07",
+      "company": "SemiEngineering / Laura Peters",
+      "title": "🔬 多芯粒现场测试必须建立在既有测试方法论之上 — 基于 UCIe/PCIe/IEEE 1838 的 in-system testing 与 DFT/片上监控",
+      "link": "https://semiengineering.com/multi-die-testing-in-the-field-must-build-on-established-test-methodologies/",
+      "keywords": [
+        "SemiEngineering",
+        "Laura Peters",
+        "Multi-die Testing",
+        "in-system testing",
+        "UCIe",
+        "PCIe",
+        "IEEE 1838",
+        "DFT",
+        "on-chip monitor",
+        "bump repair",
+        "Synopsys",
+        "TSMC",
+        "chiplet",
+        "reliability",
+        "2026-07-07"
+      ]
+    },
     {
       "date": "2026-07-06",
       "company": "SemiEngineering / Geoff Tate",

@@ -4,9 +4,9 @@
  */
 window.SITE_MANIFEST = {
   stats: {
-    papers: 196,
+    papers: 197,
     batches: 82,
-    news: 139,
+    news: 140,
     lastUpdate: "2026-07-08"
   },
 
@@ -59,7 +59,7 @@ window.SITE_MANIFEST = {
   ],
 
   dates: [
-    { date: "2026-07-08", title: "2026-07-08", count: 3,  file: "content/dates/2026-07-08.html" },
+    { date: "2026-07-08", title: "2026-07-08", count: 5,  file: "content/dates/2026-07-08.html" },
     { date: "2026-07-07", title: "2026-07-07", count: 1,  file: "content/dates/2026-07-07.html" },
     { date: "2026-07-06", title: "2026-07-06", count: 4,  file: "content/dates/2026-07-06.html" },
     { date: "2026-07-03", title: "2026-07-03", count: 3,  file: "content/dates/2026-07-03.html" },

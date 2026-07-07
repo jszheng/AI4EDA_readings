@@ -21,14 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-08 · 涵盖 2026-01 → 2026-07-08 · 已去重整理 · 新增 3 篇论文（ArchEval / SABLE / AgenticPD）</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-08 · 涵盖 2026-01 → 2026-07-08 · 已去重整理 · 新增 4 篇论文（ArchEval / SABLE / AgenticPD / FAPlace）+ 1 条行业动态（多芯粒现场测试）</p>
   <div class="stats">
     <div class="stat"><div class="num">196</div><div class="label">论文收录</div></div>
     <div class="stat"><div class="num">82</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">139</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">140</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-07-08">260708 🔬 多芯粒现场测试方法论 — Laura Peters</a>
   <a href="#2026-07-07">260707 🌐 数据中心AI增长瓶颈</a>
   <a href="#2026-07-06c">260706 💰 Etched $800M AI推理芯片</a>  <a href="#2026-07-06d">260706 💰 Oxmiq Labs $35M GPU架构</a>
   <a href="#2026-07-06">260706 📰 WIR #145 + 🔬 规范工程重塑芯片验证</a>
@@ -139,6 +140,33 @@
           </ul>
           <strong>核心看点</strong>：AI 算力需求在先进制程、封装、HBM、电力、光互连等环节同时遇到硬约束，这将深刻影响未来 AI 芯片架构选择（chiplet、CPO、背面供电、低功耗设计）以及 EDA 工具在 DTCO、多物理场、系统级优化方面的优先级。</p>
           <a href="https://semiengineering.com/data-center-ai-growth-faces-challenging-bottlenecks/" target="_blank">→ SemiEngineering 原文</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="2026-07-08">
+  <div class="section-title"><span class="icon">🔬</span> 2026-07-08 <span class="badge-new">1条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-07-08 行业动态（1条）</h3>
+      <span class="badge-count">1</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>SemiEngineering · 测试与可靠性 · 2026-07-07 · Laura Peters</div>
+          <h4>🔬 多芯粒现场测试必须建立在既有测试方法论之上</h4>
+          <p>随着 AI 发展超出 IC 行业测试能力，多芯片系统需通过<strong>内置自测试（in-system testing）</strong>与<strong>片上监控</strong>确保数据中心和汽车硬件的可靠性与寿命。文章指出：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li><strong>基于 UCIe / PCIe 等高速接口与 IEEE 1838 标准</strong>的双芯片监控、测试与修复策略，可实现隐蔽裸片的访问及微凸点间接探测（借助牺牲焊盘）</li>
+            <li><strong>片上监视器 + DFT 技术</strong>预测失效、自动切换冗余通道，弥补制造测试难以覆盖的潜隐与间歇缺陷</li>
+            <li><strong>Synopsys × TSMC 联合项目</strong>：物理感知的凸点修复与高速测试将桥接模式减少 <strong>95%–99%</strong>，为关键任务应用提供全生命周期健康管理基础</li>
+          </ul>
+          <strong>核心看点</strong>：多芯粒 / chiplet 系统的现场测试与健康管理成为 AI 芯片可靠性的关键瓶颈；UCIe / PCIe / IEEE 1838 + DFT + 片上监控构成解决路径，Synopsys×TSMC 实测桥接缺陷减少 95%–99%。该方向对 Agentic EDA 的 DFT / 硅后验证闭环提出新要求。</p>
+          <a href="https://semiengineering.com/multi-die-testing-in-the-field-must-build-on-established-test-methodologies/" target="_blank">→ SemiEngineering 原文</a>
         </div>
       </div>
     </div>
