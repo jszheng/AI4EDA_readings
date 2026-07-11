@@ -4,7 +4,7 @@
  */
 window.SITE_MANIFEST = {
   stats: {
-    papers: 201,
+    papers: 200,
     batches: 84,
     news: 144,
     lastUpdate: "2026-07-11"
