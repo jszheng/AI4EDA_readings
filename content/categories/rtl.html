@@ -7,9 +7,25 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（63篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（64篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+      <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2607.07643 · cs.AR · 2026-07-08 · Ruthwik Reddy Sunketa, Aman Arora
+        </div>
+        <div class="abs-title">ATLAS: Automated HLS for DL-Optimized FPGAs</div>
+        <div class="abs-body">
+          <p>提出 <strong>ATLAS</strong>，从高层 DL 模型描述到 FPGA 硬件实现的<strong>完全自动化高级综合（HLS）流程</strong>，无需用户手写 RTL 或显式实例化自定义 in-fabric hardblock（尤其主导 DL 计算的 GEMM）。以 GEMM 为通用抽象层，包含 (1) <strong>hls4ml-GEMM</strong> 编译器前端（将 DL 层转为带架构无关 GEMM 调用的 HLS C）与 (2) <strong>GEMM IP Generator</strong> 架构感知后端（生成基于 hardblock 的 RTL wrapper，含 tiling 逻辑、控制 FSM 与调度元数据）。在 11 个 DL 设计（FC / 卷积 / 注意力及完整 CNN / MLP / Transformer）上基于 Catapult + VTR 评估。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2607.07643" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2607.07643_ATLAS.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">自动化 HLS</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">FPGA GEMM</span>
+        </div>
+      </div>
       <div class="abs-card">
         <div class="abs-meta">
           <span class="badge-new">NEW</span>

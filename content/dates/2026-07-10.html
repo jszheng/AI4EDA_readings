@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-10 动态</h1>
+  <p class="subtitle">共 5 篇论文 · 2 条行业动态 · 来源：arXiv / SemiEngineering</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News 1: AI Is Rewriting The IP Playbook -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · AI / IP · 2026-07-09 · Ann Mutschler</div>
+      <h4>🧩 AI 正在重写 IP 游戏规则 — 半导体 IP 的创建与验证方式被彻底改变</h4>
+      <p>随着半导体生态全面转向 AI，<strong>IP（知识产权核）的创建与验证方式正在被根本改写</strong>。文章指出，AI 不仅加速既有 IP 复用流程，更在改变 IP 从生成、验证到信任评估的全链路：生成式方法开始介入可复用 IP 块的设计，AI 辅助验证则用于快速确认复用 IP 的正确性，chiplet / 3D-IC 时代 IP 复用与互操作验证的复杂度进一步推高对自动化手段的需求。<br>
+      <strong>核心看点</strong>：AI 对 EDA 的价值正从"设计内部优化"外溢到"IP 供应链"——IP 的自动生成、AI 辅助验证与信任 / provenance 评估成为新焦点。这与 Agentic EDA 的"从规格 / 意图到可复用硅 IP"闭环高度契合，对 RTL 生成、IP 验证与 chiplet 集成工具链提出新要求。</p>
+      <a href="https://semiengineering.com/ai-is-rewriting-the-ip-playbook/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+    <!-- News 2: An AI Model Fit For Purpose -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · AI 模型治理 · 2026-07-09 · Brian Bailey</div>
+      <h4>🎯 一个"用对场景"的 AI 模型 — EDA 中预测/代理模型须在训练语境内使用</h4>
+      <p>Brian Bailey 指出，<strong>在模型被创建的语境之外使用机器学习模型，会导致误导性结果</strong>。这一告诫对 EDA 中日益普遍的预测 / 代理模型（时延、功耗、串扰、良率等 surrogate model）尤为关键：模型在被训练所覆盖的设计分布之外外推时，误差会急剧放大，可能让基于 ML 的 PPA 估计、时序 / 物理签核加速工具给出错误结论。<br>
+      <strong>核心看点</strong>：ML for EDA 走向生产部署必须配套"模型适用性边界"治理——明确训练分布、输入约束与失效模式。这对物理设计中的 ML 代理模型、RTL / 模拟电路 LLM 辅助生成的可信度评估，是直接的方法论提醒，呼应了本站长期跟踪的"物理约束 / 分布外泛化"议题。</p>
+      <a href="https://semiengineering.com/an-ai-model-fit-for-purpose/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+    <!-- 2607.07096 ThermoDSE -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-08 · Jian Peng, Hanwei Fan, Jingbo Jiang, Lin Jiang, Wei Zhang</div>
+      <h4>📐 ThermoDSE：面向 Chiplet DNN 加速器的热感知综合设计空间探索</h4>
+      <p>Chiplet 化 DNN 加速器为现代 AI 负载提供了平衡性能与良率的可扩展路径，但面临严峻的面积与<strong>热约束</strong>。ThermoDSE 是首个将<strong>细粒度任务建模、chiplet 粒度、核心粒度与关键物理约束（热 / 面积）统一纳入设计空间探索</strong>的框架，在统一仿真优化流程中联合考虑架构设计、任务编排与 chiplet 间通信。<br>
+      相比 Simba 等 SOTA，EDY⁻¹（能效×延迟×良率倒数）最高提升 <strong>3.5x</strong>；相比模拟退火与 RL 方法，分别以 <strong>3.7x / 29.4x</strong> 加速收敛到更优设计点。
+      <br><strong>核心创新</strong>：热感知 chiplet DSE + 任务/芯片/核心粒度联合建模 + 通信-热-面积约束统一优化 + 3.5x EDY 提升
+      <br><strong>标签</strong>：Chiplet · 热感知 · 设计空间探索 · DNN加速器 · 多物理场</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Chiplet</span>
+        <span class="tag">热感知</span>
+        <span class="tag">设计空间探索</span>
+        <span class="tag">DNN加速器</span>
+        <span class="tag">多物理场</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.07096" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.07096_ThermoDSE.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.05657 NEMESIS -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · IEEE LLM-Aided Design 2026 · 2026-07-06 · Subhadip Ghosh, Ramesh Harjani, Sachin S. Sapatnekar</div>
+      <h4>🔬 NEMESIS：网表驱动建模与带反演感知 SPICE 锚定的方程合成</h4>
+      <p>NEMESIS 提出面向<strong>运算跨导放大器（OTA）设计</strong>的多模态 LLM 框架，在快速近似解析模型与昂贵的精确 SPICE 评估间取得平衡。给定 OTA 网表与原理图，先识别电路原语，再逐步生成更精确的性能方程：优先复用此前对相似 OTA 调用的方程，否则由 LLM 直接从电路输入推导初始方程，并通过 <strong>SPICE 修复环路</strong>迭代精炼。<br>
+      在商用 <strong>65nm PDK</strong> 的 5 种 OTA 拓扑上验证，偏置范围内平均相对误差 <strong>&lt;7%</strong>，收敛后评估速度较全 SPICE 快约 <strong>4622x</strong>。IEEE LLM-Aided Design 2026 接收。
+      <br><strong>核心创新</strong>：网表驱动建模 + LLM 方程合成 + SPICE 锚定修复环路 + &lt;7% 误差 + 4622x 加速
+      <br><strong>标签</strong>：LLM · 模拟电路 · OTA · 方程合成 · SPICE锚定</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">LLM</span>
+        <span class="tag">模拟电路</span>
+        <span class="tag">OTA</span>
+        <span class="tag">方程合成</span>
+        <span class="tag">SPICE锚定</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.05657" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.05657_NEMESIS.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.07643 ATLAS -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-08 · Ruthwik Reddy Sunketa, Aman Arora</div>
+      <h4>⚡ ATLAS：面向 DL 优化 FPGA 的自动化高级综合（HLS）</h4>
+      <p>FPGA 架构日益集成领域专用 in-fabric hardblock（尤其主导 DL 计算的 <strong>GEMM</strong>）以加速推理，但利用其性能需手写 RTL。现有 HLS 工具不支持为自定义 hardblock 生成代码。ATLAS 提出<strong>从高层 DL 模型描述到 FPGA 硬件实现的完全自动化流程</strong>，无需用户手写 RTL 或显式实例化 hardblock：以 GEMM 为通用抽象层，包含 (1) <strong>hls4ml-GEMM</strong> 编译器前端（将 DL 层转为带架构无关 GEMM 调用的 HLS C）与 (2) <strong>GEMM IP Generator</strong> 架构感知后端（生成基于 hardblock 的 RTL wrapper，含 tiling 逻辑、控制 FSM 与调度元数据）。<br>
+      在 11 个 DL 设计（FC / 卷积 / 注意力及完整 CNN / MLP / Transformer）上基于 Catapult + VTR 评估。
+      <br><strong>核心创新</strong>：端到端自动化 HLS + GEMM 通用抽象层 + hls4ml-GEMM 前端 + 架构感知 GEMM IP 生成器 + 免手写 RTL
+      <br><strong>标签</strong>：HLS · FPGA · GEMM · 深度学习 · 自动化综合</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">HLS</span>
+        <span class="tag">FPGA</span>
+        <span class="tag">GEMM</span>
+        <span class="tag">深度学习</span>
+        <span class="tag">自动化综合</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.07643" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.07643_ATLAS.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.06619 HiFuzz -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · ITC 2026 · 2026-07-07 · Ya Wang, Hanwei Fan, Zhenguo Liu, Xiaofeng Zhou, Yangdi Lyu, Jiang Xu, Wei Zhang</div>
+      <h4>✅ HiFuzz：用于语义感知自适应 CPU Fuzzing 的分层强化学习</h4>
+      <p>现代处理器验证因传统<strong>变异式 fuzzing</strong> 效率低而难达深层架构状态。HiFuzz 提出<strong>分层强化学习框架</strong>，以结构化两层生成过程替代变异：<strong>Program Agent</strong> 负责全局布局，<strong>Basic Block Agent</strong> 负责精确指令填充。为克服奖励稀疏，集成<strong>自适应覆盖奖励机制</strong>与<strong>语义感知基本块编码器</strong>提供内在反馈。<br>
+      在三个真实 <strong>RISC-V</strong> 核上评估，覆盖率与缺陷检测均显著优于 SOTA fuzzer。ITC 2026 接收。
+      <br><strong>核心创新</strong>：分层 RL + Program/Basic Block 双智能体 + 自适应覆盖奖励 + 语义感知编码器 + RISC-V 验证
+      <br><strong>标签</strong>：强化学习 · 验证 · Fuzzing · RISC-V · 处理器验证</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">强化学习</span>
+        <span class="tag">验证</span>
+        <span class="tag">Fuzzing</span>
+        <span class="tag">RISC-V</span>
+        <span class="tag">处理器验证</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.06619" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.06619_HiFuzz.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.05818 GPU-PDN -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-07 · Jingchao Hu, Cheng Zhuo, Zhou Jin</div>
+      <h4>📐 面向 3D IC 电源分配网络的 GPU 加速有效电阻分析</h4>
+      <p>3D 集成是提升晶体管密度、能效、降低互连延迟的关键技术，但随电流需求与设计复杂度上升，<strong>电源分配网络（PDN）</strong>规划面临挑战，其中<strong>硅通孔（TSV）</strong>的合理布局对可靠 PDN 至关重要，有效电阻是关键可靠性指标。本文提出 <strong>GPU 加速的 3D IC PDN 早期有效电阻精确分析框架</strong>，相比传统直接求解器实现 <strong>5–6 个数量级加速</strong>，且最大 / 平均相对误差均可忽略。<br>
+      <strong>核心创新</strong>：GPU 加速 + 3D IC PDN 有效电阻分析 + TSV 布局优化 + 5–6 数量级加速
+      <br><strong>标签</strong>：3D IC · PDN · GPU加速 · 有效电阻 · TSV</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">3D IC</span>
+        <span class="tag">PDN</span>
+        <span class="tag">GPU加速</span>
+        <span class="tag">有效电阻</span>
+        <span class="tag">TSV</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.05818" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.05818_GPU_PDN.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

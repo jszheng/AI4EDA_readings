@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-11 动态</h1>
+  <p class="subtitle">共 0 篇论文 · 2 条行业动态 · 来源：SemiEngineering / GitHub</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News 1: Chip Industry Week In Review #146 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · 行业周评 · 2026-07-10</div>
+      <h4>📰 Chip Industry Week In Review #146 — ADI $15亿收购 Empower Semi、Arteris NoC 接入 imec IC-Link、CCRAFT $7.8M TFLN 代工</h4>
+      <p>SemiEngineering 本周行业周评（#146）覆盖半导体与 AI 生态多项动态，其中与 AI4EDA / AI 芯片设计最相关的包括：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>ADI 完成 $15亿（约¥108亿）收购 Empower Semi</strong>：Empower Semi 是集成式电压调节器（IVR）厂商，收购强化 ADI 在 AI 芯片供电 / 电源完整性领域的布局，直接关联 AI 加速器 PDN 与签核</li>
+        <li><strong>Arteris NoC IP 接入 imec IC-Link 高速 I/O 参考设计</strong>：面向 AI / HPC ASIC 的片上网络 IP 将集成进 imec 高速 I/O 子系统参考设计，加速 Chiplet / 多芯粒互连方案的落地</li>
+        <li><strong>CCRAFT 融资 $7.8M 扩建薄膜铌酸锂（TFLN）代工</strong>：光子互联关键材料产能扩张，支撑 CPO / 硅光子 AI 互连</li>
+        <li><strong>Syntiant 递交纳斯达克 IPO</strong>：物理 AI（Physical AI）处理器 / 传感 / 软件厂商，边缘 AI 推理芯片商业化提速</li>
+        <li>其他：e-peas $22M 能量采集电源管理、Pixel-Flo $7M MicroLED 流体自组装、Swissbit×Nexperia 安全高可靠硬件（AI/云/服务器）</li>
+      </ul>
+      <strong>核心看点</strong>：本期 AI4EDA 相关主线集中在<strong>AI 芯片供电（ADI/Empower）、Chiplet NoC 互连（Arteris×imec）、光子 TFLN 代工（CCRAFT）</strong>——分别对应电源完整性签核、多芯粒互连 IP、CPO 光电互连三大后端 / 系统级方向，与本站长期跟踪的物理设计 / 多物理场 / Chiplet 主题高度契合。</p>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-146/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+    <!-- News 2: verilog-generator open-source Agent Skill -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · 开源 EDA Agent Skill · 2026-07-02 · 东南大学 HIQC 实验室</div>
+      <h4>🔧 verilog-generator：面向 Verilog-2001 RTL 生成与 FPGA 设计工作流的开源 Agent Skill（v0.3.6）</h4>
+      <p>东南大学电子科学与工程学院<strong>异构智能与量子计算实验室（HIQC）</strong>发布开源 Agent 技能包 <strong>verilog-generator</strong>（Apache-2.0，v0.3.6），面向 <strong>Verilog-2001 RTL 生成与 FPGA 设计工作流</strong>。技能强调 disciplined RTL 工作流：规范对齐、模块分解、可综合编码、testbench / 仿真闭环，可作为 AI Agent 在真实 EDA 流程中生成与验证 RTL 的"能力插件"。<br>
+      作者 Jiyuan Liu、He Li。延续本站持续跟踪的"开源 EDA Agent Skills / MCP"脉络（kicad-happy、eda-agent、kicad-mcp、solder-mcp 等），显示面向芯片设计的开源智能体技能生态正从 PCB 向 RTL 前端延伸。<br>
+      <strong>核心看点</strong>：开源社区在 <strong>RTL 生成 Agent 技能</strong>方向补齐了 disciplined、可验证的工作流范式，与工业界 Renoir / ChipAgents 等专用大模型形成互补，降低 Agentic RTL 生成的工程门槛。</p>
+      <a href="https://github.com/Eriemon/verilog-generator" target="_blank">→ GitHub 仓库</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

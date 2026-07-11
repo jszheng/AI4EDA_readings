@@ -1,8 +1,101 @@
 {
-  "lastUpdate": "2026-07-08",
+  "lastUpdate": "2026-07-11",
   "cutoffDate": "2026-01-08",
-  "totalItems": 140,
+  "totalItems": 144,
   "items": [
+    {
+      "date": "2026-07-11",
+      "company": "SemiEngineering",
+      "title": "📰 Chip Industry Week In Review #146 — ADI $15亿收购 Empower Semi、Arteris NoC 接入 imec IC-Link、CCRAFT $7.8M TFLN 代工",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-146/",
+      "keywords": [
+        "SemiEngineering",
+        "Week In Review",
+        "146",
+        "ADI",
+        "Empower Semi",
+        "$15亿",
+        "集成式电压调节器",
+        "IVR",
+        "电源完整性",
+        "Arteris",
+        "NoC",
+        "imec",
+        "IC-Link",
+        "Chiplet",
+        "CCRAFT",
+        "TFLN",
+        "薄膜铌酸锂",
+        "CPO",
+        "Syntiant",
+        "IPO",
+        "2026-07-11"
+      ]
+    },
+    {
+      "date": "2026-07-11",
+      "company": "Eriemon / 东南大学 HIQC",
+      "title": "🔧 verilog-generator：面向 Verilog-2001 RTL 生成与 FPGA 设计工作流的开源 Agent Skill（v0.3.6）",
+      "link": "https://github.com/Eriemon/verilog-generator",
+      "keywords": [
+        "verilog-generator",
+        "Eriemon",
+        "东南大学",
+        "HIQC",
+        "Agent Skill",
+        "Verilog-2001",
+        "RTL生成",
+        "FPGA",
+        "开源",
+        "Apache-2.0",
+        "disciplined workflow",
+        "testbench",
+        "仿真闭环",
+        "v0.3.6",
+        "2026-07-11"
+      ]
+    },
+    {
+      "date": "2026-07-10",
+      "company": "SemiEngineering / Ann Mutschler",
+      "title": "🧩 AI 正在重写 IP 游戏规则 — 半导体 IP 的创建与验证方式被彻底改变",
+      "link": "https://semiengineering.com/ai-is-rewriting-the-ip-playbook/",
+      "keywords": [
+        "SemiEngineering",
+        "Ann Mutschler",
+        "AI",
+        "IP",
+        "知识产权核",
+        "IP生成",
+        "IP验证",
+        "chiplet",
+        "3D-IC",
+        "复用",
+        "Agentic EDA",
+        "RTL生成",
+        "2026-07-10"
+      ]
+    },
+    {
+      "date": "2026-07-10",
+      "company": "SemiEngineering / Brian Bailey",
+      "title": "🎯 一个\"用对场景\"的 AI 模型 — EDA 中预测/代理模型须在训练语境内使用",
+      "link": "https://semiengineering.com/an-ai-model-fit-for-purpose/",
+      "keywords": [
+        "SemiEngineering",
+        "Brian Bailey",
+        "AI模型治理",
+        "surrogate model",
+        "代理模型",
+        "分布外泛化",
+        "PPA估计",
+        "训练分布",
+        "适用性边界",
+        "物理设计",
+        "可信度",
+        "2026-07-10"
+      ]
+    },
     {
       "date": "2026-07-07",
       "company": "SemiEngineering / Laura Peters",

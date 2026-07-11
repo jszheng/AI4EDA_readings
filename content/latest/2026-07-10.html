@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-10 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 2 条行业动态 · 来源：arXiv / SemiEngineering</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News 1: AI Is Rewriting The IP Playbook -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · AI / IP · 2026-07-09 · Ann Mutschler</div>
+      <h4>🤖 AI 正在重写 IP 规则手册 — GenAI / Agentic AI 渗入 IP 全生命周期</h4>
+      <p>SemiEngineering 深度分析：生成式 AI（GenAI）与<strong>代理式 AI（Agentic AI）</strong>正嵌入半导体 IP 生命周期，覆盖 RTL 代码生成、调试加速、规范到测试场景的自动转换（spec correlation）、验证环境编排（orchestration）、覆盖率收敛与根因分析；AI 还作为"第二供应商 / 虚拟验证伙伴"并行辅助验证，并承担 IP 生命周期管理（自动打包、发现、保持生产就绪）。
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>Siemens EDA</strong>（GenAI、Agentic AI）称智能体创新集中在 <strong>RTL 生成与验证提速</strong>，使 IP 厂商能以更少资源快速推出"更多口味（flavors）"的定制 IP，并借助 AI 优化 <strong>chiplet 后端布局、bump array 与封装</strong></li>
+        <li><strong>Synopsys</strong>：AI 解析协议规范自动产生关联测试负载、编排千级模块验证架构、加速 debug 与覆盖率闭合；验证 IP（VIP）未被替代，而是由 AI 提升既有资产价值</li>
+        <li><strong>Cadence</strong>（Tensilica DSP、NPU 加速器与 SDK）、<strong>IC Manage</strong>（AI 驱动 IP 打包与发现）、<strong>RAMbus</strong>（IP 许可像 Netflix 分层：单次 / 多次 / 订阅，chiplet 使单用途 IP 跨模块复用演变为多用途引发授权难题）、<strong>Arm / Expedera / Baya Systems</strong> 同步参与</li>
+        <li>人力角色定位：Siemens"human on the loop"，基础任务自动化后人类转调度；Baya 称 AI 替代"平庸重复"工作而非专家；Cadence 指人类创意 + AI 协作令开发者更快更好</li>
+      </ul>
+      <strong>核心看点</strong>：AI 正把 IP 从"手工设计资产"重构为"可被智能体生成、验证、打包、复用"的活态资产；chiplet 多用途复用带来的授权 / 治理 / 所有权成为新约束。这直接对应 AI4EDA 的 RTL 生成—验证—IP 复用闭环方向。</p>
+      <a href="https://semiengineering.com/ai-is-rewriting-the-ip-playbook/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+    <!-- News 2: An AI Model Fit For Purpose -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · AI 模型选型 · 2026-07-09 · Brian Bailey</div>
+      <h4>🧠 为用途匹配的 AI 模型 — 芯片设计中 LLM / 小模型 / 智能体的边界与陷阱</h4>
+      <p>Brian Bailey 文：所有模型都是对真实的妥协，仅在被定义的上下文中可靠；AI 生成模型若用于原意之外或数据分布边界外会产生误导。建议为模型打标签（tagging）附元数据定义范围，并在部署前做<strong>"边界探测（boundary-probing）"</strong>确认不确定性起点。
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>LLM</strong> 从规范生成 RTL / 模型代码 — Cadence 称 SystemVerilog 断言 / UVM 生成"时好时坏"，因标准松散</li>
+        <li><strong>小型代理模型</strong> 通过模仿学习，但原结构一变便失效（Normal Computing）</li>
+        <li><strong>强化学习优化循环工具</strong>：<strong>Synopsys DSO.ai</strong> 与 <strong>Cadence Cerebrus</strong>，基于 PPA 反馈自动调块级物理实现工具设置</li>
+        <li><strong>验证流中的代理 / 排序模型</strong>，从回归历史、覆盖库等学习推荐测试（Axiomise）</li>
+      </ul>
+      <strong>关键论断</strong>：LLM 在标准 Verilog 上语法正确近完美，但 <strong>VerilogEval 基准多为教学级短模块，工业级 SoC（如带 CDC 的缓存控制器）未覆盖</strong>，得分 90% 不代表实用；验证须用保留集（holdout）而非训练集；每模型需人签核且可追溯；AI 模型不应自 declare 验证收敛，须置于信任分析为终裁的有界循环（Axiomise）。<br>
+      提及企业：Synopsys、Cadence、<strong>ChipAgents</strong>（六步建模法）、Keysight EDA、Axiomise、Normal Computing、Mirabilis Design、Siemens EDA、University of Southampton。该文为"AI 模型在 EDA 中的可信部署"提供了系统化的选型框架。</p>
+      <a href="https://semiengineering.com/an-ai-model-fit-for-purpose/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+    <!-- 2607.07096 ThermoDSE -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-08 · Jian Peng, Hanwei Fan, Jingbo Jiang, Lin Jiang, Wei Zhang</div>
+      <h4>📐 ThermoDSE：面向 Chiplet 基 DNN 加速器的热感知综合设计空间探索</h4>
+      <p>Chiplet 基 DNN 加速器面临<strong>面积与热约束</strong>的关键挑战。ThermoDSE 提出热感知的综合性设计空间探索（DSE）框架，首次将细粒度任务建模、chiplet 粒度、核心粒度与关键物理约束<strong>统一纳入联合优化</strong>。框架集成既有细粒度建模技术于统一仿真 + 优化流程，在严格热与面积约束下联合考虑<strong>架构设计、任务编排与 chiplet 间通信</strong>。相较 OTA Simba 等基线，Energy-Delay-Inverse-Yield 最高提升 <strong>3.5x</strong>；相较模拟退火与 <strong>强化学习方法</strong>，分别取得 <strong>3.7x 与 29.4x</strong> 运行时加速。</p>
+      <p><strong>核心创新</strong>：Chiplet DNN 加速器 DSE + 热感知 + 架构 / 任务 / 通信联合优化 + 对比 RL / SA 取得 3.5x / 3.7x / 29.4x 提升<br>
+      <strong>标签</strong>：Chiplet · 多物理场 · 热感知 · DSE · AI 加速器</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Chiplet</span>
+        <span class="tag">多物理场</span>
+        <span class="tag">热感知</span>
+        <span class="tag">DSE</span>
+        <span class="tag">AI 加速器</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.07096" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.07096_ThermoDSE.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.05657 NEMESIS -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-06 · Subhadip Ghosh, Ramesh Harjani, Sachin S. Sapatnekar</div>
+      <h4>🔬 NEMESIS：网表驱动建模与方程合成 + 反演感知 SPICE 锚定的 LLM 模拟电路设计框架</h4>
+      <p>NEMESIS 提出一个用于<strong>运算跨导放大器（OTA）设计</strong>的多模态 LLM 框架，在快速近似解析模型与精确但昂贵的 SPICE 评估之间取得平衡。给定 OTA 网表与原理图，NEMESIS 先识别电路原语，再生成逐步更精确的性能方程：优先复用先前同类 OTA 的调用方程，否则由 LLM 直接从电路输入推导初始方程；这些方程经 <strong>SPICE 修复循环</strong>迭代精化。在商用 <strong>65nm PDK</strong> 上于 5 种 OTA 拓扑验证，跨偏置范围产生 SPICE 验证方程，<strong>平均相对误差 &lt;7%</strong>，收敛后评估较全 SPICE 评估<strong>提速约 4622x</strong>。已被 <strong>IEEE LLM-Aided Design 2026</strong>（斯坦福，7/30-31）接收。</p>
+      <p><strong>核心创新</strong>：多模态 LLM + 网表驱动建模 + 方程合成 + SPICE 锚定修复循环 + 65nm PDK 5 拓扑 &lt;7% 误差 / 4622x 提速<br>
+      <strong>标签</strong>：LLM · 模拟电路 · OTA 设计 · 网表驱动 · SPICE 锚定</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">LLM</span>
+        <span class="tag">模拟电路</span>
+        <span class="tag">OTA 设计</span>
+        <span class="tag">网表驱动</span>
+        <span class="tag">SPICE 锚定</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.05657" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.05657_NEMESIS.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
