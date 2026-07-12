@@ -1,3 +1,21 @@
+## 2026-07-13（第 N+45 次执行 — 并发实例已落地 4 条新闻，本执行补录第 5 条 + 1 篇论文）
+- 背景：本窗口（7/11→7/13）恰逢并发自动化实例先行执行并提交（commit f487ee6，已 push），在 news/index.html、news_memory.json、manifest.js 落地了 4 条 07-13 行业动态（NVIDIA×SK hynix / 启芯宸光 DeepChip / Synopsys 剥离制造软件 / siliconcrew）。本执行在其基础上补录第 5 条新闻与 1 篇论文，并对账完全一致。
+- 搜索来源：arXiv cs.AR/cs.ET/cs.AI（7/11-7/13 窗口 2607.*）+ SemiEngineering + NVIDIA/Cadence/Synopsys/Siemens 博客 + GitHub EDA agent/MCP
+- 新增论文：**1 篇**
+  - ✅ LLM Assisted Verification Assertion Generation (arXiv:2607.07444, cs.ET, 7/8) — LLM 辅助生成 SystemVerilog 断言（SVA）的综述与前向；归入 verify 分类（22→23 篇）；PDF 已下载至 content/dates/2607.07444_LLM_Assertion.pdf（233KB）
+- 行业动态：**新增 1 条（第 5 条，去重后净增）**
+  - 2026-07-13 · 🔧 pyslang-mcp（GitHub ariklapid）— 只读 MCP 服务器，封装 pyslang 为 AI Agent 提供编译器背书的 Verilog/SystemVerilog 语义分析（design unit/hierarchy/diagnostics/.f 展开）；与 siliconcrew（写 RTL）、verilog-generator（Agent 技能）形成"起草+校验"互补
+- 过期清理：✅ 无需清理（cutoffDate 2026-01-08，180 天窗口内）
+- news_memory.json：✅ 补录 pyslang-mcp，totalItems 148→149，lastUpdate 2026-07-13，07-13 共 5 条
+- content/news/index.html：✅ 2026-07-13 section 由 4 卡增至 5 卡（badge/h3/导航/副标题同步 4→5），header 统计 201/85/149
+- content/dates/2026-07-13.html / content/latest/2026-07-13.html：✅ 对账补全为 6 卡（5 新闻 + 1 论文），PDF 路径 ../dates/...
+- manifest.js：✅ papers 200→201、batches 84→85、news 148→149、lastUpdate 2026-07-13；dates[0] count 4→6
+- content/papers/index.html：✅ meta refresh 指向 2026-07-13.html（最新有论文页）
+- Git commit/push：auto update: 2026-07-13（commit 698b05f，f487ee6..698b05f，6 files +118/−17）
+- 注意事项：并发实例已含 verify.html 论文卡（22→23）；Synopsys 新闻在 news/index.html 用 Investing.com/Fazen 源、在 date 页用 Reuters/aol 源（双源同事件，不重复计）；pyslang-mcp 是开源 EDA MCP 生态"能写→写对"的关键校验层。
+
+---
+
 ## 2026-07-11（第 N+44 次执行 — 含 07-10 补录/对账）
 - 背景：07-10 自动化运行不完整（已建 HTML/分类页但未同步 manifest.js、news_memory.json，也未提交）。本执行在对账基础上补齐并新增 07-11 内容。
 - 搜索来源：arXiv cs.AR/cs.AI/cs.LG/cs.SE（7/8-7/11 窗口，2607.*）+ SemiEngineering 首页/Week In Review + GitHub EDA agent skills + NVIDIA/Cadence/Synopsys/Siemens 博客
