@@ -21,14 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-11 · 涵盖 2026-01 → 2026-07-11 · 已去重整理 · 新增 5 篇论文（ThermoDSE / NEMESIS / ATLAS / HiFuzz / GPU-PDN）+ 4 条行业动态（AI 重写 IP 规则手册 / 为用途匹配的 AI 模型 / WIR#146 / Verilog-Generator 开源技能）</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-13 · 涵盖 2026-01 → 2026-07-13 · 已去重整理 · 新增 4 条行业动态（NVIDIA×SK hynix 多年 AI 合作 / 启芯宸光 DeepChip 平台 / Synopsys 剥离制造软件转向 AI 设计 / siliconcrew 开源 NL→GDSII 智能体）</p>
   <div class="stats">
     <div class="stat"><div class="num">200</div><div class="label">论文收录</div></div>
     <div class="stat"><div class="num">84</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">144</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">148</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-07-13">260713 🤝 NVIDIA×SK hynix + 🇨🇳 启芯宸光 DeepChip + 🏭 Synopsys 转向 AI + 🔧 siliconcrew</a>
   <a href="#2026-07-11">260711 📰 WIR #146 + 🔧 Verilog-Generator 开源技能</a>
   <a href="#2026-07-10">260710 🤖 AI重写IP规则手册 + 🧠 为用途匹配的AI模型</a>
   <a href="#2026-07-08">260708 🔬 多芯粒现场测试方法论 — Laura Peters</a>
@@ -120,6 +121,83 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-07-13">
+  <div class="section-title"><span class="icon">🤝</span> 2026-07-13 <span class="badge-new">4条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-07-13 行业动态（4条）</h3>
+      <span class="badge-count">4</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+
+        <!-- News 1: NVIDIA x SK hynix multiyear AI partnership -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>NVIDIA · 官方新闻 · 2026-07 · NVIDIA Newsroom</div>
+          <h4>🤝 NVIDIA × SK hynix 达成多年技术合作 — 将 AI / CUDA-X / PhysicsNeMo 导入存储、TCAD 与晶圆厂数字孪生</h4>
+          <p>NVIDIA 与 SK hynix 宣布多年技术合作，面向 AI 工厂共建下一代存储并加速半导体设计与制造。合作要点：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li><strong>下一代存储联合开发</strong>：SK hynix 将共同开发面向 NVIDIA Vera Rubin AI 超算、Vera CPU、RTX Spark PC、Jetson Thor 机器人的先进存储</li>
+            <li><strong>CUDA-X + PhysicsNeMo 加速半导体仿真</strong>：用于 TCAD（技术计算机辅助设计）、计算光刻工作流，以及内部仿真代码与 AI 物理工作流的核心负载加速</li>
+            <li><strong>晶圆厂数字孪生</strong>：结合 Omniverse、OpenUSD 场景优化与 cuOpt，构建 3D 工厂场景，迈向全自主晶圆厂运营</li>
+            <li><strong>三方协作生态</strong>：芯片厂 × NVIDIA × EDA 厂商，拓展半导体 EDA 与仿真生态</li>
+          </ul>
+          <strong>核心看点</strong>：这是 NVIDIA CUDA-X（cuLitho / cuDSS / cuEST / PhysicsNeMo）加速 EDA 与制造生态的又一里程碑——将 AI 物理代理模型与 GPU 加速仿真从芯片设计延伸到晶圆厂运营，呼应本站长期跟踪的 cuLitho / 多物理场 AI 主题，并强化了"AI 全面导入晶圆厂"的叙事（接 6/1 NVIDIA×TSMC）。</p>
+          <a href="https://nvidianews.nvidia.com/news/sk-hynix-ai-factory" target="_blank">→ NVIDIA 官方新闻</a>
+        </div>
+
+        <!-- News 2: 启芯宸光 DeepChip platform -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>智东西 / 腾讯新闻 · 国产 AI4EDA · 2026-07-09 · 启芯宸光（Qixin Chenguang）</div>
+          <h4>🇨🇳 启芯宸光 DeepChip 平台：38 个智能体打通芯片设计"黑盒"，人均效率提升 20 倍</h4>
+          <p>在 2026 中国 AI 智能体大会上，启芯宸光副总裁、EDA 智算平台首席架构师陈文超介绍 <strong>DeepChip</strong> 芯片设计协同创新平台，将 AI 引入 4 大半导体关键场景：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li><strong>DeepEDA</strong>：已适配主流 EDA 工具，支持 Llama、DeepSeek 等本地模型离线部署（半导体数据不出域）</li>
+            <li><strong>DeepIP</strong>：AI Agent 与工具链 + 知识库结合，封装 <strong>38 个 Agent</strong>，配合 500G+ 数据知识库，实现系统设计到调试优化全程 AI 介入，<strong>人均效率提升 20 倍，平均自动化率提升 91.5%</strong></li>
+            <li><strong>DeepATE</strong>：提升芯片自动化测试效率，缩短量产时间（某测试机台厂测试程序编写周期缩短约 29 天）</li>
+            <li><strong>DeepEDU</strong>："一基地四中心"教学科研服务平台，2 万多门课程</li>
+          </ul>
+          <strong>核心看点</strong>：国产 AI4EDA 从单点工具走向"平台 + 多智能体 + 本地知识库"闭环，强调数据不出域的私有化部署，是本站国产 EDA AI 跟踪线的新案例（继华大九天 Argus/Storm、创新奇智之后）。</p>
+          <a href="https://new.qq.com/rain/a/20260709A0AY4S00" target="_blank">→ 智东西原文</a>
+        </div>
+
+        <!-- News 3: Synopsys divesting fab-control software -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>Investing.com / Fazen Markets · 行业动态 · 2026-07-07 · Synopsys</div>
+          <h4>🏭 Synopsys 拟剥离芯片制造控制软件业务，战略转向 AI 设计工具</h4>
+          <p>据 Investing.com 7/7 报道，Synopsys 正准备剥离其<strong>半导体制造控制软件（fab control software）</strong>业务，将资源从传统制造软件重新分配至高增长的 <strong>AI 驱动芯片设计工具</strong>赛道。要点：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li>该业务约占公司总收入 <strong>不到 8%</strong>，剥离为十年来最重大的组合调整之一</li>
+            <li><strong>驱动因素</strong>：AI 驱动设计工具正将芯片开发周期从数年压缩至数月，成为 EDA 收入主增长极；晶圆厂（TSMC / Intel）资本开支纪律与自建内部控制系统挤压第三方制造软件 TAM</li>
+            <li>释放资本将投入面向<strong>逻辑综合与物理验证</strong>的大规模 AI 模型 R&D</li>
+            <li>行业背景：全球 AI 芯片设计市场预计至 2030 年 CAGR <strong>29%</strong>；三大 EDA 厂商年 R&D 超 $35 亿且 AI/ML 占比持续上升</li>
+          </ul>
+          <strong>核心看点</strong>：EDA 巨头战略重心从"制造软件"明确转向"AI 设计工具"，印证本站长期跟踪的 Agentic EDA 商业模式重构（参考 6/17 Futurum、6/18 瑞穗报告），Synopsys 与 Cadence 在 AI 设计工具赛道竞争加剧。</p>
+          <a href="https://fazen.markets/en/synopsys-cuts-chip-fab-software-shift-ai-design-sources-2026" target="_blank">→ Fazen Markets 报道</a>
+        </div>
+
+        <!-- News 4: siliconcrew open-source autonomous agent -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>GitHub · 开源 EDA Agent · 2026-07 · naman-ranka</div>
+          <h4>🔧 siliconcrew：自主 LLM 智能体实现自然语言到 GDSII（Verilog 生成 + OpenROAD 综合）</h4>
+          <p>GitHub 开源项目 <strong>siliconcrew</strong>（MIT 许可）发布自主 LLM 智能体，面向硬件设计全流程自动化：从自然语言规范到 GDSII，途经 <strong>Verilog 生成、仿真与 OpenROAD 综合</strong>。核心能力：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li>ReAct 智能体 + 迭代调试，specification-first 工作流（YAML 支持）</li>
+            <li>Icarus Verilog 集成（lint / simulate）、OpenROAD 综合（Docker）、SymbiYosys 形式验证、波形调试</li>
+            <li>PPA 指标提取与报告、会话持久化、Next.js 实时流式前端、MCP 服务器（SSE / HTTP 远程传输）</li>
+            <li>目标 PDK：<strong>SkyWater 130nm</strong>；CVDP 基准测试框架（可复现、容器化评分）</li>
+            <li>路线图中：参数化模块、多文件设计、约束驱动优化循环、设计空间探索</li>
+          </ul>
+          <strong>核心看点</strong>：开源社区在"NL→GDSII 端到端自主智能体"方向的重要落地，延续本站跟踪的 RTL 生成 Agent（verilog-generator、AgRefactor、RTLScout）与开源 EDA 自动化（OpenLane、OpenROAD）脉络，将前端 RTL 生成与后端物理实现在单一智能体框架内打通。</p>
+          <a href="https://github.com/naman-ranka/siliconcrew" target="_blank">→ GitHub 仓库</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-07-11">
   <div class="section-title"><span class="icon">📰</span> 2026-07-11 <span class="badge-new">2条新闻</span> <span class="line"></span></div>

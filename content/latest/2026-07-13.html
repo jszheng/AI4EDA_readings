@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-13 动态</h1>
+  <p class="subtitle">共 1 篇论文 · 3 条行业动态 · 来源：arXiv / Reuters / GitHub</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News 1: Synopsys discontinues fab manufacturing control software -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Reuters · 行业动态 · 2026-07-08 · Synopsys</div>
+      <h4>🏭 Synopsys 计划停供部分晶圆厂制造控制软件，资源转向高毛利 AI 芯片设计</h4>
+      <p>据路透社（7 月 7 日）报道，美国 EDA 巨头 <strong>Synopsys</strong> 计划停止提供一套被全球半导体制造商广泛使用的<strong>生产流程控制软件</strong>，将资源转向利润率更高的 AI 设计业务。Synopsys 已于 2026 年 4–5 月陆续通知 <strong>三星电子、SK 海力士、铠侠（Kioxia）、Qorvo 等十余家芯片制造商</strong>，告知相关产品进入"终止生命周期（EOL）"状态，不再提供未来新版本，仅履行现有维护义务。
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li>受影响产品主要为<strong>设备工程系统（EES）</strong>与<strong>故障检测与分类（FDC）</strong>软件——充当晶圆厂的"中枢神经"，实时监控生产流程、在缺陷演变为代价高昂的良率损失前预警</li>
+        <li>公司同时裁撤数十个相关岗位，并计划于 2026 年 7 月内完成与各厂商维护义务的谈判</li>
+        <li>官方声明确认"停用部分传统制造分析产品"，以聚焦最高价值产品；部分客户（如三星）已在自研替代工具</li>
+      </ul>
+      <strong>核心看点</strong>：这是头部 EDA 厂商战略重心从<strong>制造侧分析软件</strong>向<strong>AI 驱动芯片设计</strong>倾斜的明确信号——与本站长期跟踪的"Agentic EDA / AI 原生设计"主线直接呼应，也预示晶圆厂 IT/OT 软件正从"工具堆叠"走向"平台化 + AI 原生"重构。</p>
+      <a href="https://www.aol.com/articles/synopsys-cut-chip-fab-manufacturing-061831000.html" target="_blank">→ Reuters 原文</a>
+    </div>
+
+    <!-- News 2: siliconcrew open-source autonomous RTL->GDSII agent -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · 开源 EDA Agent · 2026-07-13 · Naman Ranka</div>
+      <h4>🔧 siliconcrew：开源自主 LLM Agent，自然语言 → GDSII 全流程（Verilog 生成 + OpenROAD 综合）</h4>
+      <p>Naman Ranka 发布开源项目 <strong>siliconcrew</strong>（MIT 许可证），是一个面向硬件设计的<strong>自主 LLM Agent</strong>：从自然语言规范出发，经 <strong>Verilog 生成、Icarus Verilog 仿真/lint、OpenROAD 综合（Docker）、波形调试、PPA 指标提取</strong>，并集成 <strong>SymbiYosys 形式验证</strong>，目标直指 SkyWater 130nm 的端到端 RTL→GDSII。
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li>采用 <strong>ReAct Agent + 迭代调试</strong>，specification-first 工作流（YAML），支持多文件设计、约束驱动优化循环</li>
+        <li>内置 <strong>MCP 服务器</strong>（SSE / HTTP 远程传输）、工具自动发现、CVDP 基准评测框架，可复现、可容器化打分</li>
+        <li>路线图中包含 Google XLS / DSLX 高层次综合前端、设计空间探索（DSE）等</li>
+      </ul>
+      <strong>核心看点</strong>：siliconcrew 把"Agentic EDA"从单点 RTL 生成推进到<strong>含物理实现（综合/形式验证）的闭环</strong>，是开源社区少见的完整 NL→GDSII Agent，与工业界 Siemens Fuse、Cadence ChipStack 形成"开源 vs 商业"的能力对照。</p>
+      <a href="https://github.com/naman-ranka/siliconcrew" target="_blank">→ GitHub 仓库</a>
+    </div>
+
+    <!-- News 3: pyslang-mcp read-only Verilog/SystemVerilog semantic-analysis MCP -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · 开源 EDA MCP · 2026-07-13 · ariklapid</div>
+      <h4>🔧 pyslang-mcp：只读 MCP 服务器，为 AI Agent 提供编译器背书的 Verilog/SystemVerilog 语义分析</h4>
+      <p>ariklapid 发布 <strong>pyslang-mcp</strong>（已上架 PyPI 与 MCP Registry，本地 stdio 运行），是一个<strong>只读</strong>的 Model Context Protocol 服务器，封装 <strong>pyslang</strong>，让 AI Agent 针对已解析/精细化的 HDL 提出编译前端级别的问题——而非简单文本搜索：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li>可查询 design unit / interface / package 清单、编译前端诊断（diagnostics）、实例层次（instance hierarchy）、符号声明与引用、<code>.f</code> filelist 展开结果</li>
+        <li>刻意保持<strong>只读边界</strong>：模型负责起草 RTL，pyslang-mcp 充当"编译器背书"的读取 / 检查 / 解释器，降低 IP 保护工作区的暴露面，适合本地与 CI 环境</li>
+      </ul>
+      <strong>核心看点</strong>：pyslang-mcp 直击 LLM 生成 HDL 时"表面合理但语义错误"的痛点——把 Agent 的 RTL 草拟与编译前端验证解耦，与 siliconcrew（写 RTL）形成"起草 + 校验"的能力互补，是开源 EDA Agent Skills / MCP 生态从"能写"走向"写对"的关键一环。</p>
+      <a href="https://github.com/ariklapid/pyslang-mcp" target="_blank">→ GitHub 仓库</a>
+    </div>
+
+    <!-- 2607.07444 LLM Assisted Verification Assertion Generation -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.ET · 2026-07-08 · Bhabesh Mali, Chandan Karfa</div>
+      <h4>✅ LLM Assisted Verification Assertion Generation: Challenges and Future Directions</h4>
+      <p>面向<strong>断言驱动验证（ABV）</strong>的系统性综述与前瞻，聚焦 <strong>LLM 辅助生成 SystemVerilog 断言（SVA）</strong>。文章指出 ABV 长期依赖验证工程师从规格手工编写断言、耗时且易错，而 LLM 正被探索用于从设计规格生成 SVA。本文梳理了近期工作所采用的不同 SVA 生成方法，并提出核心问题：<strong>如何让 LLM 断言生成变得系统化、质量可感知（quality-aware）</strong>？针对每类挑战，文末给出关键要点（Key Takeaways）与方法论指引，帮助以更高质量、更低风险生成断言集。<br>
+      <strong>核心创新</strong>：LLM 辅助 SVA 生成全景综述 + "系统化 / 质量可感知"框架问题 + 分挑战（方法、质量、可维护性）方法论指引
+      <br><strong>标签</strong>：功能验证 · 断言生成 · LLM · SVA · ABV · 综述</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">功能验证</span>
+        <span class="tag">断言生成</span>
+        <span class="tag">LLM</span>
+        <span class="tag">SVA</span>
+        <span class="tag">ABV</span>
+        <span class="tag">综述</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.07444" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.07444_LLM_Assertion.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
