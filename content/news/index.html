@@ -21,15 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-13 · 涵盖 2026-01 → 2026-07-13 · 已去重整理 · 新增 4 条行业动态（NVIDIA×SK hynix 多年 AI 合作 / 启芯宸光 DeepChip 平台 / Synopsys 剥离制造软件转向 AI 设计 / siliconcrew 开源 NL→GDSII 智能体）</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-13 · 涵盖 2026-01 → 2026-07-13 · 已去重整理 · 新增 5 条行业动态（NVIDIA×SK hynix 多年 AI 合作 / 启芯宸光 DeepChip 平台 / Synopsys 剥离制造软件转向 AI 设计 / siliconcrew 开源 NL→GDSII 智能体 / pyslang-mcp 只读 RTL 语义分析 MCP）</p>
   <div class="stats">
-    <div class="stat"><div class="num">200</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">84</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">148</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">201</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">85</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">149</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
-  <a href="#2026-07-13">260713 🤝 NVIDIA×SK hynix + 🇨🇳 启芯宸光 DeepChip + 🏭 Synopsys 转向 AI + 🔧 siliconcrew</a>
+  <a href="#2026-07-13">260713 🤝 NVIDIA×SK hynix + 🇨🇳 启芯宸光 DeepChip + 🏭 Synopsys 转向 AI + 🔧 siliconcrew + 🔧 pyslang-mcp</a>
   <a href="#2026-07-11">260711 📰 WIR #146 + 🔧 Verilog-Generator 开源技能</a>
   <a href="#2026-07-10">260710 🤖 AI重写IP规则手册 + 🧠 为用途匹配的AI模型</a>
   <a href="#2026-07-08">260708 🔬 多芯粒现场测试方法论 — Laura Peters</a>
@@ -123,11 +123,11 @@
 <div class="container">
 
 <section id="2026-07-13">
-  <div class="section-title"><span class="icon">🤝</span> 2026-07-13 <span class="badge-new">4条新闻</span> <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤝</span> 2026-07-13 <span class="badge-new">5条新闻</span> <span class="line"></span></div>
   <div class="date-group">
     <div class="date-header" onclick="toggleDate(this)">
-      <h3>2026-07-13 行业动态（4条）</h3>
-      <span class="badge-count">4</span>
+      <h3>2026-07-13 行业动态（5条）</h3>
+      <span class="badge-count">5</span>
       <span class="toggle">▼</span>
     </div>
     <div class="date-body">
@@ -192,6 +192,19 @@
           </ul>
           <strong>核心看点</strong>：开源社区在"NL→GDSII 端到端自主智能体"方向的重要落地，延续本站跟踪的 RTL 生成 Agent（verilog-generator、AgRefactor、RTLScout）与开源 EDA 自动化（OpenLane、OpenROAD）脉络，将前端 RTL 生成与后端物理实现在单一智能体框架内打通。</p>
           <a href="https://github.com/naman-ranka/siliconcrew" target="_blank">→ GitHub 仓库</a>
+        </div>
+
+        <!-- News 5: pyslang-mcp read-only Verilog/SystemVerilog semantic-analysis MCP -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>GitHub · 开源 EDA MCP · 2026-07-13 · ariklapid</div>
+          <h4>🔧 pyslang-mcp：只读 MCP 服务器，为 AI Agent 提供编译器背书的 Verilog/SystemVerilog 语义分析</h4>
+          <p>ariklapid 发布 <strong>pyslang-mcp</strong>（已上架 PyPI 与 MCP Registry，本地 stdio 运行），是一个<strong>只读</strong>的 Model Context Protocol 服务器，封装 <strong>pyslang</strong>，让 AI Agent 针对已解析 / 精细化的 HDL 提出编译前端级别的问题——而非简单文本搜索：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li>可查询 design unit / interface / package 清单、编译前端诊断（diagnostics）、实例层次（instance hierarchy）、符号声明与引用、<code>.f</code> filelist 展开结果</li>
+            <li>刻意保持<strong>只读边界</strong>：模型负责起草 RTL，pyslang-mcp 充当"编译器背书"的读取 / 检查 / 解释器，降低 IP 保护工作区的暴露面，适合本地与 CI 环境</li>
+          </ul>
+          <strong>核心看点</strong>：pyslang-mcp 直击 LLM 生成 HDL 时"表面合理但语义错误"的痛点——把 Agent 的 RTL 草拟与编译前端验证解耦，与 siliconcrew（写 RTL）、verilog-generator（Agent 技能）形成"起草 + 校验"的能力互补，是开源 EDA Agent Skills / MCP 生态从"能写"走向"写对"的关键一环。</p>
+          <a href="https://github.com/ariklapid/pyslang-mcp" target="_blank">→ GitHub 仓库</a>
         </div>
 
       </div>

@@ -1,7 +1,7 @@
 {
   "lastUpdate": "2026-07-13",
   "cutoffDate": "2026-01-08",
-  "totalItems": 148,
+  "totalItems": 149,
   "items": [
     {
       "date": "2026-07-13",
@@ -100,6 +100,34 @@
         "CVDP",
         "ReAct",
         "MIT",
+        "2026-07-13"
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "company": "ariklapid / GitHub",
+      "title": "🔧 pyslang-mcp：只读 MCP 服务器，为 AI Agent 提供编译器背书的 Verilog/SystemVerilog 语义分析",
+      "link": "https://github.com/ariklapid/pyslang-mcp",
+      "keywords": [
+        "pyslang-mcp",
+        "ariklapid",
+        "开源",
+        "MCP",
+        "只读",
+        "read-only",
+        "pyslang",
+        "SystemVerilog",
+        "Verilog",
+        "语义分析",
+        "semantic analysis",
+        "编译前端",
+        "compiler frontend",
+        "design unit",
+        "instance hierarchy",
+        "PyPI",
+        "MCP Registry",
+        "RTL校验",
+        "AI Agent",
         "2026-07-13"
       ]
     },
