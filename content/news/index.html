@@ -21,14 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-13 · 涵盖 2026-01 → 2026-07-13 · 已去重整理 · 新增 5 条行业动态（NVIDIA×SK hynix 多年 AI 合作 / 启芯宸光 DeepChip 平台 / Synopsys 剥离制造软件转向 AI 设计 / siliconcrew 开源 NL→GDSII 智能体 / pyslang-mcp 只读 RTL 语义分析 MCP）</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-14 · 涵盖 2026-01 → 2026-07-14 · 已去重整理 · 新增 4 篇论文（LLM for EDA 前端 / ChipFuzzer RTL 验证模糊测试 / Chiplet3D 3D 布图规划 / ReviewDSE 白盒 DSE）+ 3 条行业动态（Cadence AgentStack 五大 Super Agent / silica-eda 开源 EDA MCP / SemiEngineering：AI 能否创建 EDA 缺失的模型）</p>
   <div class="stats">
-    <div class="stat"><div class="num">201</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">85</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">149</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">205</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">86</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">152</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-07-14">260714 ⚡ LLM for EDA 前端(DAC) + ✅ ChipFuzzer RTL验证 + 📐 Chiplet3D 布图 + 🤖 ReviewDSE 白盒DSE + 🚀 Cadence AgentStack + 🔧 silica-eda + 🔬 SemiEngineering AI模型</a>
   <a href="#2026-07-13">260713 🤝 NVIDIA×SK hynix + 🇨🇳 启芯宸光 DeepChip + 🏭 Synopsys 转向 AI + 🔧 siliconcrew + 🔧 pyslang-mcp</a>
   <a href="#2026-07-11">260711 📰 WIR #146 + 🔧 Verilog-Generator 开源技能</a>
   <a href="#2026-07-10">260710 🤖 AI重写IP规则手册 + 🧠 为用途匹配的AI模型</a>
@@ -121,6 +122,57 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-07-14">
+  <div class="section-title"><span class="icon">🔧</span> 2026-07-14 <span class="badge-new">3条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-07-14 行业动态（3条）</h3>
+      <span class="badge-count">3</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+
+        <!-- News 1: Cadence AgentStack head agent + five Super Agents (CadenceLIVE 2026) -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>Cadence · 官方博客 / CadenceLIVE Silicon Valley 2026 · 2026-07 · Cadence &amp; NVIDIA</div>
+          <h4>🚀 Cadence 发布 AgentStack 总控智能体 + ViraStack / InnoStack 等五大 Super Agent — 从规格到签核的端到端自主芯片设计</h4>
+          <p>在 CadenceLIVE Silicon Valley 2026 上，Cadence 与 NVIDIA 宣布深化合作，将代理式 AI（Agentic AI）推向完整半导体设计流程，核心发布 <strong>AgentStack</strong> 总控智能体（head agent）与五大 Super Agent 产品线：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li><strong>ChipStack</strong>（已发布）：数字 RTL 设计与验证，早期部署于 10+ 顶级客户（Altera / NVIDIA / Qualcomm / Tenstorrent），设计验证任务生产力提升最高 <strong>10×</strong></li>
+            <li><strong>ViraStack</strong>（新）：定制 / 模拟（analog）设计与验证——电路图创建、testbench、电路优化与版图迁移，可自主挖掘 Virtuoso IP 库做工艺节点迁移</li>
+            <li><strong>InnoStack</strong>（新）：数字实现与签核（implementation &amp; signoff）</li>
+            <li><strong>3DStack</strong>：3D-IC 设计；<strong>SystemStack</strong>：多物理场（multiphysics）系统级仿真</li>
+            <li><strong>AgentStack</strong>：统一 head agent，编排所有 Super Agent，可扩展到芯片 → 3D-IC → 系统设计分析；提供共享终端 UI、知识与技能共享</li>
+          </ul>
+          <strong>核心机制</strong>：<strong>Mental Models</strong>（聚合设计数据 / 规格 / 图 / 库的知识图谱，作为 golden source of truth）+ <strong>Cadence Native Skills</strong>（教 LLM 如何驱动 Cadence 原理型 EDA 工具的提示工程文件）。底层运行于 <strong>Cadence Millennium M2000 超算（NVIDIA AI 基础设施）+ CUDA-X + Omniverse</strong>，采用 NVIDIA Nemotron 模型；NVIDIA 作为早期合作伙伴已导入其设计流程。<br>
+          <strong>核心看点</strong>：这是 EDA 三巨头中 Cadence 对"全自主虚拟工程师"最完整的产品化表达——从 ChipStack 的前端 RTL / 验证扩展到含物理设计、模拟 / 定制、3D-IC 与系统级多物理场的全栈，直接对标本站长期跟踪的 Siemens Fuse、Synopsys AgentEngineer，并呼应 Cadence×NVIDIA 的 NemoClaw / OpenShell 合作主线。"Engineers in the Loop" 仍是质量与可控性的关键。</p>
+          <a href="https://community.cadence.com/cadence_blogs_8/b/artificial-intelligence/posts/reimagining-chip-design-from-spec-to-signoff-with-cadence-ai-super-agents" target="_blank">→ Cadence 官方博客</a>
+        </div>
+
+        <!-- News 2: silica-eda open-source AI-native EDA MCP server -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>GitHub / PyPI · 开源 EDA MCP · 2026-07-02 · Christopher Simaan</div>
+          <h4>🔧 silica-eda 0.1.6：AI 原生的 EDA 环境 — 把全套开源/商业 EDA 工具链封装为 MCP 服务器，实现自主 RTL 调试闭环</h4>
+          <p><strong>silica-eda</strong>（Apache-2.0，v0.1.6，2026-07-02 发布）是一个 AI 原生 EDA 环境，将 <strong>Verilator / Yosys / Verible / Icarus / SymbiYosys / GHDL / nextpnr</strong> 等开源工具，以及 <strong>VCS / Questa / Xcelium / Vivado / Quartus / DC Shell / JasperGold / VC Formal / SpyGlass</strong> 等商业工具自动检测并封装为结构化 MCP 接口。核心价值是<strong>闭环自主调试</strong>：run sim → parse failure → reason about RTL → propose fix → re-run，无需人工复制粘贴；覆盖完整开源 FPGA 流程（综合 → 布局布线 → 烧录），并提供 setup 向导自动写入 Claude Desktop / Claude Code / Cursor / Zed / Windsurf / OpenCode / Gemini CLI 的 MCP 配置。<br>
+          <strong>核心看点</strong>：silica-eda 把"Agentic EDA"的 MCP 化推向<strong>"开源 + 商业工具通吃"</strong>的新阶段——与本站 7/13 收录的 siliconcrew（写 RTL 的自主 Agent）、pyslang-mcp（只读 RTL 语义校验）形成"起草 + 校验 + 闭环调试"的能力拼图，是开源 EDA Agent/MCP 生态从"能调工具"走向"能自主修 bug"的关键一环。</p>
+          <a href="https://pypi.org/project/silica-eda" target="_blank">→ PyPI 仓库</a>
+        </div>
+
+        <!-- News 3: SemiEngineering "Can AI Create Missing Models?" -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>SemiEngineering · 行业深度 · 2026-06-11 · Brian Bailey</div>
+          <h4>🔬 SemiEngineering 深度：AI 能否创建 EDA 中"缺失的模型"？——模型创建/验证成本成为 AI 落地的关键约束</h4>
+          <p>Brian Bailey 在 SemiEngineering 发表深度分析，探讨 <strong>AI 能否创建 EDA 流程中缺失的模型</strong>。传统 EDA 模型（RTL 模型、testbench、架构性能模型等）创建、验证、维护成本高昂，许多有前景的 flow 因建模成本过高而被放弃；而 AI（尤其强化学习）有望将模型创建成本降低一两个数量级，使高度专门化或此前因成本被放弃的模型变得可行。文章同时提出深层问题：AI 应仅<strong>辅助现有流程生成模型</strong>，还是<strong>端到端替代传统建模</strong>？并引用 Synopsys（Ramesh Narayanaswamy）、Keysight EDA（Tom Demuer）、Siemens EDA（Sathishkumar Balasubramanian）等观点，强调<strong>模型分层</strong>（规划用贵模型 / 实现用中间模型 / 数据分析用廉价模型）、AI 生成内容水印与数据验证、以及"训练数据分布边界"对可靠性的约束。<br>
+          <strong>核心看点</strong>：这是本站长期跟踪的"Agentic EDA / AI 原生设计"主线在<strong>模型可信度</strong>维度的关键补充——与 Cadence Cerebrus / Synopsys DSO.ai 的 RL 优化循环、以及验证侧"golden model / 确定性检查"讨论直接呼应，点明 AI 进入 EDA 的真正瓶颈不是"会不会生成"，而是"知不知道它在什么条件下可靠"。</p>
+          <a href="https://semiengineering.com/can-ai-create-missing-models" target="_blank">→ SemiEngineering 原文</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-07-13">
   <div class="section-title"><span class="icon">🤝</span> 2026-07-13 <span class="badge-new">5条新闻</span> <span class="line"></span></div>

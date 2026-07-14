@@ -7,9 +7,25 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（37篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（38篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2607.09742 · cs.AR · 2026-07-03（列表 7/14）· Shuo Ren, Libo Shen, ..., Bei Yu, Tsung-Yi Ho
+        </div>
+        <div class="abs-title">Chiplet3D: 引脚与热感知的 3D Chiplet 布图规划（卷积嵌入 MILP）</div>
+        <div class="abs-body">
+          <p>提出 Chiplet3D，面向两 die 3D-IC 的引脚与热感知布图规划器。传统方法假设线连到模块中心、用基于功耗的简化热估计，导致线长优化被误导。Chiplet3D 的引脚感知支持四种旋转 + 两种翻转，从精确引脚位置量线长；热感知侧用嵌入 MILP 的快速粗粒度卷积场替代不准确的基于功耗的指标，精确跟踪真实 3D 热扩散。在 ICCAD'24 ATPlace 基准上以 golden 3D-ICE 仿真验证。相较 SOTA，线长平均降低 39%–43%（最佳 62%），峰值温度最高降低 45.9°C，热不均匀性最高降低 56%。<br><strong>核心创新</strong>：引脚精确位置量线长（支持旋转/翻转）+ 卷积嵌入 MILP 的 3D 热场 co-optimization；线长 -39~43%、峰值温 -45.9°C。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2607.09742" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2607.09742_Chiplet3D.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Chiplet</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">热感知</span>
+        </div>
+      </div>
     <div class="abs-card">
         <div class="abs-meta">
           <span class="badge-new">NEW</span>

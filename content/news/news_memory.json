@@ -1,8 +1,71 @@
 {
-  "lastUpdate": "2026-07-13",
+  "lastUpdate": "2026-07-14",
   "cutoffDate": "2026-01-08",
-  "totalItems": 149,
+  "totalItems": 152,
   "items": [
+    {
+      "date": "2026-07-14",
+      "company": "Cadence / NVIDIA",
+      "title": "🚀 Cadence 发布 AgentStack 总控智能体 + ViraStack / InnoStack 等五大 Super Agent — 从规格到签核的端到端自主芯片设计",
+      "link": "https://community.cadence.com/cadence_blogs_8/b/artificial-intelligence/posts/reimagining-chip-design-from-spec-to-signoff-with-cadence-ai-super-agents",
+      "keywords": [
+        "Cadence",
+        "NVIDIA",
+        "AgentStack",
+        "ChipStack",
+        "ViraStack",
+        "InnoStack",
+        "3DStack",
+        "SystemStack",
+        "Super Agent",
+        "CadenceLIVE 2026",
+        "Mental Models",
+        "Cadence Native Skills",
+        "Millennium M2000",
+        "Nemotron",
+        "端到端自主芯片设计",
+        "2026-07-14"
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "company": "silica-eda / Christopher Simaan",
+      "title": "🔧 silica-eda 0.1.6：AI 原生 EDA 环境 — 开源/商业 EDA 工具链 MCP 封装，自主 RTL 调试闭环",
+      "link": "https://pypi.org/project/silica-eda",
+      "keywords": [
+        "silica-eda",
+        "EDA MCP",
+        "AI-native EDA",
+        "自主调试",
+        "RTL debug loop",
+        "Verilator",
+        "Yosys",
+        "OpenROAD",
+        "VCS",
+        "Vivado",
+        "开源 EDA Agent",
+        "2026-07-14"
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "company": "SemiEngineering / Brian Bailey",
+      "title": "🔬 SemiEngineering 深度：AI 能否创建 EDA 中缺失的模型？——模型创建/验证成本成 AI 落地关键约束",
+      "link": "https://semiengineering.com/can-ai-create-missing-models",
+      "keywords": [
+        "SemiEngineering",
+        "Brian Bailey",
+        "AI 创建模型",
+        "EDA model",
+        "模型可信度",
+        "模型分层",
+        "DSO.ai",
+        "Cerebrus",
+        "水印",
+        "训练数据分布",
+        "2026-07-14"
+      ]
+    },
     {
       "date": "2026-07-13",
       "company": "NVIDIA / SK hynix",

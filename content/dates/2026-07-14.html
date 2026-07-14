@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-14 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 3 条行业动态 · 来源：Cadence / NVIDIA / arXiv / PyPI / SemiEngineering</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News 1: Cadence AgentStack head agent + five Super Agents (CadenceLIVE 2026) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Cadence · 官方博客 / CadenceLIVE Silicon Valley 2026 · 2026-07 · Cadence &amp; NVIDIA</div>
+      <h4>🚀 Cadence 发布 AgentStack 总控智能体 + ViraStack / InnoStack 等五大 Super Agent — 从规格到签核的端到端自主芯片设计</h4>
+      <p>在 CadenceLIVE Silicon Valley 2026 上，Cadence 与 NVIDIA 宣布深化合作，将代理式 AI（Agentic AI）推向完整半导体设计流程，核心发布 <strong>AgentStack</strong> 总控智能体（head agent）与五大 Super Agent 产品线：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>ChipStack</strong>（已发布）：数字 RTL 设计与验证，早期部署于 10+ 顶级客户（Altera / NVIDIA / Qualcomm / Tenstorrent），设计验证任务生产力提升最高 <strong>10×</strong></li>
+        <li><strong>ViraStack</strong>（新）：定制 / 模拟（analog）设计与验证——电路图创建、testbench、电路优化与版图迁移，可自主挖掘 Virtuoso IP 库做工艺节点迁移</li>
+        <li><strong>InnoStack</strong>（新）：数字实现与签核（implementation &amp; signoff）</li>
+        <li><strong>3DStack</strong>：3D-IC 设计；<strong>SystemStack</strong>：多物理场（multiphysics）系统级仿真</li>
+        <li><strong>AgentStack</strong>：统一 head agent，编排所有 Super Agent，可扩展到芯片 → 3D-IC → 系统设计分析；提供共享终端 UI、知识与技能共享</li>
+      </ul>
+      <strong>核心机制</strong>：<strong>Mental Models</strong>（聚合设计数据 / 规格 / 图 / 库的知识图谱，作为 golden source of truth）+ <strong>Cadence Native Skills</strong>（教 LLM 如何驱动 Cadence 原理型 EDA 工具的提示工程文件）。底层运行于 <strong>Cadence Millennium M2000 超算（NVIDIA AI 基础设施）+ CUDA-X + Omniverse</strong>，采用 NVIDIA Nemotron 模型；NVIDIA 作为早期合作伙伴已导入其设计流程。<br>
+      <strong>核心看点</strong>：这是 EDA 三巨头中 Cadence 对"全自主虚拟工程师"最完整的产品化表达——从 ChipStack 的前端 RTL / 验证扩展到含物理设计、模拟 / 定制、3D-IC 与系统级多物理场的全栈，直接对标本站长期跟踪的 Siemens Fuse、Synopsys AgentEngineer，并呼应 Cadence×NVIDIA 的 NemoClaw / OpenShell 合作主线。"Engineers in the Loop" 仍是质量与可控性的关键。</p>
+      <a href="https://community.cadence.com/cadence_blogs_8/b/artificial-intelligence/posts/reimagining-chip-design-from-spec-to-signoff-with-cadence-ai-super-agents" target="_blank">→ Cadence 官方博客</a>
+    </div>
+
+    <!-- News 2: silica-eda open-source AI-native EDA MCP server -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub / PyPI · 开源 EDA MCP · 2026-07-02 · Christopher Simaan</div>
+      <h4>🔧 silica-eda 0.1.6：AI 原生的 EDA 环境 — 把全套开源/商业 EDA 工具链封装为 MCP 服务器，实现自主 RTL 调试闭环</h4>
+      <p><strong>silica-eda</strong>（Apache-2.0，v0.1.6，2026-07-02 发布）是一个 AI 原生 EDA 环境，将 <strong>Verilator / Yosys / Verible / Icarus / SymbiYosys / GHDL / nextpnr</strong> 等开源工具，以及 <strong>VCS / Questa / Xcelium / Vivado / Quartus / DC Shell / JasperGold / VC Formal / SpyGlass</strong> 等商业工具自动检测并封装为结构化 MCP 接口。核心价值是<strong>闭环自主调试</strong>：run sim → parse failure → reason about RTL → propose fix → re-run，无需人工复制粘贴；覆盖完整开源 FPGA 流程（综合 → 布局布线 → 烧录），并提供 setup 向导自动写入 Claude Desktop / Claude Code / Cursor / Zed / Windsurf / OpenCode / Gemini CLI 的 MCP 配置。<br>
+      <strong>核心看点</strong>：silica-eda 把"Agentic EDA"的 MCP 化推向<strong>"开源 + 商业工具通吃"</strong>的新阶段——与本站 7/13 收录的 siliconcrew（写 RTL 的自主 Agent）、pyslang-mcp（只读 RTL 语义校验）形成"起草 + 校验 + 闭环调试"的能力拼图，是开源 EDA Agent/MCP 生态从"能调工具"走向"能自主修 bug"的关键一环。</p>
+      <a href="https://pypi.org/project/silica-eda" target="_blank">→ PyPI 仓库</a>
+    </div>
+
+    <!-- News 3: SemiEngineering "Can AI Create Missing Models?" -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · 行业深度 · 2026-06-11 · Brian Bailey</div>
+      <h4>🔬 SemiEngineering 深度：AI 能否创建 EDA 中"缺失的模型"？——模型创建/验证成本成为 AI 落地的关键约束</h4>
+      <p>Brian Bailey 在 SemiEngineering 发表深度分析，探讨 <strong>AI 能否创建 EDA 流程中缺失的模型</strong>。传统 EDA 模型（RTL 模型、testbench、架构性能模型等）创建、验证、维护成本高昂，许多有前景的 flow 因建模成本过高而被放弃；而 AI（尤其强化学习）有望将模型创建成本降低一两个数量级，使高度专门化或此前因成本被放弃的模型变得可行。文章同时提出深层问题：AI 应仅<strong>辅助现有流程生成模型</strong>，还是<strong>端到端替代传统建模</strong>？并引用 Synopsys（Ramesh Narayanaswamy）、Keysight EDA（Tom Demuer）、Siemens EDA（Sathishkumar Balasubramanian）等观点，强调<strong>模型分层</strong>（规划用贵模型 / 实现用中间模型 / 数据分析用廉价模型）、AI 生成内容水印与数据验证、以及"训练数据分布边界"对可靠性的约束。<br>
+      <strong>核心看点</strong>：这是本站长期跟踪的"Agentic EDA / AI 原生设计"主线在<strong>模型可信度</strong>维度的关键补充——与 Cadence Cerebrus / Synopsys DSO.ai 的 RL 优化循环、以及验证侧"golden model / 确定性检查"讨论直接呼应，点明 AI 进入 EDA 的真正瓶颈不是"会不会生成"，而是"知不知道它在什么条件下可靠"。</p>
+      <a href="https://semiengineering.com/can-ai-create-missing-models" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+    <!-- 2607.10340 ChipFuzzer: LLM-Driven RTL Verification Fuzzing -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-11 · Kun Wang, Cangyuan Li, Kaiyan Chang, Siyang Cai, Yinhe Han, Ying Wang</div>
+      <h4>✅ When Fuzzing Meets Understanding: LLM-Driven Semantic Test Generation for RTL Verification</h4>
+      <p>提出 <strong>ChipFuzzer</strong>，利用大语言模型的语义推理能力增强硬件模糊测试（fuzzing）框架，解决现有硬件 fuzzer 因依赖启发式策略、难以推理被测设计（DUT）内部逻辑与语义行为，导致覆盖率与角落缺陷暴露不足的问题。框架采用<strong>双阶段工作流</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>Coverage-Guided 阶段</strong>：以控制流相似度与差异分析引导 LLM 驱动的 testcase 生成，提升覆盖</li>
+        <li><strong>Bug-Guided 阶段</strong>：利用历史 bug 数据识别易错代码区域，优先针对这些区域生成 testcase，提升缺陷发现效率</li>
+      </ul>
+      在三个开源 CPU 设计上，ChipFuzzer 相较最强基线平均<strong>条件覆盖率提升 5.8 个百分点</strong>、<strong>缺陷检测率提升 21.1 个百分点</strong>。<br>
+      <strong>核心创新</strong>：LLM 语义理解 + 覆盖引导 / 缺陷引导双阶段 RTL 模糊测试 + 开源 CPU 验证实测显著提升<br>
+      <strong>标签</strong>：功能验证 · RTL 模糊测试 · LLM · 覆盖率引导 · 缺陷检测</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">功能验证</span>
+        <span class="tag">RTL模糊测试</span>
+        <span class="tag">LLM</span>
+        <span class="tag">覆盖率引导</span>
+        <span class="tag">缺陷检测</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.10340" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.10340_ChipFuzzer.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.11294 ReviewDSE: Protected White-Box DSE for Open-Source EDA (OpenROAD detailed placement) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-13 · Zhiyu Zheng, Yiming Du, Ziyi Wang, Zhiang Wang</div>
+      <h4>📐 From Tool Invocation to Source-Mechanism Exploration: Protected White-Box DSE for Open-Source EDA</h4>
+      <p>开源 EDA 工具让设计空间探索（DSE）得以突破公开旋钮（public knobs），深入分阶段优化器内部的有界源码级机制（source-level mechanisms）。本文提出 <strong>ReviewDSE</strong>，一个<strong>保护式白盒 DSE 框架</strong>，在受保护评估器下评估完整源码候选，并将可复用搜索知识记录为"已审阅机制级证据"（reviewed mechanism-level evidence）。
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li>首先从校准设计构建<strong>方法证据（method evidence）</strong>与<strong>源码起始分支（source-start branches）</strong></li>
+        <li>以这些固定 warm-start 产物初始化目标案例探索，在 <strong>Teacher review</strong> 与 full-flow 验证下进行</li>
+        <li>实例化为 <strong>OpenROAD 详细布局（detailed placement）</strong>这一代表性分阶段开源 EDA 优化器</li>
+      </ul>
+      在 9 个目标任务上，2× runtime 门限下 ReviewDSE 相较公开旋钮黑盒 DSE 的 0.38% 将 post-DPL 半周长线长（HPWL）平均降低 <strong>1.78%</strong>；runtime-aware 选择在 1.11× runtime 下仍保留 1.68% 降低；full-flow review 暴露阶段组合（stage-composability）失败，源码机制探索修复硬切行（cut-row）合法性失败。<br>
+      <strong>核心创新</strong>：保护式白盒 DSE + 源码级机制探索 + OpenROAD 详细布局实例 + 可复用机制证据<br>
+      <strong>标签</strong>：物理设计 · 设计空间探索 · OpenROAD · 白盒DSE · 详细布局</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">物理设计</span>
+        <span class="tag">设计空间探索</span>
+        <span class="tag">OpenROAD</span>
+        <span class="tag">白盒DSE</span>
+        <span class="tag">详细布局</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.11294" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.11294_ReviewDSE.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.09742 Chiplet3D: Pin- and Thermal-Aware 3D Chiplet Floorplanning via Convolution-Embedded MILP -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-03 · Shuo Ren, Libo Shen, Yaohui Han, Rongliang Fu, Junying Huang, Bei Yu, Tsung-Yi Ho</div>
+      <h4>📐 Chiplet3D: Pin- and Thermal-Aware 3D Chiplet Floorplanning via Convolution-Embedded MILP</h4>
+      <p>随着摩尔定律缩放放缓，3D-IC 通过垂直堆叠多颗有源裸片延续性能扩展，但垂直堆叠将热量困在内部，使温度成为关键设计约束。虽然热问题可在不同设计阶段缓解，但<strong>布图规划（floorplanning）是成本最低、最早介入的解决窗口</strong>。现有方法假设连线连接到模块中心、并用简化的基于功耗的估算预测温度，这些假设误导线长优化并遗留热点。本文提出 <strong>Chiplet3D</strong>，一个面向双 die 3D-IC 的<strong>引脚与热感知布图规划器</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>引脚感知</strong>：支持全部 4 种旋转 + 2 种翻转，从精确引脚位置测量线长，使求解器可翻转 / 旋转模块将互连引脚拉近</li>
+        <li><strong>热感知</strong>：用直接嵌入混合整数线性规划（MILP）的快速粗粒度卷积热场，替代既往不准确的基于功耗的度量，准确追踪真实 3D 热扩散</li>
+      </ul>
+      在 ICCAD'24 ATPlace 基准上，以 golden 3D-ICE 仿真逐一验证温度：Chiplet3D 平均<strong>线长降低 39%–43%</strong>（最优个案达 62%），<strong>峰值温度降低最高 45.9°C</strong>，<strong>热不均匀度降低最高 56%</strong>，相较 SOTA 基线建立了热感知布局与互连效率间更强的帕累托前沿。<br>
+      <strong>核心创新</strong>：引脚 + 热联合感知 3D chiplet 布图 + 卷积嵌入 MILP 热场 + ATPlace 基准 3D-ICE 验证<br>
+      <strong>标签</strong>：物理设计 · 3D-IC · Chiplet · 布图规划 · 热感知 · 多物理场 · MILP</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">物理设计</span>
+        <span class="tag">3D-IC</span>
+        <span class="tag">Chiplet</span>
+        <span class="tag">布图规划</span>
+        <span class="tag">热感知</span>
+        <span class="tag">多物理场</span>
+        <span class="tag">MILP</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.09742" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.09742_Chiplet3D.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.09616 LLM for EDA in Front-End Design: Challenges and Opportunities (DAC 2026 invited survey) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.ET / cs.AR / cs.LG · DAC 2026 特邀论文 · 2026-07-10 · Kangwei Xu, Bing Li, Ulf Schlichtmann</div>
+      <h4>⚡ LLM for EDA in Front-End Design: Challenges and Opportunities</h4>
+      <p>面向前端 EDA 的 <strong>DAC 2026 特邀综述</strong>。随着芯片复杂度上升与上市时间压力增大，前端设计成为开发关键瓶颈，而大语言模型（LLM）在 EDA 中展现出巨大潜力——除规格理解外，还可作为硬件描述语言（HDL）生成、testbench 构建与设计空间探索的统一智能接口。以 <strong>OpenClaw</strong> 等先驱系统为代表的 agentic AI 为下一代 EDA 提供了战略路线图。
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li>讨论 EDA 从<strong>局部辅助到自主代理执行</strong>的演进</li>
+        <li>回顾 LLM 在前端设计的代表性进展：从共享规格生成电路与 testbench、以及在 HLS 等成熟工作流中提升设计质量</li>
+        <li>剖析将 LLM 集成进 EDA 的关键挑战与局限，并勾勒未来机会，为研究者提供系统化视角</li>
+      </ul>
+      <strong>核心创新</strong>：DAC 2026 特邀综述 + 前端 EDA 中 LLM 从局部辅助到自主代理的演进框架 + 代表性进展与开放挑战系统梳理<br>
+      <strong>标签</strong>：前端设计 · LLM · RTL生成 · 综述 · DAC 2026 · Agentic EDA</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">前端设计</span>
+        <span class="tag">LLM</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">综述</span>
+        <span class="tag">DAC 2026</span>
+        <span class="tag">Agentic EDA</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.09616" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.09616_LLM_EDA_FrontEnd.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
