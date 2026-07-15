@@ -7,9 +7,25 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（38篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（39篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.12788 · cs.AR · 2026-07-14 · Shuo Ren, Libo Shen, ..., Bei Yu, Tsung-Yi Ho
+      </div>
+      <div class="abs-title">CLIP-3D：面向 3D-IC 的性能与物理约束闭环评估</div>
+      <div class="abs-body">
+        <p>3D 集成在更小面积内封装更强算力，但候选设计的实际吞吐高度依赖其布局——哪个宏放在哪一层、热点落在何处、cache 几何如何映射到访存周期。gem5 等架构仿真器在理想时序下报告 IPC，却不产生决定硅上是否降频的真实块级功耗图、cache 周期数与 3D 布局。本文提出 <strong>CLIP-3D</strong>，一个 left-shift（左移）流程，在签核工具介入前，将 3D 布局驱动的<strong>热 / 线网 / cache 物理效应</strong>暴露给早期架构探索。第一阶段将架构配置提升为物理块表示：McPAT 求块级动态 / 泄漏功耗、CACTI 求 cache 几何与访存周期、HotSpot 兼容的 3D 堆叠离散化。第二阶段在该表示上运行<strong>解析 3D 热感知布图规划器</strong>，其目标嵌入由 HotSpot 稳态算子线性性与标准 CMOS 功频分解导出的<strong>闭式持续频率表达式</strong>；跨层宏分配与平面内布局为"真实实现的 BIPS"而非手调权重的 HPWL + 温度代理联合优化。<br><strong>核心创新</strong>：3D-IC 左移评估 + 热 / 线网 / cache 物理效应闭环 + 闭式持续频率驱动的 3D 热感知布图规划（优化真实 BIPS 而非代理指标）；同 Bei Yu / Tsung-Yi Ho 组 Chiplet3D（2607.09742）的延伸。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.12788" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.12788_CLIP-3D.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">3D-IC</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">热感知</span>
+      </div>
+    </div>
     <div class="abs-card">
         <div class="abs-meta">
           <span class="badge-new">NEW</span>

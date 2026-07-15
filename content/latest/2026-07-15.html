@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-15 动态</h1>
+  <p class="subtitle">共 1 篇论文 · 2 条行业动态 · 来源：SemiEngineering / NVIDIA / arXiv</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News 1: EDA & SIP revenue up 12.7% in Q1 2026, APAC rebounds (SemiEngineering / SEMI ESDA) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · EDA 市场数据 · 2026-07-13 · Ed Sperling / SEMI 电子系统设计联盟（ESDA）</div>
+      <h4>📊 EDA 与半导体 IP 营收 Q1 同比增长 12.7%，亚太强势反弹</h4>
+      <p>SEMI 旗下电子系统设计联盟（ESDA）最新《电子设计市场数据报告》（EDMD）显示，<strong>2026 年第一季度全球 EDA 与半导体 IP 营收达 57.48 亿美元，同比增长 12.7%</strong>，年化 run rate 突破 <strong>220 亿美元</strong>（此前行业常态约 100 亿美元），四季度移动平均增速 10.3%，本季增速明显高于均值。增长核心驱动力仍是 <strong>AI 服务器芯片设计工具需求</strong>，CAE 与 SIP 呈两位数增长：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>CAE</strong>（计算机辅助工程）：+15.5% 至 20.18 亿美元</li>
+        <li><strong>SIP</strong>（半导体知识产权）：+14.1% 至 23.33 亿美元</li>
+        <li><strong>IC 物理设计与验证</strong>：+8.3% 至 7.51 亿美元</li>
+        <li><strong>PCB 与 MCM</strong>（多芯片模块）：+4.8% 至 4.19 亿美元</li>
+      </ul>
+      区域方面，<strong>亚太 +17.7%</strong> 至 22.64 亿美元（中国因出口管制放宽 <strong>+31%</strong> 至 5.08 亿美元）、EMEA +17.6%、美洲 +10.2%；日本是唯一下滑区域（-9.9%）。行业就业同步 +12.6% 至 72,544 人。<br>
+      <strong>核心看点</strong>：AI 算力需求把 EDA/IP 市场推入<strong>双位数增长新常态</strong>，亚太（尤其中国）反弹显著；CAE 与 SIP 领跑印证"AI 芯片设计 + 复用 IP"双引擎，直接呼应本站长期跟踪的 Cadence / Synopsys / Siemens AI 工具商业化与国产 EDA 替代主线。</p>
+      <a href="https://semiengineering.com/eda-revenue-up-12-7-apac-roars-back/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+    <!-- News 2: NVIDIA Apollo open models + Synopsys 500x computational engineering (NVIDIA Blog) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>NVIDIA · 官方博客 · 2026-07 · NVIDIA Blog（Apollo 开源模型家族）</div>
+      <h4>🚀 NVIDIA 发布 Apollo 开源科学仿真模型家族 — Synopsys 借 NVIDIA AI Physics 实现计算工程最高 500× 加速</h4>
+      <p>NVIDIA 发布 <strong>Apollo</strong> 开源模型家族，面向科学仿真（scientific simulation），让设计选项探索比传统方法快数个数量级。关键产业落地：<strong>Synopsys 正采用 NVIDIA AI Physics（AI 物理代理模型）实现 GPU 加速，在计算工程（computational engineering）中取得最高 500× 加速</strong>；以 AI 物理代理初始化，<strong>Ansys Fluent</strong> 等 GPU 加速流体仿真工具的运行时间可大幅缩短。<br>
+      <strong>核心看点</strong>：这是 NVIDIA <strong>CUDA-X（cuDF / cuOpt / NeMo / PhysicsNeMo / CUDA-Q 作为 Agent 技能）+ NemoClaw / OpenShell 自主 AI 工程师</strong>生态在<strong>多物理场仿真</strong>侧的延伸，直接呼应本站"多物理场 AI 分析 / cuLitho / 计算光刻"主线——Synopsys（Ansys）将 AI 物理代理模型导入计算工程，是 AI 原生多物理场仿真从研究走向产业化的明确信号，亦补全本站对 Synopsys Multiphysics Fusion 的跟踪。</p>
+      <a href="https://blogs.nvidia.com/blog/apollo-open-models/" target="_blank">→ NVIDIA 官方博客</a>
+    </div>
+
+    <!-- 2607.11746 HiFi-LLP: High-Fidelity, Low-Cost Latency Predictors with Confidence for Robust HW-NAS -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG / cs.AR · 2026-07-13 · Shambhavi Balamuthu Sampath, Behzad Shomali, Nael Fasfous, Moritz Thoma, Judeson Anthony Fernando, Lukas Frickenstein, Pierpaolo Mori, Manoj Rohit Vemparala, Alexander Frickenstein, Walter Stechele</div>
+      <h4>⚡ HiFi-LLP：面向鲁棒 HW-NAS 的高保真、低成本、带置信度的延迟预测器</h4>
+      <p>随着 DNN 在边缘设备部署，硬件感知优化（HW-NAS）依赖目标硬件真实反馈定制架构，但<strong>硬件在环（HIL）延迟测量串行瓶颈</strong>严重拖慢搜索；现有延迟预测器面临两大挑战：(1) 平台专属预测器常需数万样本，(2) 不准确预测会误导 NAS 过程。本文提出 <strong>HiFi-LLP</strong>，一个基于<strong>图注意力网络（graph attention networks）</strong>的高保真、低成本延迟预测器，并引入<strong>置信度度量</strong>。在 LatBench 数据集 6 款设备上：10% 精度边界内优于先前平台专属预测器最高 <strong>9 个百分点（p.p.）</strong>，Spearman 秩相关最高 <strong>0.996</strong>。进一步提出<strong>混合 NAS 框架</strong>：将低置信度预测路由至 HIL，相较典型 NAS 最高取得 <strong>8.6× 加速</strong>，同时保持有竞争力的帕累托前沿。<br>
+      <strong>核心创新</strong>：图注意力延迟预测器 + 置信度度量 + 低置信度路由 HIL 的混合 NAS（8.6× 加速）<br>
+      <strong>标签</strong>：硬件神经网络架构搜索 · 延迟预测 · 图注意力网络 · 置信度 · 设计空间探索</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">HW-NAS</span>
+        <span class="tag">延迟预测</span>
+        <span class="tag">图注意力网络</span>
+        <span class="tag">置信度</span>
+        <span class="tag">设计空间探索</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.11746" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.11746_HiFi-LLP.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

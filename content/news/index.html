@@ -21,14 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-14 · 涵盖 2026-01 → 2026-07-14 · 已去重整理 · 新增 4 篇论文（LLM for EDA 前端 / ChipFuzzer RTL 验证模糊测试 / Chiplet3D 3D 布图规划 / ReviewDSE 白盒 DSE）+ 3 条行业动态（Cadence AgentStack 五大 Super Agent / silica-eda 开源 EDA MCP / SemiEngineering：AI 能否创建 EDA 缺失的模型）</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-16 · 涵盖 2026-01 → 2026-07-16 · 已去重整理 · 新增 2 篇论文（CLIP-3D 闭环 3D-IC 性能与物理约束评估 / ORRAM OpenROAD 标准单元 RAM 生成器）</p>
   <div class="stats">
-    <div class="stat"><div class="num">205</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">86</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">152</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">208</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">88</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">154</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-07-15">260715 📊 EDA/SIP 营收 +12.7% (APAC 反弹) + 💰 Q2 初创融资 $60亿 (BoolSi/siliXon)</a>
   <a href="#2026-07-14">260714 ⚡ LLM for EDA 前端(DAC) + ✅ ChipFuzzer RTL验证 + 📐 Chiplet3D 布图 + 🤖 ReviewDSE 白盒DSE + 🚀 Cadence AgentStack + 🔧 silica-eda + 🔬 SemiEngineering AI模型</a>
   <a href="#2026-07-13">260713 🤝 NVIDIA×SK hynix + 🇨🇳 启芯宸光 DeepChip + 🏭 Synopsys 转向 AI + 🔧 siliconcrew + 🔧 pyslang-mcp</a>
   <a href="#2026-07-11">260711 📰 WIR #146 + 🔧 Verilog-Generator 开源技能</a>
@@ -122,6 +123,56 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-07-15">
+  <div class="section-title"><span class="icon">🔧</span> 2026-07-15 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-07-15 行业动态（2条）</h3>
+      <span class="badge-count">2</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+
+        <!-- News 1: EDA/SIP Revenue Up 12.7%; APAC Roars Back (SEMI EDMD Q1 2026) -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>SemiEngineering · 行业市场数据 · 2026-07-13 · Ed Sperling / SEMI EDMD</div>
+          <h4>📊 EDA/SIP 营收同比增长 12.7%，APAC 强势反弹 — Q1 2026 全球 EDA+IP+服务达 $57.48 亿，AI 服务器芯片工具需求成主引擎</h4>
+          <p>SEMI 电子设计市场数据（EDMD）季度报告显示，2026 年 Q1 全球 EDA、半导体 IP 与服务业营收达 <strong>$57.48 亿（5.748 billion）</strong>，同比增长 <strong>12.7%</strong>，连续多季度保持双位数增长；年化运行率（run rate）已突破 <strong>$220 亿</strong>（历史长期约 $100 亿），四季度移动平均增速 10.3%（本季高于均值）。Silvaco CEO、SEMI EDMD 报告执行赞助人 Wally Rhines 指出"增长强于过去一年所见"。<br>
+          <strong>核心驱动与分项数据</strong>：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li><strong>计算机辅助工程（CAE，含物理设计与验证工具）</strong>：+15.5% 至 $20.18 亿，主因来自<strong>AI 服务器芯片设计工具需求</strong>激增</li>
+            <li><strong>半导体 IP（SIP）</strong>：+14.1% 至 $23.33 亿</li>
+            <li><strong>IC 物理设计与验证</strong>：+8.3% 至 $7.513 亿</li>
+            <li><strong>PCB 与 MCM</strong>：+4.8% 至 $4.192 亿</li>
+            <li><strong>服务</strong>：+6.5% 至 $2.264 亿</li>
+            <li><strong>区域</strong>：美洲 +10.2%（$24.34 亿）、EMEA +17.6%（$7.664 亿）、<strong>亚太（APAC）+17.7% 至 $22.64 亿</strong>（中国因出口管制放松环比 +31% 至 $5.08 亿）、日本 -9.9%（$2.831 亿，唯一下滑区）</li>
+            <li><strong>就业</strong>：行业从业人数 +12.6% 至 72,544 人</li>
+          </ul>
+          <strong>核心看点</strong>：这是本站长期跟踪的"Agentic AI 重估 EDA 商业模式"主线的<strong>量化印证</strong>——AI 服务器芯片设计浪潮直接拉动 CAE/物理设计/验证工具双位数增长，且亚太（尤其中国出口管制放松后）成为最强增量市场；与本站 7/13 收录的 Q2 初创融资盘点（AI 设计工具投资同步升温）形成"需求侧 + 供给侧"双重证据链。</p>
+          <a href="https://semiengineering.com/eda-revenue-up-12-7-apac-roars-back/" target="_blank">→ SemiEngineering 原文</a>
+        </div>
+
+        <!-- News 2: Startup Funding Q2 2026 (semiconductor / AI-hardware / EDA-design-AI) -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>SemiEngineering · 行业融资盘点 · 2026-07-13 · Jesse Allen</div>
+          <h4>💰 半导体初创 Q2 2026 融资超 $60 亿（80 家），AI 硬件与"芯片设计 AI"成主线 — BoolSi / siliXon 等 AI-EDA 初创现身</h4>
+          <p>SemiEngineering 发布 2026 年 Q2 全球半导体与硬件初创融资盘点：本季 <strong>80 家初创公司融资超 $60 亿</strong>，资金高度集中于 <strong>AI 硬件（数据中心芯片 / 边缘 AI 硅 / 互连）</strong>、量子计算（21 家获融资，6 家超 $1 亿）与先进封装；边缘 AI 芯片重新受资本关注。在"AI for EDA / 芯片设计 AI"细分方向，本季涌现多个值得本站持续追踪的新实体：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li><strong>BoolSi</strong>：$6M Seed — 将嵌入式 C/C++ 软件编译为 FPGA 加速电路的编译器，<strong>含形式验证</strong>，属"软件到硬件"自动生成赛道</li>
+            <li><strong>siliXon</strong>：$1.5M Pre-Seed — EDA 工具链初创</li>
+            <li>邻近赛道：<strong>PhysicsX</strong> $300M（物理 AI，多物理场仿真智能）、<strong>Quanscient</strong> $11.6M（量子 / AI 硬件工程仿真）</li>
+            <li>此前本站已收录的 <strong>Cognichip</strong>（$60M，物理感知 AI 芯片设计基础模型）、<strong>Architect Labs</strong>（$24M，端到端 AI 芯片设计 + 可证明验证）亦被点名，印证该赛道资本持续升温</li>
+          </ul>
+          <strong>核心看点</strong>：本季融资结构印证——AI 服务器芯片需求不仅拉动 EDA 工具<strong>营收</strong>（见同日本站收录的 SEMI EDMD 季度报告），也在拉动<strong>设计侧 AI 初创投资</strong>。BoolSi 的"编译 + 形式验证"路线与本站长期跟踪的 Verilog/FPGA 生成、RAG 验证方向直接呼应，建议纳入"待追踪"清单。</p>
+          <a href="https://semiengineering.com/startup-funding-q2-2026/" target="_blank">→ SemiEngineering 原文</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-07-14">
   <div class="section-title"><span class="icon">🔧</span> 2026-07-14 <span class="badge-new">3条新闻</span> <span class="line"></span></div>

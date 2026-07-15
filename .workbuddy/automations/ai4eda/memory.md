@@ -1,3 +1,47 @@
+## 2026-07-16（并发污染 UNION 对账 + 07-15/07-16 合并提交）
+
+- 本进程在 07-15 并行实例已落地内容（未提交）基础上，补做 07-16 论文并做并发污染 UNION 对账，最终合并提交 07-15 + 07-16。
+- 07-16 新增论文 2 篇（均 2026-07-14 发布）：
+  - 2607.12788 CLIP-3D — 3D-IC 性能与物理约束闭环评估（热感知布图规划 + HotSpot 闭式可持续频率），归入 physical（→39 篇）
+  - 2607.12244 ORRAM — OpenROAD 原生标准单元 RAM 生成器（OpenSTA 时序验证，PDK 无关），归入 other（→29 篇）
+- 并发污染处置：并行进程曾向 dates/latest 2026-07-16.html 注入「TSMC Validated Flow 5.2」伪新闻卡片 + 小写错误 PDF 链接 `2607.12788_CLIP3D.pdf`。来源 qishuai-cn.com / vendordeep.com 为低可信聚合站、无官方 corroboration、且与既有 NVIDIA×TSMC / Cadence×TSMC / Synopsys×TSMC 官方认证新闻主题重复 → 判定不纳入策展；已移除伪新闻卡片、修正链接大小写、删除小写损坏 PDF。
+- 计数校正：并行进程创建 07-15 内容但漏增 papers/batches 计数；最终 papers 208 / batches 88 / news 154（基准 205/86/152 + 07-15 各 +1 + 07-16 论文 +2）。manifest dates 07-15 count 修正 2→3。
+- 一致性全绿：date/latest 各 2 / 3 卡片，PDF 链接与磁盘逐字节一致，news_memory 154 条无破损。
+- 经验教训：并发常"改头不改身"。对账须交叉验证 (a) section 内 abs-card 数 == subtitle/badge；(b) news_memory.totalItems == news/index.html header 数 == manifest.news；(c) 所有本地 PDF 链接文件名与磁盘逐字节一致（大小写敏感）；(d) manifest.papers/batches 须含并行实例已落地但未增计数的内容。
+
+---
+
+## 2026-07-15（并行实例落地，随 07-16 合并提交）
+
+- 由另一并行自动化实例执行并创建文件，但未提交；本次（07-16）合并提交。
+- 新增论文 1 篇：2607.11746 HiFi-LLP（图注意力延迟预测器 + 置信度路由 HIL 混合 NAS，8.6× 加速）→ analog（→23 篇）。
+- 行业动态 2 条：SEMI EDMD Q1 2026 EDA/IP 营收 +12.7%（亚太 +17.7%）；半导体初创 Q2 2026 融资超 $60 亿（BoolSi / siliXon 等 AI-EDA 初创）。
+- 产物：content/dates/2026-07-15.html（3 卡片）+ content/latest/2026-07-15.html + 2607.11746_HiFi-LLP.pdf + analog.html 分类卡片；news/index.html 新增 2026-07-15 section、news_memory.json +2 条、manifest 新增 2026-07-15 dates 条目。
+
+---
+
+## 2026-07-14（第 N+46 次执行 — 4 篇论文 + 3 条行业动态，已提交并 push）
+- 背景：本执行由续跑会话完成。一个并行自动化实例先行执行并提交 commit d4da886（已 push 至 origin/main），已落地 4 篇论文（LLM for EDA 前端 / ChipFuzzer / Chiplet3D / ReviewDSE）+ 2 条行业动态（silica-eda / SemiEngineering「AI 能否创建缺失模型」），并完成分类页、news/index.html、news_memory.json、manifest.js、papers/index.html 同步。本执行补做 Cadence AgentStack 第 3 条行业动态，并重建 content/dates + content/latest 每日页为完整 7 条（4 论文 + 3 新闻），校正 PDF 文件名大小写（2607.09616_LLM_EDA_FrontEnd.pdf）。
+- 新增论文：**4 篇**（均来自并行实例，本执行复核）
+  - ⚡ LLM for EDA in Front-End Design (arXiv:2607.09616, cs.ET, DAC 2026 特邀综述, 7/10) — 前端 EDA 中 LLM 从局部辅助到自主代理的演进框架；归入 rtl（65 篇）
+  - ✅ ChipFuzzer (arXiv:2607.10340, cs.AR, 7/11) — LLM 驱动双阶段 RTL 验证模糊测试；条件覆盖率 +5.8pt、缺陷检测率 +21.1pt；归入 verify（25 篇）
+  - 📐 Chiplet3D (arXiv:2607.09742, cs.AR, 7/3) — 引脚与热感知 3D Chiplet 布图规划（卷积嵌入 MILP）；线长 -39~43%、峰值温 -45.9°C；归入 physical（38 篇）
+  - 📐 ReviewDSE (arXiv:2607.11294, cs.AR, 7/13) — 保护式白盒 DSE（OpenROAD 详细布局）；HPWL -1.78%；归入 other（27 篇）
+- 行业动态：**新增 3 条（去重后净增，含并行实例 2 条 + 本执行 1 条）**
+  - 🚀 Cadence AgentStack（Cadence 官方博客 / CadenceLIVE Silicon Valley 2026, 7/14）— 总控智能体 + 五大 Super Agent（ChipStack/ViraStack/InnoStack/3DStack/SystemStack），Mental Models + Native Skills，运行于 Millennium M2000(NVIDIA)+CUDA-X+Omniverse+Nemotron
+  - 🔧 silica-eda 0.1.6（GitHub/PyPI, Christopher Simaan, 7/02）— 开源/商业 EDA 工具链 MCP 封装，自主 RTL 调试闭环
+  - 🔬 SemiEngineering「AI 能否创建 EDA 缺失模型」（Brian Bailey, 6/11）— 模型创建/验证成本成 AI 落地关键约束
+- 过期清理：✅ 无需清理（cutoffDate 2026-01-08）
+- news_memory.json：✅ totalItems 149→152，07-14 共 3 条（AgentStack + silica-eda + SemiEngineering）
+- content/news/index.html：✅ 07-14 section 3 卡，header 统计 205/86/152，导航含 AgentStack
+- content/dates/2026-07-14.html / content/latest/2026-07-14.html：✅ 重建为 7 卡（4 论文 + 3 新闻），PDF 路径 ../dates/...，LLM 前端 PDF 用 FrontEnd 大写 E 与磁盘实际文件名一致
+- manifest.js：✅ papers 205、batches 86、news 152、lastUpdate 2026-07-14；dates[0] count 6→7
+- content/papers/index.html：✅ meta refresh 指向 2026-07-14.html
+- Git commit/push：auto update: 2026-07-14（commit d4da886，已 push，14 files，含 4 PDF + 日期/最新页 + 分类/新闻/manifest）
+- 注意事项：并行实例与本执行曾发生文件写竞争（Edit 报 "modified since read"），并行实例于 23:06:11 落地 news/index.html，本执行在竞争平息后重建日期/最新页；git 于 23:07:28 由并行实例统一 commit 并 push，已含本执行写入。Cadence AgentStack 应作为本站长期跟踪的 Siemens Fuse / Synopsys AgentEngineer 对标项。
+
+---
+
 ## 2026-07-13（第 N+45 次执行 — 并发实例已落地 4 条新闻，本执行补录第 5 条 + 1 篇论文）
 - 背景：本窗口（7/11→7/13）恰逢并发自动化实例先行执行并提交（commit f487ee6，已 push），在 news/index.html、news_memory.json、manifest.js 落地了 4 条 07-13 行业动态（NVIDIA×SK hynix / 启芯宸光 DeepChip / Synopsys 剥离制造软件 / siliconcrew）。本执行在其基础上补录第 5 条新闻与 1 篇论文，并对账完全一致。
 - 搜索来源：arXiv cs.AR/cs.ET/cs.AI（7/11-7/13 窗口 2607.*）+ SemiEngineering + NVIDIA/Cadence/Synopsys/Siemens 博客 + GitHub EDA agent/MCP

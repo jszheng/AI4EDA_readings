@@ -7,9 +7,25 @@
 </head>
 <body>
 <section id="cat-other">
-  <div class="section-title"><span class="icon">📦</span> 其他（27篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📦</span> 其他（29篇） <span class="line"></span></div>
 
   <div class="abstracts">
+      <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2607.12244 · cs.AR · 2026-07-14 · Brayden Louie, Thinh P. Nguyen (NYU), Matt Liberty (Precision Innovations), Austin Rovinski (NYU)
+        </div>
+        <div class="abs-title">ORRAM：OpenROAD 原生、基于标准单元的可布图 RAM 生成器</div>
+        <div class="abs-body">
+          <p>存储推断（memory inference）仍是 turnkey ASIC 设计流程的痛点：从 RTL 推断触发器会生成数千个紧密互连的实例，严重拖慢流程并损害性能；存储编译器虽能解决，但多为第三方工具、PDK 专属、且需基础 PDK 之外的专用单元。本文提出 <strong>ORRAM</strong>——一个构建为 <strong>OpenROAD 原生模块、基于标准单元</strong>的存储生成器。给定标准单元库，ORRAM 产出一个<strong>完全布局布线（P&amp;R）完成的 RAM 块</strong>，无需自定义 bitcell 或外部工具，时序验证经 <strong>OpenSTA</strong> 而非 SPICE 仿真。ORRAM 支持任意字长、字数、掩码粒度、多端口读配置、列复用、基于锁存的存储，以及自动 PDK 无关的单元选择，兼容 sky130hd、NanGate45 等绝大多数标准单元库。在 SkyWater 130nm 上评估，ORRAM 在比特密度上匹配历史 DFFRAM 结果，同时提供显著扩展的功能集。源码已作为 OpenROAD 项目一部分开源。<br><strong>核心创新</strong>：OpenROAD 原生标准单元 RAM 生成器（RTL → 完全 P&amp;R，OpenSTA 时序验证，PDK 无关，sky130hd / NanGate45 兼容）。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2607.12244" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2607.12244_ORRAM.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">RAM 生成器</span>
+        </div>
+      </div>
       <div class="abs-card">
         <div class="abs-meta">
           <span class="badge-new">NEW</span>

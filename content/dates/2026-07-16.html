@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-16 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 来源：arXiv</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2607.12788 CLIP-3D: Closed-Loop Evaluation of Performance and Physical Constraints for 3D ICs -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-14 · Shuo Ren, Libo Shen, Yaohui Han, Leilei Jin, Chenghan Wang, Zhen Zhuang, Rongliang Fu, Bei Yu, Tsung-Yi Ho</div>
+      <h4>📐 CLIP-3D: Closed-Loop Evaluation of Performance and Physical Constraints for 3D ICs</h4>
+      <p>3D 集成在更小面积内塞入更强算力，但候选设计的<strong>实际吞吐取决于其物理布局</strong>：哪个宏单元落在哪一层、热点落在何处、cache 几何如何映射到访存周期。架构模拟器（如 gem5）只在理想时序下报告 IPC，并不产生决定真实 BIPS（billion-instructions-per-second）的逐块功率图、cache 周期计数或 3D 布局，导致早期 3D-IC 探索在忽略"决定硅上是否降频"的因素下选型。本文提出 <strong>CLIP-3D</strong>，一个<strong>左移（shift-left）flow</strong>，在调用任何签核工具前，就把 3D 布局驱动的<strong>热 / 互连 / cache 效应暴露给早期架构探索</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>阶段一</strong>：将架构配置提升为物理块表示——McPAT 算逐块动态/泄漏功耗、CACTI 算 cache 几何与访存周期、并做 HotSpot 兼容的 3D 堆叠离散化</li>
+        <li><strong>阶段二</strong>：在该表示上跑一个<strong>解析的 3D 热感知布图规划器</strong>；其目标函数内嵌一个由 HotSpot 稳态算子线性度与标准 CMOS 功率–频率分解导出的<strong>闭式可持续频率表达式</strong></li>
+        <li><strong>联合优化</strong>：跨层宏分配与层内布局<strong>为真实 BIPS 而非"HPWL + 温度、手工调权"的代理目标</strong>共同优化</li>
+      </ul>
+      出自 Bei Yu / Tsung-Yi Ho 团队（与本站 7/3 收录的 Chiplet3D 同一作者群，本文将其从"引脚/热感知布图"推进到"性能–物理约束闭环评估"）。<br>
+      <strong>核心创新</strong>：3D-IC 性能–物理约束闭环节估 + HotSpot 稳态线性度导出的闭式可持续频率 + 为真实 BIPS 联合优化跨层/层内布局<br>
+      <strong>标签</strong>：物理设计 · 3D-IC · Chiplet · 热感知 · 闭环节估 · 布图规划 · 多物理场</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">物理设计</span>
+        <span class="tag">3D-IC</span>
+        <span class="tag">Chiplet</span>
+        <span class="tag">热感知</span>
+        <span class="tag">闭环节估</span>
+        <span class="tag">布图规划</span>
+        <span class="tag">多物理场</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.12788" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.12788_CLIP-3D.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.12244 ORRAM: An OpenROAD-Integrated RAM Generator Using Standard Cells -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-14 · Brayden Louie, Thinh P. Nguyen, Matt Liberty, Austin Rovinski（NYU / Precision Innovations）</div>
+      <h4>📐 ORRAM: An OpenROAD-Integrated RAM Generator Using Standard Cells</h4>
+      <p>在 turnkey ASIC 设计流程中，<strong>存储推断（memory inference）仍是重大挑战</strong>：从 RTL 推断触发器会生成数千个密集互连的实例，严重拖慢流程并损害性能；存储编译器虽能解决，但多为第三方、PDK 专用，且可能需要基础 PDK 中没有的专用单元。本文提出 <strong>ORRAM</strong>，一个<strong>内置于 OpenROAD 的标准单元存储生成器</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li>给定标准单元库，ORRAM 产出<strong>已布局布线、无需定制 bitcell 或外部工具的 RAM 块</strong>，时序验证经 <strong>OpenSTA</strong>（非 SPICE 仿真）</li>
+        <li>支持任意字长 / 字数、掩码粒度、多端口读配置、列复用、基于锁存的存储，并<strong>自动做 PDK 无关的单元选择</strong>，兼容 sky130hd 与 NanGate45</li>
+        <li>在 SkyWater 130nm 上评估，ORRAM <strong>比特密度与历史 DFFRAM 结果持平</strong>，但功能集大幅扩展</li>
+        <li>源码作为 <strong>OpenROAD 项目的一部分</strong>开放（发表于 2026 OSCAR Workshop）</li>
+      </ul>
+      <strong>核心创新</strong>：OpenROAD 原生标准单元 RAM 生成器 + OpenSTA 时序验证 + PDK 无关 + 已布局布线输出；延续本站对 OpenROAD 生态（AgenticPD / ReviewDSE / Kokkos GPU 布局加速）的重点跟踪<br>
+      <strong>标签</strong>：物理设计 · OpenROAD · 存储生成 · RAM · 标准单元 · 开源EDA</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">物理设计</span>
+        <span class="tag">OpenROAD</span>
+        <span class="tag">存储生成</span>
+        <span class="tag">RAM</span>
+        <span class="tag">标准单元</span>
+        <span class="tag">开源EDA</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.12244" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.12244_ORRAM.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
