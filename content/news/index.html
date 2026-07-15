@@ -21,14 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-16 · 涵盖 2026-01 → 2026-07-16 · 已去重整理 · 新增 2 篇论文（CLIP-3D 闭环 3D-IC 性能与物理约束评估 / ORRAM OpenROAD 标准单元 RAM 生成器）</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-16 · 涵盖 2026-01 → 2026-07-16 · 已去重整理 · 新增 3 篇论文（CLIP-3D 闭环 3D-IC 性能与物理约束评估 / ORRAM OpenROAD 标准单元 RAM 生成器 / HiFi-LLP 图注意力延迟预测）+ 2 条行业动态（TSMC Validated Flow 5.2 强制认证 / NVIDIA Apollo 开源科学仿真）</p>
   <div class="stats">
     <div class="stat"><div class="num">208</div><div class="label">论文收录</div></div>
     <div class="stat"><div class="num">88</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">154</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">156</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-07-16">260716 🏭 TSMC Validated Flow 5.2 强制认证 (Synopsys Fusion Compiler / Cadence Innovus / Ansys RedHawk-SC) + 🚀 NVIDIA Apollo 开源科学仿真</a>
   <a href="#2026-07-15">260715 📊 EDA/SIP 营收 +12.7% (APAC 反弹) + 💰 Q2 初创融资 $60亿 (BoolSi/siliXon)</a>
   <a href="#2026-07-14">260714 ⚡ LLM for EDA 前端(DAC) + ✅ ChipFuzzer RTL验证 + 📐 Chiplet3D 布图 + 🤖 ReviewDSE 白盒DSE + 🚀 Cadence AgentStack + 🔧 silica-eda + 🔬 SemiEngineering AI模型</a>
   <a href="#2026-07-13">260713 🤝 NVIDIA×SK hynix + 🇨🇳 启芯宸光 DeepChip + 🏭 Synopsys 转向 AI + 🔧 siliconcrew + 🔧 pyslang-mcp</a>
@@ -123,6 +124,40 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-07-16">
+  <div class="section-title"><span class="icon">🔧</span> 2026-07-16 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-07-16 行业动态（2条）</h3>
+      <span class="badge-count">2</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+
+        <!-- News 1: TSMC Validated Flow 5.2 certification now gates sub-7nm capacity (effective 2026-07-15) -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>TSMC · 先进制程产能政策 · 2026-07-15 生效 · TSMC Advanced Process Capacity Collaborative Management Guideline</div>
+          <h4>🏭 TSMC 将 sub-7nm 产能调度与 Validated Flow 5.2 认证绑定 — 未认证 EDA 流程订单面临 ≥8 周排产延迟</h4>
+          <p>TSMC 于 2026-07-01 发布《先进制程产能协同管理指引》，<strong>2026-07-15 起生效</strong>：外包 7nm 及更先进节点逻辑 IC（含 AI 手机 AP、ISP 芯片）的客户，其 EDA 设计流程须完成 <strong>TSMC Validated Flow 5.2 全栈认证</strong>，认证范围涵盖 <strong>Synopsys Fusion Compiler、Cadence Innovus、Ansys RedHawk-SC</strong>。基于未认证流程的订单将面临<strong>至少 8 周的生产排产延迟</strong>。<br>
+          <strong>核心看点</strong>：这是 EDA 工具链合规首次被直接写入晶圆厂<strong>产能准入条件</strong>——设计工具选择不再是纯技术偏好，而是产能获取的前置门槛；直接利好已通过认证的 Synopsys / Cadence / Ansys 全流程，并倒逼国产 EDA 供应商加速对齐 TSMC 生态。对 AI 手机 AP/ISP 芯片的投片节奏、MPW 排期与交付规划产生实质性约束，呼应本站对"AI 算力需求 → EDA 工具双位数增长 → 先进节点产能争夺"主线的跟踪。</p>
+          <a href="https://www.qishuai-cn.com/news/Integrated_Circuits/Logic_Memory_ICs_7nm_sub_7nm_/TSMC_Sets_New_Sub_7nm_Capacity_Rules_for_AI_Phone_Chips.html" target="_blank">→ 报道原文（TSMC 指引 / qishuai-cn）</a>
+        </div>
+
+        <!-- News 2: NVIDIA Apollo open scientific simulation models + Synopsys 500x via NVIDIA AI Physics -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>NVIDIA · 官方博客 · 2026-07 · NVIDIA Blog（Apollo 开源模型家族）</div>
+          <h4>🚀 NVIDIA 发布 Apollo 开源科学仿真模型家族 — Synopsys 借 NVIDIA AI Physics 实现计算工程最高 500× 加速</h4>
+          <p>NVIDIA 发布 <strong>Apollo</strong> 开源模型家族，面向科学仿真（scientific simulation），让设计选项探索比传统方法快数个数量级。关键产业落地：<strong>Synopsys 正采用 NVIDIA AI Physics（AI 物理代理模型）实现 GPU 加速，在计算工程（computational engineering）中取得最高 500× 加速</strong>；以 AI 物理代理初始化，<strong>Ansys Fluent</strong> 等 GPU 加速流体仿真工具的运行时间可大幅缩短。<br>
+          <strong>核心看点</strong>：这是 NVIDIA <strong>CUDA-X（cuDF / cuOpt / NeMo / PhysicsNeMo / CUDA-Q 作为 Agent 技能）+ NemoClaw / OpenShell 自主 AI 工程师</strong>生态在<strong>多物理场仿真</strong>侧的延伸，直接呼应本站"多物理场 AI 分析 / cuLitho / 计算光刻"主线——Synopsys（Ansys）将 AI 物理代理模型导入计算工程，是 AI 原生多物理场仿真从研究走向产业化的明确信号，亦补全本站对 Synopsys Multiphysics Fusion 的跟踪。</p>
+          <a href="https://blogs.nvidia.com/blog/apollo-open-models/" target="_blank">→ NVIDIA 官方博客</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-07-15">
   <div class="section-title"><span class="icon">🔧</span> 2026-07-15 <span class="badge-new">2条新闻</span> <span class="line"></span></div>

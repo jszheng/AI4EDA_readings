@@ -20,7 +20,7 @@
 <body>
 <header>
   <h1>📅 2026-07-16 动态</h1>
-  <p class="subtitle">共 2 篇论文 · 来源：arXiv</p>
+  <p class="subtitle">共 3 篇论文 · 2 条行业动态 · 来源：arXiv / TSMC / NVIDIA</p>
 </header>
 <section>
   <div class="abstracts">
@@ -48,7 +48,7 @@
         <span class="tag">多物理场</span>
       </div>
       <a href="https://arxiv.org/abs/2607.12788" target="_blank">📄 arXiv</a>
-      &nbsp;<a href="../dates/../dates/2607.12788_CLIP-3D.pdf" class="local">📥 本地 PDF</a>
+      &nbsp;<a href="../dates/2607.12788_CLIP-3D.pdf" class="local">📥 本地 PDF</a>
     </div>
 
     <!-- 2607.12244 ORRAM -->
@@ -73,6 +73,42 @@
       </div>
       <a href="https://arxiv.org/abs/2607.12244" target="_blank">📄 arXiv</a>
       &nbsp;<a href="../dates/2607.12244_ORRAM.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.11746 HiFi-LLP -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG / cs.AR · 2026-07-13 · Shambhavi Balamuthu Sampath, Behzad Shomali, Nael Fasfous, Moritz Thoma, Judeson Anthony Fernando, Lukas Frickenstein, Pierpaolo Mori, Manoj Rohit Vemparala, Alexander Frickenstein, Walter Stechele</div>
+      <h4>⚡ HiFi-LLP：面向鲁棒 HW-NAS 的高保真、低成本、带置信度的延迟预测器</h4>
+      <p>随着 DNN 在边缘设备部署，硬件感知优化（HW-NAS）依赖目标硬件真实反馈定制架构，但<strong>硬件在环（HIL）延迟测量串行瓶颈</strong>严重拖慢搜索；现有延迟预测器面临两大挑战：(1) 平台专属预测器常需数万样本，(2) 不准确预测会误导 NAS 过程。本文提出 <strong>HiFi-LLP</strong>，一个基于<strong>图注意力网络（graph attention networks）</strong>的高保真、低成本延迟预测器，并引入<strong>置信度度量</strong>。在 LatBench 数据集 6 款设备上：10% 精度边界内优于先前平台专属预测器最高 <strong>9 个百分点（p.p.）</strong>，Spearman 秩相关最高 <strong>0.996</strong>。进一步提出<strong>混合 NAS 框架</strong>：将低置信度预测路由至 HIL，相较典型 NAS 最高取得 <strong>8.6× 加速</strong>，同时保持有竞争力的帕累托前沿。<br>
+      <strong>核心创新</strong>：图注意力延迟预测器 + 置信度度量 + 低置信度路由 HIL 的混合 NAS（8.6× 加速）<br>
+      <strong>标签</strong>：硬件神经网络架构搜索 · 延迟预测 · 图注意力网络 · 置信度 · 设计空间探索</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">HW-NAS</span>
+        <span class="tag">延迟预测</span>
+        <span class="tag">图注意力网络</span>
+        <span class="tag">置信度</span>
+        <span class="tag">设计空间探索</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.11746" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.11746_HiFi-LLP.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- News: TSMC Validated Flow 5.2 certification now gates sub-7nm capacity (effective 2026-07-15) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>TSMC · 先进制程产能政策 · 2026-07-15 生效 · TSMC Advanced Process Capacity Collaborative Management Guideline</div>
+      <h4>🏭 TSMC 将 sub-7nm 产能调度与 Validated Flow 5.2 认证绑定 — 未认证 EDA 流程订单面临 ≥8 周排产延迟</h4>
+      <p>TSMC 于 2026-07-01 发布《先进制程产能协同管理指引》，<strong>2026-07-15 起生效</strong>：外包 7nm 及更先进节点逻辑 IC（含 AI 手机 AP、ISP 芯片）的客户，其 EDA 设计流程须完成 <strong>TSMC Validated Flow 5.2 全栈认证</strong>，认证范围涵盖 <strong>Synopsys Fusion Compiler、Cadence Innovus、Ansys RedHawk-SC</strong>。基于未认证流程的订单将面临<strong>至少 8 周的生产排产延迟</strong>。<br>
+      <strong>核心看点</strong>：这是 EDA 工具链合规首次被直接写入晶圆厂<strong>产能准入条件</strong>——设计工具选择不再是纯技术偏好，而是产能获取的前置门槛；直接利好已通过认证的 Synopsys / Cadence / Ansys 全流程，并倒逼国产 EDA 供应商加速对齐 TSMC 生态。对 AI 手机 AP/ISP 芯片的投片节奏、MPW 排期与交付规划产生实质性约束，呼应本站对"AI 算力需求 → EDA 工具双位数增长 → 先进节点产能争夺"主线的跟踪。</p>
+      <a href="https://www.qishuai-cn.com/news/Integrated_Circuits/Logic_Memory_ICs_7nm_sub_7nm_/TSMC_Sets_New_Sub_7nm_Capacity_Rules_for_AI_Phone_Chips.html" target="_blank">→ 报道原文（TSMC 指引 / qishuai-cn）</a>
+    </div>
+
+    <!-- News: NVIDIA Apollo open scientific simulation models + Synopsys 500x via NVIDIA AI Physics -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>NVIDIA · 官方博客 · 2026-07 · NVIDIA Blog（Apollo 开源模型家族）</div>
+      <h4>🚀 NVIDIA 发布 Apollo 开源科学仿真模型家族 — Synopsys 借 NVIDIA AI Physics 实现计算工程最高 500× 加速</h4>
+      <p>NVIDIA 发布 <strong>Apollo</strong> 开源模型家族，面向科学仿真（scientific simulation），让设计选项探索比传统方法快数个数量级。关键产业落地：<strong>Synopsys 正采用 NVIDIA AI Physics（AI 物理代理模型）实现 GPU 加速，在计算工程（computational engineering）中取得最高 500× 加速</strong>；以 AI 物理代理初始化，<strong>Ansys Fluent</strong> 等 GPU 加速流体仿真工具的运行时间可大幅缩短。<br>
+      <strong>核心看点</strong>：这是 NVIDIA <strong>CUDA-X（cuDF / cuOpt / NeMo / PhysicsNeMo / CUDA-Q 作为 Agent 技能）+ NemoClaw / OpenShell 自主 AI 工程师</strong>生态在<strong>多物理场仿真</strong>侧的延伸，直接呼应本站"多物理场 AI 分析 / cuLitho / 计算光刻"主线——Synopsys（Ansys）将 AI 物理代理模型导入计算工程，是 AI 原生多物理场仿真从研究走向产业化的明确信号，亦补全本站对 Synopsys Multiphysics Fusion 的跟踪。</p>
+      <a href="https://blogs.nvidia.com/blog/apollo-open-models/" target="_blank">→ NVIDIA 官方博客</a>
     </div>
 
   </div>

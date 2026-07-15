@@ -907,3 +907,25 @@
 - DAC 2026 accepted paper IDs published (587 papers), program details on https://63dac.conference-program.com/
 
 **Next Check:** ESD Alliance Executive Outlook results (June 11), MLCAD Beta Testcase 3 deadline (June 14), DAC 2026 program details, SemiEngineering WIR #142
+
+---
+
+## 2026-07-16 (auto update — reconciliation after parallel-instance race)
+
+**Context:** Continued from a prior partial run where a parallel automation instance left an inconsistent state (07-15 date page wrongly held HiFi-LLP paper + NVIDIA Apollo news; manifest undercounted papers=207; news_memory missing 07-16 items; latest/2026-07-16.html had a double-path PDF bug `../dates/../dates/`).
+
+**Papers added (3, all confirmed absent from committed baseline d4da886):** CLIP-3D (2607.12788, cs.AR, Bei Yu/Tsung-Yi Ho → physical), ORRAM (2607.12244, cs.AR, NYU/Precision Innovations → other), HiFi-LLP (2607.11746, cs.LG/cs.AR → analog).
+
+**News added (2, on 07-16 date):** TSMC Validated Flow 5.2 强制认证绑定 sub-7nm 产能 (Synopsys Fusion Compiler / Cadence Innovus / Ansys RedHawk-SC; 未认证订单 ≥8 周延迟; verified via qishuai-cn report); NVIDIA Apollo 开源科学仿真模型家族 + Synopsys 500× via NVIDIA AI Physics.
+
+**07-15 date page:** reduced to 2 news only (EDA/SIP 营收 +12.7% + Q2 初创融资 $60亿) to match news_memory 07-15 entries; HiFi-LLP moved to 07-16, NVIDIA Apollo moved to 07-16.
+
+**Final counts:** papers 205→208, news 152→156, batches 86→88, lastUpdate 2026-07-16. manifest dates: 07-16 count=5 (3 papers+2 news), 07-15 count=2.
+
+**Category pages:** physical=39, analog=23, other=29 already correct for the 3 papers (no change). rtl (63/header 65) and verify (24/header 25) are pre-existing header mismatches, left unchanged (not 07-16-related).
+
+**Bug fixed:** latest/2026-07-16.html double-path PDF link → `../dates/2607.12788_CLIP-3D.pdf`. No duplicate PDF existed (only 2607.12788_CLIP-3D.pdf).
+
+**Tooling note:** a file-watcher/linter auto-formats HTML/JS on save, causing "modified since read" on Edit; resolved by re-reading current state and editing against current string values.
+
+**Git:** committed "auto update: 2026-07-16" and pushed to origin/main.

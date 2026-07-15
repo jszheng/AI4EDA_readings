@@ -1,8 +1,57 @@
 {
-  "lastUpdate": "2026-07-15",
+  "lastUpdate": "2026-07-16",
   "cutoffDate": "2026-01-08",
-  "totalItems": 154,
+  "totalItems": 156,
   "items": [
+    {
+      "date": "2026-07-16",
+      "company": "TSMC",
+      "title": "🏭 TSMC 将 sub-7nm 产能调度与 Validated Flow 5.2 认证绑定 — 未认证 EDA 流程订单面临 ≥8 周排产延迟",
+      "link": "https://www.qishuai-cn.com/news/Integrated_Circuits/Logic_Memory_ICs_7nm_sub_7nm_/TSMC_Sets_New_Sub_7nm_Capacity_Rules_for_AI_Phone_Chips.html",
+      "keywords": [
+        "TSMC",
+        "Validated Flow 5.2",
+        "sub-7nm",
+        "认证",
+        "certification",
+        "Synopsys Fusion Compiler",
+        "Cadence Innovus",
+        "Ansys RedHawk-SC",
+        "产能调度",
+        "capacity",
+        "排产延迟",
+        "8周",
+        "AI手机",
+        "AP",
+        "ISP",
+        "2026-07-15"
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "company": "NVIDIA",
+      "title": "🚀 NVIDIA 发布 Apollo 开源科学仿真模型家族 — Synopsys 借 NVIDIA AI Physics 实现计算工程最高 500× 加速",
+      "link": "https://blogs.nvidia.com/blog/apollo-open-models/",
+      "keywords": [
+        "NVIDIA",
+        "Apollo",
+        "开源",
+        "open models",
+        "科学仿真",
+        "scientific simulation",
+        "AI Physics",
+        "物理代理模型",
+        "Synopsys",
+        "Ansys Fluent",
+        "计算工程",
+        "computational engineering",
+        "500x",
+        "CUDA-X",
+        "NemoClaw",
+        "多物理场",
+        "2026-07-16"
+      ]
+    },
     {
       "date": "2026-07-15",
       "company": "SemiEngineering / SEMI EDMD / Ed Sperling",
