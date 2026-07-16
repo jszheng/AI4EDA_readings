@@ -7,9 +7,35 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（23篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（25篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+      <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span> Lighthouse RL: Sample-Efficient Circuit Optimization via Strategic Reset Points</div>
+          <div class="abs-meta">arXiv:2607.14008 · cs.LG / cs.AR · 2026-07-15 · Mustafa Emre Gürsoy, Stefan Uhlich, Ryoga Matsuo, Yağız Gençer, Arun Venkitaraman, Chia-Yu Hsieh, Andrea Bonetti, Eisaku Ohbuchi, Lorenzo Servadei</div>
+          <div class="abs-body">提出 <strong>Lighthouse RL</strong>，一种样本高效的强化学习（RL）方法，面向<strong>模拟电路尺寸确定（analog circuit sizing）</strong>。传统方法在不同性能目标间缺乏泛化，标准 RL 浪费资源探索无前途区域；本文通过<strong>战略重置（strategic reset）策略</strong>解决——从训练中发现的高性能配置（"lighthouses" 灯塔）初始化 episode，引导探索走向有希望区域。在 2D 基准与两个模拟电路上，相较文献中的 RL 与贝叶斯优化：样本效率最高提升 <strong>1.72×</strong>、成功率 <strong>100% vs 0–87%</strong>、外推成功率 <strong>75% vs 0–50%</strong>；重置策略可作即插即用增强用于任意基于 RL 的优化。出自 Sony（Stefan Uhlich 等）团队，延续本站对 RL for 电路尺寸 / 模拟设计自动化（NEMESIS / PANDA / SABLE）的重点跟踪。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2607.14008" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2607.14008_Lighthouse-RL.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">电路尺寸</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">强化学习</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">样本高效</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">模拟电路</span>
+          </div>
+      </div>
+      <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span> EXPLORE: Exploration with Guided Search for Analog Topology Generation using Language Models</div>
+          <div class="abs-meta">arXiv:2607.13416 · cs.LG · 2026-07-15 · Guanglei Zhou, Chen-Chia Chang, Yikang Shen, Jonathan Ku, Isaac Jacobson, Jingyu Pan, Yiran Chen, Xin Zhang (Duke / IBM)</div>
+          <div class="abs-body">提出 <strong>EXPLORE</strong>，一个搜索增强框架，将<strong>仿真器引导的蒙特卡洛树搜索（MCTS）</strong>与 <strong>Transformer 解码</strong>结合，为<strong>模拟电路拓扑生成</strong>实现测试时扩展（test-time scaling）。此前工作用序列到序列微调让预训练语言模型单遍直接生成拓扑，但因搜索空间指数增长与训练数据有限，难以生成复杂电路。EXPLORE 利用语言模型先验、跳过高置信度结构 token，把昂贵的仿真器预算主要投向<strong>改变拓扑的关键决策</strong>。在 6 元件基准、0.01 严格容差下，成功率从单遍生成的 <strong>12%</strong>、采样-过滤基线的 <strong>33%</strong> 提升至 <strong>65%</strong>，相同搜索预算下 MSE 降低超 <strong>20%</strong>。这是首个将结构化测试时搜索与 LM 解码集成用于模拟拓扑生成的框架。延续本站对 LaMAGIC / AnalogSeeker 等模拟拓扑生成方向的跟踪。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2607.13416" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2607.13416_EXPLORE.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拓扑生成</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">LLM</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">MCTS</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">模拟设计</span>
+          </div>
+      </div>
     <div class="abs-card">
           <div class="abs-title"><span class="badge-new">NEW</span> HiFi-LLP: High-Fidelity, Low-Cost Latency Predictors with Confidence for Robust HW-NAS</div>
           <div class="abs-meta">arXiv:2607.11746 · cs.LG / cs.AR · 2026-07-13 · Shambhavi Balamuthu Sampath, Behzad Shomali, Nael Fasfous, Moritz Thoma, Judeson Anthony Fernando, Lukas Frickenstein, Pierpaolo Mori, Manoj Rohit Vemparala, Alexander Frickenstein, Walter Stechele</div>

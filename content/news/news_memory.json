@@ -1,8 +1,36 @@
 {
-  "lastUpdate": "2026-07-16",
+  "lastUpdate": "2026-07-17",
   "cutoffDate": "2026-01-08",
-  "totalItems": 156,
+  "totalItems": 157,
   "items": [
+    {
+      "date": "2026-07-17",
+      "company": "Cadence",
+      "title": "🚀 Cadence 发布 AuraStack AI 超级智能体 — 业界首个面向 PCB 与先进封装的智能体 AI 平台（硅到系统全栈）",
+      "link": "https://newsroom.cadence.com/press-releases/press-release-details/2026/Cadence-Introduces-AuraStack-AI-Super-Agent-the-Worlds-First-Agentic-AI-Platform-for-PCB-and-Advanced-Packaging/default.aspx",
+      "keywords": [
+        "Cadence",
+        "AuraStack",
+        "Allegro AI Studio",
+        "PCB",
+        "先进封装",
+        "advanced packaging",
+        "agentic AI",
+        "super agent",
+        "NVIDIA Blackwell",
+        "CUDA-X",
+        "多物理场",
+        "Celsius",
+        "Clarity 3D",
+        "Sigrity",
+        "Millennium M2000",
+        "ChipStack",
+        "InnoStack",
+        "ViraStack",
+        "15x",
+        "2026-07-15"
+      ]
+    },
     {
       "date": "2026-07-16",
       "company": "TSMC",

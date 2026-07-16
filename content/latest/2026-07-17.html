@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-17 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 1 条行业动态 · 来源：arXiv / Cadence</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2607.13079 ChipVerilog -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.PL · 2026-07-12 · Yan Tan, Jiping Du, Xiangchen Meng, Yangdi Lyu（HKUST-GZ 香港科技大学·广州）</div>
+      <h4>⚡ ChipVerilog：源自 OpenCores 的大规模 LLM Verilog RTL 生成基准</h4>
+      <p>大语言模型在 Verilog RTL 生成上潜力巨大，但<strong>现有基准多为短小、自包含的模块级任务</strong>（适合受控评测，却无法体现真实 IP / 处理器核 RTL 的代码规模、层次结构与模块间交互）。本文提出 <strong>ChipVerilog</strong>——一个源自 <strong>OpenCores IP / core 设计</strong>的"描述到 Verilog"生成基准：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li>含 <strong>64 个生成目标</strong>，覆盖 5 个设计家族：<strong>OR1200、双精度 FPU、MIPS-16、I2C、CORDIC</strong></li>
+        <li>既含单模块目标，也含<strong>跨模块目标</strong>（实例化 / 交互其他 RTL 模块）；部分目标 <strong>超过 1,000 行 Verilog</strong>，规模与结构复杂度远超典型模块级测试集</li>
+        <li>每个实例由<strong>一对规格文档 + 参考 RTL</strong> 构造：抽取目标功能、撰写详细自然语言描述、人工复核正确性与清晰度</li>
+        <li>生成 RTL 通过<strong>编译检查</strong> + 局部模块<strong>等价性检查</strong>、集成 IP/core 目标<strong>仿真</strong>验证</li>
+      </ul>
+      <strong>核心结论</strong>：大规模 RTL 仍极具挑战，尤其是<strong>层次化与跨模块设计</strong>——补齐了本站长期跟踪的 VerilogEval / RTLLM / OpenRTLSet 等基准在"IP/core 级复杂度"上的空白。<br>
+      <strong>核心创新</strong>：OpenCores 衍生的千行级 / 跨模块 Verilog 生成基准 + 规格文档配对 + 等价性/仿真双轨验证<br>
+      <strong>标签</strong>：RTL生成 · LLM · Verilog · 基准 · OpenCores · 跨模块 · 等价性检查</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">LLM</span>
+        <span class="tag">Verilog</span>
+        <span class="tag">基准</span>
+        <span class="tag">OpenCores</span>
+        <span class="tag">跨模块</span>
+        <span class="tag">等价性检查</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.13079" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.13079_ChipVerilog.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.13416 EXPLORE -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · 2026-07-15 · Guanglei Zhou, Chen-Chia Chang, Yikang Shen, Jonathan Ku, Isaac Jacobson, Jingyu Pan, Yiran Chen, Xin Zhang（Duke 杜克大学 / IBM / MIT-IBM）</div>
+      <h4>🔬 EXPLORE：以引导式搜索 + 语言模型做模拟电路拓扑生成</h4>
+      <p>自动化模拟电路拓扑设计对减少人工投入、满足日益多样的定制化需求至关重要。近期工作用<strong>序列到序列微调</strong>让预训练语言模型从用户规格<strong>单遍（one-shot）直接生成拓扑</strong>，但<strong>因搜索空间指数级增长 + 训练数据有限，无法生成复杂电路</strong>。本文提出 <strong>EXPLORE</strong>——一个<strong>搜索增强框架</strong>，将<strong>仿真器引导的蒙特卡洛树搜索（MCTS）</strong>与 <strong>Transformer 解码</strong>结合，实现模拟拓扑生成的<strong>测试时扩展（test-time scaling）</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li>利用<strong>语言模型先验</strong>并<strong>跳过高置信度结构 token</strong>，把昂贵的仿真器预算主要投向<strong>改变拓扑的关键决策</strong></li>
+        <li>在 <strong>6 元件基准、0.01 严格容差</strong>下，成功率从单遍生成的 <strong>12%</strong>、采样-过滤基线的 <strong>33%</strong> 提升至 <strong>65%</strong></li>
+        <li>相同搜索预算下，相较采样-过滤基线 <strong>MSE 降低超 20%</strong></li>
+      </ul>
+      <strong>核心创新</strong>：首个将结构化测试时搜索（MCTS）与 LM 解码集成用于模拟拓扑生成的框架——是 LLM 驱动设计自动化"可扩展化"的务实一步；延续本站对模拟/版图 AI（AnalogSeeker / LaMAGIC 等）的跟踪。<br>
+      <strong>标签</strong>：模拟设计 · 拓扑生成 · LLM · MCTS · 测试时扩展 · 仿真引导</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">模拟设计</span>
+        <span class="tag">拓扑生成</span>
+        <span class="tag">LLM</span>
+        <span class="tag">MCTS</span>
+        <span class="tag">测试时扩展</span>
+        <span class="tag">仿真引导</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.13416" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.13416_EXPLORE.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.14008 Lighthouse RL -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG / cs.AR · 2026-07-15 · Mustafa Emre Gürsoy, Stefan Uhlich, Ryoga Matsuo, Yağız Gençer, Arun Venkitaraman, Chia-Yu Hsieh, Andrea Bonetti, Eisaku Ohbuchi（Sony 索尼）</div>
+      <h4>🔬 Lighthouse RL：以"策略性重置点"实现样本高效的电路优化</h4>
+      <p>本文提出 <strong>Lighthouse RL</strong>——面向<strong>模拟电路尺寸优化（analog circuit sizing）</strong>的样本高效强化学习方法。传统方法<strong>难以跨不同性能目标泛化</strong>，而标准 RL <strong>浪费资源探索无前景区域</strong>。其核心是一种<strong>策略性重置策略</strong>：从训练中发现的高性能配置（称为 <strong>"灯塔 lighthouses"</strong>）初始化 episode——这些更接近目标的状态会把探索引向有前景的区域：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li>相较文献中的 RL 与贝叶斯优化方法，在 2D 基准问题与两个模拟电路上验证有效</li>
+        <li><strong>样本效率</strong>最高快 <strong>1.72×</strong>；<strong>优化性能</strong>成功率 <strong>100%（对比 0–87%）</strong>；<strong>泛化</strong>外推成功率 <strong>75%（对比 0–50%）</strong></li>
+        <li>该重置策略可作为<strong>即插即用增强</strong>，用于任意基于 RL 的优化方法</li>
+      </ul>
+      <strong>核心创新</strong>：面向昂贵黑盒优化的"灯塔重置"样本高效 RL——即插即用、提升泛化与成功率；与本站长期跟踪的 RL-for-EDA（布局布线/尺寸调整）主线直接呼应。<br>
+      <strong>标签</strong>：模拟设计 · 强化学习 · 电路尺寸 · 样本效率 · 黑盒优化 · 泛化</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">模拟设计</span>
+        <span class="tag">强化学习</span>
+        <span class="tag">电路尺寸</span>
+        <span class="tag">样本效率</span>
+        <span class="tag">黑盒优化</span>
+        <span class="tag">泛化</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.14008" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.14008_Lighthouse-RL.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- News: Cadence AuraStack AI Super Agent for PCB & Advanced Packaging -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Cadence · 官方新闻稿 · 2026-07-15 · Cadence Newsroom（Allegro AI Studio）</div>
+      <h4>🚀 Cadence 发布 AuraStack AI 超级智能体 — 业界首个面向 PCB 与先进封装的智能体 AI 平台（硅到系统全栈）</h4>
+      <p>Cadence 推出运行于 <strong>Allegro AI Studio</strong> 的 <strong>AuraStack AI Super Agent</strong>，号称业界首个面向 <strong>PCB 与先进封装设计</strong>的智能体 AI 平台，把设计者从系统规划一路带到最终产品，全程在单一 AI 原生环境内完成。由 <strong>NVIDIA Blackwell + CUDA-X</strong> 加速，协调跨规划、实现与紧耦合多物理场分析的领域专用 Agent。<br>
+      <strong>关键数据与看点</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>上市时间缩短 2×、工程效率提升 15×</strong>，多物理场驱动质量；与 <strong>Millennium M2000 超算</strong>配合，NVIDIA 称多物理场性能最高 <strong>20×</strong></li>
+        <li>统一 AI 驱动多物理场底座，闭环并发优化<strong>电气 / 热 / 机械</strong>行为（SI/PI、热、机械应力、跌落、振动、疲劳），整合 <strong>Celsius 热求解器、Clarity 3D-EM、Sigrity X、MSC Nastran / Marc</strong></li>
+        <li>与此前 <strong>ChipStack / InnoStack / ViraStack</strong> 一道，使 Cadence 成为唯一覆盖<strong>数字/模拟硅 → 先进封装 → PCB</strong> 全电子系统设计流程的智能体 AI 供应商</li>
+        <li>演示：5G 手机主板重设计，物料合并<strong>降本 28%</strong>、自动定位更廉价 PMIC；台积电基板布线部署称达 <strong>100× 生产力</strong></li>
+      </ul>
+      <strong>核心看点</strong>：AI Agent 的战场从"硅设计"正式外延至"封装 + PCB 系统级"——呼应本站"Agentic AI 重塑 EDA 全流程"主线（Synopsys agent teams / Cadence super agents / Siemens Aprisa AI）；多物理场闭环 + Chiplet/2.5D/3D 封装协同优化，与本站 Chiplet 互连/热分布主线高度契合。</p>
+      <a href="https://newsroom.cadence.com/press-releases/press-release-details/2026/Cadence-Introduces-AuraStack-AI-Super-Agent-the-Worlds-First-Agentic-AI-Platform-for-PCB-and-Advanced-Packaging/default.aspx" target="_blank">→ Cadence 官方新闻稿</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

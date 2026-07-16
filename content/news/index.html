@@ -21,14 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-16 · 涵盖 2026-01 → 2026-07-16 · 已去重整理 · 新增 3 篇论文（CLIP-3D 闭环 3D-IC 性能与物理约束评估 / ORRAM OpenROAD 标准单元 RAM 生成器 / HiFi-LLP 图注意力延迟预测）+ 2 条行业动态（TSMC Validated Flow 5.2 强制认证 / NVIDIA Apollo 开源科学仿真）</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-17 · 涵盖 2026-01 → 2026-07-17 · 已去重整理 · 新增 3 篇论文（ChipVerilog OpenCores 大规模 RTL 生成基准 / EXPLORE 模拟电路拓扑生成 LLM+MCTS / Lighthouse RL 样本高效电路尺寸 RL）+ 1 条行业动态（Cadence AuraStack PCB 与先进封装代理式 AI 平台）</p>
   <div class="stats">
-    <div class="stat"><div class="num">208</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">88</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">156</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">210</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">89</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">157</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-07-17">260717 🚀 Cadence AuraStack AI 超级智能体 — 业界首个 PCB / 先进封装 智能体 AI 平台 (NVIDIA Blackwell 加速)</a>
   <a href="#2026-07-16">260716 🏭 TSMC Validated Flow 5.2 强制认证 (Synopsys Fusion Compiler / Cadence Innovus / Ansys RedHawk-SC) + 🚀 NVIDIA Apollo 开源科学仿真</a>
   <a href="#2026-07-15">260715 📊 EDA/SIP 营收 +12.7% (APAC 反弹) + 💰 Q2 初创融资 $60亿 (BoolSi/siliXon)</a>
   <a href="#2026-07-14">260714 ⚡ LLM for EDA 前端(DAC) + ✅ ChipFuzzer RTL验证 + 📐 Chiplet3D 布图 + 🤖 ReviewDSE 白盒DSE + 🚀 Cadence AgentStack + 🔧 silica-eda + 🔬 SemiEngineering AI模型</a>
@@ -124,6 +125,38 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-07-17">
+  <div class="section-title"><span class="icon">🔧</span> 2026-07-17 <span class="badge-new">1条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-07-17 行业动态（1条）</h3>
+      <span class="badge-count">1</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+
+        <!-- News 1: Cadence AuraStack AI Super Agent for PCB & Advanced Packaging -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>Cadence · 官方新闻稿 · 2026-07-15 · Cadence Newsroom（Allegro AI Studio）</div>
+          <h4>🚀 Cadence 发布 AuraStack AI 超级智能体 — 业界首个面向 PCB 与先进封装的智能体 AI 平台（硅到系统全栈）</h4>
+          <p>Cadence 推出运行于 <strong>Allegro AI Studio</strong> 的 <strong>AuraStack AI Super Agent</strong>，号称业界首个面向 <strong>PCB 与先进封装设计</strong>的智能体 AI 平台，把设计者从系统规划一路带到最终产品，全程在单一 AI 原生环境内完成。由 <strong>NVIDIA Blackwell + CUDA-X</strong> 加速，协调跨规划、实现与紧耦合多物理场分析的领域专用 Agent。<br>
+          <strong>关键数据与看点</strong>：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li><strong>上市时间缩短 2×、工程效率提升 15×</strong>，多物理场驱动质量；与 <strong>Millennium M2000 超算</strong>配合，NVIDIA 称多物理场性能最高 <strong>20×</strong></li>
+            <li>统一 AI 驱动多物理场底座，闭环并发优化<strong>电气 / 热 / 机械</strong>行为（SI/PI、热、机械应力、跌落、振动、疲劳），整合 <strong>Celsius 热求解器、Clarity 3D-EM、Sigrity X、MSC Nastran / Marc</strong></li>
+            <li>与此前 <strong>ChipStack / InnoStack / ViraStack</strong> 一道，使 Cadence 成为唯一覆盖<strong>数字/模拟硅 → 先进封装 → PCB</strong> 全电子系统设计流程的智能体 AI 供应商</li>
+            <li>演示：5G 手机主板重设计，物料合并<strong>降本 28%</strong>、自动定位更廉价 PMIC；台积电基板布线部署称达 <strong>100× 生产力</strong></li>
+          </ul>
+          <strong>核心看点</strong>：AI Agent 的战场从"硅设计"正式外延至"封装 + PCB 系统级"——呼应本站"Agentic AI 重塑 EDA 全流程"主线（Synopsys agent teams / Cadence super agents / Siemens Aprisa AI）；多物理场闭环 + Chiplet/2.5D/3D 封装协同优化，与本站 Chiplet 互连/热分布主线高度契合。</p>
+          <a href="https://newsroom.cadence.com/press-releases/press-release-details/2026/Cadence-Introduces-AuraStack-AI-Super-Agent-the-Worlds-First-Agentic-AI-Platform-for-PCB-and-Advanced-Packaging/default.aspx" target="_blank">→ Cadence 官方新闻稿</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-07-16">
   <div class="section-title"><span class="icon">🔧</span> 2026-07-16 <span class="badge-new">2条新闻</span> <span class="line"></span></div>

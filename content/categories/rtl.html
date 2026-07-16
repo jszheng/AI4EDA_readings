@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（65篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（66篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+      <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span> ChipVerilog: A Large-Scale OpenCores-Derived Benchmark for LLM-Based Verilog RTL Generation</div>
+          <div class="abs-meta">arXiv:2607.13079 · cs.AR / cs.PL · 2026-07-12 · Yan Tan, Jiping Du, Xiangchen Meng, Yangdi Lyu</div>
+          <div class="abs-body">提出 <strong>ChipVerilog</strong>，一个从 OpenCores IP/核设计构建的"描述到 Verilog"生成基准。现有 RTL 生成基准多为短小、自包含模块级任务，无法体现实际 IP 与处理器核 RTL 的代码规模、层次结构与模块交互。ChipVerilog 包含来自 <strong>5 个设计族（OR1200、双精度 FPU、MIPS-16、I2C、CORDIC）</strong>的 <strong>64 个生成目标</strong>，覆盖单模块与跨模块（实例化 / 交互其他 RTL 模块）目标，多个目标超过 1,000 行 Verilog，规模与复杂度远超典型模块级基准。每个实例由规格文档 + 参考 RTL 配对构建，撰写详细自然语言描述并人工审校；生成 RTL 经编译检查，局部模块用等价性检查、集成 IP/核目标用仿真验证。结果揭示<strong>大规模 RTL 生成尤其层次化与跨模块设计仍极具挑战</strong>。延续本站对 VerilogEval / RTLLM / OpenRTLSet 基准的重点跟踪。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2607.13079" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2607.13079_ChipVerilog.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">Verilog</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM基准</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">OpenCores</span>
+          </div>
+      </div>
       <div class="abs-card">
         <div class="abs-meta">
           <span class="badge-new">NEW</span>
