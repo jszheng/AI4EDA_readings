@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-20 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 2 条行业动态 · 来源：arXiv / SemiEngineering</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News 1: SemiEngineering Chip Industry Week In Review #147 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · 行业周评 · 2026-07-17 · The SE Staff</div>
+      <h4>📰 Chip Industry Week In Review #147 — Rapidus 接入 Cadence InnoStack、Intel €5B 扩产、TSMC 再投 $100B、JEDEC 定稿 HBM4(SPHBM4)</h4>
+      <p>SemiEngineering 第 147 期行业周评（07-17）覆盖半导体产业链重大动态，AI/EDA 相关要点：<br>
+      <strong>AI Agent 落地</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>Rapidus × Cadence</strong>：将 <strong>Cadence InnoStack AI Super Agent</strong> 接入 Rapidus 设计环境，自动化 SoC 流程——日本先进制程代工厂把代理式 AI 引入 2nm 设计</li>
+        <li><strong>Cadence AuraStack</strong>：全球首个面向 PCB 与先进封装的 Agentic AI 平台（提速 2×、效能 15×）再次被点名</li>
+      </ul>
+      <strong>制造与封装</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>Intel</strong>：投资 €50 亿扩大爱尔兰 Leixlip 工厂 Intel 3 产能，用 High-NA EUV 推进 Panther Lake（18A）高产量制造</li>
+        <li><strong>TSMC</strong>：再追加 $1000 亿投资美国亚利桑那先进制造与封装，总厂数约 12 座</li>
+        <li><strong>UMC / Tower</strong>：硅光（SiPh）产能竞赛——UMC 交付 SILITH 1.6T 硅光首批晶圆、Tower 约 $40 亿扩建日本硅光/SiGe/先进封装</li>
+        <li><strong>Samsung</strong>：龙仁（Yongin）半导体厂提前 1–2 年至 2029 运营</li>
+      </ul>
+      <strong>存储与标准</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>JEDEC 发布 JESD330-4（SPHBM4）</strong>：以更窄更快接口经有机封装基板连接 HBM4 级内存（非硅中介层），先进封装互连标准化再进一步</li>
+        <li>SEMI 预估 2026 设备销售 $166B、2028 破纪录 $230B；印度批准约 $13.2B 的 Semicon 2.0 计划；Bosch 获最高 $2.25 亿 CHIPS 法案激励</li>
+      </ul>
+      <strong>核心看点</strong>：Rapidus 采用 Cadence InnoStack 是继 Cadence AgentStack/ChipStack/InnoStack/ViraStack/AuraStack 之后，代理式 AI 进入真实代工设计环境的最新标杆，呼应本站"Agentic AI 重塑 EDA 全流程 + Chiplet/先进封装互连"主线；HBM4 SPHBM4 标准定稿与硅光代工战升温，凸显封装侧互连/热/信号协同优化的持续重要性。</p>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-147/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+    <!-- News 2: SemiEngineering "AI In Chip Design: Lots Of Promise, Plenty Of Unanswered Questions" -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · 观点/深度 · 2026-07-15 · Ed Sperling</div>
+      <h4>🤔 AI 芯片设计：前景广阔，未解之问犹多 — Ed Sperling 谈 AI 在 EDA 中的真实边界</h4>
+      <p>SemiEngineering 主编 Ed Sperling 撰文盘点 AI 在芯片设计中的现实进展与未决问题：<br>
+      <strong>有望成功的场景</strong>：AI 打开了探索<strong>更庞大解空间</strong>的大门（类似当年高层次综合 HLS 的扩展），特别利于<strong>定制化架构与专用芯片</strong>开发；EDA 行业、大型 hyperscaler 与 AI 初创企业为主要受益方。<br>
+      <strong>尚未有定论的开放问题</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li>AI 的具体成效、适用市场与客户群尚未形成统一答案</li>
+        <li>“黑盒”式设计带来的<strong>责任归属、工程师监管与人才断层</strong>问题待解</li>
+        <li>入门级工程师会否因 AI 被边缘化、抑或拒绝使用 AI 的资深工程师被淘汰，仍是开放疑问</li>
+      </ul>
+      <strong>核心看点</strong>：与本站长期跟踪的"Agentic AI 重塑 EDA"（Cadence/Synopsys/Siemens 三巨头 Agent 平台、ChipAgents、Si2 本体标准）形成呼应——业界共识是短期内仍需人类工程师把关验证（幻觉与错误难避），但人才结构正面临重构。该文为判断 AI4EDA 落地节奏提供了平衡视角，补入本站"行业研判"脉络。</p>
+      <a href="https://semiengineering.com/ai-in-chip-design-lots-of-promise-plenty-of-unanswered-questions/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+    <!-- 2607.15005 Differentiable Routability-Driven Package Floorplanning with Pin Assignment -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-16 · Yiqi Huang, Zepeng Li, Zhen Zhuang, Kehao Chen, Genggeng Liu, Tsung-Yi Ho</div>
+      <h4>📐 可微分的 Routability 驱动封装布图规划与引脚分配</h4>
+      <p>先进封装中 RDL（再分布层）互连密度上升，使<strong>可布线性（routability）</strong>成为封装布图规划的关键约束。电源完整性要求常将 fan-in 区域留给 PDN，迫使信号走 fan-out 区域，传统均匀网格拥塞模型无法刻画 fan-out 拥塞，而既有引脚分配方法也难以评估网交叉。本文提出<strong>可微分（differentiable）的 routability 驱动布图规划 + 引脚分配算法</strong>，面向 fan-out 路由的先进封装：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>可微总线长最小化</strong>：直接建模芯片离散朝向，将线长梯度反传至芯片位置与朝向，在固定引脚选择下降线长，避免连续角度建模偏差</li>
+        <li><strong>crossing-aware 引脚分配</strong>：将网交叉代价纳入多策略 DPSO，并用 <strong>GPU 并行代价评估</strong>高效降线长</li>
+        <li><strong>可微 routability 最大化</strong>：构建面向 fan-out 路由的拥塞模型，建立从拥塞信息到芯片位置的 BP 路径，引导可布线性优化</li>
+      </ul>
+      <strong>核心结论</strong>：全部基准实现 <strong>100% 可布线性</strong>；相较领先布图规划方法（配本文引脚分配流程），线长最高降低约 <strong>23%</strong>。<br>
+      <strong>核心创新</strong>：可微分封装布图规划 + 引脚分配联合优化（GPU 并行 + 梯度反传 + fan-out 专用拥塞模型）——延续本站对 3D-IC/Chiplet 布图规划（CLIP-3D / Chiplet3D）与"AI 驱动封装互连"主线的跟踪，把后端可布线性从"事后检查"前移到"可微优化目标"。<br>
+      <strong>标签</strong>：先进封装 · 布图规划 · 引脚分配 · 可布线性 · 可微优化 · GPU 并行 · 拥塞模型</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">先进封装</span>
+        <span class="tag">布图规划</span>
+        <span class="tag">引脚分配</span>
+        <span class="tag">可布线性</span>
+        <span class="tag">可微优化</span>
+        <span class="tag">GPU并行</span>
+        <span class="tag">拥塞模型</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.15005" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.15005_PackageFloorplanning.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.14165 ATLAS SAR ADC LLM Agents -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE / cs.AI / cs.AR / cs.LG · 2026-07-15 · Dimple Vijay Kochar, Hae-Seung Lee, Anantha P. Chandrakasan（MIT）</div>
+      <h4>🔬 ATLAS：以模板约束 LLM 智能体生成可通过仿真验证的 SAR ADC</h4>
+      <p>LLM 在软件代码生成中表现出色，但在<strong>模拟 EDA</strong>中受限于电路拓扑理解不足与数据稀缺——直接 prompt 或多模态模型易产生幻觉、无法生成通过严格 SPICE 仿真的电路。本文提出端到端多步 <strong>LLM 智能体框架 ATLAS</strong>，能生成通过仿真验证的<strong>逐次逼近寄存器（SAR）模数转换器（ADC）</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li>为遵守模拟设计的刚性约束，用<strong>专家知识</strong>将 LLM 锚定在规划、选择、参数化与迭代修改各环节</li>
+        <li>引入<strong>模板约束生成（Template-Constrained Generation）</strong>——不同于其他模板化工作，它构建更通用的 SAR ADC 生成流程，而非写死单一拓扑</li>
+        <li>跨<strong>工艺节点与输入规格</strong>开发 SAR ADC，验证了强概念证明（proof-of-concept）</li>
+      </ul>
+      <strong>核心创新</strong>：专家知识锚定的多步智能体 + 模板约束生成，把 LLM 稳健集成进可靠模拟设计方法学（而非一次性生成即失败）——延续本站对模拟/版图 AI（SABLE / NEMESIS / PANDA / EXPLORE / Lighthouse RL）的重点跟踪，是"LLM 驱动模拟设计自动化"从演示走向可验证产出的务实一步。<br>
+      <strong>标签</strong>：模拟设计 · ADC · SAR · LLM 智能体 · 模板约束 · SPICE 验证 · 专家知识锚定</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">模拟设计</span>
+        <span class="tag">ADC</span>
+        <span class="tag">SAR</span>
+        <span class="tag">LLM智能体</span>
+        <span class="tag">模板约束</span>
+        <span class="tag">SPICE验证</span>
+        <span class="tag">专家知识锚定</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.14165" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.14165_ATLAS-SAR-ADC.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

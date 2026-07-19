@@ -21,14 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-17 · 涵盖 2026-01 → 2026-07-17 · 已去重整理 · 新增 3 篇论文（ChipVerilog OpenCores 大规模 RTL 生成基准 / EXPLORE 模拟电路拓扑生成 LLM+MCTS / Lighthouse RL 样本高效电路尺寸 RL）+ 1 条行业动态（Cadence AuraStack PCB 与先进封装代理式 AI 平台）</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-20 · 涵盖 2026-01 → 2026-07-20 · 已去重整理 · 新增 2 篇论文（2607.15005 可微分布线驱动封装版图规划与引脚分配 / 2607.14165 ATLAS 模板约束 LLM 智能体生成 SAR ADC）+ 2 条行业动态（SemiEngineering WIR #147 / AI 赋能芯片设计圆桌：可靠性与责任归属未解）</p>
   <div class="stats">
-    <div class="stat"><div class="num">210</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">89</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">157</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">213</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">90</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">159</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-07-20">260720 📰 SemiEngineering WIR #147 (Arteris×Arm 安全验证 / Siemens EDA 扩研) + 🤔 AI 赋能芯片设计圆桌：可靠性与责任归属未解</a>
   <a href="#2026-07-17">260717 🚀 Cadence AuraStack AI 超级智能体 — 业界首个 PCB / 先进封装 智能体 AI 平台 (NVIDIA Blackwell 加速)</a>
   <a href="#2026-07-16">260716 🏭 TSMC Validated Flow 5.2 强制认证 (Synopsys Fusion Compiler / Cadence Innovus / Ansys RedHawk-SC) + 🚀 NVIDIA Apollo 开源科学仿真</a>
   <a href="#2026-07-15">260715 📊 EDA/SIP 营收 +12.7% (APAC 反弹) + 💰 Q2 初创融资 $60亿 (BoolSi/siliXon)</a>
@@ -125,6 +126,53 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-07-20">
+  <div class="section-title"><span class="icon">🔧</span> 2026-07-20 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-07-20 行业动态（2条）</h3>
+      <span class="badge-count">2</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+
+        <!-- News 1: SemiEngineering Chip Industry Week In Review #147 -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>SemiEngineering · Chip Industry Week In Review #147 · 2026-07-17 发布 · Jesse Allen / Ed Sperling</div>
+          <h4>📰 Chip Industry Week In Review #147 — Rapidus 接入 Cadence InnoStack、Intel €5B 扩产、TSMC 再投 $100B、JEDEC 定稿 HBM4(SPHBM4)</h4>
+          <p>SemiEngineering 第 147 期行业周评（07-17）覆盖半导体产业链重大动态，AI/EDA 相关要点：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li><strong>Rapidus × Cadence</strong>：将 <strong>Cadence InnoStack AI Super Agent</strong> 接入 Rapidus 设计环境，自动化 SoC 流程——日本先进制程代工厂把代理式 AI 引入 2nm 设计</li>
+            <li><strong>Cadence AuraStack</strong>：全球首个面向 PCB 与先进封装的 Agentic AI 平台（提速 2×、效能 15×）再次被点名</li>
+            <li><strong>Intel</strong>：投资 €50 亿扩大爱尔兰 Leixlip 工厂 Intel 3 产能，用 High-NA EUV 推进 Panther Lake（18A）高产量制造</li>
+            <li><strong>TSMC</strong>：再追加 $1000 亿投资美国亚利桑那先进制造与封装，总厂数约 12 座</li>
+            <li><strong>UMC / Tower</strong>：硅光（SiPh）产能竞赛——UMC 交付 SILITH 1.6T 硅光首批晶圆、Tower 约 $40 亿扩建日本硅光/SiGe/先进封装</li>
+            <li><strong>JEDEC 发布 JESD330-4（SPHBM4）</strong>：以更窄更快接口经有机封装基板连接 HBM4 级内存（非硅中介层），先进封装互连标准化再进一步</li>
+          </ul>
+          <strong>核心看点</strong>：Rapidus 采用 Cadence InnoStack 是继 Cadence AgentStack/ChipStack/InnoStack/ViraStack/AuraStack 之后，代理式 AI 进入真实代工设计环境的最新标杆，呼应本站"Agentic AI 重塑 EDA 全流程 + Chiplet/先进封装互连"主线；HBM4 SPHBM4 标准定稿与硅光代工战升温，凸显封装侧互连/热/信号协同优化的持续重要性。</p>
+          <a href="https://semiengineering.com/chip-industry-week-in-review-147/" target="_blank">→ SemiEngineering 原文（WIR #147）</a>
+        </div>
+
+        <!-- News 2: AI In Chip Design: Lots Of Promise, Plenty Of Unanswered Questions (SemiEngineering roundtable) -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>SemiEngineering · 观点/深度 · 2026-07-15 · Ed Sperling</div>
+          <h4>🤔 AI 芯片设计：前景广阔，未解之问犹多 — Ed Sperling 谈 AI 在 EDA 中的真实边界</h4>
+          <p>SemiEngineering 主编 Ed Sperling 撰文（2026-07-15）《AI In Chip Design: Lots Of Promise, Plenty Of Unanswered Questions》盘点 AI 在芯片设计中的现实进展与未决问题：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li><strong>有望成功的场景</strong>：AI 打开了探索更庞大解空间的大门（类似当年高层次综合 HLS 的扩展），特别利于定制化架构与专用芯片开发；EDA 行业、大型 hyperscaler 与 AI 初创企业为主要受益方</li>
+            <li><strong>尚未有定论的开放问题</strong>：AI 的具体成效、适用市场与客户群尚未形成统一答案；"黑盒"式设计带来的责任归属、工程师监管与人才断层问题待解；入门级工程师会否因 AI 被边缘化、抑或拒绝使用 AI 的资深工程师被淘汰，仍是开放疑问</li>
+            <li><strong>人在回路仍是常态</strong>：业界共识是短期内仍需人类工程师把关验证（幻觉与错误难避），但人才结构正面临重构</li>
+          </ul>
+          <strong>核心看点</strong>：与本站长期跟踪的"Agentic AI 重塑 EDA"（Cadence/Synopsys/Siemens 三巨头 Agent 平台、ChipAgents、Si2 本体标准）形成呼应——为判断 AI4EDA 落地节奏提供平衡视角，补入本站"行业研判"脉络。注：本文为 Ed Sperling 署名深度文（非圆桌）；06-25 的 ESD Alliance Executive Outlook 圆桌为另一篇已收录文章。</p>
+          <a href="https://semiengineering.com/ai-in-chip-design-lots-of-promise-plenty-of-unanswered-questions/" target="_blank">→ SemiEngineering 原文</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-07-17">
   <div class="section-title"><span class="icon">🔧</span> 2026-07-17 <span class="badge-new">1条新闻</span> <span class="line"></span></div>

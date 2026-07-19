@@ -7,9 +7,25 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（39篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（40篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.15005 · cs.AR · 2026-07-16 · Yiqi Huang, Zepeng Li, Zhen Zhuang, Kehao Chen, Genggeng Liu, Tsung-Yi Ho
+      </div>
+      <div class="abs-title">Differentiable Routability-Driven Package Floorplanning with Pin Assignment（可微分的 Routability 驱动封装布图规划与引脚分配）</div>
+      <div class="abs-body">
+        <p>先进封装中 RDL 互连密度上升使<strong>可布线性（routability）</strong>成为封装布图规划的关键约束。电源完整性要求常将 fan-in 区域留给 PDN，迫使信号走 fan-out 区域，传统均匀网格拥塞模型无法刻画 fan-out 拥塞。本文提出<strong>可微分的 routability 驱动布图规划 + 引脚分配算法</strong>：(1) 可微总线长最小化，直接建模芯片离散朝向并将线长梯度反传至芯片位置/朝向；(2) crossing-aware 引脚分配，将网交叉代价纳入多策略 DPSO 并用 GPU 并行代价评估；(3) 可微 routability 最大化，构建面向 fan-out 路由的拥塞模型并建立从拥塞到芯片位置的 BP 路径。全部基准实现 <strong>100% 可布线性</strong>；相较领先布图规划方法（配本文引脚分配流程）线长最高降低约 <strong>23%</strong>。延续本站对 3D-IC/Chiplet 布图规划（CLIP-3D / Chiplet3D）与"AI 驱动封装互连"主线的跟踪。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.15005" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.15005_PackageFloorplanning.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">先进封装</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">可布线性</span>
+      </div>
+    </div>
     <div class="abs-card">
       <div class="abs-meta">
         <span class="badge-new">NEW</span>

@@ -1,8 +1,44 @@
 {
-  "lastUpdate": "2026-07-17",
+  "lastUpdate": "2026-07-20",
   "cutoffDate": "2026-01-08",
-  "totalItems": 157,
+  "totalItems": 159,
   "items": [
+    {
+      "date": "2026-07-20",
+      "company": "SemiEngineering",
+      "title": "📰 Chip Industry Week In Review #147 — Rapidus 接入 Cadence InnoStack、Intel €5B 扩产、TSMC 再投 $100B、JEDEC 定稿 HBM4(SPHBM4)",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-147/",
+      "keywords": [
+        "SemiEngineering",
+        "WIR",
+        "147",
+        "Rapidus",
+        "Cadence InnoStack",
+        "Intel",
+        "TSMC",
+        "HBM4",
+        "SPHBM4",
+        "JEDEC",
+        "advanced packaging",
+        "2026-07-17"
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "company": "SemiEngineering",
+      "title": "🤔 AI 芯片设计：前景广阔，未解之问犹多 — Ed Sperling 谈 AI 在 EDA 中的真实边界",
+      "link": "https://semiengineering.com/ai-in-chip-design-lots-of-promise-plenty-of-unanswered-questions/",
+      "keywords": [
+        "SemiEngineering",
+        "AI In Chip Design",
+        "Ed Sperling",
+        "AI for EDA",
+        "agentic AI",
+        "EDA",
+        "unanswered questions",
+        "2026-07-15"
+      ]
+    },
     {
       "date": "2026-07-17",
       "company": "Cadence",

@@ -7,9 +7,21 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（25篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（26篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+      <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span> ATLAS: Template-Constrained LLM Agents for SAR ADC Generation（模板约束 LLM 智能体生成可通过仿真验证的 SAR ADC）</div>
+          <div class="abs-meta">arXiv:2607.14165 · cs.SE / cs.AI / cs.AR / cs.LG · 2026-07-15 · Dimple Vijay Kochar, Hae-Seung Lee, Anantha P. Chandrakasan（MIT）</div>
+          <div class="abs-body">LLM 在软件代码生成表现出色，但在<strong>模拟 EDA</strong>中受限于电路拓扑理解不足与数据稀缺——直接 prompt 或多模态模型易产生幻觉、无法生成通过严格 SPICE 仿真的电路。本文提出端到端多步 <strong>LLM 智能体框架 ATLAS</strong>，能生成通过仿真验证的<strong>逐次逼近寄存器（SAR）模数转换器（ADC）</strong>：用专家知识将 LLM 锚定在规划、选择、参数化与迭代修改各环节；引入<strong>模板约束生成（Template-Constrained Generation）</strong>，构建更通用的 SAR ADC 生成流程（而非写死单一拓扑）；跨工艺节点与输入规格开发 SAR ADC 验证了强概念证明。专家知识锚定的多步智能体为将 LLM 集成进可靠模拟设计方法学奠定务实基础，延续本站对 SABLE / NEMESIS / PANDA / EXPLORE / Lighthouse RL 等模拟/版图 AI 方向的跟踪。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2607.14165" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2607.14165_ATLAS-SAR-ADC.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟设计</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">LLM智能体</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ADC/SAR</span>
+          </div>
+      </div>
       <div class="abs-card">
           <div class="abs-title"><span class="badge-new">NEW</span> Lighthouse RL: Sample-Efficient Circuit Optimization via Strategic Reset Points</div>
           <div class="abs-meta">arXiv:2607.14008 · cs.LG / cs.AR · 2026-07-15 · Mustafa Emre Gürsoy, Stefan Uhlich, Ryoga Matsuo, Yağız Gençer, Arun Venkitaraman, Chia-Yu Hsieh, Andrea Bonetti, Eisaku Ohbuchi, Lorenzo Servadei</div>

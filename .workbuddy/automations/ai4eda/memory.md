@@ -1,3 +1,19 @@
+## 2026-07-20（自动更新 — 2 篇论文 + 2 条行业动态）
+
+- 续跑会话继续完成 07-20 收尾：date/latest 2026-07-20.html 已于前置步骤创建（2 论文 + 2 新闻），本次补齐清单同步、记忆更新与 git 提交。
+- 新增论文 2 篇（均 2026-07-15/16 提交，经 arXiv live listing 核验为近期且站内未收录）：
+  - 📐 2607.15005 可微分布线驱动封装布图规划与引脚分配（cs.AR, Yiqi Huang / Tsung-Yi Ho 等）→ 先进封装/物理设计（physical 39→40）
+  - 🔬 2607.14165 ATLAS 模板约束 LLM 智能体生成 SAR ADC（cs.SE/cs.AI/cs.AR/cs.LG, MIT, Chandrakasan 等）→ 模拟/架构（analog 25→26）
+- 行业动态 2 条（均 SemiEngineering，站内未收录）：
+  - 📰 Chip Industry Week In Review #147（07-17）— Rapidus×Cadence InnoStack、Intel €5B 扩产、TSMC 再投 $100B、JEDEC 定稿 HBM4/SPHBM4
+  - 🤔 AI 芯片设计：前景广阔，未解之问犹多（Ed Sperling, 07-15）— AI 在 EDA 的真实边界与人才结构重构
+- 同步产物：content/news/index.html（07-20 section + 导航 + header 213/90/159）、content/news/news_memory.json（totalItems 157→159，2 条 07-20）、content/categories/physical.html & analog.html（新增卡片，header 40/26）、content/papers/index.html（redirect+手动链接 → 07-20）、manifest.js（papers 211→213, batches 89→90, news 157→159, lastUpdate 2026-07-20，latest/dates 顶部新增 07-20 count=4）。
+- 遇到的问题与解决：前置步骤下载 PDF 时，文件监视器/linter 将 PDF 文件名改写为更短形式（2607.15005_PackageFloorplanning.pdf、2607.14165_ATLAS-SAR-ADC.pdf）并额外生成原始命名副本（2607.15005_DiffRoutabilityPkgFloorplan.pdf、2607.14165_ATLAS_SAR_ADC.pdf）。所有页面 href 均指向 linter 命名，已删除两份冗余原始 PDF，保持磁盘与链接一致。
+- 过期清理：无（cutoffDate 2026-01-08，07-20 内容均在窗口内）。
+- Git：commit "auto update: 2026-07-20" 并 push origin/main。
+
+---
+
 ## 2026-07-16（并发污染 UNION 对账 + 07-15/07-16 合并提交）
 
 - 本进程在 07-15 并行实例已落地内容（未提交）基础上，补做 07-16 论文并做并发污染 UNION 对账，最终合并提交 07-15 + 07-16。
@@ -929,3 +945,27 @@
 **Tooling note:** a file-watcher/linter auto-formats HTML/JS on save, causing "modified since read" on Edit; resolved by re-reading current state and editing against current string values.
 
 **Git:** committed "auto update: 2026-07-16" and pushed to origin/main.
+
+---
+
+## 2026-07-17 Execution Summary
+
+**Status:** ✅ Success (reconciled with a concurrent parallel automation instance)
+
+**Papers added (3):**
+- ChipVerilog (2607.13079, cs.AR/cs.PL, HKUST-GZ / Yangdi Lyu) → RTL. OpenCores-derived description-to-Verilog benchmark, 64 targets across 5 families (OR1200/FPU/MIPS-16/I2C/CORDIC), single+cross-module, some >1000 lines; compile + equivalence/simulation validation. Complements VerilogEval/RTLLM/OpenRTLSet.
+- EXPLORE (2607.13416, cs.LG, Duke/IBM — Yiran Chen, Xin Zhang) → analog. Simulator-guided MCTS + transformer decoding for analog topology generation; 6-comp @0.01 tol success 12%→33%→65%, MSE −20%. First to combine structured test-time search with LM decoding.
+- Lighthouse RL (2607.14008, cs.LG/cs.AR, Sony) → analog. "Strategic reset" from high-performing "lighthouse" states for sample-efficient analog circuit sizing; 1.72× faster, 100% vs 0–87% success, plug-and-play for any RL optimizer.
+
+**News added (1):**
+- Cadence AuraStack AI Super Agent (Cadence newsroom, 2026-07-15) — world's first agentic AI platform for PCB & advanced packaging on Allegro AI Studio; NVIDIA Blackwell/CUDA-X accelerated; 2× TTM, 15× productivity, 20× multiphysics w/ Millennium M2000; unifies Celsius/Clarity3D/Sigrity X/MSC Nastran; extends ChipStack/InnoStack/ViraStack to silicon-to-system. Placed in new news section 2026-07-17.
+
+**Parallel-instance race (handled):** A concurrent automation instance had already added ChipVerilog→rtl.html and Lighthouse RL→analog.html, updated manifest (papers=210, missing EXPLORE), created dates/latest 07-17 entries, and downloaded a differently-named PDF `2607.14008_Lighthouse-RL.pdf` (hyphen). Reconciliation: deleted my duplicate `2607.14008_LighthouseRL.pdf`, standardized all refs to the hyphen name; added the missing EXPLORE card to analog.html (header 24→25) and fixed manifest papers 210→211. My own date/latest 07-17 pages + AuraStack news/news_memory edits were retained.
+
+**Final counts:** papers 208→211, batches 88→89, news 156→157, lastUpdate 2026-07-17. Categories: rtl 66 (header), analog 25 (header). dates 07-17 count=3.
+
+**Files:** content/dates/2026-07-17.html (new), content/latest/2026-07-17.html (new), 3 PDFs, content/news/index.html (07-17 section + nav + count 157), content/news/news_memory.json (+AuraStack, totalItems 157), content/categories/rtl.html, content/categories/analog.html, content/papers/index.html (redirect→07-17), manifest.js.
+
+**Git:** shared commit "auto update: 2026-07-17" (540de4c); parallel instance won the push race, origin/main == local HEAD (540de4c), fully in sync.
+
+**Note:** arXiv still lagging — newest submissions dated 07-15. Pre-existing category header/actual-count mismatches (rtl) left unchanged (not 07-17-related).
