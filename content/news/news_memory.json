@@ -1,8 +1,28 @@
 {
-  "lastUpdate": "2026-07-20",
+  "lastUpdate": "2026-07-21",
   "cutoffDate": "2026-01-08",
-  "totalItems": 159,
+  "totalItems": 160,
   "items": [
+    {
+      "date": "2026-07-21",
+      "company": "NVIDIA",
+      "title": "🚀 NVIDIA @ DAC 2026 发布多项 EDA AI 研究演示：TOPCELL（LLM 标准单元拓扑优化）、Self-Evolved ABC、Schemacoder、Verilog 基准洞察",
+      "link": "https://www.nvidia.com/en-us/events/dac",
+      "keywords": [
+        "NVIDIA",
+        "DAC 2026",
+        "TOPCELL",
+        "Self-Evolved ABC",
+        "Schemacoder",
+        "Verilog Design Problems Benchmark",
+        "Haoxing Ren",
+        "Nathaniel Pinckney",
+        "LLM",
+        "multi-agent",
+        "standard cell",
+        "2026-07"
+      ]
+    },
     {
       "date": "2026-07-20",
       "company": "SemiEngineering",

@@ -21,14 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-20 · 涵盖 2026-01 → 2026-07-20 · 已去重整理 · 新增 2 篇论文（2607.15005 可微分布线驱动封装版图规划与引脚分配 / 2607.14165 ATLAS 模板约束 LLM 智能体生成 SAR ADC）+ 2 条行业动态（SemiEngineering WIR #147 / AI 芯片设计：前景广阔，未解之问犹多 — Ed Sperling 深度文）</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-21 · 涵盖 2026-01 → 2026-07-21 · 已去重整理 · 新增 1 篇论文（2607.15830 RTL-Sequencer：可扩展 RTL 时序预测的序列范式，DAC 2026）+ 1 条行业动态（NVIDIA @ DAC 2026 发布 TOPCELL / Self-Evolved ABC / Schemacoder / Verilog 基准等多项 EDA AI 研究演示）</p>
   <div class="stats">
-    <div class="stat"><div class="num">213</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">90</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">159</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">214</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">91</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">160</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-07-21">260721 🚀 NVIDIA @ DAC 2026 EDA AI 研究演示（TOPCELL / Self-Evolved ABC / Schemacoder / Verilog 基准）</a>
   <a href="#2026-07-20">260720 📰 SemiEngineering WIR #147 (Rapidus×Cadence InnoStack / Intel €5B / TSMC +$100B / JEDEC HBM4) + 🤔 AI 芯片设计：前景广阔，未解之问犹多（Ed Sperling 深度文）</a>
   <a href="#2026-07-17">260717 🚀 Cadence AuraStack AI 超级智能体 — 业界首个 PCB / 先进封装 智能体 AI 平台 (NVIDIA Blackwell 加速)</a>
   <a href="#2026-07-16">260716 🏭 TSMC Validated Flow 5.2 强制认证 (Synopsys Fusion Compiler / Cadence Innovus / Ansys RedHawk-SC) + 🚀 NVIDIA Apollo 开源科学仿真</a>
@@ -126,6 +127,38 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-07-21">
+  <div class="section-title"><span class="icon">🔧</span> 2026-07-21 <span class="badge-new">1条新闻</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-07-21 行业动态（1条）</h3>
+      <span class="badge-count">1</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+
+        <!-- News 1: NVIDIA @ DAC 2026 EDA AI research demos -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>NVIDIA · DAC 2026 技术程序（7/26–29 长滩）· 2026-07 预热 · Haoxing Ren / Nathaniel Pinckney 等</div>
+          <h4>🚀 NVIDIA @ DAC 2026 发布多项 EDA AI 研究演示：TOPCELL（LLM 标准单元拓扑优化）、Self-Evolved ABC、Schemacoder、Verilog 基准洞察</h4>
+          <p>NVIDIA 在 DAC 2026（7/26–29，长滩）技术程序中披露一系列 EDA AI 研究演示，呼应大会 "From Tools to Agents" 主题，把 LLM / 多智能体能力系统性注入 EDA 底层工具链：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li><strong>TOPCELL</strong>：Topology Optimization of Standard Cell via LLMs（Haoxing Ren）——用 LLM 做标准单元拓扑优化</li>
+            <li><strong>Autonomous Evolution of EDA Tools: Multi-Agent Self-Evolved ABC</strong>（Haoxing Ren）——多智能体自演化 ABC 逻辑综合脚本</li>
+            <li><strong>Schemacoder</strong>：Automatic Log Schema Extraction Coder with Residual Q-Tree Boosting（Chia-tung Ho / RONGJIAN LIANG / Haoxing Ren）——自动日志模式提取代码生成</li>
+            <li><strong>Advances in AI-Driven Hardware Code Generation</strong>：Insights from the Comprehensive Verilog Design Problems Benchmark（Nathaniel Pinckney）——Verilog 设计问题基准的 AI 硬件代码生成洞察</li>
+            <li>配套主题演讲 <strong>"From Tools to Agents: Realizing Fully Autonomous EDA Workflows"</strong>（Siemens EDA Amit Gupta + NVIDIA Da Yang）与圆桌 <strong>"Agentic AI in EDA: Who's in Control?"</strong>（IBM / Siemens / Qualcomm / Samsung / NVIDIA）</li>
+          </ul>
+          <strong>核心看点</strong>：NVIDIA 把 agentic AI 从"流程编排"下沉到 EDA 原语（primitive）级优化——标准单元、ABC 综合、日志/调试、Verilog 基准——与本站长期跟踪的 Cadence/Synopsys/Siemens Agent 平台形成互补，凸显 agentic EDA 正从"辅助生成 RTL"走向"EDA 工具自我演化"。来源：nvidia.com/events/dac。</p>
+          <a href="https://www.nvidia.com/en-us/events/dac" target="_blank">→ NVIDIA DAC 2026 技术程序</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-07-20">
   <div class="section-title"><span class="icon">🔧</span> 2026-07-20 <span class="badge-new">2条新闻</span> <span class="line"></span></div>

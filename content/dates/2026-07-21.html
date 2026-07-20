@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-21 动态</h1>
+  <p class="subtitle">共 1 篇论文 · 2 条行业动态 · 来源：arXiv / SemiEngineering / Business Wire</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News 1: Rapidus × Cadence — Agentic AI for advanced-node SoC design (2026-07-20) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Rapidus × Cadence · 官方合作发布 · 2026-07-20 · Business Wire（Cadence CEO Anirudh Devgan / Rapidus CEO 小池淳义）</div>
+      <h4>🚀 Rapidus × Cadence 合作推进先进节点 SoC 设计的代理式 AI — Raads Navigator/Indicator 集成 InnoStack，目标 2× 加速 TAT</h4>
+      <p>Rapidus 与 Cadence 宣布合作，将 <strong>Cadence InnoStack AI Super Agent</strong> 集成进 Rapidus 的 AI 辅助设计解决方案 <strong>Raads</strong>，面向先进节点（2nm）SoC 设计推进代理式 AI。<br>
+      <strong>关键内容</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li>Rapidus 扩展 Raads 产品线，新增 <strong>Raads Navigator</strong> 与 <strong>Raads Indicator</strong>，利用 LLM 为设计者提供质量保证与问题定位协助</li>
+        <li>新工具与 <strong>Cadence InnoStack AI Super Agent</strong> 集成，实现跨关键 SoC 工作流的代理式设计编排，从早期架构探索、逻辑实现到最终 signoff 自动协调任务，应用数据驱动优化</li>
+        <li>目标：相较传统 flow 实现最高 <strong>2× 设计周转时间（TAT）</strong>缩短</li>
+        <li>双方将在 <strong>CadenceLIVE Japan 2026</strong> 联合展示；Rapidus CEO 小池淳义（Atsuyoshi Koike）发表主旨演讲；Cadence CEO Anirudh Devgan 强调先进节点 SoC 需要能编排全生命周期复杂工作流的 AI 智能体，而非仅优化单点任务</li>
+      </ul>
+      <strong>核心看点</strong>：这是继 Cadence AgentStack/ChipStack/InnoStack/ViraStack/AuraStack 之后，<strong>InnoStack 首次深度嵌入代工厂（Rapidus）的 AI 原生设计与制造生态（Raads / RUMS 概念）</strong>，把代理式 AI 从 EDA 厂商工具延伸到真实先进制程（2nm）设计-制造闭环；直接呼应本站"Agentic AI 重塑 EDA 全流程 + 先进节点产能/设计效率"主线，亦与 07-17 WIR #147 中 Rapidus 采用 InnoStack 的简讯形成完整闭环（本次为更权威的官方专发，含 Raads Navigator/Indicator 与 2× TAT 目标等新增细节）。</p>
+      <a href="https://www.businesswire.com/news/home/20260716669554/en/" target="_blank">→ Business Wire 官方新闻稿</a>
+    </div>
+
+    <!-- News 2: SemiEngineering "The Architecture Decisions Behind A Production-Ready EDA AI Agent" (2026-07-09) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · 架构深度 · 2026-07-09 · Emma-Jane Crozier（Siemens EDA Fuse 架构解读）</div>
+      <h4>🏗️ SemiEngineering 深度：生产级 EDA AI Agent 的架构决策 — 数据湖 + RAG + Agent Skills + MCP + 原生格式解析 + 治理</h4>
+      <p>SemiEngineering 特约撰文（2026-07-09）系统拆解"生产级 EDA/PCB 设计 AI Agent"的架构决策——通用 agentic 框架直接套 EDA 工具会失败，必须在架构层做针对性取舍：<br>
+      <strong>关键架构决策</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>领域 grounding</strong>：集中式多模态 EDA 数据湖打破团队/工具孤岛，单一事实源；自研 RAG 框架针对 Siemens EDA 工具与方法学优化；Agent Skills 可执行 playbook 跨工作流完成多步任务，每步内置校验与护栏</li>
+        <li><strong>基础设施兼容</strong>：EDA 环境非云原生（敏感 IP、小时/天数级验证任务、TB 级数据），Agent 必须管理长时验证任务不丢状态、集成现有作业调度而非替换、就地操作 TB 级数据</li>
+        <li><strong>可扩展编排</strong>：基于 <strong>MCP</strong> 的统一编排层实现动态工具发现，防止上下文饱和；子流程由 Agent Skills 自动化、可拼装成跨生命周期多工具工作流，天然多厂商/多模型无关</li>
+        <li><strong>原生 EDA 数据格式解析</strong>：自建领域解析器从 LEF/DEF、GDSII、波形库等真实产物提取精确上下文，汇入数据湖</li>
+        <li><strong>安全治理</strong>：基于角色访问控制、严格沙箱、全面审计追踪、human-in-the-loop 检查点</li>
+      </ul>
+      <strong>核心看点</strong>：文章是 <strong>Siemens Fuse EDA AI Agent</strong> 的架构白皮书式解读，把本站长期跟踪的"Agentic EDA 落地要素"（数据闭环 / RAG / Agent Skills / MCP 编排 / 原生格式 / 人在回路治理）系统化呈现；与 06-27 Fuse 发布、06-21 三巨头 AI 平台对比互为补充，为判断 agentic EDA 从演示走向生产提供了可操作的架构清单。</p>
+      <a href="https://semiengineering.com/the-architecture-decisions-behind-a-production-ready-eda-ai-agent/" target="_blank">→ SemiEngineering 原文</a>
+    </div>
+
+    <!-- 2607.15830 RTL-Sequencer: Towards Scalable RTL Timing Prediction with the Sequence-based Paradigm -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI / cs.LG · 2026-07-17 · Ziyan Guo, Wenji Fang, Wenkai Li, Yuchao Wu, Shang Liu, Zhiyao Xie（港科广）</div>
+      <h4>📐 RTL-Sequencer：以序列范式实现可扩展 RTL 时序预测</h4>
+      <p>准确的 <strong>RTL 级时序预测</strong>是设计自动化长期挑战。现有图方法受限于有限感受野、高复杂度、缺乏信号方向性。本文提出 <strong>RTL-Sequencer</strong>，一种新颖的<strong>序列范式</strong>：通过<strong>广度优先遍历将逻辑锥线性化为序列</strong>，应用现代线性序列模型实现可扩展 RTL 时序预测。
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>序列线性化</strong>：BFS 遍历逻辑锥得到序列表示，规避图方法感受野受限问题</li>
+        <li><strong>四项协同定制技术</strong>：序列洗牌（sequence shuffling）、双向建模（bidirectional modeling）、可微建模（differentiable modeling）、图-序列混合架构（hybrid graph-sequence）</li>
+      </ul>
+      <strong>核心结论</strong>：大量实验表明 RTL-Sequencer 显著优于 SOTA 基线，推进<strong>早期时序优化</strong>。<br>
+      <strong>核心创新</strong>：将 RTL 时序预测从图范式转向<strong>序列范式</strong>（BFS 线性化逻辑锥 + 线性序列模型 + 4 项协同技术），突破图方法感受野/复杂度瓶颈——延续本站对 RTL 时序/物理 QoR 预测（HiFi-LLP 延迟预测、AttentionCap 电容提取）与"AI 驱动早期时序优化"主线的跟踪；<strong>DAC 2026 接收</strong>，Zhiyao Xie 组（港科广）出品，延续该组在时序/IR 预测方向的积累。<br>
+      <strong>标签</strong>：RTL 时序预测 · 序列模型 · 逻辑锥线性化 · 可微建模 · 图-序列混合 · 早期时序优化 · DAC 2026</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL时序预测</span>
+        <span class="tag">序列模型</span>
+        <span class="tag">逻辑锥线性化</span>
+        <span class="tag">可微建模</span>
+        <span class="tag">图-序列混合</span>
+        <span class="tag">早期时序优化</span>
+        <span class="tag">DAC2026</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.15830" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.15830_RTL-Sequencer.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
