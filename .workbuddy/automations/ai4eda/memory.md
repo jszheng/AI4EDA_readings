@@ -969,3 +969,38 @@
 **Git:** shared commit "auto update: 2026-07-17" (540de4c); parallel instance won the push race, origin/main == local HEAD (540de4c), fully in sync.
 
 **Note:** arXiv still lagging — newest submissions dated 07-15. Pre-existing category header/actual-count mismatches (rtl) left unchanged (not 07-17-related).
+
+---
+
+## 2026-07-21 Execution Summary
+
+**Status:** ✅ Success
+
+**New Paper Added (1 item):**
+- RTL-Sequencer (arXiv:2607.15830) — Ziyan Guo, Wenji Fang, Wenkai Li, Yuchao Wu, Shang Liu, Zhiyao Xie（HKUST）— DAC 2026 接收。序列范式做可扩展 RTL 时序预测：BFS 线性化逻辑锥 + 现代线性序列模型；序列打乱 / 双向 / 可微 / 图-序列混合四项协同。提交 2026-07-17。→ physical 分类（智能时序收敛）。
+
+**New News Added (1 item):**
+- NVIDIA @ DAC 2026 EDA AI 研究演示（nvidia.com/events/dac）— TOPCELL（LLM 标准单元拓扑优化）、Multi-Agent Self-Evolved ABC、Schemacoder（日志模式提取）、Verilog Design Problems Benchmark 洞察（Haoxing Ren / Nathaniel Pinckney）；另含 "From Tools to Agents" 主题演讲（Siemens Amit Gupta + NVIDIA）与 "Agentic AI in EDA: Who's in Control?" 圆桌。DAC 2026 = 7/26–29 长滩。
+
+**Skipped (dedup / 非 AI4EDA):**
+- SemiEngineering "Production-Ready EDA AI Agent"（7/9，Siemens Fuse EDA AI Agent 架构深度）——同公司/同事件已在 news_memory 收录（Fuse EDA AI Agent 条目），去重跳过。
+- PATTERNDSE（2607.15068，pattern-guided HLS DSE）、From Patterns to Parsers（2607.16058）、Vogls（2607.15782）——非 AI/ML 方法，超出 AI4EDA 聚焦范围。
+- DAC 2026 大会程序/日程已在档案中；仅新增 NVIDIA 研究演示这一未覆盖项。
+
+**Files Updated:**
+- content/dates/2026-07-21.html（新）、content/latest/2026-07-21.html（新）、content/dates/2607.15830_RTL-Sequencer.pdf（2.18 MB）
+- content/categories/physical.html（加 RTL-Sequencer，40→41篇）
+- content/news/index.html（07-21 分组 + 导航 + 统计 160）
+- content/news/news_memory.json（+NVIDIA DAC 2026，totalItems 160，lastUpdate 2026-07-21）
+- content/papers/index.html（跳转→07-21）
+- manifest.js（papers 213→214，batches 90→91，news 159→160，lastUpdate 2026-07-21）
+
+**Git:** commit "auto update: 2026-07-21"（2ee2e82），push 到 origin/main 成功。
+
+**Next Check:** DAC 2026（7/26–29）现场报道——Cadence/Synopsys/NVIDIA/Siemens agentic EDA 演示、TOPCELL/Self-Evolved ABC 论文；arXiv cs.AR/cs.LG 7/18–21 新投稿；SemiEngineering WIR #148。
+
+**Reconciliation（并发 UNION 收尾）:** 本次运行与另一并发实例存在竞态（"改头不改身"）：并发实例已先提交 2ee2e82（仅含 1 论文 + 1 新闻，news 计数停留在 160），并在我编辑期间实时改写 news/index.html 正文/导航/副标题（nav 日期前缀 260621→260721 竞态）。收尾时合并两实例发现，补入并发实例忽略/跳过的 2 条行业动态：
+- Rapidus × Cadence 将 InnoStack 集成进 Raads 平台，推进 2nm SoC 代理式 AI 设计（Business Wire 2026-07-20）；
+- SemiEngineering「生产级 EDA AI Agent 架构决策」（2026-07-09，Siemens Fuse 路线）——初判为 Fuse 事件重复而跳过，复核后认定为独立深度技术文（架构决策视角），改为保留入档。
+最终统计：papers 214 / batches 91 / news 162 / lastUpdate 2026-07-21。一致性全绿（verify_20260721.py）：news_memory 162 == news header 162 == manifest.news 162；07-21 分组 3 卡 == 徽章 3；dates/latest 各 4 卡；PDF 2607.15830_RTL-Sequencer.pdf（2,184,694 字节）磁盘与链接一致。UNION 修正为未提交改动，需二次 git 提交推送（见工作日志 2026-07-21.md）。
+**经验教训：** 并发实例持续对 news/index.html 正文/导航/副标题实时改写，nav 日期前缀竞态（260621↔260721）仍存在；收尾须用脚本交叉校验，且避免与并发实例同窗口提交，或加文件锁/串行化。

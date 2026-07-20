@@ -21,15 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-21 · 涵盖 2026-01 → 2026-07-21 · 已去重整理 · 新增 1 篇论文（2607.15830 RTL-Sequencer：可扩展 RTL 时序预测的序列范式，DAC 2026）+ 1 条行业动态（NVIDIA @ DAC 2026 发布 TOPCELL / Self-Evolved ABC / Schemacoder / Verilog 基准等多项 EDA AI 研究演示）</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-21 · 涵盖 2026-01 → 2026-07-21 · 已去重整理 · 新增 1 篇论文（2607.15830 RTL-Sequencer：可扩展 RTL 时序预测的序列范式，DAC 2026）+ 3 条行业动态（NVIDIA @ DAC 2026 发布 TOPCELL / Self-Evolved ABC / Schemacoder / Verilog 基准等多项 EDA AI 研究演示；Rapidus × Cadence 将 InnoStack 集成进 Raads 推 2nm SoC 代理式 AI；SemiEngineering 深度拆解生产级 EDA AI Agent 架构决策）</p>
   <div class="stats">
     <div class="stat"><div class="num">214</div><div class="label">论文收录</div></div>
     <div class="stat"><div class="num">91</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">160</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">162</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
-  <a href="#2026-07-21">260721 🚀 NVIDIA @ DAC 2026 EDA AI 研究演示（TOPCELL / Self-Evolved ABC / Schemacoder / Verilog 基准）</a>
+  <a href="#2026-07-21">260721 🚀 NVIDIA @ DAC 2026（TOPCELL / Self-Evolved ABC / Schemacoder / Verilog 基准）+ 🤝 Rapidus×Cadence InnoStack 集成 Raads（2nm SoC 代理式 AI）+ 🏗️ SemiEngineering 生产级 EDA AI Agent 架构决策</a>
   <a href="#2026-07-20">260720 📰 SemiEngineering WIR #147 (Rapidus×Cadence InnoStack / Intel €5B / TSMC +$100B / JEDEC HBM4) + 🤔 AI 芯片设计：前景广阔，未解之问犹多（Ed Sperling 深度文）</a>
   <a href="#2026-07-17">260717 🚀 Cadence AuraStack AI 超级智能体 — 业界首个 PCB / 先进封装 智能体 AI 平台 (NVIDIA Blackwell 加速)</a>
   <a href="#2026-07-16">260716 🏭 TSMC Validated Flow 5.2 强制认证 (Synopsys Fusion Compiler / Cadence Innovus / Ansys RedHawk-SC) + 🚀 NVIDIA Apollo 开源科学仿真</a>
@@ -129,11 +129,11 @@
 <div class="container">
 
 <section id="2026-07-21">
-  <div class="section-title"><span class="icon">🔧</span> 2026-07-21 <span class="badge-new">1条新闻</span> <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔧</span> 2026-07-21 <span class="badge-new">3条新闻</span> <span class="line"></span></div>
   <div class="date-group">
     <div class="date-header" onclick="toggleDate(this)">
-      <h3>2026-07-21 行业动态（1条）</h3>
-      <span class="badge-count">1</span>
+      <h3>2026-07-21 行业动态（3条）</h3>
+      <span class="badge-count">3</span>
       <span class="toggle">▼</span>
     </div>
     <div class="date-body">
@@ -153,6 +153,39 @@
           </ul>
           <strong>核心看点</strong>：NVIDIA 把 agentic AI 从"流程编排"下沉到 EDA 原语（primitive）级优化——标准单元、ABC 综合、日志/调试、Verilog 基准——与本站长期跟踪的 Cadence/Synopsys/Siemens Agent 平台形成互补，凸显 agentic EDA 正从"辅助生成 RTL"走向"EDA 工具自我演化"。来源：nvidia.com/events/dac。</p>
           <a href="https://www.nvidia.com/en-us/events/dac" target="_blank">→ NVIDIA DAC 2026 技术程序</a>
+        </div>
+
+        <!-- News 2: Rapidus × Cadence — Agentic AI for advanced-node SoC design (2026-07-20) -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>Rapidus × Cadence · 官方合作发布 · 2026-07-20 · Business Wire（Cadence CEO Anirudh Devgan / Rapidus CEO 小池淳义）</div>
+          <h4>🚀 Rapidus × Cadence 合作推进先进节点 SoC 设计的代理式 AI — Raads Navigator/Indicator 集成 InnoStack，目标 2× 加速 TAT</h4>
+          <p>Rapidus 与 Cadence 宣布合作，将 <strong>Cadence InnoStack AI Super Agent</strong> 集成进 Rapidus 的 AI 辅助设计解决方案 <strong>Raads</strong>，面向先进节点（2nm）SoC 设计推进代理式 AI。<br>
+          <strong>关键内容</strong>：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li>Rapidus 扩展 Raads 产品线，新增 <strong>Raads Navigator</strong> 与 <strong>Raads Indicator</strong>，利用 LLM 为设计者提供质量保证与问题定位协助</li>
+            <li>新工具与 <strong>Cadence InnoStack AI Super Agent</strong> 集成，实现跨关键 SoC 工作流的代理式设计编排，从早期架构探索、逻辑实现到最终 signoff 自动协调任务，应用数据驱动优化</li>
+            <li>目标：相较传统 flow 实现最高 <strong>2× 设计周转时间（TAT）</strong>缩短</li>
+            <li>双方将在 <strong>CadenceLIVE Japan 2026</strong> 联合展示；Rapidus CEO 小池淳义（Atsuyoshi Koike）发表主旨演讲；Cadence CEO Anirudh Devgan 强调先进节点 SoC 需要能编排全生命周期复杂工作流的 AI 智能体，而非仅优化单点任务</li>
+          </ul>
+          <strong>核心看点</strong>：这是继 Cadence AgentStack/ChipStack/InnoStack/ViraStack/AuraStack 之后，<strong>InnoStack 首次深度嵌入代工厂（Rapidus）的 AI 原生设计与制造生态（Raads / RUMS 概念）</strong>，把代理式 AI 从 EDA 厂商工具延伸到真实先进制程（2nm）设计-制造闭环；直接呼应本站"Agentic AI 重塑 EDA 全流程 + 先进节点产能/设计效率"主线，亦与 07-17 WIR #147 中 Rapidus 采用 InnoStack 的简讯形成完整闭环（本次为更权威的官方专发，含 Raads Navigator/Indicator 与 2× TAT 目标等新增细节）。</p>
+          <a href="https://www.businesswire.com/news/home/20260716669554/en/" target="_blank">→ Business Wire 官方新闻稿</a>
+        </div>
+
+        <!-- News 3: SemiEngineering production-ready EDA AI Agent architecture (2026-07-09) -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>SemiEngineering · 架构深度 · 2026-07-09 · Emma-Jane Crozier（Siemens EDA Fuse 架构解读）</div>
+          <h4>🏗️ SemiEngineering 深度：生产级 EDA AI Agent 的架构决策 — 数据湖 + RAG + Agent Skills + MCP + 原生格式解析 + 治理</h4>
+          <p>SemiEngineering 特约撰文（2026-07-09）系统拆解"生产级 EDA/PCB 设计 AI Agent"的架构决策——通用 agentic 框架直接套 EDA 工具会失败，必须在架构层做针对性取舍：<br>
+          <strong>关键架构决策</strong>：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li><strong>领域 grounding</strong>：集中式多模态 EDA 数据湖打破团队/工具孤岛，单一事实源；自研 RAG 框架针对 Siemens EDA 工具与方法学优化；Agent Skills 可执行 playbook 跨工作流完成多步任务，每步内置校验与护栏</li>
+            <li><strong>基础设施兼容</strong>：EDA 环境非云原生（敏感 IP、小时/天数级验证任务、TB 级数据），Agent 必须管理长时验证任务不丢状态、集成现有作业调度而非替换、就地操作 TB 级数据</li>
+            <li><strong>可扩展编排</strong>：基于 <strong>MCP</strong> 的统一编排层实现动态工具发现，防止上下文饱和；子流程由 Agent Skills 自动化、可拼装成跨生命周期多工具工作流，天然多厂商/多模型无关</li>
+            <li><strong>原生 EDA 数据格式解析</strong>：自建领域解析器从 LEF/DEF、GDSII、波形库等真实产物提取精确上下文，汇入数据湖</li>
+            <li><strong>安全治理</strong>：基于角色访问控制、严格沙箱、全面审计追踪、human-in-the-loop 检查点</li>
+          </ul>
+          <strong>核心看点</strong>：文章是 <strong>Siemens Fuse EDA AI Agent</strong> 的架构白皮书式解读，把本站长期跟踪的"Agentic EDA 落地要素"（数据闭环 / RAG / Agent Skills / MCP 编排 / 原生格式 / 人在回路治理）系统化呈现；与 06-27 Fuse 发布、06-21 三巨头 AI 平台对比互为补充，为判断 agentic EDA 从演示走向生产提供了可操作的架构清单。</p>
+          <a href="https://semiengineering.com/the-architecture-decisions-behind-a-production-ready-eda-ai-agent/" target="_blank">→ SemiEngineering 原文</a>
         </div>
 
       </div>

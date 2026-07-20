@@ -1,7 +1,7 @@
 {
   "lastUpdate": "2026-07-21",
   "cutoffDate": "2026-01-08",
-  "totalItems": 160,
+  "totalItems": 162,
   "items": [
     {
       "date": "2026-07-21",
@@ -21,6 +21,53 @@
         "multi-agent",
         "standard cell",
         "2026-07"
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "company": "Rapidus × Cadence",
+      "title": "🤝 Rapidus × Cadence 合作：将 Cadence InnoStack AI Super Agent 集成进 Raads，推进 2nm SoC 代理式 AI（Raads Navigator/Indicator，目标 2× TAT）",
+      "link": "https://www.businesswire.com/news/home/20260716669554/en/",
+      "keywords": [
+        "Rapidus",
+        "Cadence",
+        "InnoStack",
+        "Raads",
+        "Raads Navigator",
+        "Raads Indicator",
+        "2nm",
+        "SoC",
+        "代理式 AI",
+        "agentic AI",
+        "TAT",
+        "CadenceLIVE Japan 2026",
+        "小池淳义",
+        "Anirudh Devgan",
+        "2026-07-20"
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "company": "SemiEngineering / Siemens EDA",
+      "title": "🏗️ SemiEngineering 深度：生产级 EDA AI Agent 的架构决策 — 数据湖 + RAG + Agent Skills + MCP + 原生格式解析 + 治理（Siemens Fuse 解读）",
+      "link": "https://semiengineering.com/the-architecture-decisions-behind-a-production-ready-eda-ai-agent/",
+      "keywords": [
+        "SemiEngineering",
+        "Siemens EDA",
+        "Fuse",
+        "生产级 EDA AI Agent",
+        "架构决策",
+        "architecture",
+        "数据湖",
+        "data lake",
+        "RAG",
+        "Agent Skills",
+        "MCP",
+        "原生格式解析",
+        "安全治理",
+        "human-in-the-loop",
+        "Emma-Jane Crozier",
+        "2026-07-09"
       ]
     },
     {
