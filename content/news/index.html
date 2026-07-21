@@ -21,15 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-22 · 涵盖 2026-01 → 2026-07-22 · 已去重整理 · 新增 7 篇论文（2607.17528 FluxBench：RTL-to-GDS 智能体系统评测 + Token ROI；2607.17053 MechMem-RTL：验证器证据兼容的机制记忆复用修复；2607.16855 Rtl2lean：RTL-to-Lean 自动化形式验证 + 引理复用；2607.17005 Prim-Dijkstra：物理设计最优化；2607.17398 CoEvoP&R：布局布线协同进化；2607.16674 CLDRoute：时钟网络布线；2607.16632 CLOSER-Bench：闭环 EDA 智能体评测）+ 1 条行业动态（月之暗面 Kimi K3 演示 48 小时自主芯片设计，开源 EDA 跑通 RTL→GDS 全流程，45nm PoC）</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-22 · 涵盖 2026-01 → 2026-07-22 · 已去重整理 · 新增 7 篇论文（2607.17528 FluxBench：RTL-to-GDS 智能体系统评测 + Token ROI；2607.17053 MechMem-RTL：验证器证据兼容的机制记忆复用修复；2607.16855 Rtl2lean：RTL-to-Lean 自动化形式验证 + 引理复用；2607.17005 Prim-Dijkstra：物理设计最优化；2607.17398 CoEvoP&R：布局布线协同进化；2607.16674 CLDRoute：时钟网络布线；2607.16632 CLOSER-Bench：闭环 EDA 智能体评测）+ 2 条行业动态（月之暗面 Kimi K3 演示 48 小时自主芯片设计，开源 EDA 跑通 RTL→GDS 全流程，45nm PoC；Siemens 收购 Precision Innovations，将 OpenROAD 系 AI 早期芯片规划收编进 EDA 产品组合）</p>
   <div class="stats">
     <div class="stat"><div class="num">221</div><div class="label">论文收录</div></div>
     <div class="stat"><div class="num">92</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">163</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">164</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
-  <a href="#2026-07-22">260722 🚀 月之暗面 Kimi K3 演示 48 小时自主芯片设计（开源 EDA 跑通 RTL→GDS，45nm PoC）+ 🤖 FluxBench RTL-to-GDS 智能体评测 + 🔧 MechMem-RTL 修复 + ✅ Rtl2lean 形式验证</a>
+  <a href="#2026-07-22">260722 🚀 月之暗面 Kimi K3 演示 48 小时自主芯片设计（开源 EDA 跑通 RTL→GDS，45nm PoC）+ 🤝 Siemens 收购 Precision Innovations（OpenROAD 系 AI 早期规划收编进 EDA 产品组合）+ 🤖 FluxBench / CLOSER-Bench RTL-to-GDS 评测 + 🔧 MechMem-RTL 修复 + ✅ Rtl2lean 形式验证 + 📐 Prim-Dijkstra / CoEvoP&R / CLDRoute 物理设计</a>
   <a href="#2026-07-21">260721 🚀 NVIDIA @ DAC 2026（TOPCELL / Self-Evolved ABC / Schemacoder / Verilog 基准）+ 🤝 Rapidus×Cadence InnoStack 集成 Raads（2nm SoC 代理式 AI）+ 🏗️ SemiEngineering 生产级 EDA AI Agent 架构决策</a>
   <a href="#2026-07-20">260720 📰 SemiEngineering WIR #147 (Rapidus×Cadence InnoStack / Intel €5B / TSMC +$100B / JEDEC HBM4) + 🤔 AI 芯片设计：前景广阔，未解之问犹多（Ed Sperling 深度文）</a>
   <a href="#2026-07-17">260717 🚀 Cadence AuraStack AI 超级智能体 — 业界首个 PCB / 先进封装 智能体 AI 平台 (NVIDIA Blackwell 加速)</a>
@@ -130,11 +130,11 @@
 <div class="container">
 
 <section id="2026-07-22">
-  <div class="section-title"><span class="icon">🔧</span> 2026-07-22 <span class="badge-new">1条新闻 · 7篇论文</span> <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔧</span> 2026-07-22 <span class="badge-new">2条新闻</span> <span class="line"></span></div>
   <div class="date-group">
     <div class="date-header" onclick="toggleDate(this)">
-      <h3>2026-07-22 行业动态（1条）</h3>
-      <span class="badge-count">1</span>
+      <h3>2026-07-22 行业动态（2条）</h3>
+      <span class="badge-count">2</span>
       <span class="toggle">▼</span>
     </div>
     <div class="date-body">
@@ -154,6 +154,15 @@
           </ul>
           <strong>核心看点</strong>：这是继 Cadence/Synopsys/Siemens Agent 平台、AgenticPD、PDAgent-Bench 之后，又一个把<strong>LLM 智能体闭环下沉到完整 RTL-to-GDS 流程</strong>的标志性演示，且首次以"开源 EDA + 大模型"证明全自主造芯在成熟节点可行。需注意边界：演示停留在 <strong>45nm 教学/研究级数字流程</strong>，未触及先进制程 PDK、Signoff、DFT、模拟混合信号、封装协同与 Foundry 规则闭环——这些才是商业 EDA 的护城河；其对 EDA 双雄股价的冲击更多是<strong>估值逻辑层面的信号</strong>而非技术替代。来源：与非网 / 雪球 / 微博（Kimi 官方技术博客）。</p>
           <a href="https://www.eefocus.com/article/2054059.html" target="_blank">→ 与非网 报道原文</a>
+        </div>
+
+        <!-- News 1: Siemens acquires Precision Innovations (OpenROAD-based AI EDA startup), 2026-07-21 -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>Siemens EDA · 官方收购公告 · 2026-07-21 · news.siemens.com（Ankur Gupta / Tom Spyrou）</div>
+          <h4>🤝 Siemens 收购 Precision Innovations — 将基于 OpenROAD 的 AI 驱动早期芯片规划纳入 EDA 产品组合</h4>
+          <p>Siemens 宣布签署收购 <strong>Precision Innovations</strong>（2019 年成立于圣地亚哥的私营 EDA 软件公司）协议，扩展其 EDA 产品组合中 <strong>AI 驱动的 shift-left 芯片规划（chip planning）</strong>能力。Precision Innovations <strong>基于开源 OpenROAD 框架</strong>开发 EDA 软件，帮助半导体团队在 SoC 设计周期早期评估架构/设计权衡、优化 PPA、减少设计迭代、加速流片；收购将补强 Siemens 数字设计与验证方案，并入 <strong>Digital Design Creation</strong> 平台。Siemens EDA IC 产品组合 EVP <strong>Ankur Gupta</strong> 表示整合 AI 驱动早期设计探索可显著缩短流片时程、优化 PPA；CEO <strong>Tom Spyrou</strong> 强调借 AI 在早期评估数千种设计方案。交易预计 <strong>2026 Q3</strong> 完成，条款未披露。<br>
+          <strong>核心看点</strong>：继 Cadence（Super Agent 族）/ Synopsys（agent teams）/ Siemens（Fuse / Aprisa AI）之后，本次是 <strong>Big-3 EDA 首次直接收购 OpenROAD 系 AI 初创</strong>，把开源 EDA 的 AI 早期设计探索能力收编进商业旗舰，凸显"AI 驱动 shift-left 架构探索"已成 EDA 竞争新高地；亦印证本站长期跟踪的 <strong>OpenROAD 开源生态正被产业主力加速整合</strong>。来源：news.siemens.com。</p>
+          <a href="https://news.siemens.com/zh-cn/siemens-to-acquire-precision-innovations" target="_blank">→ Siemens 官方新闻稿</a>
         </div>
 
       </div>

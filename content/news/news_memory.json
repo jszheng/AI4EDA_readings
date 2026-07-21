@@ -1,7 +1,7 @@
 {
   "lastUpdate": "2026-07-22",
   "cutoffDate": "2026-01-08",
-  "totalItems": 163,
+  "totalItems": 164,
   "items": [
     {
       "date": "2026-07-22",
@@ -21,6 +21,24 @@
         "Cadence",
         "Synopsys",
         "2026-07-17"
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "company": "Siemens EDA",
+      "title": "🤝 Siemens 收购 Precision Innovations — 将基于 OpenROAD 的 AI 驱动早期芯片规划纳入 EDA 产品组合",
+      "link": "https://news.siemens.com/zh-cn/siemens-to-acquire-precision-innovations",
+      "keywords": [
+        "Siemens",
+        "Siemens EDA",
+        "Precision Innovations",
+        "OpenROAD",
+        "收购",
+        "AI EDA",
+        "shift-left",
+        "芯片规划",
+        "Digital Design Creation",
+        "2026-07-21"
       ]
     },
     {

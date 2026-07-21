@@ -20,7 +20,7 @@
 <body>
 <header>
   <h1>📅 2026-07-22 动态</h1>
-  <p class="subtitle">共 7 篇论文 · 1 条行业动态 · 来源：arXiv / 月之暗面 Moonshot AI / 与非网 / 雪球</p>
+  <p class="subtitle">共 7 篇论文 · 2 条行业动态 · 来源：arXiv / Siemens / Moonshot AI</p>
 </header>
 <section>
   <div class="abstracts">
@@ -39,6 +39,16 @@
       </ul>
       <strong>核心看点</strong>：继 Cadence（Super Agent 族）/ Synopsys（agent teams）/ Siemens（Fuse / Aprisa AI）之后，本次是 <strong>Big-3 EDA 首次直接收购 OpenROAD 系 AI 初创</strong>，把开源 EDA 的 AI 早期设计探索能力收编进商业旗舰，凸显"AI 驱动 shift-left 架构探索"已成 EDA 竞争新高地；亦印证本站长期跟踪的 <strong>OpenROAD 开源生态正被产业主力加速整合</strong>（此前 OpenROAD PR #10511 已引入 Kokkos GPU 加速）。</p>
       <a href="https://news.siemens.com/zh-cn/siemens-to-acquire-precision-innovations" target="_blank">→ Siemens 官方新闻稿</a>
+    </div>
+
+    <!-- News 1: Moonshot AI Kimi K3 — 48-hour autonomous RTL-to-GDS chip design (2026-07-17) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>月之暗面 Moonshot AI · Kimi K3 发布 · 2026-07-17 · 多家媒体（与非网 / 雪球 / 微博）报道 · 资本市场：Cadence −9.47% / Synopsys −7.85%（07-17）</div>
+      <h4>🚀 月之暗面 Kimi K3 演示 48 小时自主芯片设计：以开源 EDA 跑通 RTL→布局布线→时序收敛→仿真验证全流程（45nm PoC）</h4>
+      <p>月之暗面发布的 <strong>Kimi K3</strong>（2.8T 参数 MoE，原生 100 万 token 上下文，07-27 开放权重）展示了一项能力：作为自主智能体<strong>连续运行 48 小时、零人工干预</strong>，基于<strong>开源 EDA 工具链</strong>（行业推测含 Yosys / OpenLane 类）与 <strong>Nangate 45nm</strong> 开源单元库，独立完成一颗功能芯片从架构→RTL 编码→布局布线→时序收敛→仿真验证的完整流程，全程未使用 Cadence / Synopsys 商用工具。<br>
+      <strong>已披露规格</strong>：Nangate 45nm，约 <strong>4 mm²</strong>、100 MHz；约 <strong>146 万标准单元</strong> + 0.277 MB SRAM（含 INT4 MAC 阵列）；目标运行 K3 自身 Nano 推理模型，仿真解码吞吐 8721 tok/s，达成时序收敛；官方定性为 early proof of concept（仅有时序收敛 + 仿真吞吐，尚无流片 / 回片 / 第三方复现）。<br>
+      <strong>核心看点</strong>：继 Cadence/Synopsys/Siemens Agent 平台、AgenticPD、PDAgent-Bench 之后，又一个把 LLM 智能体闭环下沉到完整 RTL-to-GDS 流程的标志性演示，且首次以"开源 EDA + 大模型"证明全自主造芯在成熟节点可行。需注意边界：演示停留在 45nm 教学/研究级数字流程，未触及先进制程 PDK、Signoff、DFT、模拟混合信号、封装协同与 Foundry 规则闭环。来源：与非网 / 雪球 / 微博（Kimi 官方技术博客）。</p>
+      <a href="https://www.eefocus.com/article/2054059.html" target="_blank">→ 与非网 报道原文</a>
     </div>
 
     <!-- 2607.17528 FluxBench: Can AI Agents Really Complete RTL-to-GDS? -->
