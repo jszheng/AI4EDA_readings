@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-22 动态</h1>
+  <p class="subtitle">共 7 篇论文 · 2 条行业动态 · 来源：arXiv / Siemens / Moonshot AI</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News 0: Siemens acquires Precision Innovations (OpenROAD-based AI EDA startup), 2026-07-21 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Siemens EDA · 官方收购公告 · 2026-07-21 · news.siemens.com（Ankur Gupta / Tom Spyrou）</div>
+      <h4>🤝 Siemens 收购 Precision Innovations — 将基于 OpenROAD 的 AI 驱动早期芯片规划纳入 EDA 产品组合</h4>
+      <p>Siemens 宣布签署收购 <strong>Precision Innovations</strong>（2019 年成立于圣地亚哥的私营 EDA 软件公司）协议，扩展其 EDA 产品组合中 <strong>AI 驱动的 shift-left 芯片规划（chip planning）</strong>能力。<br>
+      <strong>关键内容</strong>：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li>Precision Innovations <strong>基于开源 OpenROAD 框架</strong>开发 EDA 软件，帮助半导体团队在 SoC 设计周期早期评估架构/设计权衡、优化 PPA、减少设计迭代、加速流片</li>
+        <li>收购将补强 Siemens 数字设计与验证方案，并入 <strong>Digital Design Creation</strong> 平台，打造覆盖架构规划—实现—全芯片生命周期管理的端到端数字流程</li>
+        <li>Siemens EDA IC 产品组合 EVP <strong>Ankur Gupta</strong>：整合 AI 驱动早期设计探索可显著缩短流片时程、优化 PPA；CEO <strong>Tom Spyrou</strong>：借 AI 在早期评估数千种设计方案</li>
+        <li>交易预计 <strong>2026 Q3</strong> 完成，条款未披露</li>
+      </ul>
+      <strong>核心看点</strong>：继 Cadence（Super Agent 族）/ Synopsys（agent teams）/ Siemens（Fuse / Aprisa AI）之后，本次是 <strong>Big-3 EDA 首次直接收购 OpenROAD 系 AI 初创</strong>，把开源 EDA 的 AI 早期设计探索能力收编进商业旗舰，凸显"AI 驱动 shift-left 架构探索"已成 EDA 竞争新高地；亦印证本站长期跟踪的 <strong>OpenROAD 开源生态正被产业主力加速整合</strong>（此前 OpenROAD PR #10511 已引入 Kokkos GPU 加速）。</p>
+      <a href="https://news.siemens.com/zh-cn/siemens-to-acquire-precision-innovations" target="_blank">→ Siemens 官方新闻稿</a>
+    </div>
+
+    <!-- News 1: Moonshot AI Kimi K3 — 48-hour autonomous RTL-to-GDS chip design (2026-07-17) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>月之暗面 Moonshot AI · Kimi K3 发布 · 2026-07-17 · 多家媒体（与非网 / 雪球 / 微博）报道 · 资本市场：Cadence −9.47% / Synopsys −7.85%（07-17）</div>
+      <h4>🚀 月之暗面 Kimi K3 演示 48 小时自主芯片设计：以开源 EDA 跑通 RTL→布局布线→时序收敛→仿真验证全流程（45nm PoC）</h4>
+      <p>月之暗面发布的 <strong>Kimi K3</strong>（2.8T 参数 MoE，原生 100 万 token 上下文，07-27 开放权重）展示了一项能力：作为自主智能体<strong>连续运行 48 小时、零人工干预</strong>，基于<strong>开源 EDA 工具链</strong>（行业推测含 Yosys / OpenLane 类）与 <strong>Nangate 45nm</strong> 开源单元库，独立完成一颗功能芯片从架构→RTL 编码→布局布线→时序收敛→仿真验证的完整流程，全程未使用 Cadence / Synopsys 商用工具。<br>
+      <strong>已披露规格</strong>：Nangate 45nm，约 <strong>4 mm²</strong>、100 MHz；约 <strong>146 万标准单元</strong> + 0.277 MB SRAM（含 INT4 MAC 阵列）；目标运行 K3 自身 Nano 推理模型，仿真解码吞吐 8721 tok/s，达成时序收敛；官方定性为 early proof of concept（仅有时序收敛 + 仿真吞吐，尚无流片 / 回片 / 第三方复现）。<br>
+      <strong>核心看点</strong>：继 Cadence/Synopsys/Siemens Agent 平台、AgenticPD、PDAgent-Bench 之后，又一个把 LLM 智能体闭环下沉到完整 RTL-to-GDS 流程的标志性演示，且首次以"开源 EDA + 大模型"证明全自主造芯在成熟节点可行。需注意边界：演示停留在 45nm 教学/研究级数字流程，未触及先进制程 PDK、Signoff、DFT、模拟混合信号、封装协同与 Foundry 规则闭环。来源：与非网 / 雪球 / 微博（Kimi 官方技术博客）。</p>
+      <a href="https://www.eefocus.com/article/2054059.html" target="_blank">→ 与非网 报道原文</a>
+    </div>
+
+    <!-- 2607.17528 FluxBench: Can AI Agents Really Complete RTL-to-GDS? -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 2026-07-20 · Jinyuan Deng, Zhengrui Chen, Xufeng Wei, Tianyu Xing, Chenyi Wen, Cheng Zhuo</div>
+      <h4>🤖 FluxBench：端到端 EDA 工作流中 AI Agent 的真实能力评测</h4>
+      <p>现有评测多孤立考察单模型在单任务上的表现，难以刻画 agent 系统在完整 EDA 流程中的差异。本文提出 <strong>FluxBench</strong>，在<strong>统一 prompt / 工具环境 / 工艺库</strong>下系统评测 AI agent 的端到端 EDA 工作流能力，覆盖开源工具链 RTL 生成与商用工具 <strong>RTL-to-GDS</strong> 两类场景，评估 RTL 代码生成、迭代修复、工具反馈利用、逻辑综合、P&R、ECO 自动化；并引入 <strong>Token ROI</strong> 成本效率指标。<br>
+      <strong>核心结论</strong>：即便基于同一基座模型，不同 agent 系统架构性能差距达 <strong>86.27%</strong>；同性能 agent 的 Token ROI 差达 <strong>105.92×</strong>。PicoRV32 RTL-to-GDS 中 FluxEDA 端到端得分 97.94，超配 domain-specific EDA skills 的 Claude Code <strong>8.39×</strong>。结论：domain skills 不足以提升大规模 EDA 场景表现，<strong>agent 系统设计与基座模型能力共同决定成败</strong>。<br>
+      <strong>核心创新</strong>：统一环境下的工具交互式 EDA agent 基准 + Token ROI 成本效率指标；揭示"系统架构 > 单模型"与"skills 非银弹"——延续本站对 RTL-to-GDS 闭环（CLOSER-Bench）与 agentic EDA 评测（ArchEval / PDAgent-Bench）的跟踪。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">EDA Agent 评测</span>
+        <span class="tag">RTL-to-GDS</span>
+        <span class="tag">Token ROI</span>
+        <span class="tag">工具交互</span>
+        <span class="tag">端到端流程</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.17528" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.17528_FluxBench.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.17053 MechMem-RTL: Reusing Verified Mechanism Memories for LLM-Based RTL Repair -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE · 2026-07-19 · Mingyu Cheng, Junjie Gao, Jinhua Cui, Kuncai Zhong</div>
+      <h4>🔧 MechMem-RTL：复用验证确认的机制记忆做 LLM 驱动的 RTL 修复</h4>
+      <p>修复复杂时序逻辑错误需复用过往调试经验。现有 RAG 依赖任务文本相似度提供经验，但自然语言难以反映周期级硬件执行语义，常误导模型。本文提出 <strong>MechMem-RTL</strong>：不再依赖文本相似度，而是复用<strong>验证器确认的修复记录</strong>——每条记录严格关联触发证据、诊断出的失败机制、局部修复动作、保持约束与验证摘要；仅当<strong>确定性验证器证据与存储触发严格兼容</strong>时才注入历史记录，否则仅用当前验证器证据。<br>
+      <strong>核心结论</strong>：在 48 个公开时序 RTL 任务、6 个修复模型上，最多 2 次尝试即解决 288 个 task-model 对中的 <strong>180 个</strong>，优于标准反馈修复（109）与任务相似度 RAG（107）。<br>
+      <strong>核心创新</strong>：以"验证确认的机制记忆"替代文本相似度 RAG 做 RTL 修复——延续本站对 LLM RTL 修复/验证闭环（VeriPilot / ChipFuzzer / Evidence-Driven HLS）的跟踪，把"可信经验复用"落到实处。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL 修复</span>
+        <span class="tag">验证确认记忆</span>
+        <span class="tag">RAG</span>
+        <span class="tag">时序逻辑</span>
+        <span class="tag">LLM</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.17053" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.17053_MechMem-RTL.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.16855 Rtl2lean: Automated RTL-to-Lean Translation -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-18 · Hongqin Lyu, Junxing Dong, Yonghao Wang, Zhiteng Chao, Tiancheng Wang, Huawei Li</div>
+      <h4>📐 Rtl2lean：自动化 RTL-to-Lean 翻译 + 分层定理生成与引理复用</h4>
+      <p>交互式定理证明器提供 RTL 的强正确性保证，但将其用于现有 SystemVerilog 需大量手动语义建模与证明构造。本文提出 <strong>Rtl2lean</strong>，自动将 RTL 翻译为可执行 <strong>Lean 4</strong> 模型并构建分层定理库：生成模型将硬件执行表示为纯状态转移函数；四层定理框架覆盖组合语义、时序更新、单周期行为与可达性/不变量。<br>
+      <strong>核心结论</strong>：当高层属性无法由现有定理库 discharge 时，LLM 证明循环从证明上下文提议中间引理并经 Lean 反馈验证，仅被 Lean kernel 接受的引理进入可复用池。6 个设计生成 <strong>403 条定理全部经 Lean 校验</strong>，358 条基础引理中 <strong>287 条可自动复用（80.2%）</strong>。<br>
+      <strong>核心创新</strong>：RTL→Lean 自动化翻译 + LLM 证明循环 + 可复用引理池——延续本站对形式验证（Lean/Coq/SVA 生成）方向的跟踪，把机器检查 RTL 证明库的构建成本大幅降低。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">形式验证</span>
+        <span class="tag">RTL-to-Lean</span>
+        <span class="tag">定理证明</span>
+        <span class="tag">引理复用</span>
+        <span class="tag">LLM</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.16855" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.16855_Rtl2lean.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.17005 Provably Good Prim-Dijkstra Revisited: VLSI Routing with LLMs -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-18 · Keren Zhu</div>
+      <h4>📐 Provably Good Prim-Dijkstra Revisited：经典 VLSI 布线问题的 LLM 新理论与实用算法</h4>
+      <p>LLM 可能让"精确但沉睡"的算法问题重新变得可实践。本文以此重新审视长期开放、却又被实际工作绕过的经典 VLSI 布线问题 <strong>Prim-Dijkstra routing</strong>（其仅终端 Manhattan 复杂度数十年未决）。<br>
+      <strong>核心结论</strong>：证明<strong>弱 NP-完备性</strong>，导出连续代价-半径权衡与均衡 <strong>(2,2)</strong> 保证，构建基于高度分区的多模式求解器 <strong>HP-RCRST</strong>。在 28 个开发实例上，其更强模式在 <strong>23 个上 Pareto 支配</strong>已发表方法并集、5 个打平。案例展示 LLM 如何以形式化检验 + 反例 + 实现重新打开被忽视的基础问题。<br>
+      <strong>核心创新</strong>：把 LLM 用于"重开经典 EDA 理论问题"并完成形式化证明——延续本站对 VLSI 布线/可布线性（CLDRoute / Package Floorplanning）与"LLM+EDA 理论"主线的跟踪。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">VLSI 布线</span>
+        <span class="tag">LLM</span>
+        <span class="tag">形式化</span>
+        <span class="tag">Prim-Dijkstra</span>
+        <span class="tag">理论保证</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.17005" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.17005_Prim-Dijkstra.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.17398 CoEvoP&R: Co-Evolving Placement Objectives with Routing Feedback via LLMs -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · 2026-07-19 · Ruogu Chen, Weihua Xiao, Ramesh Karri, Jie Han</div>
+      <h4>📐 CoEvoP&R：用 LLM 协同演化布局目标 + 布线反馈</h4>
+      <p>解析布局器依赖可微目标（HPWL + 密度惩罚等代理指标），但与下游布线/时序质量错位。本文提出 <strong>CoEvoP&R</strong>：LLM 框架自动演化解析布局目标——每代 prompt 融合受限目标接口、基线上下文与带布线相关反馈（布局、时序代理、布线工具）的归档候选；LLM 提出<strong>可读可微目标</strong>，嵌入 <strong>DREAMPlace</strong> 验证、经时序代理与真实布线器评估并存储反馈以引导后续代数。<br>
+      <strong>核心结论</strong>：在 8 个 ChiP-Bench Nangate45 设计（3 seed）上，布线后<strong>线长 -16.9%、拥塞 -36.7%</strong>，WNS 改善 0.70ns、总负 slack 减 912ns；8 个 ICCAD 2015 Superblue 上线长 -5.4%、拥塞 -23.2%。代码已开源。<br>
+      <strong>核心创新</strong>：LLM 演化可微布局目标 + 布线/时序反馈闭环（可读、可解释、可部署于解析布局 flow）——延续本站对布局优化（DREAMPlace / GNN Placement）与"LLM+物理设计"主线的跟踪。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">布局优化</span>
+        <span class="tag">LLM</span>
+        <span class="tag">协同演化</span>
+        <span class="tag">布线反馈</span>
+        <span class="tag">DREAMPlace</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.17398" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.17398_CoEvoP-R.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.16674 CLDRoute: Conditional Latent Diffusion for Routability Map Generation -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · 2026-07-18 · Kiran Thorat, Nicole Meng, Caiwen Ding, Yingjie Lao, Zhijie Jerry Shi</div>
+      <h4>📐 CLDRoute：面向物理设计可布线性图生成的条件隐扩散</h4>
+      <p>准确的可布线性估计可减少昂贵的布线后迭代。已有学习方法将其视为确定性预测（映射布局特征到单一拥塞/DRC 结果）。本文将其重构为<strong>条件生成问题</strong>，把布线拥塞与 DRC 违例建模为空间结构化可布性场。<strong>CLDRoute</strong> 用物理感知条件化与任务特定潜建模分别处理拥塞与 DRC 图特性，支持基于样本的推断，对同设计产出<strong>均值预测 + 空间不确定性估计</strong>。<br>
+      <strong>核心结论</strong>：在 CircuitNet 2.0 (N28) 上——DRC 生成 SSIM <strong>0.9678</strong> / MAE 0.0028 / TopK@1% 0.3494；拥塞生成 SSIM <strong>0.9031</strong> / MAE 0.0286 / NZ-Pearson 0.3692。为布局期可布线性提供更实用的"期望 + 不确定性"视图。<br>
+      <strong>核心创新</strong>：扩散模型生成可布性场（拥塞 + DRC）并给出不确定性——延续本站对可布线性预测（Package Floorplanning / AttentionCap）与"生成式物理设计"主线的跟踪。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">可布线性</span>
+        <span class="tag">隐扩散</span>
+        <span class="tag">拥塞图</span>
+        <span class="tag">DRC</span>
+        <span class="tag">物理设计</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.16674" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.16674_CLDRoute.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.16632 CLOSER-Bench: Budgeted Cross-Stage Design Closure for Hardware Agents -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE · 2026-07-18 · Peilong Zhou, Zhirong Chen, Cangyuan Li, Haoyu Gao, Kaiyan Chang, Ziming Qu, Ying Wang</div>
+      <h4>🤖 CLOSER-Bench：面向硬件 Agent 的预算化跨阶段设计收敛评测</h4>
+      <p>硬件工程给 coding agent 带来 pass-at-k 难以刻画的<strong>长程工作</strong>：进度连续、工具反馈延迟且异构、后端失败可能需改 RTL 而非调参。现有基准各自测 RTL 生成/修复/验证/PPA/物理实现，难判断 agent 跨抽象边界的成败。本文提出 <strong>CLOSER-Bench</strong>，受控评测"预算化跨阶段设计收敛"——对同一设计与隐藏目标，配对 <strong>spec-to-RTL、RTL-to-GDS、spec-to-GDS</strong> 任务，记录每次仿真/综合/STA/P&R 调用，衡量最终质量、anytime 进度、工具成本与跨阶段恢复。<br>
+      <strong>核心结论</strong>：基于开源 Verilator / Yosys / OpenROAD / KLayout / Sky130 + Harbor agent harness。10 任务 pilots 暴露"完成—收敛"鸿沟：3 个 agent 解局部 AXI 修复，而配对的验证-收敛任务区分出 frontier agent 与两个 otherwise 成功基线。验证完整 RTL-to-GDS flow 并构建 macro-based AXI/DMA 流式加速器。<br>
+      <strong>核心创新</strong>：把硬件收敛建模为预算化序贯决策问题（而非孤立代码生成）——与 FluxBench 共筑"RTL-to-GDS agent 闭环评测"双支柱，延续本站 agentic EDA 评测主线。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">硬件 Agent 评测</span>
+        <span class="tag">设计收敛</span>
+        <span class="tag">RTL-to-GDS</span>
+        <span class="tag">跨阶段</span>
+        <span class="tag">OpenROAD</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.16632" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.16632_CLOSER-Bench.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

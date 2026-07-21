@@ -7,9 +7,25 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（25篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（26篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2607.16855 · cs.AR / cs.LO · 2026-07-18 · Hongqin Lyu, Junxing Dong, Yonghao Wang, Zhiteng Chao, Tiancheng Wang, Huawei Li
+        </div>
+        <div class="abs-title">Rtl2lean：自动化 RTL-to-Lean 翻译 + 分层定理生成与引理复用（形式验证）</div>
+        <div class="abs-body">
+          <p>提出 <strong>Rtl2lean</strong>，自动把 RTL 设计翻译为可执行 <strong>Lean 4</strong> 模型并构建分层定理库供后续形式验证：生成模型把硬件执行表示为纯状态转移函数，四层定理框架覆盖组合语义、时序更新、单周期行为、可达性与不变量；当高层属性现有定理库无法 discharge 时，<strong>LLM 证明循环</strong>提出中间引理并经 Lean 反馈验证，仅被 Lean kernel 接受的引理才加入可复用引理池。在 6 个 SystemVerilog 设计上生成 <strong>403 条定理全部通过 Lean 检查</strong>；358 条基础引理中 287 条可自动复用（复用率 80.2%）。Huawei Li 组（中科院计算所）出品。<br><strong>核心创新</strong>：LLM 证明循环 + 机器检查形式验证闭环 + 引理池复用，摊薄 RTL 形式验证边际成本<br><strong>标签</strong>：形式验证 · Lean4 · RTL-to-Lean · 定理证明 · 引理复用</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2607.16855" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2607.16855_Rtl2lean.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式验证</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">Lean4</span>
+        </div>
+      </div>
     <div class="abs-card">
         <div class="abs-meta">
           <span class="badge-new">NEW</span>

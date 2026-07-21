@@ -7,9 +7,35 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（28篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（30篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+    <div class="abs-card">
+          <span class="badge-new">NEW</span>
+          <div class="abs-title">CLOSER-Bench：面向硬件 Agent 的预算化跨阶段设计收敛评测</div>
+          <div class="abs-meta">arXiv:2607.16632 · cs.SE · 2026-07-18 · Peilong Zhou, Zhirong Chen, Cangyuan Li, Haoyu Gao, Kaiyan Chang, Ziming Qu, Ying Wang</div>
+          <div class="abs-body">提出 <strong>CLOSER-Bench</strong>，受控评测"预算化跨阶段设计收敛"——对同一设计与隐藏目标，配对 <strong>spec-to-RTL、RTL-to-GDS、spec-to-GDS</strong> 任务，记录每次仿真/综合/STA/P&R 调用，衡量最终质量、anytime 进度、工具成本与跨阶段恢复。基于开源 Verilator / Yosys / OpenROAD / KLayout / Sky130 + Harbor agent harness；10 任务 pilots 暴露"完成—收敛"鸿沟。把硬件收敛建模为预算化序贯决策问题（而非孤立代码生成）——与 FluxBench 共筑"RTL-to-GDS agent 闭环评测"双支柱，延续本站 agentic EDA 评测主线。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2607.16632" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2607.16632_CLOSER-Bench.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件Agent评测</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">设计收敛</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-GDS</span>
+          </div>
+    </div>
+    <div class="abs-card">
+          <span class="badge-new">NEW</span>
+          <div class="abs-title">Can AI Agents Really Complete RTL-to-GDS? Lessons from Benchmarking Tool-Interactive EDA Workflows（FluxBench / FluxEDA）</div>
+          <div class="abs-meta">arXiv:2607.17528 · cs.AI / cs.AR / cs.LG · 2026-07-20 · Jinyuan Deng, Zhengrui Chen, Xufeng Wei, Tianyu Xing, Chenyi Wen, Cheng Zhuo</div>
+          <div class="abs-body">提出 <strong>FluxBench</strong>，在统一 prompt、工具环境与技术库下系统评测 AI 智能体的<strong>端到端 EDA 工作流</strong>能力，覆盖开源工具链 RTL 生成与商用闭源 RTL-to-GDS 流（以 PicoRV32 为案例），评估 RTL 代码生成、迭代修复、工具反馈利用、逻辑综合、布局布线（P&R）与 ECO 自动化；并提出 <strong>Token ROI</strong> 成本效率指标。关键发现：即便同一基座模型，不同 agent 架构性能差距达 <strong>86.27%</strong>；任务性能相近时 Token ROI 可差 <strong>105.92×</strong>；PicoRV32 RTL-to-GDS 上 FluxEDA 端到端分数 97.94，优于带领域 EDA skills 的 Claude Code 达 <strong>8.39×</strong>。结论：仅靠领域 skills 不足，agent 系统设计与基座模型能力同样关键。Cheng Zhuo 组出品，呼应本站 AgenticPD / PDAgent-Bench 主线。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2607.17528" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2607.17528_FluxBench.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">智能体评测</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">RTL-to-GDS</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">TokenROI</span>
+          </div>
+    </div>
     <div class="abs-card">
           <span class="badge-new">NEW</span>
           <div class="abs-title">AgenticPD: A Stage-Aware Agentic Framework for Physical Design QoR Optimization</div>

@@ -7,9 +7,62 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（41篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（44篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.17005 · cs.AR / cs.DS · 2026-07-18 · Keren Zhu
+      </div>
+      <div class="abs-title">Provably Good Prim-Dijkstra Revisited：经典 VLSI 布线问题的 LLM 新理论与实用算法</div>
+      <div class="abs-body">
+        <p>LLM 可能让"精确但沉睡"的算法问题重新变得可实践。本文以此重新审视长期开放、却又被实际工作绕过的经典 VLSI 布线问题 <strong>Prim-Dijkstra routing</strong>（其仅终端 Manhattan 复杂度数十年未决）。证明<strong>弱 NP-完备性</strong>，导出连续代价-半径权衡与均衡 <strong>(2,2)</strong> 保证，构建基于高度分区的多模式求解器 <strong>HP-RCRST</strong>。在 28 个开发实例上，其更强模式在 <strong>23 个上 Pareto 支配</strong>已发表方法并集、5 个打平。案例展示 LLM 如何以形式化检验 + 反例 + 实现重新打开被忽视的基础问题。延续本站对 VLSI 布线/可布线性（CLDRoute / Package Floorplanning）与"LLM+EDA 理论"主线的跟踪。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.17005" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.17005_Prim-Dijkstra.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VLSI布线</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">LLM</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式化</span>
+      </div>
+    </div>
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.17398 · cs.LG · 2026-07-19 · Ruogu Chen, Weihua Xiao, Ramesh Karri, Jie Han
+      </div>
+      <div class="abs-title">CoEvoP&R：用 LLM 协同演化布局目标 + 布线反馈</div>
+      <div class="abs-body">
+        <p>解析布局器依赖可微目标（HPWL + 密度惩罚等代理指标），但与下游布线/时序质量错位。本文提出 <strong>CoEvoP&R</strong>：LLM 框架自动演化解析布局目标——每代 prompt 融合受限目标接口、基线上下文与带布线相关反馈（布局、时序代理、布线工具）的归档候选；LLM 提出<strong>可读可微目标</strong>，嵌入 <strong>DREAMPlace</strong> 验证、经时序代理与真实布线器评估并存储反馈以引导后续代数。在 8 个 ChiP-Bench Nangate45 设计（3 seed）上，布线后<strong>线长 -16.9%、拥塞 -36.7%</strong>，WNS 改善 0.70ns、总负 slack 减 912ns；8 个 ICCAD 2015 Superblue 上线长 -5.4%、拥塞 -23.2%。代码已开源。延续本站对布局优化（DREAMPlace / GNN Placement）与"LLM+物理设计"主线的跟踪。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.17398" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.17398_CoEvoP-R.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局优化</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">LLM</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">协同演化</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">DREAMPlace</span>
+      </div>
+    </div>
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.16674 · cs.LG · 2026-07-18 · Kiran Thorat, Nicole Meng, Caiwen Ding, Yingjie Lao, Zhijie Jerry Shi
+      </div>
+      <div class="abs-title">CLDRoute：面向物理设计可布线性图生成的条件隐扩散</div>
+      <div class="abs-body">
+        <p>准确的可布线性估计可减少昂贵的布线后迭代。已有学习方法将其视为确定性预测（映射布局特征到单一拥塞/DRC 结果）。本文将其重构为<strong>条件生成问题</strong>，把布线拥塞与 DRC 违例建模为空间结构化可布性场。<strong>CLDRoute</strong> 用物理感知条件化与任务特定潜建模分别处理拥塞与 DRC 图特性，支持基于样本的推断，对同设计产出<strong>均值预测 + 空间不确定性估计</strong>。在 CircuitNet 2.0 (N28) 上——DRC 生成 SSIM <strong>0.9678</strong> / MAE 0.0028 / TopK@1% 0.3494；拥塞生成 SSIM <strong>0.9031</strong> / MAE 0.0286 / NZ-Pearson 0.3692。为布局期可布线性提供更实用的"期望 + 不确定性"视图。延续本站对可布线性预测（Package Floorplanning / AttentionCap）与"生成式物理设计"主线的跟踪。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.16674" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.16674_CLDRoute.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可布线性</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">隐扩散</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拥塞图</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">DRC</span>
+      </div>
+    </div>
     <div class="abs-card">
       <div class="abs-meta">
         <span class="badge-new">NEW</span>

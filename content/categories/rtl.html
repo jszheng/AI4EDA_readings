@@ -7,9 +7,20 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（66篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（67篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+      <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span> MechMem-RTL：复用已验证机制记忆（Mechanism Memory）的 LLM 基 RTL 修复</div>
+          <div class="abs-meta">arXiv:2607.17053 · cs.SE / cs.AR · 2026-07-19 · Mingyu Cheng, Junjie Gao, Jinhua Cui, Kuncai Zhong</div>
+          <div class="abs-body">提出 <strong>MechMem-RTL</strong>，把 LLM 基 RTL 修复经验从"文本相似度 RAG"升级为"<strong>验证器证据严格兼容</strong>的机制记忆（Mechanism Memory）复用"：每条存储记录严格关联触发证据、失败机制、局部修复动作、保持约束与验证摘要，仅当确定性验证器证据与存储触发严格兼容时才注入过往记录。在 48 个公开时序 RTL 任务、6 个修复模型上（每任务最多 2 次尝试），成功解决 288 对中的 <strong>180 对</strong>，优于标准反馈修复（109 对）与任务相似度 RAG（107 对）。延续本站 RTL 生成-验证-反馈闭环主线。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2607.17053" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2607.17053_MechMem-RTL.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL修复</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">机制记忆</span>
+          </div>
+      </div>
       <div class="abs-card">
           <div class="abs-title"><span class="badge-new">NEW</span> ChipVerilog: A Large-Scale OpenCores-Derived Benchmark for LLM-Based Verilog RTL Generation</div>
           <div class="abs-meta">arXiv:2607.13079 · cs.AR / cs.PL · 2026-07-12 · Yan Tan, Jiping Du, Xiangchen Meng, Yangdi Lyu</div>

@@ -1,8 +1,28 @@
 {
-  "lastUpdate": "2026-07-21",
+  "lastUpdate": "2026-07-22",
   "cutoffDate": "2026-01-08",
-  "totalItems": 162,
+  "totalItems": 163,
   "items": [
+    {
+      "date": "2026-07-22",
+      "company": "月之暗面 Moonshot AI",
+      "title": "🚀 月之暗面 Kimi K3 演示 48 小时自主芯片设计：开源 EDA 跑通 RTL→布局布线→时序收敛→仿真验证全流程（45nm PoC，Cadence/Synopsys 当日股价下跌）",
+      "link": "https://www.eefocus.com/article/2054059.html",
+      "keywords": [
+        "月之暗面",
+        "Moonshot AI",
+        "Kimi K3",
+        "48小时芯片设计",
+        "自主智能体",
+        "开源EDA",
+        "RTL-to-GDS",
+        "Nangate 45nm",
+        "时序收敛",
+        "Cadence",
+        "Synopsys",
+        "2026-07-17"
+      ]
+    },
     {
       "date": "2026-07-21",
       "company": "NVIDIA",

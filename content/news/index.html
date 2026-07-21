@@ -21,14 +21,15 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-21 · 涵盖 2026-01 → 2026-07-21 · 已去重整理 · 新增 1 篇论文（2607.15830 RTL-Sequencer：可扩展 RTL 时序预测的序列范式，DAC 2026）+ 3 条行业动态（NVIDIA @ DAC 2026 发布 TOPCELL / Self-Evolved ABC / Schemacoder / Verilog 基准等多项 EDA AI 研究演示；Rapidus × Cadence 将 InnoStack 集成进 Raads 推 2nm SoC 代理式 AI；SemiEngineering 深度拆解生产级 EDA AI Agent 架构决策）</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-07-22 · 涵盖 2026-01 → 2026-07-22 · 已去重整理 · 新增 7 篇论文（2607.17528 FluxBench：RTL-to-GDS 智能体系统评测 + Token ROI；2607.17053 MechMem-RTL：验证器证据兼容的机制记忆复用修复；2607.16855 Rtl2lean：RTL-to-Lean 自动化形式验证 + 引理复用；2607.17005 Prim-Dijkstra：物理设计最优化；2607.17398 CoEvoP&R：布局布线协同进化；2607.16674 CLDRoute：时钟网络布线；2607.16632 CLOSER-Bench：闭环 EDA 智能体评测）+ 1 条行业动态（月之暗面 Kimi K3 演示 48 小时自主芯片设计，开源 EDA 跑通 RTL→GDS 全流程，45nm PoC）</p>
   <div class="stats">
-    <div class="stat"><div class="num">214</div><div class="label">论文收录</div></div>
-    <div class="stat"><div class="num">91</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">162</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">221</div><div class="label">论文收录</div></div>
+    <div class="stat"><div class="num">92</div><div class="label">更新批次</div></div>
+    <div class="stat"><div class="num">163</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-07-22">260722 🚀 月之暗面 Kimi K3 演示 48 小时自主芯片设计（开源 EDA 跑通 RTL→GDS，45nm PoC）+ 🤖 FluxBench RTL-to-GDS 智能体评测 + 🔧 MechMem-RTL 修复 + ✅ Rtl2lean 形式验证</a>
   <a href="#2026-07-21">260721 🚀 NVIDIA @ DAC 2026（TOPCELL / Self-Evolved ABC / Schemacoder / Verilog 基准）+ 🤝 Rapidus×Cadence InnoStack 集成 Raads（2nm SoC 代理式 AI）+ 🏗️ SemiEngineering 生产级 EDA AI Agent 架构决策</a>
   <a href="#2026-07-20">260720 📰 SemiEngineering WIR #147 (Rapidus×Cadence InnoStack / Intel €5B / TSMC +$100B / JEDEC HBM4) + 🤔 AI 芯片设计：前景广阔，未解之问犹多（Ed Sperling 深度文）</a>
   <a href="#2026-07-17">260717 🚀 Cadence AuraStack AI 超级智能体 — 业界首个 PCB / 先进封装 智能体 AI 平台 (NVIDIA Blackwell 加速)</a>
@@ -127,6 +128,38 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+
+<section id="2026-07-22">
+  <div class="section-title"><span class="icon">🔧</span> 2026-07-22 <span class="badge-new">1条新闻 · 7篇论文</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-07-22 行业动态（1条）</h3>
+      <span class="badge-count">1</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+
+        <!-- News 0: Moonshot AI Kimi K3 — 48-hour autonomous RTL-to-GDS chip design (2026-07-17) -->
+        <div class="abs-card">
+          <div class="src"><span class="dot"></span>月之暗面 Moonshot AI · Kimi K3 发布 · 2026-07-17 · 多家媒体（与非网 / 雪球 / 微博）报道 · 资本市场：Cadence −9.47% / Synopsys −7.85%（07-17）</div>
+          <h4>🚀 月之暗面 Kimi K3 演示 48 小时自主芯片设计：以开源 EDA 跑通 RTL→布局布线→时序收敛→仿真验证全流程（45nm PoC）</h4>
+          <p>月之暗面发布的 <strong>Kimi K3</strong>（2.8T 参数 MoE，原生 100 万 token 上下文，07-27 开放权重）展示了一项能力：作为自主智能体<strong>连续运行 48 小时、零人工干预</strong>，基于<strong>开源 EDA 工具链</strong>（行业推测含 Yosys / OpenLane 类）与 <strong>Nangate 45nm</strong> 开源单元库，独立完成一颗功能芯片从架构→RTL 编码→布局布线→时序收敛→仿真验证的完整流程，全程未使用 Cadence / Synopsys 商用工具。<br>
+          <strong>已披露规格</strong>：
+          <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+            <li>工艺 / 面积：Nangate 45nm，约 <strong>4 mm²</strong>，100 MHz 主频</li>
+            <li>规模：约 <strong>146 万标准单元</strong> + 0.277 MB SRAM，含 INT4 MAC 阵列</li>
+            <li>目标：运行 K3 自身的 Nano 推理模型，仿真解码吞吐 8721 tok/s，达成时序收敛</li>
+            <li>官方定性：early proof of concept —— 仅有<strong>时序收敛 + 仿真吞吐</strong>，尚无流片 / 回片 / 第三方复现</li>
+          </ul>
+          <strong>核心看点</strong>：这是继 Cadence/Synopsys/Siemens Agent 平台、AgenticPD、PDAgent-Bench 之后，又一个把<strong>LLM 智能体闭环下沉到完整 RTL-to-GDS 流程</strong>的标志性演示，且首次以"开源 EDA + 大模型"证明全自主造芯在成熟节点可行。需注意边界：演示停留在 <strong>45nm 教学/研究级数字流程</strong>，未触及先进制程 PDK、Signoff、DFT、模拟混合信号、封装协同与 Foundry 规则闭环——这些才是商业 EDA 的护城河；其对 EDA 双雄股价的冲击更多是<strong>估值逻辑层面的信号</strong>而非技术替代。来源：与非网 / 雪球 / 微博（Kimi 官方技术博客）。</p>
+          <a href="https://www.eefocus.com/article/2054059.html" target="_blank">→ 与非网 报道原文</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-07-21">
   <div class="section-title"><span class="icon">🔧</span> 2026-07-21 <span class="badge-new">3条新闻</span> <span class="line"></span></div>
