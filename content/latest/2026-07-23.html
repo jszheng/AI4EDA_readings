@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-23 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 1 条行业动态 · 来源：arXiv / Siemens EDA</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News: Siemens EDA @ DAC 2026 agentic AI program (2026-07) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Siemens EDA · DAC 2026 官方日程（7/26–29 长滩）· 2026-07 · Amit Gupta / Da Yang(NVIDIA) 等</div>
+      <h4>🏛️ Siemens EDA @ DAC 2026：Agentic AI 全线展示 — Aprisa AI 工作坊、Fuse Calibre Intelligence、EDA AI ROI 圆桌（Microsoft / Arm / Broadcom / NVIDIA）</h4>
+      <p>Siemens EDA 公布 DAC 2026（7/26–29，长滩）展示与技术议程，<strong>Agentic AI</strong> 成为贯穿全栈的主线：
+      <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+        <li><strong>主题演讲 "From Tools to Agents: Realizing Fully Autonomous EDA Workflows"</strong>（周一 7/27，Siemens Amit Gupta + NVIDIA Da Yang 同台）</li>
+        <li><strong>工作坊 "Agentic AI technology in Aprisa AI"</strong>：探索 Aprisa AI 与 Siemens Fuse 如何编排智能体贯通 RTL-to-GDS flow，加速收敛、改善 QoR、实现自主设计实现</li>
+        <li><strong>Calibre Intelligence</strong>：Fuse AI 融合 GenAI 与 ML 贯通验证流程（Doc Assistants / LSG Copilot / Run Advisor / Check Assist / Vision AI）</li>
+        <li><strong>圆桌 "Is EDA AI Delivering on Its ROI Promise?"</strong>（周二 7/28，Microsoft / Arm / Broadcom / NVIDIA 同台）——直击 agentic EDA 的能力-成本命题</li>
+        <li><strong>"Agentic AI and the rise of the D&V scientist"</strong>：智能体推理/规划/适应，把孤立 EDA 工具连成协作式、上下文感知伙伴</li>
+        <li>另含 HPC Works（Agentic AI 驱动 HPC 芯片设计）、Solido AI（Custom IC）、数字孪生 playbook 等</li>
+      </ul>
+      <strong>核心看点</strong>：Siemens 把 agentic AI 从"单一工具 Copilot"推进到"贯通 RTL-to-GDS 的自主实现 + 验证智能化 + ROI 治理"三层叙事，与本站已跟踪的 Cadence（Super Agent 族）/ Synopsys（agent teams）/ NVIDIA@DAC 形成完整 DAC 2026 图景；"EDA AI 是否兑现 ROI"圆桌（Microsoft/Arm/Broadcom/NVIDIA）更把产业最关心的落地-成本问题摆上台面。来源：events.sw.siemens.com DAC 2026。</p>
+      <a href="https://events.sw.siemens.com/en-US/dac/?cmpid=10595" target="_blank">→ Siemens DAC 2026 官方日程</a>
+    </div>
+
+    <!-- 2607.18519 VeriRefine: A Progressive Approach to Synthesizable RTL Design Generation Using LLMs -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-20 · Xiangfei Kong, Tasnim Tabassum, Marwan Abdelwahab, Hao Zheng</div>
+      <h4>🔧 VeriRefine：把规格精化提升为可验证阶段的渐进式可综合 RTL 生成</h4>
+      <p>LLM 可直接从自然语言规格生成 RTL，但失败多源于<strong>理解而非编码</strong>：规格非形式化、含歧义，模型的解释隐式进行，所有误读都被静默写进 Verilog，只有仿真才能暴露。<strong>VeriRefine</strong> 把<strong>规格精化（specification refinement）作为 RTL 生成的一个可验证阶段</strong>——渐进式将 prose 规格精化为显式、schema 约束的"设计意图"账户，以逐信号的 <strong>Abstract Signal Transition Functions (ASTF)</strong> 表示，在生成任何代码前就固定每个信号的逻辑风格、时钟域与复位行为，并锚定到逐字规格句。<br>
+      <strong>核心机制</strong>：精化后的规格经<strong>五层审计</strong>（健全性、完备性、一致性、FSM 完整性、核心 RTL 设计规则），于表示层修复理解错误；代码生成后每个仿真失败被分类为"理解错误"或"编码错误"并路由回对应阶段做针对性修复。因每个信号的硬件类在精化期已固定，<strong>可综合性成为流水线的结构属性</strong>而非事后检查。<br>
+      <strong>核心结论</strong>：基于 Claude Sonnet 4.6，VeriRefine 在 <strong>RTLLM v2.0 达 94.0% 功能正确率、VerilogEval-Human v2 达 98.1%</strong>。<br>
+      <strong>核心创新</strong>：把"规格理解/精化"从隐式、易错的黑盒提升为可验证、可审计的一等阶段——延续本站对 LLM RTL 生成-验证闭环（VeriPilot / MechMem-RTL / RTLScout）与"理解先于编码"主线（EstRTL / LongRTL）的跟踪，并直指 RTLLM/VerilogEval 等基准痛点。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL 生成</span>
+        <span class="tag">规格精化</span>
+        <span class="tag">LLM</span>
+        <span class="tag">五层审计</span>
+        <span class="tag">可综合</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.18519" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.18519_VeriRefine.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.18536 MAGE: Human-Like Macro Placement via Agentic Multimodal Reasoning -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · cs.RO · 2026-07-20 · Andrew B. Kahng, Sayak Kundu, Bodhisatta Pramanik</div>
+      <h4>📐 MAGE：类专家的多模态多智能体宏布局 — 六阶段工作流 + 锦标赛式细化，WNS 改善 11–19% / TNS 70–74% 超商业布局器</h4>
+      <p>工业物理设计流程中宏布局（macro placement）仍高度依赖人工精修。本文提出 <strong>MAGE（Macro Placement Agentic Engine）</strong>，一个<strong>多模态多智能体</strong>宏布局细化框架：将宏布局任务分解为<strong>六阶段工作流</strong>，融合结构化布图规则、视觉检查与迭代细化；专家布图知识以自然语言指令 + 验证准则编码，而非从带标签布局数据学习。<br>
+      <strong>核心机制</strong>：引入<strong>锦标赛式细化（tournament-style refinement）</strong>模式，评估多个候选布局并把更高质量解的反馈传播下去；并提出四项量化"human-likeness（类人度）"的指标——notch / whitespace / pocket / alignment score，捕捉专家设计者使用但传统 PPA 指标不直接度量的结构性质。<br>
+      <strong>核心结论</strong>：在 NanGate45 与 GlobalFoundries 12nm 共 9 个设计上，MAGE 相对商业宏布局器取得 <strong>WNS 几何均值改善 11.1%–19.3%、TNS 改善 70.0%–74.0%</strong>；在 3 个有人类专家与 Hier-RTLMP 基线的 NanGate45 设计上，相对人类专家 WNS/TNS 改善 18.3%/72.5%、相对 Hier-RTLMP 改善 47.0%/80.4%，线长与功耗相当；在类人度指标上整体得分较所有基线高 6%–48%。<br>
+      <strong>核心创新</strong>：多模态多智能体 + 结构化专家知识（非数据驱动）+ 锦标赛式细化 + 类人度量化，刷新宏布局 SOTA——延续本站对布局优化（CoEvoP&R / DREAMPlace / GNN Placement）与"LLM+物理设计"主线的跟踪，且由 EDA 泰斗 A.B. Kahng 组产出。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">宏布局</span>
+        <span class="tag">多模态</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">类人度</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.18536" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.18536_MAGE.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

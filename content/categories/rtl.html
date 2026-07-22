@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（67篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（68篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+      <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span> VeriRefine：把规格精化提升为可验证阶段的渐进式可综合 RTL 生成</div>
+          <div class="abs-meta">arXiv:2607.18519 · cs.AR · 2026-07-20 · Xiangfei Kong, Tasnim Tabassum, Marwan Abdelwahab, Hao Zheng</div>
+          <div class="abs-body">提出 <strong>VeriRefine</strong>，把非形式化、含歧义的 prose 规格<strong>渐进式精化为显式、schema 约束的"设计意图"账户</strong>——以逐信号的 <strong>Abstract Signal Transition Functions (ASTF)</strong> 表示，在生成任何代码之前就固定每个信号的逻辑风格、时钟域与复位行为，并锚定到逐字规格句。精化后的规格再经过<strong>五层审计</strong>（健全性、完备性、一致性、FSM 完整性、核心 RTL 设计规则），从而在 Verilog 生成前于表示层修复理解错误。代码生成后，每个仿真失败被分类为"理解错误"或"编码错误"并路由回对应阶段做针对性修复；因每个信号的硬件类在精化期已固定，<strong>可综合性成为流水线的结构属性</strong>而非事后检查。基于 Claude Sonnet 4.6，VeriRefine 在 <strong>RTLLM v2.0 达 94.0% 功能正确率、VerilogEval-Human v2 达 98.1%</strong>。核心创新：把"规格理解/精化"从隐式、易错的黑盒提升为可验证、可审计的一等阶段——延续本站对 LLM RTL 生成-验证闭环（VeriPilot / MechMem-RTL / RTLScout）与"理解先于编码"主线（EstRTL / LongRTL）的跟踪。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2607.18519" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2607.18519_VeriRefine.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">规格精化</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">五层审计</span>
+          </div>
+      </div>
       <div class="abs-card">
           <div class="abs-title"><span class="badge-new">NEW</span> MechMem-RTL：复用已验证机制记忆（Mechanism Memory）的 LLM 基 RTL 修复</div>
           <div class="abs-meta">arXiv:2607.17053 · cs.SE / cs.AR · 2026-07-19 · Mingyu Cheng, Junjie Gao, Jinhua Cui, Kuncai Zhong</div>

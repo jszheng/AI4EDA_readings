@@ -1004,3 +1004,22 @@
 - SemiEngineering「生产级 EDA AI Agent 架构决策」（2026-07-09，Siemens Fuse 路线）——初判为 Fuse 事件重复而跳过，复核后认定为独立深度技术文（架构决策视角），改为保留入档。
 最终统计：papers 214 / batches 91 / news 162 / lastUpdate 2026-07-21。一致性全绿（verify_20260721.py）：news_memory 162 == news header 162 == manifest.news 162；07-21 分组 3 卡 == 徽章 3；dates/latest 各 4 卡；PDF 2607.15830_RTL-Sequencer.pdf（2,184,694 字节）磁盘与链接一致。UNION 修正为未提交改动，需二次 git 提交推送（见工作日志 2026-07-21.md）。
 **经验教训：** 并发实例持续对 news/index.html 正文/导航/副标题实时改写，nav 日期前缀竞态（260621↔260721）仍存在；收尾须用脚本交叉校验，且避免与并发实例同窗口提交，或加文件锁/串行化。
+
+## 2026-07-22 执行摘要
+- **论文 +7**：Agent×2（FluxBench 2607.17528 RTL-to-GDS 智能体评测+Token ROI；CLOSER-Bench 2607.16632 闭环 EDA 智能体评测）；RTL×1（MechMem-RTL 2607.17053 验证器证据兼容的机制记忆复用修复）；Verify×1（Rtl2lean 2607.16855 RTL-to-Lean 自动化形式验证+引理复用）；Physical×3（Prim-Dijkstra 2607.17005；CoEvoP&R 2607.17398 布局布线协同进化；CLDRoute 2607.16674 时钟网络布线）。
+- **并发实例竞争**：本日另一自动化实例同时编辑同批文件，已先追加 4 篇论文到 date/latest 页、预 bump physical 头至 44，但未补分类卡片/PDF/manifest。已通过"合并而非覆盖"补齐：下载 4 份 PDF、补物理×3+Agent×1 卡片、manifest papers 217→221、dates count 4→8、修正 date 页副标题来源。
+- **行业动态 +1**：月之暗面 Kimi K3 演示 48 小时自主 RTL→GDS（开源 EDA，Nangate 45nm PoC），写入 news_memory.json（totalItems 163，lastUpdate 2026-07-22）。
+- **一致性修正**：news/index.html header 论文收录 217→221、副标题"3篇论文"→"7篇论文"（此前遗留，本次修正）。
+- **数字**：manifest papers 221 / batches 92 / news 163 / lastUpdate 2026-07-22；分类头 Agent 30 / RTL 67 / Verify 26 / Physical 44。
+- **Git**：commit 04b7e3a "auto update: 2026-07-22" + push origin main 成功（首次 push 因 tail 缓冲+慢传误判为挂起，杀掉后重推成功）。
+- **下次注意**：遇并发实例竞争，优先核对分类页卡片、PDF 与 manifest 三项是否完整，再提交。
+
+## 2026-07-23 执行摘要
+- **论文 +1**：RTL生成×1（VeriRefine 2607.18519 — 把规格精化提升为可验证阶段的渐进式可综合 RTL 生成，逐信号 ASTF + 五层审计，Claude Sonnet 4.6 下 RTLLM v2.0 94.0% / VerilogEval-Human v2 98.1%）。
+- **行业动态 +0**：07-22 cs.AR 公告窗口无新增行业新闻。SemiEngineering 无新 AI4EDA 文章（WIR #148 预计 07-24 周五发布）；Cadence/Synopsys/Siemens/NVIDIA 官方博客无新发布；启芯宸光（38 智能体 / DeepEDA）已于 07-13 收录，不重复。
+- **arXiv 扫描**：cs.AR 07-22 公告 9 篇中仅 2607.18519 属 AI4EDA 核心（其余为 CNN/NTT/CKKS/FHE 加速器、BIST、NN 加密等）；cs.LG 近期 50 篇无 AI4EDA 相关。
+- **数字**：manifest papers 222 / batches 93 / news 164 / lastUpdate 2026-07-23；分类头 RTL 67→68。
+- **产物**：content/dates/2026-07-23.html（1 卡）+ content/latest/2026-07-23.html（1 卡）+ content/dates/2607.18519_VeriRefine.pdf（1.80 MB）+ rtl.html 加 VeriRefine 卡片（68篇）+ papers/index.html 跳转→07-23。
+- **一致性全绿**：news_memory 164 == news header 164 == manifest.news 164；dates/latest 07-23 各 1 卡 == count 1；PDF 2607.18519_VeriRefine.pdf（1,804,280 字节）磁盘与链接一致。
+- **未提交残留（非本次产生，已排除）**：工作树存在孤儿 PDF content/dates/2607.18536_MAGE.pdf（19 MB，未被任何页面引用，疑为并发进程残留）与空文件 _scratch_arxiv_ar.xml（0 字节）；本次提交均未纳入，避免提交孤立文件。
+- **Git**：commit "auto update: 2026-07-23" + push origin/main（预期）。
