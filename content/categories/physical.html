@@ -7,9 +7,29 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（44篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（45篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2607.18536 MAGE: Human-Like Macro Placement via Agentic Multimodal Reasoning -->
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.18536 · cs.AI · cs.RO · 2026-07-20 · Andrew B. Kahng, Sayak Kundu, Bodhisatta Pramanik
+      </div>
+      <div class="abs-title">MAGE：类专家的多模态多智能体宏布局 — 六阶段工作流 + 锦标赛式细化，WNS 改善 11–19% / TNS 70–74% 超商业布局器</div>
+      <div class="abs-body">
+        <p>工业物理设计流程中宏布局（macro placement）仍高度依赖人工精修。本文提出 <strong>MAGE（Macro Placement Agentic Engine）</strong>，一个<strong>多模态多智能体</strong>宏布局细化框架：将宏布局任务分解为<strong>六阶段工作流</strong>，融合结构化布图规则、视觉检查与迭代细化；专家布图知识以自然语言指令 + 验证准则编码，而非从带标签布局数据学习。引入<strong>锦标赛式细化（tournament-style refinement）</strong>模式，评估多个候选布局并把更高质量解的反馈传播下去；并提出四项量化"human-likeness（类人度）"的指标——notch / whitespace / pocket / alignment score，捕捉专家设计者使用但传统 PPA 指标不直接度量的结构性质。在 NanGate45 与 GlobalFoundries 12nm 共 9 个设计上，MAGE 相对商业宏布局器取得 <strong>WNS 几何均值改善 11.1%–19.3%、TNS 改善 70.0%–74.0%</strong>；在 3 个有人类专家与 Hier-RTLMP 基线的 NanGate45 设计上，相对人类专家 WNS/TNS 改善 18.3%/72.5%、相对 Hier-RTLMP 改善 47.0%/80.4%，线长与功耗相当；在类人度指标上整体得分较所有基线高 6%–48%。核心创新：多模态多智能体 + 结构化专家知识（非数据驱动）+ 锦标赛式细化 + 类人度量化，刷新宏布局 SOTA——延续本站对布局优化（CoEvoP&R / DREAMPlace / GNN Placement）与"LLM+物理设计"主线的跟踪，且由 EDA 泰斗 A.B. Kahng 组产出。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.18536" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.18536_MAGE.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">宏布局</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">多模态</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">物理设计</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">类人度</span>
+      </div>
+    </div>
     <div class="abs-card">
       <div class="abs-meta">
         <span class="badge-new">NEW</span>

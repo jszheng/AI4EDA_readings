@@ -1,8 +1,33 @@
 {
-  "lastUpdate": "2026-07-22",
+  "lastUpdate": "2026-07-23",
   "cutoffDate": "2026-01-08",
-  "totalItems": 164,
+  "totalItems": 165,
   "items": [
+    {
+      "date": "2026-07-23",
+      "company": "Siemens EDA",
+      "title": "🏛️ Siemens EDA @ DAC 2026：Aprisa AI 工作坊（机器学习宏布局 / 时钟树感知布局）+ Fuse Calibre Intelligence 发布 + EDA AI ROI 圆桌（Microsoft·Arm·Broadcom·NVIDIA）",
+      "link": "https://events.sw.siemens.com/en-US/dac/?cmpid=10595",
+      "keywords": [
+        "Siemens EDA",
+        "Siemens",
+        "DAC 2026",
+        "Aprisa AI",
+        "机器学习宏布局",
+        "macro placement",
+        "时钟树感知布局",
+        "Fuse",
+        "Calibre Intelligence",
+        "EDA AI ROI",
+        "圆桌",
+        "ROI 圆桌",
+        "Microsoft",
+        "Arm",
+        "Broadcom",
+        "NVIDIA",
+        "2026-07-23"
+      ]
+    },
     {
       "date": "2026-07-22",
       "company": "月之暗面 Moonshot AI",
