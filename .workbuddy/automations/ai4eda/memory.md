@@ -1,3 +1,19 @@
+## 2026-07-27（自动更新 — 0 篇论文 + 4 条行业动态 · 并发合并收尾）
+
+- 本日无新论文：经 cs.AR/new live listing 核验，arXiv 周末排程下最新公告仅到 2026-07-23，07-24→07-27 区间内无新增 AI4EDA 论文（周一公告尚未入库）。已排除重复：WaveformQA(2607.20638)、华大九天/UCAgent、Self-Evolved ABC(2604.15082) 均在站内 → 不收录。papers 维持 227。
+- 行业动态新增 4 条（均站内未收录，DAC 2026 现场 7/26–29 长滩为头条源）：
+  - 🏛️ Cadence Agentic AI 设计愿景 @ DAC 2026（ChipStack×Nemotron 3 Ultra / ViraStack / InnoStack / AuraStack 四大超级智能体）
+  - 🏛️ DAC 2026 现场开幕：四大 EDA 巨头集体从"工具"转向"智能体"（NVIDIA TOPCELL/Self-Evolved ABC + Cadence×NVIDIA ChipStack 周级→小时级 + Synopsys Agentic AI Teams + Siemens Aprisa AI 10×）
+  - 🔐 SemiEngineering Blog Review 7/22（物理 AI 安全 / 智能体闭环反馈 / 3D-IC 安全 / Chiplet 互操作 AMBA CHI C2C / RF 数字孪生）
+  - 📰 SemiEngineering WIR #148（Amkor–Nvidia $1.5B / Siemens 双收购 Defacto+Precision / Real Intent AI sign-off 10× / Si2 LBC-bench / AMD Helios / Etched $300M / TSMC 提价）
+- 并发合并处置：并行实例已先行创建 07-27 date/latest（1 卡 Cadence）、把 news_memory.totalItems 推到 167、manifest news 167、dates[0].count 1。本次将自有的 3 条新动态合并进同一 07-27 section（Cadence 卡置首保留并行顺序），避免覆盖。最终 07-27 = 4 卡。
+- 同步产物：content/dates/2026-07-27.html & content/latest/2026-07-27.html（各 4 卡，无 PDF）、content/news/index.html（07-27 section 4 卡 + 导航合并链接 + subtitle 改写 + 统计 227/95/170）、content/news/news_memory.json（新增 3 条，totalItems 167→170）、manifest.js（news 167→170, batches 94→95, dates[0].count 1→4, lastUpdate 2026-07-27）。
+- 一致性全绿：news/index.html 07-27 段 badge/h3/badge-count 均为 4，段内 abs-card = 4；news_memory.totalItems 170 = 段卡片数一致；manifest news 170 与 header 一致；papers/index.html 重定向不变（→ 2026-07-24，0 新论文）。
+- 无 PDF 下载（0 论文）。无过期清理（cutoffDate 2026-01-08）。
+- Git：commit "auto update: 2026-07-27" 并 push origin/main。
+
+---
+
 ## 2026-07-20（自动更新 — 2 篇论文 + 2 条行业动态）
 
 - 续跑会话继续完成 07-20 收尾：date/latest 2026-07-20.html 已于前置步骤创建（2 论文 + 2 新闻），本次补齐清单同步、记忆更新与 git 提交。
