@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-27 动态</h1>
+  <p class="subtitle">共 0 篇论文 · 4 条行业动态 · 来源：Cadence / DAC 2026 / SemiEngineering</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News: Cadence Agentic AI Design Vision @ DAC 2026 (published 2026-07-22) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Cadence · 官方博客 · 2026-07-22 · Agentic AI Design Vision @ DAC 2026 · DAC 2026（7/26–29 长滩）</div>
+      <h4>🏛️ Cadence Agentic AI 设计愿景亮相 DAC 2026：ChipStack×NVIDIA Nemotron 3 Ultra、ViraStack、InnoStack、AuraStack 四大超级智能体贯通芯片→封装→板</h4>
+      <p>Cadence 在 DAC 2026（7/26–29，长滩）公布其贯穿全设计连续体的 <strong>Agentic AI 设计愿景</strong>——把"单点 AI 自动化"推进到"跨芯片 / 封装 / 板协同的智能体编排"。四大 <strong>AI Super Agent</strong> 各司其职：
+        <ul style="margin:6px 0 10px 20px;font-size:.84rem;color:#334155;line-height:1.7;">
+          <li><strong>ChipStack AI Super Agent</strong>：前端硅设计与验证（RTL 生成 / testbench 创建 / 验证规划 / 回归编排 / 调试 / 问题定位），关键设计验证任务生产力最高提升 <strong>10×</strong>；并首次明确与 <strong>NVIDIA Nemotron 3 Ultra</strong>（面向 agentic RTL 设计验证的高效开放模型）结合，由 ChipStack 协调 RTL 生成、testbench、回归、调试等专用智能体</li>
+          <li><strong>ViraStack AI Super Agent</strong>：把 agentic 自动化延伸到定制 / 模拟设计（schematic 创建、电路优化、testbench 开发、版图迁移）</li>
+          <li><strong>InnoStack AI Super Agent</strong>：数字实现与签核（综合、布局布线、签核分析、ECO 执行），用专用智能体加速迭代与收敛</li>
+          <li><strong>AuraStack AI Super Agent</strong>（新发布）：把 agentic AI 带入 PCB 与先进封装，统一 AI 驱动多物理场基座并发建模与优化电 / 热 / 机械行为</li>
+        </ul>
+        <strong>核心突破</strong>：Cadence 强调 <strong>"agentic AI 不替代 EDA 基座，而是依赖它"</strong>——智能体工作流的价值上限由底层仿真 / 形式验证 / 综合 / 实现 / 时序 / 功耗 / 签核 / 多物理场引擎决定；并以 Cadence–NVIDIA 合作（Grace CPU / Blackwell GPU / CUDA-X）说明加速计算如何放大智能体编排能力。<br>
+        <strong>核心看点</strong>：与本站已跟踪的 Cadence×NVIDIA ChipStack Level-5（06-01）、Cadence AuraStack（07-17）形成完整拼图——本次把四大超级智能体首次同台、并坐实 <strong>Nemotron 3 Ultra 作为 agentic RTL 设计验证底座模型</strong>，标志"硅→封装→板"全栈 agentic EDA 从产品叙事走向 DAC 2026 可演示现实。来源：community.cadence.com。</p>
+      <a href="https://community.cadence.com/cadence_blogs_8/b/corporate-news/posts/cadence-s-agentic-ai-design-vision-takes-center-stage-at-dac" target="_blank">→ Cadence 官方博客</a>
+    </div>
+
+    <!-- News: DAC 2026 现场开幕（Long Beach, 2026-07-26/27） -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>DAC 2026 · 现场报道 · 2026-07-26/27 · Long Beach · Agentic AI 成主线（NVIDIA / Cadence / Synopsys / Siemens 四大巨头齐发）</div>
+      <h4>🏛️ DAC 2026 于 7/26 在 Long Beach 开幕：Agentic AI 成绝对主线，四大 EDA 巨头集体从"工具"转向"智能体"</h4>
+      <p>第 63 届 DAC（首次落地 Long Beach）7/26–29 举行，<strong>550+ 技术议程、120+ 参展商、15 家 AI 原生初创</strong>参展，技术程序 <strong>40% 聚焦 AI</strong>。NVIDIA Tim Costa 作欢迎致辞 "AI Supercomputing Meets EDA"；Siemens EDA Amit Gupta 与 NVIDIA Da Yang 同台演讲 <strong>"From Tools to Agents: Realizing Fully Autonomous EDA Workflows"</strong>。<br>
+        <strong>NVIDIA 研究演示</strong>：TOPCELL（LLM 标准单元拓扑优化）、Self-Evolved ABC（多智能体自进化逻辑综合）、Schemacoder、Verilog Design Problems Benchmark；panel "Agentic AI in EDA: Who's in Control?"（IBM / Siemens / Qualcomm / Samsung / NVIDIA）与 "Is EDA AI Delivering on Its ROI Promise?"（Microsoft / ARM / Broadcom / NVIDIA）。<br>
+        <strong>Cadence × NVIDIA</strong> 联合演示：ChipStack 启动由 Nemotron 驱动、OpenShell 保障安全的 RTL 验证闭环，把芯片验证从"<strong>周级</strong>"压到"<strong>小时级</strong>"。<br>
+        <strong>Synopsys</strong>（booth #631）演示 "Agentic AI Teams"——专业化智能体团队（设计 / 验证 / 约束 / debug 分角色）编排端到端 EDA 流程；及 "Multiphysics Fusion"（Synopsys + Ansys，3DIC HBM 布线 / PG bump 优化 / 数字 IR-热感知签核）。<br>
+        <strong>Siemens EDA</strong> 以 Aprisa AI + EDA AI 系统主打 RTL-to-GDS 10× 提效；"Towards a Fully AI-Native EDA Stack" 演讲给出生产级 DV 智能体<strong>首过 debug 70% 成功率</strong>。来源：nvidia.com/events/dac、synopsys.com/events/dac-2026、events.cadence.com、siemens.com、dac.com/press-release。</p>
+      <a href="https://www.nvidia.com/en-us/events/dac" target="_blank">→ NVIDIA @ DAC 2026</a>
+      &nbsp;<a href="https://dac.com/press-release/the-2026-dac-chips-to-systems-conference-comes-to-long-beach-for-the-first-time-with-record-growth-as-ai-reshapes-chip-and-system-design" target="_blank">→ DAC 2026 新闻稿</a>
+    </div>
+
+    <!-- News: SemiEngineering Blog Review July 22（2026-07-24） -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Blog Review · 2026-07-24 · 物理 AI 安全 / 智能体闭环反馈 / 3D-IC 安全 / Chiplet 互操作 / RF 数字孪生</div>
+      <h4>🔐 SemiEngineering Blog Review（7/22）：物理 AI 催生新型安全挑战；可靠智能体靠"闭环反馈"；3D-IC 安全面立体化；Chiplet 互操作靠 AMBA CHI C2C；RF 数字孪生走向预测性验证</h4>
+      <p><strong>物理 AI 安全</strong>（Synopsys Dana Neustadter & Ilya Tolchinsky）：AI 直接交互物理世界、环境持续变化，需"<strong>持续运行时保障</strong>"将输出维持在安全边界内，远超传统静态安全测试。<br>
+        <strong>智能体需闭环反馈</strong>（Cadence Hamid Shojaei）：可靠代理 = 代理提方案 → 工具给真实高质量反馈 → 代理推理优化 → 反复收敛；本质是在自动设计与人工验证间架桥，让每次试错沉淀为可复用经验。<br>
+        <strong>3D-IC 安全</strong>（Siemens Tova Levy & Crypto Quantique Chris Jones）：向 3D-IC 迁移使攻击面从平面变立体，传统安全策略需根本性重构。<br>
+        <strong>Chiplet 互操作</strong>（Arm Francisco Socal）：AMBA CHI C2C 属性协商机制实现不同能力芯粒互操作，为异构集成扫清接口兼容障碍。<br>
+        <strong>RF 数字孪生</strong>（Keysight Richard Duvall）：无线系统跨 RF / 天线 / 基带 / 信道耦合，RF 数字孪生可在部署前完成系统级性能评估，避免后期返工。来源：semiengineering.com/blog-review-july-22-3/。</p>
+      <a href="https://semiengineering.com/blog-review-july-22-3/" target="_blank">→ SemiEngineering Blog Review: July 22</a>
+    </div>
+
+    <!-- News: SemiEngineering Chip Industry Week In Review #148（2026-07-24） -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Chip Industry Week In Review #148 · 2026-07-24 · 半导体周评</div>
+      <h4>📰 Chip Industry Week In Review #148：Amkor–Nvidia $1.5B AI 封装协议；Siemens 双笔 EDA 收购（Defacto + Precision Innovations）；Real Intent 推 AI sign-off 智能体；Si2 发布 LBC-bench；AMD Helios / Etched $300M / TSMC 提价</h4>
+      <p><strong>Amkor–Nvidia</strong> 签 $1.5B 多年协议，共研下一代 AI / 加速计算先进封装与测试，Nvidia 预付支持 Amkor 亚利桑那扩产（高密度互联 / 异构集成）。<br>
+        <strong>Siemens 双收购</strong>：Defacto Technologies（SoC 设计创建与集成自动化）+ Precision Innovations（基于 OpenROAD 的 AI 芯片规划，07-22 已单条报道）；持续收编 AI EDA 能力。<br>
+        <strong>Real Intent</strong> 发布 AI 代理做静态 sign-off，提速 <strong>10×</strong>；<strong>Si2</strong> 推出 <strong>LBC-bench</strong>（LLM / AI 代理芯片设计验证公开基准）。<br>
+        <strong>AMD</strong> Helios 机架级 AI 平台（72 GPU + 18 CPU）量产，Anthropic 将部署至多 2GW AMD GPU、AMD 投资 Anthropic 至多 $5B；<strong>Etched</strong> 追加 $300M 扩产推理机架；<strong>TSMC</strong> 2027 提价最高 10%；<strong>Intel Foundry</strong> 营收 +31%。来源：semiengineering.com/chip-industry-week-in-review-148/。</p>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-148/" target="_blank">→ SemiEngineering WIR #148</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

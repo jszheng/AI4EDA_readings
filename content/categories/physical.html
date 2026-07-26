@@ -7,9 +7,49 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（45篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（47篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2607.21408 Chip Floorplanning Combining Convex and Non-convex Optimization -->
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.21408 · cs.AR · 2026-07-23 · Yilihamujiang Yimamu, Guillem Pastor-Rué, Jordi Cortadella
+      </div>
+      <div class="abs-title">Chip Floorplanning：结合凸与非凸优化的三阶段固定轮廓布图规划 — HPWL 较 SOTA 降 1%–5%</div>
+      <div class="abs-body">
+        <p>布图规划（floorplanning）是 VLSI 物理设计早期关键阶段，其质量直接决定互连线长、芯片性能与下游设计效率。本文提出一个多阶段固定轮廓（fixed-outline）布图规划框架，融合非凸与凸优化，分三阶段推进：阶段一二次布局优化模块连通性，产出拓扑感知、强网聚类的起始配置（仍含显著重叠）；阶段二采用基于 Adam 的投影梯度法求解非凸优化，同时最小化线长与重叠；阶段三利用水平/垂直约束图的对数变换模型以凸形式消除残余重叠。在 MCNC、GSRC、HB+ 基准上取得 SOTA 线长质量，平均 HPWL 较现有 SOTA 布图规划器降低至少 1% 与 5%。核心创新：凸优化（二次布局初始化）+ 非凸优化（Adam 投影梯度）+ 凸合法化（对数变换约束图）的三段式混合，线长可证优于 SOTA——延续本站对布图规划/布局（CLDRoute / Package Floorplanning / MAGE）主线的跟踪。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.21408" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.21408_Chip-Floorplanning.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布图规划</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">凸优化</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">非凸优化</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">物理设计</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HPWL</span>
+      </div>
+    </div>
+    <!-- 2607.19768 AlphaRoute: LLM as Semantic Optimizers for Multi-Objective Routing -->
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.19768 · cs.LG / cs.AR · 2026-07-22 · Kabir Murjani, Mishri Bhavsar, Manish I. Patel, Jonti Talukdar
+      </div>
+      <div class="abs-title">AlphaRoute：LLM 作语义优化器的 VLSI 全局布线多目标自适应搜索 — ISPD 2025 溢出降 98.6%</div>
+      <div class="abs-body">
+        <p>VLSI 全局布线是 NP-hard 组合优化问题：在容量受限的 3D 网格上分配信号网，最小化拥塞、线长与过孔。传统启发式依赖静态惩罚调度，在复杂拥塞拓扑上失效。AlphaRoute 把撕线重布（R&R）重构为动态优化系统：引入 SHAP 溢出分解隔离逐网拥塞，驱动经 3D Dijkstra 迷宫布线的目标子图提取与自适应 PathFinder 策略；关键在于 LLM 充当语义策略优化器——在确定性知识图约束下解读拥塞指标、动态调整惩罚参数。ISPD 2025 上 MEMPOOL 溢出降 98.6%；受约束的 ARIANE 设计溢出降至 146,109（较 SOTA 降 29.8×），惩罚分数 0.0538 vs SOTA 1.780。核心创新：首个用 LLM 作"语义策略优化器"自适应调整 PathFinder 惩罚的全局布线方法（知识图约束保证可控）——延续本站布线主线（CLDRoute / Prim-Dijkstra），代码已开源。ICLAD 2026 接收。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.19768" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.19768_AlphaRoute.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">全局布线</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">LLM 优化器</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多目标</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">物理设计</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PathFinder</span>
+      </div>
+    </div>
     <!-- 2607.18536 MAGE: Human-Like Macro Placement via Agentic Multimodal Reasoning -->
     <div class="abs-card">
       <div class="abs-meta">

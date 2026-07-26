@@ -7,9 +7,28 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（26篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（27篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+    <!-- 2607.20141 Formal Foundations for Known Good Reliable Die Screening in Chiplet-Based AI SoCs -->
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.20141 · cs.AR · cs.AI · 2026-07-22 · Prashanthi Metku, Chandra Gandu
+      </div>
+      <div class="abs-title">Chiplet 基 AI SoC 的"已知良好可靠裸片（KGRD）"筛选形式化基础 — 从 KGD 到 KGRD 的约束推断 + 安全门控决策架构</div>
+      <div class="abs-body">
+        <p>基于 chiplet 的 AI 系统级芯片（SoC）快速增长，暴露出半导体测试方法的根本缺口：现有"已知良好裸片（KGD）"筛选只保证装配前功能正确，却不提供装配后可靠性寿命的概率保证。本文把 <strong>KGD→KGRD（Known Good Reliable Die）</strong>的过渡形式化为"不完整装配前可观测性下的约束推断问题"，提出四项 interlocking 贡献：① <strong>贝叶斯概率风险模型</strong>，把装配前遥测映射到装配后失效似然，并给出可量化的可观测性偏差界；② <strong>安全门控决策架构</strong>，提供可证明的装配后失效概率保证；③ 源自 Bayes 最优决策理论的"不确定性感知处置边界"；④ 约束闭环反馈机制，在不违反可靠性约束下实现一致的模型改进。N=4,000 合成裸片的蒙特卡洛仿真验证了全部四项理论性质，并确认安全保证在完整门阈值范围内一致成立。核心创新：为 chiplet AI SoC 的装配后可靠性筛选建立首个形式化基础（贝叶斯风险 + 安全门控 + 闭环反馈）——延续本站对 Chiplet 互连/可靠性（Chiplet3D / Chiplet 互联标准化）与"多物理场/可靠性 AI"主线跟踪。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.20141" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.20141_Chiplet-KGRD.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Chiplet</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">KGD/KGRD</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可靠性筛选</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">贝叶斯</span>
+      </div>
+    </div>
       <div class="abs-card">
           <div class="abs-title"><span class="badge-new">NEW</span> ATLAS: Template-Constrained LLM Agents for SAR ADC Generation（模板约束 LLM 智能体生成可通过仿真验证的 SAR ADC）</div>
           <div class="abs-meta">arXiv:2607.14165 · cs.SE / cs.AI / cs.AR / cs.LG · 2026-07-15 · Dimple Vijay Kochar, Hae-Seung Lee, Anantha P. Chandrakasan（MIT）</div>

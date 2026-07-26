@@ -1014,12 +1014,25 @@
 - **Git**：commit 04b7e3a "auto update: 2026-07-22" + push origin main 成功（首次 push 因 tail 缓冲+慢传误判为挂起，杀掉后重推成功）。
 - **下次注意**：遇并发实例竞争，优先核对分类页卡片、PDF 与 manifest 三项是否完整，再提交。
 
-## 2026-07-23 执行摘要
-- **论文 +1**：RTL生成×1（VeriRefine 2607.18519 — 把规格精化提升为可验证阶段的渐进式可综合 RTL 生成，逐信号 ASTF + 五层审计，Claude Sonnet 4.6 下 RTLLM v2.0 94.0% / VerilogEval-Human v2 98.1%）。
-- **行业动态 +0**：07-22 cs.AR 公告窗口无新增行业新闻。SemiEngineering 无新 AI4EDA 文章（WIR #148 预计 07-24 周五发布）；Cadence/Synopsys/Siemens/NVIDIA 官方博客无新发布；启芯宸光（38 智能体 / DeepEDA）已于 07-13 收录，不重复。
-- **arXiv 扫描**：cs.AR 07-22 公告 9 篇中仅 2607.18519 属 AI4EDA 核心（其余为 CNN/NTT/CKKS/FHE 加速器、BIST、NN 加密等）；cs.LG 近期 50 篇无 AI4EDA 相关。
-- **数字**：manifest papers 222 / batches 93 / news 164 / lastUpdate 2026-07-23；分类头 RTL 67→68。
-- **产物**：content/dates/2026-07-23.html（1 卡）+ content/latest/2026-07-23.html（1 卡）+ content/dates/2607.18519_VeriRefine.pdf（1.80 MB）+ rtl.html 加 VeriRefine 卡片（68篇）+ papers/index.html 跳转→07-23。
-- **一致性全绿**：news_memory 164 == news header 164 == manifest.news 164；dates/latest 07-23 各 1 卡 == count 1；PDF 2607.18519_VeriRefine.pdf（1,804,280 字节）磁盘与链接一致。
-- **未提交残留（非本次产生，已排除）**：工作树存在孤儿 PDF content/dates/2607.18536_MAGE.pdf（19 MB，未被任何页面引用，疑为并发进程残留）与空文件 _scratch_arxiv_ar.xml（0 字节）；本次提交均未纳入，避免提交孤立文件。
-- **Git**：commit "auto update: 2026-07-23" + push origin/main（预期）。
+## 2026-07-23 执行摘要（合并 Instance A + 本实例终态）
+- **并发竞态全程**：Instance A 先创建 date/latest 2026-07-23.html（仅 VeriRefine 1 卡）、预 bump rtl 头至 68、改 manifest 至 papers 222/batches 93、news_memory 未动，并先行 commit+push `08e56ac`（含 date/latest 页 + VeriRefine PDF）。随后本实例以"合并而非覆盖"补齐：将 MAGE + Siemens 新闻并入 date/latest 页（Write 重写），补 physical.html MAGE 卡片（44→45 篇）、news/index.html Siemens 07-23 section + 计数、news_memory.json Siemens 条目（164→165）、manifest papers 222→223 / news 164→165 / dates count 1→3，最后 commit `071b411` 并 push。
+- **论文 +2（终态）**：
+  - ⚡ RTL生成×1 — VeriRefine 2607.18519：把规格精化提升为可验证阶段的渐进式可综合 RTL 生成，逐信号 ASTF + 五层审计，Claude Sonnet 4.6 下 RTLLM v2.0 94.0% / VerilogEval-Human v2 98.1%（rtl 68 篇）。
+  - 📐 物理设计×1 — MAGE 2607.18536：Human-Like 宏布局，多模态多智能体六阶段工作流 + 锦标赛式细化，WNS 改善 11.1–19.3% / TNS 70.0–74.0% 超商业宏布局器（physical 44→45 篇）。
+- **行业动态 +1（终态）**：Siemens EDA @ DAC 2026（Aprisa AI 工作坊 / Fuse Calibre Intelligence 发布 / EDA AI ROI 圆桌 Microsoft·Arm·Broadcom·NVIDIA），写入 news_memory.json（totalItems 164→165，lastUpdate 2026-07-23，置顶）。
+- **数字（终态）**：manifest papers 223 / batches 93 / news 165 / lastUpdate 2026-07-23；分类头 RTL 68 / Physical 45。
+- **产物**：content/dates/2026-07-23.html（3 卡：1 新闻 + 2 论文）+ content/latest/2026-07-23.html（同 3 卡）+ content/dates/2607.18519_VeriRefine.pdf（1.80 MB）+ content/dates/2607.18536_MAGE.pdf（19.3 MB，本次补提交）+ rtl.html / physical.html 卡片 + papers/index.html 跳转→07-23。
+- **一致性全绿**：news_memory 165 == news header 165 == manifest.news 165；dates/latest 07-23 各 3 卡 == count 3；两份 PDF 磁盘与链接一致（大小写敏感核对通过）。
+- **残留排除**：_scratch_arxiv_ar.xml（并发遗留空文件）保持未跟踪、未提交。
+- **Git**：两次提交 —— `08e56ac`（Instance A，VeriRefine 页+PDF）+ `071b411`（本实例，MAGE+新闻+计数修正）；均 push origin/main 成功。
+- **下次注意**：并发实例 A 已先 commit/push 时，本实例应以增量 diff 叠加（add 具体文件，勿 git add . 以免夹带 _scratch 文件），并重新核对 manifest 各项计数是否为 A 版本 + 本实例新增之和。
+
+---
+
+## 2026-07-27 执行摘要（补充到站点仓库副本）
+- 07-24 后首个工作日运行；07-25/07-26 周末无 arXiv 新公告（最新 cs.AR 批次仍止于 07-24）。
+- 新增论文 0 篇；行业动态 +1 条（Cadence Agentic AI 设计愿景 @ DAC 2026，四大 Super Agent + NVIDIA Nemotron 3 Ultra，原文 07-22、DAC 周补录）-> 去重后 news 166→167。
+- 修复历史缺口：07-24 Chipmind RTL Canvas 漏写 news_memory.json，本次补回（memory 165→166→167）。
+- 产物：content/dates/2026-07-27.html + content/latest/2026-07-27.html（1 新闻卡，无 PDF）；news/index.html 新增 07-27 section + nav；news_memory.json +2；manifest.js news 165→167、latest[]/dates[] 含 2026-07-27（count 1）。
+- 一致性 iron law 全绿：news_memory 167 == news header 167 == manifest.news 167。
+- Git：commit "auto update: 2026-07-27"（含本次 + 前序未提交合法改动，排除孤儿/重复 PDF）+ push origin/main。

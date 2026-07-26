@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-24 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 1 条行业动态 · 来源：arXiv / Chipmind</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News: Chipmind RTL Canvas — Generative UI for Chip Design Agents (2026-07) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Chipmind · 官方发布 · 2026-07-24 · RTL Canvas：面向芯片设计智能体的生成式 UI · Harald Kröll / Dr. Sandro Belfanti（ETH Zürich 衍生）</div>
+      <h4>🎨 Chipmind 发布 RTL Canvas：业界首个工程师与 AI 智能体之间的"双向契约界面"，把芯片审查从文本 PR 搬上画布</h4>
+      <p>瑞士苏黎世初创 <strong>Chipmind</strong>（2025-10 出 stealth，Founderful 领投 $2.5M 种子，团队源自 ETH Zürich）发布 <strong>RTL Canvas</strong>——业界首个工程师与 AI 智能体之间的"双向契约界面（bidirectional contract surface）"。工程师直接在 RTL 架构图上手绘设计意图（增删模块、跨层次/时钟域拖拽信号与总线、重路由外设），智能体写出的 RTL 改动以<strong>交互式视觉 diff</strong> 回流（新增 FSM/时钟域/逻辑门标绿、删除标红、未改动背景"ghosted"），并在合并进代码库前于<strong>实时 staging sandbox</strong> 中验证约束；画布本身成为"契约"——意图写其上、每次改动据其判定，只有双方都理解并同意的改动才落地代码库。<br>
+      <strong>核心突破</strong>：把智能体交互从文本聊天升级为直接图形操控，把芯片设计瓶颈从"生成/测试代码"转移到"人类如何审查、信任、交互"。支持 VS Code / 浏览器 / GitHub Issues / @mention / <strong>MCP / ACP</strong>（多智能体编排、跨工具上下文共享、开放协议）；集成 Verilator / Yosys / OpenROAD / VCS / Design Compiler / PrimeTime / Xcelium / Innovus / Questa，兼容 OpenTitan / PULP / RISC-V。<br>
+      <strong>核心看点</strong>：与本站已跟踪的 Cadence AuraStack / Synopsys.ai Copilot / Siemens Fuse / ChipAgents 同处"agentic EDA 审查层"竞争，直击"机器写 RTL 越多、人类审查越成瓶颈"的产业痛点（验证占芯片周期 60–70%，首流成功率从 ~30% 降至 2024/25 的 14%，70% 重流片源于设计错误）。来源：chipmind.ai。</p>
+      <a href="https://www.chipmind.ai/post/chipmind-introduces-rtl-canvas-generative-ui-for-chip-design-agents" target="_blank">→ Chipmind 官方发布</a>
+    </div>
+
+    <!-- 2607.19768 AlphaRoute: Large Language Models as Semantic Optimizers for Multi-Objective Routing -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · cs.AR · 2026-07-22 · Kabir Murjani, Mishri Bhavsar, Manish I. Patel, Jonti Talukdar</div>
+      <h4>🧭 AlphaRoute：把 LLM 当作语义策略优化器用于多目标 VLSI 全局布线 — ISPD 2025 上 MEMPOOL 溢出降 98.6%、ARIANE 溢出降 29.8×</h4>
+      <p>VLSI 全局布线是 NP-hard 组合优化（在带容量约束的 3D 网格上分配信号网，最小化拥塞/线长/过孔），传统启发式依赖静态惩罚调度，在复杂拥塞拓扑上失效。本文提出 <strong>AlphaRoute</strong>：一个多目标自适应搜索框架，把"撕毁重布线（rip-up and reroute, R&R）"重塑为动态优化系统——引入基于 <strong>SHAP 的溢出分解</strong>隔离每网拥塞，驱动 3D Dijkstra 迷宫布线 + 自适应 PathFinder 策略做定向子图抽取。关键：AlphaRoute 把 <strong>LLM 当作语义策略优化器</strong>——在确定性知识图谱约束下，LLM 解读拥塞指标、动态调节惩罚参数。<br>
+      <strong>核心结论</strong>：在 ISPD 2025 基准上，MEMPOOL 溢出降低 <strong>98.6%</strong>；在受限 ARIANE 设计上溢出 146,109（较 SOTA 降 <strong>29.8×</strong>），惩罚分数 S_orig=0.0538 vs SOTA 1.780。<br>
+      <strong>核心创新</strong>：把 LLM 作为"受知识图谱约束的语义优化器"嵌入传统布线搜索回路，刷新 ISPD 2025 全局布线 SOTA——已被 IEEE LLM-Aided Design 会议 2026（Stanford）接收，代码已开源；延续本站对布线/可布线性（Prim-Dijkstra / CLDRoute）与"LLM+物理设计"主线跟踪。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">全局布线</span>
+        <span class="tag">LLM</span>
+        <span class="tag">多目标优化</span>
+        <span class="tag">SHAP</span>
+        <span class="tag">物理设计</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.19768" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.19768_AlphaRoute.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.21408 Chip Floorplanning Combining Convex and Non-convex Optimization -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-23 · Yilihamujiang Yimamu, Guillem Pastor-Rué, Jordi Cortadella</div>
+      <h4>📐 芯片布图规划结合凸与非凸优化 — 三阶段固定轮廓框架，MCNC/GSRC/HB+ 上 HPWL 平均改善 ≥1% 与 5% 超 SOTA</h4>
+      <p>布图规划（floorplanning）是 VLSI 物理设计的关键早期阶段，质量直接影响互连线长、芯片性能与下游效率。本文提出一个结合非凸与凸优化的<strong>多阶段固定轮廓（fixed-outline）布图规划框架</strong>，分三阶段：① <strong>初始布图</strong>——二次布局（quadratic placement）优化模块连通性，产出强网聚类的拓扑感知起点（但有显著模块重叠）；② <strong>全局布图</strong>——Adam 投影梯度法求解最小化线长+重叠的非凸优化；③ <strong>合法化</strong>——对数变换模型利用水平/垂直约束图在凸公式下消除残余重叠。<br>
+      <strong>核心结论</strong>：在 MCNC、GSRC、HB+ 基准上，框架取得 SOTA 线长质量，平均 HPWL 较被测 SOTA 布图规划器降低至少 <strong>1% 与 5%</strong>。<br>
+      <strong>核心创新</strong>：凸/非凸混合（二次布局 + Adam 投影梯度非凸 + 对数变换凸合法化）的布图规划流水线，刷新线长 SOTA——延续本站对布图/布局优化（DREAMPlace / GNN Placement / MAGE 宏布局）主线跟踪，作者含 EDA 知名学者 Jordi Cortadella。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">布图规划</span>
+        <span class="tag">凸优化</span>
+        <span class="tag">非凸优化</span>
+        <span class="tag">线长</span>
+        <span class="tag">物理设计</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.21408" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.21408_Chip-Floorplanning.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.20141 Formal Foundations for Known Good Reliable Die Screening in Chiplet-Based AI SoCs -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.AI · 2026-07-22 · Prashanthi Metku, Chandra Gandu</div>
+      <h4>🔬 Chiplet 基 AI SoC 的"已知良好可靠裸片（KGRD）"筛选形式化基础 — 从 KGD 到 KGRD 的约束推断 + 安全门控决策架构</h4>
+      <p>基于 chiplet 的 AI 系统级芯片（SoC）快速增长，暴露出半导体测试方法的根本缺口：现有"已知良好裸片（KGD）"筛选只保证装配前功能正确，却不提供装配后可靠性寿命的概率保证。本文把 <strong>KGD→KGRD（Known Good Reliable Die）</strong>的过渡形式化为"不完整装配前可观测性下的约束推断问题"，提出四项 interlocking 贡献：① <strong>贝叶斯概率风险模型</strong>，把装配前遥测映射到装配后失效似然，并给出可量化的可观测性偏差界；② <strong>安全门控决策架构</strong>，提供可证明的装配后失效概率保证；③ 源自 Bayes 最优决策理论的"不确定性感知处置边界"；④ 约束闭环反馈机制，在不违反可靠性约束下实现一致的模型改进。<br>
+      <strong>核心结论</strong>：N=4,000 合成裸片的蒙特卡洛仿真验证了全部四项理论性质，并确认安全保证在完整门阈值范围内一致成立。<br>
+      <strong>核心创新</strong>：为 chiplet AI SoC 的装配后可靠性筛选建立首个形式化基础（贝叶斯风险 + 安全门控 + 闭环反馈）——延续本站对 Chiplet 互连/可靠性（Chiplet3D / Chiplet 互联标准化）与"多物理场/可靠性 AI"主线跟踪。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Chiplet</span>
+        <span class="tag">KGD/KGRD</span>
+        <span class="tag">可靠性筛选</span>
+        <span class="tag">贝叶斯</span>
+        <span class="tag">测试</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.20141" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.20141_Chiplet-KGRD.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

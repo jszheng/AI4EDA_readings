@@ -1,8 +1,29 @@
 {
-  "lastUpdate": "2026-07-23",
+  "lastUpdate": "2026-07-27",
   "cutoffDate": "2026-01-08",
-  "totalItems": 165,
+  "totalItems": 167,
   "items": [
+    {
+      "date": "2026-07-24",
+      "company": "Chipmind",
+      "title": "🎨 Chipmind 发布 RTL Canvas：业界首个工程师与 AI 智能体之间的「双向契约界面」，把芯片审查从文本 PR 搬上画布（ETH Zürich 衍生，支持 MCP/ACP，集成 Verilator/Yosys/OpenROAD/VCS/Design Compiler/PrimeTime/Xcelium/Innovus/Questa）",
+      "link": "https://www.chipmind.ai/post/chipmind-introduces-rtl-canvas-generative-ui-for-chip-design-agents",
+      "keywords": [
+        "Chipmind",
+        "RTL Canvas",
+        "生成式 UI",
+        "双向契约界面",
+        "bidirectional contract surface",
+        "交互式视觉 diff",
+        "MCP",
+        "ACP",
+        "ETH Zürich",
+        "芯片审查",
+        "agentic EDA",
+        "OpenROAD",
+        "2026-07-24"
+      ]
+    },
     {
       "date": "2026-07-23",
       "company": "Siemens EDA",
@@ -26,6 +47,28 @@
         "Broadcom",
         "NVIDIA",
         "2026-07-23"
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "company": "Cadence",
+      "title": "🏛️ Cadence Agentic AI 设计愿景亮相 DAC 2026：ChipStack×NVIDIA Nemotron 3 Ultra、ViraStack、InnoStack、AuraStack 四大超级智能体贯通芯片→封装→板（Cadence–NVIDIA 加速计算 Grace/Blackwell/CUDA-X）",
+      "link": "https://community.cadence.com/cadence_blogs_8/b/corporate-news/posts/cadence-s-agentic-ai-design-vision-takes-center-stage-at-dac",
+      "keywords": [
+        "Cadence",
+        "DAC 2026",
+        "Agentic AI",
+        "ChipStack",
+        "ViraStack",
+        "InnoStack",
+        "AuraStack",
+        "AI Super Agent",
+        "NVIDIA Nemotron 3 Ultra",
+        "Nemotron 3 Ultra",
+        "10X 生产力",
+        "多物理场",
+        "Cadence-NVIDIA",
+        "2026-07-22"
       ]
     },
     {
