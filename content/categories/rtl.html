@@ -11,6 +11,32 @@
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
       <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span> CircuitWeave：拓扑-行为对齐的可执行多模态 RTL 生成</div>
+          <div class="abs-meta">arXiv:2607.23523 · cs.AR · 2026-07-26 · Jiahao Feng, Haiyan Qin, Zhiwei Xie, Wang Kang</div>
+          <div class="abs-body">提出 <strong>CircuitWeave</strong>，一个契约中介（contract-mediated）的多模态 RTL 生成框架：从电路图抽取<strong>拓扑契约</strong>、从文本抽取<strong>行为契约</strong>，融合为序列化对应 / 缺失证据 / 冲突的"电路契约"，<strong>仅依据该契约生成 RTL</strong>；联合目标同时监督两类契约、融合、契约条件生成与从参考 RTL 反向重建。构建 <strong>5,000 个可执行达标包</strong>（规格 + 电路图 + 契约 + 参考 RTL + 自检测 testbench），以 LoRA 适配 Qwen。在 <strong>VerilogEval-Human</strong> 上 pass@1 达 46.60%（较无图版 +8.46pt）、pass@5 61.49%、pass@10 65.39%；在 <strong>RTLLM</strong> 上 40.00% / 48.00% / 52.00%（各 +2pt）。数据集已开源。核心创新：用双契约显式分离文本与图的证据角色、显式化缺失 / 冲突，把多模态 RTL 生成升级为"契约条件生成"——延续本站 LLM RTL 生成-验证闭环（VeriRefine / MechMem-RTL）与多模态主线。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2607.23523" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2607.23523_CircuitWeave.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多模态RTL生成</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">电路图</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">契约对齐</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">LLM</span>
+          </div>
+      </div>
+      <div class="abs-card">
+          <div class="abs-title"><span class="badge-new">NEW</span> Benchmarking LLMs for Verilog Design Flows：系统评测 LLM 生成可综合 Verilog 的全流程能力（超越 pass@k）</div>
+          <div class="abs-meta">arXiv:2607.22759 · cs.AR / cs.LG · 2026-07-23 · Angshuman Chakravertty, Rahul Koshti, Buddhi Prakash Sharma, Vinay Chamola</div>
+          <div class="abs-body">LLM 在代码生成上展现潜力，但其产出<strong>正确、可综合 Verilog</strong>的能力仍缺乏系统评测。现有评测主要依赖 <strong>pass@k</strong>，难以反映真实设计流程可用性。本文提出针对 <strong>Verilog 设计全流程</strong>的 LLM 基准：不仅考察功能正确性，更把生成代码推进到<strong>综合、实现与 PPA</strong>环节，量化 LLM 从规格到可综合、可落地硬件链路上的真实表现，暴露 pass@k 掩盖的工程化短板。核心创新：把 Verilog LLM 评测从"单点功能通过"升级为"全设计流程可用性"评测——服务本站 LLM RTL 生成-验证闭环（VeriRefine / CircuitWeave / MechMem-RTL）的可信度度量需求。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2607.22759" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2607.22759_Verilog-Benchmark.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">Verilog</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">基准评测</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">RTL生成</span>
+          </div>
+      </div>
+      <div class="abs-card">
           <div class="abs-title"><span class="badge-new">NEW</span> VeriRefine：把规格精化提升为可验证阶段的渐进式可综合 RTL 生成</div>
           <div class="abs-meta">arXiv:2607.18519 · cs.AR · 2026-07-20 · Xiangfei Kong, Tasnim Tabassum, Marwan Abdelwahab, Hao Zheng</div>
           <div class="abs-body">提出 <strong>VeriRefine</strong>，把非形式化、含歧义的 prose 规格<strong>渐进式精化为显式、schema 约束的"设计意图"账户</strong>——以逐信号的 <strong>Abstract Signal Transition Functions (ASTF)</strong> 表示，在生成任何代码之前就固定每个信号的逻辑风格、时钟域与复位行为，并锚定到逐字规格句。精化后的规格再经过<strong>五层审计</strong>（健全性、完备性、一致性、FSM 完整性、核心 RTL 设计规则），从而在 Verilog 生成前于表示层修复理解错误。代码生成后，每个仿真失败被分类为"理解错误"或"编码错误"并路由回对应阶段做针对性修复；因每个信号的硬件类在精化期已固定，<strong>可综合性成为流水线的结构属性</strong>而非事后检查。基于 Claude Sonnet 4.6，VeriRefine 在 <strong>RTLLM v2.0 达 94.0% 功能正确率、VerilogEval-Human v2 达 98.1%</strong>。核心创新：把"规格理解/精化"从隐式、易错的黑盒提升为可验证、可审计的一等阶段——延续本站对 LLM RTL 生成-验证闭环（VeriPilot / MechMem-RTL / RTLScout）与"理解先于编码"主线（EstRTL / LongRTL）的跟踪。</div>

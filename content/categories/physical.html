@@ -7,9 +7,66 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（47篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（50篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2607.23761 AQFP Buffer/Splitter Insertion -->
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.23761 · cs.AR / cs.PF · 2026-07-26 · Robert S. Aviles, Ziyu Liu, Madhav Danturthi, Peter A. Beerel
+      </div>
+      <div class="abs-title">AQFP 技术合法化与物理设计衔接：以"线宽–线深积最小化"的布局感知缓冲器 / 分裂器插入（后布局面积平均降 30%）</div>
+      <div class="abs-body">
+        <p>绝热量子通量参变（<strong>AQFP</strong>）是逼近香农极限的超低功耗超导技术，其门级流水与显式扇出约束要求通过缓冲器 / 分裂器插入做技术合法化（路径平衡 + 信号分发）。已有工作最小化单元数 / 逻辑深度，却未准确刻画最终物理成本——其本质由<strong>电路宽度与深度的乘积</strong>决定。本文把该问题重新定义为<strong>最小化线宽–线深积</strong>这一布局感知度量，并<strong>首个给出形式化及 NP 完全性证明</strong>；进而提出把合法化与目标耦合的可扩展启发式。标准基准上较 SOTA <strong>后布局面积平均降 30%</strong>，仅增 3% 约瑟夫森结，单电路最高降 61%。核心创新：用"线宽×线深积"替代单元数作为合法化目标，使 AQFP 缓冲 / 分裂器插入真正对齐物理设计面积——延续本站物理设计（逻辑综合 / 合法化 / 单元插入）与超导 / 新兴器件 EDA 主线。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.23761" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.23761_AQFP-BufferSplitter.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AQFP</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">缓冲器/分裂器插入</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">线宽-线深积</span>
+      </div>
+    </div>
+    <!-- 2607.22761 DRC-Aid: Design-Rule Correction via Agentic Framework -->
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.22761 · cs.AR / cs.LG · 2026-07-23 · Anushka Mukherjee, Kang He, Kaushik Roy
+      </div>
+      <div class="abs-title">DRC-Aid：基于推理时 LLM 的闭环智能体设计规则修正框架——把 DRC 修复建模为"验证在环"搜索</div>
+      <div class="abs-body">
+        <p>版图中的<strong>设计规则违例（DRV）</strong>修复是一个几何编辑与验证交替的迭代回路。本文提出 <strong>DRC-Aid</strong>，一个<strong>闭环智能体（agentic）框架</strong>，把局部 DRC 修复建模为<strong>验证在环（verification-in-the-loop）搜索</strong>，利用<strong>推理时（inference-time）LLM</strong>在"编辑-验证"回路中自主决策几何修正。核心创新：用 agentic + 推理时 LLM 替代纯几何启发式，把 DRC 修复从"规则脚本"升级为"带验证反馈的智能体搜索"——延续本站物理设计（布局 / DRC / 合法化）与"智慧体协作的 RTL 生成-验证-反馈闭环"主线。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.22761" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.22761_DRC-Aid.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRC修正</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">智能体</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">物理设计</span>
+      </div>
+    </div>
+    <!-- 2607.24221 DICE: Detailed Inter-Chiplet End-to-End PHY Modeling -->
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.24221 · cs.AR · 2026-07-27 · Rashid Aligholipour, Stefanos Kaxiras, Yuan Yao
+      </div>
+      <div class="abs-title">DICE：用于精确 Chiplet 仿真的详细片间端到端 PHY 建模——面向多芯粒互连 / 信号完整性</div>
+      <div class="abs-body">
+        <p>单片多核扩展日益受功耗 / 热、良率与制造测试成本制约，<strong>Chiplet（多芯粒）</strong>设计通过把大 die 切分为小 die（多核心复合 die 等）应对这些挑战，但片间互连的精确建模成为瓶颈。本文提出 <strong>DICE</strong>：<strong>详细片间（inter-chiplet）端到端 PHY 建模</strong>，在 chiplet 系统仿真中精确刻画 die-to-die 物理层（PHY）的端到端行为，提升多芯粒互连仿真的保真度。核心创新：用端到端 PHY 级建模填补 chiplet 互连仿真的精度缺口——延续本站 Chiplet / 多芯粒互连与热分布优化、多物理场 AI 分析主线。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.24221" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.24221_DICE.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Chiplet</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">PHY建模</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">互连</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">多芯粒</span>
+      </div>
+    </div>
     <!-- 2607.21408 Chip Floorplanning Combining Convex and Non-convex Optimization -->
     <div class="abs-card">
       <div class="abs-meta">

@@ -7,9 +7,47 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（26篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（28篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+    <!-- 2607.23882 ADVERSARIAL Hardware Trojan Detection -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2607.23882 · cs.LG / cs.AR / cs.CR · 2026-07-26 · Yaroslav Popryho, Debjit Pal, Inna Partin-Vaisband
+        </div>
+        <div class="abs-title">ADVERSARIAL：AIG 辅助、知识图谱嵌入的硬件木马检测——门级网表建模为布尔网络，节点表示随边数线性扩展</div>
+        <div class="abs-body">
+          <p>现代 SoC 常含数亿至数百亿门，使现有<strong>硬件木马（Hardware Trojan, HT）检测</strong>因规模过大而失效。本文提出符号使能学习：把展平的门级网表建模为由<strong>与-非图（AIG）</strong>表示的布尔网络（内部节点为 2 输入 AND、反相在边上），每个有向连接在<strong>知识图谱嵌入（KGE）</strong>框架中表达为三元组，产出紧凑、定长、保留多跳结构上下文的逐节点表示。AIG 的<strong>有界扇入</strong>与<strong>统一语义</strong>使训练 / 推理复杂度随边数<strong>线性扩展</strong>；跨深数据通路的符号使能学习区分电路结构与指示潜在木马触发器 / 负载的稀有、功能不一致连接。大规模 SoC 基准上木马与良性节点呈现清晰几何分离，并具实用可扩展性。核心创新：AIG + KGE 把"网表结构"转为可学习、定长、线性扩展的节点嵌入，为高规模门级网表的 AI 安全分析提供 scalable 基座——延续本站 AI 辅助验证 / 网表分析（WaveformQA / ChipFuzzer / Rtl2lean）与硬件安全主线。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2607.23882" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2607.23882_ADVERSARIAL-Trojan.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件木马检测</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">AIG</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">知识图谱嵌入</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">门级网表</span>
+        </div>
+      </div>
+    <!-- 2607.23218 SPARC: Automated Root-Cause Analysis of Pre-Silicon Power Side-Channel Leakage -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2607.23218 · cs.CR / cs.AR · 2026-07-25 · Andrija Nešković, Christian Ewert, Mladen Berekovic, Saleh Mulhem
+        </div>
+        <div class="abs-title">SPARC：处理器设计流中预硅（pre-silicon）功率侧信道泄漏的自动化根因分析</div>
+        <div class="abs-body">
+          <p><strong>功率侧信道泄漏（PSCL）</strong>源自处理器中的体系结构与微体系结构构件，严重威胁密码软件机密性，因此<strong>预硅 PSCL 评估</strong>对安全硬件不可或缺。本文提出 <strong>SPARC</strong>：在处理器设计流中自动化定位预硅功率侧信道泄漏<strong>根因（root-cause）</strong>的分析框架，在投片前即识别导致泄漏的架构 / 微架构来源，把安全验证从"事后检测"前移到"设计期根因定位"。核心创新：把侧信道安全分析嵌入设计流程、实现自动化根因定位——延续本站 AI 辅助验证 / 硬件安全（ADVERSARIAL 木马检测 / ChipFuzzer / Rtl2lean）主线。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2607.23218" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2607.23218_SPARC.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件安全</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">侧信道</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">根因分析</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">预硅验证</span>
+        </div>
+      </div>
     <!-- 2607.20638 WaveformQA: Benchmarking LLM Temporal Reasoning on Digital Waveforms -->
     <div class="abs-card">
         <div class="abs-meta">

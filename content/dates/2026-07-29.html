@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-29 动态</h1>
+  <p class="subtitle">共 7 篇论文 · 1 条行业动态 · 来源：arXiv / Synopsys（DAC 2026）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News: Synopsys × NVIDIA Fully Autonomous Engineering Workflows @ DAC 2026 (2026-07-26/27) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Synopsys · 官方新闻稿 · 2026-07-26/27 · DAC 2026（7/26–29 长滩）· 全自主长程工程智能体工作流（× NVIDIA）</div>
+      <h4>🤖 Synopsys × NVIDIA @ DAC 2026：发布全自主长程工程智能体——验证 50× 提速 + 覆盖 +20%、AMS 3×、热 CAE 自治（AgentEngineer + Nemotron 3 Ultra + OpenShell）</h4>
+      <p>Synopsys 在 DAC 2026（7/26–29，长滩）与 NVIDIA 联合发布<strong>完全自主、长程（long-running）的工程智能体能力</strong>，覆盖芯片设计与电子系统设计，由 <strong>NVIDIA Nemotron</strong> 驱动、运行于 NVIDIA 加速计算平台、由 <strong>NVIDIA OpenShell</strong> 运行时保障安全，把耗时的人工验证 / 热仿真转化为"自动化洞察交付"引擎。<br>
+        <strong>① 全自主设计验证（DV）工作流</strong>：编排智能体（orchestrator）从规格 / 设计 / 测试库 / 用户输入中解构验证目标，在闭环中编排专用智能体与工具，贯穿完整芯片验证生命周期（测试计划生成 → 覆盖率收敛 → 高级调试）。实测把数周人工压缩为数小时智能体执行，实现<strong>最高 50× 更快的 time-to-validated RTL，并额外提升 20% 覆盖率</strong>。<br>
+        <strong>② 自主模拟 / 混合信号（AMS）工作流</strong>：AI 驱动的 Custom Compiler™ Layout Synthesis（CCLS）自动化版图生成 / 优化 / 设计-版图收敛；AgentEngineer™ 编排多步模拟流程（设计创建 → SPICE 仿真 → 实现 → 验证），生产力提升<strong>最高 3×</strong>。<br>
+        <strong>③ 自主 CAE 热分析工作流</strong>：基于 Ansys Icepak®（已并入 Synopsys 组合）+ 开源 PyAEDT，借 NVIDIA Agent Toolkit 与 CUDA-X，自主执行仿真配置、前处理与后处理。<br>
+        <strong>其他 DAC 更新</strong>：Synopsys 与 AMD、Microsoft 推进 agentic AI（首个跑在 Microsoft Discovery 上的自主 EDA 工作流）；与 Intel Foundry 扩展 14A 设计赋能（认证 AI 驱动 EDA 流程 + 集成多物理场分析）；20+ GPU 加速 EDA / 多物理场产品，PrimeSim™ SPICE 提速 18×。<br>
+        <strong>核心看点</strong>：这是 DAC 2026 上<strong>量化最具体的 agentic EDA 声明</strong>（50× / +20% / 3×），与本站已跟踪的 Cadence ChipStack（10×）、Siemens Aprisa（10×）形成"三巨头 ROI 对标"，且同构于 Cadence×NVIDIA 的技术栈（AgentEngineer + NVIDIA Agent Toolkit + Nemotron 3 Ultra + OpenShell）。来源：news.synopsys.com。</p>
+      <a href="https://news.synopsys.com/2026-07-26-Synopsys-Showcases-Comprehensive-Autonomous-Engineering-Workflows-from-Silicon-to-Systems,-Developed-with-NVIDIA-Technology" target="_blank">→ Synopsys 官方新闻稿（07-26）</a>
+      &nbsp;<a href="https://news.synopsys.com/2026-07-27-Synopsys-Demonstrates-Leadership-in-AI-Powered-Engineering-at-2026-DAC-Chips-to-Systems-Conference" target="_blank">→ Synopsys @ DAC 2026（07-27）</a>
+    </div>
+
+    <!-- 2607.23523 CircuitWeave: Topology-Behavior Alignment for Executable Multimodal RTL Generation -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-26 · Jiahao Feng, Haiyan Qin, Zhiwei Xie, Wang Kang</div>
+      <h4>⚡ CircuitWeave：拓扑-行为对齐的可执行多模态 RTL 生成——从电路图抽取拓扑契约、从文本抽取行为契约，融合后仅依据契约生成 RTL</h4>
+      <p>纯文本 LLM 能从自然语言规格生成 RTL，但散文即便给定接口与周期级行为，仍会让<strong>连接关系、寄存器边界、状态-输出关系</strong>保持隐式。电路图（schematic）能把这些结构关系显式化，但"直接把图喂给多模态模型"会遇到融合难题：文本与图的证据角色未被区分，缺失 / 冲突约束在生成前未被显式化。<br>
+        本文提出 <strong>CircuitWeave</strong>：一个<strong>契约中介（contract-mediated）的多模态框架</strong>——从电路图抽取<strong>拓扑契约</strong>、从文本抽取<strong>行为契约</strong>，融合为序列化对应 / 缺失证据 / 冲突的"电路契约"，<strong>仅依据该契约生成 RTL</strong>；联合目标同时监督两类契约、序列化融合、契约条件 RTL 生成，以及从参考 RTL 反向重建已覆盖契约字段。<br>
+        <strong>数据与方法</strong>：构建 <strong>5,000 个可执行达标包</strong>（规格 + 生成电路图 + 结构化契约 + 参考 RTL + 自检测 testbench），用训练拆分以 LoRA 适配 Qwen。<br>
+        <strong>结果</strong>：在 <strong>VerilogEval-Human</strong> 上 pass@1 达 <strong>46.60%</strong>（较同架构无图版本 +8.46pt）、pass@5 61.49%、pass@10 65.39%；在 <strong>RTLLM</strong> 上达 40.00% / 48.00% / 52.00%（各 cutoff 较文本版 +2pt）。数据集已开源（HuggingFace）。<br>
+        <strong>核心创新</strong>：用"拓扑+行为双契约"显式分离文本与图证据、显式化缺失 / 冲突，把多模态 RTL 生成从"图+文拼贴"升级为"契约条件生成"——延续本站 LLM RTL 生成-验证闭环（VeriRefine / MechMem-RTL）与多模态（图生 RTL）主线。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">多模态RTL生成</span>
+        <span class="tag">电路图</span>
+        <span class="tag">契约对齐</span>
+        <span class="tag">LLM</span>
+        <span class="tag">VerilogEval</span>
+        <span class="tag">RTLLM</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.23523" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.23523_CircuitWeave.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.23761 Bridging AQFP Technology Legalization and Physical Design: Layout-Aware Buffer and Splitter Insertion -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.PF · 2026-07-26 · Robert S. Aviles, Ziyu Liu, Madhav Danturthi, Peter A. Beerel</div>
+      <h4>📐 AQFP 技术合法化与物理设计衔接：以"线宽–线深积最小化"的布局感知缓冲器 / 分裂器插入（后布局面积平均降 30%）</h4>
+      <p>绝热量子通量参变（<strong>AQFP</strong>）是逼近香农极限的超低功耗超导技术，但其<strong>门级流水</strong>与<strong>显式扇出约束</strong>要求通过缓冲器 / 分裂器插入（buffer &amp; splitter insertion）做技术合法化（路径平衡 + 信号分发），成为设计流程中关键且昂贵的步骤。已有工作最小化"插入单元数"与"逻辑深度"，却未准确刻画最终物理设计成本——其本质由<strong>电路宽度与深度的乘积</strong>决定。<br>
+        本文把 AQFP 缓冲 / 分裂器插入重新定义为<strong>最小化线宽–线深积（width–depth product）</strong>这一布局感知度量（比单纯单元最小化更贴近真实物理面积），并<strong>首个给出该问题的形式化及 NP 完全性证明</strong>；进而提出把合法化与目标耦合的可扩展启发式。<br>
+        <strong>结果</strong>：在标准基准上，较 SOTA 方法<strong>后布局面积平均降低 30%</strong>，仅增加 3% 的约瑟夫森结（junction）数量，单个电路最高降 61%。<br>
+        <strong>核心创新</strong>：用"线宽×线深积"替代单元数作为合法化目标，使 AQFP 缓冲 / 分裂器插入真正对齐物理设计面积——延续本站物理设计（逻辑综合 / 合法化 / 单元插入）与超导 / 新兴器件 EDA 主线。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AQFP</span>
+        <span class="tag">缓冲器/分裂器插入</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">线宽-线深积</span>
+        <span class="tag">超导</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.23761" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.23761_AQFP-BufferSplitter.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.23882 ADVERSARIAL: AIG-Assisted Hardware Trojan Detection At Scale -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG / cs.AR / cs.CR · 2026-07-26 · Yaroslav Popryho, Debjit Pal, Inna Partin-Vaisband</div>
+      <h4>✅ ADVERSARIAL：AIG 辅助、知识图谱嵌入的硬件木马检测——把门级网表建模为布尔网络，节点表示随边数线性扩展</h4>
+      <p>现代 SoC 常含数亿至数百亿门，使现有<strong>硬件木马（Hardware Trojan, HT）检测</strong>方法因规模过大而失效。本文提出符号使能学习（symbolically enabled learning）：把展平的门级网表建模为由<strong>与-非图（AIG）</strong>表示的布尔网络（所有内部节点为 2 输入 AND、反相在边上），每个有向连接在<strong>知识图谱嵌入（KGE）</strong>框架中表达为三元组，产出紧凑、定长、保留多跳结构上下文的逐节点表示。<br>
+        AIG 的<strong>有界扇入</strong>与<strong>统一语义</strong>使训练 / 推理复杂度随边数<strong>线性扩展</strong>，直击 HT 检测的主要可扩展性瓶颈；跨深数据通路的符号使能学习让模型能区分电路结构与指示潜在木马触发器 / 负载的稀有、功能不一致连接。<br>
+        <strong>结果</strong>：在大规模 SoC 基准上，木马与良性节点呈现清晰几何分离，并具备实用可扩展性。<br>
+        <strong>核心创新</strong>：AIG + KGE 把"网表结构"转为可学习、定长、线性扩展的节点嵌入，为高规模门级网表的 AI 安全分析（木马检测）提供 scalable 基座——延续本站 AI 辅助验证 / 网表分析（WaveformQA / ChipFuzzer / Rtl2lean）与硬件安全主线。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">硬件木马检测</span>
+        <span class="tag">AIG</span>
+        <span class="tag">知识图谱嵌入</span>
+        <span class="tag">门级网表</span>
+        <span class="tag">符号学习</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.23882" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.23882_ADVERSARIAL-Trojan.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.22759 Benchmarking LLMs for Verilog Design Flows -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · 2026-07-23 · Angshuman Chakravertty, Rahul Koshti, Buddhi Prakash Sharma, Vinay Chamola</div>
+      <h4>⚡ Benchmarking LLMs for Verilog Design Flows：系统评测 LLM 生成可综合 Verilog 的全流程能力（超越 pass@k）</h4>
+      <p>LLM 在代码生成上展现潜力，但其产出<strong>正确、可综合硬件描述语言（HDL）</strong>的能力仍缺乏系统评测。现有评测主要依赖 <strong>pass@k</strong> 指标，难以反映真实设计流程的可用性。<br>
+        本文提出针对 <strong>Verilog 设计全流程（design flow）</strong>的 LLM 基准：不仅考察功能正确性，更把生成代码推进到<strong>综合、实现与 PPA（功耗 / 性能 / 面积）</strong>环节，量化 LLM 在"从规格到可综合、可落地硬件"链路上的真实表现，暴露 pass@k 掩盖的工程化短板。<br>
+        <strong>核心创新</strong>：把 Verilog LLM 评测从"单点功能通过"升级为"全设计流程可用性"评测——直接服务本站 LLM RTL 生成-验证闭环（VeriRefine / CircuitWeave / MechMem-RTL）的可信度度量需求。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">LLM</span>
+        <span class="tag">Verilog</span>
+        <span class="tag">基准评测</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">设计流程</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.22759" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.22759_Verilog-Benchmark.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.22761 DRC-Aid: Design-Rule Correction via Agentic Framework -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · 2026-07-23 · Anushka Mukherjee, Kang He, Kaushik Roy</div>
+      <h4>📐 DRC-Aid：基于推理时 LLM 的闭环智能体设计规则修正框架——把 DRC 修复建模为"验证在环"搜索</h4>
+      <p>版图中的<strong>设计规则违例（DRV）</strong>修复是一个几何编辑与验证交替的迭代回路。本文提出 <strong>DRC-Aid</strong>：一个<strong>闭环智能体（agentic）框架</strong>，把局部 DRC 修复建模为<strong>验证在环（verification-in-the-loop）搜索</strong>，利用<strong>推理时（inference-time）LLM</strong>在"编辑-验证"回路中自主决策几何修正。<br>
+        <strong>核心创新</strong>：用 agentic + 推理时 LLM 替代纯几何启发式，把 DRC 修复从"规则脚本"升级为"带验证反馈的智能体搜索"——延续本站物理设计（布局 / DRC / 合法化）与"智慧体协作的 RTL 生成-验证-反馈闭环"两条主线。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">DRC修正</span>
+        <span class="tag">智能体</span>
+        <span class="tag">布局</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">LLM</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.22761" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.22761_DRC-Aid.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.23218 SPARC: Automated Root-Cause Analysis of Pre-Silicon Power Side-Channel Leakage -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.CR / cs.AR · 2026-07-25 · Andrija Nešković, Christian Ewert, Mladen Berekovic, Saleh Mulhem</div>
+      <h4>✅ SPARC：处理器设计流中预硅（pre-silicon）功率侧信道泄漏的自动化根因分析</h4>
+      <p><strong>功率侧信道泄漏（PSCL）</strong>源自处理器中的体系结构与微体系结构构件，严重威胁密码软件机密性，因此<strong>预硅 PSCL 评估</strong>对安全硬件不可或缺。<br>
+        本文提出 <strong>SPARC</strong>：在处理器设计流中自动化定位预硅功率侧信道泄漏<strong>根因（root-cause）</strong>的分析框架，在投片前即识别导致泄漏的架构 / 微架构来源，把安全验证从"事后检测"前移到"设计期根因定位"。<br>
+        <strong>核心创新</strong>：把侧信道安全分析嵌入设计流程、实现自动化根因定位——延续本站 AI 辅助验证 / 硬件安全（ADVERSARIAL 木马检测 / ChipFuzzer / Rtl2lean）主线。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">硬件安全</span>
+        <span class="tag">侧信道</span>
+        <span class="tag">根因分析</span>
+        <span class="tag">预硅验证</span>
+        <span class="tag">验证</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.23218" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.23218_SPARC.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.24221 DICE: Detailed Inter-Chiplet End-to-End PHY Modeling -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-27 · Rashid Aligholipour, Stefanos Kaxiras, Yuan Yao</div>
+      <h4>📐 DICE：用于精确 Chiplet 仿真的详细片间端到端 PHY 建模——面向多芯粒互连 / 信号完整性</h4>
+      <p>单片多核扩展日益受功耗 / 热、良率与制造测试成本制约，<strong>Chiplet（多芯粒）</strong>设计通过把大 die 切分为小 die（多核心复合 die 等）应对这些挑战，但片间互连的精确建模成为瓶颈。<br>
+        本文提出 <strong>DICE</strong>：<strong>详细片间（inter-chiplet）端到端 PHY 建模</strong>，在 chiplet 系统仿真中精确刻画 die-to-die 物理层（PHY）的端到端行为，提升多芯粒互连仿真的保真度。<br>
+        <strong>核心创新</strong>：用端到端 PHY 级建模填补 chiplet 互连仿真的精度缺口——延续本站 Chiplet / 多芯粒互连与热分布优化、多物理场 AI 分析主线。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Chiplet</span>
+        <span class="tag">PHY建模</span>
+        <span class="tag">互连</span>
+        <span class="tag">多芯粒</span>
+        <span class="tag">物理设计</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.24221" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.24221_DICE.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

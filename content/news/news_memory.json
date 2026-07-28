@@ -1,8 +1,32 @@
 {
-  "lastUpdate": "2026-07-27",
+  "lastUpdate": "2026-07-29",
   "cutoffDate": "2026-01-08",
-  "totalItems": 170,
+  "totalItems": 171,
   "items": [
+    {
+      "date": "2026-07-29",
+      "company": "Synopsys",
+      "title": "🤖 Synopsys × NVIDIA @ DAC 2026：发布全自主长程工程智能体——验证 50× 提速 + 覆盖 +20%、AMS 3×、热 CAE 自治（AgentEngineer + Nemotron 3 Ultra + OpenShell）",
+      "link": "https://news.synopsys.com/2026-07-26-Synopsys-Showcases-Comprehensive-Autonomous-Engineering-Workflows-from-Silicon-to-Systems,-Developed-with-NVIDIA-Technology",
+      "keywords": [
+        "Synopsys",
+        "NVIDIA",
+        "DAC 2026",
+        "全自主工程智能体",
+        "AgentEngineer",
+        "Nemotron 3 Ultra",
+        "OpenShell",
+        "设计验证",
+        "50x",
+        "AMS",
+        "3x",
+        "CAE 热分析",
+        "Ansys Icepak",
+        "Microsoft Discovery",
+        "Intel 14A",
+        "2026-07-29"
+      ]
+    },
     {
       "date": "2026-07-27",
       "company": "DAC 2026",
