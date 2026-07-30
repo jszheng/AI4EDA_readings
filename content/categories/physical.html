@@ -7,9 +7,28 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（50篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（51篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2607.24998 VPR-Evolve: Multi-Agent-Driven Algorithm Evolution for FPGA Place and Route -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2607.24998 · cs.AR · 2026-07-27 · Qihang Wu, Taizun Jafri, Aman Arora, Vidya A. Chhabria
+        </div>
+        <div class="abs-title">VPR-Evolve：多智能体驱动的 FPGA 布局布线算法演化——LLM 智能体直接演化 VPR 源码，复合得分最高 +2.7%、关键路径延迟降 9.8%</div>
+        <div class="abs-body">
+          <p>CAD 工具通常对结构 / 时序差异巨大的电路套用同一套固定、手工设计的算法；超参调优只能在固定算法已实现的行为里选，既限制 QoR 上限、又需大量昂贵的布局布线评估。本文提出 <strong>VPR-Evolve</strong>：一个<strong>多智能体框架</strong>，通过对每个设计<strong>演化开源 FPGA 打包-布局-布线引擎 VPR（Verilog-to-Routing 流）</strong>的源码来特化它——用 <strong>LLM 智能体</strong>提出、实现并评估代码级修改，<strong>共享记忆</strong>记录历史结果并指导后续演化；每个候选都经完整 VPR 构建与运行，直接优化"关键路径延迟（CPD）+ 布线线长（WL）+ 工具运行时（RT）"的加权复合得分。在 5 个 VTR-9 基准上较 stock VPR 复合得分最高 <strong>+2.7%</strong>，相对 stock VPR <strong>CPD 最高降 9.8%、布线 WL 最高降 18.1%、工具 RT 最高降 79.3%</strong>，相对超参调优基线 CPD 最高降 6.0%。核心创新：把"为设计特化 CAD 工具"从超参调优升级为 <strong>LLM 多智能体驱动的代码级算法演化</strong>——延续本站物理设计（布局 / 布线 / 单元插入）与"智慧体协作的物理设计 QoR 优化"（AgenticPD / FAPlace / CoEvoP&R）主线，且直接作用于开源 VPR 引擎、可复现。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2607.24998" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2607.24998_VPR-Evolve.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">FPGA布局布线</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VPR</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">代码演化</span>
+        </div>
+    </div>
     <!-- 2607.23761 AQFP Buffer/Splitter Insertion -->
     <div class="abs-card">
       <div class="abs-meta">

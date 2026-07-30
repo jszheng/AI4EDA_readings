@@ -7,9 +7,28 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（68篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（69篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+    <!-- 2607.24854 VClare: Resolving Imperfect Specifications in LLM-Based Verilog Generation -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2607.24854 · cs.AR / cs.PL · 2026-07-25 · Zhuorui Zhao, Bing Li, Yu Li, Zheyu Yan, Ulf Schlichtmann
+        </div>
+        <div class="abs-title">VClare：修复 LLM Verilog 生成中的"不规范规格"——Spec-Level + Sim-Level 双范式修复，单模块 pass 率 +12.7%、多模块 +13.7%</div>
+        <div class="abs-body">
+          <p>LLM 在从自然语言规格生成 Verilog 上展现潜力，但<strong>人工撰写的规格常含语义缺陷</strong>（模糊、矛盾、不完整），会显著拉低生成硬件的质量。本文给出<strong>首个对不规范规格的系统研究</strong>，并提出自动化框架 <strong>VClare</strong> 来修复它们、提升最终 Verilog 设计质量。框架探索两种互补修复范式：<strong>Spec-Level Repair</strong> 直接在规格文本上做 LLM 驱动的不一致挖掘；<strong>Sim-Level Repair</strong> 采用基于仿真的行聚类 + 可选的测试时不一致仲裁。同时提出两个<strong>系统性注入规格缺陷的新基准</strong>——一个源自 VerilogEval-human（单模块），另一个源自 ComplexVDB（53 个多模块任务）。单模块任务上使生成 Verilog 的 <strong>pass 率提升 12.7%</strong>，多模块任务上提升达 <strong>13.7%</strong>。核心创新：首次把"规格质量"作为 LLM RTL 生成的可修复前置于生成的一环——延续本站"理解先于编码"（VeriRefine 五层审计 / EstRTL / LongRTL）与 LLM RTL 生成-验证闭环主线。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2607.24854" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2607.24854_VClare.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">Verilog生成</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">规格修复</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">RTL生成</span>
+        </div>
+    </div>
       <div class="abs-card">
           <div class="abs-title"><span class="badge-new">NEW</span> CircuitWeave：拓扑-行为对齐的可执行多模态 RTL 生成</div>
           <div class="abs-meta">arXiv:2607.23523 · cs.AR · 2026-07-26 · Jiahao Feng, Haiyan Qin, Zhiwei Xie, Wang Kang</div>

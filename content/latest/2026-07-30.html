@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-07-30 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 1 条行业动态 · 来源：arXiv / Synopsys（DAC 2026）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News: Synopsys × Microsoft × AMD — First Autonomous EDA Workflows on Microsoft Discovery (2026-07-27) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Synopsys · 官方新闻稿 · 2026-07-27 · DAC 2026（7/26–29 长滩）· 首个跑在 Microsoft Discovery 上的自主 EDA 工作流（× Microsoft / AMD）</div>
+      <h4>🤖 Synopsys × Microsoft × AMD：首个跑在 Microsoft Discovery 上的自主 EDA 工作流——debug closure 周期降 25–40%、实现 / 签核 QoR 闭环</h4>
+      <p>Synopsys 在 DAC 2026 期间宣布与 <strong>Microsoft</strong> 合作推出行业首个可在 <strong>Microsoft Discovery</strong> 上评估的自主 EDA 工作流，并由 <strong>AMD</strong> 积极评估用于其下一代产品开发——把 agentic AI 从"任务自动化"推向"长程工程执行（long-running autonomy）"。<br>
+        <strong>① 全自主 debug closure 工作流</strong>：由 Microsoft Discovery 编排的、全自主 AI 驱动验证与根因分析（RCA）工作流，汇聚领域专用与任务级智能体来定位设计失效、自动化 debug 任务、加速验证；早期评估显示 <strong>debug 周期缩短 25–40%</strong>，节省数周工程投入、提升硅质量。<br>
+        <strong>② 全自主实现与签核（implementation &amp; closure）工作流</strong>：借 Synopsys 实现智能体 + Fusion Compiler（运行于 Azure），汇聚领域专用与任务级智能体自动化实现 QoR 调优与收敛，初期结果显示 <strong>QoR 改善</strong>。<br>
+        <strong>核心看点</strong>：这是本站已跟踪 Synopsys×NVIDIA 全自主工程智能体（07-29，验证 50× / AMS 3× / 热 CAE 自治）的<strong>姊妹里程碑</strong>——同一 AgentEngineer™ 平台，但首次落到 Microsoft Discovery 云科学发现平台、且有 <strong>AMD 作为头部芯片客户拉动路线</strong>；与 Cadence ChipStack（10×）、Siemens Fuse（self-verifying）共同坐实"三巨头 DAC 2026 集体从工具转向长程自主智能体"的趋势。来源：news.synopsys.com。</p>
+      <a href="https://news.synopsys.com/2026-07-27-Synopsys-Advances-Agentic-AI-Chip-Design-with-AMD-and-Microsoft" target="_blank">→ Synopsys 官方新闻稿（07-27）</a>
+    </div>
+
+    <!-- 2607.24998 VPR-Evolve: Multi-Agent-Driven Algorithm Evolution for FPGA Place and Route -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-27 · Qihang Wu, Taizun Jafri, Aman Arora, Vidya A. Chhabria</div>
+      <h4>📐 VPR-Evolve：多智能体驱动的 FPGA 布局布线算法演化——LLM 智能体直接演化 VPR 源码，复合得分最高 +2.7%、关键路径延迟降 9.8%</h4>
+      <p>CAD 工具通常对结构 / 时序差异巨大的电路套用同一套<strong>固定、手工设计的算法</strong>；常见做法是调超参，但超参调优只能在固定算法已实现的行为里选，既限制 QoR 上限、又需大量昂贵的布局布线评估。本文提出 <strong>VPR-Evolve</strong>：一个<strong>多智能体框架</strong>，通过对每个设计<strong>演化开源 FPGA 打包-布局-布线引擎 VPR（Verilog-to-Routing 流）</strong>的源码来特化它——用 <strong>LLM 智能体</strong>提出、实现并评估代码级修改，<strong>共享记忆</strong>记录历史结果并指导后续演化；每个候选都经完整 VPR 构建与运行，直接优化"关键路径延迟（CPD）+ 布线线长（WL）+ 工具运行时（RT）"的加权复合得分。<br>
+        <strong>结果</strong>：在 5 个 VTR-9 基准上，VPR-Evolve 较 stock VPR 复合得分最高 <strong>+2.7%</strong>；相对 stock VPR，<strong>CPD 最高降 9.8%、布线 WL 最高降 18.1%、工具 RT 最高降 79.3%</strong>；相对超参调优基线，CPD 最高降 6.0%、WL 最高降 2.2%、RT 最高降 7.8%。<br>
+        <strong>核心创新</strong>：把"为设计特化 CAD 工具"从超参调优升级为<strong>LLM 多智能体驱动的代码级算法演化</strong>——延续本站物理设计（布局 / 布线 / 单元插入）与"智慧体协作的物理设计 QoR 优化"（AgenticPD / FAPlace / CoEvoP&R）主线，且直接作用于开源 VPR 引擎、可复现。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">多智能体</span>
+        <span class="tag">FPGA布局布线</span>
+        <span class="tag">VPR</span>
+        <span class="tag">代码演化</span>
+        <span class="tag">LLM智能体</span>
+        <span class="tag">物理设计</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.24998" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.24998_VPR-Evolve.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.24854 VClare: Resolving Imperfect Specifications in LLM-Based Verilog Generation -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.PL · 2026-07-25 · Zhuorui Zhao, Bing Li, Yu Li, Zheyu Yan, Ulf Schlichtmann</div>
+      <h4>⚡ VClare：修复 LLM Verilog 生成中的"不规范规格"——Spec-Level + Sim-Level 双范式修复，单模块 pass 率 +12.7%、多模块 +13.7%</h4>
+      <p>LLM 在从自然语言规格生成 Verilog 上展现潜力，但<strong>人工撰写的规格常含语义缺陷</strong>（模糊、矛盾、不完整），会显著拉低生成硬件的质量。本文给出<strong>首个对不规范规格的系统研究</strong>，并提出自动化框架 <strong>VClare</strong> 来修复它们、提升最终 Verilog 设计质量。<br>
+        框架探索两种互补修复范式：<strong>Spec-Level Repair</strong> 直接在规格文本上做 LLM 驱动的不一致挖掘；<strong>Sim-Level Repair</strong> 采用基于仿真的行聚类 + 可选的测试时不一致仲裁。同时提出两个<strong>系统性注入规格缺陷的新基准</strong>——一个源自 VerilogEval-human（单模块任务），另一个源自 ComplexVDB（含 53 个更贴近真实工程场景的多模块任务）。<br>
+        <strong>结果</strong>：单模块任务上 VClare 有效修复规格缺陷、使生成 Verilog 的 <strong>pass 率提升 12.7%</strong>；多模块任务上提升达 <strong>13.7%</strong>——彰显 LLM 在前端硬件设计中的规格修复能力。<br>
+        <strong>核心创新</strong>：首次把"规格质量"作为 LLM RTL 生成的可修复前置于生成的一环——延续本站"理解先于编码"（VeriRefine 五层审计 / EstRTL / LongRTL）与 LLM RTL 生成-验证闭环主线，并补齐"规格本身有缺陷时怎么办"的研究空白。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">LLM</span>
+        <span class="tag">Verilog生成</span>
+        <span class="tag">规格修复</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">基准</span>
+        <span class="tag">前端硬件设计</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.24854" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.24854_VClare.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.25283 ContractHIL-HLS: Contract-Aligned Multi-Agent Workflow with Hardware-in-the-Loop Feedback for HLS Design -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.AR / cs.CR · 2026-07-28 · Jingbo Zhang, Haoxiang Sun, Wenbo Wang, Wenbo Zhang</div>
+      <h4>✅ ContractHIL-HLS：契约对齐的多智能体 HLS 工作流——硬件在环反馈贯通内核到板级，pass@1 70.4%、板级运行时 207→52ms</h4>
+      <p>本文提出 <strong>ContractHIL-HLS</strong>：一个面向实用化高层次综合（HLS）工程的<strong>契约对齐多智能体工作流</strong>，有三方面贡献。<br>
+        <strong>① 结构化契约</strong>作为语义对齐与任务执行工件，把自然语言需求翻译为显式接口、约束、校验检查与回滚规则；<strong>② 把硬件信息接入反馈环</strong>——将 HLS、Vivado、PYNQ 运行时、功耗与失败证据回馈生成，把 LLM 辅助 HLS 从内核代码推进到<strong>系统与板级收敛</strong>；<strong>③ 按语义下降与执行任务（而非对话角色）分解智能体</strong>：Contract Agent 把自然语言降为契约、HTML Agent 把契约渲染为持久结构化 HTML、Hardware-in-the-Loop Agent 用实测证据实现并修订设计。<br>
+        <strong>结果</strong>：在 94 个本地可执行的 HLS-Eval 任务上，结构化契约带来最大小设计增益，估计单样本 testbench pass 率从 64.0% 升至 70.2%；完整流程 <strong>pass@1 达 70.4%、pass@5 达 76.6%</strong>。另在板级测试的 ML-KEM/ML-DSA 后量子密码（PQC）安全消息加速器上验证：保留的双比特流组织将六消息平均文本运行时从 <strong>207.3ms 降至 52.4ms</strong>，两版镜像均有正 routed WNS，且保持解密消息验证。代码已开源（BJUT-CS316-LAB/ContractHIL-HLS）。<br>
+        <strong>核心创新</strong>：用"契约 + 硬件在环反馈"把 LLM 辅助 HLS 从内核代码升级为<strong>板级可收敛</strong>的多智能体工程流——延续本站"智慧体协作的 RTL 生成-验证-反馈闭环"（HLS-LeVeri / VeriPilot）与 HLS 自动化主线。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">HLS</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">契约对齐</span>
+        <span class="tag">硬件在环</span>
+        <span class="tag">验证反馈</span>
+        <span class="tag">板级收敛</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.25283" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.25283_ContractHIL-HLS.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

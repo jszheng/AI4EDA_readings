@@ -1,8 +1,36 @@
 {
-  "lastUpdate": "2026-07-29",
+  "lastUpdate": "2026-07-30",
   "cutoffDate": "2026-01-08",
-  "totalItems": 171,
+  "totalItems": 172,
   "items": [
+    {
+      "date": "2026-07-30",
+      "company": "Synopsys",
+      "title": "🤖 Synopsys × Microsoft × AMD：首个跑在 Microsoft Discovery 上的自主 EDA 工作流——debug closure 周期降 25–40%、实现 / 签核 QoR 闭环（AgentEngineer + Fusion Compiler / Azure）",
+      "link": "https://news.synopsys.com/2026-07-27-Synopsys-Advances-Agentic-AI-Chip-Design-with-AMD-and-Microsoft",
+      "keywords": [
+        "Synopsys",
+        "Microsoft",
+        "AMD",
+        "Microsoft Discovery",
+        "agentic AI",
+        "自主 EDA 工作流",
+        "autonomous EDA workflow",
+        "debug closure",
+        "debug 周期",
+        "25-40%",
+        "RCA",
+        "根因分析",
+        "Fusion Compiler",
+        "Azure",
+        "AgentEngineer",
+        "实现签核",
+        "QoR",
+        "DAC 2026",
+        "2026-07-27",
+        "2026-07-30"
+      ]
+    },
     {
       "date": "2026-07-29",
       "company": "Synopsys",

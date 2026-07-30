@@ -7,9 +7,28 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（28篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（29篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+    <!-- 2607.25283 ContractHIL-HLS: Contract-Aligned Multi-Agent Workflow with Hardware-in-the-Loop Feedback for HLS Design -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2607.25283 · cs.AI / cs.AR / cs.CR · 2026-07-28 · Jingbo Zhang, Haoxiang Sun, Wenbo Wang, Wenbo Zhang
+        </div>
+        <div class="abs-title">ContractHIL-HLS：契约对齐的多智能体 HLS 工作流——硬件在环反馈贯通内核到板级，pass@1 70.4%、板级运行时 207→52ms</div>
+        <div class="abs-body">
+          <p>本文提出 <strong>ContractHIL-HLS</strong>：一个面向实用化高层次综合（HLS）工程的<strong>契约对齐多智能体工作流</strong>。① <strong>结构化契约</strong>作为语义对齐与任务执行工件，把自然语言需求翻译为显式接口、约束、校验检查与回滚规则；② <strong>把硬件信息接入反馈环</strong>——将 HLS、Vivado、PYNQ 运行时、功耗与失败证据回馈生成，把 LLM 辅助 HLS 从内核代码推进到<strong>系统与板级收敛</strong>；③ <strong>按语义下降与执行任务（而非对话角色）分解智能体</strong>：Contract Agent 把自然语言降为契约、HTML Agent 把契约渲染为持久结构化 HTML、Hardware-in-the-Loop Agent 用实测证据实现并修订设计。在 94 个本地可执行的 HLS-Eval 任务上，结构化契约带来最大小设计增益，估计单样本 testbench pass 率从 64.0% 升至 70.2%；完整流程 <strong>pass@1 达 70.4%、pass@5 达 76.6%</strong>。另在板级测试的 ML-KEM/ML-DSA 后量子密码（PQC）安全消息加速器上验证：双比特流组织将六消息平均文本运行时从 <strong>207.3ms 降至 52.4ms</strong>，两版镜像均有正 routed WNS。代码已开源。核心创新：用"契约 + 硬件在环反馈"把 LLM 辅助 HLS 从内核代码升级为<strong>板级可收敛</strong>的多智能体工程流——延续本站"智慧体协作的 RTL 生成-验证-反馈闭环"（HLS-LeVeri / VeriPilot）与 HLS 自动化主线。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2607.25283" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2607.25283_ContractHIL-HLS.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HLS</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">多智能体</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">契约对齐</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">硬件在环</span>
+        </div>
+    </div>
     <!-- 2607.23882 ADVERSARIAL Hardware Trojan Detection -->
     <div class="abs-card">
         <div class="abs-meta">
