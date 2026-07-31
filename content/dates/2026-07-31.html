@@ -20,7 +20,7 @@
 <body>
 <header>
   <h1>📅 2026-07-31 动态</h1>
-  <p class="subtitle">共 0 篇论文 · 1 条行业动态 · 来源：芯和半导体 (Xpeedic) / 联想 / 中国证券网 / DAC 2026</p>
+  <p class="subtitle">共 0 篇论文 · 3 条行业动态 · 来源：芯和半导体 (Xpeedic) / 联想 / NVIDIA / ChipAgents / DAC 2026</p>
 </header>
 <section>
   <div class="abstracts">
@@ -39,6 +39,34 @@
         <strong>核心看点</strong>：与三大 EDA 巨头的"数字端 agentic AI"（Cadence ChipStack / Synopsys AgentEngineer / Siemens Fuse）不同，芯和定位<strong>"多物理场 AI 智能体协同 + Chip-to-System 端到端自主优化"</strong>，把 AI 智能体延伸至 SI/PI/电磁热耦合等物理层设计环节，覆盖 Chip→Package→Board→System 全链路——是本站已跟踪的国产 EDA AI 进展（华大九天 3DIC / 启芯宸光 DeepChip / 算苗科技 TokenPU）中，<strong>首个给出可量化验证指标的 AI Agent 落地案例（+50% / +80%+）</strong>。来源：中国证券网、网易科技、芯和半导体。</p>
       <a href="https://www.cnstock.com/commonDetail/751695" target="_blank">→ 中国证券网：芯和半导体携手联想集团 国产 EDA 率先落地 AI 智能体实战应用（07-28）</a>
       &nbsp;<a href="https://www.163.com/dy/article/L32TK0EH0511CPMT.html" target="_blank">→ 网易科技：芯和半导体 EDA2026 重磅发布（07-30）</a>
+    </div>
+
+    <!-- News: NVIDIA Agent Toolkit expansion — PhysicsNeMo + CUDA-X (cuDSS for EDA) + Nemotron 3 Ultra × ACE-RTL (2026-07-26/30) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>NVIDIA · 官方新闻稿 / NVIDIA 中文博客 · 2026-07-26（DAC 长滩）/ 2026-07-30 中文报道 · Agent Toolkit 扩展：PhysicsNeMo + CUDA-X（cuDSS 直接服务 EDA）+ Nemotron 3 Ultra × ACE-RTL</div>
+      <h4>🟢 NVIDIA 扩展 Agent Toolkit：纳入 PhysicsNeMo + CUDA-X（cuDSS 直接加速 EDA 稀疏线性系统），Nemotron 3 Ultra × ACE-RTL 领跑开源模型 agentic RTL 编码——Cadence / Synopsys / Siemens / ChipAgents / 三星 / Keysight / 台积电全线采用</h4>
+      <p>NVIDIA 在 DAC 2026（7/26–29，长滩）宣布<strong>扩展面向工程的 Agent Toolkit</strong>，把重新架构的 <strong>PhysicsNeMo</strong> 库与更新版 <strong>CUDA-X</strong> 库作为"agent-ready 工具与技能"纳入，让开发者构建具备 AI 物理推理、加速求解与量子化学能力的<strong>自主 AI 工程师</strong>，覆盖芯片设计、验证、封装与系统。<br>
+        <strong>① CUDA-X 新增 / 更新求解器</strong>：<strong>cuISS</strong>（CUDA 迭代稀疏求解器）加速大型稀疏线性系统；<strong>cuDSS</strong>（CUDA 直接稀疏求解器）<strong>明确服务于 EDA</strong>——加速器件 / 电路 / 系统仿真中的大型复杂稀疏线性系统，提供高性能 + 数值鲁棒性，支持多 GPU、多节点生产部署；<strong>cuEST</strong>（CUDA 电子结构理论）把高精度 DFT / 后 DFT 量子化学引入器件尺度。<br>
+        <strong>② Nemotron 3 Ultra × ACE-RTL</strong>：NVIDIA Research 的 <strong>ACE-RTL</strong> 智能体在 Verilog 设计问题综合基准（RTL 编码任务）上<strong>领跑所有开源模型</strong>；Nemotron 3 Ultra 可基于专有数据后训练、本地 / 本地化部署，企业可控可定制、数据隐私更强；开发者可通过 Cadence / Synopsys / Siemens 工具套件或 Hugging Face 使用。<br>
+        <strong>③ Vera CPU 加速验证</strong>：<strong>Cadence Jasper</strong>（形式验证平台）与 <strong>Synopsys VCS</strong>（高性能功能验证）正针对 <strong>NVIDIA Vera CPU</strong>（下一代 Arm CPU，Grace 继任）优化，提升先进芯片设计的验证吞吐量。<br>
+        <strong>④ 生态采用与量化收益</strong>：Cadence AuraStack + Millennium M2000 基于 cuDSS，多物理场仿真<strong>最高 20×</strong>；Siemens Solido 库特征化速度 <strong>&gt;10×</strong>、Token 成本降 <strong>&gt;10×</strong>；三星 cuLitho 计算光刻最高 20× + PhysicsNeMo 百亿网格芯片级热应力分析（求解器级精度）；Keysight cuDSS 电磁仿真最高 10×；三星 / Synopsys / 台积电 cuEST 关键量子化学负载最高 50×；ChipAgents 用 Agent Toolkit 微调 Nemotron 构建芯片设计 / 验证领域智能体。<br>
+        <strong>核心看点</strong>：这是本站 06-xx 已跟踪"NVIDIA Agent Toolkit 首发（NemoClaw / Nemotron 3 Ultra / OpenShell）"的<strong>重大扩展版</strong>——把 cuDSS 直接点名为 EDA 加速求解器、把 ACE-RTL 作为开源 RTL 编码 SOTA、并把 Vera CPU 拉入 EDA 验证加速，成为 Cadence / Synopsys / Siemens 三巨头 agentic EDA 共同的底层算力 + 模型底座。来源：nvidianews.nvidia.com、blogs.nvidia.cn。</p>
+      <a href="https://nvidianews.nvidia.com/news/nvidia-expands-nvidia-agent-toolkit-with-nvidia-physicsnemo-and-cuda-x-libraries-to-transform-how-the-world-engineers-designs-and-builds" target="_blank">→ NVIDIA 官方新闻稿（07-26，DAC 长滩）</a>
+      &nbsp;<a href="https://blogs.nvidia.cn/blog/nvidia-expands-nvidia-agent-toolkit-with-nvidia-physicsnemo-and-cuda-x-libraries-to-transform-how-the-world-engineers-designs-and-builds" target="_blank">→ NVIDIA 中文博客</a>
+    </div>
+
+    <!-- News: ChipAgents $60M Series A2 → $134M (2026-07-29) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>ChipAgents · BusinessWire / Reuters / Yahoo Finance · 2026-07-29 · Series A2 +$60M → $134M（B Capital 领投，Micron / MediaTek / Ericsson / Bessemer 跟投）</div>
+      <h4>💰 ChipAgents 追加 $60M Series A2、总盘子扩至 $134M——2026 上半年 ARR 增长 6×、部署超 120 家半导体公司（MediaTek / Micron），并深化 NVIDIA 合作开发芯片设计专用模型</h4>
+      <p>ChipAgents（agentic AI 芯片设计平台）宣布追加 <strong>$60M Series A2</strong> 融资，使本轮总盘子扩至 <strong>$134M</strong>，距初始 A 轮仅六个月——反映其在半导体设计 / 验证领域 agentic AI 的商业势头。<br>
+        <strong>① 融资结构</strong>：在 2025-10 $21M A 轮、2026-02 $50M A1 之后再获 $60M A2，<strong>10 个月内三轮</strong>；由新投资人 <strong>B Capital</strong> 领投，Micron、MediaTek、Ericsson、Bessemer 等现有投资人跟投；自 2024 年成立累计融资 $134M+。<br>
+        <strong>② 商业化势头</strong>：2026 上半年 <strong>ARR 增长 6×</strong>，部署至 <strong>120+ 家半导体公司</strong>（含 MediaTek、Micron）；约 64 名员工，总部 Santa Clara，是行业最大的 agentic AI 芯片设计 / 验证商业部署之一。<br>
+        <strong>③ 深化 NVIDIA 合作</strong>：本周扩大与 NVIDIA 战略合作，纳入开发 <strong>ChipAgents 芯片设计专用 AI 模型</strong>（专注 RTL / 验证）；CEO William Wang 拒绝对 NVIDIA 是否为投资人置评。<br>
+        <strong>④ 平台能力</strong>：把规格 / 代码转化为生产就绪 RTL、验证资产与自动化根因分析（RCA），自主规划执行复杂设计 / 验证工作流，<strong>设计周期缩短 &gt;50%</strong>；定位"自主执行"而非"辅助编码"的 copilot。<br>
+        <strong>核心看点</strong>：与本站已跟踪的 ChipAgents $74M A 轮（首发）、Renoir 专用大模型、EY 年度企业家、×AWS 等构成完整商业化叙事；本轮最大亮点是<strong>战略投资人即客户（Micron / MediaTek 既出资又部署）</strong>，且在 Cadence（收购 ChipStack）、Synopsys、Siemens 自研 agentic 工具夹击下，以"自主执行"定位 + 真实生产部署数据突围。来源：businesswire.com、reuters.com。</p>
+      <a href="https://www.businesswire.com/news/home/20260729819576/en/" target="_blank">→ BusinessWire 官方新闻稿（07-29）</a>
+      &nbsp;<a href="https://finance.yahoo.com/technology/ai/articles/chipagents-raises-60-million-expands-131401031.html" target="_blank">→ Yahoo Finance / Quartz 报道</a>
     </div>
 
   </div>

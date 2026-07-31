@@ -1,7 +1,7 @@
 {
   "lastUpdate": "2026-07-31",
   "cutoffDate": "2026-01-08",
-  "totalItems": 173,
+  "totalItems": 175,
   "items": [
     {
       "date": "2026-07-31",
@@ -35,6 +35,68 @@
         "DAC 2026",
         "+50%",
         "+80%",
+        "2026-07-31"
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "company": "NVIDIA",
+      "title": "🟢 NVIDIA 扩展 Agent Toolkit：纳入 PhysicsNeMo + CUDA-X（cuDSS 直接加速 EDA 稀疏线性系统）+ Nemotron 3 Ultra × ACE-RTL 领跑开源 agentic RTL 编码；Vera CPU 加速 Cadence/Synopsys 验证，Cadence/Siemens/三星/Keysight 全线采用",
+      "link": "https://nvidianews.nvidia.com/news/nvidia-expands-nvidia-agent-toolkit-with-nvidia-physicsnemo-and-cuda-x-libraries-to-transform-how-the-world-engineers-designs-and-builds",
+      "keywords": [
+        "NVIDIA",
+        "Agent Toolkit",
+        "AgentToolkit 扩展",
+        "PhysicsNeMo",
+        "CUDA-X",
+        "cuDSS",
+        "cuISS",
+        "cuEST",
+        "EDA 加速求解器",
+        "稀疏线性系统",
+        "Nemotron 3 Ultra",
+        "ACE-RTL",
+        "agentic RTL 编码",
+        "Vera CPU",
+        "Cadence Jasper",
+        "Synopsys VCS",
+        "AuraStack",
+        "Millennium M2000",
+        "Cadence",
+        "Siemens",
+        "三星",
+        "Keysight",
+        "台积电",
+        "ChipAgents",
+        "DAC 2026",
+        "2026-07-26",
+        "2026-07-31"
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "company": "ChipAgents",
+      "title": "💰 ChipAgents 追加 $60M Series A2、总盘子扩至 $134M——2026 上半年 ARR 增长 6×、部署超 120 家半导体公司（MediaTek/Micron），并深化 NVIDIA 合作开发芯片设计专用模型",
+      "link": "https://www.businesswire.com/news/home/20260729819576/en/",
+      "keywords": [
+        "ChipAgents",
+        "Series A2",
+        "$60M",
+        "$134M",
+        "B Capital",
+        "Micron",
+        "MediaTek",
+        "Ericsson",
+        "Bessemer",
+        "ARR 6x",
+        "120 家部署",
+        "William Wang",
+        "NVIDIA 合作",
+        "芯片设计专用模型",
+        "Renoir",
+        "自主执行",
+        "设计周期 -50%",
+        "2026-07-29",
         "2026-07-31"
       ]
     },
