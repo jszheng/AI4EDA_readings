@@ -1052,3 +1052,27 @@
 - 产物：content/dates/2026-07-27.html + content/latest/2026-07-27.html（1 新闻卡，无 PDF）；news/index.html 新增 07-27 section + nav；news_memory.json +2；manifest.js news 165→167、latest[]/dates[] 含 2026-07-27（count 1）。
 - 一致性 iron law 全绿：news_memory 167 == news header 167 == manifest.news 167。
 - Git：commit "auto update: 2026-07-27"（含本次 + 前序未提交合法改动，排除孤儿/重复 PDF）+ push origin/main。
+
+---
+
+## 2026-07-30 执行摘要
+- 工作日晚间由自动化触发；本次运行因流超时中断，续跑时核对发现前序轮次已完成全部页面生成（分类页/日期页/最新页/新闻页/manifest/news_memory 均已落盘且自洽），故续跑只做「校验 + 清理 + git 收尾」。
+- 新增内容（前序轮次已写入）：论文 3 篇 + 行业动态 1 条。
+  - 论文：2607.24998 VPR-Evolve（多智能体 FPGA P&R 算法演化，physical.html）；2607.24854 VClare（修复 LLM Verilog 不规范规格，rtl.html）；2607.25283 ContractHIL-HLS（契约对齐多智能体 HLS，verify.html）。PDF 三份均有效、磁盘与链接一致。
+  - 新闻：Synopsys × Microsoft × AMD 首个跑在 Microsoft Discovery 上的自主 EDA 工作流（debug closure 周期降 25–40%），来源 news.synopsys.com/2026-07-27-…，DAC 2026。
+- 数据一致性：manifest stats = {papers:237, batches:97, news:172, lastUpdate:2026-07-30}；news_memory totalItems=172 == news header 172 == manifest.news 172；dates/latest[] 已含 2026-07-30（count 4 = 3 论文 + 1 新闻）。
+- 清理：删除 4 个临时 _arxiv_*.xml（0 字节 RSS 抓取残留），未提交任何 scratch 文件。
+- Git：commit "auto update: 2026-07-30"（12 files，+331/-14）→ push origin/main 成功（103e28c..75bf421）。
+- 下次注意：若自动化因超时中断，续跑请先 grep 站点确认页面是否已落盘，避免重复生成/重复计数；arXiv 沙箱直连不稳定，优先用 RSS feed（rss.arxiv.org/rss/cs.AR）或 WebSearch 兜底。
+
+---
+
+## 2026-07-31 执行摘要
+- 周五运行，DAC 2026（07-26~29）刚结束的平静期；无新 arXiv 公告（最新 cs.AR 批次仍止于 07-30）。
+- 新增论文 0 篇：核查候选 2607.17528 FluxBench、2607.23523 CircuitWeave 与全部 DAC 新闻（Synopsys×Microsoft×AMD 07-30、Synopsys×NVIDIA 07-29、Cadence/Siemens）均已在站点，避免重复计入。
+- 行业动态 +1（终态）：芯和半导体 (Xpeedic) × 联想 EDA Agent @ DAC 2026（EDA2026 产品线 + 国产 EDA 首个 AI 实战闭环：建库—布局—规则检查—仿真优化，联想 AI PC 验证，设计效率 +50% / 仿真提速 80%+）。来源 cnstock.com/commonDetail/751695（发布 07-26/28/30），去重确认未入库（仅有一则无关旧品牌升级条目）。
+- 数字（终态）：manifest papers 237 / batches 97→98 / news 172→173 / lastUpdate 2026-07-31。
+- 产物：content/dates/2026-07-31.html（1 新闻卡，0 论文，无 PDF）+ content/latest/2026-07-31.html（同）+ news/index.html 新增 07-31 section + nav + stats 173 + 副标题 + news_memory.json +1（totalItems 172→173，置顶）。
+- 一致性全绿：news_memory 173 == news header 173 == manifest.news 173；dates/latest[] 含 2026-07-31（count 1）。
+- Git：commit "auto update: 2026-07-31" + push origin/main。
+- 下次注意：DAC 后平静期优先核查已知候选是否入库；中文厂商新闻（cnstock/163）需人工核对去重，避免与旧条目混淆。
