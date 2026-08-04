@@ -7,9 +7,29 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（27篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（28篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+    <!-- 2607.29076 Selective KV Cache Protection for Noise-Resilient LLM Inference on Analog Compute-In-Memory Systems -->
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.29076 · cs.AR · 2026-07-31 · Yuannuo Feng, Wenyong Zhou, Yuang Ma, Yizhe Chen, Wenshuai Yao, Yuxin Xie, Ngai Wong, Wang Kang（港大 / 北航）
+      </div>
+      <div class="abs-title">模拟存内计算上的选择性 KV Cache 保护：抗噪 LLM 推理——困惑度自 33.91 降至 11.95（干净基线 11.06），动态 KV 编程行利用率 23.1%→91.2%</div>
+      <div class="abs-body">
+        <p>模拟<strong>存内计算（CIM）</strong>阵列被视为高能效 LLM 推理的有力基底，尤其适合线性层的<strong>权重驻留（weight-stationary）</strong>计算。但把模拟 CIM 扩展到注意力机制会遇到根本性挑战：<strong>KV cache 操作需要反复的原位权重更新</strong>，与权重驻留范式的错配使动态计算暴露在显著硬件噪声之下——这一关键问题此前几乎无人研究。本文首次系统研究模拟 CIM 阵列上的动态注意力计算，揭示<strong>初始 token 与近期 token 对硬件噪声具有不成比例的脆弱性</strong>。基于该 token 级洞察，提出<strong>分层 token 保护策略</strong>：把 <strong>sink token</strong> 与<strong>滑动近期 token 窗口</strong>留在更高精度的数字通路，把大宗 KV cache 交给模拟 CIM；并协同设计<strong>调度器</strong>，结合模拟编程、所有权切换与批量 MVM tile 组装，把数字侧开销控制在有界范围。在 <strong>9 个 LLM</strong> 上评测，模拟噪声下平均困惑度从 <strong>33.91 降至 11.95</strong>（干净基线 11.06），<strong>动态 KV 编程行利用率从 23.1% 提升到 91.2%</strong>。核心创新：为「模拟 CIM × Transformer 注意力」这一软硬件协同设计空白给出首个系统性刻画与可落地方案，对 AI 芯片的电路-架构协同优化（噪声容忍度建模、混合精度通路划分）具有参考价值。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.29076" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.29076_AnalogKV.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">存内计算</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">模拟CIM</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">KV Cache</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">软硬件协同</span>
+      </div>
+    </div>
+
     <!-- 2607.20141 Formal Foundations for Known Good Reliable Die Screening in Chiplet-Based AI SoCs -->
     <div class="abs-card">
       <div class="abs-meta">

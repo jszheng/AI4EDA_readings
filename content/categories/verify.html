@@ -7,9 +7,51 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（29篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（31篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+    <!-- 2607.28877 Open-Source LLM-Driven Formal Verification: A Multi-Agent Pipeline for RTL Repair -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2607.28877 · cs.AR / cs.LG / cs.SE · 2026-07-30 · Ha Trung Tran
+        </div>
+        <div class="abs-title">全开源工具链的 LLM 形式验证 RTL 修复流水线：Yosys + SymbiYosys + Z3 反例引导迭代，k-归纳给出正确性证明——并诚实报告四类失败模式</div>
+        <div class="abs-body">
+          <p>验证消耗了现代芯片设计的大部分工作量，但能提供<strong>数学正确性保证</strong>的形式验证工具依然昂贵且授权受限。已有的 LLM RTL 修复工作，要么只用<strong>仿真</strong>验证结果（仅覆盖输入空间的子集），要么依赖<strong>商业工具</strong>，几乎没有工作把形式证明与<strong>完全开源</strong>的工具链结合。本文提出一个多智能体流水线，将 LLM 与开源形式后端（<strong>Yosys + SymbiYosys + Z3</strong>）耦合，通过<strong>反例引导迭代（CEGIS 式）</strong>修复 RTL：框架自动生成形式属性 → 验证设计 → 把反例回灌给 LLM，直到设计被 <strong>k-归纳（k-induction）证明正确</strong>或迭代预算耗尽。<br>
+          <strong>结果</strong>：在 ALU 案例研究中，流水线检出并修复了一个真实功能 bug，并给出正确性的形式证明；在六个基准的套件上，<strong>有一个设计可被稳定修复</strong>——作者没有粉饰这个偏低的成功率，而是把工作明确定位为<strong>可行性研究 + 详尽失败分析</strong>，并刻画出四类失败模式：<strong>有界覆盖空洞（bounded-cover vacuity）</strong>、<strong>规格歧义</strong>、<strong>时序逻辑 bug</strong>、<strong>多属性压力</strong>。此外还向开源形式验证社区报告了 <strong>Yosys <code>bind</code> 指令的一项实用性限制</strong>。<br>
+          <strong>核心创新与价值</strong>：这是本站近期收录的验证类工作中<strong>最"反宣传"的一篇</strong>——在 CircuitProver（Lean 4 全通过 63/63）、Rtl2lean、VeriRefine 等高分结果之外，它给出了另一侧的现实坐标：<strong>当形式后端从商业工具换成纯开源 Yosys/SymbiYosys/Z3、且不允许用仿真兜底时，LLM 修复 RTL 的真实成功率会掉到什么水平、卡在哪里</strong>。其中"有界覆盖空洞"（k-归纳深度不足导致证明看似通过实则空洞）与"多属性压力"（同时满足多条属性时 LLM 顾此失彼）两类失败，对所有做"验证器反馈闭环"的工作（VClare / MechMem-RTL / ContractHIL-HLS）都是必须正面回答的问题。对希望零成本复现 LLM+形式验证闭环的团队，本文的开源栈组合具有直接工程参考价值。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2607.28877" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2607.28877_OpenFV-RTLRepair.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式验证</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">多智能体</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL 修复</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">反例引导</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">k-归纳</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">开源工具链</span>
+        </div>
+    </div>
+    <!-- 2607.27259 CircuitProver: Agentic Lean 4 Theorem Proving with Reusable Circuit Proof Library for Hardware Verification -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2607.27259 · cs.LO / cs.AR · 2026-07-29 · Ziyi Yang, Wenji Fang, Chen Chen, Zhiyao Xie, Hongce Zhang
+        </div>
+        <div class="abs-title">CircuitProver：基于 Lean 4 的智能体硬件验证——可复用电路证明库，参数化验证 63/63 全通过，证明长度 -16.3% / 验证时间 -23.2%</div>
+        <div class="abs-body">
+          <p>现代 IC 复杂度剧增使功能验证成为主要瓶颈。主流形式验证方法<strong>模型检验</strong>逐设计单独验证、只暴露通过/失败，证明推理被锁在求解器启发式内、在相关设计间反复重建；<strong>交互式定理证明</strong>能产生显式、可复用的证明工件，但应用于硬件仍高度手工，形式化、不变量发现与证明开发都需专家投入。本文提出 <strong>CircuitProver</strong>：一个基于 <strong>Lean 4</strong> 的智能体验证框架，支持<strong>证明累积</strong>与<strong>参数化验证</strong>——自动把参数化硬件设计及其自然语言规格翻译为可执行的 Lean 4 模型，再通过 Lean 反馈<strong>迭代构造机器可检查证明</strong>，确立硬件代码符合规格；证明轨迹与已验证定理被提炼为<strong>可复用库</strong>，其中证明策略引导后续智能体推理、已验证引理支持跨相关验证任务的证明复用。并给出<strong>首个面向智能体硬件定理证明的基准套件</strong>（覆盖多样参数化硬件设计、规格、证明任务与评测指标，共 63 题）。CircuitProver 在 63 题中<strong>全部证明通过</strong>；vanilla 智能体仅解决 92.1%、且平均需多一倍的证明轮次；消融显示累积证明知识减少跨相关任务的冗余证明构造，<strong>证明长度 -16.3%、验证时间 -23.2%</strong>。核心创新：把"智能体 + Lean 4 形式验证 + 可复用证明库"打通，让证明在相关设计间可复用——延续本站"RTL-to-Specification / 形式化验证闭环"（Rtl2lean / VeriPilot / SafeGen）主线，把 LLM 智能体从"生成代码"推向"生成机器可检查、可复用的正确性证明"。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2607.27259" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2607.27259_CircuitProver.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式验证</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">Lean 4</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">智能体</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">定理证明</span>
+        </div>
+    </div>
     <!-- 2607.25283 ContractHIL-HLS: Contract-Aligned Multi-Agent Workflow with Hardware-in-the-Loop Feedback for HLS Design -->
     <div class="abs-card">
         <div class="abs-meta">

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-04 动态</h1>
+  <p class="subtitle">共 1 篇论文 · 2 条开源生态动态 · 来源：arXiv（cs.AR / cs.LG / cs.SE） / GitHub（r2g-skills、ECOS ecc）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- OSS: ShenShan123/r2g-skills (agent-r2g) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · ShenShan123/r2g-skills（agent-r2g）· 最新提交 2026-08-02 · 41 ★ · Python / Apache 生态 · Claude Code Agent Skill 插件</div>
+      <h4>🔧 agent-r2g：把「开源 RTL-to-GDS 全签核」封装成 Claude Code Agent Skill——682 个设计规模验证，ORFS 通过率 96.2% / RCX 99.85%，并带 A/B 门控的自学习配方晋升闭环</h4>
+      <p>这是目前<strong>公开可见工程完成度最高的 EDA Agent Skill 套件</strong>：用户装好技能后，只需对 Claude 说"set up the EDA tools"，再说"synthesize this UART at 100 MHz on nangate45"，即可从环境安装一路跑到<strong>通过 DRC/LVS/RCX 签核的 GDSII</strong>，输入既可以是自然语言规格、也可以是已有 RTL。<br>
+        <strong>① 三个子技能（安装到 <code>~/.claude/skills/</code>）</strong>：<br>
+        · <strong>eda-install</strong>（SKILL 0）：探测机器、安装并校验工具链，提供三条路径——共享 EDA 服务器 / 源码构建 ORFS / OSS-CAD-Suite + 独立 OpenROAD 二进制；无 sudo 场景可走 Miniconda（litex-hub 频道）装 iverilog / magic / netgen / sky130A PDK；<br>
+        · <strong>signoff-loop</strong>（SKILL 1）：RTL→GDS 主流程 + 签核 + 自我改进学习循环；<br>
+        · <strong>def-graph</strong>（SKILL 2）：从<strong>已签核</strong>的 DEF/LEF/SPEF 提取 PyG 格式图数据集——并且明确<strong>拒绝为未签核设计建数据集</strong>，从源头堵住"用垃圾布局训 GNN"的数据污染问题。<br>
+        <strong>② 自学习闭环（engineer_loop）</strong>：双记忆库设计——<code>knowledge.sqlite</code> 作为学习器的唯一输入（诚实门），<code>journal.sqlite</code> 只做操作取证、<strong>不被学习器读取</strong>；<code>engineer_loop.py</code> 无人值守驱动"拉设计 → 跑流程 → 签核修复 → 入库 → 学习 → A/B 门控 → 晋升/降级 → 未知症状升级"。配方生命周期为 <strong>shadow → candidate → promoted</strong>，只有 A/B 测试胜出才允许晋升。<br>
+        <strong>③ 工程细节值得后端工程师注意</strong>：<code>extract_route.py</code> 识别布线拥堵中止信号，<code>route_relief</code> 自动降 <code>CORE_UTIL</code> 重跑（sky130hd 上清掉 18/25 个拥塞设计）；已吸收 6 项论文改进并通过 A/B 门控（密集奖励 outcome_score、方差感知 A/B、r2g-bench 留存测试、视觉辅助 DRC、预综合 KNN、后端感知综合重调）；所有签核检查器由 <code>_bounded_run.sh</code> 进程组托管，防孤儿进程。<br>
+        <strong>④ 规模与平台矩阵</strong>：682 个 RTL 设计（ICCAD / RISC-V / BOOM / VTR 等）验证，1390 个 pytest；ORFS 后端 476/495 通过（<strong>96.2%</strong>）；签核语料 LVS 607/674 干净（90%）、DRC 675/682 诚实裁决（99%）、RCX 681/682（<strong>99.85%</strong>）；精选 70 设计子集 ORFS+LVS+RCX <strong>100% 通过</strong>。支持 nangate45 / sky130hd / sky130hs / gf180 / ihp-sg13g2；<strong>明确不支持 asap7</strong>（社区 KLayout deck 误报、无 LVS deck）。<br>
+        <strong>本周更新（08-02）</strong>：re-vendor R2G2.0 v2（层次分隔符 → 实例名映射）；修复 A/B judge 把"无证据 signoff 臂"误判为 SUCCESS 的裁决漏洞（failure-patterns #32c）；修正 Platform Support Matrix 对 gf180/ihp 签核能力的<strong>过度宣称</strong>（#32b）；gf180 轮次知识库快照（WAL checkpoint）。<br>
+        <strong>核心看点</strong>：与本站已收录的 siliconcrew（自然语言→GDSII）、silica-eda（EDA 工具 MCP 封装）、pyslang-mcp（只读语义校验）相比，agent-r2g 补上了最缺的一环——<strong>可审计的签核裁决 + 用 A/B 实验管住"智能体自我改进"</strong>。它把"Agent Skill"从提示词集合升级为带诚实门、门控晋升与失败模式编号的工程系统，是开源 EDA 智能体从 demo 走向可复现基础设施的关键样本。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Agent Skill</span>
+        <span class="tag">Claude Code</span>
+        <span class="tag">OpenROAD/ORFS</span>
+        <span class="tag">RTL-to-GDS</span>
+        <span class="tag">DRC/LVS/RCX 签核</span>
+        <span class="tag">自学习 A/B 门控</span>
+        <span class="tag">开源</span>
+      </div>
+      <a href="https://github.com/ShenShan123/r2g-skills" target="_blank">→ GitHub：ShenShan123/r2g-skills</a>
+    </div>
+
+    <!-- OSS: openecos-projects/ecc -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · openecos-projects/ecc（ECOS Chip Compiler）· 最新提交 2026-08-03 · 15 ★ · Python / Nix · Apache-2.0</div>
+      <h4>🔧 ECOS Chip Compiler 引入「flow agent foundation」——国产开源 RTL2GDS 编译器补上智能体地基，同步新增 soc-mpc 模板与 ics55 国产 PDK 流水线</h4>
+      <p><strong>ECC（ECOS Chip Compiler）</strong>是 ECOS 团队维护的开源芯片设计自动化方案，以<strong>工程化的"芯片编译器"</strong>形态整合 Yosys（综合）、ECC-Tools（自研 P&amp;R 后端）、DreamPlace（布局）、KLayout（版图查看），完成 RTL→GDS 全流程；提供 <code>ecc</code> CLI 与 <code>chipcompiler</code> Python API 两种用法，并用 <strong>Nix</strong> 保证可移植部署（<code>nix run . -- init gcd</code> 一条命令建工程）。工程配置集中在 <code>ecc.toml</code>，<code>flow.preset</code> 支持 <code>rtl2gds</code> / <code>rcx</code> / <code>harden</code> / <code>syn_sta</code> 四档预设，可对既有工程改预设后 <code>--overwrite</code> 重跑。<br>
+        <strong>本周合入（07-31 → 08-03）</strong>：<br>
+        · <strong>#177 feat: add flow agent foundation</strong>（08-03 合入）——为流程层引入智能体地基，标志 ECC 从"脚本化流程运行器"向"可由 Agent 调度的流程引擎"演进；<br>
+        · <strong>#184 feat: support soc-mpc template</strong>（08-03）——新增 SoC MPC（多项目晶圆）工程模板，直指国内高校/小团队最常见的 MPC 流片场景；<br>
+        · <strong>#181 refactor</strong>：从综合输出中移除未使用的固定网表；<strong>#179 fix(ci)</strong>：CI 恢复到最新 <strong>ics55 PDK</strong>（ICsprout 55nm 国产开源 PDK）；<strong>#178</strong>：删除 ecc snapshot。<br>
+        <strong>核心看点</strong>：与 agent-r2g「在 OpenROAD 之上套 Agent Skill」的路线不同，ECC 走的是<strong>"自研后端 + 国产 PDK + 智能体地基内建"</strong>的路线——PDK 侧绑定 ics55（对应本站此前收录的 OSCC iEDA / icsprout55-pdk 生态），流程侧用 Nix + TOML 把可复现性做进工具本身。两条路线合起来正好构成开源 AI-EDA 的两个方向：<strong>把智能体接到成熟开源流程上</strong> vs <strong>把智能体接口做进新流程的地基里</strong>。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">开源 EDA</span>
+        <span class="tag">flow agent</span>
+        <span class="tag">RTL2GDS</span>
+        <span class="tag">Yosys</span>
+        <span class="tag">DreamPlace</span>
+        <span class="tag">ics55 国产 PDK</span>
+        <span class="tag">Nix</span>
+      </div>
+      <a href="https://github.com/openecos-projects/ecc" target="_blank">→ GitHub：openecos-projects/ecc</a>
+    </div>
+
+    <!-- 2607.28877 Open-Source LLM-Driven Formal Verification: A Multi-Agent Pipeline for RTL Repair -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG / cs.SE · 2026-07-30 · Ha Trung Tran</div>
+      <h4>✅ 全开源工具链的 LLM 形式验证 RTL 修复流水线：Yosys + SymbiYosys + Z3 反例引导迭代，k-归纳给出正确性证明——并诚实报告四类失败模式</h4>
+      <p>验证消耗了现代芯片设计的大部分工作量，但能提供<strong>数学正确性保证</strong>的形式验证工具依然昂贵且授权受限。已有的 LLM RTL 修复工作，要么只用<strong>仿真</strong>验证结果（仅覆盖输入空间的子集），要么依赖<strong>商业工具</strong>，几乎没有工作把形式证明与<strong>完全开源</strong>的工具链结合。本文提出一个多智能体流水线，将 LLM 与开源形式后端（<strong>Yosys + SymbiYosys + Z3</strong>）耦合，通过<strong>反例引导迭代（CEGIS 式）</strong>修复 RTL：框架自动生成形式属性 → 验证设计 → 把反例回灌给 LLM，直到设计被 <strong>k-归纳（k-induction）证明正确</strong>或迭代预算耗尽。<br>
+        <strong>结果</strong>：在 ALU 案例研究中，流水线检出并修复了一个真实功能 bug，并给出正确性的形式证明；在六个基准的套件上，<strong>有一个设计可被稳定修复</strong>——作者没有粉饰这个偏低的成功率，而是把工作明确定位为<strong>可行性研究 + 详尽失败分析</strong>，并刻画出四类失败模式：<strong>有界覆盖空洞（bounded-cover vacuity）</strong>、<strong>规格歧义</strong>、<strong>时序逻辑 bug</strong>、<strong>多属性压力</strong>。此外还向开源形式验证社区报告了 <strong>Yosys <code>bind</code> 指令的一项实用性限制</strong>。<br>
+        <strong>核心创新与价值</strong>：这是本站近期收录的验证类工作中<strong>最"反宣传"的一篇</strong>——在 CircuitProver（Lean 4 全通过 63/63）、Rtl2lean、VeriRefine 等高分结果之外，它给出了另一侧的现实坐标：<strong>当形式后端从商业工具换成纯开源 Yosys/SymbiYosys/Z3、且不允许用仿真兜底时，LLM 修复 RTL 的真实成功率会掉到什么水平、卡在哪里</strong>。其中"有界覆盖空洞"（k-induction 深度不足导致证明看似通过实则空洞）与"多属性压力"（同时满足多条属性时 LLM 顾此失彼）两类失败，对所有做"验证器反馈闭环"的工作（VClare / MechMem-RTL / ContractHIL-HLS）都是必须正面回答的问题。对希望零成本复现 LLM+形式验证闭环的团队，本文的开源栈组合具有直接工程参考价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">形式验证</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">RTL 修复</span>
+        <span class="tag">反例引导</span>
+        <span class="tag">k-归纳</span>
+        <span class="tag">Yosys/SymbiYosys/Z3</span>
+        <span class="tag">开源工具链</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.28877" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="2607.28877_OpenFV-RTLRepair.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

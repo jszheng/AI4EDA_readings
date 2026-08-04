@@ -7,9 +7,48 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（69篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（71篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+    <!-- 2607.29283 RTLCurator: Label-Efficient Data Curation for RTL Generation -->
+    <div class="abs-card">
+      <div class="abs-meta">
+        <span class="badge-new">NEW</span>
+        &nbsp;arXiv:2607.29283 · cs.AR / cs.LG · 2026-07-31 · Siyang Cai, Cangyuan Li, Wenjing Chang, Kun Wang, Haoyu Gao, Yinhe Han, Ying Wang（中科院计算所）
+      </div>
+      <div class="abs-title">RTLCurator：标签高效的 RTL 生成数据治理——只验证 10% 语料、保留 80% 子集即全面超越"用全量语料训练"</div>
+      <div class="abs-body">
+        <p>训练 LLM 写 RTL 需要大规模「规格—代码」配对语料，而真实数据稀缺到多数公开语料都靠合成。合成能给出规模却给不出正确性：作者实测两个被广泛使用的 RTL 数据集中，<strong>仅 24.4% 和 53.5% 的配对能通过生成的功能测试</strong>。那么该保留多少、保留哪一部分？<strong>只按正确性筛选是个糟糕答案</strong>——一个只在角落场景出错的配对，其语法与接口约定仍然有效；而复杂时序设计既更难生成也更难验证，按正确性过滤只会留下一堆短小简单的模块。何况正确性本身极难获取：RTL 的行为几乎不在表面留痕，把整个语料跑一遍验证也只能把配对分成"通过/失败"两档。RTLCurator 通过<strong>将每条规格与"仿真失败的实现"做对比</strong>，学习<strong>行为感知的兼容性先验</strong>，再用少量已验证配对将其<strong>校准</strong>到新语料；随后在<strong>对齐度、表示覆盖度、RTL 结构丰富度</strong>之间做平衡来构造保留子集。在 <strong>CodeV 与 RTLCoder</strong> 上保留 80% 语料，<strong>在所有汇报指标上均优于全量语料训练</strong>，而<strong>只需验证 10% 的候选池</strong>；仅按分数排序反而<strong>劣于随机选取</strong>，把整个池子做仿真过滤也并不更好。核心创新：把 RTL 训练语料瓶颈从"生成更多数据"转向"<strong>以极低标注成本挑对数据</strong>"，对 CodeV / RTLCoder / VerilogEval 生态的数据侧优化具有直接工程价值。</p>
+      </div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2607.29283" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2607.29283_RTLCurator.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">数据治理</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">标签高效</span>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">CodeV</span>
+        <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">RTLCoder</span>
+      </div>
+    </div>
+
+    <!-- 2607.27879 ARES: Adaptive Reasoning-Effort Steering for PPA- and Cost-Aware RTL Optimization with LLM Agents -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2607.27879 · cs.AR / cs.AI · 2026-07-30 · Stef Cuyckens, Mihaela Jivanescu, Jun Yin, Chao Fang, Marian Verhelst
+        </div>
+        <div class="abs-title">ARES：面向 PPA 与成本感知的 RTL 优化——LLM 智能体自适应推理力度引导，FoM 降 23–27%、仅用 Dr. RTL 12% 的 token</div>
+        <div class="abs-body">
+          <p>LLM 智能体通过"编辑—综合—PPA 分析"迭代优化 RTL 的功耗/性能/面积（PPA），但每次调用都要付出美元成本；此前工作只报达到的质量、把质量归因于跨设计长期记忆、且把每次调用的推理力度固定不变。本文提出 <strong>ARES</strong>，含三项创新：① 引入每次 LLM 调用的归一化美元成本（与品质因数 FoM 并列报告），使不同推理力度 / 优化器之间可公平比较；② 发现长期记忆贡献甚微——精心设计的记忆并不比"把相同经验简单拼接"带来稳定增益；③ 改为自适应逐调用推理力度：用仅在低力度进展停滞时才升级到更深推理的耐心计数器（在 21 个训练设计上拟合），把推理预算花在"刀刃"上而非每轮均匀分配。在 3 个训练时未见的测试设计上，该力度策略在<strong>相等归一化成本</strong>下把 FoM 降低 23–27%（最佳固定力度仅达 16–23%）；把 LLM 起草的乘加单元（MAC）到高度手工优化版本的差距<strong>收敛最多 83%</strong>，并以 <strong>Dr. RTL（SOTA）12% 的 token 量达到比其深 25% 的 FoM</strong>。核心创新：把"成本感知 + 自适应推理力度引导"引入 LLM 智能体的 RTL PPA 优化闭环——打破"跨设计记忆万能"的假设，证明<strong>推理预算的动态分配</strong>才是真正的增益来源，对 LLM RTL 生成-优化-反馈闭环（VeriRefine / VClare / EstRTL）具有直接方法论启示。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2607.27879" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2607.27879_ARES.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM智能体</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">RTL优化</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PPA</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">成本感知</span>
+        </div>
+    </div>
     <!-- 2607.24854 VClare: Resolving Imperfect Specifications in LLM-Based Verilog Generation -->
     <div class="abs-card">
         <div class="abs-meta">

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-03 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 2 条行业动态 · 来源：arXiv（cs.AR / cs.LO / cs.LG） / icinfra（AI4EDA 全景图）/ SemiEngineering（WIR #149）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- News: icinfra 2026 AI4EDA 全景图（研究日期 2026-08-02） -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>icinfra.cn · 产业研究报告 · 研究日期 2026-08-02 · 《2026 年 AI4EDA 全景图：厂商、产品、部署现状与技术边界》</div>
+      <h4>🗺️ 首份系统性 AI4EDA 全景图：三类产品分型 + S1–S5 能力阶段 + D0–D5 部署证据等级——覆盖全球头部厂商、中国 8 家 AI4EDA 厂商与 5 家初创，并明确列出 5 类技术边界与风险</h4>
+      <p>这是目前公开可见<strong>最系统的 AI4EDA 产业图谱</strong>，其价值不在罗列厂商，而在于首次给出<strong>可比较的评估坐标系</strong>——明确声明"不是商业尽调"，厂商自报的效率/PPA/覆盖率数据一律按"厂商口径"处理、不视为独立基准结果。<br>
+        <strong>① 三类产品分型</strong>：<br>
+        · <strong>闭环优化器</strong>（明确目标函数 + 确定性 EDA 引擎）：Synopsys DSO.ai / VSO.ai / TSO.ai / ASO.ai、Cadence Cerebrus、Siemens Solido、概伦电子 NanoDesigner Optimizer；<br>
+        · <strong>工程助手</strong>（文档问答 / 报告解释 / 脚本生成 / 日志分析）：Keysight EDA Learning Assistant、Ansys Engineering Copilot、华大九天"天问"；<br>
+        · <strong>智能体工作流</strong>（理解目标→规划步骤→调用工具→分析迭代）：Synopsys AgentEngineer、Cadence ChipStack/AgentStack、Siemens Fuse、合见工软 UDA 2.0、ChipAgents、ChipNexus NEX、Chipmind。<br>
+        <strong>② S1–S5 能力阶段</strong>（源自 DAC 2026 邀请论文，Xu 等）：S1 Assisting（问答/规格解释）→ S2 Generating（生成 RTL/testbench/property/脚本）→ S3 Verifying（读工具结果、参与覆盖率与失败定位）→ S4 Coordinating（编排多工具/多阶段，共享上下文与反馈）→ <strong>S5 Autonomy（围绕目标自主决策、驱动完整闭环）</strong>。<br>
+        <strong>③ D0–D5 部署证据等级</strong>（本文原创，用于抑制 PR 口径噪音）：D0 概念/公告 → D1 研究原型（论文/开源/可复现实验）→ D2 预览/PoC（Demo/Beta/有限试点）→ D3 正式产品（产品页/版本/商业交付）→ D4 生产部署（多项目/多客户公开证据）→ <strong>D5 Silicon/Production Proven（明确流片、硅后或量产证据且与该 AI 工作流直接相关）</strong>。<br>
+        <strong>④ 中国 AI4EDA 厂商（8 家）</strong>：华大九天（Vision / Aether Coder / ArgusFPD Triage AI / Hima EMIR AI / 天问）、合见工软（UDA 1.0→2.0 自研架构 Agentic AI）、芯和半导体（XAI 多智能体 / 射频 EDA 多智能体 / 多物理场预测优化）、概伦电子（NanoDesigner Optimizer）、国微芯（EsseFormal AI Assistant）、芯华章（X-IS / X-IVS / X-IDS）、智维创芯（ChatDV：iTest/iSVA/iModel/iDebug）、培风图南（Mozz TCAD → AI TCAD / 虚拟晶圆厂）。<strong>全球初创 5 家</strong>：ChipAgents（Alpha Design AI）、ChipNexus（原 PrimisAI，NEX）、Chipmind、Astrus（模拟版图自动化）、Axiomatic AI（Lemma verified AI operators）。<br>
+        <strong>⑤ 五类技术边界与风险（最具工程价值的部分）</strong>：<br>
+        · <strong>语法正确 ≠ 设计正确</strong>——RTL 可编译甚至可综合，却可能在时钟边界、FSM corner case、CDC/RDC、X propagation 上出错；<br>
+        · <strong>Testbench 生成存在"自证偏差"</strong>——同一模型同时生成 RTL 与 testbench 会导致共同误解，coverage 虚高但无有效检查；<br>
+        · <strong>工具调用错误会被放大</strong>——Agent 可能用错工具版本、误读 warning、因 License denial 无限重试，吞噬队列与 License；<br>
+        · <strong>代理模型有适用域</strong>——TCAD/热/电磁代理模型必须记录训练范围、误差与外推检测，范围外结果不能用于 signoff；<br>
+        · <strong>厂商倍数不可横向比较</strong>——"10×/40×/50×"口径不一，采购应统一折算为"<strong>每个通过企业验收门槛的工程结果所需的总人力、算力与 License 成本</strong>"。<br>
+        <strong>核心看点</strong>：本站长期跟踪的碎片化厂商动态（Synopsys AgentEngineer / Cadence ChipStack / Siemens Fuse / 芯和 XAI / ChipAgents / Chipmind / ChipNexus）在此被纳入统一坐标系。<strong>S1–S5 × D0–D5 的二维评估法</strong>特别适合作为企业 PoC 与采购评估框架——它把"厂商宣称的能力阶段"与"可核验的部署证据"解耦，直击当前 agentic EDA 报道中最普遍的"D0 概念被包装成 D4 生产部署"问题。来源：icinfra.cn。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">产业全景</span>
+        <span class="tag">AI4EDA</span>
+        <span class="tag">S1-S5能力阶段</span>
+        <span class="tag">D0-D5部署证据</span>
+        <span class="tag">国产EDA</span>
+        <span class="tag">采购评估框架</span>
+      </div>
+      <a href="https://icinfra.cn/posts/global-ai4eda-landscape" target="_blank">→ icinfra：2026 年 AI4EDA 全景图（研究日期 08-02）</a>
+    </div>
+
+    <!-- News: SemiEngineering Chip Industry Week In Review #149 (2026-07-31) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Chip Industry Week In Review #149 · 2026-07-31 · 芯片产业周综述（DAC 余波 / CHIPS Act / 先进封装 / SIA 市场）</div>
+      <h4>📰 Chip Industry Week In Review #149：DAC 智能体热潮延续——Synopsys/Cadence/Siemens 三巨头代理式工作流 + Intel Foundry 14A/18A-P 工具认证；ASE 封装 Capex +$2B；SIA 预估 2026 全球芯片销售 $1.5T</h4>
+      <p>本期周综述聚焦 DAC 2026 余波与产业宏观面：<br>
+        <strong>① DAC 上的 Agentic AI</strong>：Synopsys 展示与 Microsoft 协作的全自主 agentic EDA 工作流、并与 NVIDIA 推出贯通 EDA→CAE 的长程全自主工作流；Cadence 与 NVIDIA 推出面向 PCB/先进封装的 AuraStack 智能体平台，跨规划—实现—多物理场协调专用智能体；Siemens EDA 推出<strong>自我验证（self-verifying）代理式 AI 工作流</strong>，借 NVIDIA AI 让长程领域智能体基于确定性、物理驱动的 EDA 引擎推理、行动并持续校验决策。多家厂商工具获 <strong>Intel Foundry 14A / 18A-P</strong> 认证：Cadence AI 驱动参考流程、Keysight 电磁设计、Siemens IC 设计工具、Synopsys AI 驱动 EDA 流程等。<br>
+        <strong>② 先进封装</strong>：ASE 将 2026 资本开支上调 $2B 至约 $10B（AI 需求强劲）；Intel Foundry 在 Rio Rancho 用 Foveros/EMIB 扩产先进封装；Lens Technology 与 Intel 合作开发玻璃基板先进封装；Qnity 加入 imec 半导体研究计划。<br>
+        <strong>③ 市场</strong>：SIA《State of the Industry》显示 2025 全球芯片销售达 $796B、预计 2026 年破 $1.5T；美国企业占 53% 市场；2020 年以来已宣布投资超 $770B（160 个项目）；Q2 2026 硅片出货环比 +9%；2026 晶圆厂设备销售预计 +25% 至约 $162B。<br>
+        <strong>核心看点</strong>：本期印证本站 DAC 2026 主线——三巨头集体从"工具"转向"长程自主智能体"，且智能体开始基于确定性 EDA 引擎做自我验证；封装扩产与 Intel Foundry 工具认证揭示 AI 芯片的物理层瓶颈正成为新焦点。来源：semiengineering.com。</p>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-149/" target="_blank">→ SemiEngineering WIR #149（07-31）</a>
+    </div>
+
+    <!-- 2607.27879 ARES: Adaptive Reasoning-Effort Steering for PPA- and Cost-Aware RTL Optimization with LLM Agents -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · 2026-07-30 · Stef Cuyckens, Mihaela Jivanescu, Jun Yin, Chao Fang, Marian Verhelst</div>
+      <h4>⚡ ARES：面向 PPA 与成本感知的 RTL 优化——LLM 智能体自适应推理力度引导，FoM 降 23–27%、仅用 Dr. RTL 12% 的 token</h4>
+      <p>LLM 智能体通过"编辑—综合—PPA 分析"迭代优化 RTL 的功耗/性能/面积（PPA），但每次调用都要付出美元成本；此前工作只报达到的质量、把质量归因于跨设计长期记忆、且把每次调用的推理力度固定不变。本文提出 <strong>ARES</strong>，含三项创新：① 引入<strong>每次 LLM 调用的归一化美元成本</strong>（与品质因数 FoM 并列报告），使不同推理力度 / 优化器之间可公平比较；② 发现<strong>长期记忆贡献甚微</strong>——精心设计的记忆并不比"把相同经验简单拼接"带来稳定增益；③ 改为<strong>自适应逐调用推理力度</strong>：用仅在低力度进展停滞时才升级到更深推理的耐心计数器（在 21 个训练设计上拟合），把推理预算花在"刀刃"上而非每轮均匀分配。<br>
+        <strong>结果</strong>：在 3 个训练时未见的测试设计上，该力度策略在<strong>相等归一化成本</strong>下把 FoM 降低 23–27%（最佳固定力度仅达 16–23%）；把 LLM 起草的乘加单元（MAC）到高度手工优化版本的差距<strong>收敛最多 83%</strong>，并以 <strong>Dr. RTL（SOTA）12% 的 token 量达到比其深 25% 的 FoM</strong>。<br>
+        <strong>核心创新</strong>：把"成本感知 + 自适应推理力度引导"引入 LLM 智能体的 RTL PPA 优化闭环——打破"跨设计记忆万能"的假设，证明<strong>推理预算的动态分配</strong>才是真正的增益来源，对 LLM RTL 生成-优化-反馈闭环（VeriRefine / VClare / EstRTL）具有直接方法论启示：与其堆记忆，不如按需加深推理。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">LLM智能体</span>
+        <span class="tag">RTL优化</span>
+        <span class="tag">PPA</span>
+        <span class="tag">成本感知</span>
+        <span class="tag">推理力度</span>
+        <span class="tag">RTL生成</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.27879" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.27879_ARES.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.27259 CircuitProver: Agentic Lean 4 Theorem Proving with Reusable Circuit Proof Library for Hardware Verification -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LO / cs.AR · 2026-07-29 · Ziyi Yang, Wenji Fang, Chen Chen, Zhiyao Xie, Hongce Zhang</div>
+      <h4>✅ CircuitProver：基于 Lean 4 的智能体硬件验证——可复用电路证明库，参数化验证 63/63 全通过，证明长度 -16.3% / 验证时间 -23.2%</h4>
+      <p>现代 IC 复杂度剧增使功能验证成为主要瓶颈。主流形式验证方法<strong>模型检验</strong>逐设计单独验证、只暴露通过/失败，证明推理被锁在求解器启发式内、在相关设计间反复重建；<strong>交互式定理证明</strong>能产生显式、可复用的证明工件，但应用于硬件仍高度手工，形式化、不变量发现与证明开发都需专家投入。本文提出 <strong>CircuitProver</strong>：一个基于 <strong>Lean 4</strong> 的智能体验证框架，支持<strong>证明累积</strong>与<strong>参数化验证</strong>——自动把参数化硬件设计及其自然语言规格翻译为可执行的 Lean 4 模型，再通过 Lean 反馈<strong>迭代构造机器可检查证明</strong>，确立硬件代码符合规格；证明轨迹与已验证定理被提炼为<strong>可复用库</strong>，其中证明策略引导后续智能体推理、已验证引理支持跨相关验证任务的证明复用。并给出<strong>首个面向智能体硬件定理证明的基准套件</strong>（覆盖多样参数化硬件设计、规格、证明任务与评测指标，共 63 题）。<br>
+        <strong>结果</strong>：CircuitProver 在 63 题中<strong>全部证明通过</strong>；vanilla 智能体仅解决 92.1%、且平均需多一倍的证明轮次；消融显示累积证明知识减少跨相关任务的冗余证明构造，<strong>证明长度 -16.3%、验证时间 -23.2%</strong>。<br>
+        <strong>核心创新</strong>：把"智能体 + Lean 4 形式验证 + 可复用证明库"打通，让证明在相关设计间可复用——延续本站"RTL-to-Specification / 形式化验证闭环"（Rtl2lean / VeriPilot / SafeGen）主线，把 LLM 智能体从"生成代码"推向"生成机器可检查、可复用的正确性证明"。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">形式验证</span>
+        <span class="tag">Lean 4</span>
+        <span class="tag">智能体</span>
+        <span class="tag">定理证明</span>
+        <span class="tag">证明复用</span>
+        <span class="tag">硬件验证</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.27259" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.27259_CircuitProver.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.29283 RTLCurator: Label-Efficient Data Curation for RTL Generation -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · 2026-07-31 · Siyang Cai, Cangyuan Li, Wenjing Chang, Kun Wang, Haoyu Gao, Yinhe Han, Ying Wang（中科院计算所）</div>
+      <h4>⚡ RTLCurator：标签高效的 RTL 生成数据治理——只验证 10% 语料、保留 80% 子集即全面超越"用全量语料训练"</h4>
+      <p>训练 LLM 写 RTL 需要大规模「规格—代码」配对语料，而真实数据稀缺到多数公开语料都靠合成。合成能给出规模却给不出正确性：作者实测两个被广泛使用的 RTL 数据集中，<strong>仅 24.4% 和 53.5% 的配对能通过生成的功能测试</strong>。那么该保留多少、保留哪一部分？<strong>只按正确性筛选是个糟糕答案</strong>——一个只在角落场景出错的配对，其语法与接口约定仍然有效；而复杂时序设计既更难生成也更难验证，按正确性过滤只会留下一堆短小简单的模块。何况正确性本身极难获取：RTL 的行为几乎不在表面留痕，把整个语料跑一遍验证也只能把配对分成"通过/失败"两档。<br>
+        <strong>方法</strong>：RTLCurator 通过<strong>将每条规格与"仿真失败的实现"做对比</strong>，学习一个<strong>行为感知的兼容性先验（behavior-aware compatibility prior）</strong>，再用少量已验证配对把该先验<strong>校准</strong>到新语料上；随后在<strong>对齐度、表示覆盖度、RTL 结构丰富度</strong>三者之间做平衡来构造保留子集。<br>
+        <strong>结果</strong>：在 <strong>CodeV 与 RTLCoder</strong> 上，按此法保留 80% 语料，<strong>在所有汇报指标上均优于用全量语料训练</strong>，而<strong>只需验证 10% 的候选池</strong>；相比之下，仅按分数排序反而<strong>劣于随机选取</strong>，把整个池子做仿真过滤也并不更好。<br>
+        <strong>核心创新</strong>：把 RTL 训练语料的瓶颈从"如何生成更多数据"转向"<strong>如何以极低标注成本挑对数据</strong>"——证明数据治理的关键不是正确性过滤而是行为感知的多样性平衡，对 CodeV / RTLCoder / VerilogEval 生态的数据侧优化具有直接工程价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">数据治理</span>
+        <span class="tag">标签高效</span>
+        <span class="tag">CodeV</span>
+        <span class="tag">RTLCoder</span>
+        <span class="tag">语料质量</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.29283" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.29283_RTLCurator.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+    <!-- 2607.29076 Selective KV Cache Protection for Noise-Resilient LLM Inference on Analog Compute-In-Memory Systems -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-07-31 · Yuannuo Feng, Wenyong Zhou, Yuang Ma, Yizhe Chen, Wenshuai Yao, Yuxin Xie, Ngai Wong, Wang Kang（港大 / 北航）</div>
+      <h4>🔬 模拟存内计算上的选择性 KV Cache 保护：抗噪 LLM 推理——困惑度自 33.91 降至 11.95（干净基线 11.06），动态 KV 编程行利用率 23.1%→91.2%</h4>
+      <p>模拟<strong>存内计算（CIM）</strong>阵列被视为高能效 LLM 推理的有力基底，尤其适合线性层的<strong>权重驻留（weight-stationary）</strong>计算。但把模拟 CIM 扩展到注意力机制会遇到一个根本性挑战：<strong>KV cache 操作需要反复的原位权重更新</strong>，这与权重驻留范式的错配使动态计算暴露在显著的硬件噪声之下——而这一关键问题此前几乎无人研究。<br>
+        <strong>发现与方法</strong>：本文首次系统研究模拟 CIM 阵列上的动态注意力计算，揭示<strong>初始 token 与近期 token 对硬件噪声具有不成比例的脆弱性</strong>。基于该 token 级洞察，提出<strong>分层 token 保护策略</strong>：把 <strong>sink token</strong> 与<strong>滑动近期 token 窗口</strong>留在更高精度的数字通路上，而把大宗 KV cache 交给模拟 CIM 处理；并协同设计<strong>调度器</strong>，结合模拟编程、所有权切换（ownership transition）与批量 MVM tile 组装，把数字侧开销控制在有界范围内。<br>
+        <strong>结果</strong>：在 <strong>9 个 LLM</strong> 上评测，该方法把模拟噪声下的平均困惑度从 <strong>33.91 降至 11.95</strong>（接近干净基线 11.06），同时把<strong>动态 KV 编程行利用率从 23.1% 提升到 91.2%</strong>。<br>
+        <strong>核心创新</strong>：为「模拟 CIM × Transformer 注意力」这一软硬件协同设计空白给出首个系统性刻画与可落地方案——延续本站模拟/存内计算与架构级 AI 加速主线，对 AI 芯片的电路-架构协同优化（噪声容忍度建模、混合精度通路划分）具有参考价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">存内计算</span>
+        <span class="tag">模拟CIM</span>
+        <span class="tag">KV Cache</span>
+        <span class="tag">噪声鲁棒</span>
+        <span class="tag">软硬件协同</span>
+        <span class="tag">LLM推理</span>
+      </div>
+      <a href="https://arxiv.org/abs/2607.29076" target="_blank">📄 arXiv</a>
+      &nbsp;<a href="../dates/2607.29076_AnalogKV.pdf" class="local">📥 本地 PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

@@ -1,8 +1,69 @@
 {
-  "lastUpdate": "2026-07-31",
-  "cutoffDate": "2026-01-08",
-  "totalItems": 175,
+  "lastUpdate": "2026-08-04",
+  "cutoffDate": "2026-02-05",
+  "totalItems": 179,
   "items": [
+    {
+      "date": "2026-08-03",
+      "company": "icinfra.cn",
+      "title": "🗺️ 《2026 年 AI4EDA 全景图：厂商、产品、部署现状与技术边界》——三类产品分型 + S1–S5 能力阶段 + D0–D5 部署证据等级，覆盖中国 8 家厂商 / 全球 5 家初创与 5 类技术边界风险",
+      "link": "https://icinfra.cn/posts/global-ai4eda-landscape",
+      "keywords": [
+        "icinfra",
+        "AI4EDA 全景图",
+        "产业研究报告",
+        "闭环优化器",
+        "工程助手",
+        "智能体工作流",
+        "S1-S5",
+        "D0-D5",
+        "DSO.ai",
+        "Cerebrus",
+        "Solido",
+        "AgentEngineer",
+        "ChipStack",
+        "Siemens Fuse",
+        "合见工软 UDA 2.0",
+        "华大九天",
+        "概伦电子",
+        "ChipNexus",
+        "Chipmind",
+        "技术边界",
+        "厂商口径",
+        "2026-08-02",
+        "2026-08-03"
+      ]
+    },
+    {
+      "date": "2026-08-03",
+      "company": "SemiEngineering",
+      "title": "📰 Chip Industry Week In Review #149：DAC 智能体热潮延续——三巨头代理式工作流 + Intel Foundry 14A/18A-P 工具认证；ASE 封装 Capex +$2B；SIA 预估 2026 全球芯片销售 $1.5T",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-149/",
+      "keywords": [
+        "SemiEngineering",
+        "WIR #149",
+        "周综述",
+        "DAC 2026",
+        "Agentic AI",
+        "Synopsys",
+        "Cadence",
+        "Siemens EDA",
+        "self-verifying",
+        "AuraStack",
+        "Intel Foundry 14A",
+        "18A-P",
+        "工具认证",
+        "ASE",
+        "先进封装",
+        "Foveros",
+        "EMIB",
+        "SIA",
+        "$1.5T",
+        "晶圆厂设备",
+        "2026-07-31",
+        "2026-08-03"
+      ]
+    },
     {
       "date": "2026-07-31",
       "company": "芯和半导体 (Xpeedic)",
@@ -3797,6 +3858,40 @@
         "ChipStack",
         "AgentStack",
         "AgentEngineer"
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "company": "ShenShan123 / r2g-skills (agent-r2g)",
+      "title": "🔧 agent-r2g：开源 RTL-to-GDS 全签核封装成 Claude Code Agent Skill（682 设计验证，ORFS 96.2%/RCX 99.85%，带 A/B 门控自学习配方晋升）",
+      "link": "https://github.com/ShenShan123/r2g-skills",
+      "keywords": [
+        "agent-r2g",
+        "r2g-skills",
+        "RTL-to-GDS",
+        "Claude Code",
+        "Agent Skill",
+        "OpenROAD",
+        "ORFS",
+        "RCX",
+        "自学习"
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "company": "openecos-projects / ecc (ECOS Chip Compiler)",
+      "title": "🔧 ECOS Chip Compiler 引入 flow agent foundation：国产开源 RTL2GDS 补智能体地基，新增 soc-mpc 模板与 ics55 国产 PDK 流水线",
+      "link": "https://github.com/openecos-projects/ecc",
+      "keywords": [
+        "ECOS",
+        "Chip Compiler",
+        "flow agent",
+        "soc-mpc",
+        "ics55",
+        "PDK",
+        "RTL2GDS",
+        "开源",
+        "国产"
       ]
     }
   ]
