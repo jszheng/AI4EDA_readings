@@ -1,8 +1,26 @@
 {
-  "lastUpdate": "2026-08-04",
+  "lastUpdate": "2026-08-05",
   "cutoffDate": "2026-02-05",
-  "totalItems": 179,
+  "totalItems": 180,
   "items": [
+    {
+      "date": "2026-08-05",
+      "company": "ai2.work",
+      "title": "🌍 三巨头 EDA 智能体从「Copilot 副驾」走向「Autonomy 自主」——Synopsys×Microsoft×AMD（Microsoft Discovery 自主工作流，debug closure -25~40%）/ Cadence AuraStack 超级智能体平台 / Siemens Fuse EDA AI Agent 三条自主化路线全景",
+      "link": "https://ai2.work/",
+      "keywords": [
+        "ai2.work",
+        "EDA 智能体",
+        "Copilot",
+        "Autonomy",
+        "自主闭环",
+        "Synopsys",
+        "Microsoft Discovery",
+        "Cadence AuraStack",
+        "Siemens Fuse",
+        "2026-08-05"
+      ]
+    },
     {
       "date": "2026-08-03",
       "company": "icinfra.cn",

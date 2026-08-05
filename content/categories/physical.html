@@ -7,9 +7,67 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（51篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（54篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2608.03285 Fovea: Physical-Implication-Aware Wafer-Scale DSE -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2608.03285 · cs.AR · 2026-08-04 · Jinxi Li, Huizheng Wang, Jinyi Deng, Yang Hu, Shouyi Yin
+        </div>
+        <div class="abs-title">Fovea：物理含义感知的晶圆级设计空间探索——决策域引导的跨保真度精炼，端到端加速 4.13×（最大 7.80×）</div>
+        <div class="abs-body">
+          <p>晶圆级（wafer-scale）加速器把海量计算单元集成到单一芯片，其 DSE 需在"架构决策"与"物理实现（布局、热、功耗、良率）"间反复权衡；传统 DSE 要么低保真导致物理含义失真，要么高保真导致搜索成本爆炸。Fovea 提出<strong>物理含义感知的晶圆级 DSE</strong>，核心是<strong>决策域引导的跨保真度精炼</strong>：先在决策域上定位对物理指标最敏感的参数，再针对性提升局部保真度，避免对全空间无差别做昂贵高保真评估。在 70/70 对晶圆级设计对上恢复出最优解，<strong>端到端加速 4.13×（最大 7.80×）</strong>，显著优于均匀保真度与朴素贝叶斯优化基线。核心创新：把"物理实现含义"显式注入 DSE 决策空间，用"决策域引导而非参数域盲目采样"分配保真度预算——延续本站物理设计（布局/热/功耗/良率协同）与"智慧体/搜索驱动的 DSE"主线，专门针对晶圆级超高复杂度场景。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2608.03285" target="_blank">📄 arXiv</a>
+          <a class="local" href="../dates/2608.03285_Fovea.pdf">📥 本地PDF</a>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">晶圆级</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">设计空间探索</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">跨保真度</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">热/功耗/良率</span>
+        </div>
+    </div>
+    <!-- 2608.03778 DiffPower: GPU-Accelerated Differentiable Switching Power Analysis and Optimization -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2608.03778 · cs.AR / cs.DC · 2026-08-04 · Isaac Jacobson, Zheng Zhao, Rashmi Mehrotra, Guanglei Zhou, Vineet Rashingkar, Yiran Chen
+        </div>
+        <div class="abs-title">DiffPower：GPU 加速的可微开关功耗分析与优化——1002× 加速、toggle-rate 相关性 r=0.96、梯度单元面积 2.98×、power virus 2.13×</div>
+        <div class="abs-body">
+          <p>开关功耗是先进节点下的主导功耗成分，但精确开关活动分析（toggle-rate 传播）传统上慢且不可微，难以嵌入梯度优化。DiffPower 提出<strong>GPU 加速的可微开关功耗分析</strong>：把 toggle-rate 传播与功耗估算写成可在 GPU 上并行、可反传的形式，使"功耗"成为可被梯度下降直接优化的目标。<strong>关键结果</strong>：相对主流工具 <strong>1002× 加速</strong>；与黄金参考的 toggle-rate 相关性 <strong>r=0.96</strong>；所得梯度使单元面积相对无梯度基线缩小 <strong>2.98×</strong>；在 power virus 搜索上找到高出 <strong>2.13×</strong> 的峰值功耗。这意味着布局后局部重综合/缓冲插入可在"功耗梯度"指导下进行，不必反复调用昂贵签核级功耗分析。核心创新：把"可微功耗"带入 GPU 并行优化回路——延续本站物理设计（布局功耗 / 梯度优化 / PPA）主线，补齐"开关活动可微化"这一关键拼图。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2608.03778" target="_blank">📄 arXiv</a>
+          <span style="color:#94a3b8;font-size:.75rem;">📥 本地PDF 待补</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开关功耗</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">可微优化</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">GPU加速</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">PPA</span>
+        </div>
+    </div>
+    <!-- 2608.01946 LEAP: Self-Supervised Per-Cycle Toggle Propagation Model for Layout Power (DAC 2026) -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2608.01946 · cs.AR · DAC 2026 录用 · DOI 10.1145/3770743.3804061 · Wenkai Li, Yuchao Wu, Ziyan Guo, Yao Lu, Wenji Fang, Mengming Li, Zhiyao Xie（HKUST）
+        </div>
+        <div class="abs-title">LEAP：面向布局功耗的自监督逐周期 toggle 传播模型——7.6× 加速、PR-AUC 0.99、LEAP-Power MAPE 4.55%、比基线快 5.3×</div>
+        <div class="abs-body">
+          <p>布局阶段精确预估功耗（尤其开关活动）对 PPA 收敛至关重要，但现有方法要么慢（门级仿真）、要么不准（纯统计估算）。LEAP 提出<strong>自监督的逐周期 toggle 传播模型</strong>：从已有仿真数据自监督学习"信号在每个周期如何翻转并沿网表传播"，无需昂贵人工标注即可预测布局阶段逐周期开关活动，进而估算布局功耗。<strong>关键结果</strong>：相对黄金参考 <strong>7.6× 加速</strong>；异常翻转检测 PR-AUC <strong>0.99</strong>；功耗模型 <strong>LEAP-Power</strong> 的 MAPE 仅 <strong>4.55%</strong>，且比基线快 <strong>5.3×</strong>。这把"布局功耗"变成布局引擎可实时调用的快速反馈信号。核心创新：用<strong>自监督逐周期建模</strong>替代"标注昂贵 + 慢速仿真"的功耗估算范式——延续本站物理设计（布局功耗 / RTL-Sequencer 时序 / 梯度功耗）主线，已 DAC 2026 录用，对功耗感知 P&R 与早期 DSE 有直接工程价值。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2608.01946" target="_blank">📄 arXiv</a>
+          <span style="color:#94a3b8;font-size:.75rem;">📥 本地PDF 待补</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局功耗</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">自监督</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">toggle传播</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">DAC 2026</span>
+        </div>
+    </div>
+
     <!-- 2607.24998 VPR-Evolve: Multi-Agent-Driven Algorithm Evolution for FPGA Place and Route -->
     <div class="abs-card">
         <div class="abs-meta">

@@ -7,9 +7,49 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（71篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（73篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+    <!-- 2608.02915 LACE: LLM Aided Multi-Agent Framework for Agile RISC-V Instruction Extension -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2608.02915 · cs.AR / cs.CL / cs.SE · 2026-08-03 · Pingqing Zheng, Jiayin Qin, Fuqi Zhang, Zishen Wan, Shang Wu, Yu Cao, Caiwen Ding, Yang Katie Zhao（UMN-ZhaoLab）
+        </div>
+        <div class="abs-title">LACE：LLM 辅助的多智能体敏捷 RISC-V 指令扩展框架——pass@1 从近零跃升至 72.8%</div>
+        <div class="abs-body">
+          <p>为特定应用定制 RISC-V 自定义指令能显著提升能效，但其 RTL 实现高度依赖专家手写、既慢又易错，现有 LLM 方法在"指令语义→可综合 RTL"长链任务上几乎失效（pass@1 接近 0）。LACE 提出一个<strong>多智能体框架</strong>，把指令扩展拆成可协作的子任务（规格理解 / RTL 起草 / 验证反馈 / 迭代仲裁），借助<strong>仿真与形式反馈闭环</strong>不断修正生成的 RTL。在自定义指令基准上，<strong>pass@1 从近零提升至 72.8%</strong>，把"专家数周的手工 RTL"压缩到智能体可迭代生成量级。已开源：github.com/UMN-ZhaoLab/LACE。核心创新：把"敏捷指令扩展"从专家手工 RTL 升级为<strong>多智能体驱动的 RTL 生成-验证闭环</strong>——延续本站 RTL 生成主线（VeriRefine / VClare / ARES），并首次在"RISC-V 自定义指令"高价值子任务上给出可观 pass@1。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2608.02915" target="_blank">📄 arXiv</a>
+          <a href="https://github.com/UMN-ZhaoLab/LACE" target="_blank">🔗 GitHub</a>
+          <span style="color:#94a3b8;font-size:.75rem;">📥 本地PDF 待补</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">多智能体</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RISC-V指令扩展</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">仿真反馈闭环</span>
+        </div>
+    </div>
+    <!-- 2608.00909 FinHardBench: Can LLMs Generate Latency-Aware Hardware for Financial Computing? (COLM 2026) -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2608.00909 · cs.CL / cs.AR · COLM 2026 · 2026-08-02 · Weimin Fu, Hejia Zhang, Minghao Shao, Zeng Wang, Johann Knechtel, Ozgur Sinanoglu, Muhammad Shafique, Ramesh Karri, Xiaolong Guo
+        </div>
+        <div class="abs-title">FinHardBench：LLM 能为金融计算生成「时延感知」硬件吗？——33 金融任务 × 6 LLM × 1530+ 轮，功能正确率仅 19–61%</div>
+        <div class="abs-body">
+          <p>金融计算（风控、量化、加密）对硬件<strong>时延</strong>极度敏感，但现有 RTL 生成基准几乎不考察"时延感知"这一真实部署约束。FinHardBench 是首个面向<strong>时延感知金融硬件生成</strong>的基准：覆盖 <strong>33 个金融任务</strong>，在 <strong>6 个 LLM</strong> 上跑 <strong>1530+ 轮</strong>生成实验，系统评估 LLM 能否产出既功能正确、又满足时延目标的硬件。结果发人深省——即便最强模型，<strong>功能正确率仅 19–61%</strong>，且"时延感知"几乎普遍缺失。核心创新：把"时延"作为 RTL 生成的一等约束引入评测——延续本站 RTL 生成（VerilogEval / RTLLM）主线，首次针对<strong>金融计算</strong>这一高价值、强时延约束垂直场景给出量化缺口，标志 RTL 生成评测从"功能 pass"走向"约束感知 pass"。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2608.00909" target="_blank">📄 arXiv</a>
+          <span style="color:#94a3b8;font-size:.75rem;">📥 本地PDF 待补</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">LLM硬件生成</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时延感知</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">基准评测</span>
+        </div>
+    </div>
+
     <!-- 2607.29283 RTLCurator: Label-Efficient Data Curation for RTL Generation -->
     <div class="abs-card">
       <div class="abs-meta">

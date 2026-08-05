@@ -7,9 +7,29 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（31篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（32篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+    <!-- 2608.01045 Forbench: Symbolic Simulation Helps Make Your Testbench More Formal -->
+    <div class="abs-card">
+        <div class="abs-meta">
+          <span class="badge-new">NEW</span>
+          &nbsp;arXiv:2608.01045 · cs.AR · 2026-08-02 · Ziyi Yang, Wenbin Che, Ziyue Zheng, Guangyu Hu, Hongce Zhang
+        </div>
+        <div class="abs-title">Forbench：符号仿真助你的 testbench 更「形式化」——字级符号仿真框架 + Python 接口，加速形式验证收敛</div>
+        <div class="abs-body">
+          <p>形式验证需要把意图写成严谨的属性/断言，但工程师通常以仿真 testbench 形式表达意图，二者存在鸿沟；纯仿真覆盖不全、纯形式门槛高。Forbench 提出一个<strong>字级（word-level）符号仿真框架</strong>，用符号值驱动仿真，把 testbench 中的隐式意图<strong>提取为可形式检查的内容</strong>，从而"让 testbench 更接近形式化"。框架提供友好的 <strong>Python 接口</strong>，便于集成进现有验证流程，并给出将符号仿真结果转化为形式化属性的路径，降低形式验证的接入成本。核心创新：把"符号仿真"作为"仿真 → 形式化"的桥梁——延续本站功能验证（CircuitProver / Rtl2lean / VeriRefine / OpenFV 开源流水线）主线，补上"从 testbench 自然语义抽取可形式化约束"这一常被忽略的入口环节。</p>
+        </div>
+        <div class="abs-links">
+          <a href="https://arxiv.org/abs/2608.01045" target="_blank">📄 arXiv</a>
+          <span style="color:#94a3b8;font-size:.75rem;">📥 本地PDF 待补</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">符号仿真</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">testbench</span>
+          <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式化</span>
+          <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">断言生成</span>
+        </div>
+    </div>
+
     <!-- 2607.28877 Open-Source LLM-Driven Formal Verification: A Multi-Agent Pipeline for RTL Repair -->
     <div class="abs-card">
         <div class="abs-meta">

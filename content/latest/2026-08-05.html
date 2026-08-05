@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-05 动态</h1>
+  <p class="subtitle">共 6 篇论文 · 1 条行业动态 · 来源：arXiv（cs.AR / cs.LG / cs.CL / cs.SE） / ai2.work 博客</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- NEWS: ai2.work blog — Synopsys and Cadence Push EDA Agents From Copilot to Autonomy -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>ai2.work · 行业分析博客 · 发布 2026 早期 8 月 · 「Synopsys and Cadence Push EDA Agents From Copilot to Autonomy」</div>
+      <h4>🌍 三巨头 EDA 智能体正从「Copilot 副驾」走向「Autonomy 自主」——Synopsys×Microsoft×AMD、Cadence AuraStack、Siemens Fuse 三条自主化路线全景</h4>
+      <p>ai2.work 发布深度行业分析，系统梳理 EDA 智能体从"人类在环的 Copilot"向"自主闭环的 Autonomy"演进的最新态势：<br>
+        <strong>① Synopsys——把智能体接到 Microsoft Discovery 与 NVIDIA 上</strong>：Synopsys×Microsoft×AMD 已跑通首个运行在 <strong>Microsoft Discovery</strong> 上的自主 EDA 工作流，debug closure 周期降 25–40%；Synopsys×NVIDIA 则给出验证 50× / AMS 3× / 热 CAE 自治的全自主工程智能体，把"多工具链式编排"升级为"无人值守的工程闭环"。<br>
+        <strong>② Cadence——AuraStack 超级智能体平台</strong>：AuraStack 把 ChipStack / ViraStack / InnoStack 统一到"硅到系统"的设计智能体平台，并以 NVIDIA Blackwell / CUDA-X 加速，宣称 2× 上市时间、15× 生产力、20× 多物理场（Millennium M2000）；AuraStack AI Super Agent 已是业界首个 PCB 与先进封装智能体 AI 平台。<br>
+        <strong>③ Siemens——Fuse EDA AI Agent</strong>：Fuse 把"设计—验证—签核"收敛为可由智能体编排的连续工作流，并在 DAC 2026 推出 Fuse Calibre Intelligence 与 EDA AI ROI 圆桌（Microsoft·Arm·Broadcom·NVIDIA）。<br>
+        <strong>核心判断</strong>：文章认为拐点已至——三大厂不再比拼"单点 Copilot 助手"，而是比拼"谁能把智能体从辅助推到自主、且承担相应的正确性责任"。这与本站近期收录的 Kimi K3 48 小时自主 RTL→GDS、agent-r2g 自学习 A/B 门控、Siemens 收购 Precision Innovations 收编 OpenROAD 系 AI 早期规划形成互证，标志 AI4EDA 主线从"生成辅助"正式进入"自主闭环"阶段。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">行业分析</span>
+        <span class="tag">EDA 智能体</span>
+        <span class="tag">Copilot→Autonomy</span>
+        <span class="tag">Synopsys</span>
+        <span class="tag">Cadence AuraStack</span>
+        <span class="tag">Siemens Fuse</span>
+        <span class="tag">自主闭环</span>
+      </div>
+      <a href="https://ai2.work/blog/synopsys-cadence-eda-agents-copilot-to-autonomy" target="_blank">→ ai2.work：Synopsys and Cadence Push EDA Agents From Copilot to Autonomy</a>
+    </div>
+
+    <!-- 2608.02915 LACE: LLM Aided Multi-Agent Framework for Agile RISC-V Instruction Extension -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.CL / cs.SE · 2026-08-03 · Pingqing Zheng, Jiayin Qin, Fuqi Zhang, Zishen Wan, Shang Wu, Yu Cao, Caiwen Ding, Yang Katie Zhao（UMN-ZhaoLab）</div>
+      <h4>⚡ LACE：LLM 辅助的多智能体敏捷 RISC-V 指令扩展框架——pass@1 从近零跃升至 72.8%，面向自定义指令的 RTL 敏捷生成</h4>
+      <p>为特定应用定制 RISC-V 自定义指令能显著提升能效，但其 RTL 实现高度依赖专家手写、既慢又易错，现有 LLM 方法在"指令语义→可综合 RTL"这一长链任务上几乎失效（pass@1 接近 0）。LACE 提出一个<strong>多智能体框架</strong>，把指令扩展拆成可协作的子任务：规格理解智能体、RTL 起草智能体、验证/仿真反馈智能体与迭代仲裁智能体协同，借助<strong>仿真与形式反馈闭环</strong>不断修正生成的 RTL，直到通过功能验证。在自定义指令基准上，<strong>pass@1 从近零提升至 72.8%</strong>，把"专家数周的手工 RTL"压缩到智能体可迭代生成的量级。已开源：<a href="https://github.com/UMN-ZhaoLab/LACE" target="_blank">github.com/UMN-ZhaoLab/LACE</a>。<br>
+        <strong>核心创新与价值</strong>：把"敏捷指令扩展"从专家手工 RTL 升级为<strong>多智能体驱动的 RTL 生成-验证闭环</strong>——延续本站 RTL 生成主线（VeriRefine 五层审计 / VClare 规格修复 / ARES 成本感知优化），且首次在"RISC-V 自定义指令"这一高价值子任务上给出可观的 pass@1。对想用 LLM 做领域专用指令集扩展的团队，LACE 的"子任务拆分 + 仿真反馈闭环"是可直接借鉴的方法论。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">RISC-V指令扩展</span>
+        <span class="tag">仿真反馈闭环</span>
+        <span class="tag">pass@1</span>
+        <span class="tag">开源</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.02915" target="_blank">📄 arXiv</a>
+      &nbsp;<span class="pending">📥 本地 PDF 待补（沙箱网络受限）</span>
+    </div>
+
+    <!-- 2608.03285 Fovea: Physical-Implication-Aware Wafer-Scale DSE -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-04 · Jinxi Li, Huizheng Wang, Jinyi Deng, Yang Hu, Shouyi Yin</div>
+      <h4>📐 Fovea：物理含义感知的晶圆级设计空间探索——决策域引导的跨保真度精炼，端到端加速 4.13×（最大 7.80×）</h4>
+      <p>晶圆级（wafer-scale）加速器把海量计算单元集成到单一芯片，其设计空间探索（DSE）需在"架构决策"与"物理实现（布局、热、功耗、良率）"之间反复权衡；传统 DSE 要么用低保真模型导致物理含义失真，要么用高保真仿真导致搜索成本爆炸。Fovea 提出<strong>物理含义感知（physical-implication-aware）的晶圆级 DSE</strong>，核心是<strong>决策域引导的跨保真度精炼（decision-domain-guided cross-fidelity refinement）</strong>：先在决策域上定位对物理指标最敏感的参数，再针对性地提升局部保真度，避免对全空间无差别地做昂贵高保真评估。在 70/70 对晶圆级设计对上恢复出最优解，<strong>端到端加速 4.13×（最大 7.80×）</strong>，在保真度-成本前沿上显著优于均匀保真度与朴素贝叶斯优化基线。<br>
+        <strong>核心创新与价值</strong>：把"物理实现含义"显式注入 DSE 的决策空间，用"决策域引导而非参数域盲目采样"来分配保真度预算——延续本站物理设计（布局/热/功耗/良率协同）与"智慧体/搜索驱动的 DSE"（ReviewDSE 白盒 DSE）主线，且专门针对晶圆级这一超高复杂度场景，对Cerebras/Wafer-scale AI 类加速器的设计方法论有直接参考价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">物理设计</span>
+        <span class="tag">晶圆级</span>
+        <span class="tag">设计空间探索</span>
+        <span class="tag">跨保真度</span>
+        <span class="tag">热/功耗/良率</span>
+        <span class="tag">加速</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.03285" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.03285_Fovea.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.03778 DiffPower: GPU-Accelerated Differentiable Switching Power Analysis -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.DC · 2026-08-04 · Isaac Jacobson, Zheng Zhao, Rashmi Mehrotra, Guanglei Zhou, Vineet Rashingkar, Yiran Chen</div>
+      <h4>📐 DiffPower：GPU 加速的可微开关功耗分析与优化——1002× 加速、toggle-rate 相关性 r=0.96、梯度单元面积 2.98×、power virus 2.13×</h4>
+      <p>开关功耗是先进节点下的主导功耗成分，但精确开关活动分析（toggle-rate 传播）传统上慢且不可微，难以嵌入梯度优化。DiffPower 提出<strong>GPU 加速的可微开关功耗分析</strong>：把 toggle-rate 传播与功耗估算写成可在 GPU 上并行、可反传的形式，使"功耗"成为可被梯度下降直接优化的目标。<strong>关键结果</strong>：相对主流工具 <strong>1002× 加速</strong>；与黄金参考的 toggle-rate 相关性 <strong>r=0.96</strong>；所得梯度使单元面积相对无梯度基线缩小 <strong>2.98×</strong>（更紧的面积-功耗权衡）；在 power virus（最坏功耗模式）搜索上找到高出 <strong>2.13×</strong> 的峰值功耗。这意味着布局后的局部重综合/缓冲插入可以在"功耗梯度"指导下进行，而不必反复调用昂贵的签核级功耗分析。<br>
+        <strong>核心创新与价值</strong>：把"可微功耗"带入 GPU 并行优化回路——延续本站物理设计（布局功耗 / 梯度优化 / PPA）主线（LEAP 布局功耗、ARES RTL PPA 优化），补齐了"开关活动可微化"这一关键拼图，对 leakage/switching 混合目标下的梯度驱动 EDA 优化具有基础工具价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">物理设计</span>
+        <span class="tag">开关功耗</span>
+        <span class="tag">可微优化</span>
+        <span class="tag">GPU加速</span>
+        <span class="tag">toggle-rate</span>
+        <span class="tag">PPA</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.03778" target="_blank">📄 arXiv</a>
+      &nbsp;<span class="pending">📥 本地 PDF 待补（沙箱网络受限）</span>
+    </div>
+
+    <!-- 2608.01946 LEAP: Self-Supervised Per-Cycle Toggle Propagation for Layout Power (DAC 2026) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · DAC 2026 录用 · DOI 10.1145/3770743.3804061 · Wenkai Li, Yuchao Wu, Ziyan Guo, Yao Lu, Wenji Fang, Mengming Li, Zhiyao Xie（HKUST）</div>
+      <h4>📐 LEAP：面向布局功耗的自监督逐周期 toggle 传播模型——7.6× 加速、PR-AUC 0.99、LEAP-Power MAPE 4.55%、比基线快 5.3×</h4>
+      <p>布局阶段精确预估功耗（尤其开关活动）对 PPA 收敛至关重要，但现有方法要么慢（门级仿真）、要么不准（纯统计估算）。LEAP 提出<strong>自监督的逐周期 toggle 传播模型</strong>：从已有仿真数据中自监督学习"信号在每个周期如何翻转并沿网表传播"，无需昂贵的人工标注即可预测布局阶段的逐周期开关活动，进而估算布局功耗。<strong>关键结果</strong>：相对黄金参考 <strong>7.6× 加速</strong>；异常翻转检测 PR-AUC 达 <strong>0.99</strong>；其功耗模型 <strong>LEAP-Power</strong> 的 MAPE 仅 <strong>4.55%</strong>，且比基线方法快 <strong>5.3×</strong>。这把"布局功耗"变成布局引擎可实时调用的快速反馈信号，支撑功耗感知布局。<br>
+        <strong>核心创新与价值</strong>：用<strong>自监督逐周期建模</strong>替代"标注昂贵 + 慢速仿真"的功耗估算范式——延续本站物理设计（布局功耗 / RTL-Sequencer 时序 / 梯度功耗）主线，且已 DAC 2026 录用，是 HKUST Zhiyao Xie 组在"物理设计快速可微/可学习的 PPA 代理模型"方向上的延续，对功耗感知 P&R 与早期 DSE 有直接工程价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">物理设计</span>
+        <span class="tag">布局功耗</span>
+        <span class="tag">自监督</span>
+        <span class="tag">toggle传播</span>
+        <span class="tag">DAC 2026</span>
+        <span class="tag">PPA代理模型</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.01946" target="_blank">📄 arXiv</a>
+      &nbsp;<span class="pending">📥 本地 PDF 待补（沙箱网络受限）</span>
+    </div>
+
+    <!-- 2608.01045 Forbench: Symbolic Simulation Helps Make Your Testbench More Formal -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-02 · Ziyi Yang, Wenbin Che, Ziyue Zheng, Guangyu Hu, Hongce Zhang</div>
+      <h4>✅ Forbench：符号仿真助你的 testbench 更「形式化」——字级符号仿真框架 + Python 接口，加速形式验证收敛</h4>
+      <p>形式验证需要把意图写成严谨的属性/断言，但工程师通常以仿真 testbench 形式表达意图，二者之间存在鸿沟；纯仿真覆盖不全、纯形式门槛高。Forbench 提出一个<strong>字级（word-level）符号仿真框架</strong>，用符号值驱动仿真，把 testbench 中的隐式意图<strong>提取为可形式检查的内容</strong>，从而"让 testbench 更接近形式化"。框架提供友好的 <strong>Python 接口</strong>，便于集成进现有验证流程，并给出将符号仿真结果转化为形式化属性的路径，降低形式验证的接入成本。<br>
+        <strong>核心创新与价值</strong>：把"符号仿真"作为"仿真 → 形式化"的桥梁——延续本站功能验证（CircuitProver / Rtl2lean / VeriRefine / OpenFV 开源流水线）主线，补上"从 testbench 自然语义抽取可形式化约束"这一常被忽略的入口环节，对希望逐步从仿真走向形式保证、又不想一次性重写属性的团队尤其实用。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">功能验证</span>
+        <span class="tag">符号仿真</span>
+        <span class="tag">testbench</span>
+        <span class="tag">形式化</span>
+        <span class="tag">Python接口</span>
+        <span class="tag">断言生成</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.01045" target="_blank">📄 arXiv</a>
+      &nbsp;<span class="pending">📥 本地 PDF 待补（沙箱网络受限）</span>
+    </div>
+
+    <!-- 2608.00909 FinHardBench: Can LLMs Generate Latency-Aware Hardware for Financial Computing? (COLM 2026) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.CL / cs.AR · COLM 2026 · Weimin Fu, Hejia Zhang, Minghao Shao, Zeng Wang, Johann Knechtel, Ozgur Sinanoglu, Muhammad Shafique, Ramesh Karri, Xiaolong Guo</div>
+      <h4>⚡ FinHardBench：LLM 能为金融计算生成「时延感知」硬件吗？——33 金融任务 × 6 LLM × 1530+ 轮，功能正确率仅 19–61%</h4>
+      <p>金融计算（风控、量化、加密）对硬件<strong>时延</strong>极度敏感，但现有 RTL 生成基准几乎不考察"时延感知"这一真实部署约束。FinHardBench 是首个面向<strong>时延感知金融硬件生成</strong>的基准：覆盖 <strong>33 个金融任务</strong>，在 <strong>6 个 LLM</strong> 上跑了 <strong>1530+ 轮</strong>生成实验，系统评估 LLM 能否产出既功能正确、又满足时延目标的硬件。结果发人深省——即便最强模型，<strong>功能正确率也仅落在 19–61%</strong>，且"时延感知"几乎普遍缺失：模型要么生成错误功能、要么忽略时延约束。<br>
+        <strong>核心创新与价值</strong>：把"时延"作为 RTL 生成的一等约束引入评测——延续本站 RTL 生成（VerilogEval / RTLLM / FinHardBench 类任务基准）主线，且首次针对<strong>金融计算</strong>这一高价值、强时延约束的垂直场景给出量化缺口。对 LLM 硬件生成研究而言，它划出了"能写对"与"能写快"之间的真实差距，是 RTL 生成评测从"功能 pass"走向"约束感知 pass"的重要一步。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">LLM硬件生成</span>
+        <span class="tag">时延感知</span>
+        <span class="tag">金融计算</span>
+        <span class="tag">基准评测</span>
+        <span class="tag">COLM 2026</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.00909" target="_blank">📄 arXiv</a>
+      &nbsp;<span class="pending">📥 本地 PDF 待补（沙箱网络受限）</span>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
