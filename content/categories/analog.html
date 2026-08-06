@@ -7,9 +7,41 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（28篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（30篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+    <div class="abs-card">
+          <span class="badge-new">NEW</span>
+          <div class="abs-title">🔬 Chat Debugging：人与 AI 协作调试模拟电路的开创性研究——面包板/PCB 上的 LLM 辅助排障</div>
+          <div class="abs-meta">arXiv:2608.02955 · cs.HC / cs.AI · 2026-08-03 · John Hu, Andrew Ash</div>
+          <div class="abs-body">本研究对「Chat Debugging」（本科生通过与公开领域 LLM 对话，排查面包板与 PCB 上预置故障的模拟电路）做探索性研究。通过对学生在考试与时间压力下调试既定故障电路时自愿分享的聊天记录做主题分析，发现学生<strong>多模态使用模式</strong>，以及现成 LLM 提供的可观领域知识与合理调试建议；同时也识别出人-AI 协作调试中的主要鸿沟：LLM 在 2D/3D 图像推理上的局限、过度自信的不当语气，以及学生在基础概念与批判性思维上的欠缺。这是 AI 辅助模拟电路调试（教育/工程场景）的实证基线，对「如何把 LLM 接进模拟/硬件调试回路」具有直接参考价值。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2608.02955" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2608.02955_ChatDebugging.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">模拟电路调试</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">人机协作</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">LLM</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">教育</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">FIE 2026</span>
+          </div>
+    </div>
+    <div class="abs-card">
+          <span class="badge-new">NEW</span>
+          <div class="abs-title">📐 机器学习排序在现代微架构策略上的局限——当排序结果依赖隐藏的微架构状态时，没有模型稳定胜过随机</div>
+          <div class="abs-meta">arXiv:2608.01041 · cs.AR / cs.LG · 2026-08-02 · Yanxin Zhang, Shayne Wadle, Yuxuan Xiong, Zheyu Fu, Trivikram Krishnamurthy, Karu Sankaralingam</div>
+          <div class="abs-body">ML 预测器比周期级仿真快得多地估计处理器性能。但在设计空间探索（DSE）中，有价值的检验不是复现通常的硬件排序，而是识别不同硬件配置在单个程序阶段上如何排序。本文在两种设计体制下评估四种 ML 预测器：<strong>结构参数（SP）</strong>体制（issue width、ROB size、cache capacity 等）与<strong>行为策略（BP）</strong>体制（预取与替换算法）。在 SP 体制下，聚合排序强，但「反直觉窗口（CIW，预期更慢的配置反而更快）」占五个具明确架构先验配对中非平局窗口的 22.4%，跨配对 CIW 匹配仅 23.3–39.9%，均低于 50% 随机严格排序参考；BP 体制则是另一种失败：真实平局占配对窗口 37.8%，多数严格配对仅差几个周期，没有模型族稳定胜过无特征多数基线（NeuroScalar、SimNet 低于基线，Concorde 与之统计持平，最佳 OneDSE 头仅 +2.1 个百分点）。信息论分析进一步表明该失败并非模型容量问题，而是排序结果依赖隐藏的微架构状态。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2608.01041" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2608.01041_MLRankLimits.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">微架构策略</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">机器学习排序</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">设计空间探索</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">预测器局限</span>
+          </div>
+    </div>
+
     <!-- 2607.29076 Selective KV Cache Protection for Noise-Resilient LLM Inference on Analog Compute-In-Memory Systems -->
     <div class="abs-card">
       <div class="abs-meta">

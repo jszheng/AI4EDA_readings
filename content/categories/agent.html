@@ -7,9 +7,43 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（30篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（32篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+    <div class="abs-card">
+          <span class="badge-new">NEW</span>
+          <div class="abs-title">⚡ VeriTrace：类人的时序探索补全智能体动作空间——首个在 VerilogEval-V2 上达成 100% Pass@1 的多智能体 RTL 调试系统</div>
+          <div class="abs-meta">arXiv:2608.02878 · cs.AI · 2026-08-03 · Yu-Tung Liu, Cunxi Yu</div>
+          <div class="abs-body">现有 LLM 多智能体 RTL 生成系统在标准基准上卡在 ~95% 准确率天花板。VeriTrace 把这一瓶颈追溯到「不完整的调试动作空间」——现有系统限制了智能体可观察的信号、可查询的时间窗或二者，使调试退化为对电路行为的狭窄、预定视图做模式匹配，而非假设驱动的根因分析。VeriTrace 提出一个多智能体系统，其 Inspector 智能体在<strong>完整的调试动作空间</strong>上运作，独立控制信号选择、时间窗边界与迭代深度（即「智能体时序探索」Agentic Temporal Exploration），能形成失败原因假设、查询波形取证、迭代精炼理解，镜像人类验证工程师的探索过程。结果：<strong>VeriTrace 在 VerilogEval-V2 上达成 100% Pass@1，是首个在该基准上取得完美功能正确性的系统</strong>；在共享 Claude Sonnet 4.0 基座上，比最强复现基线高 +5.1%，证明「调试能动性」填补了最后几分的准确率缺口。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2608.02878" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2608.02878_VeriTrace.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">多智能体</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">调试动作空间</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">时序探索</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VerilogEval-V2</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">Pass@1</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ICLAD 2026</span>
+          </div>
+    </div>
+    <div class="abs-card">
+          <span class="badge-new">NEW</span>
+          <div class="abs-title">🤖 Zomboss：为新兴加速器重构智能体式 kernel 生成——把神经搜索锁进经验证的编译器边界</div>
+          <div class="abs-meta">arXiv:2608.00894 · cs.AR · 2026-08-01 · Ruijie Gao, Jirong Yang, Barry Lyu, Haoran Jin, Nathan Bleier</div>
+          <div class="abs-body">新兴加速器常缺乏成熟的编译器后端，催生了「从架构文档 + 仿真反馈生成并修复 kernel」的神经智能体；但这类方法对每个工作负载都重复重建与负载无关的机器语义（指令行为、合法性约束、同步规则、内存协议）。Zomboss 主张把这些语义<strong>一次性编译为持久的符号化产物</strong>，让神经推理只聚焦负载相关的映射决策。Zomboss 是一个<strong>编译器中介的智能体式 kernel 生成框架</strong>：先把机器语义与合法性约束编译为可复用的映射接口，再用神经智能体在已验证的映射空间内优化负载相关决策。在 20 个 Gemmini + 36 个 PLENA 工作负载实例上，Zomboss 在全部 56 个实例上返回经验证的正确 kernel；相对编译器默认，Gemmini 上几何均值加速 3.34×、PLENA 上 1.10×；相对直接智能体式生成，推理 token 在 Gemmini 上减少 71.2%、PLENA 上 54.2%。这表明：编译器定义的符号接口把「原生 kernel 合成」变成了经验证的设计空间探索。</div>
+          <div class="abs-links">
+            <a href="https://arxiv.org/abs/2608.00894" target="_blank">📄 arXiv</a>
+            <a class="local" href="../dates/2608.00894_Zomboss.pdf">📥 本地PDF</a>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">智能体式kernel生成</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">编译器中介</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">加速器</span>
+            <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Gemmini/PLENA</span>
+            <span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">设计空间探索</span>
+          </div>
+    </div>
+
     <div class="abs-card">
           <span class="badge-new">NEW</span>
           <div class="abs-title">CLOSER-Bench：面向硬件 Agent 的预算化跨阶段设计收敛评测</div>

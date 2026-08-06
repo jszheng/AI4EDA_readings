@@ -1,8 +1,39 @@
 {
-  "lastUpdate": "2026-08-05",
+  "lastUpdate": "2026-08-06",
   "cutoffDate": "2026-02-05",
-  "totalItems": 180,
+  "totalItems": 183,
   "items": [
+    {
+      "date": "2026-08-06",
+      "company": "联电 UMC / Synopsys",
+      "title": "🏭 联电携手 Synopsys 加速 14nm 制程客制化设计——Custom Compiler + Laker iPDK 赋能 FinFET 布局",
+      "link": "https://www.kotoo.com/k41462",
+      "keywords": [
+        "联电",
+        "UMC",
+        "Synopsys",
+        "14nm",
+        "FinFET",
+        "Custom Compiler",
+        "iPDK",
+        "客制化设计",
+        "2026-08-06"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "company": "Synopsys / Intel",
+      "title": "🤝 Intel 选定 Synopsys 为首要 EDA 供应商——多年期商业与技术合作协议（先进设计流程深度协作）",
+      "link": "https://news.synopsys.com/index.php?s=20295&item=122371",
+      "keywords": [
+        "Synopsys",
+        "Intel",
+        "首要EDA供应商",
+        "primary EDA supplier",
+        "多年期协议",
+        "2026-08-06"
+      ]
+    },
     {
       "date": "2026-08-05",
       "company": "ai2.work",
@@ -18,6 +49,25 @@
         "Microsoft Discovery",
         "Cadence AuraStack",
         "Siemens Fuse",
+        "2026-08-05"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "company": "CaretEDA",
+      "title": "🟢 CaretEDA 发布商业化端到端开源 EDA 工具栈（仿真 / 逻辑综合 / 形式验证 / 物理综合）+ Startup Program，把开源栈带上生产级 SLA；Spec-to-Netlist™ 进入客户试用、Agentic Modules 开放给早期芯片公司",
+      "link": "https://careteda.com/news/dac-2026",
+      "keywords": [
+        "CaretEDA",
+        "开源 EDA",
+        "端到端工具栈",
+        "仿真",
+        "逻辑综合",
+        "形式验证",
+        "物理综合",
+        "Spec-to-Netlist",
+        "Startup Program",
+        "Agentic Modules",
         "2026-08-05"
       ]
     },

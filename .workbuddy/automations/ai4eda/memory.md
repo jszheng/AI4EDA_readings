@@ -1076,3 +1076,20 @@
 - 一致性全绿：news_memory 173 == news header 173 == manifest.news 173；dates/latest[] 含 2026-07-31（count 1）。
 - Git：commit "auto update: 2026-07-31" + push origin/main。
 - 下次注意：DAC 后平静期优先核查已知候选是否入库；中文厂商新闻（cnstock/163）需人工核对去重，避免与旧条目混淆。
+## 2026-08-05 执行摘要（续跑 — 续 08-04 中断轮次）
+
+- **状态**：⚠️ 页面与清单已全量更新并本地提交（61c52b9）；**git push 被沙箱出口代理阻断**（连接被未知端口 65535 reset，与 arXiv 二进制下载同因），重试多次仍失败，待网络恢复后重试。PDF 下载同样受此阻断，仅 Fovea 借后台重试窗口落地。
+- **新增论文 6 篇**（均 2608 系列，站内首见）：
+  - ⚡ RTL×2 — LACE（2608.02915，UMN-ZhaoLab，多智能体 RISC-V 指令扩展，pass@1 近零→72.8%，已开源）；FinHardBench（2608.00909，COLM 2026，金融计算时延感知硬件生成基准，33 任务×6 LLM×1530+ 轮，功能正确率 19–61%）。
+  - 📐 Physical×3 — Fovea（2608.03285，晶圆级 DSE，决策域引导跨保真度精炼，端到端 4.13×/最大 7.80×）；DiffPower（2608.03778，GPU 可微开关功耗，1002× 加速，r=0.96）；LEAP（2608.01946，DAC 2026，自监督逐周期 toggle 传播布局功耗，7.6×/PR-AUC 0.99/MAPE 4.55%）。
+  - ✅ Verify×1 — Forbench（2608.01045，字级符号仿真让 testbench 更"形式化"，Python 接口）。
+- **新增行业动态 1 条**（去重判定 NEW）：ai2.work 博客「Synopsys and Cadence Push EDA Agents From Copilot to Autonomy」——三巨头 EDA 智能体从 Copilot 走向 Autonomy 全景（Synopsys×Microsoft×AMD / Cadence AuraStack / Siemens Fuse）。
+- **PDF 落地状态**：仅 **Fovea（1.78 MB，%PDF- 校验通过）** 成功下载并接入 date/latest/physical 三页本地链接；其余 5 篇标注「待补」。沙箱出口对 arXiv 二进制持续返回 000/连接重置，后台重试进程（沿用本站精确命名）间歇性可落地，LACE 曾短暂落地 1.15 MB 但本轮被误删占位文件，后续可由后台重抓 + 下次运行接线。
+- **计数（终态）**：manifest papers 242→248、news 179→180、lastUpdate 2026-08-05；分类头 RTL 71→73 / Physical 51→54 / Verify 31→32；news_memory totalItems 179→180（置顶 ai2.work）。
+- **产物**：content/dates/2026-08-05.html（7 卡：1 新闻+6 论文，含 Fovea 本地 PDF）、content/latest/2026-08-05.html、content/dates/2608.03285_Fovea.pdf、content/categories/{rtl,physical,verify}.html（+卡）、content/news/index.html（+08-05 section+nav+统计 180）、content/news/news_memory.json、content/papers/index.html（→08-05）、manifest.js。
+- **一致性全绿**：news_memory 180 == news 头 180 == manifest.news 180；dates/latest[] 顶部均为 2026-08-05（dates count=7）；Fovea PDF 磁盘与三页链接一致。
+- **Git**：本地提交 61c52b9「auto update: 2026-08-05」（amend 合并 Fovea 接线）；**push origin main 失败 ×多次（沙箱出口 reset）→ 待重试**。
+- **下次注意**：① push 恢复后立即补推；② 后台重试进程落地其余 PDF 后，下次运行需把 LACE/DiffPower/LEAP/Forbench/FinHardBench 接入页面本地链接；③ 留意并发实例是否会改写 08-05 页面（本轮未见）。
+
+---
+
