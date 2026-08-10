@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-07 动态</h1>
+  <p class="subtitle">共 6 篇论文 · 3 条行业动态 · 来源：arXiv（cs.AR / cs.CR / cs.AI / eess.SY）/ 芯流智库 / GitHub（OpenROAD-MCP · vibe-IC）/ 每日经济新闻</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- NEWS: 芯华章 X-EPIC — CCF 芯片大会发布 X-IVS / X-IDS 智能验证/设计系统，提出「证据闭环」 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>芯流智库（CCF 芯片大会报道）· 行业洞察 · 发布 2026-08-05 · 「AI 会写芯片了，谁敢让它流片？」</div>
+      <h4>🇨🇳 芯华章 @ CCF 芯片大会：发布 X-IVS 智能验证系统 + X-IDS 智能设计系统，主打「证据闭环」可信 AI4EDA</h4>
+      <p>2026 年 7 月第三届中国计算机学会（CCF）芯片大会上，国产 EDA 代表企业<strong>芯华章（X-EPIC）</strong>发布 <strong>X-IVS 智能验证系统</strong>、<strong>X-IDS 智能设计系统</strong>及新一代高速仿真方案。核心主张是「<strong>证据闭环</strong>」：AI Agent 融入芯片研发流程，关键不只是提升 RTL、测试用例等内容的生成效率，而是要把大模型概率化输出转化为<strong>可证明、可核验、可追溯、可治理的签核级证据</strong>。芯华章首席科学家徐强教授强调，硅片没有「撤回键」，未来真正稀缺的是一条能回答「为什么可以相信它」的工业证据链。这一思路与本站近期收录的 Siemens Fuse（RAG+MCP+Agent Skills+recovery loops）、Chipmind RTL Canvas（双向契约界面）等「可信自主设计」方向高度呼应——国产 EDA 正从工具替代转向定义可信生成流程。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">国产EDA</span>
+        <span class="tag">芯华章X-EPIC</span>
+        <span class="tag">智能验证</span>
+        <span class="tag">证据闭环</span>
+        <span class="tag">可信AI4EDA</span>
+        <span class="tag">CCF芯片大会</span>
+      </div>
+      <a href="https://www.163.com/dy/article/L3JONEJV05560IU8.html" target="_blank">→ 芯流智库：AI 会写芯片了，谁敢让它流片？</a>
+    </div>
+
+    <!-- NEWS: OpenROAD-MCP v1.0 — TypeScript-first MCP server for OpenROAD -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · The-OpenROAD-Project/OpenROAD-MCP · 开源更新 · 2026-08-06 · v1.0（TypeScript primary）</div>
+      <h4>🟢 OpenROAD-MCP 发布 v1.0：OpenROAD 官方 MCP 服务器切换 TypeScript 主线，npx 一键接入 10 个工具</h4>
+      <p>The-OpenROAD-Project 旗下的 <strong>OpenROAD-MCP</strong>（Model Context Protocol 服务器）在 8/6 密集完成 <strong>v1.0 TypeScript 化主线切换</strong>（#161 Chore/v1.0 ts primary），正式弃用 Python/PyPI 分发、以 <code>npx</code> 为首选安装方式，并配套修复 2 个依赖安全更新（cryptography 50.0.0、ip-address 10.4.0）。服务器固定提供 <strong>10 个 MCP 工具</strong>（zod schema 注册、冒烟测试断言），安全模型区分 query（只读）与 exec（执行），含命令白名单、路径遍历防护、PTY 进程隔离；支持 stdio 与 streamable-http 双传输，兼容 Goose / Cody / Codex CLI / GitHub Copilot CLI 等主流 MCP 客户端。这让任意 MCP 兼容 AI 智能体可通过标准协议驱动开源 RTL→GDS 布局布线工具、管理交互式会话、取回报告，是「AI Agent + 开源 EDA」落地的重要基础设施。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">开源</span>
+        <span class="tag">OpenROAD-MCP</span>
+        <span class="tag">MCP</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">智能体基础设施</span>
+        <span class="tag">RTL→GDS</span>
+      </div>
+      <a href="https://github.com/The-OpenROAD-Project/OpenROAD-MCP" target="_blank">→ GitHub：The-OpenROAD-Project/OpenROAD-MCP</a>
+    </div>
+
+    <!-- NEWS: Anthropic 自研 Claude 专用 AI 芯片 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>每日经济新闻 / ZOL · 行业新闻 · 发布 2026-08-06 · 「Anthropic 入局自研 AI 芯片」</div>
+      <h4>🚀 Anthropic 官宣组建内部半导体团队、自研 Claude 专用 AI 芯片——大模型厂商掀「软硬协同」造芯潮</h4>
+      <p>2026-08-06，AI 初创公司 <strong>Anthropic</strong> 首次对外确认将组建专属内部团队，为旗下 Claude 大模型研发定制化 AI 芯片，正式启动自研芯片计划，通过软硬件协同设计缓解算力瓶颈。公司强调坚持「多芯片策略」，AWS、Google、NVIDIA、AMD 硬件仍是其算力核心。此前 OpenAI 已公布自研芯片、Mistral 亦在考虑，Google 等云厂商同样发力定制芯片。这一趋势意味着<strong>大模型厂商正成为新兴的芯片设计需求方</strong>，对 EDA 工具链（从 RTL 生成、验证到签核）与 AI4EDA 能力的拉动将长期持续——AI 设计 AI 芯片，正从口号走向实际研发投入。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">行业动态</span>
+        <span class="tag">Anthropic</span>
+        <span class="tag">自研芯片</span>
+        <span class="tag">软硬协同</span>
+        <span class="tag">算力</span>
+        <span class="tag">EDA需求拉动</span>
+      </div>
+      <a href="https://www.nbd.com.cn/articles/2026-08-06/4533794.html" target="_blank">→ 每日经济新闻：Anthropic 入局自研 AI 芯片</a>
+    </div>
+
+    <!-- 2608.04032 EDATracer: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI / cs.MA · 2026-08-02 · Phat Tieu, Sayanti Jana, Matthew DeLorenzo, Jiawen Wu, Narendran Srinivasan, Srinivas Shakkottai, Jiang Hu, Jeyavijayan Rajendran（arXiv 预印本）</div>
+      <h4>🤖 EDATracer：面向大规模 EDA 工件分析的证据锚定智能体框架——知识图谱 + 语义向量索引，18.9GB / 2,787 开源设计基准</h4>
+      <p>现代芯片设计依赖 EDA 工具产生海量异构工件（源文件、脚本、日志、网表、报告），其分析对调试、优化与流程理解至关重要，但相关证据常分散于多种工件类型与设计阶段，LLM 智能体也缺乏公开的大规模跨工件分析基准。EDATracer 提出一个<strong>证据锚定（evidence-grounded）的 EDA 工件分析智能体框架</strong>：把设计工件组织为「知识图谱 + 语义向量索引」，让 LLM 智能体跨源文件、日志、网表、报告检索证据。作者整理出 <strong>18.9 GB、2,787 个可综合开源芯片设计</strong>数据集，并引入涵盖事实 / 统计 / 推理三类任务的 90 题基准。在受评智能体中，EDATracer 取得最佳 pass@1 准确率，平均比 Cursor、Claude Code 分别高 6.4 与 7.2 个百分点，同时少用 2.0–3.2× token。这是「AI Agent + 开源 EDA」落地的重要基础设施级工作。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI Agent</span>
+        <span class="tag">工件分析</span>
+        <span class="tag">知识图谱</span>
+        <span class="tag">证据锚定</span>
+        <span class="tag">基准评测</span>
+        <span class="tag">开源设计语料</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.04032" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.04032_EDATracer.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.05055 PDMarks: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.CR / cs.AR · 2026-08-05 · Andrew B. Kahng, Yiting Liu（arXiv 预印本）</div>
+      <h4>🔐 PDMarks：Kerckhoffs 合规的物理设计 IP 水印框架——贯穿布局/CTS/布线，已集成 OpenROAD-flow-scripts</h4>
+      <p>物理设计（PD）IP 是现代 VLSI 实现的关键资产，含经调优的单元布局、时钟树与布线决策；随 PD 工具普及，未授权复用已布局布线数据库的风险上升。现有 PD 水印要么只保护单一阶段、要么依赖隐藏构造细节，难以抵御白盒对手。本文提出 <strong>PDMarks</strong>：一个安全性仅依赖密钥的 Kerckhoffs 合规水印框架，将所有权证据嵌入 PD 流程的<strong>多个阶段</strong>（布局、时钟树综合 CTS、布线），所有水印实例与目标值均通过 HMAC-SHA256 由 32 字节密钥确定性派生，保证嵌入与验证一致。PDMarks 已<strong>集成进 OpenROAD-flow-scripts</strong>；在 NanGate45 与 ASAP7 设计上，其所有权证据显著强于既有方法，PPA 开销相当或更小，全阶段联合重合概率低于 10⁻³²，错误密钥无法复现完整所有权证明。这是开源 EDA 流程 IP 保护的高水位工作。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">物理设计</span>
+        <span class="tag">IP保护</span>
+        <span class="tag">水印</span>
+        <span class="tag">OpenROAD</span>
+        <span class="tag">Kerckhoffs合规</span>
+        <span class="tag">密钥派生</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.05055" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.05055_PDMarks.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.04907 VerilogCWERepair: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.CR / cs.AR · 2026-08-05 · Ethen Santana, Gabriel Gyaase, Hao Zheng（arXiv 预印本，技术报告）</div>
+      <h4>🛡️ LLM 辅助检测并修复 Verilog 设计中的硬件安全漏洞——基于 CWE 框架的迭代式弱点识别</h4>
+      <p>硬件设计如同软件，易受可能引入安全漏洞、遭恶意利用的 bug 影响；但不同于软件漏洞，硬件缺陷一旦流片便永久固化于硅片，难以修补。许多此类弱点归属于 <strong>CWE（Common Weakness Enumeration）</strong>框架，如不当访问控制、敏感信息泄露、非预期权限提升。本文提出一种方法论，利用 <strong>LLM 直接从 Verilog 设计识别潜在硬件 CWE</strong>，并在单模块 Verilog 设计数据集上迭代评估其检测有效性。结果表明：LLM 有潜力增强传统硬件安全分析，在设计过程中提供自动化、可扩展的漏洞识别辅助。这是「LLM + 硬件安全」「RTL 验证反馈闭环」方向的直接进展，与本站收录的 LLMs for Secure Hardware Design 综述、OpenFV-RTLRepair 等形成互补。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">硬件安全</span>
+        <span class="tag">CWE</span>
+        <span class="tag">漏洞检测修复</span>
+        <span class="tag">LLM</span>
+        <span class="tag">验证闭环</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.04907" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.04907_VerilogCWERepair.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.05063 ChipletLLMSecurity: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.CR / cs.AI / cs.AR · 2026-08-05 · Johann Knechtel, Ozgur Sinanoglu, Paul V. Gratz, Ramesh Karri（arXiv 预印本）</div>
+      <h4>🧩 Chiplet 与 LLM 时代的硬件设计与安全——统一分析 2.5D 系统攻击面 + LLM 驱动 EDA 流水线的原生威胁</h4>
+      <p>半导体行业正经历双重革命：向异构 2.5D 芯粒（chiplet）系统的迁移，以及 LLM 融入 EDA 流程。二者虽带来良率、模块化与设计生产力的跃升，却也<strong>剧烈扩张了硬件攻击面</strong>。本文提供对这些前沿的统一分析：从针对 chiplet 系统（含 LLM 加速硬件栈）横跨架构 / 逻辑 / 物理层的攻击，到多种针对 LLM 驱动 EDA 流水线的利用。为守护 chiplet 系统，作者综述了利用 <strong>2.5D 拆分制造（split manufacturing）+ 有源中介层（active interposer）</strong>构建物理隔离信任根（RoT）的强防御方案；为守护 LLM 驱动 EDA 流水线，先识别其原生威胁，再综述前沿防御技术，并讨论 LLM 系统如何反哺现代系统（含 chiplet）的硬件安全。这是连接「Chiplet 多物理场/互连安全」与「AI4EDA 可信生成」的综述性高价值工作。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">安全与基准</span>
+        <span class="tag">Chiplet</span>
+        <span class="tag">硬件安全</span>
+        <span class="tag">LLM驱动EDA</span>
+        <span class="tag">信任根RoT</span>
+        <span class="tag">综述</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.05063" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.05063_ChipletLLMSecurity.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.04036 SymbolicTiming: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-03 · Dennis Eigner, Arman Ferdowsi, Ulrich Schmid（arXiv 预印本）</div>
+      <h4>⏱️ 面向数字集成电路符号化时序分析的符号执行框架——解析门延迟模型自动推导全路径符号延迟表达式</h4>
+      <p>基于仿真的动态时序分析（DDTA）比传统模拟 SPICE 仿真更快，但要达到有竞争力的精度，需要超越标准纯/惯性延迟模型的门延迟模型。近期解析门延迟模型已能捕捉 drafting、多输入翻转（multi-input switching）等效应，为时序分析开启超越仿真、走向穷举探索的可能。本文提出一个<strong>符号执行框架</strong>的核心构件：利用此类解析延迟模型，自动为数字电路在给定输入跳变顺序下计算所有路径的<strong>符号延迟表达式</strong>；并引入<strong>符号剪枝方法</strong>，实现路径敏感、目标驱动的时序性质推理与特定电路路径的解析优化，以抑制组合爆炸。这是时序签核/时序感知优化方向的模型层进展，与本站近期收录的 Synopsys Multiphysics Fusion「多物理场时序签核」等工业动向形成理论与工具呼应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">物理设计</span>
+        <span class="tag">时序分析</span>
+        <span class="tag">符号执行</span>
+        <span class="tag">门延迟模型</span>
+        <span class="tag">设计收敛</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.04036" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.04036_SymbolicTiming.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.04999 ORACLE: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · eess.SY / cs.AI · 2026-08-05 · Osei Brempong, Mohammed Ayman Habib, Vivan Poddar, Morteza Fayazi（arXiv 预印本）</div>
+      <h4>🎛️ ORACLE：多目标强化学习 + LLM 引导探索的模拟电路设计优化器——runtime 最高降 104×，开源</h4>
+      <p>用强化学习（RL）做模拟电路设计自动化已成减少人工投入的有力方向，但许多既有 RL 方法聚焦单目标，或把多目标简化为单一标量奖励，难以捕捉真实 Pareto 权衡，且每当目标规格变化便需从头重训。ORACLE 是一个<strong>开源的多目标模拟电路设计优化 RL 框架</strong>：用向量值学习 + 偏好感知条件（preference vector 指定多目标相对权重）替代标量奖励优化，使单一训练模型无需重训即可跨多样权衡设定生成设计；并提出归一化权重引导、余弦对齐引导两种偏好引导策略加速收敛；还引入 <strong>LLM 引导的动作选择机制</strong>，过滤可能通向次优设计或增加运行时的动作。在多个电路拓扑 2,000 个测试用例上，ORACLE 相对 SOTA 把运行时降低 20.4×–104.4×，满足 99.9% 的目标规格，输出 FOM 提升 5.1×–318.6×。这是模拟/混合信号 AI4EDA 的高价值开源贡献。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">模拟与架构</span>
+        <span class="tag">模拟电路优化</span>
+        <span class="tag">多目标RL</span>
+        <span class="tag">LLM引导</span>
+        <span class="tag">Pareto</span>
+        <span class="tag">开源</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.04999" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.04999_ORACLE.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

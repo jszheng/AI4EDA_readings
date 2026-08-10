@@ -11,6 +11,29 @@
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
     <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔐 PDMarks：Kerckhoffs 合规的物理设计 IP 水印框架——贯穿布局/CTS/布线，已集成 OpenROAD-flow-scripts</div>
+      <div class="abs-meta">arXiv:2608.05055 · cs.CR / cs.AR · 2026-08-05 · Andrew B. Kahng, Yiting Liu</div>
+      <div class="abs-body">物理设计（PD）IP 含经调优的单元布局、时钟树与布线决策；PDMarks 提出安全性仅依赖密钥的 Kerckhoffs 合规水印框架，将所有权证据嵌入 PD 流程的多个阶段（布局、CTS、布线），所有水印实例由 32 字节密钥经 HMAC-SHA256 确定性派生，保证嵌入与验证一致。已集成进 OpenROAD-flow-scripts；在 NanGate45 与 ASAP7 上所有权证据显著强于既有方法，PPA 开销相当或更小，全阶段联合重合概率低于 10⁻³²，错误密钥无法复现完整所有权证明。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.05055" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.05055.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">IP保护</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">水印</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Kerckhoffs合规</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">密钥派生</span>
+      </div>
+    </div>
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⏱️ 面向数字集成电路符号化时序分析的符号执行框架——解析门延迟模型自动推导全路径符号延迟表达式</div>
+      <div class="abs-meta">arXiv:2608.04036 · cs.AR · 2026-08-03 · Dennis Eigner, Arman Ferdowsi, Ulrich Schmid</div>
+      <div class="abs-body">基于仿真的动态时序分析（DDTA）比 SPICE 更快，但需超越标准纯/惯性延迟模型的门延迟模型才能达到竞争力。本文提出一个符号执行框架，利用可捕捉 drafting、多输入翻转等效应的解析延迟模型，自动为数字电路在给定输入跳变顺序下计算所有路径的符号延迟表达式；并引入符号剪枝方法，实现路径敏感、目标驱动的时序性质推理与特定电路路径的解析优化，以抑制组合爆炸。与工业界「多物理场时序签核」动向形成理论与工具呼应。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.04036" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.04036.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">符号执行</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">门延迟模型</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计收敛</span>
+      </div>
+    </div>
+
+    <div class="abs-card">
           <span class="badge-new">NEW</span>
           <div class="abs-title">📐 LDU-Bench：面向版图多变电路背景的光刻缺陷理解多模态 LLM 评测</div>
           <div class="abs-meta">arXiv:2608.03078 · cs.CV · 2026-08-04 · Huanglong Ji, Botong Zhao, Shujing Lv, Yue Lv</div>

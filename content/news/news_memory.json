@@ -1,8 +1,79 @@
 {
-  "lastUpdate": "2026-08-06",
+  "lastUpdate": "2026-08-07",
   "cutoffDate": "2026-02-05",
-  "totalItems": 183,
+  "totalItems": 188,
   "items": [
+    {
+      "date": "2026-08-07",
+      "company": "芯华章 (X-EPIC)",
+      "title": "🇨🇳 芯华章 @ CCF 芯片大会：发布 X-IVS 智能验证 + X-IDS 智能设计系统，主打「证据闭环」可信 AI4EDA",
+      "link": "https://www.163.com/dy/article/L3JONEJV05560IU8.html",
+      "keywords": [
+        "芯华章",
+        "X-IVS",
+        "X-IDS",
+        "证据闭环",
+        "可信AI4EDA",
+        "CCF芯片大会"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "company": "OpenROAD-MCP",
+      "title": "🟢 OpenROAD-MCP 发布 v1.0：OpenROAD 官方 MCP 服务器切换 TypeScript 主线，npx 一键接入 10 个工具",
+      "link": "https://github.com/The-OpenROAD-Project/OpenROAD-MCP",
+      "keywords": [
+        "OpenROAD-MCP",
+        "MCP",
+        "TypeScript",
+        "v1.0",
+        "智能体基础设施",
+        "RTL→GDS"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "company": "Anthropic",
+      "title": "🚀 Anthropic 官宣组建内部半导体团队、自研 Claude 专用 AI 芯片——大模型厂商掀软硬协同造芯潮",
+      "link": "https://www.nbd.com.cn/articles/2026-08-06/4533794.html",
+      "keywords": [
+        "Anthropic",
+        "自研芯片",
+        "软硬协同",
+        "Claude",
+        "算力",
+        "EDA需求拉动"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "company": "vibe-IC",
+      "title": "🔧 vibe-IC 开源：AI 原生 IC 设计插件 + MCP-EDA 服务器——自然语言从意图跑到签核 GDS（56 MCP 工具 / 21 修补开源 EDA）",
+      "link": "https://github.com/vibeic/vibe-ic",
+      "keywords": [
+        "vibe-IC",
+        "MCP-EDA",
+        "Agent Skills",
+        "OpenROAD",
+        "Yosys",
+        "RTL-to-GDS",
+        "确定性闸门"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "company": "digital-chip-design-agents",
+      "title": "🧩 digital-chip-design-agents v1.8.0：14 领域 Claude Code 智能体插件——新增 Memory IP Design（17 技能 × 16 编排智能体）",
+      "link": "https://github.com/hdl-tools/digital-chip-design-agents/releases",
+      "keywords": [
+        "digital-chip-design-agents",
+        "Agent Skills",
+        "Claude Code",
+        "14领域",
+        "Memory IP",
+        "多IDE"
+      ]
+    },
     {
       "date": "2026-08-06",
       "company": "联电 UMC / Synopsys",

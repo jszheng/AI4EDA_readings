@@ -1093,3 +1093,18 @@
 
 ---
 
+
+---
+## 2026-08-06 执行摘要（auto update: 2026-08-06）
+- **触发**：AI4EDA 每日自动化（weekday 05:00）。前次（08-05）执行被中断，本地提交 61c52b9 未推送；本次继续完成任务并补齐 08-05 未提交改动。
+- **新增论文 5 篇**（均 2608 系列，已落地本地 PDF）：
+  - 智能体/RTL — VeriTrace（2608.02878，Cunxi Yu，ICLAD 2026 Long Oral）：多智能体 RTL 调试，VerilogEval-V2 100% Pass@1，首个完美功能正确性系统；
+  - 智能体 — Zomboss（2608.00894）：编译器中介的智能体式 kernel 生成，Gemmini 3.34x / PLENA 1.10x，token 减 54-71%；
+  - 物理 — LDU-Bench（2608.03078）：光刻缺陷理解多模态 LLM 基准（LCS 分数）；
+  - 模拟 — Chat Debugging（2608.02955，FIE 2026）：人-AI 协作调试模拟电路；
+  - 模拟/架构 — MLRankLimits（2608.01041）：ML 排序在现代微架构策略上的局限（无模型稳定胜过随机）。
+- **新增行业动态 2 条**（去重后，news_memory +2 -> 183）：① Intel 选定 Synopsys 为首要 EDA 供应商（多年期协议）；② 联电 x Synopsys 14nm 客制化设计（Custom Compiler + Laker iPDK）。
+- **附带补齐 08-05**：6 篇 PDF（LACE/Fovea/DiffPower/LEAP/Forbench/FinHardBench）落地并接入页面本地链接；08-05 页面待补已全部替换。
+- **计数（终态）**：manifest papers 248->253、news 181->183、batches 100->101、lastUpdate 2026-08-06；分类头 agent 30->32 / analog 28->30 / physical 54->55；dates/latest[] 顶部均为 2026-08-06（count=7）。
+- **一致性**：news_memory 183 == 新闻页去重数 183 == manifest.news 183；PDF 本地链接与磁盘文件一致。
+- **Git**：本地提交 auto update: 2026-08-06（含 08-05 未推送提交，共 2 个待推送）；push origin main 进行中（此前 08-05 push 因出口 reset 失败，本次重试）。
