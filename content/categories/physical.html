@@ -7,9 +7,31 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（55篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（59篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ G-Power：跨芯片知识聚合的架构级 GPU 功耗建模——MAPE 14% / R 0.88，较 AccelWattch MAPE 降 22 个百分点（DAC 2026）</div>
+      <div class="abs-meta">arXiv:2608.06870 · cs.AR · 2026-08-07 · Qijun Zhang, Yao Lu, Shang Liu, Mengming Li, Chen Zhang, Dongbo Wang, Zhiyao Xie（DAC 2026 已发表）</div>
+      <div class="abs-body">GPU 功耗优化依赖快速功耗评估，因此需要架构级 GPU 功耗模型。但功耗标签采集极其耗时，既有工作只能用简单 microbenchmark 训练，导致 AccelWattch 等架构级模型精度偏低。港科大 Zhiyao Xie 团队提出 G-Power：不再局限于目标 GPU 自身的稀缺标签，而是借用其他已知 GPU 芯片提供额外知识基座，再在目标 GPU 上微调。方法为三阶段算法：① 用额外已知芯片预训练构建知识基座；② 注意力启发的聚合，刻画目标芯片与各已知芯片的相似度并据此加权融合多个基座；③ 在目标 GPU 上微调。在 4 款现代 NVIDIA GPU 上评估，G-Power 平均取得 MAPE 14%、相关系数 R 0.88，相对 AccelWattch MAPE 低 22 个百分点、R 高 0.36。这是「跨芯片迁移学习缓解 EDA 标签稀缺」范式在功耗建模上的有效验证，属 DAC 2026 正式发表成果。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.06870" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.06870_GPower.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功耗建模</span><span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">迁移学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">跨芯片知识聚合</span><span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">DAC 2026</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">GPU</span>
+      </div>
+    </div>
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔋 PowerScope：首个 ML 驱动的「周期内（intra-cycle）」功耗估计框架——纯 RTL 仿真轨迹推理，中位误差 5.88%、提速约 80×</div>
+      <div class="abs-meta">arXiv:2608.05339 · cs.AR · 2026-08-05（08-07 公告）· Jayanth Balasubramanian, Sujay Pandit, Radha Vaidya, Anand Raghunathan（Purdue，arXiv 预印本）</div>
+      <div class="abs-body">亚时钟周期分辨率的功耗估计对供电网络（PDN）设计、动态电压跌落分析、硅前功耗侧信道安全评估至关重要。工程上通常依赖商用布局后门级功耗分析，但这类流程计算极其昂贵，且随设计规模与工作负载长度增长而严重劣化。既有 ML 功耗估计框架虽能提速，却只处理平均功耗或逐周期功耗。PowerScope 是首个 ML 驱动的周期内功耗估计框架：推理阶段仅依赖 RTL 仿真轨迹，无需为每个工作负载跑布局后门级仿真与功耗分析。在多样化基准套件上，相对商用布局后门级功耗结果达到中位绝对百分比误差 5.88%、平均 9%，同时快约 80×。作者进一步证明，PowerScope 的预测可可靠用于下游的硅前功耗侧信道泄漏评估任务——把「ML 功耗代理模型」的用途从 PPA 估算延伸到安全签核前置分析。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.05339" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.05339_PowerScope.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">周期内功耗估计</span><span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">PDN/电压跌落</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功耗侧信道</span><span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">RTL 仿真轨迹</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">80× 加速</span>
+      </div>
+    </div>
     <div class="abs-card">
       <span class="badge-new">NEW</span>
       <div class="abs-title">🔐 PDMarks：Kerckhoffs 合规的物理设计 IP 水印框架——贯穿布局/CTS/布线，已集成 OpenROAD-flow-scripts</div>

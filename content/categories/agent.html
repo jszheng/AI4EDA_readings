@@ -7,9 +7,20 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（32篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（34篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚙️ HLSmith：专家知识引导的 C/C++→HLS 翻译智能体框架——PolyBench 上较 ChatHLS 几何平均加速 4.24×，100% 功能正确</div>
+      <div class="abs-meta">arXiv:2608.06791 · cs.AR / cs.AI · 2026-08-07 · Yuebo Luo, Ahmad Sedigh Baroughi, Philip Stachura, Le Chen, Venkatram Vishwanath, Zhenman Fang, Caiwen Ding</div>
+      <div class="abs-body">专用 FPGA 加速器能带来显著性能与能效收益，但开发成本高昂，即便有高层次综合（HLS）仍需大量硬件专业知识。作者指出：前沿 LLM 虽有很强的软件生成能力，却缺少把基线 C/C++ 可靠翻译为高性能 HLS 设计所需的硬件直觉与流程性知识。HLSmith 由三部分组成：① HLS 优化专家库，把变换配方连同其适用性、前置条件与需规避的不安全场景一起「带守卫地」编码；② 分阶段、反馈驱动的编排流程，仿照专家 HLS 开发实践引导智能体走完综合 → 瓶颈分析 → 优化循环；③ 工具接地的模型适配流水线，把商用前沿模型产生的优化轨迹转成训练数据，用于微调开源权重 LLM。在 PolyBench 上对比 ChatHLS：HLSmith 几何平均加速 4.24×，且在软件与 RTL 仿真中每个 benchmark 都功能正确（ChatHLS 有效设计率仅 57%）；使用商用前沿模型与开源权重模型时，最高加速分别达 252× 与 138×。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.06791" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.06791_HLSmith.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HLS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">C/C++→HLS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">专家知识库</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">反馈闭环</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源权重微调</span>
+      </div>
+    </div>
     <div class="abs-card">
       <span class="badge-new">NEW</span>
       <div class="abs-title">🤖 EDATracer：面向大规模 EDA 工件分析的证据锚定智能体框架——知识图谱 + 语义向量索引，18.9GB / 2,787 开源设计基准</div>

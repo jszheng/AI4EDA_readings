@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-11 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 3 条行业动态 · 来源：arXiv（cs.AR / cs.AI，08-07 与 08-10 两批公告）/ 电子创新网 / GitHub（kicad-mcp-pro · Babel）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- NEWS: IC Coder 2.0 — 国产 FPGA 研发智能体 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>电子创新网 / 新浪财经 · 国产工具动态 · 发布 2026-08-03 · IC Coder 2.0 上线内测</div>
+      <h4>🇨🇳 IC Coder 2.0 上线内测：面向真实 FPGA 工程闭环的国产研发智能体——自研 FPGA 专用模型 + Agent 执行平台 + 企业本地知识库</h4>
+      <p>国产 FPGA 研发智能体 <strong>IC Coder 2.0</strong> 正式上线并启动内测。相较 1.x 的「代码补全 / 问答」定位，2.0 版本对<strong>自研 FPGA 专用模型、Agent 执行平台、企业本地知识库、板卡适配与芯片适配</strong>四条能力线做了系统升级，目标是让 AI 从「生成代码片段」进入<strong>需求理解 → 架构设计 → RTL 生成 → 仿真验证 → 问题定位 → 约束生成 → 上板调试</strong>的完整可验证闭环，即从「能回答、能生成」走向「<strong>能执行、能验证、能交付</strong>」。产品强调真实工程关注点：需求是否拆解清楚、接口是否定义清楚、TestBench 是否覆盖关键场景、仿真日志是否可解释、约束文件是否适配目标板卡、器件资源与封装是否匹配、能否持续修复回归并上板验证。落地方面，IC Coder 已获<strong>世界 500 强企业采购部署</strong>，成为<strong>安路科技「大学计划」官方生态合作伙伴</strong>，并完成对米联客、康芯等 FPGA 开发板及安路 FPGA 器件的关键适配。这是国产 AI4EDA 从数字 ASIC 向 <strong>FPGA 全流程智能体</strong>延伸的代表性案例，与本站已收录的芯华章「证据闭环」、芯和 EDA Agent 形成互补。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">国产EDA</span>
+        <span class="tag">IC Coder</span>
+        <span class="tag">FPGA智能体</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">仿真验证闭环</span>
+        <span class="tag">安路科技</span>
+      </div>
+      <a href="https://www.163.com/dy/article/L3D43GK705568W0A.html" target="_blank">→ 电子创新网：加速 FPGA 开发的智能体 IC Coder 2.0 全新上线，启动内测！</a>
+    </div>
+
+    <!-- NEWS: kicad-mcp-pro — KiCad MCP 服务器高频迭代 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · oaslananka/kicad-mcp-pro · 开源更新 · 最新提交 2026-08-10 · 48★ / MIT / Zenodo DOI</div>
+      <h4>🔧 KiCad MCP Pro 密集迭代（08-10 连推 5 个 PR）：377 工具专家目录 + 渐进披露安全模型，KiCad 编程接口覆盖率 76.3%</h4>
+      <p><strong>kicad-mcp-pro</strong> 是面向 KiCad EDA 工作流的 Model Context Protocol 服务器，让 Claude / Cursor / Copilot 等任意 MCP 智能体驱动<strong>原理图、PCB、ERC/DRC、DFM、BOM 与制造审查</strong>全流程。项目 8 月 10 日单日合入 5 个 PR（#652 抽取 PCB 矢量服务、#653 根原理图连线 sheet symbol、#654 抽取 PCB 文件格式服务、#655 移除废弃 PostScript 导出、#648 依赖批量升级）。工程化亮点：采用<strong>渐进披露（progressive disclosure）</strong>安全模型——默认 <code>default</code> profile 仅暴露 <strong>24 个只读评审工具</strong>而非完整 <strong>377 工具专家目录</strong>，写操作需 <code>build</code>、制造交付需 <code>release</code>（人工把关），<code>expert/full</code> 仅对可信客户端开放；遥测默认关闭。项目同时发布 PyPI 与 npm 包，持有 Zenodo DOI，通过 OpenSSF Best Practices <strong>Silver</strong> 认证，公开追踪 <strong>KiCad 编程接口覆盖率 76.3%</strong>。README 明确「诚实边界」：信号完整性 / 电源完整性 / EMC / 热工具为<strong>一阶闭式估算（约 5–10% 精度）</strong>，是首轮快速评审而非场求解器或正式签核替代——这种「能力自陈 + 权限分级」的做法，对 AI Agent 接入 EDA 工具的可信治理很有参考价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">开源</span>
+        <span class="tag">MCP</span>
+        <span class="tag">KiCad</span>
+        <span class="tag">智能体基础设施</span>
+        <span class="tag">渐进披露</span>
+        <span class="tag">DFM/DRC</span>
+      </div>
+      <a href="https://github.com/oaslananka/kicad-mcp-pro" target="_blank">→ GitHub：oaslananka/kicad-mcp-pro</a>
+    </div>
+
+    <!-- NEWS: Babel v1.3 — AI 原生 Chiplet 开源设计流程 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · amoslee2026/Babel · 开源更新 · v1.3（推送 2026-08-04）· 41★ / Verilog / GitLink 同步</div>
+      <h4>🧩 Babel v1.3：开源 AI 原生 Chiplet 设计流程——5-Agent 流水线 + Issue Handoff 协议 + Spec-Code 三层双向追溯</h4>
+      <p><strong>Babel</strong> 是基于开源 EDA 工具链与 AI Coding Agent 的<strong>开源 AI 原生 Chiplet 设计流程</strong>，主张从自然语言需求到 GDSII signoff 全流程由 Agent 自动化完成。核心机制：①<strong>5-Agent 流水线 + Issue Handoff 协议</strong>——architect → guru-rtl → guru-verification → guru-synthesis → guru-pd → signoff，通过 labeled issue 触发交接，每个 Agent 有独立迭代收敛上限与 <code>escalate-user</code> 机制，超限自动暂停请求人类决策，下游发现问题可用 <code>*-needs-fix</code> 标签回流上游修正；②<strong>Spec-Code 双向追溯三层模型</strong>——RTL 文件头 <code>@requirement / @spec_hash / @spec_ref</code>、内嵌 SVA 断言 <code>@verifies / @constraint</code>、SDC 约束标签，REQ_ID 跨 PRD → ARCH → MAS → RTL → TB → SDC 全链路传播，由 <code>babel_traceability.py</code> 生成多阶段追溯矩阵；③<strong>变更传播 + Commit 质量门禁</strong>——Hook 检测上游 artifact 变更即标记下游 stale，<code>git commit</code> 前强制执行 RTL lint、REQ_ID 唯一性与 <code>@spec_hash</code> 一致性校验，防止上下文断裂。项目还附带面向电子工程毕业生的 <strong>16 章完整教程</strong>（AI 原生范式 / 规范驱动设计 PRD-ARCH-MAS / RTL 生成与验证闭环 / 逻辑综合 / 物理设计 / NPU 实战走读），并在 GitLink 同步镜像。这是当前少见的把「多智能体协作 + 需求可追溯 + 质量门禁」完整开源化的 Chiplet 全流程范式实现。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">开源</span>
+        <span class="tag">Chiplet</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">规范驱动设计</span>
+        <span class="tag">可追溯性</span>
+        <span class="tag">RTL→GDS</span>
+      </div>
+      <a href="https://github.com/amoslee2026/Babel" target="_blank">→ GitHub：amoslee2026/Babel（v1.3）</a>
+    </div>
+
+    <!-- 2608.06791 HLSmith: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · 2026-08-07 · Yuebo Luo, Ahmad Sedigh Baroughi, Philip Stachura, Le Chen, Venkatram Vishwanath, Zhenman Fang, Caiwen Ding（arXiv 预印本）</div>
+      <h4>⚙️ HLSmith：专家知识引导的 C/C++→HLS 翻译智能体框架——PolyBench 上较 ChatHLS 几何平均加速 4.24×，100% 功能正确</h4>
+      <p>专用 FPGA 加速器能带来显著性能与能效收益，但开发成本高昂，即便有高层次综合（HLS）仍需大量硬件专业知识。作者指出：前沿 LLM 虽有很强的软件生成能力，却缺少把基线 C/C++ 可靠翻译为<strong>高性能</strong> HLS 设计所需的硬件直觉与流程性知识——难以选对架构、难以复现 HLS 专家的优化流程、难以在多样 kernel 上一致地施加硬件变换。<strong>HLSmith</strong> 由三部分组成：①<strong>HLS 优化专家库</strong>，把变换配方连同其适用性、前置条件与需规避的不安全场景一起「带守卫地」编码；②<strong>分阶段、反馈驱动的编排流程</strong>，仿照专家 HLS 开发实践引导智能体走完综合 → 瓶颈分析 → 优化循环；③<strong>工具接地的模型适配流水线</strong>，把商用前沿模型产生的优化轨迹转成训练数据，用于微调开源权重 LLM。在 PolyBench 上对比先前主流智能体编排框架 ChatHLS：HLSmith <strong>几何平均加速 4.24×</strong>，且在软件与 RTL 仿真中<strong>每个 benchmark 都功能正确</strong>（ChatHLS 有效设计率仅 57%）；使用商用前沿模型与开源权重模型时，最高加速分别达 <strong>252×</strong> 与 <strong>138×</strong>。属于「智能体 + 高层次综合」方向近期最具工程说服力的结果之一。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI Agent</span>
+        <span class="tag">HLS</span>
+        <span class="tag">C/C++→HLS</span>
+        <span class="tag">专家知识库</span>
+        <span class="tag">反馈闭环</span>
+        <span class="tag">开源权重微调</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.06791" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.06791_HLSmith.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.06870 G-Power: DAC 2026 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-07 · Qijun Zhang, Yao Lu, Shang Liu, Mengming Li, Chen Zhang, Dongbo Wang, Zhiyao Xie（<strong>DAC 2026 已发表</strong>）</div>
+      <h4>⚡ G-Power：跨芯片知识聚合的架构级 GPU 功耗建模——MAPE 14% / R 0.88，较 AccelWattch MAPE 降 22 个百分点</h4>
+      <p>GPU 功耗优化依赖快速功耗评估，因此需要<strong>架构级 GPU 功耗模型</strong>。但功耗标签采集极其耗时，既有工作只能用简单 microbenchmark 训练，导致 AccelWattch 等架构级模型精度偏低。港科大 Zhiyao Xie 团队提出 <strong>G-Power</strong>：不再局限于目标 GPU 自身的稀缺标签，而是<strong>借用其他已知 GPU 芯片提供额外知识基座</strong>，再在目标 GPU 上微调。方法为三阶段算法：①用额外已知芯片<strong>预训练</strong>构建知识基座；②<strong>注意力启发的聚合</strong>，刻画目标芯片与各已知芯片的相似度并据此加权融合多个基座；③在目标 GPU 上<strong>微调</strong>。在 4 款现代 NVIDIA GPU 上评估，G-Power 平均取得 <strong>MAPE 14%、相关系数 R 0.88</strong>，相对 AccelWattch <strong>MAPE 低 22 个百分点、R 高 0.36</strong>。这是「跨芯片迁移学习缓解 EDA 标签稀缺」这一范式在功耗建模上的又一有效验证，属 DAC 2026 正式发表成果。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">后端物理设计</span>
+        <span class="tag">功耗建模</span>
+        <span class="tag">迁移学习</span>
+        <span class="tag">跨芯片知识聚合</span>
+        <span class="tag">DAC 2026</span>
+        <span class="tag">GPU</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.06870" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.06870_GPower.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.05339 PowerScope: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-05（08-07 公告）· Jayanth Balasubramanian, Sujay Pandit, Radha Vaidya, Anand Raghunathan（Purdue，arXiv 预印本）</div>
+      <h4>🔋 PowerScope：首个 ML 驱动的「周期内（intra-cycle）」功耗估计框架——纯 RTL 仿真轨迹推理，中位误差 5.88%、提速约 80×</h4>
+      <p>亚时钟周期分辨率的功耗估计对<strong>供电网络（PDN）设计、动态电压跌落分析、硅前功耗侧信道安全评估</strong>至关重要。工程上通常依赖商用<strong>布局后门级功耗分析</strong>，但这类流程计算极其昂贵，且随设计规模与工作负载长度增长而严重劣化。既有 ML 功耗估计框架虽能提速，却只处理<strong>平均功耗或逐周期功耗</strong>。<strong>PowerScope</strong> 是首个 <strong>ML 驱动的周期内功耗估计框架</strong>：推理阶段<strong>仅依赖 RTL 仿真轨迹</strong>，无需为每个工作负载跑布局后门级仿真与功耗分析。在多样化基准套件上，相对商用布局后门级功耗结果达到<strong>中位绝对百分比误差 5.88%、平均 9%</strong>，同时<strong>快约 80×</strong>。作者进一步证明，PowerScope 的预测可可靠用于下游的<strong>硅前功耗侧信道泄漏评估</strong>任务——把「ML 功耗代理模型」的用途从 PPA 估算延伸到安全签核前置分析。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">后端物理设计</span>
+        <span class="tag">周期内功耗估计</span>
+        <span class="tag">PDN/电压跌落</span>
+        <span class="tag">功耗侧信道</span>
+        <span class="tag">RTL 仿真轨迹</span>
+        <span class="tag">80× 加速</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.05339" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.05339_PowerScope.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
