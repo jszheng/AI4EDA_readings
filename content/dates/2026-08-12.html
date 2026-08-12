@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-12 动态</h1>
+  <p class="subtitle">共 9 篇论文 · 2 条行业动态 · 来源：arXiv（cs.AR / cs.AI / cs.DC / cs.LG / cs.CL，08-11 公告批次）+ 开源动态（UCAgent / veriflow-cc）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- NEWS: UCAgent / HimaFormal MC -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>华大九天参股·上海阿卡思 × 北京开源芯片研究院 × 中科院计算所 · WAIC 2026 发布 · GitHub 开源（XS-MLVP/UCAgent）</div>
+      <h4>🇨🇳 UCAgent 开源 + HimaFormal MC：国产形式化验证智能体落地——自然语言生成 SVA 断言、COI 覆盖率驱动自动补全，PicoRV32 实测提速 16×</h4>
+      <p>上海阿卡思（华大九天战略参股）联合北京开源芯片研究院、中科院计算所推出「HimaFormal MC + UCAgent」智能形式化验证方案，并在 WAIC 2026 亮相。UCAgent 是开芯院自研的基于 LLM 的自动化芯片验证智能体，源码已在 GitHub 开源（XS-MLVP/UCAgent），支持简单模块（约 1000 行 Verilog 以下）100% 自动验证，并可通过 MCP 与 OpenHands / Copilot / Claude Code / Gemini-CLI / Qwen-Code 等通用 Code Agent 深度协同。方案以「自然语言生成断言 → HimaFormal MC 形式化验证 → 反例/覆盖率分析 → 自动补充断言」的 AI 驱动闭环，替代传统「人写断言 + 人跑工具 + 人补断言」模式；基于逻辑影响锥（COI）覆盖率驱动自动迭代直至 100%。在开源 RISC-V 核 PicoRV32 实测中，覆盖率从 53% 提升至 91%、全流程约 30 分钟，较人工约 8 小时提速约 16×。已落地多家企业真实项目（国内头部 AI 芯片厂商对接内部 LLM 实现全链路形式化验证无人值守；深圳 SSD 主控芯片企业将 UCAgent 作为内部数字验证统一 AI 接口并二次开发）。华大九天还基于该框架搭建 HimaFormal HiLEC+UCAgent、HimaFormal EC+UCAgent 两套标准化联合流程，降低 C/C++→RTL 高阶等价性检查门槛。这是国产「形式化验证 + LLM 智能体」从科研走向企业级落地的重要标志。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">国产EDA</span>
+        <span class="tag">形式化验证</span>
+        <span class="tag">UCAgent</span>
+        <span class="tag">HimaFormal</span>
+        <span class="tag">开源智能体</span>
+        <span class="tag">覆盖率驱动</span>
+        <span class="tag">华大九天/阿卡思</span>
+      </div>
+      <a href="https://github.com/XS-MLVP/UCAgent" target="_blank">→ GitHub：XS-MLVP/UCAgent（开源）</a>
+      &nbsp;<a href="http://open-verify.cc/opensource_tools/ucagent" target="_blank">→ 使用手册：open-verify.cc</a>
+    </div>
+
+    <!-- NEWS: veriflow-cc -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · bjwanneng/veriflow-cc · 开源项目 · 近期提交 2026-08-03（9 HIGH+MED/LOW 代码审查修复）· Python / 零依赖</div>
+      <h4>🔧 veriflow-cc：用 Claude Code 一键打通 RTL 设计流水线——从需求到综合（iVerilog/Yosys），子代理嵌套 + 行为驱动验证 + 状态可恢复</h4>
+      <p>veriflow-cc 是一个 Claude Code 驱动的 RTL 设计流水线技能（skill），将 Claude Code 主会话作为「流程大脑」：控制阶段切换、调用子代理做 RTL 生成、处理错误与回滚，状态持久化到 JSON 可断点恢复。四阶段严格顺序执行：① spec_golden（生成 spec.json + golden_model.py 参考模型与测试向量）；② codegen（vf-coder 子代理逐模块并行生成 RTL）；③ verify_fix（iverilog/cocotb 内联仿真 + 错误恢复，3 次重试预算）；④ lint_synth（iverilog + Yosys 并行 lint 与综合）。工程亮点：golden_model.py 同时作为参考模型与测试向量生成器，由 vcd2table.py 做波形 diff 辅助错误恢复；内置 5 个内联 Verilog-2005 mini-pattern（FSM / Hash round 等）引导 vf-coder；提供 cocotb 优先仿真、跨模块时序、覆盖率分析、形式证明（formal_prove.py 经 SymbiYosys）、多候选 RTL 选择（测试时缩放）、跨项目 bug pattern 自学习（self_improve.py，benchmark 门禁可逆）等能力；错误恢复按类型分类回滚（syntax→coder、logic→microarch、timing→timing）。项目零 Python 依赖、无需 LangGraph/LangChain/Streamlit，安装即用（/vf-rtl &lt;project_dir&gt;），附带 ChaCha20 端到端示例。这是把「需求 → 黄金模型 → RTL → 仿真验证 → lint/综合」工程化闭环封装为可复用 Claude Code 技能的代表作，对「开源 EDA AI Skills / Agents 新能力」方向有直接参考价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">开源</span>
+        <span class="tag">Claude Code</span>
+        <span class="tag">RTL流水线</span>
+        <span class="tag">子代理</span>
+        <span class="tag">行为驱动验证</span>
+        <span class="tag">形式证明</span>
+        <span class="tag">EDA技能</span>
+      </div>
+      <a href="https://github.com/bjwanneng/veriflow-cc" target="_blank">→ GitHub：bjwanneng/veriflow-cc</a>
+    </div>
+
+    <!-- 2608.07625 HINT: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-07 · Tairan Cheng, Yi Liu, Dongsheng Zuo, Zhengyuan Shi, Hongji Zhang, Xiangfei Hu, Maoshuo He, Hao Yan, Qiang Xu（arXiv 预印本）</div>
+      <h4>🧠 HINT：面向 LLM 驱动 RTL 生成的「可执行硬件意图」中间表示层——7/7 算子案例产出合规可综合 RTL，面积较人工实现降 5.0%–26.2%</h4>
+      <p>用大语言模型（LLM）生成实现级质量的 RTL 一直很难，因为直接生成必须在「解析微架构」的同时「产出并调试底层代码」。<strong>HINT</strong> 在行为级规约（或可执行 oracle）与 RTL 之间插入一层<strong>可执行的「硬件意图」中间表示</strong>：把 RTL 相关的微架构选择显式化，支持 RTL 生成前的预检查，并给出明确的「RTL 下沉义务」。作者用最小单智能体流程与完整分阶段流程两种配置评估：在 7 个算子案例上，HINT 介导路线<strong>无需综合后 QoR 精修即产出 7/7 合规可综合 RTL</strong>；而 Direct C2RTL 适用 5 例、成功 5/5，C2HLSC 适用 5 例、仅成功 1/5。在匹配的 Design Compiler 综合下，HINT 相对 5 份人工 RTL 实现面积降低 5.0%–26.2%，相对 5 份被接收的 C2RTL 结果降低 8.9%–86.1%；RealBench AES/SDC 以及综合到 561.67k μm² 的 Vortex VPU 进一步验证了其在协议密集、存储密集与层次化设计上的能力。这代表「LLM 直出 RTL」之外一条更可控、可验证的 RTL 生成路径。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">前端RTL</span>
+        <span class="tag">LLM</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">中间表示</span>
+        <span class="tag">可执行规约</span>
+        <span class="tag">可验证闭环</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.07625" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.07625_HINT.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.07925 ZhuLong: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 2026-08-08 · Yang Liu, Shiwei Hou, Xiyuan Chen, Yu Wang, Sen Yuan, Qirui Gan, Shao You, Feifan Chen, Wencheng Li, Shuyang Hu, Yongzhou Liu, Emma Xia, Xiaojing Lu, Hao Wang, Fan Xu, Yanfeng Li（arXiv 预印本）</div>
+      <h4>🤖 ZhuLong：执行接地的 LLM EDA 脚本智能体——统一 MCP 工具 + 离线 API 自探索，PyAether 基准 Pass@1 78.5%</h4>
+      <p>EDA 脚本依赖特定工具、常无文档的 API，是现有 LLM 难以覆盖的长尾瓶颈。ZhuLong 是面向 PyAether 与 SKILL 的执行接地 LLM 编码智能体，把 API 检索、文档检视与沙箱执行经统一 MCP 工具结合，并用离线 API 自探索机制通过对抗性实验推断无文档 API 行为。在 EDA-Eval-PyAether（158 个带断言执行的真实任务）基准上，完整系统于商用 Empyrean Aether 环境取得 78.5% Pass@1，大幅超越纯 LLM 基线（23.6%）。消融显示沙箱执行是主要驱动力（移除后降 41.2 个百分点），自探索机制额外贡献 3.2 个百分点精度提升与 22.1% 的单任务工具调用减少。在 20 个涉及未保存版图与原理图的交互任务上，PyAether 与 SKILL 分别取得 60.0% 与 50.0% Pass@1。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI Agent</span>
+        <span class="tag">EDA脚本</span>
+        <span class="tag">MCP</span>
+        <span class="tag">沙箱执行</span>
+        <span class="tag">PyAether</span>
+        <span class="tag">SKILL</span>
+        <span class="tag">API自探索</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.07925" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.07925_ZhuLong.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.08462 ARMOR: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-09 · Jiaping Tang, Jianan Mu, Zhiteng Chao, Jingzhong Wen, Jing Ye, Huawei Li（arXiv 预印本）</div>
+      <h4>⚡ ARMOR：以节点压缩缓解 RTL 仿真前端瓶颈——CPU 设计 1.6×、AI 加速器 2.7× 加速</h4>
+      <p>RTL 仿真是芯片设计不可或缺的一环，高性能仿真器通常把 RTL 图中每个节点下沉为一段指令序列，但这会急剧膨胀代码体、超出指令缓存容量、造成<strong>前端瓶颈</strong>。作者剖析发现，最先进 RTL 仿真器中 <strong>超过 50% 的流水线停顿源于 CPU 前端</strong>。ARMOR 提出以<strong>节点压缩</strong>缓解该瓶颈：利用展开后 RTL 图暴露的数据并行性，以及逐节点下沉造成的比特空间利用不足，用位级数据并行把多个节点同时压缩，使单条指令序列服务多个节点而非每节点一条。关键技术：①<strong>模块感知的同构子图识别</strong>，跨模块实例利用结构同构系统性定位子图级压缩机会；②<strong>对齐感知的密集打包</strong>，按数据流依赖分组并保留数据复用，配合贪心合并提升比特利用率；③统一位级并行执行。实验上，ARMOR 在 CPU 设计上取得 <strong>1.6×</strong>、在 AI 加速器上取得 <strong>2.7×</strong> 加速，对大模型/AI 芯片的长时仿真尤其有价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL仿真</span>
+        <span class="tag">前端瓶颈</span>
+        <span class="tag">节点压缩</span>
+        <span class="tag">位级并行</span>
+        <span class="tag">验证加速</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.08462" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.08462_ARMOR.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.08801 IDRAAK: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.CL · 2026-08-09 · Shiva Ahir（arXiv 预印本）</div>
+      <h4>🔍 IDRAAK：从多智能体 NLP 到少样本提示的技术需求语义漂移检测——单 LLM+6 少样本即达 F1=0.983，复杂 agentic 未必更优</h4>
+      <p>跨语言翻译技术需求会引入<strong>语义漂移</strong>——数值约束、极性、模态等规约关键语义被改变。<strong>IDRAAK</strong> 用一种语言无关的<strong>语义需求表示（SRR）</strong>来检测这类漂移，并评估了 6 种工作流，从确定性比较到多智能体验证再到少样本提示。在 10 个工程领域 300 条需求的 890 个合成扰动上，<strong>单次 LLM 调用 + 6 个少样本示例即达 MCC=0.888、F1=0.983</strong>，优于所评估的结构化与多阶段方案；在 PAWS-X（5 语言）与 XNLI（7 语言）上进一步揭示结构化与 LLM 方法的互补强弱。核心结论颇具反直觉：<strong>更高的 agentic 复杂度并不必然提升语义漂移检测，简单少样本提示已是高效且强力的替代</strong>。这对「需求→规约→RTL」链路中需求一致性的自动化校验有直接借鉴意义。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">多智能体</span>
+        <span class="tag">需求验证</span>
+        <span class="tag">语义漂移</span>
+        <span class="tag">规范驱动</span>
+        <span class="tag">少样本提示</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.08801" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.08801_IDRAAK.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.09874 ArchAgent v2: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 2026-08-10 · Abraham Gonzalez, Raghav Gupta, Akanksha Jain, Hanna Alam, Alexander Novikov, Po-Sen Huang, Matej Balog, Marvin Eisenberger, Sergey Shirobokov, Ngân Vũ, Hank Levy, Borivoje Nikolić, Sagar Karandikar, Martin Dixon, Parthasarathy Ranganathan（arXiv 预印本）</div>
+      <h4>🤖 ArchAgent v2：把智能体式微架构搜索扩展到多级数据预取——DPC4 上自动设计三级预取器超越手工冠军方案（IPC +3.8%）</h4>
+      <p><strong>ArchAgent v2</strong> 把自动化微架构搜索从单级缓存替换策略扩展到<strong>多级数据预取</strong>。原 ArchAgent 曾在竞赛设定下发现单级缓存替换策略，但无法扩展到设计空间与自由度更大的多级预取。为此引入两项机制：①<strong>级联演化搜索</strong>，按缓存层级依次演化并冻结各级预取器，细分设计空间；②<strong>硬件可实现性反馈环</strong>，把实时面积/规模估计直接嵌入演化过程。在第 4 届 Data Prefetching Championship（DPC4）同规则下，ArchAgent v2 自动设计的三级预取器<strong>超越了手工冠军方案</strong>：整体几何平均 IPC 较基线提速 3.8%、较上届冠军 BertiGO 提升 0.3%；低带宽单核配置下提速 4.6%（BertiGO 仅 2.6%）。作者对一次逾 12,000 个候选设计的演化做了剖析，揭示了自动化演化智能体如何探索与综合复杂微架构逻辑——是「智能体式架构发现」走向实用的重要一步。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI Agent</span>
+        <span class="tag">微架构搜索</span>
+        <span class="tag">数据预取</span>
+        <span class="tag">演化搜索</span>
+        <span class="tag">DPC4</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.09874" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.09874_ArchAgent_v2.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.08496 ReVolt: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-09 · Vibhanshu Sharma, Alish Kanani, Miao Sun, Janardhan Rao Doppa, Umit Y. Ogras, Partha Pratim Pande（arXiv 预印本）</div>
+      <h4>🔋 ReVolt：面向 2.5D PIM Chiplet 的 PDN 感知电压跌落控制——LSTM PDN 代理预测，EDP 平均降 76× 且不损推理精度</h4>
+      <p>基于存内计算（PIM）的 <strong>2.5D 多 chiplet 平台</strong>是 ML 工作负载的关键使能技术，但其性能受<strong>供电网络（PDN）</strong>制约：各 chiplet 电流需求随时空变化，引发<strong>电压跌落（voltage droop）</strong>，导致电压违例、性能下降并影响推理精度。<strong>ReVolt</strong> 提出以动态运算单元（OU）为基元的框架来缓解跌落：用 <strong>LSTM-based PDN 代理</strong>在运行时预测每 chiplet 的供电电压轨迹，从而主动调节 OU 规模以平抑跌落事件；把 OU size 当作控制旋钮，在维持计算精度的同时调控 chiplet 级电流需求。实验表明，ReVolt 在<strong>不牺牲 ML 模型推理精度</strong>的前提下杜绝电压跌落违例，相对既有固定与动态 OU 基线平均<strong>降低 76× 的 EDP（能耗-时延积）</strong>。这是「ML 代理模型 + 控制理论」用于 chiplet 供电稳定性的代表性工作。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Chiplet</span>
+        <span class="tag">2.5D</span>
+        <span class="tag">PDN</span>
+        <span class="tag">电压跌落</span>
+        <span class="tag">LSTM代理</span>
+        <span class="tag">PIM</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.08496" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.08496_ReVolt.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.08611 C2C-Explorer: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.DC · 2026-08-09 · Jiayi Li, Di Wu, Qingxu Li, Hongxiao Zhao, Jiaqi Yang, Anjunyi Fan, Wenbin Zhang, Boqiang Wu, Shuting Liu, Shifeng Fang, Jianbo Dong, Dimin Niu, Bonan Yan（arXiv 预印本 · 开源）</div>
+      <h4>🔗 C2C-Explorer：面向 LLM 云计算系统的片间互连架构探索框架——贝叶斯 DSE，DeepSeek-R1-671B 上 goodput +44.1%、显存 -98.4%</h4>
+      <p>大模型 Scaling 要求多处理器芯片架构，使<strong>片间（C2C）通信</strong>愈发关键。但为 LLM 负载设计高效 C2C 硬件面临三难：生成真实 LLM 专属 C2C 流量、在规模上准确仿真硬件级通信、高效探索指数级设计空间。<strong>C2C-Explorer</strong> 是一个<strong>自适应贝叶斯 DSE 框架</strong>，把 LLM 负载驱动的流量生成器、可扩展互连仿真器（支持开关/全 mesh，规模达 512 chip）与度量引导的评估器整合成「负载→硬件」的协同优化流水线。以 FPGA 原型验证，其 C2C 仿真器在多种流量模式下端到端时序误差仅 2.46%–8.23%，混合周期-事件模型较纯周期精确基线<strong>加速达 7.8×</strong>；应用于 32-XPU 的 DeepSeek-R1-671B 推理负载，C2C-Explorer 找到的配置使 <strong>goodput 提升 44.1%、显存降低 98.4%</strong>。项目已开源（github.com/Selinaee/C2C-Explorer），对 chiplet 系统互连协同设计是直接可用的工具。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Chiplet</span>
+        <span class="tag">片间互连</span>
+        <span class="tag">DSE</span>
+        <span class="tag">贝叶斯优化</span>
+        <span class="tag">开源</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.08611" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.08611_C2C-Explorer.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.09252 FSGen: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-10 · Jay Zhe-An Mok, Qijun Zhang, Zhiyao Xie（arXiv 预印本）</div>
+      <h4>🚀 FSGen：带早期 PPA 估计的敏捷 LLM 注意力加速器生成框架——能效高 1.4× 或 速度快 10×，FoM 高 58×</h4>
+      <p>随着 LLM 成为众多领域的重要负载，如何高效生成最优 AI 芯片加速器设计仍是开放难题，现有方法缺乏端到端的设计空间探索（DSE）方法论。<strong>FSGen</strong> 是一个面向注意力类 LLM 加速器的<strong>敏捷生成框架</strong>，并配备<strong>早期 PPA 估计器</strong>：支持融合算子数据流与稀疏，拥有多样设计空间，在相近 PPA 指标下找到<strong>能效高 1.4× 或 速度快 10×</strong> 的设计；Pareto 最优设计在广阔 LLM benchmark 上表现更优，<strong>品质因数（FoM）高 58×</strong>。得益于精度优于既往方法的 PPA 估计器，设计探索也大幅提速。这是把「生成式 DSE」落到 LLM 加速器这一具体且高价值场景的务实尝试。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">后端物理设计</span>
+        <span class="tag">加速器生成</span>
+        <span class="tag">DSE</span>
+        <span class="tag">PPA估计</span>
+        <span class="tag">LLM</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.09252" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.09252_FSGen.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2510.15968 SAU-FNO: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · 2025-10-12（v2 更新）· Zhen Huang, Hong Wang, Wenkai Yang, Muxi Tang, Depeng Xie, Ting-Jung Lin, Yu Zhang, Wei W. Xing, Lei He（arXiv 预印本）</div>
+      <h4>🌡️ SAU-FNO：自注意力 U-Net 傅里叶神经算子用于 3D-IC 热仿真——SOTA 精度，较传统 FEM 加速 842×</h4>
+      <p>3D-IC 因功率密度升高，热管理日益困难；传统 PDE 求解准确但太慢，难以支撑迭代式设计，而 FNO 等 ML 方法存在高频信息丢失与对高保真数据依赖的问题。<strong>SAU-FNO</strong>（Self-Attention U-Net Fourier Neural Operator）把<strong>自注意力与 U-Net 同 FNO 结合</strong>，兼顾长程依赖与局部高频特征；并采用<strong>迁移学习</strong>用低保真数据微调，降低对昂贵高保真数据集的需求。实验显示 SAU-FNO 取得<strong>当前最优的 3D-IC 热预测精度</strong>，较传统 FEM 方法<strong>加速 842×</strong>，是先进 3D-IC 热仿真的有效工具，对多物理场 AI 分析有直接价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">后端物理设计</span>
+        <span class="tag">3D-IC</span>
+        <span class="tag">热仿真</span>
+        <span class="tag">神经算子</span>
+        <span class="tag">多物理场</span>
+        <span class="tag">迁移学习</span>
+      </div>
+      <a href="https://arxiv.org/abs/2510.15968" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2510.15968_SAU-FNO.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

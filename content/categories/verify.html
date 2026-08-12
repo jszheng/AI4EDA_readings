@@ -7,9 +7,23 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（32篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（33篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+
+    <!-- 2608.08462 ARMOR -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ ARMOR：以节点压缩缓解 RTL 仿真前端瓶颈——CPU 设计 1.6×、AI 加速器 2.7× 加速</div>
+      <div class="abs-meta">arXiv:2608.08462 · cs.AR · 2026-08-09 · Jiaping Tang, Jianan Mu, Zhiteng Chao, Jingzhong Wen, Jing Ye, Huawei Li</div>
+      <div class="abs-body">RTL 仿真是芯片设计不可或缺的一环，高性能仿真器通常把 RTL 图中每个节点下沉为一段指令序列，但这会急剧膨胀代码体、超出指令缓存容量、造成前端瓶颈。作者剖析发现，最先进 RTL 仿真器中超过 50% 的流水线停顿源于 CPU 前端。ARMOR 提出以节点压缩缓解该瓶颈：利用展开后 RTL 图暴露的数据并行性，以及逐节点下沉造成的比特空间利用不足，用位级数据并行把多个节点同时压缩，使单条指令序列服务多个节点而非每节点一条。关键技术：①模块感知的同构子图识别，跨模块实例利用结构同构系统性定位子图级压缩机会；②对齐感知的密集打包，按数据流依赖分组并保留数据复用，配合贪心合并提升比特利用率；③统一位级并行执行。实验上，ARMOR 在 CPU 设计上取得 1.6×、在 AI 加速器上取得 2.7× 加速，对大模型/AI 芯片的长时仿真尤其有价值。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.08462" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.08462_ARMOR.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL仿真</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">前端瓶颈</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">节点压缩</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">位级并行</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">验证加速</span>
+      </div>
+    </div>
+
     <!-- 2608.01045 Forbench: Symbolic Simulation Helps Make Your Testbench More Formal -->
     <div class="abs-card">
         <div class="abs-meta">

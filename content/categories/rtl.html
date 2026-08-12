@@ -7,9 +7,20 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（73篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（75篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ HINT：面向 LLM 驱动 RTL 生成的可执行「硬件意图」中间表示层——7/7 案例产出契约合规可综合 RTL</div>
+      <div class="abs-meta">arXiv:2608.07625 · cs.AR / cs.MA · 2026-08-07 · Tairan Cheng, Yi Liu, Dongsheng Zuo, Zhengyuan Shi, Hongji Zhang, Xiangfei Hu, Maoshuo He, Hao Yan, Qiang Xu</div>
+      <div class="abs-body">直接用 LLM 生成可量产 RTL 很困难，因为生成过程要同时确定微架构并产出/调试底层代码。HINT 提出位于行为规格（或可执行 oracle）与 RTL 之间的可执行硬件意图中间表示层：显式刻画 RTL 相关的微架构决策、支持 RTL 之前的前置检查、并给出显式的 RTL lowering 义务。在 7 个算子案例上，HINT 介导路线（无综合后 QoR 精修）产出 7/7 契约合规可综合 RTL；Direct C2RTL 适用 5 例成功 5/5、C2HLSC 成功 1/5。在匹配 Design Compiler 综合下，HINT 相对 5 份人工 RTL 实现面积降 5.0%–26.2%、相对 5 份已采纳 Direct C2RTL 结果降 8.9%–86.1%。RealBench AES/SDC 与综合到 561.67k μm² 的 Vortex VPU 进一步验证其规范驱动、协议密集、存储密集与层次化设计能力。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.07625" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.07625_HINT.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">中间表示(IR)</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">微架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">规范驱动</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">契约合规</span>
+      </div>
+    </div>
     <div class="abs-card">
       <span class="badge-new">NEW</span>
       <div class="abs-title">🛡️ LLM 辅助检测并修复 Verilog 设计中的硬件安全漏洞——基于 CWE 框架的迭代式弱点识别</div>

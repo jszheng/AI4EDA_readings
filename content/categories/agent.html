@@ -7,9 +7,45 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（34篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（37篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+
+    <!-- 2608.08801 IDRAAK -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔍 IDRAAK：从多智能体 NLP 到少样本提示的技术需求语义漂移检测——单 LLM+6 少样本即达 F1=0.983</div>
+      <div class="abs-meta">arXiv:2608.08801 · cs.CL · 2026-08-09 · Shiva Ahir</div>
+      <div class="abs-body">跨语言翻译技术需求会引入语义漂移——数值约束、极性、模态等规约关键语义被改变。IDRAAK 用一种语言无关的语义需求表示（SRR）来检测这类漂移，并评估了 6 种工作流，从确定性比较到多智能体验证再到少样本提示。在 10 个工程领域 300 条需求的 890 个合成扰动上，单次 LLM 调用 + 6 个少样本示例即达 MCC=0.888、F1=0.983，优于所评估的结构化与多阶段方案；在 PAWS-X（5 语言）与 XNLI（7 语言）上进一步揭示结构化与 LLM 方法的互补强弱。核心结论颇具反直觉：更高的 agentic 复杂度并不必然提升语义漂移检测，简单少样本提示已是高效且强力的替代。这对「需求→规约→RTL」链路中需求一致性的自动化校验有直接借鉴意义。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.08801" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.08801_IDRAAK.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">需求验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">语义漂移</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">规范驱动</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">少样本提示</span>
+      </div>
+    </div>
+
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 ZhuLong：执行接地的 LLM EDA 脚本智能体——统一 MCP 工具 + 离线 API 自探索，PyAether 基准 Pass@1 78.5%</div>
+      <div class="abs-meta">arXiv:2608.07925 · cs.AI · 2026-08-08 · Yang Liu, Shiwei Hou, Xiyuan Chen, Yu Wang, Sen Yuan, Qirui Gan, Shao You, Feifan Chen, Wencheng Li, Shuyang Hu, Yongzhou Liu, Emma Xia, Xiaojing Lu, Hao Wang, Fan Xu, Yanfeng Li</div>
+      <div class="abs-body">EDA 脚本依赖特定工具、常无文档的 API，是现有 LLM 难以覆盖的长尾瓶颈。ZhuLong 是面向 PyAether 与 SKILL 的执行接地 LLM 编码智能体，把 API 检索、文档检视与沙箱执行经统一 MCP 工具结合，并用离线 API 自探索机制通过对抗性实验推断无文档 API 行为。在 EDA-Eval-PyAether（158 个带断言执行的真实任务）基准上，完整系统于商用 Empyrean Aether 环境取得 78.5% Pass@1，大幅超越纯 LLM 基线（23.6%）。消融显示沙箱执行是主要驱动力（移除后降 41.2 个百分点），自探索机制额外贡献 3.2 个百分点精度提升与 22.1% 的单任务工具调用减少。在 20 个涉及未保存版图与原理图的交互任务上，PyAether 与 SKILL 分别取得 60.0% 与 50.0% Pass@1。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.07925" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.07925_ZhuLong.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">EDA脚本</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">MCP</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">沙箱执行</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PyAether</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SKILL</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">API自探索</span>
+      </div>
+    </div>
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 ArchAgent v2：以数据预取锦标赛（DPC4）为案例的智能体式微架构发现——级联进化搜索 + 硬件可现实性反馈</div>
+      <div class="abs-meta">arXiv:2608.09874 · cs.AI / cs.AR · 2026-08-10 · Abraham Gonzalez, Raghav Gupta, Akanksha Jain, Hanna Alam, Alexander Novikov, Po-Sen Huang, Matej Balog, Marvin Eisenberger, Sergey Shirobokov, Ngân Vũ, Hank Levy, Borivoje Nikolić, Sagar Karandikar, Martin Dixon, Parthasarathy Ranganathan</div>
+      <div class="abs-body">智能体 AI 在算法设计自动化上表现出色，但扩展到计算机微架构发现仍困难（搜索空间大、硬件预算严、仿真时间长）。ArchAgent v2 将自动微架构搜索扩展到多级数据预取：原版 ArchAgent 在竞赛中发现了单级缓存替换策略，但无法扩展到设计空间更大的多级预取。为此引入两项新增：① 级联进化搜索——按缓存层级顺序进化并冻结各级预取器，细分设计空间；② 硬件可现实性反馈回路——把实时面积估计直接嵌入进化过程。在相同规则的第四届数据预取锦标赛（DPC4）下，ArchAgent v2 自动设计出超越手调冠军方案的三级预取器：相对基线几何均值 IPC 提速 3.8%、相对前冠军 BertiGO 提升 0.3%；低带宽单核配置下提速 4.6%（BertiGO 仅 2.6%）。对一次超 12,000 个候选设计的进化做剖析，揭示了自动进化智能体如何探索与综合复杂微架构逻辑。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.09874" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.09874_ArchAgent_v2.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">微架构搜索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">进化搜索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件可现实性反馈</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">数据预取</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DPC4</span>
+      </div>
+    </div>
     <div class="abs-card">
       <span class="badge-new">NEW</span>
       <div class="abs-title">⚙️ HLSmith：专家知识引导的 C/C++→HLS 翻译智能体框架——PolyBench 上较 ChatHLS 几何平均加速 4.24×，100% 功能正确</div>

@@ -7,9 +7,47 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（59篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（62篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2608.08611 C2C-Explorer -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔗 C2C-Explorer：面向 LLM 云计算系统的片间互连架构探索框架——贝叶斯 DSE，DeepSeek-R1-671B 上 goodput +44.1%、显存 -98.4%</div>
+      <div class="abs-meta">arXiv:2608.08611 · cs.DC · 2026-08-09 · Jiayi Li, Di Wu, Qingxu Li, Hongxiao Zhao, Jiaqi Yang, Anjunyi Fan, Wenbin Zhang, Boqiang Wu, Shuting Liu, Shifeng Fang, Jianbo Dong, Dimin Niu, Bonan Yan</div>
+      <div class="abs-body">大模型 Scaling 要求多处理器芯片架构，使片间（C2C）通信愈发关键。但为 LLM 负载设计高效 C2C 硬件面临三难：生成真实 LLM 专属 C2C 流量、在规模上准确仿真硬件级通信、高效探索指数级设计空间。C2C-Explorer 是一个自适应贝叶斯 DSE 框架，把 LLM 负载驱动的流量生成器、可扩展互连仿真器（支持开关/全 mesh，规模达 512 chip）与度量引导的评估器整合成「负载→硬件」的协同优化流水线。以 FPGA 原型验证，其 C2C 仿真器在多种流量模式下端到端时序误差仅 2.46%–8.23%，混合周期-事件模型较纯周期精确基线加速达 7.8×；应用于 32-XPU 的 DeepSeek-R1-671B 推理负载，C2C-Explorer 找到的配置使 goodput 提升 44.1%、显存降低 98.4%。项目已开源（github.com/Selinaee/C2C-Explorer），对 chiplet 系统互连协同设计是直接可用的工具。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.08611" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.08611_C2C-Explorer.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Chiplet</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">片间互连</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DSE</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">贝叶斯优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源</span>
+      </div>
+    </div>
+
+    <!-- 2510.15968 SAU-FNO -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🌡️ SAU-FNO：自注意力 U-Net 傅里叶神经算子用于 3D-IC 热仿真——SOTA 精度，较传统 FEM 加速 842×</div>
+      <div class="abs-meta">arXiv:2510.15968 · cs.LG · 2025-10-12（v2 更新）· Zhen Huang, Hong Wang, Wenkai Yang, Muxi Tang, Depeng Xie, Ting-Jung Lin, Yu Zhang, Wei W. Xing, Lei He</div>
+      <div class="abs-body">3D-IC 因功率密度升高，热管理日益困难；传统 PDE 求解准确但太慢，难以支撑迭代式设计，而 FNO 等 ML 方法存在高频信息丢失与对高保真数据依赖的问题。SAU-FNO（Self-Attention U-Net Fourier Neural Operator）把自注意力与 U-Net 同 FNO 结合，兼顾长程依赖与局部高频特征；并采用迁移学习用低保真数据微调，降低对昂贵高保真数据集的需求。实验显示 SAU-FNO 取得当前最优的 3D-IC 热预测精度，较传统 FEM 方法加速 842×，是先进 3D-IC 热仿真的有效工具，对多物理场 AI 分析有直接价值。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2510.15968" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2510.15968_SAU-FNO.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">3D-IC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">热仿真</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">神经算子</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多物理场</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">迁移学习</span>
+      </div>
+    </div>
+
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 ReVolt：面向 2.5D PIM Chiplet 的供电网络感知电压跌落控制——LSTM PDN 代理 + 运算单元尺寸调控，EDP 平均降 76×</div>
+      <div class="abs-meta">arXiv:2608.08496 · cs.AR / cs.ET · 2026-08-09 · Vibhanshu Sharma, Alish Kanani, Miao Sun, Janardhan Rao Doppa, Umit Y. Ogras, Partha Pratim Pande（ESWEEK-26 已接收）</div>
+      <div class="abs-body">基于存内计算（PIM）的 2.5D 多芯粒平台是 ML 工作负载的重要使能技术，但其性能受供电网络（PDN）影响——各芯粒层级电流需求变化引发时空变化的电压跌落，导致电压违例、系统性能下降并影响推理精度。ReVolt 提出基于动态运算单元（OU）尺寸的框架来缓解 PIM 多芯粒系统中的电压跌落：用 LSTM 基 PDN 代理在运行时预测各芯粒供电电压轨迹，主动调整 OU 尺寸以缓解跌落事件；把 OU 尺寸作为控制旋钮，在维持计算精度的同时调节芯粒层级电流需求。实验表明 ReVolt 在防止电压跌落违例的同时，相对现有固定与动态 OU 基线平均降低 EDP 达 76×，且不损害 ML 模型推理精度。属 IEEE/ACM Embedded Systems Week (ESWEEK-26) 已接收。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.08496" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.08496_ReVolt.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">后端物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PDN</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">电压跌落</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Chiplet 2.5D</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PIM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LSTM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多物理场</span>
+      </div>
+    </div>
     <div class="abs-card">
       <span class="badge-new">NEW</span>
       <div class="abs-title">⚡ G-Power：跨芯片知识聚合的架构级 GPU 功耗建模——MAPE 14% / R 0.88，较 AccelWattch MAPE 降 22 个百分点（DAC 2026）</div>

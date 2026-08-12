@@ -1108,3 +1108,14 @@
 - **计数（终态）**：manifest papers 248->253、news 181->183、batches 100->101、lastUpdate 2026-08-06；分类头 agent 30->32 / analog 28->30 / physical 54->55；dates/latest[] 顶部均为 2026-08-06（count=7）。
 - **一致性**：news_memory 183 == 新闻页去重数 183 == manifest.news 183；PDF 本地链接与磁盘文件一致。
 - **Git**：本地提交 auto update: 2026-08-06（含 08-05 未推送提交，共 2 个待推送）；push origin main 进行中（此前 08-05 push 因出口 reset 失败，本次重试）。
+
+---
+
+## 2026-08-11 执行摘要（auto update: 2026-08-11）
+- **触发**：AI4EDA 每日自动化（weekday 05:00）。本轮为续跑：页面与清单已在前期轮次生成并提交，本轮负责核对落地 + 推送。
+- **08-11 批次内容（前期轮次已生成并 commit b5963d5）**：
+  - 论文 3 篇（papers 259→262）：HLSmith（2608.06791，C/C++→HLS 专家引导智能体，PolyBench 几何均值 4.24×、100% 功能正确）、G-Power（2608.06870，跨芯片知识聚合的架构级 GPU 功耗建模，DAC'26，MAPE 14%/R 0.88）、PowerScope（2608.05339，ML 周期内功耗估计，中位误差 5.88%、提速 ~80×）。
+  - 行业动态 3 条（news 188→191，已去重入 news_memory）：🇨🇳 IC Coder 2.0 国产 FPGA 研发智能体、kicad-mcp-pro（KiCad MCP 渐进披露安全模型，08-10 连推 5 PR）、Babel v1.3（开源 AI 原生 Chiplet 设计流程，5-Agent + 可追溯）。
+  - 本地 PDF 3 份均已落地 content/dates/（HLSmith 12.0MB / G-Power 1.4MB / PowerScope 3.0MB，%PDF 校验通过），HTML 本地链接与磁盘一致。
+- **一致性校验通过**：news_memory.totalItems 191 == 新闻页去重数 == manifest.news 191；manifest papers 262 / batches 103 / lastUpdate 2026-08-11；dates[]/latest[] 顶部均为 2026-08-11（count=6）。
+- **Git**：本地 2 提交领先 origin/main（b5963d5 auto update: 2026-08-11 + 23c7129 auto update: 2026-08-07），工作树干净。⚠️ push origin main 两次均失败（Connection closed by UNKNOWN port 65535 / Could not read from remote repository），属已知出口网络阻断；提交已安全留存本地，待网络恢复后续轮重试推送。
