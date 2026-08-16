@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-17 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 1 条行业动态 · 来源：arXiv（cs.AR，08-13 公告批次）+ 行业动态（SemiEngineering WIR #151）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- NEWS: SemiEngineering WIR #151 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Chip Industry Week In Review #151 · 行业周综述 · 2026-08-14</div>
+      <h4>📰 SemiEngineering WIR #151：Google 加入 OpenROAD Initiative 推动开源硅创新 · Samsung 采用 Anthropic Claude Code 缩短定制 SoC 功能验证周期 · Applied Materials 先进封装设备营收预计 +70%</h4>
+      <p>本周半导体产业综述中，多条与 AI4EDA / 开源 EDA 生态直接相关：①<strong>Google 加入 OpenROAD Initiative</strong>，支持开源硅创新（open-source silicon innovation），为 OpenROAD 开源 RTL-to-GDS 路线新增重量级工业界背书；②<strong>Samsung 采用 Anthropic Claude Code</strong>，据 ChosunBiz 报道显著缩短了定制 SoC 的功能验证（functional verification）周期与早期软件开发周期，是 LLM Agent 进入大厂芯片验证流程的又一落地信号；③<strong>Applied Materials 预计 2026 年先进封装设备业务营收增长超 70%</strong>，由 HBM 与 3D chiplet 堆叠投资驱动，印证多芯粒/先进封装 AI 设计需求持续走高；④<strong>Movellus 的 Aeonic 片内遥测 / 时钟 IP / 压降响应系统</strong>通过 Samsung Advanced Foundry Ecosystem 向先进节点开放。其余要点（韩国 ~$3.5B 半导体基金、Siemens $200M+ 数据中心电气产能扩张、Onto 收购 Rigaku 27% 股权、Discovered Materials $9M 用 AI Agent 发现半导体新材料）亦构成 AI4EDA 产业链背景。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">SemiEngineering</span>
+        <span class="tag">WIR #151</span>
+        <span class="tag">OpenROAD</span>
+        <span class="tag">Google</span>
+        <span class="tag">Anthropic Claude Code</span>
+        <span class="tag">Samsung SoC 验证</span>
+        <span class="tag">先进封装</span>
+        <span class="tag">HBM</span>
+        <span class="tag">3D chiplet</span>
+      </div>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-151/" target="_blank">→ SemiEngineering：Chip Industry Week In Review #151</a>
+    </div>
+
+    <!-- 2608.12751 SynAct: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-13 · Fangzhou Liu, Peiyi Han, Jiawei Liu, Yuan Pu, Zhuolun He, Rongliang Fu, Tsung-Yi Ho, Bei Yu</div>
+      <h4>📐 SynAct：面向自适应逻辑综合优化的「推理-行动」LLM 智能体——迭代诊断实时综合报告优化时序（WNS 降至引导综合的 27%）</h4>
+      <p>逻辑综合是 PPA 收敛的关键环节，但现有 LLM 方法难以针对具体设计的时序报告做自适应优化。SynAct 提出一个<strong>闭环 LLM 推理-行动（reasoning-acting）智能体</strong>，迭代诊断<strong>实时逻辑综合报告</strong>以优化时序（WNS）：智能体读入综合工具反馈、定位关键路径违例、生成修改建议并重新综合，形成「分析→行动→再评估」的反馈闭环。在 14 个设计上，SynAct 将平均 WNS 降至<strong>引导综合（guided synthesis）的 27%</strong>，显著优于一次性生成或纯 SFT 基线。作者含香港中文大学 Bei Yu 组与 Tsung-Yi Ho 组，是「LLM 智能体 + 综合报告反馈闭环」在<strong>后端物理设计时序收敛</strong>方向的高信号工作，对「RTL→综合 PPA 自动优化」有直接方法论价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">逻辑综合</span>
+        <span class="tag">LLM智能体</span>
+        <span class="tag">时序优化</span>
+        <span class="tag">WNS</span>
+        <span class="tag">反馈闭环</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">Bei Yu</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.12751" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.12751_SynAct.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.12684 Spec-Driven Hardware Evolution: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.PL · 2026-08-13 · Shibo Zhao, Yang Zhang, Mengxia Tao, Baoqi Zhang, Kezhi Li, Qiang Xu, Binwu Zhu, Hao Yan, Min Li</div>
+      <h4>🔧 Spec-Driven Hardware Evolution：基于可执行契约细化与证明引导的 RTL 更新——以规范演化驱动可信硬件特性迭代</h4>
+      <p>硬件特性随需求演进，但遗留 RTL 的增量更新常破坏正确性。本文提出以<strong>可执行契约（executable contract）</strong>为中心的 RTL 版本演进方法：通过<strong>规范细化（specification refinement）</strong>将新需求分解到可验证的契约增量，并以<strong>证明引导（proof-guided）</strong>方式更新遗留 RTL，使每次演进都伴随形式化正确性证据。该方法把「规范—契约—RTL」纳入统一的可演进框架，支持受信硬件（trusted hardware）的特性迭代而不丢失既有验证投资。作者含香港中文大学 Qiang Xu（徐强）组，延续其「契约/RTL 正确性」研究方向，对「规范驱动 RTL 生成 / RTL-to-Specification 自动生成」与「验证反馈闭环」方向是直接补充（可与 VeriRefine 等规范精化工作对照阅读）。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">规范驱动</span>
+        <span class="tag">可执行契约</span>
+        <span class="tag">证明引导</span>
+        <span class="tag">形式化</span>
+        <span class="tag">硬件演化</span>
+        <span class="tag">Qiang Xu</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.12684" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.12684_SpecDrivenHWEvolution.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.13027 Why Do Prefetchers Fail?: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-13 · Xiangfeng Sun, Ceyu Xu, Ningzhi Ai, Zeyu Zhu, Yiyang Yuan, Yuan Xie</div>
+      <h4>🤖 Why Do Prefetchers Fail? Let Agents Answer：性能异常驱动的代理自动研究流，消耗 19.1 亿 token 构建超越人类设计的 RTL 实用预取器</h4>
+      <p>预取器设计高度依赖专家经验与反复试错。本文提出<strong>性能异常驱动（performance-anomaly-driven）的代理自动研究流（agent auto-research flow）</strong>：代理自动构建混合预取器 MoP，依据性能计数器异常定位瓶颈、提出假设、生成并评估 RTL 实现，形成「观测→假设→生成 RTL→验证」的闭环。该流程消耗 <strong>19.1 亿（1.91B）token</strong>，最终产出一个<strong>超越人类设计的实用 RTL 预取器</strong>。作者含 Yuan Xie（谢源）组，展示了「大型智能体自主完成从问题定义到 RTL 生成」的可行性，对「LLM 结合智慧体协作的 RTL 生成-验证-反馈闭环」是具象化的工程案例，亦呼应「RTL-to-Specification / Specification-to-RTL」双向自动化的研究趋势。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">智能体</span>
+        <span class="tag">预取器</span>
+        <span class="tag">自动研究流</span>
+        <span class="tag">架构设计</span>
+        <span class="tag">反馈闭环</span>
+        <span class="tag">Yuan Xie</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.13027" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.13027_WhyDoPrefetchersFail.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

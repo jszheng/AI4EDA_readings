@@ -1,8 +1,30 @@
 {
-  "lastUpdate": "2026-08-13",
+  "lastUpdate": "2026-08-17",
   "cutoffDate": "2026-02-17",
-  "totalItems": 195,
+  "totalItems": 196,
   "items": [
+    {
+      "date": "2026-08-14",
+      "company": "SemiEngineering",
+      "title": "📰 Chip Industry Week In Review #151：Google 加入 OpenROAD Initiative 推动开源硅创新 · Samsung 采用 Anthropic Claude Code 缩短定制 SoC 功能验证周期 · Applied Materials 先进封装设备营收预计 +70%",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-151/",
+      "keywords": [
+        "SemiEngineering",
+        "WIR #151",
+        "周综述",
+        "Google",
+        "OpenROAD Initiative",
+        "开源硅创新",
+        "Anthropic Claude Code",
+        "Samsung SoC 功能验证",
+        "Applied Materials",
+        "先进封装",
+        "HBM",
+        "3D chiplet",
+        "Movellus Aeonic",
+        "2026-08-14"
+      ]
+    },
     {
       "date": "2026-08-13",
       "company": "chip-claw (zhoujy22)",

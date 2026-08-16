@@ -7,9 +7,36 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（76篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（78篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2608.12684 Spec-Driven Hardware Evolution -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔧 Spec-Driven Hardware Evolution：基于可执行契约细化与证明引导的 RTL 更新——以规范演化驱动可信硬件特性迭代</div>
+      <div class="abs-meta">arXiv:2608.12684 · cs.AR / cs.PL · 2026-08-13 · Shibo Zhao, Yang Zhang, Mengxia Tao, Baoqi Zhang, Kezhi Li, Qiang Xu, Binwu Zhu, Hao Yan, Min Li</div>
+      <div class="abs-body">硬件特性随需求演进，但遗留 RTL 的增量更新常破坏正确性。本文提出以可执行契约（executable contract）为中心的 RTL 版本演进方法：通过规范细化（specification refinement）将新需求分解到可验证的契约增量，并以证明引导（proof-guided）方式更新遗留 RTL，使每次演进都伴随形式化正确性证据。该方法把「规范—契约—RTL」纳入统一的可演进框架，支持受信硬件（trusted hardware）的特性迭代而不丢失既有验证投资。作者含香港中文大学 Qiang Xu（徐强）组，延续其「契约/RTL 正确性」研究方向，对「规范驱动 RTL 生成 / RTL-to-Specification 自动生成」与「验证反馈闭环」方向是直接补充。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.12684" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.12684_SpecDrivenHWEvolution.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">规范驱动</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可执行契约</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">证明引导</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Qiang Xu</span>
+      </div>
+    </div>
+
+    <!-- 2608.13027 Why Do Prefetchers Fail? -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 Why Do Prefetchers Fail? Let Agents Answer：性能异常驱动的代理自动研究流，消耗 19.1 亿 token 构建超越人类设计的 RTL 实用预取器</div>
+      <div class="abs-meta">arXiv:2608.13027 · cs.AR · 2026-08-13 · Xiangfeng Sun, Ceyu Xu, Ningzhi Ai, Zeyu Zhu, Yiyang Yuan, Yuan Xie</div>
+      <div class="abs-body">预取器设计高度依赖专家经验与反复试错。本文提出性能异常驱动（performance-anomaly-driven）的代理自动研究流（agent auto-research flow）：代理自动构建混合预取器 MoP，依据性能计数器异常定位瓶颈、提出假设、生成并评估 RTL 实现，形成「观测→假设→生成 RTL→验证」的闭环。该流程消耗 19.1 亿（1.91B）token，最终产出一个超越人类设计的实用 RTL 预取器。作者含 Yuan Xie（谢源）组，展示了「大型智能体自主完成从问题定义到 RTL 生成」的可行性，对「LLM 结合智慧体协作的 RTL 生成-验证-反馈闭环」是具象化的工程案例，亦呼应「RTL-to-Specification / Specification-to-RTL」双向自动化的研究趋势。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.13027" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.13027_WhyDoPrefetchersFail.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">预取器</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">自动研究流</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">架构设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Yuan Xie</span>
+      </div>
+    </div>
+
     <!-- 2608.12197 NetlistBench -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>
