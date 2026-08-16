@@ -1,3 +1,20 @@
+## 2026-08-13（自动更新 — 2 篇论文 + 2 条行业动态 · 续跑收尾）
+
+- 本批为 08-13 续跑会话完成收尾：date/latest/新论文/新闻卡片、分类页、清单、记忆已于前置步骤创建，本次补齐一致性核验、记忆更新与 git 提交。
+- 新增论文 2 篇（均站内未收录，经 arXiv API 2026-08-10/08-12 公告批次核验）：
+  - 🧪 2608.10090 CHORUS — LLM testbench 激励生成「互补专家」后训练框架（4B 模型 CVDP-ECov 88.0% Pass@1，超 DeepSeek-R1 13.5pt，NVIDIA/Jishen Zhao）→ 功能验证（verify 33→34）
+  - 📊 2608.12197 NetlistBench — LLM SPICE 网表识别/操作可靠性基准（2342 例/24 任务族，MLCAD 2026 录用）→ RTL生成（rtl 75→76）
+- 行业动态 2 条（均开源，news_memory 未收录，非 DAC reprint）：
+  - 🔧 chip-claw (zhoujy22) — 从零实现的 RTL 设计 Agent（mini-claude 架构、四层上下文压缩、文件记忆、子代理、双后端）
+  - 🔧 K-RAG_guided_RTLGEN (erohsik10) — 知识 RAG（AST+DFG 双视图）引导 GenAI RTL 生成
+- 排除：08-11/08-12 的 Synopsys×AMD×Microsoft、Siemens Fuse、NVIDIA ACE-RTL 等 DAC 2026 厂商动态已在 news_memory（07/08 录入），属 reprint → 不重复收录。cs.AR 其余候选（FQTree/Uni-SFU/CARB/AdaptCore 等）为加速器/CIM 架构，超出 AI4EDA 策展范围。
+- 同步产物：content/dates/2026-08-13.html & content/latest/2026-08-13.html（各 4 卡，2 PDF 已下载至 content/dates/）、content/news/index.html（08-13 section 2 卡）、content/news/news_memory.json（totalItems 193→195，新增 2 条，lastUpdate 2026-08-13，cutoffDate 2026-02-17）、content/categories/verify.html & rtl.html（新增卡片，header 34/76）、manifest.js（papers 271→273, news 193→195, batches 104, lastUpdate 2026-08-13，latest/dates 顶部新增 08-13 count=4）。
+- 一致性：news/index.html 08-13 段 badge/h3/badge-count=2，段内 abs-card=2；news_memory.totalItems 195；manifest news 195 一致。
+- 过期清理：cutoffDate 推进至 2026-02-17（180 天窗口）；未做批量删除（仅更新阈值）。
+- Git：commit "auto update: 2026-08-13" 并 push origin/main。
+
+---
+
 ## 2026-07-27（自动更新 — 0 篇论文 + 4 条行业动态 · 并发合并收尾）
 
 - 本日无新论文：经 cs.AR/new live listing 核验，arXiv 周末排程下最新公告仅到 2026-07-23，07-24→07-27 区间内无新增 AI4EDA 论文（周一公告尚未入库）。已排除重复：WaveformQA(2607.20638)、华大九天/UCAgent、Self-Evolved ABC(2604.15082) 均在站内 → 不收录。papers 维持 227。

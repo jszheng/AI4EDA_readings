@@ -140,6 +140,55 @@
   <a href="#2026-04-12">260412 🔥 2026 AI EDA 企业格局全景</a>
 </nav>
 <div class="container">
+<section id="2026-08-13">
+  <div class="section-title"><span class="icon">🌍</span> 2026-08-13 <span class="badge-new">2条行业动态（2 开源）</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-08-13 行业动态（2条）</h3>
+      <span class="badge-count">2</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+
+    <!-- NEWS: chip-claw -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · zhoujy22/chip-claw · 开源项目 · TypeScript / mini-claude 架构 · 双后端（Anthropic + OpenAI 兼容）</div>
+      <h4>🔧 chip-claw：从零实现的 RTL 设计 Agent——自然语言生成可综合 Verilog + testbench，四层上下文压缩 + 文件记忆 + 子代理</h4>
+      <p>chip-claw 是一个基于 <strong>mini-claude 架构</strong>、用 TypeScript 从零实现的 RTL 设计 Agent。核心能力：①<strong>RTL 生成</strong>——用自然语言描述模块功能，自动生成可综合 Verilog 代码与配套 testbench；②<strong>Agent 循环</strong>——流式 LLM 调用 + 工具使用，支持自动重试、预算控制（<code>--max-cost</code> / <code>--max-turns</code>）、中断恢复（Ctrl+C）；③<strong>上下文管理</strong>——四层压缩管道保证长会话不溢出上下文窗口（Budget 动态裁剪大体量工具结果 / Snip 占位符替换过时读取 / Microcompact prompt-cache 过期后激进清理 / Auto-compact 达 85% 容量时 LLM 生成摘要）；④<strong>记忆系统</strong>——基于文件的持久化记忆（user / feedback / project / reference 四类），通过 LLM sideQuery 异步语义召回；⑤<strong>Skill 系统</strong>——斜杠命令工作流（<code>/gen-module</code>、<code>/verify</code>、<code>/lint-fix</code>）；⑥<strong>RTL 知识库</strong>——通过 submodule 提供可复用 RTL 规范/协议/模板/testbench/bug pattern，生成前检索相关经验；⑦<strong>SubAgent</strong>——将探索/规划/代码审查委派给隔离子 Agent 实例；⑧<strong>双后端</strong>同时支持 Anthropic API 与任意 OpenAI 兼容接口，CLI 经 <code>npm link</code> / <code>npm pack</code> 安装。这是「LLM 原生 RTL 设计智能体 + 长上下文工程化」方向的轻量开源代表作，对「开源 EDA AI Skills / Agents 新能力」有参考价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">开源</span>
+        <span class="tag">RTL设计Agent</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">mini-claude</span>
+        <span class="tag">上下文压缩</span>
+        <span class="tag">记忆系统</span>
+        <span class="tag">子代理</span>
+        <span class="tag">双后端</span>
+      </div>
+      <a href="https://github.com/zhoujy22/chip-claw" target="_blank">→ GitHub：zhoujy22/chip-claw</a>
+    </div>
+
+    <!-- NEWS: K-RAG_guided_RTLGEN -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · erohsik10/K-RAG_guided_RTLGEN · 开源项目 · 最新提交 2026-08-06 · 早期阶段（README + 思路博客，2 commits）</div>
+      <h4>🔧 K-RAG_guided_RTLGEN：基于知识 RAG（AST + DFG 双视图）的 GenAI RTL 生成器</h4>
+      <p>K-RAG_guided_RTLGEN 是一个 <strong>GenAI 驱动的 RTL 生成器</strong>，用<strong>知识 RAG（Knowledge RAG）</strong>引导生成过程，其知识库同时基于 <strong>AST（抽象语法树）</strong>与 <strong>DFG（数据流图）</strong>两种代码视图构建。核心思路：把 RTL 代码的结构化知识（语法树拓扑 + 数据依赖）作为检索对象，在生成前/生成中召回相关模式，提升 LLM 产出 RTL 的正确性，缓解纯生成式方法在语义与结构一致性上的短板。项目定位为早期研究型仓库，延续了 <strong>AutoVCoder 领域特定 RAG</strong> 等「RAG 增强 RTL 生成」路线，并以 AST+DFG 双视图扩展结构化知识表征。对用户关注方向中的「<strong>RAG for Verilog</strong> / 检索增强 RTL 生成」是直接补充，可作为后续工程化（接入 Verilator/Yosys 反馈闭环）的起点参考。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">开源</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">RAG</span>
+        <span class="tag">AST</span>
+        <span class="tag">DFG</span>
+        <span class="tag">知识检索</span>
+      </div>
+      <a href="https://github.com/erohsik10/K-RAG_guided_RTLGEN" target="_blank">→ GitHub：erohsik10/K-RAG_guided_RTLGEN</a>
+    </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 <section id="2026-08-12">
   <div class="section-title"><span class="icon">🌍</span> 2026-08-12 <span class="badge-new">2条行业动态（2 开源）</span> <span class="line"></span></div>
   <div class="date-group">

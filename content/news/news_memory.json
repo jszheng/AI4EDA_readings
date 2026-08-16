@@ -1,8 +1,42 @@
 {
-  "lastUpdate": "2026-08-12",
-  "cutoffDate": "2026-02-05",
-  "totalItems": 193,
+  "lastUpdate": "2026-08-13",
+  "cutoffDate": "2026-02-17",
+  "totalItems": 195,
   "items": [
+    {
+      "date": "2026-08-13",
+      "company": "chip-claw (zhoujy22)",
+      "title": "🔧 chip-claw：从零实现的 RTL 设计 Agent——自然语言生成可综合 Verilog + testbench，四层上下文压缩 + 文件记忆 + 子代理",
+      "link": "https://github.com/zhoujy22/chip-claw",
+      "keywords": [
+        "chip-claw",
+        "开源",
+        "RTL设计Agent",
+        "TypeScript",
+        "mini-claude",
+        "上下文压缩",
+        "记忆系统",
+        "子代理",
+        "双后端",
+        "2026-08-13"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "company": "K-RAG_guided_RTLGEN (erohsik10)",
+      "title": "🔧 K-RAG_guided_RTLGEN：基于知识 RAG（AST + DFG 双视图）的 GenAI RTL 生成器",
+      "link": "https://github.com/erohsik10/K-RAG_guided_RTLGEN",
+      "keywords": [
+        "K-RAG_guided_RTLGEN",
+        "开源",
+        "RTL生成",
+        "RAG",
+        "AST",
+        "DFG",
+        "知识检索",
+        "2026-08-13"
+      ]
+    },
     {
       "date": "2026-08-11",
       "company": "IC Coder 2.0 / 电子创新网",

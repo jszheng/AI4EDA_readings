@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（33篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（34篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+
+    <!-- 2608.10090 CHORUS -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🧪 CHORUS：面向高覆盖 testbench 激励生成的「互补专家」后训练框架——4B 模型在 CVDP-ECov 达 88.0% Pass@1，超 DeepSeek-R1(671B) 13.5 个百分点</div>
+      <div class="abs-meta">arXiv:2608.10090 · cs.AI / cs.LG · 2026-08-10 · Hejia Zhang, Sheng Lu, Zhongming Yu, Chia-Tung Ho, Brucek Khailany, Jishen Zhao</div>
+      <div class="abs-body">硬件验证消耗现代芯片设计的大量精力，高覆盖 testbench 激励生成是关键任务。CHORUS 提出一个超越「常规 SFT → RL」流水线的后训练框架，核心基于两点观察：①分阶段 SFT 产生行为多样的 checkpoint，稠密奖励 RL 把它们变成聚合性能相近、但任务级优势各异的强专家；②这些互补优势可通过免训练模型合并（training-free model merging）或进一步后训练来利用，从而超越最优单专家。最终把多位专家整合进单个 4B 模型，在 CVDP-ECov 基准上取得 88.0% Pass@1，较 DeepSeek-R1（671B）高出 13.5 个百分点。作者含 NVIDIA（Brucek Khailany）与 Jishen Zhao，是「LLM 驱动验证激励生成 / 验证反馈闭环」方向的高信号工作，对小模型高效化验证生成有直接启示。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.10090" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.10090_CHORUS.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">testbench</span><span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">激励生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM后训练</span><span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">模型合并</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">NVIDIA</span>
+      </div>
+    </div>
 
     <!-- 2608.08462 ARMOR -->
     <div class="abs-card">

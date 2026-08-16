@@ -7,9 +7,21 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（75篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（76篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+    <!-- 2608.12197 NetlistBench -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📊 NetlistBench：评测 LLM 在 SPICE 网表识别与操作上的可靠性——2342 例 / 24 任务族，确定性结构预言机揭示「结构保持」瓶颈</div>
+      <div class="abs-meta">arXiv:2608.12197 · eess.SY / cs.AI · 2026-08-12 · Jiarui Ma, Jianghan Wang, Yuheng Ma, Ziyi Zhuang, Xiaoguang Liu（已录用 MLCAD 2026）</div>
+      <div class="abs-body">LLM 越来越多用于电路设计工作流，但其在面向仿真器的 SPICE 网表识别与操作上的可靠性仍知之甚少，且常被混同于高层设计推理。NetlistBench 提出一个结构验证（structure-verified）基准：含 2,342 例、覆盖 24 个任务族，包括参数/连接关系识别与编辑、层次化操作、等价性判断、长程复合编辑。模型输出由确定性结构感知预言机评估。在 6 个非思考（non-thinking）LLM 上：简单局部编辑达 96%–100% 准确率，而器件添加降至 41%–83%、等价性判断降至 49%–90%；开启推理显著提升弱模型但未消除结构保持失败，且随编辑跨度（edit horizon）增大性能急剧退化。论文将「网表可靠性」确立为可信 LLM 电路设计自动化的独立瓶颈——对「LLM→网表/RTL 生成」反馈闭环的评测与纠错有直接方法论价值（MLCAD 2026 录用）。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.12197" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.12197_NetlistBench.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">电路生成</span><span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">SPICE网表</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM可靠性</span><span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">基准评测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">结构保持</span><span style="color:var(--accent2);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent2);border-radius:8px;">MLCAD 2026</span>
+      </div>
+    </div>
     <div class="abs-card">
       <span class="badge-new">NEW</span>
       <div class="abs-title">⚡ HINT：面向 LLM 驱动 RTL 生成的可执行「硬件意图」中间表示层——7/7 案例产出契约合规可综合 RTL</div>

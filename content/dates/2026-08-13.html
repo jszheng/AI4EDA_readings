@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-13 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 2 条行业动态 · 来源：arXiv（cs.AI / cs.LG / eess.SY，08-10 / 08-12 公告批次）+ 开源动态（chip-claw / K-RAG_guided_RTLGEN）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- NEWS: chip-claw -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · zhoujy22/chip-claw · 开源项目 · TypeScript / mini-claude 架构 · 双后端（Anthropic + OpenAI 兼容）</div>
+      <h4>🔧 chip-claw：从零实现的 RTL 设计 Agent——自然语言生成可综合 Verilog + testbench，四层上下文压缩 + 文件记忆 + 子代理</h4>
+      <p>chip-claw 是一个基于 <strong>mini-claude 架构</strong>、用 TypeScript 从零实现的 RTL 设计 Agent。核心能力：①<strong>RTL 生成</strong>——用自然语言描述模块功能，自动生成可综合 Verilog 代码与配套 testbench；②<strong>Agent 循环</strong>——流式 LLM 调用 + 工具使用，支持自动重试、预算控制（<code>--max-cost</code> / <code>--max-turns</code>）、中断恢复（Ctrl+C）；③<strong>上下文管理</strong>——四层压缩管道保证长会话不溢出上下文窗口（Budget 动态裁剪大体量工具结果 / Snip 占位符替换过时读取 / Microcompact prompt-cache 过期后激进清理 / Auto-compact 达 85% 容量时 LLM 生成摘要）；④<strong>记忆系统</strong>——基于文件的持久化记忆（user / feedback / project / reference 四类），通过 LLM sideQuery 异步语义召回；⑤<strong>Skill 系统</strong>——斜杠命令工作流（<code>/gen-module</code>、<code>/verify</code>、<code>/lint-fix</code>）；⑥<strong>RTL 知识库</strong>——通过 submodule 提供可复用 RTL 规范/协议/模板/testbench/bug pattern，生成前检索相关经验；⑦<strong>SubAgent</strong>——将探索/规划/代码审查委派给隔离子 Agent 实例；⑧<strong>双后端</strong>同时支持 Anthropic API 与任意 OpenAI 兼容接口，CLI 经 <code>npm link</code> / <code>npm pack</code> 安装。这是「LLM 原生 RTL 设计智能体 + 长上下文工程化」方向的轻量开源代表作，对「开源 EDA AI Skills / Agents 新能力」有参考价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">开源</span>
+        <span class="tag">RTL设计Agent</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">mini-claude</span>
+        <span class="tag">上下文压缩</span>
+        <span class="tag">记忆系统</span>
+        <span class="tag">子代理</span>
+        <span class="tag">双后端</span>
+      </div>
+      <a href="https://github.com/zhoujy22/chip-claw" target="_blank">→ GitHub：zhoujy22/chip-claw</a>
+    </div>
+
+    <!-- NEWS: K-RAG_guided_RTLGEN -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · erohsik10/K-RAG_guided_RTLGEN · 开源项目 · 最新提交 2026-08-06 · 早期阶段（README + 思路博客，2 commits）</div>
+      <h4>🔧 K-RAG_guided_RTLGEN：基于知识 RAG（AST + DFG 双视图）的 GenAI RTL 生成器</h4>
+      <p>K-RAG_guided_RTLGEN 是一个 <strong>GenAI 驱动的 RTL 生成器</strong>，用<strong>知识 RAG（Knowledge RAG）</strong>引导生成过程，其知识库同时基于 <strong>AST（抽象语法树）</strong>与 <strong>DFG（数据流图）</strong>两种代码视图构建。核心思路：把 RTL 代码的结构化知识（语法树拓扑 + 数据依赖）作为检索对象，在生成前/生成中召回相关模式，提升 LLM 产出 RTL 的正确性，缓解纯生成式方法在语义与结构一致性上的短板。项目定位为早期研究型仓库，延续了 <strong>AutoVCoder 领域特定 RAG</strong> 等「RAG 增强 RTL 生成」路线，并以 AST+DFG 双视图扩展结构化知识表征。对用户关注方向中的「<strong>RAG for Verilog</strong> / 检索增强 RTL 生成」是直接补充，可作为后续工程化（接入 Verilator/Yosys 反馈闭环）的起点参考。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">开源</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">RAG</span>
+        <span class="tag">AST</span>
+        <span class="tag">DFG</span>
+        <span class="tag">知识检索</span>
+      </div>
+      <a href="https://github.com/erohsik10/K-RAG_guided_RTLGEN" target="_blank">→ GitHub：erohsik10/K-RAG_guided_RTLGEN</a>
+    </div>
+
+    <!-- 2608.10090 CHORUS: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.LG · 2026-08-10 · Hejia Zhang, Sheng Lu, Zhongming Yu, Chia-Tung Ho, Brucek Khailany, Jishen Zhao（arXiv 预印本）</div>
+      <h4>🧪 CHORUS：面向高覆盖 testbench 激励生成的「互补专家」后训练框架——4B 模型在 CVDP-ECov 达 88.0% Pass@1，超 DeepSeek-R1(671B) 13.5 个百分点</h4>
+      <p>硬件验证消耗现代芯片设计的大量精力，<strong>高覆盖 testbench 激励生成</strong>是关键任务。CHORUS 提出一个超越「常规 SFT → RL」流水线的<strong>后训练框架</strong>，核心基于两点观察：①分阶段 SFT 产生行为多样的 checkpoint，稠密奖励 RL 把它们变成聚合性能相近、但任务级优势各异的<strong>强专家</strong>；②这些<strong>互补优势</strong>可通过<strong>免训练模型合并（training-free model merging）</strong>或进一步后训练来利用，从而超越最优单专家。最终把多位专家整合进单个 <strong>4B 模型</strong>，在 <strong>CVDP-ECov</strong> 基准上取得 <strong>88.0% Pass@1</strong>，较 DeepSeek-R1（671B）高出 13.5 个百分点。作者含 NVIDIA（Brucek Khailany）与 Jishen Zhao，是「LLM 驱动验证激励生成 / 验证反馈闭环」方向的高信号工作，对小模型高效化验证生成有直接启示。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">功能验证</span>
+        <span class="tag">testbench</span>
+        <span class="tag">激励生成</span>
+        <span class="tag">LLM后训练</span>
+        <span class="tag">模型合并</span>
+        <span class="tag">NVIDIA</span>
+        <span class="tag">CVDP-ECov</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.10090" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.10090_CHORUS.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.12197 NetlistBench: MLCAD 2026 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · eess.SY / cs.AI · 2026-08-12 · Jiarui Ma, Jianghan Wang, Yuheng Ma, Ziyi Zhuang, Xiaoguang Liu（已录用 MLCAD 2026）</div>
+      <h4>📊 NetlistBench：评测 LLM 在 SPICE 网表识别与操作上的可靠性——2342 例 / 24 任务族，确定性结构预言机揭示「结构保持」瓶颈</h4>
+      <p>LLM 越来越多用于电路设计工作流，但其在<strong>面向仿真器的 SPICE 网表识别与操作</strong>上的可靠性仍知之甚少，且常被混同于高层设计推理。NetlistBench 提出一个<strong>结构验证（structure-verified）</strong>基准：含 <strong>2,342 例</strong>、覆盖 <strong>24 个任务族</strong>，包括参数/连接关系识别与编辑、层次化操作、等价性判断、长程复合编辑。模型输出由<strong>确定性结构感知预言机</strong>评估。在 6 个非思考（non-thinking）LLM 上：简单局部编辑达 96%–100% 准确率，而<strong>器件添加降至 41%–83%、等价性判断降至 49%–90%</strong>；开启推理显著提升弱模型但<strong>未消除结构保持失败</strong>，且随编辑跨度（edit horizon）增大性能急剧退化。论文将「网表可靠性」确立为可信 LLM 电路设计自动化的独立瓶颈——对「LLM→网表/RTL 生成」反馈闭环的评测与纠错有直接方法论价值（MLCAD 2026 录用）。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">电路生成</span>
+        <span class="tag">SPICE网表</span>
+        <span class="tag">LLM可靠性</span>
+        <span class="tag">基准评测</span>
+        <span class="tag">结构保持</span>
+        <span class="tag">MLCAD 2026</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.12197" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.12197_NetlistBench.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
