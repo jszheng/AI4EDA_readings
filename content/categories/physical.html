@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（63篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（64篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2608.13790 PPAPlace -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 PPAPlace：时序驱动的可微分跨阶段代理——以全局布线后标签预测布线后 PPA，WNS/TNS 较层次基线改善 22%/51%（ICCAD 2026）</div>
+      <div class="abs-meta">arXiv:2608.13790 · cs.LG / cs.AI / cs.AR · 2026-08-13 · Ruogu Chen, Jie Han</div>
+      <div class="abs-body">宏布局显著影响布线后 PPA，但 HPWL 与布线后时序（WNS/TNS）近乎零相关，导致现有 AI 布局器 PPA 劣于层次基线。PPAPlace 提出时序驱动可微分代理：双流预测器（网表图注意力 + 布局网格空间卷积）以全局布线后标签训练，预测 WNS/TNS 梯度端到端回流到单元坐标，作为解析布局器协同目标（CoOpt）或布局后投影梯度细化（Refine）。在 5 个训练外 ChiPBench 电路上，相对层次基线平均改善 WNS 22%、TNS 51%，保持功耗与可布线性且无需按测试电路重训。代码已开源，ICCAD 2026 接收。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.13790" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.13790_PPAPlace.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">宏布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序驱动</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可微分代理</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">WNS/TNS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">图注意力</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ICCAD 2026</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ChiPBench</span>
+      </div>
+    </div>
 
     <!-- 2608.12751 SynAct -->
     <div class="abs-card">

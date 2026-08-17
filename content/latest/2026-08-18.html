@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-18 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 2 条行业动态 · 来源：arXiv（cs.AR / cs.LG / cs.AI，08-14 公告批次）+ 行业动态（Siemens EDA Forum Seoul 2026 / easyeda-agent v0.25.0）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- NEWS: Siemens EDA Forum Seoul 2026 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Siemens EDA · Siemens EDA Forum Seoul 2026 · 行业动态 · 2026-08-11</div>
+      <h4>🏛️ Siemens EDA Forum Seoul 2026：发布「AI-Native Design」战略——Fuse EDA AI Agent + NVIDIA 自验证 Agentic AI 工作流（单元表征 weeks→days、处理提速 10×、token 成本降 5–10×）</h4>
+      <p>在 8 月 11 日首尔乐天酒店举行的 Siemens EDA Forum Seoul 2026 上，IC 产品部门 SVP Anchor Gupta 提出贯穿半导体设计全流程的「AI-Native Design」战略。其核心建立在 Siemens 与 NVIDIA 扩大的合作之上：<strong>自验证 Agentic AI（self-verifying agentic AI）工作流</strong>将 Fuse™ EDA AI Agent 与 NVIDIA 加速计算、Nemotron 推理模型、NeMo Gym、Openshell 安全运行时结合，使 AI 智能体能够连接 EDA 引擎、<strong>验证自身决策并自主纠错</strong>。在<strong>单元表征（cell characterization）</strong>环节，搭建与执行时间从数周压缩到数天，处理速度提升 10× 以上，token 成本降低 5–10×。智能体演进路线：去年 6 月 Fuse（自然语言交互）→ 今年 3 月单智能体 → 上月多智能体协作 + 自验证。FY2026 Q3 EDA 业务增长超 30%；Gupta 预测到 2028 年 70% 的芯片将内置 AI 加速器。结果由基于物理的 EDA 引擎（Calibre 被全球百强芯片公司中 98 家采用；Questa+Tessent 使 ATPG 仿真提速 3–5×）重新验证，确保可信。这是 EDA 巨头「AI 从副驾走向自主验证」路线的最新、最完整的工业界落地叙事。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Siemens EDA</span>
+        <span class="tag">AI-Native Design</span>
+        <span class="tag">Fuse EDA AI Agent</span>
+        <span class="tag">NVIDIA</span>
+        <span class="tag">自验证Agentic AI</span>
+        <span class="tag">单元表征</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">Seoul Forum</span>
+      </div>
+      <a href="https://finance.biggo.com/news/2eb1fbd0-d25d-41b9-90d0-e05d7205e9ed" target="_blank">→ Siemens EDA Forum Seoul 2026：AI-Native Design 与自验证 Agentic AI</a>
+    </div>
+
+    <!-- NEWS: easyeda-agent v0.25.0 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · zhoushoujianwork/easyeda-agent · 开源项目 · Go CLI/daemon + EasyEDA 插件 · v0.25.0 · 2026-08-12</div>
+      <h4>🔧 easyeda-agent v0.25.0：面向嘉立创 EasyEDA 的 AI 原生自动化层——原理图布局体系定版（placement-first 区级重排 + 串联链共线串接）</h4>
+      <p>easyeda-agent 是一个面向 EasyEDA（嘉立创 EDA 专业版）的 <strong>AI 原生自动化层</strong>：把官方扩展 API 变成一套有类型、可观测、Skill 友好的系统——EasyEDA 插件保持极薄（仅连接本地 agent、执行被批准的动作），Go CLI/daemon 掌管协议、状态、产物、校验与面向用户的工作流（daemon 固定监听端口 60832）。v0.25.0（2026-08-12）定版<strong>原理图布局体系</strong>：placement-first 区级重排（sch zone relayout）+ 串联链共线串接（识别 GND—LED—R—netport 等 pin-to-pin 直连链，全链共线横放、零折弯、地端在左旗向下、netport 端在右顺链向）+ 全员竖放平行对齐 + 顺方向 netport + 竖直旗真值表修正 + 三个新判据（reversed-net-flag / marker-overlap 文字带 / redundant-net-marker）；连接器含 0.24.1–0.24.5 全部修复。属于「开源 EDA AI Skills / Agents 新能力」在原理图 / PCB 领域的代表，与 kicad-mcp、vibe-IC 同列 AI 辅助 EDA 工具链。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">开源</span>
+        <span class="tag">EasyEDA</span>
+        <span class="tag">嘉立创</span>
+        <span class="tag">AI原生自动化</span>
+        <span class="tag">原理图布局</span>
+        <span class="tag">Go CLI</span>
+        <span class="tag">智能体</span>
+        <span class="tag">PCB EDA</span>
+      </div>
+      <a href="https://github.com/zhoushoujianwork/easyeda-agent/releases" target="_blank">→ GitHub：zhoushoujianwork/easyeda-agent v0.25.0</a>
+    </div>
+
+    <!-- 2608.13790 PPAPlace: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG / cs.AI / cs.AR · 2026-08-13 · Ruogu Chen, Jie Han</div>
+      <h4>📐 PPAPlace：时序驱动的可微分跨阶段代理——以全局布线后标签预测布线后 PPA，WNS/TNS 较层次基线改善 22%/51%（ICCAD 2026）</h4>
+      <p>宏布局（macro placement）显著影响布线后 PPA，但现有布局方法多以半周长线长（HPWL）为主目标；近期基准显示 HPWL 与布线后时序指标（WNS/TNS）近乎零相关，导致六个被评估的 AI 布局器 PPA 均劣于层次基线。PPAPlace 提出一个<strong>时序驱动的可微分代理</strong>，从宏与标准单元布局预测布线后 PPA：采用双流预测器——对芯片网表做图注意力（graph attention）+ 对布局网格做空间卷积（spatial convolution），以<strong>全局布线后（post-global-routing）标签</strong>训练（标签保真度研究证实其在最终时序保真度与标注成本间取得最佳平衡）。预测的 WNS/TNS 梯度端到端回流到单元坐标，并以两种方式利用：作为解析布局器的协同目标（PPAPlace-CoOpt），或作为布局后细化步骤用投影梯度下降调整宏位置（PPAPlace-Refine）。在 5 个训练外 ChiPBench 电路上，PPAPlace 相对层次基线平均改善 WNS 22%、TNS 51%，同时保持功耗与可布线性，且同一预测器无需按测试电路重训。代码已开源。属 ICCAD 2026 接收，是「ML 辅助后端物理设计 / 时序驱动布局」的高信号工作。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">物理设计</span>
+        <span class="tag">宏布局</span>
+        <span class="tag">时序驱动</span>
+        <span class="tag">可微分代理</span>
+        <span class="tag">WNS/TNS</span>
+        <span class="tag">图注意力</span>
+        <span class="tag">ICCAD 2026</span>
+        <span class="tag">ChiPBench</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.13790" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.13790_PPAPlace.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.13767 Simulation-Aware Analog Layout ICPI: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.RO · 2026-08-13 · Bingyang Liu, Ziming Wei, Xiaohan Gao, David Z. Pan</div>
+      <h4>🎛️ Simulation-Aware In-Context Policy Improvement：LLM 多智能体用于模拟 IC 版图细化——act-observe-reflect 循环，仅数十次后仿真即超 BO 调参（ICLAD 2026）</h4>
+      <p>模拟 IC 版图设计仍是劳动密集的迭代过程，以仿真驱动的细化为主导；端到端布局生成器虽加速初版布局布线，但仍需专家反复后仿真手动调参以满足严苛设计规范。贝叶斯优化（BO）广泛用于模拟电路参数调优，但在版图级通常需数百至数千次评估（每次都含昂贵的寄生抽取与后仿真）， impractical。本文提出<strong>仿真感知的 LLM 多智能体框架</strong>，通过在紧凑结构化版图表示上做「行动—观察—反思（act-observe-reflect）」循环，执行<strong>上下文策略改进（ICPI）</strong>，迭代更新版图生成器暴露的布局优化参数。在真实模拟电路上，仅用<strong>数十次后仿真</strong>，该方法即超越生成器内建启发式与 BO 调参。作者含德克萨斯大学奥斯汀分校 David Z. Pan 组，属 ICLAD 2026 正式论文，对「LLM 辅助模拟版图优化 / 仿真驱动参数调优」有直接方法论价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">模拟与架构</span>
+        <span class="tag">模拟版图</span>
+        <span class="tag">LLM多智能体</span>
+        <span class="tag">上下文策略改进</span>
+        <span class="tag">仿真驱动</span>
+        <span class="tag">参数调优</span>
+        <span class="tag">ICLAD 2026</span>
+        <span class="tag">David Z. Pan</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.13767" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.13767_SimAwareAnalogLayout.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.14035 Agent-Orchestration: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 2026-08-14 · Linyang Li</div>
+      <h4>🤖 Agent-Orchestration in Autonomous Chip Design：把「芯片设计超级智能」建模为 AI 组织，用智能体编排实现自主芯片设计</h4>
+      <p>大语言模型与工具调用型智能体的进展，激励业界探索其在芯片设计中的应用；核心问题是「在这个高度复杂的产业里，我们究竟需要什么样的 AI」。本文提出将<strong>芯片设计超级智能（chip-design superintelligence）</strong>建模为一个庞大的「AI 组织（AI-organization）」，并以<strong>智能体编排（agent-orchestration）</strong>——角色分配、协调与专门智能体间的分工——作为把单体脚本式 agent 扩展到自主芯片设计的关键。文章为「Agentic EDA / 自主芯片设计」范式提供了组织视角的概念框架，强调编排（而非单点生成）才是规模化的瓶颈与突破口，与近期 Synopsys/Cadence/Siemens 的「多智能体自主工作流」工业路线形成呼应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI Agent</span>
+        <span class="tag">智能体编排</span>
+        <span class="tag">自主芯片设计</span>
+        <span class="tag">多智能体组织</span>
+        <span class="tag">芯片设计范式</span>
+        <span class="tag">Agentic EDA</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.14035" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.14035_AgentOrchestration.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

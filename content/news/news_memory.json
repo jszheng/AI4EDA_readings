@@ -1,8 +1,45 @@
 {
-  "lastUpdate": "2026-08-17",
+  "lastUpdate": "2026-08-18",
   "cutoffDate": "2026-02-17",
-  "totalItems": 196,
+  "totalItems": 198,
   "items": [
+    {
+      "date": "2026-08-11",
+      "company": "Siemens EDA",
+      "title": "🏛️ Siemens EDA Forum Seoul 2026：发布「AI-Native Design」战略——Fuse EDA AI Agent + NVIDIA 自验证 Agentic AI 工作流（单元表征 weeks→days、处理提速 10×、token 成本降 5–10×）",
+      "link": "https://finance.biggo.com/news/2eb1fbd0-d25d-41b9-90d0-e05d7205e9ed",
+      "keywords": [
+        "Siemens EDA",
+        "AI-Native Design",
+        "Fuse EDA AI Agent",
+        "NVIDIA",
+        "自验证Agentic AI",
+        "self-verifying",
+        "单元表征",
+        "cell characterization",
+        "多智能体",
+        "Seoul Forum",
+        "2026-08-11"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "company": "easyeda-agent (zhoushoujianwork)",
+      "title": "🔧 easyeda-agent v0.25.0：面向嘉立创 EasyEDA 的 AI 原生自动化层——原理图布局体系定版（placement-first 区级重排 + 串联链共线串接）",
+      "link": "https://github.com/zhoushoujianwork/easyeda-agent/releases",
+      "keywords": [
+        "easyeda-agent",
+        "开源",
+        "EasyEDA",
+        "嘉立创",
+        "AI原生自动化",
+        "原理图布局",
+        "Go CLI",
+        "智能体",
+        "PCB EDA",
+        "2026-08-12"
+      ]
+    },
     {
       "date": "2026-08-14",
       "company": "SemiEngineering",
