@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（64篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（65篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2608.16733 GoalEvolve -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 GoalEvolve：目标驱动的物理设计算法演化框架——LLM 教师 + 并行学生智能体全流闭环，OpenROAD 布线后 TNS 改善 30.67%</div>
+      <div class="abs-meta">arXiv:2608.16733 · cs.AR / cs.AI · 2026-08-17 · Haixu Liu, Lei Zhou, Yuhao Ren, Yumao Wu, Zhiang Wang</div>
+      <div class="abs-body">物理设计算法运行在紧密耦合的多阶段优化流中，阶段局部收益可能消失或引发下游退化。GoalEvolve 提出目标驱动框架，让算法演化对完整流程最终 QoR 负责：给定多目标 QoR 目标区域，将未满足需求转为归一化缺口、识别主导瓶颈并用阶段级 checkpoint 证据定位责任阶段；LLM 教师把搜索收敛到相关算法决策与源码区域，并行学生智能体通过全流评估实现并验证假设，局部效应/优化债/下游保留作为机制证据复用。8 个 ASAP7 设计上相对默认 OpenROAD 平均改善布线后 TNS 30.67%，漏功/动功降 21.18%/9.42%；对比 Codex goal 模式 TNS 再改善 26.46%。属 LLM/多智能体驱动后端物理设计算法自动演化的高信号工作。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.16733" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.16733_GoalEvolve.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">算法演化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">目标驱动</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM教师</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">TNS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ASAP7</span>
+      </div>
+    </div>
 
     <!-- 2608.13790 PPAPlace -->
     <div class="abs-card">

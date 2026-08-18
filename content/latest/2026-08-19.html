@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-19 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.AI，08-18 公告批次，目标驱动物理设计算法演化 + 形式化硬件验证符号代数引擎）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2608.16733 GoalEvolve: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · 2026-08-17 · Haixu Liu, Lei Zhou, Yuhao Ren, Yumao Wu, Zhiang Wang</div>
+      <h4>📐 GoalEvolve：从手工算法先验到目标驱动的物理设计算法演化——LLM 教师 + 并行学生智能体全流闭环，OpenROAD 布线后 TNS 改善 30.67%</h4>
+      <p>物理设计算法运行在紧密耦合的多阶段优化流中，阶段局部的收益可能消失或引发下游退化；现有程序演化框架依赖阶段局部目标或undifferentiated多指标反馈，既无法保证最终 QoR 提升，也难以判断下一步应由哪条未满足需求驱动。GoalEvolve 提出一个<strong>目标驱动框架</strong>，让物理设计算法演化对完整流程的最终 QoR 负责：给定多目标 QoR 目标区域，将未满足需求转为归一化目标缺口、识别主导瓶颈，并用阶段级 checkpoint 证据定位责任阶段；<strong>LLM 教师（Teacher）</strong>据此把搜索收敛到相关的算法决策与源码区域，<strong>并行学生智能体（Student）</strong>通过全流评估实现并验证假设，局部效应、优化债与下游保留作为机制证据供后续演化复用。在 8 个 ASAP7 设计上，GoalEvolve 相对默认 OpenROAD 平均改善布线后 TNS 30.67%，漏功与动功分别降 21.18% / 9.42%；相对商用工具目标，在功耗主导设计上闭合 62.20% 的归一化功耗缺口、在时序主导设计上超越 TNS 目标、在联合设计上闭合 32.48% 的等权时序-功耗缺口；在匹配预算下对比 Codex goal 模式，TNS 再改善 26.46%、漏功/动功降 12.38% / 0.76%。属「LLM/多智能体驱动后端物理设计算法自动演化」的高信号工作。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">物理设计</span>
+        <span class="tag">算法演化</span>
+        <span class="tag">目标驱动</span>
+        <span class="tag">LLM教师</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">OpenROAD</span>
+        <span class="tag">TNS</span>
+        <span class="tag">功耗优化</span>
+        <span class="tag">ASAP7</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.16733" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.16733_GoalEvolve.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.16458 TRACE: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-17 · Jan Kleinekathöfer, Lennart Weingarten, Kamalika Datta, Rolf Drechsler</div>
+      <h4>🔬 TRACE：面向形式化硬件验证的符号代数计算引擎——遍历策略 × 证明效率，首次验出此前不可验证的 MAC</h4>
+      <p>复杂电路现代硬件验证高度依赖形式化方法；对复杂算术电路而言，以多项式表示伪布尔函数的<strong>符号计算机代数（SCA）</strong>引擎是关键，但随着 AI 时代电路复杂度攀升，乘法、加法、乘加（MAC）等算术原语的验证成为计算瓶颈。本文提出 <strong>TRACE（Traversal and Reasoning Algebraic Computing Engine）</strong>，一个高效框架，专门研究<strong>遍历策略与证明效率的交叉点</strong>。不同于现有 SCA 工具多局限于乘法器，TRACE 提供灵活框架，供研究者分析加法器、乘法器、MAC 等广泛算术电路的<strong>内存占用与验证耗时</strong>；为克服多项式展开固有的状态爆炸，引擎引入优化遍历策略、冲突消除、基于极性的紧凑符号表示等高级归约技术。实验表明，对优化后的 MAC，TRACE <strong>首次成功验证了此前不可验证的电路</strong>，为算术电路形式验证提供了可分析、可扩展的新基座。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">功能验证</span>
+        <span class="tag">形式化验证</span>
+        <span class="tag">符号计算机代数</span>
+        <span class="tag">算术电路</span>
+        <span class="tag">乘法器</span>
+        <span class="tag">MAC</span>
+        <span class="tag">验证加速</span>
+        <span class="tag">Rolf Drechsler</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.16458" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.16458_TRACE.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

@@ -1136,3 +1136,18 @@
   - 本地 PDF 3 份均已落地 content/dates/（HLSmith 12.0MB / G-Power 1.4MB / PowerScope 3.0MB，%PDF 校验通过），HTML 本地链接与磁盘一致。
 - **一致性校验通过**：news_memory.totalItems 191 == 新闻页去重数 == manifest.news 191；manifest papers 262 / batches 103 / lastUpdate 2026-08-11；dates[]/latest[] 顶部均为 2026-08-11（count=6）。
 - **Git**：本地 2 提交领先 origin/main（b5963d5 auto update: 2026-08-11 + 23c7129 auto update: 2026-08-07），工作树干净。⚠️ push origin main 两次均失败（Connection closed by UNKNOWN port 65535 / Could not read from remote repository），属已知出口网络阻断；提交已安全留存本地，待网络恢复后续轮重试推送。
+
+---
+
+## 2026-08-18 执行摘要
+- **论文 +3**（均 2608 系列，站内首见，PDF 已落地）：
+  - 📐 物理×1 — PPAPlace（2608.13790，Ruogu Chen / Jie Han，ICCAD 2026）：时序驱动可微分跨阶段代理，双流预测器（网表图注意力 + 布局网格卷积）以全局布线后标签训练，WNS/TNS 较层次基线 +22%/+51%，代码开源。
+  - 🎛️ 模拟×1 — Simulation-Aware Analog Layout ICPI（2608.13767，David Z. Pan 组，ICLAD 2026）：LLM 多智能体 act-observe-reflect 循环做上下文策略改进（ICPI），仅数十次后仿真即超 BO 调参。
+  - 🤖 Agent×1 — Agent-Orchestration in Autonomous Chip Design（2608.14035，Linyang Li）：把芯片设计超级智能建模为「AI 组织」，以智能体编排实现自主芯片设计（概念框架）。
+- **行业动态 +2**（去重后，news_memory +2 → 198）：① Siemens EDA Forum Seoul 2026（08-11）发布「AI-Native Design」+ Fuse EDA AI Agent × NVIDIA 自验证 Agentic AI（单元表征 weeks→days、处理 10×、token 降 5–10×）；② easyeda-agent v0.25.0（08-12）开源 EasyEDA AI 原生自动化层（原理图布局体系定版）。
+- **PDF 落地**：三份均有效（PPAPlace 1.47MB / SimAwareAnalogLayout 1.42MB / AgentOrchestration 185KB），%PDF 校验通过，磁盘与页面链接一致。
+- **计数（终态）**：manifest papers 276→279、batches 105→106、news 196→198、lastUpdate 2026-08-18；分类头 physical 63→64 / analog 32→33 / agent 37→38。
+- **一致性全绿**：news_memory 198 == 新闻页头 198 == manifest.news 198；dates/latest[] 顶部均为 2026-08-18（count=5 = 3论文+2新闻）；三份 PDF 磁盘与链接一致。
+- **产物**：content/dates/2026-08-18.html + content/latest/2026-08-18.html（2 新闻 + 3 论文）+ 3 PDF + content/categories/{physical,analog,agent}.html 各 +1 卡 + content/news/index.html（08-18 section + nav + 统计 198）+ news_memory.json（198）+ manifest.js + content/papers/index.html（→08-18）。
+- **Git**：commit "auto update: 2026-08-18" → push origin/main 成功（ecc750c..b79734b）。
+- **备注**：本机 memory.md 在 08-12~08-17 期间未被前序运行更新（站点内容经 manifest 已自洽，lastUpdate 至 08-17）；本次仅补 08-18 摘要。下次若需完整追溯可回填该段。
