@@ -1,3 +1,17 @@
+## 2026-08-19（自动更新 — 2 篇论文 + 0 条行业动态）
+
+- 本批为独立会话执行：搜索 arXiv cs.AR/cs.ET/cs.AI/cs.LG 08-18 公告批次，经去重核验新增 2 篇论文，覆盖物理设计与功能验证细分；行业动态窗口（08-18→08-19）被 DAC 2026 reprint 与已收录开源项目（eda-agent / digital-chip-design-agents / vibe-IC / ChipAgents / UCAgent 等）饱和，无净增，故 0 条新闻。
+- 新增论文 2 篇（均站内未收录，arXiv 08-17 提交、08-18 公告）：
+  - 📐 2608.16733 GoalEvolve — 目标驱动的物理设计算法演化框架（LLM 教师 + 并行学生智能体全流闭环，OpenROAD 布线后 TNS +30.67%、漏功/动功 -21.18%/-9.42%，ASAP7）→ 物理设计（physical 64→65）
+  - 🔬 2608.16458 TRACE — 形式化硬件验证符号代数计算引擎（遍历策略×证明效率，首验此前不可验证的 MAC，Rolf Drechsler 组）→ 功能验证（verify 34→35）
+- 排除：2608.12751 SynAct / 2608.12684 Spec-Driven / 2608.12635 GateTruth 等 08-14 论文已于 08-17 收录；cs.ET 的 2608.16267（3D 打印微流控生物芯片）、2608.15579（软件修复智能体）超出 AI4EDA 核心策展范围。
+- 同步产物：content/dates/2026-08-19.html & content/latest/2026-08-19.html（各 2 卡，2 PDF 已下载 content/dates/）、content/categories/physical.html & verify.html（新增卡片，header 65/35）、content/news/index.html（header 281/107/198，副标题改写）、content/papers/index.html（meta refresh → 2026-08-19）、manifest.js（papers 279→281、batches 106→107、news 198、lastUpdate 2026-08-19，latest/dates 顶部新增 08-19 count=2）。
+- 一致性：manifest papers 281 与分类页累计一致；news 198 与 news_memory.totalItems 198 一致；PDF 链接与磁盘逐字节一致（2608.16733_GoalEvolve.pdf 7.6MB / 2608.16458_TRACE.pdf 1MB）。
+- 过期清理：cutoffDate 维持 2026-02-17（沿用既有阈值，未做批量删除，与历史执行一致）。
+- Git：commit "auto update: 2026-08-19"（e2f8a72）并 push origin/main（10 files，含 2 新 HTML + 2 PDF + manifest/news/category/papers 同步）。
+
+---
+
 ## 2026-08-13（自动更新 — 2 篇论文 + 2 条行业动态 · 续跑收尾）
 
 - 本批为 08-13 续跑会话完成收尾：date/latest/新论文/新闻卡片、分类页、清单、记忆已于前置步骤创建，本次补齐一致性核验、记忆更新与 git 提交。
