@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（78篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（79篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2608.16934 SeqFeed -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ SeqFeed：用「顺序行为反馈」提升智能体 RTL 代码生成——SeQuery（类 SQL 波形查询语言）+ SeGraph（跨周期信号依赖图）</div>
+      <div class="abs-meta">arXiv:2608.16934 · cs.AR / cs.CL · 2026-08-09（公告 08-19）· Yuxin Du, Juxin Niu, Tao Hu, Xi Wang, Zhe Jiang, Nan Guan</div>
+      <div class="abs-body">要生成正确的 RTL，智能体必须理解顺序行为——信号如何随多个时钟周期演化与传播；但 RTL 代码本身不暴露周期级信号行为，完整仿真波形又过于庞杂、噪声过多，难以被 LLM 有效分析。本文提炼有效反馈的三大要求：事件可寻址（event-addressable）、依赖可追溯（dependency-traceable）、可迭代查询（iteratively-queryable），据此提出 SeqFeed，含两个互补机制：① SeQuery，一种类 SQL 的波形查询语言，让智能体把查询锚定到语义事件、并在相对时间点采样信号值；② SeGraph，一个跨时钟周期追踪信号传播的依赖图。多个 LLM 上的实验表明两者各自有效、结合后提供互补增益，显著提升 pass rate。对「LLM 智能体 RTL 生成-验证-反馈闭环」是直接的方法论补充。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.16934" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.16934_SeqFeed.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">顺序行为反馈</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">波形查询</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SeQuery</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SeGraph</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">验证反馈闭环</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span>
+      </div>
+    </div>
 
     <!-- 2608.12684 Spec-Driven Hardware Evolution -->
     <div class="abs-card">

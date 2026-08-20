@@ -1,8 +1,31 @@
 {
-  "lastUpdate": "2026-08-18",
-  "cutoffDate": "2026-02-17",
-  "totalItems": 198,
+  "lastUpdate": "2026-08-20",
+  "cutoffDate": "2026-02-21",
+  "totalItems": 199,
   "items": [
+    {
+      "date": "2026-08-18",
+      "company": "Keysight（是德科技）",
+      "title": "🟢 Keysight 是德科技「Engineering Intelligence at the Core」发布三大创新：AI for EDA 可信工程智能 + ADS/RSoft/VPI 端到端光电联合仿真数字孪生 + Keysight Multiphysics 多物理场协同仿真",
+      "link": "https://m.10jqka.com.cn/20260819/c679082301.shtml",
+      "keywords": [
+        "Keysight",
+        "是德科技",
+        "AI for EDA",
+        "可信工程智能",
+        "trusted engineering intelligence",
+        "光电联合仿真",
+        "E-O-E",
+        "数字孪生",
+        "Multiphysics",
+        "多物理场",
+        "先进封装",
+        "ADS",
+        "RSoft",
+        "VPI",
+        "Engineering Intelligence at the Core"
+      ]
+    },
     {
       "date": "2026-08-11",
       "company": "Siemens EDA",

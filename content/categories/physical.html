@@ -7,9 +7,48 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（65篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（68篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2608.16080 DeepOHeat-v2 -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🌡️ DeepOHeat-v2：3D-IC 热优化的自改进算子学习——不连续传导率能量形式 + 热点信任门 + 增量重训，56× 加速、峰值温差 0.11K</div>
+      <div class="abs-meta">arXiv:2608.16080 · cs.LG / cs.AI · 2026-08-17 · Xinling Yu, Yixing Li, Ziyue Liu, Xin Ai, Zhiyu Zeng, Hai Li, Zheng Zhang</div>
+      <div class="abs-body">多芯粒（multi-die）3D 集成的热感知优化需评估大量设计，每个都是昂贵的传热方程求解。算子学习代理用快速前向传播替代该求解，理想情况下仅从物理训练、无需标注数据。DeepOHeat-v1 已使代理快速可信，但仅适用于低对比度几何；高对比度多芯粒堆叠从两方面击穿它：不连续传导率在材料界面使连续物理损失无定义，病态条件（κ²≈6×10⁴）使离散强形式损失超出一阶优化范围。DeepOHeat-v2 克服两者：①在原生处理不连续的离散化物理损失上训练，其能量形式把预测空间损失-Hessian 条件数从 κ² 降到 κ，矩阵预条件优化器把平均峰值温度误差从 30K+ 降到 0.55K；②因优化会离开训练分布，提出自改进框架——热点信任门把被标记的布局送参考求解器，代理在精化解上增量重训，仅当改善留出验证误差时保留更新。多芯粒基准上，返回设计的代理-真值峰值温差从 1.12K 降到 0.11K，匹敌逐步求解优化器且快 56×。属「Chiplet/3D-IC 多物理场 AI 热分析」的高信号工作。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.16080" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.16080_DeepOHeatV2.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">3D-IC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Chiplet</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">热分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多物理场</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">算子学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">自改进</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">代理模型</span>
+      </div>
+    </div>
+
+    <!-- 2608.17266 NoC Placement/Routing for FPGAs -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📡 The Road Less Traveled：FPGA NoC 感知拥塞布局与包路由——VPR 注入链路拥塞代价 + turn model + SAT 求解，拥塞降 95.1%</div>
+      <div class="abs-meta">arXiv:2608.17266 · cs.AR · 2026-08-18 · Soheil Gholami Shahrouz, Vaughn Betz</div>
+      <div class="abs-body">现代 FPGA 集成片上网络（NoC）以传输高带宽数据，但 NoC 给 CAD 流程引入新约束与度量：布局布线需优化 NoC 时延/带宽利用率并避免链路过订阅（拥塞），同时优化挂接 NoC 路由器的模块的可编程布线资源。本文：①把 NoC 链路拥塞代价注入开源 CAD 流程 VPR 的布局引擎；②把 turn model NoC 路由算法集成进布局引擎以利用路径多样性进一步降拥塞；在 29 个基准上，布局拥塞建模 + turn model 包路由平均降 NoC 拥塞 90.7%（聚合带宽需求仅 +4%）；对仍无法完全解决拥塞的情形，把 NoC 路由建模为布尔可满足（SAT）问题，组合算法相对基线布局降拥塞 95.1%；③还增强 VPR 布局引擎中的强化学习（RL）智能体，引入 NoC 感知 move 类型，在大量使用 NoC 的设计上线长降 8.8%。属「FPGA CAD / 物理设计 + RL + 拥塞优化」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.17266" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.17266_NoCPlacement.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">FPGA CAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">NoC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拥塞优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VPR</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SAT</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">路由</span>
+      </div>
+    </div>
+
+    <!-- 2608.17914 Pre-Route Delay Estimation -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⏱️ 开源 IC 设计中的轻量级预布线延迟估计——决策树 + 线性回归混合模型，较 OpenLane 误差降 80%，体积小 300×</div>
+      <div class="abs-meta">arXiv:2608.17914 · cs.LG / cs.AI · 2026-08-18 · Marvin Castro Castro, Erick Carvajal Barboza</div>
+      <div class="abs-body">静态时序分析（STA）是数字 IC 设计流程的关键步骤，但在物理设计信息有限时获取准确延迟估计仍是挑战。本文提出一种混合轻量机器学习方法，把决策树与线性回归结合，改善开源 RTL-to-GDSII 工具 OpenLane 生成的预布线延迟估计：相对 OpenLane 估计误差降 80%，即便不使用 OpenLane 专属参数也改善 71%；该方法比传统延迟传播技术与更复杂的 ML 模型更准确，且体积小 300 倍以上、速度快 2×、可解释性更高。属「开源 EDA（OpenLane）+ 时序估计 ML」的实用型工作，对布线前早期时序预估有直接的工程价值。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.17914" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.17914_PreRouteDelay.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">预布线延迟</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenLane</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">机器学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">静态时序</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源EDA</span>
+      </div>
+    </div>
 
     <!-- 2608.16733 GoalEvolve -->
     <div class="abs-card">

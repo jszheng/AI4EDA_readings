@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-20 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 1 条行业动态 · 来源：arXiv（cs.AR / cs.CL / cs.AI / cs.SE，08-19 公告批次，智能体 RTL 生成顺序行为反馈 + 神经符号 RTL 抽象加速属性检查 ICCAD 2026）+ 行业动态（Keysight 是德科技「Engineering Intelligence at the Core」AI for EDA + 光电联合仿真 + Multiphysics）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- NEWS: Keysight Engineering Intelligence at the Core -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Keysight（是德科技） · Engineering Intelligence at the Core 新品发布 · 行业动态 · 2026-08-18</div>
+      <h4>🟢 Keysight 是德科技「Engineering Intelligence at the Core」发布三大创新：AI for EDA 可信工程智能 + ADS/RSoft/VPI 端到端光电联合仿真数字孪生 + Keysight Multiphysics 多物理场协同仿真</h4>
+      <p>2026 年 8 月 18 日，Keysight（是德科技）举办「Engineering Intelligence at the Core」新品发布活动，推出三项设计工程软件创新，覆盖工程智能、数字孪生与多物理场协同仿真。① <strong>AI for EDA</strong>：方案重点并非仅加速仿真，而是将 AI 与仿真模型、工程数据、测量验证结合，帮助工程团队高效探索设计空间、优化参数设置、缩短设计迭代周期，指向「可信工程智能（trusted engineering intelligence）」——在复杂系统环境下辅助工程师做出更高质量、更可靠的决策。② <strong>光电联合仿真（E-O-E）</strong>：由 ADS、RSoft 与 VPI 构建端到端光电联合仿真工作流，贯通系统架构探索 → 链路设计 → 器件验证，构建更具预测能力的数字孪生模型，支持行为级 / 系统级 / 电路级模型间的协同与跨层级传递。③ <strong>Keysight Multiphysics</strong>：将多物理场能力深度融入电子设计工作流，面向先进封装、数据中心、汽车电子与 HPC 等需同步分析电磁、电路、热、结构、流体、光学等多物理域的场景，支持早期跨物理域协同分析与虚拟验证。三项创新共同构建覆盖 AI 驱动 EDA、多物理场 CAE 与端到端光电联合仿真的统一设计工程软件平台，并可与 Keysight 测试测量能力形成闭环验证。属「多物理场 AI 分析 / 先进封装 / 光电协同」方向的高信号工业界动作。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Keysight</span>
+        <span class="tag">是德科技</span>
+        <span class="tag">AI for EDA</span>
+        <span class="tag">可信工程智能</span>
+        <span class="tag">光电联合仿真</span>
+        <span class="tag">数字孪生</span>
+        <span class="tag">Multiphysics</span>
+        <span class="tag">多物理场</span>
+        <span class="tag">先进封装</span>
+        <span class="tag">ADS/RSoft/VPI</span>
+      </div>
+      <a href="https://m.10jqka.com.cn/20260819/c679082301.shtml" target="_blank">→ Keysight「Engineering Intelligence at the Core」：AI for EDA + 光电联合仿真 + Multiphysics 三大创新</a>
+    </div>
+
+    <!-- 2608.16934 SeqFeed: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.CL · 2026-08-09（公告 08-19）· Yuxin Du, Juxin Niu, Tao Hu, Xi Wang, Zhe Jiang, Nan Guan</div>
+      <h4>⚡ SeqFeed：用「顺序行为反馈」提升智能体 RTL 代码生成——SeQuery（类 SQL 波形查询语言）+ SeGraph（跨周期信号依赖图），事件可寻址 / 依赖可追溯 / 可迭代查询</h4>
+      <p>RTL 代码生成是硬件设计的关键环节，而智能体系统为自动化这一过程带来新机遇；要生成正确的 RTL，智能体必须理解顺序行为——信号如何随多个时钟周期演化与传播。然而，如何把这类时序信息有效传递给智能体仍是重大挑战：RTL 代码并不暴露某次执行的周期级信号行为，而完整仿真波形又过于庞杂、噪声过多，难以被 LLM 有效分析。受人类工程师推理顺序行为的启发，本文提炼出有效反馈的三大要求：<strong>事件可寻址（event-addressable）、依赖可追溯（dependency-traceable）、可迭代查询（iteratively-queryable）</strong>。据此提出 <strong>SeqFeed</strong>，含两个互补机制：① <strong>SeQuery</strong>，一种类 SQL 的波形查询语言，让智能体把查询锚定到语义事件、并在相对时间点采样信号值；② <strong>SeGraph</strong>，一个跨时钟周期追踪信号传播的依赖图。在多个 LLM 上的实验表明，SeQuery 与 SeGraph 各自有效、且结合后提供互补增益，显著提升 pass rate。对「LLM 结合智慧体协作的 RTL 生成-验证-反馈闭环」是直接方法论补充。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">智能体</span>
+        <span class="tag">顺序行为反馈</span>
+        <span class="tag">波形查询</span>
+        <span class="tag">SeQuery</span>
+        <span class="tag">SeGraph</span>
+        <span class="tag">信号传播</span>
+        <span class="tag">验证反馈闭环</span>
+        <span class="tag">LLM</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.16934" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.16934_SeqFeed.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.17304 NeuroAbs: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI / cs.SE · 2026-08-18 · Zhiyuan Yan, Xiaofeng Zhou, Ziyue Zheng, Ziyi Yang, Wenbin Che, Wei Zhang, Yangdi Lyu, Hongce Zhang</div>
+      <h4>🔬 NeuroAbs：神经符号 RTL 抽象框架加速属性检查——LLM 辅助识别可抽象信号 + AST 符号表示对齐 + SMT 检查 + CEGAR 迭代细化（ICCAD 2026）</h4>
+      <p>形式验证是确保硬件设计功能正确性的关键技术；在属性检查（property checking）中，如何面对日益复杂的 RTL 设计高效证明用户指定属性是一大挑战。抽象（abstraction）技术常被用来降低系统复杂度、加速验证，但既有 RTL 抽象方法要么需大量人工、要么依赖缺乏灵活性的基于规则的技术。NeuroAbs 提出一个<strong>神经符号（neuro-symbolic）RTL 抽象框架</strong>：首先用 <strong>LLM 辅助的 RTL 分析</strong>识别适合抽象的信号；随后将 LLM 生成的抽象与<strong>基于 AST 的符号化 RTL 表示</strong>结合，使生成的抽象更贴合预期变换；每一处抽象的<strong>可靠性（soundness）用可满足性模理论（SMT）求解检查</strong>；若抽象过粗导致证明失败，则应用<strong>反例引导的抽象细化（CEGAR）</strong>迭代精化模型。实验表明，NeuroAbs 在一系列验证任务中显著提升了硬件属性检查的效率。作者含香港科技大学（HKUST）Hongce Zhang 组，属 ICCAD 2026 正式论文，对「LLM 辅助形式验证 / RTL 抽象 / 验证反馈闭环」是高信号工作。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">功能验证</span>
+        <span class="tag">形式化验证</span>
+        <span class="tag">神经符号</span>
+        <span class="tag">RTL抽象</span>
+        <span class="tag">LLM辅助</span>
+        <span class="tag">AST符号表示</span>
+        <span class="tag">SMT</span>
+        <span class="tag">CEGAR</span>
+        <span class="tag">属性检查</span>
+        <span class="tag">ICCAD 2026</span>
+        <span class="tag">Hongce Zhang</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.17304" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.17304_NeuroAbs.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
