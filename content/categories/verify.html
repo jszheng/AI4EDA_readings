@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（36篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（37篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+
+    <!-- 2608.18482 NeuroAssertion -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 NeuroAssertion：覆盖驱动 RTL 断言生成——形式化轨迹生成 + SyGuS 语法导向合成 + 智能体式神经符号精化（突变覆盖约 2×）</div>
+      <div class="abs-meta">arXiv:2608.18482 · cs.AR / cs.AI · 2026-08-19 · Zhiyuan Yan, Ziyue Zheng, Hongce Zhang</div>
+      <div class="abs-body">硬件功能验证依赖高质量断言暴露设计缺陷、建立对 RTL 设计的信心；但既有断言挖掘方法难以产出完整可靠的断言集：随机或有限轨迹无法覆盖难达行为，一次性生成对未覆盖区域缺乏反馈。NeuroAssertion 提出一个覆盖驱动的断言生成框架，统一了形式化轨迹生成、语法导向合成（SyGuS）与受验证反馈引导的智能体式精化：①将难达控制流条件转化为形式化可达性目标，用模型检验生成行为多样轨迹，经 SyGuS 从中挖掘初始断言；②在验证反馈下做针对性精化——一个 LLM 先为未覆盖区域提出候选断言，若候选未通过形式化检查，第二个 LLM 生成修复语法引导约束式符号合成，形成神经符号修复。实验表明，框架相较传统断言挖掘产出约 2× 更多断言与约 2× 更高突变覆盖。作者含香港科技大学（HKUST）Hongce Zhang 组（与 NeuroAbs 同组），属「LLM + 形式验证 / 断言生成 / 验证反馈闭环」方向的高信号工作，把断言生成从随机挖掘推向覆盖驱动 + 神经符号协同。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.18482" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.18482_NeuroAssertion.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">断言生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">覆盖驱动</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式化验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SyGuS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">神经符号</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM精化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">突变覆盖</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Hongce Zhang</span>
+      </div>
+    </div>
 
     <!-- 2608.17304 NeuroAbs -->
     <div class="abs-card">

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-21 动态</h1>
+  <p class="subtitle">共 1 篇论文 · 2 条行业动态 · 来源：arXiv（cs.AR / cs.AI，08-19 公告批次，NeuroAssertion 覆盖驱动 RTL 断言生成的神经符号精化，Hongce Zhang 组）+ 行业动态（① University of Michigan × LANL 获 DOE Genesis Mission Award，开发 AI 智能体自动化硬件-软件协同设计，经 SemiEngineering WIR #151 报道；② 开源基准 RTLLM v2.1 发布，HKUST Zhiyao Xie 组修正设计描述与 testbench，影响历史 pass@k 可比性）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- NEWS: Michigan x LANL DOE Genesis Mission Award -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>University of Michigan &amp; LANL · DOE Genesis Mission Award · 学术 / 行业动态 · 2026-08-14（WIR #151）</div>
+      <h4>🏛️ 密歇根大学 × 洛斯阿拉莫斯国家实验室（LANL）获美国能源部（DOE）Genesis Mission Award，开发 AI 智能体自动化硬件-软件协同设计（HW-SW co-design），加速面向科学工作负载的专用芯片与计算系统开发</h4>
+      <p>据 SemiEngineering《Chip Industry Week in Review #151》（2026-08-14）报道，密歇根大学（University of Michigan）与洛斯阿拉莫斯国家实验室（LANL）的研究人员将开发 <strong>AI 智能体（AI agents）</strong>，用于<strong>自动化硬件-软件协同设计（automate HW-SW co-design）</strong>，目标是在 DOE 新设的 <strong>Genesis Mission Award</strong> 资助下，加速面向科学工作负载（scientific workloads，如高性能计算、大规模模拟）的专用芯片与计算系统开发。技术路径上，研究试图以 AI 智能体替代或辅助传统高度依赖人工迭代的协同设计流程，缩短从需求到专用芯片实现的周期。这是「AI 智能体驱动的芯片设计 / HW-SW 协同设计自动化」方向的重要学术资助信号，与工业界 Cadence/Synopsys/Siemens 的 agentic EDA 浪潮形成呼应，但聚焦于科学计算专用芯片这一细分场景。属「AI Agent / 协同设计自动化 / 科学芯片」方向的高信号进展。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">University of Michigan</span>
+        <span class="tag">LANL</span>
+        <span class="tag">密歇根大学</span>
+        <span class="tag">DOE</span>
+        <span class="tag">Genesis Mission Award</span>
+        <span class="tag">AI agents</span>
+        <span class="tag">HW-SW co-design</span>
+        <span class="tag">硬件-软件协同设计</span>
+        <span class="tag">科学工作负载</span>
+        <span class="tag">专用芯片</span>
+      </div>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-151" target="_blank">→ SemiEngineering WIR #151：U-M &amp; LANL 获 DOE Genesis Mission Award 推进 AI 驱动芯片设计</a>
+    </div>
+
+    <!-- 2608.18482 NeuroAssertion: arXiv 预印本 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · 2026-08-19 · Zhiyuan Yan, Ziyue Zheng, Hongce Zhang</div>
+      <h4>🔬 NeuroAssertion（2608.18482）：覆盖驱动 RTL 断言生成——形式化轨迹生成 + SyGuS 语法导向合成 + 智能体式神经符号精化，突变覆盖约 2×</h4>
+      <p>硬件功能验证依赖高质量断言来暴露设计缺陷、建立对 RTL 设计的信心；但既有断言挖掘方法难以产出完整可靠的断言集：随机/有限轨迹无法覆盖难达行为，一次性生成对「还有哪些未验证」缺乏反馈。本文提出 <strong>NeuroAssertion</strong>，一个覆盖驱动的断言生成框架，统一了形式化轨迹生成、语法导向合成（SyGuS）与受验证反馈引导的智能体式精化。流程：①将难达控制流条件转化为形式化可达性目标，用模型检验生成行为多样轨迹，经 SyGuS 从中挖掘初始断言；②在验证反馈下做针对性精化——一个 LLM 先为未覆盖区域提出候选断言，若候选未通过形式化检查，第二个 LLM 生成修复语法（repair grammar）引导约束式符号合成，形成神经符号修复。实验表明，框架相较传统断言挖掘产出约 <strong>2× 更多断言</strong> 与约 <strong>2× 更高突变覆盖</strong>。作者含香港科技大学（HKUST）Hongce Zhang 组（与 NeuroAbs 同组），属「LLM + 形式验证 / 断言生成 / 验证反馈闭环」方向的高信号工作，把断言生成从随机挖掘推向覆盖驱动 + 神经符号协同。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">功能验证</span>
+        <span class="tag">断言生成</span>
+        <span class="tag">Assertion Mining</span>
+        <span class="tag">覆盖驱动</span>
+        <span class="tag">形式化验证</span>
+        <span class="tag">SyGuS</span>
+        <span class="tag">神经符号</span>
+        <span class="tag">LLM精化</span>
+        <span class="tag">突变覆盖</span>
+        <span class="tag">Hongce Zhang</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.18482" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.18482_NeuroAssertion.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- OPENSOURCE: RTLLM v2.1 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>RTLLM · HKUST Zhiyao Xie 组 · GitHub 开源基准更新 · 开源贡献 · 2026-08-15 发布（08-16 提交）</div>
+      <h4>🔧 RTLLM v2.1 发布：经典 RTL 生成基准迎来质量修订——修正多个设计描述与 testbench 并同步更新受影响设计，直接影响既有论文的 pass@k 可比性</h4>
+      <p>香港科技大学（HKUST）Zhiyao Xie 组维护的 <strong>RTLLM</strong>——LLM 自然语言生成设计 RTL 的开源基准（ASP-DAC 2024，v2.0 经 OpenLLM-RTL / ICCAD 2024 扩展至 <strong>50 个设计</strong>，分为算术 Arithmetic / 存储 Memory / 控制 Control / 杂项 Miscellaneous 四大类）——于 <strong>2026-08-15 发布 v2.1</strong>（仓库提交时间 08-16，覆盖 Arithmetic、Control、Memory、Miscellaneous 四个设计目录及 <code>File_list.md</code>、<code>README.md</code>、<code>auto_run.py</code>）。更新内容为两项质量修订：① <strong>修正了若干设计描述（design_description.txt）与测试平台（testbench.v）</strong>；② <strong>同步更新受影响的设计以保持一致性</strong>。维护者在 README 中明确致谢用户反馈的使用问题并就此前造成的困惑致歉。<strong>为何重要</strong>：RTLLM 是当前 RTL 生成类论文最常用的两大评测集之一（另一为 VerilogEval），本站近期收录的多篇工作均以其为主评测基准（如 VeriRefine 报告 RTLLM v2.0 上 94% 通过率）。描述歧义与 testbench 缺陷会把功能正确的设计误判为失败，因此 v2.1 的修订意味着<strong>历史 pass@k 数字的跨版本可比性发生变化</strong>，后续复现与横向对比需明确标注所用版本。这与同组 RTL-BenchMT（DAC 2026，以智能体流水线在六个上游基准中识别并修复 47 例提示歧义）构成同一条「基准质量治理」技术线。属「基准评测 / 数据质量治理 / RTL 生成」方向的高信号开源更新。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTLLM</span>
+        <span class="tag">v2.1</span>
+        <span class="tag">基准评测</span>
+        <span class="tag">Benchmark</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">testbench修订</span>
+        <span class="tag">HKUST</span>
+        <span class="tag">Zhiyao Xie</span>
+        <span class="tag">开源</span>
+        <span class="tag">可比性</span>
+      </div>
+      <a href="https://github.com/hkust-zhiyao/RTLLM" target="_blank">→ GitHub：hkust-zhiyao/RTLLM（v2.1，2026-08-15 发布）</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

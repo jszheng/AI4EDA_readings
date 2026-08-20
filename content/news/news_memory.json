@@ -1,8 +1,47 @@
 {
-  "lastUpdate": "2026-08-20",
+  "lastUpdate": "2026-08-21",
   "cutoffDate": "2026-02-21",
-  "totalItems": 199,
+  "totalItems": 201,
   "items": [
+    {
+      "date": "2026-08-14",
+      "company": "University of Michigan & LANL",
+      "title": "🏛️ 密歇根大学 × 洛斯阿拉莫斯国家实验室（LANL）获美国能源部（DOE）Genesis Mission Award，开发 AI 智能体自动化硬件-软件协同设计（HW-SW co-design），加速面向科学工作负载的专用芯片与计算系统开发",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-151",
+      "keywords": [
+        "University of Michigan",
+        "密歇根大学",
+        "LANL",
+        "洛斯阿拉莫斯国家实验室",
+        "DOE",
+        "Genesis Mission Award",
+        "AI agents",
+        "HW-SW co-design",
+        "硬件-软件协同设计",
+        "科学工作负载",
+        "专用芯片",
+        "协同设计自动化"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "company": "HKUST Zhiyao Xie 组 (RTLLM)",
+      "title": "🔧 RTLLM v2.1 发布：经典 RTL 生成开源基准迎来质量修订——修正多个设计描述（design_description.txt）与测试平台（testbench.v）并同步更新受影响设计，直接影响既有论文的 pass@k 跨版本可比性",
+      "link": "https://github.com/hkust-zhiyao/RTLLM",
+      "keywords": [
+        "RTLLM",
+        "v2.1",
+        "基准评测",
+        "Benchmark",
+        "RTL生成",
+        "testbench修订",
+        "HKUST",
+        "Zhiyao Xie",
+        "开源",
+        "pass@k",
+        "可比性"
+      ]
+    },
     {
       "date": "2026-08-18",
       "company": "Keysight（是德科技）",
