@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（68篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（69篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2608.19395 HYDRA -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 HYDRA：面向异构 Chiplet 系统服务混合 LLM 负载的 DSE 框架——协同探索芯粒组合/布局/互连带宽/动态批处理/运行时调度，吞吐 1.55×、TTFT 降 43.7%（ESWEEK/CASES 2026）</div>
+      <div class="abs-meta">arXiv:2608.19395 · cs.AR / cs.AI / cs.LG · 2026-08-19 · Jiahao Lin, Alish Kanani, Sangwan Lee, Jaehyun Park, Umit Ogras</div>
+      <div class="abs-body">混合 Transformer-Mamba 大语言模型（LLM）提升长上下文效率，但其异构计算与通信模式使高效硬件加速复杂化；基于 Chiplet 的架构通过集成专用计算与存储单元提供可扩展方案，但横跨静态架构配置与动态运行时策略的设计空间过于庞大、难以穷举。本文提出 HYDRA——一个面向异构 Chiplet 系统服务混合 LLM 负载的综合设计空间探索（DSE）框架，协同探索芯粒组合、布局、芯粒间带宽配置、动态批处理与运行时调度，并集成了通信感知布局、动态批处理、弹性任务调度与基于马尔可夫的快速性能估计器（刻画多租户运行时动态）。在全部负载上，HYDRA 平均带来 1.55× 吞吐与 43.7% 更低的首 token 时延（TTFT），吞吐增益最高达 2.3×，优于当前最优基线。结果凸显架构与运行时策略协同设计对大规模 LLM 服务的关键性。论文已被 IEEE/ACM ESWEEK（CASES）2026 录用，属「AI for Multi-Die / Chiplet 系统级 DSE / 芯粒互连与带宽协同优化」方向的高信号工作，直接呼应「Chiplet 系统的互连/热分布优化」细分关切。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.19395" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.19395_HYDRA.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Chiplet</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">异构芯粒</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DSE</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">互连带宽</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">芯粒布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">混合LLM服务</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Transformer-Mamba</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多芯粒系统</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ESWEEK 2026</span>
+      </div>
+    </div>
 
     <!-- 2608.16080 DeepOHeat-v2 -->
     <div class="abs-card">

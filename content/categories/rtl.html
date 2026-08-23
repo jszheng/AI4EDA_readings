@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（79篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（80篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2507.06127 PrefixAgent -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ PrefixAgent：LLM 驱动的前缀加法器优化框架——骨干合成 + 结构精化双阶段，函数调用调用 EDA 工具 + e-graph 重写生成训练数据，面积优于基线且随位宽放大</div>
+      <div class="abs-meta">arXiv:2507.06127 · cs.AR / cs.AI · v2 修订 2026-08-20（重现 08-21 列表；原 2025-07）· Dongsheng Zuo, Jiadong Zhu, Yang Luo, Yuzhe Ma</div>
+      <div class="abs-body">前缀加法器（prefix adder）是基础算术电路，其设计空间随位宽指数增长，优化极具挑战；既有方法在性能、泛化与可扩展性上受限。本文提出 <strong>PrefixAgent</strong>，一个 LLM 驱动的加法器优化框架：①将问题重构为「骨干合成（backbone synthesis）」与「结构精化（structure refinement）」两个子任务，有效压缩搜索空间；LLM 通过<strong>函数调用（function calling）</strong>调用工具，基于推理与 <strong>EDA 反馈</strong>迭代构建骨干并精化局部结构。②这种新视角便于系统性收集大规模高质量监督数据——利用 <strong>e-graph（等式图）的重写（rewriting）与等式饱和（equality saturation）</strong>能力全面探索前缀加法器解空间；e-graph 的可解释性还能提取细粒度重写轨迹，作为可解释、有效的训练数据。PrefixAgent 在该数据集上微调，显著提升优化能力与推理泛化。实验表明其在近乎所有配置下合成出比基线更小面积的加法器，优势随位宽增大而扩大，且在<strong>商业 EDA 流程下仍有效</strong>。属「LLM for Hardware / RTL 电路优化」方向，把 LLM 推理、工具调用与形式化 e-graph 搜索结合，是 LLM 驱动电路级优化的代表工作。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2507.06127" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2507.06127_PrefixAgent.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">前缀加法器</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">e-graph</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">等式饱和</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">函数调用</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">EDA反馈</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">电路优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">微调</span>
+      </div>
+    </div>
 
     <!-- 2608.16934 SeqFeed -->
     <div class="abs-card">

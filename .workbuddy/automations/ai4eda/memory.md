@@ -1165,3 +1165,16 @@
 - **产物**：content/dates/2026-08-18.html + content/latest/2026-08-18.html（2 新闻 + 3 论文）+ 3 PDF + content/categories/{physical,analog,agent}.html 各 +1 卡 + content/news/index.html（08-18 section + nav + 统计 198）+ news_memory.json（198）+ manifest.js + content/papers/index.html（→08-18）。
 - **Git**：commit "auto update: 2026-08-18" → push origin/main 成功（ecc750c..b79734b）。
 - **备注**：本机 memory.md 在 08-12~08-17 期间未被前序运行更新（站点内容经 manifest 已自洽，lastUpdate 至 08-17）；本次仅补 08-18 摘要。下次若需完整追溯可回填该段。
+
+---
+
+## 2026-08-21 执行摘要
+- **前置修复（08-20 半成品对账）**：开跑时发现 08-20 轮次未完成——3 篇物理设计论文（DeepOHeat-v2 2608.16080 / NoC 拥塞布局 2608.17266 / 预布线延迟估计 2608.17914）只进了 categories/physical.html 并下载了 PDF，**未写入日期页/latest 页**，manifest.papers 少计 3（283 而非 286）。已补齐三卡（日期页用相对路径、latest 页用 ../dates/）、修正 manifest（papers 283→286、dates[0].count 3→6）、同步新闻页副标题/统计/nav，提交 41efc2c 并推送。
+- **本轮 08-21 新增内容**：
+  - 📄 论文 ×1 — NeuroAssertion（2608.18482，cs.AR/cs.AI，Zhiyuan Yan / Ziyue Zheng / Hongce Zhang，HKUST）：覆盖驱动 RTL 断言生成，形式化可达性目标 + 模型检验产多样轨迹 + SyGuS 挖掘初始断言，再以双 LLM（提候选 / 生成 repair grammar 引导符号合成）做神经符号精化；断言数与突变覆盖各约 2×。归类 verify（36→37 篇），PDF 827KB 已落地。
+  - 🌍 行业动态 ×2 —（① 学术资助）University of Michigan × LANL 获 DOE **Genesis Mission Award**，开发 AI 智能体自动化 HW-SW 协同设计，加速科学工作负载专用芯片（来源 SemiEngineering WIR #151，08-14）；（② 开源基准）**RTLLM v2.1**（2026-08-15 发布 / 08-16 提交，HKUST Zhiyao Xie 组）修正若干 design_description 与 testbench 并同步受影响设计——**影响 RTL 生成类论文历史 pass@k 的跨版本可比性**，与同组 RTL-BenchMT（DAC 2026，智能体流水线修复 6 个上游基准 47 例提示歧义）同属「基准质量治理」线。
+- **去重结论（当日检索）**：arXiv cs.AR/new 当日仅 replacement（HINT 2608.07625 / SeqFeed 2608.16934 / TrojanGYM 2601.17178）站内均已收录；cs.ET/new、cs.LG/new 无相关新论文；SemiEngineering 近期条目为已覆盖转载。GitHub 候选逐一实证：RTLLM v2.1 ✅ 采纳；RTL-BenchMT 末次提交 2026-05-14，非新增，**跳过**（可作后续补录候选）；ARCADE / EDACraft 未完成实证，未采纳。
+- **计数（终态）**：manifest papers 286→**287**、batches 108→**109**、news 199→**201**、lastUpdate **2026-08-21**；latest[]/dates[] 顶部均为 2026-08-21（count=3 = 1 论文 + 2 动态）。
+- **一致性全绿**：news_memory.totalItems 201 == 新闻页 abs-card 计数 201 == manifest.news 201；新闻页统计块 287/109/201；日期页与 latest 页各 3 卡且 PDF 链接与磁盘一致；papers/index.html 已重定向至 ../dates/2026-08-21.html。
+- **Git**：commit **0b2af8f "auto update: 2026-08-21"** → push origin/main 成功，工作树干净、与远端 0 差异。
+- **⚠️ 运行环境备注（重要）**：本轮检测到**同一自动化的并发实例**同时在写 news/index.html、news_memory.json、manifest.js（07:29 连续写入），导致 Edit 多次报 "File has been modified since read"。处置方式：先只改日期页/latest 页内容卡（RTLLM v2.1），再等并发实例落盘并提交后统一校验——最终并发实例已吸收该卡并把索引三处一并同步，无重复、无计数错漂。**后续轮次若再遇此情况，建议先 `stat` 比对 mtime 判断是否有并发写入者，避免与其对同一索引文件做并行 Edit。**

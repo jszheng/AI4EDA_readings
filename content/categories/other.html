@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-other">
-  <div class="section-title"><span class="icon">📦</span> 其他（29篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📦</span> 其他（30篇） <span class="line"></span></div>
 
   <div class="abstracts">
+    <!-- 2608.19705 MBIST -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📦 MBIST 面积与测试时间自动化估计：由 RTL 级设计参数免综合直接预测——多项式展开+对数变换+堆叠集成（XGBoost/LightGBM/NN），面积 90.68% / 测试时间 96.80% 精度（±10%）</div>
+      <div class="abs-meta">arXiv:2608.19705 · cs.AR · 2026-08-20 · Chee Jin Teoh, Ab Al-Hadi Ab Rahman, Johnny Kee Hui Wong, Premkumar A/L Kesavan Prabagaran, Muhammad Nadzir Marsono, Nuzhat Khan</div>
+      <div class="abs-body">嵌入式内存在现代 SoC（尤其 AI 与边缘计算）中占据大量面积；存储内置自测试（MBIST）虽保障存储可靠性，却引入额外面积与测试时间开销。设计规划阶段对这些开销的准确早期估计十分重要，但传统方法依赖完整 RTL 综合与测试向量生成，缓慢且消耗资源。本文提出一个<strong>监督学习框架，直接由 RTL 级设计参数免综合预测 MBIST 面积与测试时间</strong>：以 Synopsys Design Compiler 与 Intel 增强的 MBIST 工具 MINT 生成 4,470 条面积样本与 624 条测试时间样本，输入特征含存储数量、字宽、地址深度、端口配置与时钟域。面积预测经多项式展开、对数变换、缩放后送入 XGBoost + LightGBM + 神经网络（以梯度提升为元学习器）的<strong>堆叠集成</strong>；测试时间由 XGBoost + LightGBM 经 Ridge 回归组合，并用 100 次 Optuna 搜索调参。模型在 ±10% 区间内达到<strong>面积 90.68%、测试时间 96.80% 精度</strong>，较基线分别提升 8.53% 与 48.80%。该工作把 ML 用于设计规划阶段的面积与测试代价预估，属「ML for EDA / 测试开销早期估计 / 免综合预测」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.19705" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.19705_MBIST.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">MBIST</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">测试开销估计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">监督学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">堆叠集成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">XGBoost</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LightGBM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">免综合预测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">存储IP</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Design Compiler</span>
+      </div>
+    </div>
+
       <div class="abs-card">
         <div class="abs-meta">
           <span class="badge-new">NEW</span>

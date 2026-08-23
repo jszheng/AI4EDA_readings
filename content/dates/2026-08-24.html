@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-24 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 2 条行业动态 · 来源：arXiv（cs.AR / cs.AI，08-21 公告批次：① 2608.19395 HYDRA 异构 Chiplet 混合 LLM 推理 DSE 框架；② 2608.19705 MBIST 面积/测试时间堆叠集成免综合预测；③ 2507.06127 PrefixAgent LLM 驱动前缀加法器优化（v2 重现）；④ 2608.12687 TTARO 模拟电路表征自适应贝叶斯优化（08-13 补录））+ 行业动态（① SemiEngineering WIR #152：Silvaco×Dassault 半导体制造数字孪生 / proteanTecs 多芯粒管理 / Velaura AI $1.1 亿 / 美国家安全科技战略优先 EDA；② GitHub hls-generator 面向 Vitis HLS 的开源 AI Agent Skill）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2608.19395 HYDRA -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI / cs.LG · 2026-08-19（公告 08-21）· Jiahao Lin, Alish Kanani, Sangwan Lee, Jaehyun Park, Umit Ogras · ESWEEK (CASES) 2026 / IEEE TCAD</div>
+      <h4>📐 HYDRA：面向异构 Chiplet 系统混合 LLM 推理的设计空间探索框架——联合优化芯粒组合、布局、互连带宽与运行时调度，吞吐 1.55×、首 token 延迟降 43.7%</h4>
+      <p>混合 Transformer-Mamba 大语言模型（LLM）提升了长上下文效率，但其异构计算与通信模式使高效硬件加速变得复杂；chiplet 架构通过集成专用计算与存储单元提供可扩展方案，但跨越「静态架构配置 + 动态运行时策略」的设计空间过大、难以穷举。本文提出 <strong>HYDRA</strong>，一个面向异构 chiplet 系统混合 LLM 推理的综合设计空间探索（DSE）框架，<strong>联合探索芯粒组合（chiplet composition）、布局（placement）、片间带宽配置、动态批处理与运行时调度</strong>；集成通信感知布局、动态批处理、弹性任务调度，以及捕捉多租户运行时动态的快速 Markov 性能估计器，实现高效且准确的探索。结果：跨所有负载平均吞吐 <strong>1.55×</strong>、首 token 延迟（TTFT）<strong>降低 43.7%</strong>，吞吐最高达基线 <strong>2.3×</strong>。录用于 IEEE/ACM ESWEEK (CASES) 2026，将发表于 IEEE TCAD。属「AI for Multi-Die/Chiplets / 芯粒互连与系统级 DSE」方向的高信号工作，揭示架构—运行时协同设计对大规模 LLM 推理效率的关键性。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Chiplet</span>
+        <span class="tag">设计空间探索</span>
+        <span class="tag">DSE</span>
+        <span class="tag">异构系统</span>
+        <span class="tag">混合LLM</span>
+        <span class="tag">互连带宽</span>
+        <span class="tag">运行时调度</span>
+        <span class="tag">Markov估计器</span>
+        <span class="tag">ESWEEK2026</span>
+        <span class="tag">多芯粒</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.19395" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.19395_HYDRA.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.19705 MBIST -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-20（公告 08-21）· Chee Jin Teoh, Ab Al-Hadi Ab Rahman, Johnny Kee Hui Wong, Premkumar A/L Kesavan Prabagaran, Muhammad Nadzir Marsono, Nuzhat Khan</div>
+      <h4>📐 MBIST 面积与测试时间自动化估计：堆叠集成框架从 RTL 级参数免综合预测——面积准确度 90.68%、测试时间 96.80%（±10%），较基线 +8.53% / +48.80%</h4>
+      <p>嵌入式存储器在现代 SoC 中占大面积，MBIST（Memory Built-In Self-Test）保障存储可靠性，但引入额外面积与测试时间开销；传统方法依赖完整 RTL 综合与测试向量生成，缓慢且耗资源。本文提出<strong>监督学习框架</strong>，直接从 RTL 级设计参数（存储数量、字宽、地址深度、端口配置、时钟域）预测 MBIST 面积与测试时间，<strong>无需综合</strong>。数据集由 Synopsys Design Compiler 与 Intel 增强版 MBIST 工具 MINT 生成（面积 4,470 样本 / 测试时间 624 样本）。面积预测经多项式展开、对数变换与缩放后接入 <strong>XGBoost + LightGBM + 神经网络（以 Gradient Boosting 为元学习器）的堆叠集成</strong>；测试时间用 XGBoost + LightGBM 经 Ridge 回归融合，超参经 100 次 Optuna 搜索调优。模型在 ±10% 容差内<strong>面积准确度 90.68%、测试时间 96.80%</strong>，分别较基线提升 8.53% 与 48.80%。属「AI / ML for EDA（DFT 测试规划）」方向，用轻量 ML 替代昂贵的综合预测，支撑存储 IP 开发中的高效设计决策。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">MBIST</span>
+        <span class="tag">测试时间估计</span>
+        <span class="tag">存储器IP</span>
+        <span class="tag">堆叠集成</span>
+        <span class="tag">XGBoost</span>
+        <span class="tag">LightGBM</span>
+        <span class="tag">DFT</span>
+        <span class="tag">ML for EDA</span>
+        <span class="tag">Synopsys DC</span>
+        <span class="tag">Intel MINT</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.19705" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.19705_MBIST.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2507.06127 PrefixAgent -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · v2 修订 2026-08-20（重现 08-21 列表；原 2025-07）· Dongsheng Zuo, Jiadong Zhu, Yang Luo, Yuzhe Ma</div>
+      <h4>⚡ PrefixAgent：LLM 驱动的前缀加法器优化框架——骨干合成 + 结构精化双阶段，函数调用调用 EDA 工具 + e-graph 重写生成训练数据，面积优于基线且随位宽放大</h4>
+      <p>前缀加法器（prefix adder）是基础算术电路，其设计空间随位宽指数增长，优化极具挑战；既有方法在性能、泛化与可扩展性上受限。本文提出 <strong>PrefixAgent</strong>，一个 LLM 驱动的加法器优化框架：①将问题重构为「骨干合成（backbone synthesis）」与「结构精化（structure refinement）」两个子任务，有效压缩搜索空间；LLM 通过<strong>函数调用（function calling）</strong>调用工具，基于推理与 <strong>EDA 反馈</strong>迭代构建骨干并精化局部结构。②这种新视角便于系统性收集大规模高质量监督数据——利用 <strong>e-graph（等式图）的重写（rewriting）与等式饱和（equality saturation）</strong>能力全面探索前缀加法器解空间；e-graph 的可解释性还能提取细粒度重写轨迹，作为可解释、有效的训练数据。PrefixAgent 在该数据集上微调，显著提升优化能力与推理泛化。实验表明其在近乎所有配置下合成出比基线更小面积的加法器，优势随位宽增大而扩大，且在<strong>商业 EDA 流程下仍有效</strong>。属「LLM for Hardware / RTL 电路优化」方向，把 LLM 推理、工具调用与形式化 e-graph 搜索结合，是 LLM 驱动电路级优化的代表工作（v2 于 2026-08-20 修订、重现于 08-21 新列表）。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">RTL生成</span>
+        <span class="tag">前缀加法器</span>
+        <span class="tag">Prefix Adder</span>
+        <span class="tag">LLM优化</span>
+        <span class="tag">e-graph</span>
+        <span class="tag">等式饱和</span>
+        <span class="tag">函数调用</span>
+        <span class="tag">EDA反馈</span>
+        <span class="tag">电路优化</span>
+        <span class="tag">微调</span>
+      </div>
+      <a href="https://arxiv.org/abs/2507.06127" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2507.06127_PrefixAgent.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.12687 TTARO (recovered 08-13) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · 2026-08-13 · Fin Amin, Sounak Dutta, Paul D. Franzon（NC State）</div>
+      <h4>🔬 TTARO：测试时模拟电路表征自适应——提升贝叶斯优化在电路拓扑搜索中的效率（Paul Franzon 组，08-13 公告补录）</h4>
+      <p>模拟电路拓扑搜索（circuit topology search）高度依赖表征（representation）质量，但固定表征难以适配多样设计场景，导致<strong>贝叶斯优化（Bayesian Optimization）</strong>在庞大且稀疏的电路解空间中效率低下。本文提出 <strong>TTARO（Test-Time Analog circuit Representation Adaptation for bayesian Optimization）</strong> 框架，在<strong>测试时（test-time）自适应调整模拟电路的表征</strong>，使其更贴合当前优化任务，从而更高效地引导贝叶斯优化探索电路拓扑空间。方法在「表征—优化」闭环中引入测试时自适应，避免为每种电路手工设计专用表征，提升拓扑搜索的采样效率与最终电路质量。作者含北卡州立大学（NC State）Paul D. Franzon 组，属「模拟与架构 / 模拟电路 AI 优化（贝叶斯优化 + 表征学习）」方向，把测试时自适应（test-time adaptation）思想引入模拟电路自动设计，是模拟 EDA 中表征学习 + 贝叶斯优化的代表工作。（注：本文 2026-08-13 公告，本轮补录以填补此前遗漏。）</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">模拟电路</span>
+        <span class="tag">贝叶斯优化</span>
+        <span class="tag">表征自适应</span>
+        <span class="tag">Test-Time Adaptation</span>
+        <span class="tag">电路拓扑搜索</span>
+        <span class="tag">模拟EDA</span>
+        <span class="tag">Paul Franzon</span>
+        <span class="tag">表征学习</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.12687" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.12687_TTARO.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- NEWS: SemiEngineering WIR #152 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · Chip Industry Week in Review #152 · 行业动态 · 2026-08-22</div>
+      <h4>📰 SemiEngineering《Chip Industry Week in Review #152》：Silvaco × Dassault 共建半导体制造数字孪生工作流 + proteanTecs 多芯粒健康/功耗/性能管理 + Velaura AI 融资 $1.1 亿 + 美《国家安全科技战略》将 EDA 列为优先研发方向</h4>
+      <p>据 SemiEngineering《Chip Industry Week in Review #152》综述，本周 AI4EDA 相关要点：① <strong>Silvaco × Dassault Systèmes</strong> 将共建半导体制造的<strong>可互操作数字孪生（digital twin）工作流</strong>，涵盖设备级等离子体仿真、特征级工艺建模与结构分析，把数字孪生从器件推向制造全流程；② <strong>proteanTecs</strong> 发布面向<strong>多芯粒（multi-die）系统</strong>的健康/功耗/性能管理套件，提供从预组装筛选到 SiP 生产再到在役运行（in-mission）的逐芯粒（per-chiplet）可见性；③ <strong>Velaura AI</strong> 融资 <strong>$1.1 亿</strong>，商业化其面向数据中心 XPU 与物理 AI 的超低功耗数字芯片 IP 与设计平台；④ 美国《国家安全科技战略》（National Security S&T Strategy）明确将 <strong>EDA</strong>、先进制造装备与工艺、异构集成与先进封装、AI/RF/光硬件列为优先研发方向，SRC 同期启动 +$13M 产学研项目、Micron 拟十年投 $10B 建新的研究实验室。属「多物理场数字孪生 / 多芯粒可观测性 / AI EDA 初创融资 / 政策」方向的高信号行业综述。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">SemiEngineering</span>
+        <span class="tag">WIR #152</span>
+        <span class="tag">Silvaco</span>
+        <span class="tag">Dassault</span>
+        <span class="tag">数字孪生</span>
+        <span class="tag">proteanTecs</span>
+        <span class="tag">多芯粒</span>
+        <span class="tag">Velaura AI</span>
+        <span class="tag">国家安全科技战略</span>
+        <span class="tag">EDA政策</span>
+      </div>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-152/" target="_blank">→ SemiEngineering WIR #152：数字孪生 / 多芯粒管理 / Velaura AI / EDA 优先研发</a>
+    </div>
+
+    <!-- OPENSOURCE: hls-generator -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>GitHub · Eriemon/hls-generator · 开源 AI Agent Skill · 面向 AMD/Xilinx Vitis HLS &amp; FPGA · 2026-08 发布</div>
+      <h4>🔧 hls-generator：面向 AMD/Xilinx Vitis HLS 的开源 AI Agent Skill——自然语言生成 HLS 代码、设计空间探索、代码审查与流程自动化</h4>
+      <p>GitHub 用户 Eriemon 于 2026 年 8 月发布开源项目 <strong>hls-generator</strong>，构建面向 AMD/Xilinx Vitis HLS 与 FPGA 设计的 AI Agent Skill，旨在降低传统 FPGA 开发门槛、为硬件加速开发提供智能辅助。核心能力含四大模块：① <strong>HLS 代码生成</strong>（自然语言→标准代码、插入优化 pragma、选择数据类型、生成标准接口）；② <strong>设计空间探索</strong>（参数建议、权衡分析、迭代优化）；③ <strong>代码审查与优化</strong>（瓶颈识别、资源/时序优化、代码重构）；④ <strong>工作流自动化</strong>（综合自动化、结果解析、仿真支持、部署辅助）。技术架构分三层：Agent 核心（LLM 提供 NLP 与代码能力 + HLS 知识库）、工具接口层（Vitis HLS 集成 + 报告解析 + 文件管理）、工作流引擎（任务编排 + 状态追踪 + 反馈闭环）。属「开源 EDA AI Skills / Agents 新能力」在 HLS/FPGA 领域的代表，与 kicad-mcp、Babel、spec-to-gds 等同列 AI 辅助 EDA 工具链，推动从算法到硬件的加速转化。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">开源</span>
+        <span class="tag">hls-generator</span>
+        <span class="tag">Vitis HLS</span>
+        <span class="tag">FPGA</span>
+        <span class="tag">AI Agent Skill</span>
+        <span class="tag">HLS代码生成</span>
+        <span class="tag">设计空间探索</span>
+        <span class="tag">工作流自动化</span>
+        <span class="tag">AMD/Xilinx</span>
+        <span class="tag">Eriemon</span>
+      </div>
+      <a href="https://www.zingnex.cn/en/forum/thread/hls-amd-xilinx-vitis-hlsfpgaai" target="_blank">→ hls-generator：面向 Vitis HLS 的开源 AI Agent Skill（项目介绍）</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

@@ -1,8 +1,46 @@
 {
-  "lastUpdate": "2026-08-21",
+  "lastUpdate": "2026-08-24",
   "cutoffDate": "2026-02-21",
-  "totalItems": 201,
+  "totalItems": 203,
   "items": [
+    {
+      "date": "2026-08-22",
+      "company": "SemiEngineering",
+      "title": "📰 Chip Industry Week In Review #152：Silvaco × Dassault 共建半导体制造数字孪生工作流 + proteanTecs 多芯粒健康/功耗/性能管理 + Velaura AI 融资 $1.1 亿 + 美《国家安全科技战略》将 EDA 列为优先研发方向",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-152/",
+      "keywords": [
+        "SemiEngineering",
+        "WIR #152",
+        "Silvaco",
+        "Dassault",
+        "数字孪生",
+        "proteanTecs",
+        "多芯粒",
+        "Velaura AI",
+        "国家安全科技战略",
+        "EDA政策",
+        "2026-08-22"
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "company": "Eriemon / GitHub",
+      "title": "🔧 hls-generator：面向 AMD/Xilinx Vitis HLS 的开源 AI Agent Skill——自然语言生成 HLS 代码、设计空间探索、代码审查与流程自动化",
+      "link": "https://www.zingnex.cn/en/forum/thread/hls-amd-xilinx-vitis-hlsfpgaai",
+      "keywords": [
+        "开源",
+        "hls-generator",
+        "Vitis HLS",
+        "FPGA",
+        "AI Agent Skill",
+        "HLS代码生成",
+        "设计空间探索",
+        "工作流自动化",
+        "AMD/Xilinx",
+        "Eriemon",
+        "2026-08"
+      ]
+    },
     {
       "date": "2026-08-14",
       "company": "University of Michigan & LANL",
