@@ -1178,3 +1178,19 @@
 - **一致性全绿**：news_memory.totalItems 201 == 新闻页 abs-card 计数 201 == manifest.news 201；新闻页统计块 287/109/201；日期页与 latest 页各 3 卡且 PDF 链接与磁盘一致；papers/index.html 已重定向至 ../dates/2026-08-21.html。
 - **Git**：commit **0b2af8f "auto update: 2026-08-21"** → push origin/main 成功，工作树干净、与远端 0 差异。
 - **⚠️ 运行环境备注（重要）**：本轮检测到**同一自动化的并发实例**同时在写 news/index.html、news_memory.json、manifest.js（07:29 连续写入），导致 Edit 多次报 "File has been modified since read"。处置方式：先只改日期页/latest 页内容卡（RTLLM v2.1），再等并发实例落盘并提交后统一校验——最终并发实例已吸收该卡并把索引三处一并同步，无重复、无计数错漂。**后续轮次若再遇此情况，建议先 `stat` 比对 mtime 判断是否有并发写入者，避免与其对同一索引文件做并行 Edit。**
+
+---
+
+## 2026-08-24 补记（前置运行，memory.md 此前未记录）
+- 站点已于 2026-08-24 由前序运行更新并本地提交 **7491ded "auto update: 2026-08-24"**；manifest 终态 papers 291 / batches 110 / news 203 / lastUpdate 2026-08-24。
+- 内容：4 论文（2608.19395 HYDRA / 2608.19705 MBIST / 2507.06127 PrefixAgent v2 / 2608.12687 TTARO）+ 2 动态（SemiEngineering WIR #152：Silvaco×Dassault 数字孪生 / proteanTecs 多芯粒 / Velaura AI $1.1亿 / 美 EDA 优先研发；GitHub hls-generator 开源 AI Agent Skill），详见 content/dates/2026-08-24.html。本轮（08-25）执行时该运行已自洽，未重复计入。
+
+## 2026-08-25 执行摘要
+- **触发**：AI4EDA 每日自动化（weekday 05:00 定时，实际 07:35 执行）。前置 08-24 站点已更新（见上补记）。
+- **检索覆盖**：arXiv API cs.AR recent 列表（08-18~24 公告）+ WebSearch×多路（vendor 新闻 / SemiEngineering / GitHub）+ arXiv 2608.21356 原文核对。当日最新公告批次中绝大多数 cs.AR 新论文（HYDRA/MBIST/PrefixAgent/TTARO/NeuroAssertion/NeuroAbs/SeqFeed/GoalEvolve/TRACE/DeepOHeat-v2 等）均已入库；新闻侧 DAC 2026 三巨头自主化、NVIDIA Agent Toolkit、Synopsys×NVIDIA、OpenROAD 例行维护均为已覆盖转载/重复；GitHub 侧 verilog-generator/hls-generator 已于 08-20/08-24 收录，OpenROAD 近提交仅例行维护。
+- **新增论文 1 篇（唯一真正新增，site 此前无 21356）**：**2608.21356 AI with Authority, from Application to Silicon**（cs.SE/AI/AR/LO，Jason Hickey，2026-08-21）——一人消费级 AI 订阅指挥智能体舰队，从应用代码经可验证编译器与执行器直达 RISC-V 流片，零人工 RTL、零人工审证明；Salt 方法依赖「任何幻觉证明都无法通过」的证明内核（Lean 4 → 硅边界 SAT 等价），公开 #256 错误账本。归类 **agent**（自主芯片设计 / 形式验证 / 可信自主），PDF 541KB 已落地并接入日期页 / latest 页 / agent 分类页本地链接。
+- **行业动态 +0**：当日未检索到非重复、非已覆盖的公司动态 / 产品发布 / 合作 / 融资；SemiEngineering WIR #153 尚未发布（#152 为 08-22）。故新闻页不新增 section、news_memory 不变（totalItems 203）。
+- **计数（终态）**：manifest papers 291→**292**、batches 110→**111**、news 203（不变）、lastUpdate **2026-08-25**；分类头 agent 38→**39**；latest[]/dates[] 顶部均为 2026-08-25（count=1）。
+- **一致性全绿**：news_memory 203 == 新闻页头 203 == manifest.news 203；PDF 磁盘与三页链接一致（日期页相对路径、latest/agent 用 ../dates/）；papers/index.html 已重定向至 ../dates/2026-08-25.html；news/index.html 统计块同步 292/111/203。
+- **清理**：删除并发/重复遗留的未引用 PDF `2608.21356_AIwithAuthority.pdf`（与正式文件同大小同头、全站无引用），未提交。
+- **Git**：commit **bf0282f "auto update: 2026-08-25"**（7 files：2 新页 + 1 PDF + agent.html + news/index.html 统计块 + papers/index.html 重定向 + manifest.js）→ push origin/main 成功（7491ded..bf0282f）。
