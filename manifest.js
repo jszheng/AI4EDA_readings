@@ -4,14 +4,15 @@
  */
 window.SITE_MANIFEST = {
   stats: {
-    papers: 291,
-    batches: 110,
+    papers: 292,
+    batches: 111,
     news: 203,
-    lastUpdate: "2026-08-24"
+    lastUpdate: "2026-08-25"
   },
 
   /* 侧边栏「按日期」视图 */
   latest: [
+    { date: "2026-08-25", title: "🔥 08-25 最新",  file: "content/latest/2026-08-25.html" },
     { date: "2026-08-24", title: "🔥 08-24 最新",  file: "content/latest/2026-08-24.html" },
     { date: "2026-08-21", title: "🔥 08-21 最新",  file: "content/latest/2026-08-21.html" },
     { date: "2026-08-20", title: "🔥 08-20 最新",  file: "content/latest/2026-08-20.html" },
@@ -89,6 +90,7 @@ window.SITE_MANIFEST = {
   ],
 
   dates: [
+    { date: "2026-08-25", title: "2026-08-25", count: 1, file: "content/dates/2026-08-25.html" },
     { date: "2026-08-24", title: "2026-08-24", count: 6, file: "content/dates/2026-08-24.html" },
     { date: "2026-08-21", title: "2026-08-21", count: 3, file: "content/dates/2026-08-21.html" },
     { date: "2026-08-20", title: "2026-08-20", count: 6, file: "content/dates/2026-08-20.html" },

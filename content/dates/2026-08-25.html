@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-25 动态</h1>
+  <p class="subtitle">共 1 篇论文 · 0 条行业动态 · 来源：arXiv（cs.SE / cs.AI / cs.AR / cs.LO，2026-08-21 公告：① 2608.21356 AI with Authority, from Application to Silicon——一人消费级 AI 订阅指挥智能体舰队，从应用代码经可验证编译器直达 RISC-V 流片，零人工 RTL、零人工审证明）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2608.21356 AI with Authority -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE / cs.AI / cs.AR / cs.LO · 2026-08-21 · Jason Hickey</div>
+      <h4>🤖 AI with Authority, from Application to Silicon：一人消费级 AI 订阅指挥智能体舰队，从应用代码经可验证编译器与执行器直达 RISC-V 流片——零人工 RTL、零人工审证明</h4>
+      <p>生成式 AI 颠覆了机器验证的经济学：在 AI 速度下，机器验证不仅经济、更是生产力必需，它充当「不可腐化的裁判」，让一个人能安全指挥大规模的自主机器工作。作者（Jason Hickey）报告：仅用消费级 AI 订阅，一名研究者在五周内指挥一支小型 AI 智能体舰队，从应用代码出发，经可验证编译器与执行器，最终将一颗 RISC-V 处理器送上社区硅 shuttle 流片；全程没有任何证明经过人工审查，也没有任何 RTL 由人类手写。其工作纪律「Salt 方法」依赖一个「任何幻觉证明都无法通过」的证明内核（proof kernel）：数学断言在智能体之间以内核校验过的工件传递，人类注意力只保留给陈述、设计与裁决。验证自顶向下逐链接陈述——从 Lean 4 内核到硅边界处 SAT 校验的等价性。作者公开了完整账本：定理溯源、预注册 token 计量、下限锁定的人类时间，以及一条编号至 #256 的错误账本（2026-07-07 至 07-20 的 append-only flags ledger，其中 #79 从未被指派）。属「前端 RTL 生成 + 形式验证 + 自主芯片设计」方向的高信号代表：用形式化证明内核把 LLM 智能体的「权威」锚定在可验证基岩上，是 agentic EDA 走向可信自主的关键范式，与 Siemens 自验证智能体、Synopsys/Cadence 自主验证工作流形成方法论互补。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">自主芯片设计</span>
+        <span class="tag">智能体舰队</span>
+        <span class="tag">形式验证</span>
+        <span class="tag">证明内核</span>
+        <span class="tag">Lean 4</span>
+        <span class="tag">Salt方法</span>
+        <span class="tag">RISC-V流片</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">可信自主</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.21356" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.21356_AI_with_Authority.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
