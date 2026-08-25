@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-26 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.SE / cs.AR / cs.NE / cs.LG，2026-08-22~08-24 公告：① 2608.22938 EAHC——执行锚定幻觉校准重排序提升 Verilog 生成候选选择；② 2608.23317 LLM-SPICEMixer——LLM 增强遗传算法生成 SPICE 网表（MLCAD 2026）；③ 2608.21962 NoTB——跨模型形式共识无预言机 RTL 分诊（MLCAD 2026）；④ 2608.21887 TherMapNet——注意力引导运行时全芯片热图预测）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2608.22938 EAHC -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE / cs.AR · 2026-08-24 · Guang Yang, Xing Hu, Xiang Chen, Terry Yue Zhuo, Xin Xia</div>
+      <h4>⚡ EAHC：执行锚定的幻觉校准重排序框架——融合执行信号与推理信号，提升 Verilog 生成候选选择准确性</h4>
+      <p>LLM 在低资源 HDL（如 Verilog）代码生成上表现显著下降，多候选采样虽提高正确解出现概率，但自动挑选最优候选仍是开放难题。本文系统实证发现两大局限：(1) 现有基于执行的重排序依赖 testbench 通过/失败结果，因生成 testbench 质量低而领域迁移差；(2) LLM-as-a-Judge 存在推理幻觉，对执行等价的代码给出不一致判断。两种信号误差正交——执行信号确定但覆盖有限，推理信号语义丰富但易幻觉。EAHC 据此提出「执行锚定幻觉校准」重排序框架：双通道架构 EAHC-R（4B 推理判别器）与 EAHC-T（基于 RAG 的 testbench 生成器用于执行验证），将推理判断锚定到执行行为，使执行等价候选获得一致评分。属「前端 RTL 生成-验证-反馈闭环」方向，直接改进 Verilog 生成的后处理候选选择。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">Verilog生成</span>
+        <span class="tag">重排序</span>
+        <span class="tag">执行反馈</span>
+        <span class="tag">幻觉校准</span>
+        <span class="tag">LLM-as-a-Judge</span>
+        <span class="tag">RAG</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">候选选择</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.22938" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.22938_EAHC.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.23317 LLM-SPICEMixer -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.NE / cs.AR / cs.LG · 2026-08-24 · Stefan Uhlich, Yağız Gençer, Andrea Bonetti, Arun Venkitaraman, Chia-Yu Hsieh, Eisaku Ohbuchi, Lorenzo Servadei</div>
+      <h4>🔬 LLM-SPICEMixer：用 LLM 增强遗传算法生成 SPICE 网表——MLCAD 2026 接收</h4>
+      <p>模拟电路拓扑合成极具挑战：有用设计仅占组合搜索空间的极小一部分，微小结构改动即可引发高度非线性的行为变化。进化算法可仅用黑盒评估优化离散拓扑，但常需大量 SPICE 仿真且易早熟收敛。本文提出 LLM-SPICEMixer 混合合成框架，以 IGEL（Inspiration-Guided Evolution with LLMs）这一 LLM 驱动的提议算子增强遗传网表生成：搜索中用 LLM 观察精英集中的高性能电路并生成新 SPICE 网表，再由 SPICE 评估、沿用遗传算子的同一奖励机制筛选，使 LLM 贡献结构化拓扑提议、仿真保持真理来源。在 Iris 分类判别函数晶体管级电路合成基准上，相较无 LLM 引导的遗传框架，中位最终训练奖励 +8.4%、中位验证选定测试奖励 +8.8%；最佳电路在标称 tt 角达 93.3% 测试精度、17 个 PVT 角平均 85.9%。MLCAD 2026 接收（扩展版）。属「模拟电路 AI 生成 / LLM 辅助电路设计」方向代表。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">模拟电路</span>
+        <span class="tag">SPICE网表</span>
+        <span class="tag">LLM</span>
+        <span class="tag">遗传算法</span>
+        <span class="tag">拓扑合成</span>
+        <span class="tag">MLCAD 2026</span>
+        <span class="tag">电路生成</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.23317" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.23317_LLM_SPICEMixer.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.21962 NoTB -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · 2026-08-22 · Elisavet Lydia Alvanaki, Je Yang, Biruk Seyoum, Luca P. Carloni</div>
+      <h4>✅ NoTB：基于跨模型形式共识的无预言机 RTL 分诊——SEC 顺序等价检查推断正确性</h4>
+      <p>LLM 日益用于从自然语言规范生成 RTL，但早期功能正确性评估仍是根本挑战。现有无预言机方法要么依赖基于仿真的共识（受 LLM 生成 testbench 易失败/跨模型波动影响），要么依赖 LLM-as-a-judge 启发式（预测不一致）。本文提出 NoTB，一种从无预言机的分诊框架，从跨模型形式共识推断正确性：用多个独立训练的 LLM 家族生成 RTL 实现，并施加顺序等价检查（SEC）识别可证明等价的设计；同一 SEC 等价簇内模型家族的多样性诱导出校准的正确性信号，无需 testbench 即可实现风险-覆盖权衡。在 78 个 CVDP RTL 生成任务上，四家族形式共识在 27% 覆盖率下达 94.7% 精度，三家族在 33% 覆盖率下达 87% 精度，为设计者在可信 testbench/金 RTL 可用前提供可调的接受/转交规则。MLCAD 2026。属「形式验证 + LLM RTL 正确性评估」方向，用 SEC 形式方法替代脆弱的 testbench/评委启发式。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">形式验证</span>
+        <span class="tag">顺序等价检查</span>
+        <span class="tag">SEC</span>
+        <span class="tag">跨模型共识</span>
+        <span class="tag">无预言机</span>
+        <span class="tag">LLM</span>
+        <span class="tag">MLCAD 2026</span>
+        <span class="tag">正确性分诊</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.21962" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.21962_NoTB.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.21887 TherMapNet -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · 2026-08-22 · Qin Gu, Chaofang Ma, Mingyu Yang, Yipu Zhang, Jiliang Zhang, Wei Zhang, Lin Jiang</div>
+      <h4>📐 TherMapNet：注意力引导的运行时全芯片热图预测——直接从性能指标预测热图</h4>
+      <p>高性能芯片的运行时热管理依赖快速准确的全芯片热图。传统仿真器通常先从性能指标估算功耗轨迹，带来额外开销。本文提出 TherMapNet，一种注意力引导的热仿真器，直接从性能指标预测全芯片热图：Transformer 编码器将各指标时间序列作为 token 捕捉时间演化，建模动态负载；CNN 提取细粒度空间特征，其中双分支通道-空间注意力卷积模块（DACM）与三元组损失提升空间学习与重建精度。在 AMD Ryzen 7 4800U 多核 CPU 与 NVIDIA RTX 4060 多核 GPU 上，RMSE 低于 0.26°C、在 RTX 3090 上推理快于 2.4ms，优于先前热仿真器。提交 IEEE ICCD。属「多物理场 AI 分析 / 芯片热管理」方向，用轻量 ML 直接预测热图支撑运行时热管理，与 Chiplet 热优化、多物理场签核形成互补。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">热分析</span>
+        <span class="tag">多物理场</span>
+        <span class="tag">全芯片热图</span>
+        <span class="tag">ML预测</span>
+        <span class="tag">Transformer</span>
+        <span class="tag">CNN</span>
+        <span class="tag">运行时热管理</span>
+        <span class="tag">ICCD</span>
+        <span class="tag">物理设计</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.21887" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.21887_TherMapNet.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

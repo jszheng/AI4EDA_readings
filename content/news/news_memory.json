@@ -1,6 +1,6 @@
 {
-  "lastUpdate": "2026-08-24",
-  "cutoffDate": "2026-02-21",
+  "lastUpdate": "2026-08-26",
+  "cutoffDate": "2026-02-23",
   "totalItems": 203,
   "items": [
     {
@@ -1247,26 +1247,25 @@
       ]
     },
     {
-      "date": "2026-07-11",
-      "company": "Eriemon / 东南大学 HIQC",
-      "title": "🔧 verilog-generator：面向 Verilog-2001 RTL 生成与 FPGA 设计工作流的开源 Agent Skill（v0.3.6）",
+      "date": "2026-08-20",
+      "company": "Eriemon / GitHub",
+      "title": "🔧 verilog-generator v1.3.5 发布：面向 Verilog-2001 的开源 AI Agent Skill「readable-verilog-generator」字节精确打包——需求→行为预览→可审查 RTL→真实诊断修复的诚实闭环",
       "link": "https://github.com/Eriemon/verilog-generator",
       "keywords": [
         "verilog-generator",
         "Eriemon",
-        "东南大学",
-        "HIQC",
+        "readable-verilog-generator",
         "Agent Skill",
         "Verilog-2001",
         "RTL生成",
         "FPGA",
         "开源",
-        "Apache-2.0",
-        "disciplined workflow",
-        "testbench",
-        "仿真闭环",
-        "v0.3.6",
-        "2026-07-11"
+        "Codex",
+        "可读RTL",
+        "真实诊断修复",
+        "字节精确打包",
+        "v1.3.5",
+        "2026-08-20"
       ]
     },
     {

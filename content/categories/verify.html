@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（37篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（38篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+
+    <!-- 2608.21962 NoTB -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 NoTB：基于跨模型形式共识的无测试平台 RTL 筛选——多家族 LLM 生成 + 时序等价检查（SEC）识别可证等价设计，提供校准正确性信号（MLCAD 2026）</div>
+      <div class="abs-meta">arXiv:2608.21962 · cs.AR / cs.AI · 2026-08-22 · Elisavet Lydia Alvanaki, Je Yang, Biruk Seyoum, Luca P. Carloni</div>
+      <div class="abs-body">LLM 日益用于从自然语言规范生成 RTL，但早期功能正确性评估仍是根本挑战。既有无 oracle 方法要么依赖基于仿真的多模型一致性（需 LLM 生成测试平台，易失效或跨模型不稳定），要么依赖 LLM-as-judge 启发式（预测不一致）。本文提出 <strong>NoTB</strong>，一种无测试平台筛选框架，从<strong>跨模型形式共识</strong>推断正确性：用多个独立训练的 LLM 家族生成 RTL 实现，再施加<strong>时序等价检查（SEC）</strong>识别可证明等价的设计。作者发现，SEC 等价簇内模型家族的多样性诱导出<strong>校准的正确性信号</strong>，可在无需测试平台的情况下实现风险—覆盖权衡的取舍。在 78 个 CVDP RTL 生成任务上：四家族共识达 94.7% 精度 @ 27% 覆盖；三家族共识达 87% 精度 @ 33% 覆盖，为设计者在可信测试平台/黄金 RTL 就绪前提供可调的接受/延后规则。整体表明形式化跨模型一致性为无 oracle 高置信筛选提供了可靠基础。属「LLM RTL 生成 + 形式验证 / 无测试平台正确性评估」方向，作者含 Columbia 的 Luca P. Carloni，收录 MLCAD 2026。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.21962" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.21962_NoTB.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序等价检查</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">跨模型共识</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">无测试平台</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">校准正确性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">MLCAD 2026</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Luca Carloni</span>
+      </div>
+    </div>
 
     <!-- 2608.18482 NeuroAssertion -->
     <div class="abs-card">

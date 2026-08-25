@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（80篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（81篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2608.22938 EAHC -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ EAHC：执行锚定幻觉校准重排序提升 Verilog 代码生成——双通道（4B 推理判别 EAHC-R + RAG 测试平台生成 EAHC-T），执行信号与推理信号正交融合</div>
+      <div class="abs-meta">arXiv:2608.22938 · cs.SE / cs.AR · 2026-08-24 · Guang Yang, Xing Hu, Xiang Chen, Terry Yue Zhuo, Xin Xia</div>
+      <div class="abs-body">LLM 在低资源硬件描述语言（如 Verilog）上性能显著下降；多候选采样虽提高生成正确解的概率，但自动选出最优候选仍是开放难题。本文在 9 个模型、2 个基准上的系统实证揭示两大局限：①既有执行式重排序依赖测试平台 pass/fail 结果，因生成测试平台质量低而跨域迁移性差；②LLM-as-Judge 存在推理幻觉，对执行等价代码给出不一致判断。作者指出这两类信号正交（执行信号确定但覆盖有限；推理信号语义丰富但易幻觉），并让推理器独立获取信号、仅在决策阶段融合。据此提出 <strong>EAHC（Execution-Anchored Hallucination Calibration）</strong> 重排序框架：双通道架构含 4B 推理判别器 <strong>EAHC-R</strong> 与基于 RAG 的测试平台生成器 <strong>EAHC-T</strong>，将推理判断锚定到执行行为，使执行等价候选获得一致评分。属「LLM RTL 生成质量提升 / 候选选择」方向，直击 Verilog 生成「生成易、选优难」的痛点，与 SeqFeed、HINT 等「生成-验证-反馈闭环」工作形成互补。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.22938" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.22938_EAHC.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">重排序</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius: .75rem;">执行验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM-as-Judge</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">幻觉校准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">双通道</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RAG</span>
+      </div>
+    </div>
 
     <!-- 2507.06127 PrefixAgent -->
     <div class="abs-card">
