@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（69篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（70篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2608.21887 TherMapNet -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 TherMapNet：注意力引导的运行时全芯片热图预测——直接从性能指标预测热图</div>
+      <div class="abs-meta">arXiv:2608.21887 · cs.AR / cs.LG · 2026-08-22 · Qin Gu, Chaofang Ma, Mingyu Yang, Yipu Zhang, Jiliang Zhang, Wei Zhang, Lin Jiang</div>
+      <div class="abs-body">高性能芯片的运行时热管理依赖快速准确的全芯片热图。传统仿真器通常先从性能指标估算功耗轨迹，带来额外开销。本文提出 TherMapNet，一种注意力引导的热仿真器，直接从性能指标预测全芯片热图：Transformer 编码器将各指标时间序列作为 token 捕捉时间演化，建模动态负载；CNN 提取细粒度空间特征，其中双分支通道-空间注意力卷积模块（DACM）与三元组损失提升空间学习与重建精度。在 AMD Ryzen 7 4800U 多核 CPU 与 NVIDIA RTX 4060 多核 GPU 上，RMSE 低于 0.26°C、在 RTX 3090 上推理快于 2.4ms，优于先前热仿真器。提交 IEEE ICCD。属「多物理场 AI 分析 / 芯片热管理」方向，用轻量 ML 直接预测热图支撑运行时热管理，与 Chiplet 热优化、多物理场签核形成互补。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.21887" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.21887_TherMapNet.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">热分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多物理场</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">全芯片热图</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ML预测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Transformer</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">CNN</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">运行时热管理</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ICCD</span>
+      </div>
+    </div>
 
     <!-- 2608.19395 HYDRA -->
     <div class="abs-card">

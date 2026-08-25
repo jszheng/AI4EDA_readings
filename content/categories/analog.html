@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（34篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（35篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+    <!-- 2608.23317 LLM-SPICEMixer -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 LLM-SPICEMixer：用 LLM 增强遗传算法生成 SPICE 网表——MLCAD 2026 接收</div>
+      <div class="abs-meta">arXiv:2608.23317 · cs.NE / cs.AR / cs.LG · 2026-08-24 · Stefan Uhlich, Yağız Gençer, Andrea Bonetti, Arun Venkitaraman, Chia-Yu Hsieh, Eisaku Ohbuchi, Lorenzo Servadei</div>
+      <div class="abs-body">模拟电路拓扑合成极具挑战：有用设计仅占组合搜索空间的极小一部分，微小结构改动即可引发高度非线性的行为变化。进化算法可仅用黑盒评估优化离散拓扑，但常需大量 SPICE 仿真且易早熟收敛。本文提出 LLM-SPICEMixer 混合合成框架，以 IGEL（Inspiration-Guided Evolution with LLMs）这一 LLM 驱动的提议算子增强遗传网表生成：搜索中用 LLM 观察精英集中的高性能电路并生成新 SPICE 网表，再由 SPICE 评估、沿用遗传算子的同一奖励机制筛选，使 LLM 贡献结构化拓扑提议、仿真保持真理来源。在 Iris 分类判别函数晶体管级电路合成基准上，相较无 LLM 引导的遗传框架，中位最终训练奖励 +8.4%、中位验证选定测试奖励 +8.8%；最佳电路在标称 tt 角达 93.3% 测试精度、17 个 PVT 角平均 85.9%。MLCAD 2026 接收（扩展版）。属「模拟电路 AI 生成 / LLM 辅助电路设计」方向代表。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.23317" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.23317_LLM_SPICEMixer.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟电路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SPICE网表</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">遗传算法</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拓扑合成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">MLCAD 2026</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">电路生成</span>
+      </div>
+    </div>
+
     <!-- 2608.12687 TTARO (recovered 08-13) -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>
