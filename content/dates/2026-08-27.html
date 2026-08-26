@@ -21,7 +21,7 @@
 <body>
 <header>
   <h1>📅 2026-08-27 动态</h1>
-  <p class="subtitle">共 2 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.LG / cs.MA，2026-08-26 公告：① 2608.23602 PACT——布线后智能体检查点调优实现 FPGA 时序收敛；② 2608.23601 StateTune——将 LLM 辅助 EDA 流程调优重构为状态化闭环）</p>
+  <p class="subtitle">共 3 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.LG / cs.MA，2026-08-26 公告：① 2608.23602 PACT——布线后智能体检查点调优实现 FPGA 时序收敛；② 2608.23601 StateTune——将 LLM 辅助 EDA 流程调优重构为状态化闭环；③ 2603.13092 TuningBarrier——零超参数多角分析，基础模型学习先验替代工程先验降验证成本 10×（DAC 2026，v3 更新 2026-08-25））</p>
 </header>
 <section>
   <div class="abstracts">
@@ -66,6 +66,26 @@
       </div>
       <a href="https://arxiv.org/abs/2608.23601" target="_blank">📄 arXiv</a>
       &nbsp;<a class="local" href="2608.23601_StateTune.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2603.13092 TuningBarrier -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG / cs.AR · 2026-08-25（v3，初版 2026-03-13）· Wei W. Xing, Kaiqi Huang, Jiazhan Liu, Hong Qiu, Shan Shen</div>
+      <h4>📐 TuningBarrier：零超参数多角（Multi-Corner）分析——基础模型学习先验替代工程先验，验证成本降 10×（DAC 2026）</h4>
+      <p>良率多角分析（Yield Multi-Corner Analysis）需在 25+ 个工艺-电压-温度（PVT）角下验证电路，仿真代价呈 O(K×N) 组合爆炸（K 为角数、单角样本 N&gt;10⁴）。现有方法存在根本权衡：简单模型可自动化却在非线性电路上失效，先进 AI 模型虽能刻画复杂行为却需每个设计迭代数小时超参数调参——构成「调参壁垒（Tuning Barrier）」。本文以在数百万回归任务上预训练的基础模型所学「学习先验」替代「工程先验（模型规格）」，通过上下文学习（in-context learning）即时适配每个电路，无需调参或重训练；其注意力机制通过识别工作条件间共享的电路物理在不同角之间迁移知识。结合自动化特征选择器（1152D→48D），该方法在零调参下达到 SOTA 精度（平均 MRE 低至 0.11%），总验证成本降低 10× 以上。已被 DAC 2026 录用。属「物理设计 / 多角签核（signoff）」方向，用基础模型学习先验把跨角验证从「每设计数小时调参」变为「零调参即时适配」，与 DSO.ai / Cerebrus 的自主签核探索互补。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">多角分析</span>
+        <span class="tag">Multi-Corner</span>
+        <span class="tag">良率签核</span>
+        <span class="tag">基础模型</span>
+        <span class="tag">上下文学习</span>
+        <span class="tag">零超参数</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">DAC 2026</span>
+      </div>
+      <a href="https://arxiv.org/abs/2603.13092" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2603.13092_TuningBarrier.pdf">📥 本地PDF</a>
     </div>
 
   </div>

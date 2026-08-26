@@ -1,7 +1,7 @@
 {
-  "lastUpdate": "2026-08-26",
+  "lastUpdate": "2026-08-27",
   "cutoffDate": "2026-02-23",
-  "totalItems": 203,
+  "totalItems": 205,
   "items": [
     {
       "date": "2026-08-22",
@@ -1247,9 +1247,9 @@
       ]
     },
     {
-      "date": "2026-08-20",
+      "date": "2026-08-25",
       "company": "Eriemon / GitHub",
-      "title": "🔧 verilog-generator v1.3.5 发布：面向 Verilog-2001 的开源 AI Agent Skill「readable-verilog-generator」字节精确打包——需求→行为预览→可审查 RTL→真实诊断修复的诚实闭环",
+      "title": "🔧 verilog-generator v2.0.0 发布：面向 Verilog-2001 的开源 AI Agent Skill「readable-verilog-generator」多 Harness 安装器（Codex/Claude/Gemini/DeepSeek），自验 669 passed 的诚实闭环",
       "link": "https://github.com/Eriemon/verilog-generator",
       "keywords": [
         "verilog-generator",
@@ -1261,11 +1261,45 @@
         "FPGA",
         "开源",
         "Codex",
-        "可读RTL",
+        "Claude",
+        "Gemini",
+        "DeepSeek",
+        "多Harness",
         "真实诊断修复",
-        "字节精确打包",
-        "v1.3.5",
-        "2026-08-20"
+        "v2.0.0",
+        "2026-08-25"
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "company": "Synopsys",
+      "title": "📰 Synopsys：客户形式验证 Agentic 工作流实现 5×–6× 生产率提升，自主调试降 25%–40% debug 周期，端到端验证从「周级」压缩到「小时级」",
+      "link": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61440355/synopsys-ai-productivity",
+      "keywords": [
+        "Synopsys",
+        "形式验证",
+        "Agentic AI",
+        "生产率5-6x",
+        "自主调试",
+        "EDA自主化",
+        "2026-08-26"
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "company": "Cadence",
+      "title": "📰 CadenceLIVE China 2026：AgentStack + AI Super Agent 矩阵、L1–L5 自主化路径，此芯科技 6nm Cortex-A720 实现功耗 −21% / 漏电 −37%",
+      "link": "https://www.itheat.com/view/63181.html",
+      "keywords": [
+        "Cadence",
+        "CadenceLIVE",
+        "AgentStack",
+        "AI Super Agent",
+        "L1-L5自主化",
+        "此芯科技",
+        "6nm",
+        "功耗优化",
+        "2026-08-26"
       ]
     },
     {
