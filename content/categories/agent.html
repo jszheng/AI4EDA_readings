@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（39篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（40篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+
+    <!-- 2608.23601 StateTune -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 StateTune：将 LLM 辅助 EDA 流程调优重构为状态化闭环——持久优化记忆驱动候选生成与预算分配（ICCAD 2026）</div>
+      <div class="abs-meta">arXiv:2608.23601 · cs.AR / cs.LG / cs.MA · 2026-08-19 · Kunlong Li, Shangshang Yao, Su Zheng, Lingli Wang</div>
+      <div class="abs-body">EDA 流程参数调优对质量收益（QoR）至关重要，但参数空间庞大、强耦合，且完整评估代价极高。现有 LLM 辅助调优器多把 LLM 当作带瞬时工作上下文的外部提议器；本文提出 StateTune，将 LLM 辅助 EDA 调优重构为一个闭环、带状态的进程：其优化器状态是一个类型化、证据门控的「持久优化记忆」，由每次评估更新并在候选生成与预算分配间共享。在此状态之上，一个期望超体积改进（EHVI）引导、运行时感知的提升策略按单位运行时成本的期望帕累托前沿增益对快速阶段候选排序。在 Cadence 工业流程的六个基准模块（两工艺节点 × 三设计）上，对比含 LLM+RAG 与偏好式贝叶斯优化（BO）调优器在内的 5 个基线，StateTune 在全部六个模块上取得最强最终超体积，并在 WNS、面积与功耗上匹配或超越最强基线；消融显示持久记忆贡献最大——移除它损失 58.5% 超体积。属「AI Agent / EDA 流程自主调优」方向，用持久优化记忆把 LLM 调优器从一次性提议器升级为带状态、可跨评估累积经验的闭环系统，与 Cerebrus / DSO.ai 的自主实现探索形成方法论互补。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.23601" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.23601_StateTune.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">EDA流程调优</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">闭环优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">持久记忆</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RAG</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">贝叶斯优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">QoR</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ICCAD 2026</span>
+      </div>
+    </div>
 
     <!-- 2608.21356 AI with Authority -->
     <div class="abs-card">

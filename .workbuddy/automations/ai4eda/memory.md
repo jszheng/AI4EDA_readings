@@ -1,3 +1,17 @@
+## 2026-08-27（自动更新 — 2 篇论文 + 0 条行业动态）
+
+- 窗口：arXiv cs.AR/cs.LG/cs.MA 2026-08-26 公告批次（最新一批；08-26 run 已覆盖 08-25 批）。基线（08-26 已推送 9631f30）：papers 296 / batches 112 / news 203。
+- 新增论文 +2（均 2026-08-19 提交，cs.AR 公告 08-26）：
+  - 2608.23602 PACT — 布线后智能体检查点调优实现 FPGA 时序收敛（Vivado DCP + RapidWright，验证门控检查点迁移，35× UltraScale+ 上 Fmax 几何均值 +22.30% vs DATuner +15.14% / Codex Agent +9.78%），FPT 2026 → 物理设计（70→71）。
+  - 2608.23601 StateTune — LLM 辅助 EDA 流程调优重构为状态化闭环（持久优化记忆 + EHVI 提升策略，Cadence 工业流程 6 模块最强超体积，移除记忆损失 58.5% 超体积），ICCAD 2026 → AI Agent（39→40）。
+- 行业动态 +0：SemiEngineering「The Autonomous Chip-To-System Engineer Has Arrived」「Design For AI And AI For Design」均为 Cadence AuraStack / NVIDIA Nemotron 3 Ultra / ChipStack 既有内容重申；RTL-CLAW（同济+CUHK）已在 news_memory 收录（keyword OpenClaw）；其余 DAC 2026 厂商动态均已在库 → 去重后 news 维持 203。
+- 数字：manifest papers 296→298、batches 112→113、news 203、lastUpdate 2026-08-27；dates[2026-08-27].count=2。
+- 产物：content/dates/2026-08-27.html（2 卡）+ content/latest/2026-08-27.html（2 卡）+ 2 PDF（PACT 568,883 B / StateTune 1,575,137 B）+ physical.html +1 卡（71篇）+ agent.html +1 卡（40篇）+ papers/index.html 跳转→08-27。
+- 一致性全绿（iron law）：news_memory 203 == news header 203 == manifest.news 203；date/latest 各 2 卡 == count 2；分类头合计 81+38+71+35+40+30+3=298 == manifest.papers；PDF 链接与磁盘逐字节一致；2 论文正确归类、无重复。
+- Git：commit + push origin/main（预期）。
+
+---
+
 ## 2026-08-19（自动更新 — 2 篇论文 + 0 条行业动态）
 
 - 本批为独立会话执行：搜索 arXiv cs.AR/cs.ET/cs.AI/cs.LG 08-18 公告批次，经去重核验新增 2 篇论文，覆盖物理设计与功能验证细分；行业动态窗口（08-18→08-19）被 DAC 2026 reprint 与已收录开源项目（eda-agent / digital-chip-design-agents / vibe-IC / ChipAgents / UCAgent 等）饱和，无净增，故 0 条新闻。
@@ -1194,3 +1208,20 @@
 - **一致性全绿**：news_memory 203 == 新闻页头 203 == manifest.news 203；PDF 磁盘与三页链接一致（日期页相对路径、latest/agent 用 ../dates/）；papers/index.html 已重定向至 ../dates/2026-08-25.html；news/index.html 统计块同步 292/111/203。
 - **清理**：删除并发/重复遗留的未引用 PDF `2608.21356_AIwithAuthority.pdf`（与正式文件同大小同头、全站无引用），未提交。
 - **Git**：commit **bf0282f "auto update: 2026-08-25"**（7 files：2 新页 + 1 PDF + agent.html + news/index.html 统计块 + papers/index.html 重定向 + manifest.js）→ push origin/main 成功（7491ded..bf0282f）。
+
+---
+
+## 2026-08-26 执行摘要
+- **触发**：AI4EDA 每日自动化（weekday 05:00 定时）。本轮为「对账 + 补齐」轮：前序被中断实例已下载 4 份 PDF 并部分写页但未提交即崩溃，本轮回合先对账孤儿项再补齐。
+- **论文 +4（均 2608 系列，站内首见，PDF 已落地）**：
+  - ⚡ RTL×1 — **EAHC**（2608.22938，cs.SE/cs.AR，Guang Yang / Xing Hu / Xiang Chen / Terry Yue Zhuo / Xin Xia，08-24）：执行锚定幻觉校准重排序，EAHC-R（4B 推理判别器）+ EAHC-T（RAG testbench 生成器），融合「执行信号确定」与「推理信号易幻觉」的正交误差，提升 Verilog 候选选择。归类 rtl。
+  - 🤖 形式验证×1 — **NoTB**（2608.21962，cs.AR/cs.AI，Alvanaki / Yang / Seyoum / Carloni，MLCAD 2026，08-22）：跨模型形式共识无预言机 RTL 分诊，用 SEC 顺序等价检查；78 CVDP 任务四家族 94.7%@27%、三家族 87%@33%。归类 verify。
+  - 🎛️ 模拟×1 — **LLM-SPICEMixer**（2608.23317，cs.NE/cs.AR/cs.LG，Stefan Uhlich 等，MLCAD 2026，08-24）：IGEL（LLM 启发式提议算子）增强遗传网表生成；Iris 基准中位训练奖励 +8.4%、测试 +8.8%、93.3% 精度。归类 analog。
+  - 📐 物理×1 — **TherMapNet**（2608.21887，cs.AR/cs.LG，Qin Gu 等 / Lin Jiang，ICCD 提交，08-22）：注意力引导运行时全芯片热图预测，Transformer+CNN(DACM)，RMSE<0.26°C、推理<2.4ms。归类 physical。
+- **行业动态 +1**（去重后 news_memory 203→204）：🔧 **Eriemon verilog-generator v1.3.5**（08-20）开源 AI Agent Skill「readable-verilog-generator」，Verilog-2001 RTL 生成 / 真实诊断修复诚实闭环（07-11 曾录早期 v0.3.6，本次为最新版）。
+- **孤儿对账**：TherMapNet 与 LLM-SPICEMixer 由前序中断实例下载（17.2MB / 2.63MB）并写入分类页卡（physical 69→70 / analog 34→35）但未建日期页即崩。本轮并入 08-26 批次，补齐日期页 + latest 页双卡（PDF 链接一致），manifest.papers +2。
+- **计数（终态）**：manifest papers 292→**296**、batches 111→**112**、news **203**（见下方并发备注，本应 204；Eriemon 项已在 news_memory 记录、去重安全）、lastUpdate **2026-08-26**；分类头 rtl 80→**81** / verify 37→**38** / analog 34→**35** / physical 69→**70**；latest[]/dates[] 顶部均为 2026-08-26（count=4 = 4 论文，新闻另计）。
+- **一致性（论文侧全绿）**：日期页与 latest 页各 4 卡、PDF 链接与磁盘一致（EAHC 4.55MB / NoTB 748KB / LLM-SPICEMixer 2.63MB / TherMapNet 17.2MB）；papers/index.html 已重定向至 ../dates/2026-08-26.html；分类头 81/38/35/70 与 manifest.papers 296 一致。新闻侧：manifest.news 203 == news_memory.totalItems 203 == 新闻页统计块 203（三者自洽）；新闻页实际显示卡片略多于 203（并发实例注入的孤儿卡，无真实内容丢失，Eriemon 项已记录）。
+- **PDF 落地**：四份均有效（EAHC 4.55MB / NoTB 748KB / LLM-SPICEMixer 2.63MB / TherMapNet 17.2MB），%PDF 校验通过。
+- **Git**：commit **13f9061 "auto update: 2026-08-26"**（12 files：日期页 + latest 页 + 4 PDF + rtl/verify/physical/analog 卡 + news/index.html + news_memory.json + manifest.js）→ push origin/main 成功（6a53635..13f9061）；随后补提对账 commit（analog/physical/news/news_memory/manifest 终态编辑，task iXtqWG）推送中。
+- **⚠️ 运行环境备注**：检测到一个**前序被中断的并发实例**于 05:09 同批运行，下载 ThermapNet / LLM-SPICEMixer 两份 PDF、写入分类页卡后即崩溃。处置：并入今日批次补齐日期页/latest 页与计数，无重复、无计数错漂。建议后续轮次开跑先 `stat` 比对关键索引文件 mtime，识别并发/残留写入者。另：本轮另有一迟到实例于 05:20:13 同时重写 manifest/news_memory/news/index 为自身旧数据（news 回退 203、注入若干孤儿卡），发生在最终 commit 之前，故 9631f30 落地为 news=203 自洽态；论文侧（papers=296）未受影响。后续须待并发实例完全落盘后再做「全量校验 + 单一提交」，避免中间提交被覆盖。

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-27 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.LG / cs.MA，2026-08-26 公告：① 2608.23602 PACT——布线后智能体检查点调优实现 FPGA 时序收敛；② 2608.23601 StateTune——将 LLM 辅助 EDA 流程调优重构为状态化闭环）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2608.23602 PACT -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-19 · Huan Lin, Kunlong Li, Lingli Wang, Zhiang Zhang</div>
+      <h4>📐 PACT：布线后智能体检查点调优实现 FPGA 时序收敛——基于 Vivado/RapidWright 的验证门控检查点迁移，Fmax 几何均值 +22.30%</h4>
+      <p>FPGA 后期时序收敛通常从一个已实现设计出发，剩余违例在时序报告中可见。工程变更指令（ECO）是在不重启完整实现流程的前提下对设计施加局部改动的常规机制，但自动化布线后 ECO 优化仍极具挑战：一次布线后改动须在不破坏布线合法性、保持/脉冲宽度时序约束、检查点可重放性或功能等价性的前提下改善时序。本文提出 PACT——一种面向 Vivado 设计检查点（DCP）的布线后智能体检查点调优框架，将布线后调优表示为在「已接受检查点」与「候选检查点」之间的验证门控迁移；智能体从检查点派生的证据中，通过基于类型化 Vivado 与 RapidWright 技能的档案驱动配方规划器选择局部后端动作，并在隔离工作区中探测工具行为，将每次试验记录为证据门控案例以引导候选生成、抑制不安全/不支持/无效动作。在 35 个 UltraScale+ 布线后检查点上，PACT 相较原始实现将验证洁净的 Fmax（最高工作频率）几何均值提升 +22.30%，优于 DATuner 的 +15.14% 与 Codex Agent 的 +9.78%；在共享设计上，PACT 比无上限 DATuner 快 6.4×，单 DCP 平均 token 成本仅 $0.16（比自由式 Codex Agent 低 24.5×）。代码已开源于匿名仓库。已被 FPT 2026 录用。属「后端物理设计 / 时序收敛」方向，用智能体把布线后 ECO 自动化为验证门控的检查点迁移，直接呼应 Synopsys DSO.ai / Cadence Cerebrus 的自主后端实现路线。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">FPGA</span>
+        <span class="tag">时序收敛</span>
+        <span class="tag">ECO</span>
+        <span class="tag">智能体</span>
+        <span class="tag">检查点调优</span>
+        <span class="tag">Vivado</span>
+        <span class="tag">RapidWright</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">FPT 2026</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.23602" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.23602_PACT.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.23601 StateTune -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG / cs.MA · 2026-08-19 · Kunlong Li, Shangshang Yao, Su Zheng, Lingli Wang</div>
+      <h4>🤖 StateTune：将 LLM 辅助 EDA 流程调优重构为状态化闭环——持久优化记忆驱动候选生成与预算分配（ICCAD 2026）</h4>
+      <p>EDA 流程参数调优对质量收益（QoR）至关重要，但参数空间庞大、强耦合，且完整评估代价极高。现有 LLM 辅助调优器多把 LLM 当作带瞬时工作上下文的外部提议器；本文提出 StateTune，将 LLM 辅助 EDA 调优重构为一个闭环、带状态的进程：其优化器状态是一个类型化、证据门控的「持久优化记忆」，由每次评估更新并在候选生成与预算分配间共享。在此状态之上，一个期望超体积改进（EHVI）引导、运行时感知的提升策略按单位运行时成本的期望帕累托前沿增益对快速阶段候选排序。在 Cadence 工业流程的六个基准模块（两工艺节点 × 三设计）上，对比含 LLM+RAG 与偏好式贝叶斯优化（BO）调优器在内的 5 个基线，StateTune 在全部六个模块上取得最强最终超体积，并在最差负 slack（WNS）、面积与功耗上匹配或超越最强基线；消融显示持久记忆贡献最大——移除它损失 58.5% 超体积。对证据门控敏感性、记忆中毒、跨设计迁移与三种子可复现性（五个模块 CV&lt;7%）的专门分析进一步验证了记忆设计。已被 ICCAD 2026 录用。属「AI Agent / EDA 流程自主调优」方向，用持久优化记忆把 LLM 调优器从一次性提议器升级为带状态、可跨评估累积经验的闭环系统，与 Cerebrus / DSO.ai 的自主实现探索形成方法论互补。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">EDA流程调优</span>
+        <span class="tag">LLM</span>
+        <span class="tag">智能体</span>
+        <span class="tag">闭环优化</span>
+        <span class="tag">持久记忆</span>
+        <span class="tag">RAG</span>
+        <span class="tag">贝叶斯优化</span>
+        <span class="tag">QoR</span>
+        <span class="tag">ICCAD 2026</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.23601" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.23601_StateTune.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
