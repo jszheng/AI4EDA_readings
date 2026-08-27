@@ -1225,3 +1225,15 @@
 - **PDF 落地**：四份均有效（EAHC 4.55MB / NoTB 748KB / LLM-SPICEMixer 2.63MB / TherMapNet 17.2MB），%PDF 校验通过。
 - **Git**：commit **13f9061 "auto update: 2026-08-26"**（12 files：日期页 + latest 页 + 4 PDF + rtl/verify/physical/analog 卡 + news/index.html + news_memory.json + manifest.js）→ push origin/main 成功（6a53635..13f9061）；随后补提对账 commit（analog/physical/news/news_memory/manifest 终态编辑，task iXtqWG）推送中。
 - **⚠️ 运行环境备注**：检测到一个**前序被中断的并发实例**于 05:09 同批运行，下载 ThermapNet / LLM-SPICEMixer 两份 PDF、写入分类页卡后即崩溃。处置：并入今日批次补齐日期页/latest 页与计数，无重复、无计数错漂。建议后续轮次开跑先 `stat` 比对关键索引文件 mtime，识别并发/残留写入者。另：本轮另有一迟到实例于 05:20:13 同时重写 manifest/news_memory/news/index 为自身旧数据（news 回退 203、注入若干孤儿卡），发生在最终 commit 之前，故 9631f30 落地为 news=203 自洽态；论文侧（papers=296）未受影响。后续须待并发实例完全落盘后再做「全量校验 + 单一提交」，避免中间提交被覆盖。
+---
+
+## 2026-08-27 执行摘要（补全轮）
+- **触发**：AI4EDA 每日自动化（weekday 05:00 定时）。前置实例已建 2026-08-27 日期页/latest 页（2 论文 PACT+StateTune）、下载 3 份 PDF（含孤儿 TuningBarrier 2603.13092）、commit **137e81a**；但遗留孤儿 PDF、新闻页未更新、manifest 计数不完整（papers=298/news=203）。
+- **论文 +1（补齐孤儿，站内首见）**：🔬 **TuningBarrier**（2603.13092，cs.LG/cs.AR，Wei W. Xing 等，DAC2026）：零超参数多角（Multi-Corner）分析，基础模型学习先验替代工程先验，上下文学习即时适配，验证成本降 10×、mean MRE 低至 0.11%；归类 **physical**。PDF（814KB）已于前置实例落地。
+- **日期页/latest 页**：2→**3** 论文卡（PACT + StateTune + TuningBarrier），subtitle 同步；papers/index.html 已重定向至 ../dates/2026-08-27.html。
+- **行业动态 +2（news_memory 203→205）**：① 📰 **Synopsys** 形式验证 Agentic 工作流 5×–6× 生产率、端到端验证「周级→小时级」（Benzinga 08-26）；② 📰 **CadenceLIVE China 2026**：AgentStack + AI Super Agent 矩阵、L1–L5 自主化、此芯科技 6nm Cortex-A720 功耗 −21%/漏电 −37%（itheat 08-26）。
+- **Eriemon verilog-generator 去重升级**：v1.3.5 → **v2.0.0**（多 Harness 安装器 Codex/Claude/Gemini/DeepSeek，自验 669 passed）；news/index.html 卡片 + nav 锚点 + subtitle 引用同步更新（同公司同事件保留最新）。
+- **索引同步**：news/index.html 新增 08-27 日期分组 section（2 卡）、stat 块 296/112/203 → **299/113/205**、nav 顶部追加 08-27；manifest.papers 298→**299**、news 203→**205**、dates[0].count 2→**3**、lastUpdate 2026-08-27；physical.html 加 TuningBarrier 卡，头部计数 71→**72**。
+- **计数（终态）**：papers **299** / batches **113** / news **205** / lastUpdate **2026-08-27**。
+- **一致性全绿**：news_memory.totalItems 205 == 新闻页 stat 205 == manifest.news 205；PDF 磁盘与日期页/latest/physical 三页链接一致；TuningBarrier 在 physical.html + 日期页 + latest 页 + news subtitle 均有引用，无孤儿。
+- **Git**：前置 commit **137e81a**（2 论文 + 3 PDFs）；本轮 commit **468a069 "auto update: 2026-08-27"**（6 files：日期页 + latest 页 + physical 卡 + news/index.html + news_memory.json + manifest.js）→ push origin/main 成功（**137e81a..468a069**）。本次单一提交、无并发冲突。

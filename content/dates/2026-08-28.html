@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-08-28 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.LG / cs.MA，2026-08-26 公告补录：① 2608.25155 3D-IC Testcases——开源 3D 异构集成基准套件；② 2608.25536 Syn2Logic——端到端神经形态设计自动化，DSL→可综合 RTL 编译器；③ 2608.26049 RTLGuard——轻量师生框架防御投毒 RTL 代码生成模型（ICCAD 2026））</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2608.25155 3D-IC Testcases -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-25 · Rohan Soni, Jooyeon Jeong, Alexander Graening, Anthony Foo, Richard Chen, Puneet Gupta</div>
+      <h4>📐 3D-IC Testcases：面向 3D 异构集成的开源基准测试套件——可复用虚拟芯粒模型覆盖计算/存储/I/O/模拟/基板</h4>
+      <p>过去三十年，标准化、公开可用的基准套件推动了 2D 布局布线算法的可复现评估与显著进步。然而，3D 异构集成技术（硅通孔 TSV、混合键合、基于 chiplet 的架构）带来了现有平面基准无法刻画的新物理设计挑战。尽管已有若干 3D-IC 设计案例被报道，但能跨不同 3D 物理设计问题实现可复现评估的公开、可扩展基准套件仍然稀缺。本文提出源自 CATCH（一个估算异构集成架构成本的开源框架）代表性 chiplet 案例研究的开源 3D-IC 基准测试套件，提供覆盖计算、存储、I/O、模拟与基板组件的可复用虚拟芯粒模型；每个测试用例捕获 3D 系统的关键物理设计特征——异构裸片集成、裸片间互连、以及工艺相关的设计约束。通过公开发布这些基准，作者旨在建立通用评估平台，加速社区在 3D 异构集成方向的整体研究进展。属「后端物理设计 / 3D-IC 基准」方向，补齐了从 2D place-and-route 向 3D 异构集成迁移过程中缺失的可复现评测基础设施，直接服务 chiplet 互连/热/多物理场优化的算法研究。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">3D-IC</span>
+        <span class="tag">Chiplet</span>
+        <span class="tag">基准套件</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">TSV</span>
+        <span class="tag">混合键合</span>
+        <span class="tag">异构集成</span>
+        <span class="tag">开源</span>
+        <span class="tag">UCLA</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.25155" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.25155_3DICTestcases.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.25536 Syn2Logic -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · 2026-08-26 · Artur Podobas</div>
+      <h4>⚡ Syn2Logic：端到端神经形态设计自动化——自定义 DSL + 编译器将神经模型描述直接降到可综合 RTL</h4>
+      <p>本文提出电子神经形态设计自动化（eNDA, electronic Neuromorphic Design Automation）的视角，将其视为衔接计算神经科学建模与传统 EDA 流程的设计自动化流；并给出术语定义、实现示例与原型系统 Syn2Logic。Syn2Logic 是一套完整的 eNDA 框架：神经科学家可用自定义 DSL 建模神经行为，配套的编译器将同一份模型描述一路编译到可综合的 RTL 硬件——全程无需手写一行硬件描述语言（HDL）。作者用 Syn2Logic 走通 eNDA 流程并展示：① 生成其认为最快的 C. elegans 加速器，显著快于当前最优模拟器；② 构建（据其所知）最快、最通用的神经形态数独求解器，在 TOP1465 谜题上超越 CP-SAT 与 SCIP；③ 在微型 FPGA 上实现 5.6M FPS/Watt 的加速器，在 MNIST 上速度与能效均超越现有神经形态架构。属「前端 RTL / 设计自动化」方向，用 DSL→RTL 编译器把领域专家从 HDL 中解放出来，是「规格→RTL」自动生成范式的神经形态特化落地，与 LLM 驱动的 RTL 生成形成互补路线。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">神经形态</span>
+        <span class="tag">设计自动化</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">DSL</span>
+        <span class="tag">编译器</span>
+        <span class="tag">EDA</span>
+        <span class="tag">FPGA</span>
+        <span class="tag">规格到RTL</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.25536" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.25536_Syn2Logic.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.26049 RTLGuard -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.CR / cs.AR · 2026-08-26 · Mahshid Rezakhani, Kimia Azar, Hadi Kamali</div>
+      <h4>🛡️ RTLGuard：面向投毒 RTL 代码生成模型的轻量师生防御——小样本干净教师引导抑制后门行为（ICCAD 2026）</h4>
+      <p>LLM 的快速发展正推动 RTL 代码生成自动化，使设计者能将高层规格翻译为可综合硬件。然而，对预训练（第三方）微调模型的依赖引入了关键信任问题：这些模型的训练数据与适配过程往往不透明，攻击方（甚至模型提供方）可能在微调阶段嵌入隐藏后门，使恶意行为（如硬件木马）在推理时被看似良性的 prompt 触发。本文提出 RTLGuard 以缓解 AI 赋能的 IC 供应链中的此类信任风险：不同于全参数重训练的高昂计算成本，RTLGuard 采用师生框架净化被污染的 RTL 生成模型——(1) 在有限可信 RTL 数据上微调一个轻量「干净」教师模型；(2) 通过复合师生目标引导被投毒的目标模型；(3) 引入特征对齐与知识蒸馏抑制恶意行为。在多种 LLM 架构上的实验表明，RTLGuard 在保持生成 RTL 功能正确性与可综合性的同时，显著降低攻击成功率（ASR）。已被 ICCAD 2026 录用。属「前端 RTL / 安全」方向，针对 RTL 生成模型的供应链投毒与后门威胁给出低成本防御，与 RTLGuard 同类的安全基线共同支撑「可信 RTL 生成」。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">数据投毒</span>
+        <span class="tag">后门</span>
+        <span class="tag">硬件木马</span>
+        <span class="tag">知识蒸馏</span>
+        <span class="tag">师生框架</span>
+        <span class="tag">安全</span>
+        <span class="tag">ICCAD 2026</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.26049" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.26049_RTLGuard.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

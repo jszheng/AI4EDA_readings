@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-security">
-  <div class="section-title"><span class="icon">🛡️</span> 安全与基准（3篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🛡️</span> 安全与基准（4篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">硬件安全、数据投毒、基准评测</p>
   <div class="abstracts">
+    <!-- 2608.26049 RTLGuard -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🛡️ RTLGuard：面向投毒 RTL 代码生成模型的轻量师生防御——小样本干净教师引导抑制后门行为（ICCAD 2026）</div>
+      <div class="abs-meta">arXiv:2608.26049 · cs.CR / cs.AR · 2026-08-26 · Mahshid Rezakhani, Kimia Azar, Hadi Kamali</div>
+      <div class="abs-body">LLM 推动 RTL 代码生成自动化，使设计者将高层规格翻译为可综合硬件；但对预训练（第三方）微调模型的依赖引入关键信任问题——训练数据与适配过程不透明，攻击方（甚至模型提供方）可在微调阶段嵌入隐藏后门，使硬件木马在推理时被看似良性的 prompt 触发。本文提出 RTLGuard 缓解 AI 赋能 IC 供应链中的此类信任风险：不同于全参数重训练的高昂成本，RTLGuard 采用师生框架净化被污染 RTL 生成模型——(1) 在有限可信 RTL 数据上微调轻量「干净」教师模型；(2) 通过复合师生目标引导被投毒目标模型；(3) 引入特征对齐与知识蒸馏抑制恶意行为。在多种 LLM 架构上显著降低攻击成功率（ASR）同时保持功能正确性与可综合性。已被 ICCAD 2026 录用。属「前端 RTL / 安全」方向，针对 RTL 生成模型供应链投毒与后门威胁给出低成本防御。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.26049" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.26049_RTLGuard.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">数据投毒</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">后门</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件木马</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">知识蒸馏</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">师生框架</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">安全</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ICCAD 2026</span>
+      </div>
+    </div>
+
     <div class="abs-card">
       <span class="badge-new">NEW</span>
       <div class="abs-title">🧩 Chiplet 与 LLM 时代的硬件设计与安全——统一分析 2.5D 系统攻击面 + LLM 驱动 EDA 流水线的原生威胁</div>
