@@ -1,3 +1,17 @@
+## 2026-08-28（自动更新 — 3 篇论文 + 1 条行业动态 · 并发合并收尾）
+
+- 本批覆盖 arXiv 08-26 公告批次，经去重核验新增 3 篇论文，横跨 RTL 生成、物理设计与安全三大细分；行业动态窗口（08-26→08-28）新增 1 条 SemiEngineering 闭门圆桌（Cadence/Synopsys/Siemens/ChipAgents/Keysight 五巨头论 Agentic AI 落地依赖「优秀的人机脚手架」）。
+- 新增论文 3 篇（均站内未收录，arXiv 08-25/08-26 提交、08-26 公告）：
+  - 🔐 2608.26049 RTLGuard — 面向 LLM 生成 RTL 的安全护栏（检测训练数据投毒 / 硬件木马后门，师生防御框架）→ 安全（security 3→4，ICCAD 2026）
+  - 🧠 2608.25536 Syn2Logic — 端到端神经形态设计自动化（自定义 DSL + 编译器将神经模型描述直接降到可综合 RTL）→ RTL生成（rtl 81→82）
+  - 📐 2608.25155 3D-IC Testcases — 3D 异构集成开源基准套件（基于 CATCH 框架的虚拟芯粒模型与测试用例）→ 物理设计（physical 72→73）
+- 行业动态 1 条（news_memory 未收录，非 reprint）：SemiEngineering 闭门圆桌「Agentic AI 成功高度依赖优秀的人机脚手架」—— 领域本体 ontology + Agentic Harness + 护栏是落地前提，客户已在 RTL 生成/验证/调试前细分看到 ROI。
+- 并发合并处置：本日存在另一并发自动化实例，其先于本实例完成并推送 9f2af26（完整站点：manifest papers 302 / batches 114 / news 206 / lastUpdate 2026-08-28、date/latest 3 卡、3 PDF、分类页 rtl→82 / physical→73 / security→4、news/index.html 统计 302/114/206、papers/index.html 重定向→2026-08-28）。本实例初次 push 因远端 ref 已被 9f2af26 占用而非快进被拒（cannot lock ref）；经 fetch 核验远端已含全部正确站点内容且 memory.md 缺 2026-08-28 条目，遂 reset --hard origin/main 对齐，仅补写本记忆条目以避免重复计数/覆盖。
+- 站点一致性全绿（沿用 9f2af26 已发布状态）：news_memory.totalItems 206 = news header 206 = manifest.news 206；date/latest 各 3 卡 == count 3；分类头合计（rtl 82 + physical 73 + security 4 + 其余）与 manifest.papers 302 对齐；PDF 链接与磁盘逐字节一致（RTLGuard 905,856 B / Syn2Logic 11,422,229 B / 3DICTestcases 583,516 B）；3 论文正确归类、无重复。
+- Git：reset --hard origin/main（=9f2af26）对齐已发布正确站点 → 补写 memory.md 2026-08-28 条目 → commit 并 push origin/main（本次仅含 memory.md 增量，站点内容已由 9f2af26 覆盖）。
+
+---
+
 ## 2026-08-27（自动更新 — 2 篇论文 + 0 条行业动态）
 
 - 窗口：arXiv cs.AR/cs.LG/cs.MA 2026-08-26 公告批次（最新一批；08-26 run 已覆盖 08-25 批）。基线（08-26 已推送 9631f30）：papers 296 / batches 112 / news 203。
