@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（35篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（36篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+    <!-- 2608.26206 Ankhdjet -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 Ankhdjet：面向开放 PDK 的可掩模编程三元 compute-in-ROM 开源编译器——HuggingFace 三元检查点降到 SKY130 过孔掩模，开放工具链端到端签核</div>
+      <div class="abs-meta">arXiv:2608.26206 · cs.AR / cs.ET · 2026-08-26 · Mohnish Pai</div>
+      <div class="abs-body">LLM 推理受权重搬运主导，每个 token 重读全部权重。三元量化（BitNet b1.58）把每个权重压到 1.58 位，使把权重硬连线进只读掩模成为可能；商业芯片 Taalas HC1 已在先进节点以闭源工具验证了硬连线权重。本文问：模型专用硅能否用完全开放的基础设施复现？作者提出 Ankhdjet——一个开源编译器，把 HuggingFace 三元检查点（BitNet b1.58 及其同类）降低为开放 SKY130 PDK 上固定 compute-in-ROM 宏的过孔掩模程序（via-mask program），并用开放工具端到端验证。两个主张：(1) 首个在可制造开放 PDK 上的「权重到掩模」compute-in-ROM 开源编译器，通过完整开放工具链签核（KLayout DRC 零、netgen LVS 零、时序干净）两次，使用两个不同权重矩阵、相同流程仅掩模不同；(2) 首个提交制造的 compute-in-ROM 宏（TinyTapeout/ChipFoundry SKY130 shuttle ttsky26c，硅预计 2027）。编译器读数全数字（满摆幅位线采样进标准单元），可综合到任意节点；保留模拟比较器读数为实测变体，数字读数以 1/8 面积替代之。还报告了逐层对抗验证方法（捕获 3 个 DRC 不可见的静默短路）、在 130nm 每晶体管存两个三元权重的负面结果等。属「开源 EDA / 架构」方向，是用开放工具链把 LLM 权重硬化为可制造硅的端到端实证，对「开源硅创新」与 BitNet 类极量化模型的硅落地有直接支撑。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.26206" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.26206_Ankhdjet.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">编译器</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">compute-in-ROM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">三元量化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">BitNet</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SKY130</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开放PDK</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">TinyTapeout</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">权重硬化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">架构</span>
+      </div>
+    </div>
+
     <!-- 2608.23317 LLM-SPICEMixer -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

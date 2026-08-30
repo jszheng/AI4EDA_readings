@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（40篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（42篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+
+    <!-- 2608.26418 Redwood -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 Redwood：由 AI 从零设计、验证并部署的前沿 AI 加速器——两周内自主生成性能模型/RTL/UVM/形式证明/固件/内核，规格层以下零人工干预</div>
+      <div class="abs-meta">arXiv:2608.26418 · cs.AR / cs.AI · 2026-08-26 · Architect Labs</div>
+      <div class="abs-body">现代 AI 工作负载与运行它们的硬件演进节奏不同：架构定义在量产硅之前数年，而目标负载数月即变，设计决策在深度不确定下做出并付出双重代价。随着摩尔定律停滞，专用化是性能功耗比的主要来源，要求设计周期与负载节奏同步。本文提出一个端到端 AI 系统，把软件到硅的栈压缩为单一优化循环，硬件与软件在一个目标下协同设计并验证。首个演示 Redwood 是一个面向单批次、低功耗、超低延迟物理 AI 推理的前沿 AI 加速器：从两位人类架构师的高层规格出发，系统在两周内自主生成性能模型、RTL 设计、UVM 验证环境、形式化证明、固件与内核，规格层以下无人干预；每个模块经商业 EDA 工具、自研形式引擎与硬件在环验证达到 95% 覆盖率；规格变更在 48 小时内重新验证并部署到硬件。其超低功耗 FPGA 变体 Redwood Nano 可运行 Llama、Qwen 等数十亿参数模型。映射到三星 8nm（Jetson Orin Nano 同工艺），Redwood 以 1.9× 更低功耗提供 1.75× 吞吐，性能功耗比提升 3.4×；Qwen 在 Redwood 上运行还帮助设计了下一代 Redwood，是递归自改进的初步一步。据作者所知，这是首个由 AI 系统端到端设计、可量产、并运行现代 AI 模型的 AI 加速器。属「AI Agent / 自主芯片设计」方向，是继 Kimi K3、Architect Labs 此前工作之后最完整的「规格→RTL→验证→部署」端到端自主化实证，直接印证 agentic EDA 从演示走向生产。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.26418" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.26418_Redwood.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">自主芯片设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Agentic AI</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">端到端</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">规格到RTL</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">UVM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件在环</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">递归自改进</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Architect Labs</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理AI</span>
+      </div>
+    </div>
 
     <!-- 2608.23601 StateTune -->
     <div class="abs-card">

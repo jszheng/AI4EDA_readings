@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（73篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（74篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2608.26758 HOLMES -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 HOLMES：高维良率估计的上下文内失效中心定位——表格基础模型单次前向无梯度推理，替代迭代训练，最高 58.8× 加速（ICCAD 2026）</div>
+      <div class="abs-meta">arXiv:2608.26758 · cs.AR · 2026-08-27 · Wei W. Xing, Xixi Zhou, Kaiqi Huang, Jiaye Pan, Hong Qiu, Xin Wang, Shan Shen</div>
+      <div class="abs-body">高 sigma 良率估计的重要性采样需要从一个严重不平衡的样本集中定位失效中心（failure center）。现有代理模型辅助方法依赖迭代式基于梯度的训练，在极端类不平衡下病态（ill-posed），模型误差会传播进估计器，导致高维下精度崩溃。本文将失效中心定位重塑为少样本二元分类：一个预拟合的表格基础模型（tabular foundation model）在单次前向传播中完成无梯度、上下文内（in-context）推理，消除了病态训练循环。HOLMES（High-sigma Optimal Localization via Manifold Estimation and Sampling）将其与基于 SVD 的各向异性提议分布（捕获失效流形的局部几何）以及命中率驱动的自适应混合方案（在常规自适应崩溃处稳定重要性权重）配对。在 D=108 到 D=1,152 的 6T SRAM 基准上，全维基线在某些维度精度崩溃（最强基线相对误差 25.8%）；HOLMES 在全部五种配置下保持在 5.9% 以内，相对蒙特卡洛最高加速 58.8×。代码已开源（ICELab-JCIE/ICE006-Yield-Holmes）。已录用 ICCAD 2026。属「后端物理设计 / 良率估计」方向，用表格基础模型的上下文内推理替代脆弱的迭代训练，是 ML 用于高维良率/参数化 yield 估计的强基线突破，与作者此前 TuningBarrier（2603.13092）的「基础模型替代工程先验」一脉相承。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.26758" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.26758_HOLMES.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">良率估计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Yield Estimation</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">高sigma</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">表格基础模型</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">foundation model</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">失效中心定位</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">重要性采样</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SRAM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ICCAD 2026</span>
+      </div>
+    </div>
 
     <!-- 2608.25155 3D-IC Testcases -->
     <div class="abs-card">

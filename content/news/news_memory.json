@@ -1,8 +1,29 @@
 {
-  "lastUpdate": "2026-08-28",
+  "lastUpdate": "2026-08-31",
   "cutoffDate": "2026-03-01",
-  "totalItems": 206,
+  "totalItems": 209,
   "items": [
+    {
+      "date": "2026-08-31",
+      "company": "SemiEngineering",
+      "title": "📰 SemiEngineering WIR #153：Agentrys $24.5M 代理式设计自动化平台 / Celera $30M AI 模拟 IC / Keysight×AttoTude 设计周期 -50% 一次流片成功 / 多芯粒 2nm 主导 / 芯片安全持续防御",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-153/",
+      "keywords": ["SemiEngineering","WIR #153","周综述","Agentrys","Agentic Design Automation","Celera","AI模拟IC","Keysight","AttoTude","设计周期-50%","一次流片","多芯粒2nm","芯片安全","持续防御","形式验证属性","2026-08-29"]
+    },
+    {
+      "date": "2026-08-31",
+      "company": "SemiWiki",
+      "title": "🧭 SemiWiki 深度：Agentic AI 能否做大开源 EDA 市场？——智能体降低开源工具门槛、加速改良，OpenROAD 闭环设计空间探索成标杆",
+      "link": "https://semiwiki.com/eda/372107-will-agentic-ai-help-the-open-source-eda-market/",
+      "keywords": ["SemiWiki","开源EDA","Agentic AI","OpenROAD","智能体","设计空间探索","闭环反馈","自主OpenROAD","成熟节点","2026-08-28"]
+    },
+    {
+      "date": "2026-08-31",
+      "company": "DeepSeek",
+      "title": "🔧 DeepSeek 开源发布 Harness（dsh）：基于 Cordis 插件架构的 AI Agent 框架，接管 Xilinx Vivado 实现 FPGA 工程全自动开发",
+      "link": "https://xasun.com/article/209/3800.html",
+      "keywords": ["DeepSeek","Harness","dsh","Cordis","Vivado","FPGA","开源","AI Agent","自动化开发","2026-08"]
+    },
     {
       "date": "2026-08-28",
       "company": "SemiEngineering",
