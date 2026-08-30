@@ -1251,3 +1251,28 @@
 - **计数（终态）**：papers **299** / batches **113** / news **205** / lastUpdate **2026-08-27**。
 - **一致性全绿**：news_memory.totalItems 205 == 新闻页 stat 205 == manifest.news 205；PDF 磁盘与日期页/latest/physical 三页链接一致；TuningBarrier 在 physical.html + 日期页 + latest 页 + news subtitle 均有引用，无孤儿。
 - **Git**：前置 commit **137e81a**（2 论文 + 3 PDFs）；本轮 commit **468a069 "auto update: 2026-08-27"**（6 files：日期页 + latest 页 + physical 卡 + news/index.html + news_memory.json + manifest.js）→ push origin/main 成功（**137e81a..468a069**）。本次单一提交、无并发冲突。
+
+---
+
+## 2026-08-31 执行摘要（补录/追赶轮）
+- **触发**：AI4EDA 每日自动化（weekday 05:00 定时）。站点上次完整更新为 2026-08-28（manifest papers=302 / news=206）；08-29~08-30 为周末，arXiv cs.AR 无新公告批次，故本轮以「补齐 08-27 公告批次 + 抓取近期行业动态」为主。
+- **检索覆盖**：arXiv API（cs.AR，submittedDate desc，取前 80）→ 最新公告批为 08-27；WebSearch×3（SemiEngineering WIR #153 / Cadence·Synopsys·Siemens·NVIDIA 厂商动态 / GitHub 开源 RTL Agent）+ WebFetch 逐篇核对 4 篇 arXiv 摘要与 3 个新闻源。
+- **新增论文 4 篇（均站内首见，PDF 已落地）**：
+  - 🤖 **2608.27184 LLMs in Digital EDA**（cs.AR/AI/SE，Matthew Youngman 等，08-27）：定义 Generator→Agent→Orchestrator 三级角色，揭示「语法陷阱」，主张物理感知编排器。归类 **agent**。
+  - 📐 **2608.26758 HOLMES**（cs.AR，Wei W. Xing 组，ICCAD 2026，08-27）：表格基础模型上下文内失效中心定位，高维良率估计最高 58.8× 加速。归类 **physical**。
+  - 🤖 **2608.26418 Redwood**（cs.AR/AI，Architect Labs，08-26）：AI 系统端到端设计/验证/部署前沿 AI 加速器，两周自主生成 RTL→内核、规格层以下零人工干预，递归自改进。归类 **agent**。
+  - 🔬 **2608.26206 Ankhdjet**（cs.AR/ET，Mohnish Pai，08-26）：开源权重到掩模 compute-in-ROM 编译器，SKY130 开放 PDK 端到端签核（KLayout DRC/netgen LVS 零）。归类 **analog**。
+- **新增行业动态 3 条（去重后 news_memory 206→209）**：① 📰 **SemiEngineering WIR #153**（08-29）：Agentrys $24.5M 代理式设计自动化 / Celera $30M AI 模拟 IC / Keysight×AttoTude 设计周期 -50% 一次流片成功 / 多芯粒 2nm 主导 / 芯片安全持续防御；② 🧭 **SemiWiki**（08-28）：Agentic AI 做大开源 EDA 市场，OpenROAD 闭环设计空间探索成标杆；③ 🔧 **DeepSeek Harness（dsh）**（08-2026）：基于 Cordis 插件架构的开源 Agent 框架，接管 Xilinx Vivado 实现 FPGA 全自动开发。三者均经 news_memory 比对为新增（无重复公司/事件）。
+- **计数（终态）**：manifest papers 302→**306**、batches 114→**115**、news 206→**209**、lastUpdate **2026-08-31**；分类头 agent 40→**42** / physical 73→**74** / analog 35→**36**；latest[]/dates[] 顶部均为 2026-08-31（count=4）。
+- **一致性全绿**：news_memory.totalItems 209 == 新闻页 stat 209 == manifest.news 209；PDF 磁盘与日期页/latest/三分类页链接一致（%PDF-1.7 校验：27184=16.6MB / 26758=3.0MB / 26418=3.9MB / 26206=6.6MB）；papers/index.html 重定向已指向 ../dates/2026-08-31.html。
+- **⚠️ 备注**：工作树中 `content/categories/other.html` 也被标记为修改（疑似前序中断实例遗留的未提交改动），本轮一并 git add 提交；不影响论文/新闻计数与索引一致性。
+- **Git**：commit **"auto update: 2026-08-31"**（15 files：日期页 + latest 页 + 4 PDF + agent/physical/analog 卡 + news/index.html + news_memory.json + manifest.js + other.html + papers/index.html）→ push origin/main 执行中（含 16.6MB PDF，推送较慢）。
+
+---
+
+## 2026-08-31 补正（并发对账 — agent 分类页缺卡修复）
+
+- **问题发现（续跑轮核验）**：本地 `main` 领先 `origin/main` 1 个提交（b8fa953「fix latest PDF paths & agent count」未推送），且 `memory.md` 未提交。核查发现并发实例 `b8fa953` 将 `agent.html` 头改为 **41篇** 且**漏收 `2608.27184`** 卡片（日期页/latest 页/PDF 均在，仅分类页缺失），导致分类页与日期页/计数不一致。原 memory 摘要乐观记为 agent 40→42，与实际终态（41、缺卡）不符。
+- **修复**：向 `agent.html` 顶部补回 `2608.27184 LLMs in Digital EDA` 完整卡片（标题/作者/摘要/arXiv+本地PDF 链接/标签，含 NEW 徽章），并将头部由 41篇 改回 **42篇**。
+- **终态复核**：`agent.html` abs-title 计数 = **42** 且含 `2608.27184_LLMs_in_EDA.pdf` 链接；`physical.html`=74篇、`analog.html`=36篇（均正确）；manifest.js 仅存分类 key/title/icon/file（无分类计数），`papers:306 / news:209 / lastUpdate:2026-08-31` 不变；news_memory.totalItems 209 == 新闻页 209 == manifest.news 209 全绿。
+- **Git**：`git add .` → commit（含本补正 + memory.md）→ `git push origin main`，将未推送的 b8fa953 与本次修复一并推上远程，消除本地领先、达成完全一致的远程状态。
