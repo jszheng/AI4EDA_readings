@@ -1276,3 +1276,18 @@
 - **修复**：向 `agent.html` 顶部补回 `2608.27184 LLMs in Digital EDA` 完整卡片（标题/作者/摘要/arXiv+本地PDF 链接/标签，含 NEW 徽章），并将头部由 41篇 改回 **42篇**。
 - **终态复核**：`agent.html` abs-title 计数 = **42** 且含 `2608.27184_LLMs_in_EDA.pdf` 链接；`physical.html`=74篇、`analog.html`=36篇（均正确）；manifest.js 仅存分类 key/title/icon/file（无分类计数），`papers:306 / news:209 / lastUpdate:2026-08-31` 不变；news_memory.totalItems 209 == 新闻页 209 == manifest.news 209 全绿。
 - **Git**：`git add .` → commit（含本补正 + memory.md）→ `git push origin main`，将未推送的 b8fa953 与本次修复一并推上远程，消除本地领先、达成完全一致的远程状态。
+
+---
+
+## 2026-09-01 执行摘要
+- **触发**：AI4EDA 每日自动化（weekday 05:00）。
+- **检索**：arXiv cs.AR API（submittedDate desc，最新公告批 08-28，确认无 2609 论文）；对 2608.28160/28048/26588/28188 逐篇 WebFetch 核对摘要；WebSearch 行业动态（DAC 2026 厂商 Agentic 战，均为 07 月已收录内容，无新增 09-01 行业新闻）。
+- **新增论文 4 篇（均站内首见，PDF 已落地 %PDF-1.7）**：
+  - 🤖 **2608.28160 Gen-TAS**（cs.AR/AI/HC，08-28）：知识锚定 LLM+RAG 的 FPGA-GPP 任务分配，人机协同生成可复现 FPGA SoC，相对全 GPP 最高 92.53× 加速。归类 **agent**。
+  - 🔬 **2608.28048 AI Hardware Accelerators for LLMs**（cs.AR/DC，08-28）：GPU/ASIC/FPGA/PIM/神经形态/光子 LLM 加速器综述，roofline 指内存墙为瓶颈。归类 **analog**。
+  - ⚡ **2608.26588 SeCRTLGen**（cs.CR/SE，08-27）：LLM-RTL 生成隐式安全义务盲区基准（SECRTL-GEN 392 任务×5 CWE×4 HDL）+ 神经符号 RTL-Obliger，全通过率 ~50%→61.6%。归类 **rtl**。
+  - 📐 **2608.28188 DeepSeq3**（cs.LG/AI/AR，08-28）：分层图表示学习（组合子图+寄存器传输超图 SNG）建模时序电路，BMC 求解时间 −18%。归类 **physical**。
+- **计数（终态）**：manifest papers 306→**310**、batches 115→**116**、news **209**（不变）、lastUpdate **2026-09-01**；分类头 agent 42→**43** / analog 36→**37** / rtl 82→**83** / physical 74→**75**；latest[]/dates[] 顶部 2026-09-01（count=4）。
+- **一致性**：news 无新增（209），news_memory 未改；PDF 磁盘与日期页/latest/四分类页链接一致。
+- **⚠️ 并发实例**：检测到重叠实例下载 `2608.26588_SeCRTLGen.pdf` / `2608.28160_GenTAS.pdf`（Gen-TAS 异名重复）/ `2608.28188_DeepSeq3.pdf`，并多轮触碰 agent/analog/manifest/papers/index 等索引文件（多轮 "modified since read" 竞态）。处置：将并发实例发现的 SeCRTLGen、DeepSeq3 并入本批次做成权威 4 篇超集（复用其已下载 PDF），避免其部分提交覆盖致 LLM Accelerator 丢失；计数据超集 308→310。注意 `content/dates/2608.28160_GenTAS.pdf` 为并发实例遗留孤儿 PDF（未纳入本次提交），待后续轮次核对清理。
+- **Git**：commit **6d5d9ba "auto update: 2026-09-01"**（12 files：日期页 + latest 页 + 4 PDF + agent/analog/rtl/physical 卡 + papers/index.html + manifest.js）→ push origin/main 成功（**5301925..6d5d9ba**）。
