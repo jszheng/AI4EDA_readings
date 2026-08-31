@@ -21,10 +21,31 @@
 <body>
 <header>
   <h1>📅 2026-09-01 动态</h1>
-  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.CR / cs.LG，2026-08-27~28 公告补录：① 2608.28160 Gen-TAS——知识锚定 LLM+RAG 的 FPGA-GPP 任务分配，相对全 GPP 最高 92.53× 加速；② 2608.28048 AI Hardware Accelerators for LLMs——GPU/ASIC/FPGA/PIM/神经形态/光子加速器综述，指出现存墙瓶颈是内存带宽；③ 2608.26588 SeCRTLGen——LLM-RTL 生成的隐式安全义务盲区基准 + 神经符号 RTL-Obliger 修复；④ 2608.28188 DeepSeq3——分层图表示学习建模时序电路，BMC 求解时间降 18%）</p>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.LG / cs.CR，2026-08-28 公告补录：① 2608.28188 DeepSeq3——分层图表示学习 + 双 GNN + 状态中心预训练，时序电路 BMC 求解时间降 18%（Qiang Xu 组）；② 2608.28160 Gen-TAS——知识锚定 LLM+RAG 的 FPGA-GPP 任务分配，相对全 GPP 最高 92.53× 加速；③ 2608.26588 SeCRTL-GEN——LLM 生成 RTL 隐式安全义务基准 392 任务 / 5 CWE / 4 HDL + RTL-Obliger 神经符号框架；④ 2608.28048 AI Hardware Accelerators for LLMs——GPU/ASIC/FPGA/PIM/神经形态/光子 LLM 加速器综述，内存墙为瓶颈）</p>
 </header>
 <section>
   <div class="abstracts">
+
+    <!-- 2608.28188 DeepSeq3 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG / cs.AI / cs.AR · 2026-08-28 · Jingyi Zhou, Zhengyuan Shi, Jiaying Zhu, Ziyang Zheng, Qiang Xu</div>
+      <h4>🔬 DeepSeq3：分层图表示学习用于时序电路可扩展分析——双 GNN + 状态中心预训练，有界模型检验（BMC）求解时间降 18%</h4>
+      <p>Circuit Representation Learning（CRL）为指导和优化核心 EDA 任务提供了强大范式，但其实际落地受限于工业级网表的巨大规模，且未能显式建模寄存器级时序动态。本文提出 <strong>DeepSeq3</strong>，一个将电路抽象为两级表示的分层框架：由触发器（FF）划分的细粒度组合子图，以及建模寄存器传输结构的高层超级节点图（SNG）；双图神经网络（GNN）架构在两级分别学习表示，同时捕捉局部布尔逻辑与全局状态转移。关键地，作者引入<strong>状态中心预训练方案</strong>，预测 FF 状态间的可达性，赋予模型对时序行为的深层理解。在大规模基准上，DeepSeq3 展现出更优的可扩展性与更丰富的表示，将<strong>有界模型检验（BMC）求解时间降低 18%</strong> 且保证正确性。属「电路表示学习 / 时序电路分析 / 验证加速」方向，作者含香港中文大学 Qiang Xu 组，把层次化图学习与状态中心预训练引入顺序电路可扩展分析，对 ML 驱动的逻辑验证与仿真加速有直接支撑。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">电路表示学习</span>
+        <span class="tag">GNN</span>
+        <span class="tag">时序电路</span>
+        <span class="tag">寄存器传输</span>
+        <span class="tag">BMC</span>
+        <span class="tag">有界模型检验</span>
+        <span class="tag">层次图</span>
+        <span class="tag">Qiang Xu</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.28188" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.28188_DeepSeq3.pdf">📥 本地PDF</a>
+    </div>
 
     <!-- 2608.28160 Gen-TAS -->
     <div class="abs-card">
@@ -47,6 +68,29 @@
       &nbsp;<a class="local" href="../dates/2608.28160_Gen_TAS.pdf">📥 本地PDF</a>
     </div>
 
+    <!-- 2608.26588 SeCRTL-GEN -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.CR / cs.SE · 2026-08-27 · Guang Yang, Xing Hu, Xiang Chen, Xin Xia</div>
+      <h4>🛡️ SeCRTL-GEN：LLM 生成 RTL 的隐式安全义务基准——392 任务 / 5 CWE / 4 HDL + RTL-Obliger 神经符号框架，全通过率 49.6→61.6%</h4>
+      <p>大语言模型（LLM）生成 RTL 代码的功能正确性快速提升，但 LLM 生成代码的安全性主要在软件领域被研究——软件缺陷部署后仍可修补，而不安全的 RTL 一旦流片便无可补救。本文构建 <strong>SECRTL-GEN</strong>，一个扎根真实 SoC IP 的多语言资源访问安全基准：392 个任务跨越 5 个 CWE 族与 4 种 HDL（Verilog、SystemVerilog、VHDL、Python），每个均配有黑盒功能测试与安全测试平台；功能规格刻意省略安全义务，契合现实中安全义务常被排除在功能文档之外的情形。对 5 个前沿 LLM 的实证显示尖锐鸿沟：朴素 prompt 下功能测试通过率约 73–79%，安全测试仅 14–35%，且功能更强的模型并不更安全。加入 CWE 知识可提升安全性，而无辅助的自主思考帮助有限、两种安全导向 prompt 还会降低功能通过率，说明瓶颈在于规格中缺失的弱点意识，而非写不出防御性 RTL。作者提出 <strong>RTL-Obliger</strong>，一个神经符号框架推断这些隐式义务：LLM 从规格抽取功能语义图，符号引擎将其与 CWE 模式本体匹配以暴露缓解证据缺口与信号级义务，LLM 最终在这些义务下以功能保持的两阶段生成修订 RTL。在 5 个模型与 4 种语言上，RTL-Obliger 将平均全通过率从 49.6–51.4%（SecV/RESCUE）提升到 <strong>61.6%</strong>，安全率与功能率均高于这些安全生成基线。属「前端 RTL / 硬件安全基准」方向，揭示 LLM-RTL 生成中被忽视的隐式安全义务问题并给出神经符号缓解框架。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">硬件安全</span>
+        <span class="tag">安全基准</span>
+        <span class="tag">CWE</span>
+        <span class="tag">多语言HDL</span>
+        <span class="tag">Verilog</span>
+        <span class="tag">SystemVerilog</span>
+        <span class="tag">VHDL</span>
+        <span class="tag">神经符号</span>
+        <span class="tag">RTL-Obliger</span>
+        <span class="tag">cs.CR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.26588" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.26588_SeCRTLGen.pdf">📥 本地PDF</a>
+    </div>
+
     <!-- 2608.28048 AI Hardware Accelerators for LLMs -->
     <div class="abs-card">
       <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.DC · 2026-08-28 · Siddharth Patel, Rohit Singh</div>
@@ -67,49 +111,6 @@
       </div>
       <a href="https://arxiv.org/abs/2608.28048" target="_blank">📄 arXiv</a>
       &nbsp;<a class="local" href="../dates/2608.28048_AI_Hardware_Accelerators_LLM.pdf">📥 本地PDF</a>
-    </div>
-
-    <!-- 2608.26588 SeCRTLGen -->
-    <div class="abs-card">
-      <div class="src"><span class="dot"></span>arXiv · cs.CR / cs.SE · 2026-08-27 · Guang Yang, Xing Hu, Xiang Chen, Xin Xia</div>
-      <h4>⚡ SeCRTLGen：LLM-RTL 生成的「隐式安全义务」盲区基准——SECRTL-GEN（392 任务 × 5 CWE × 4 HDL）+ 神经符号 RTL-Obliger 把全通过率从 ~50% 提到 61.6%</h4>
-      <p>大语言模型（LLM）生成寄存器传输级（RTL）代码的功能正确性快速提升，但 LLM 生成代码的安全性研究多集中在软件（部署后仍可打补丁）；一旦流片进硅，不安全的 RTL 没有补救机会。本文构建 <strong>SECRTL-GEN</strong>——一个扎根真实 SoC IP 的多语言资源访问安全基准：392 个任务覆盖 5 个 CWE 族与 4 种 HDL（Verilog、SystemVerilog、VHDL、Python），每个任务都配有黑盒功能与安全测试平台；功能规格刻意省略安全义务，复现现实中安全义务常被排除在功能文档之外的情形。对 5 个前沿 LLM 的实证显示明显鸿沟：朴素提示下功能测试通过率约 73–79%，安全测试仅 14–35%，且功能更强的模型并不更安全。加入 CWE 知识能提升安全性，而无辅助的自发思考帮助有限，两种安全导向提示都会降低功能通过率——说明瓶颈在于规格中缺失弱点意识，而非写不出防御性 RTL。作者提出 <strong>RTL-Obliger</strong>，一个神经-符号框架推断这些隐式义务：LLM 从规格抽取功能-语义图，符号引擎对照 CWE 模式本体匹配以暴露缓解-证据缺口与信号级义务，LLM 最终在这些义务下以「功能保持的两阶段生成」修订 RTL。在 5 个模型、4 种语言上，RTL-Obliger 将平均全通过率从 49.6–51.4%（SecV/RESCUE）提升到 61.6%，安全与功能通过率均高于这些安全生成基线。属「前端 RTL / RTL 生成安全」方向，揭示 LLM-RTL 生成的隐式安全义务盲区并给出血肉兼修的神经-符号缓解，与 RTLGuard（2608.26049）的后门防御形成「生成安全 + 检测安全」互补。</p>
-      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
-        <span class="tag">AI for EDA</span>
-        <span class="tag">RTL生成</span>
-        <span class="tag">安全</span>
-        <span class="tag">LLM</span>
-        <span class="tag">SECRTL-GEN</span>
-        <span class="tag">基准</span>
-        <span class="tag">CWE</span>
-        <span class="tag">神经符号</span>
-        <span class="tag">RTL-Obliger</span>
-        <span class="tag">隐式义务</span>
-        <span class="tag">cs.CR</span>
-      </div>
-      <a href="https://arxiv.org/abs/2608.26588" target="_blank">📄 arXiv</a>
-      &nbsp;<a class="local" href="../dates/2608.26588_SeCRTLGen.pdf">📥 本地PDF</a>
-    </div>
-
-    <!-- 2608.28188 DeepSeq3 -->
-    <div class="abs-card">
-      <div class="src"><span class="dot"></span>arXiv · cs.LG / cs.AI / cs.AR · 2026-08-28 · Jingyi Zhou, Zhengyuan Shi, Jiaying Zhu, Ziyang Zheng, Qiang Xu</div>
-      <h4>📐 DeepSeq3：超越扁平网表的分层图表示学习——组合子图 + 寄存器传输超图（SNG）双 GNN 建模时序电路，BMC 求解时间降 18%</h4>
-      <p>电路表示学习（CRL）为引导和优化核心 EDA 任务提供强有力范式，但其实际落地受工业级网表巨大规模与未能显式建模寄存器级时间动态所阻碍。为突破这些障碍，本文提出 <strong>DeepSeq3</strong>，一个把电路抽象为两级表示的分层框架：由触发器（FF）划分的细粒度组合子图，以及建模寄存器传输结构的高层超级节点图（SNG）。双 GNN 架构在两级分别学习表示，捕获局部布尔逻辑与全局状态转移；关键在于引入以状态为中心的预训练方案，预测 FF 状态间可达性，赋予模型对时间行为的深层理解。在大规模基准上，DeepSeq3 取得更优的可扩展性与更丰富的表示，在保障正确性的同时将<strong>限界模型检测（BMC）求解时间降低 18%</strong>。属「物理设计 / 电路表示学习」方向，用「组合子图 + 寄存器传输超图」的分层 CRL 显式建模时序动态，直接服务 BMC 等大规模电路分析，与 GNN 用于布局/时序预测的工作形成方法互补。</p>
-      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
-        <span class="tag">AI for EDA</span>
-        <span class="tag">电路表示学习</span>
-        <span class="tag">GNN</span>
-        <span class="tag">时序电路</span>
-        <span class="tag">分层表示</span>
-        <span class="tag">顺序电路</span>
-        <span class="tag">BMC</span>
-        <span class="tag">模型检测</span>
-        <span class="tag">预训练</span>
-        <span class="tag">cs.LG</span>
-      </div>
-      <a href="https://arxiv.org/abs/2608.28188" target="_blank">📄 arXiv</a>
-      &nbsp;<a class="local" href="../dates/2608.28188_DeepSeq3.pdf">📥 本地PDF</a>
     </div>
 
   </div>
