@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（42篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（43篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+
+    <!-- 2608.28160 Gen-TAS -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 Gen-TAS：知识锚定 LLM+RAG 的 FPGA-GPP 任务分配框架——人机协同 + 确定性后端生成可复现 FPGA SoC，相对全 GPP 最高 92.53× 加速</div>
+      <div class="abs-meta">arXiv:2608.28160 · cs.AR / cs.AI / cs.HC · 2026-08-28 · Mary Kong, Yuqin Zhao, Semih Vazgecen, Cristian Sestito, Themis Prodromakis</div>
+      <div class="abs-body">FPGA-GPP 异构系统兼顾软件灵活性与可重构硬件的性能/能效，但决定哪些应用任务跑在 GPP 或 FPGA 上需要大量专家经验与设计空间探索，尤其当用户目标在时延、通信、资源占用与功耗之间权衡时。本文提出 Gen-TAS，一个面向用户特定 FPGA-GPP 任务分配的知识锚定 LLM 框架：将任务图分析与 RAG 结合，使 LLM 推理锚定在历史实现知识上，生成多个可解释、贴合指定目标的策略；再通过人机协同选择（human-in-the-loop）与确定性后端，把 LLM 决策连接到可复现的 FPGA SoC 实现。在 CNN 与 SDR 负载、多个 LLM 上的实验显示稳定、需求驱动的分配；在时延导向目标下，所选策略相对对应全 GPP 基线分别取得最高 2.45× 与 92.53× 加速，其他目标则在 FPGA-GPP 通信、资源占用或 FPGA 功耗之间做权衡。属「AI Agent / 异构系统任务分配」方向，是把 LLM+RAG 用于 FPGA 系统级设计空间探索的代表工作，对 AI 辅助硬件-软件协同设计与可复现 EDA 流程有直接支撑。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.28160" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.28160_Gen_TAS.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RAG</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">FPGA-GPP</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">任务分配</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">异构系统</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">人机协同</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可复现设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2608.27184 LLMs in Digital EDA -->
     <div class="abs-card">

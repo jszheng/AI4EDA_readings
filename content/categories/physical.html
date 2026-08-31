@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（74篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（75篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2608.28188 DeepSeq3 -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 DeepSeq3：超越扁平网表的分层图表示学习——组合子图 + 寄存器传输超图（SNG）双 GNN 建模时序电路，BMC 求解时间降 18%</div>
+      <div class="abs-meta">arXiv:2608.28188 · cs.LG / cs.AI / cs.AR · 2026-08-28 · Jingyi Zhou, Zhengyuan Shi, Jiaying Zhu, Ziyang Zheng, Qiang Xu</div>
+      <div class="abs-body">电路表示学习（CRL）为引导和优化核心 EDA 任务提供强有力范式，但其实际落地受工业级网表巨大规模与未能显式建模寄存器级时间动态所阻碍。为突破这些障碍，本文提出 DeepSeq3，一个把电路抽象为两级表示的分层框架：由触发器（FF）划分的细粒度组合子图，以及建模寄存器传输结构的高层超级节点图（SNG）。双 GNN 架构在两级分别学习表示，捕获局部布尔逻辑与全局状态转移；关键在于引入以状态为中心的预训练方案，预测 FF 状态间可达性，赋予模型对时间行为的深层理解。在大规模基准上，DeepSeq3 取得更优的可扩展性与更丰富的表示，在保障正确性的同时将限界模型检测（BMC）求解时间降低 18%。属「物理设计 / 电路表示学习」方向，用「组合子图 + 寄存器传输超图」的分层 CRL 显式建模时序动态，直接服务 BMC 等大规模电路分析，与 GNN 用于布局/时序预测的工作形成方法互补。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.28188" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.28188_DeepSeq3.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">电路表示学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">GNN</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序电路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">分层表示</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">顺序电路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">BMC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模型检测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">预训练</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.LG</span>
+      </div>
+    </div>
 
     <!-- 2608.26758 HOLMES -->
     <div class="abs-card">

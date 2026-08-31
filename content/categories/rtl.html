@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（82篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（83篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2608.26588 SeCRTLGen -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ SeCRTLGen：LLM-RTL 生成的「隐式安全义务」盲区基准——SECRTL-GEN（392 任务 × 5 CWE × 4 HDL）+ 神经符号 RTL-Obliger 把全通过率从 ~50% 提到 61.6%</div>
+      <div class="abs-meta">arXiv:2608.26588 · cs.CR / cs.SE · 2026-08-27 · Guang Yang, Xing Hu, Xiang Chen, Xin Xia</div>
+      <div class="abs-body">大语言模型（LLM）生成寄存器传输级（RTL）代码的功能正确性快速提升，但 LLM 生成代码的安全性研究多集中在软件（部署后仍可打补丁）；一旦流片进硅，不安全的 RTL 没有补救机会。本文构建 SECRTL-GEN——一个扎根真实 SoC IP 的多语言资源访问安全基准：392 个任务覆盖 5 个 CWE 族与 4 种 HDL（Verilog、SystemVerilog、VHDL、Python），每个任务都配有黑盒功能与安全测试平台；功能规格刻意省略安全义务，复现现实中安全义务常被排除在功能文档之外的情形。对 5 个前沿 LLM 的实证显示明显鸿沟：朴素提示下功能测试通过率约 73–79%，安全测试仅 14–35%，且功能更强的模型并不更安全。加入 CWE 知识能提升安全性，而无辅助的自发思考帮助有限，两种安全导向提示都会降低功能通过率——说明瓶颈在于规格中缺失弱点意识，而非写不出防御性 RTL。作者提出 RTL-Obliger，一个神经-符号框架推断这些隐式义务：LLM 从规格抽取功能-语义图，符号引擎对照 CWE 模式本体匹配以暴露缓解-证据缺口与信号级义务，LLM 最终在这些义务下以「功能保持的两阶段生成」修订 RTL。在 5 个模型、4 种语言上，RTL-Obliger 将平均全通过率从 49.6–51.4%（SecV/RESCUE）提升到 61.6%，安全与功能通过率均高于这些安全生成基线。属「前端 RTL / RTL 生成安全」方向，揭示 LLM-RTL 生成的隐式安全义务盲区并给出血肉兼修的神经-符号缓解，与 RTLGuard（2608.26049）的后门防御形成「生成安全 + 检测安全」互补。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.26588" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.26588_SeCRTLGen.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">安全</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SECRTL-GEN</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">基准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">CWE</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">神经符号</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-Obliger</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">隐式义务</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.CR</span>
+      </div>
+    </div>
 
     <!-- 2608.25536 Syn2Logic -->
     <div class="abs-card">

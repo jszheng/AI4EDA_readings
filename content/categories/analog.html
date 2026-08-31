@@ -7,9 +7,23 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（36篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（37篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+
+    <!-- 2608.28048 AI Hardware Accelerators for LLMs -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 AI Hardware Accelerators for LLMs：GPU/ASIC/FPGA/PIM/神经形态/光子加速器综述——以 roofline 指出 LLM 加速瓶颈是内存墙而非算力</div>
+      <div class="abs-meta">arXiv:2608.28048 · cs.AR / cs.DC · 2026-08-28 · Siddharth Patel, Rohit Singh</div>
+      <div class="abs-body">大语言模型（LLM）对训练与部署硬件提出空前且持续增长的需求。本综述梳理 LLM AI 硬件加速器的全貌：通用 GPU、TPU/Trainium/Groq/Cerebras 等定制 ASIC、可重构 FPGA、存内/近存计算（PIM），以及新兴的神经形态与光子路线，覆盖云与边缘部署。以 transformer 计算结构与 roofline 分析为统一框架，作者指出 LLM 加速的决定性约束不是算术而是内存：自回归解码阶段受带宽限制、KV 缓存规模可媲美模型权重、数据搬运主导能耗。在算力、内存、能耗、可编程性与可扩展性上比较各平台后得出结论：不存在跨负载最优的单一架构——GPU 仍是灵活默认与训练主力；领域专用 ASIC 在稳定大批量负载上胜出；PIM 是对内存墙最有前景的近期应对、作为异构补充进入系统；神经形态与光子虽有前景但尚未在前沿规模量产就绪。未来进展依赖硬件-算法协同设计与以内存为中心的异构系统：对 LLM 而言，内存系统已成为计算机本身。属「模拟与架构 / 硬件加速器」方向的权威综述，对理解 AI 加速器格局与内存墙瓶颈有直接参考价值，亦为 PIM/近存用于 EDA 大模型的底层算力提供背景。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.28048" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.28048_AI_Hardware_Accelerators_LLM.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件加速器</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">GPU</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ASIC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">FPGA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">存内计算</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">内存墙</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">roofline</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">综述</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
     <!-- 2608.26206 Ankhdjet -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>
