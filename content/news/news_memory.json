@@ -1,8 +1,15 @@
 {
-  "lastUpdate": "2026-08-31",
+  "lastUpdate": "2026-09-02",
   "cutoffDate": "2026-03-01",
-  "totalItems": 209,
+  "totalItems": 210,
   "items": [
+    {
+      "date": "2026-09-02",
+      "company": "NVIDIA",
+      "title": "🤝 NVIDIA 斥资 $3.5B 入股联发科并深化合作：联发科采用 NVLink Fusion 平台为客户开发定制 XPU——预验证多芯粒 XPU 开发基座（NVLink Fusion Chiplet / NVLink-C2C / NVHBM），把定制 AI 芯片接入 NVIDIA 机架级 AI 工厂",
+      "link": "https://nvidianews.nvidia.com/news/nvidia-and-mediatek-deepen-long-standing-partnership-to-build-ai-edge-to-cloud-computing-platforms",
+      "keywords": ["NVIDIA","联发科","MediaTek","NVLink Fusion","NVHBM","定制XPU","多芯粒","Chiplet","先进封装","机架级AI工厂","AI芯片设计","2026-09-01"]
+    },
     {
       "date": "2026-08-31",
       "company": "SemiEngineering",

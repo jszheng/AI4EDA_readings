@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-09-02 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR，2026-08-31 公告补录：① 2608.30932 Beacon——报告驱动 LLM 多智能体用于异构多芯粒深度学习加速器硬件设计空间探索，复合时延-能耗-货币成本降 25.1–93.5%；② 2608.30659 LLM 硬件开发框架——分层 IR（Architectural Sketch + Operational Specification）+ 端到端多智能体工作流，VerilogEval pass@5 达 95.5%；③ 2608.30509 CHIPSMORE——计算内互连与内存芯粒用于多模式多请求 LLM 推理加速，较 H100 吞吐 2.38×、能效 27×；④ 2608.30268 FABO——代理引导的时序驱动布线树联合断点优化，发现 SALT 结构性局限，129 万 ICCAD15 网表线长峰值降 2.66%）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2608.30932 Beacon -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-31 · Boyu Li, Zongwei Zhu, Qianyue Cao, Xi Li, Xuehai Zhou</div>
+      <h4>🤖 Beacon：报告驱动的 LLM 多智能体框架用于异构多芯粒深度学习加速器硬件设计空间探索——分层智能体（瓶颈定位/根因诊断/候选生成）+ 分析工具箱 + RAG 记忆，复合时延-能耗-货币成本目标降 25.1–93.5%</h4>
+      <p>异构多芯粒（multi-chiplet）加速器可独立配置各芯粒以匹配不同算子特性、提升推理效率，但异构性使仿真评估昂贵，限制了硬件设计空间探索（HW-DSE）可负担的迭代次数。主流数据驱动方法主要依赖最终指标与少量预定义状态，需大量搜索迭代才能隐式学习输入参数与优化目标的关系，在此设定下收效有限。实践中评估器还会生成执行时间线、资源占用、访存与通信行为的详细报告。大语言模型（LLM）可结合领域知识与这些报告，显式定位瓶颈位置、退化成因与参数调整方向，从而在有限迭代预算下改进每次设计决策。基于该观察，本文提出 <strong>Beacon</strong>——一个报告驱动的 LLM 多智能体框架：采用分层智能体分别做瓶颈定位、根因诊断与硬件候选生成，配合分析工具箱（Analysis Toolbox）与 RAG 记忆实现闭环搜索。在相同有限迭代预算下，Beacon 相对随机搜索、贝叶斯优化与强化学习，将「时延-能耗-货币成本」复合目标降低 <strong>25.1%–93.5%</strong>。属「AI Agent / 多芯粒硬件 DSE」方向，是把 LLM 多智能体用于异构多芯粒加速器设计空间探索的代表工作，对多芯粒互连/热/成本协同优化的智能体化有直接支撑。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">LLM</span>
+        <span class="tag">硬件设计空间探索</span>
+        <span class="tag">HW-DSE</span>
+        <span class="tag">多芯粒</span>
+        <span class="tag">Chiplet</span>
+        <span class="tag">异构加速器</span>
+        <span class="tag">瓶颈定位</span>
+        <span class="tag">RAG记忆</span>
+        <span class="tag">闭环搜索</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.30932" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.30932_Beacon.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.30659 LLM-based Hardware Development with Hierarchical IRs -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.MA / cs.SE · 2026-08-31 · Chenyang Yin, Agasthi Haputhanthri, Aditya Anirudh Jonnalagadda, Zhenyu Bai, Yuanming Song, Saranyu Chattopadhyay, Mohammad Fadiheh, Tom Zelazny, Subhasish Mitra, Tulika Mitra</div>
+      <h4>⚡ LLM 硬件开发框架：分层中间表示（Architectural Sketch + Operational Specification）+ 端到端多智能体工作流——VerilogEval pass@5 达 95.5%，复杂设计唯一可端到端生成功能正确 RTL</h4>
+      <p>大语言模型（LLM）在软件开发中日益普及，但在复杂硬件设计中的应用仍有限——源于公开硬件训练数据稀缺与硬件设计方法论的根本差异。将 LLM 用于硬件不止是直接生成 RTL：模型须理解模块边界、模块间连接与验证需求。本文提出一个 <strong>LLM 硬件开发框架</strong>，以分层中间表示（IR）与端到端多智能体工作流为核心：通过两个结构化 IR 向 LLM 抽象硬件设计——<strong>Architectural Sketch</strong> 刻画模块拓扑与互连，<strong>Operational Specification</strong> 定义每模块功能与接口；框架用这些 IR 将复杂设计分解为子模块、指定每模块功能、并推导各模块应如何测试与验证。框架内含多智能体调试闭环，让智能体获取错误反馈并控制调试细节（如仿真中要探测的信号）。在 Verilog-Eval 基准上取得 <strong>pass@5 95.5%</strong>，超越当前最优 LLM 生成框架；在从通用处理器到数字信号处理系统的新案例研究中，现有方法均力不从心，而本框架是唯一能产出功能端到端设计的方案。生成的 RTL 遵循全部工业标准设计规则、lint-clean、功能正确且完全可综合。属「前端 RTL / 分层 IR + 多智能体」方向，用结构化 IR 把硬件设计意图显式喂给 LLM，配套信号级调试闭环，是 RTL-to-Specification 自动生成与验证反馈闭环的代表性突破。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">LLM</span>
+        <span class="tag">分层IR</span>
+        <span class="tag">Architectural Sketch</span>
+        <span class="tag">Operational Specification</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">VerilogEval</span>
+        <span class="tag">调试闭环</span>
+        <span class="tag">可综合</span>
+        <span class="tag">验证反馈</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.30659" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.30659_LLM_Hierarchical_IR.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.30509 CHIPSMORE -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-31 · Yue Jiet Chong, Yimin Wang, Zhen Wu, Zixuan Wang, Wei Zhang, Xuanyao Fong</div>
+      <h4>🔬 CHIPSMORE：计算内互连与内存芯粒用于多模式多请求 LLM 推理加速——RRAM-ACIM + SRAM-DCIM 异构 PE + 可编程互连 + 可组合 KV 内存，较 H100 吞吐 2.38×、能效 27×</h4>
+      <p>LLM 推理在适配模式、上下文长度与请求并发上差异巨大，给存内计算（CIM）加速器的利用率、内存效率与可扩展性能带来挑战。本文提出 <strong>CHIPSMORE</strong>——一个支持基模（base）模式与低秩适配（LoRA）推理的多模式、多请求 LLM 推理加速器，将计算内互连（compute-in-interconnect）与 CIM 结合。其异构处理单元由电阻式 RAM 模拟存内计算（RRAM-ACIM）与静态 RAM 数字存内计算（SRAM-DCIM）构成，通过可编程的 PE 间计算网络（IPCN）互连；<strong>可组合分层 KV 内存</strong>方案按负载动态分配路由 scratchpad、SRAM-DCIM 与嵌入式 DRAM（eDRAM），可扩展支持长上下文与批处理推理；非复制多请求执行流水线在不复制预训练权重下利用请求级并行，状态感知的资源重配置机制选择性保留运行时状态并对非活跃资源电源门控以提升能效。周期精确软硬件协同仿真显示：在 Mistral-7B 推理上相对 NVIDIA H100 取得最高 <strong>2.38× 吞吐与 27× 能效</strong>，且消除多请求服务中的权重复制。属「模拟与架构 / 芯粒 + CIM」方向，把计算内互连与内存芯粒化用于 LLM 推理加速，对多芯粒互连/内存架构的 AI 驱动设计有直接参考价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">芯粒</span>
+        <span class="tag">Chiplet</span>
+        <span class="tag">存内计算</span>
+        <span class="tag">CIM</span>
+        <span class="tag">LLM推理</span>
+        <span class="tag">RRAM</span>
+        <span class="tag">SRAM</span>
+        <span class="tag">KV内存</span>
+        <span class="tag">计算内互连</span>
+        <span class="tag">多芯粒互连</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.30509" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.30509_CHIPSMORE.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.30268 FABO -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-31 · Shang Liu, Wenji Fang, Jing Wang, Hongxin Kong, Yao Lu, Zhiyao Xie</div>
+      <h4>📐 FABO：代理引导的时序驱动布线树联合断点优化——发现 SALT 逐 sink 修复的结构性局限，Flow-Aware Breakpoint Optimization 跨共享线联合优化，129 万 ICCAD15 网表线长峰值降 2.66%（≥30 pin）</h4>
+      <p>布线树拓扑决定多引脚网络如何分支与共享物理走线，直接影响线长、拥塞、电容与延迟。本文研究一个核心早期布线问题：在约束每个 sink 的「根到 sink 路径拉伸（stretch）」上限的同时最小化线长。<strong>SALT</strong> 是该问题的当前最优构造算法。作者问：语言模型引导的搜索能否发现优于 SALT 的构造算法？为使搜索可靠，作者开发了结合并行探索与独立检查的智能体框架。应用于 SALT 后，框架发现其结构性局限：<strong>SALT 一次只修复一个 sink 路径，因而从不为共享根侧走线的路径联合决定何处分叉</strong>——这种 sink 局部选择会过早分叉、复制走线。该发现导出 <strong>Flow-Aware Breakpoint Optimization（FABO）</strong>：在保留每个 sink 拉伸预算的前提下，跨共享走线的根到 sink 路径联合优化断点。在 129 万条 ICCAD15 网表与 SALT 的 20 点拉伸容差表上，FABO 在每个设定下都降低平均 FLUTE 归一化线长，整体峰值降 0.83%、≥30 pin 网络降 2.66%；FABO-FAST 以 1.3× SALT 运行时间识别并优化大部分收益显著的网表。代码已开源。属「后端物理设计 / 布线树优化」方向，由 LLM 智能体引导发现经典算法的结构性盲区并给出联合优化，是「智能体辅助 EDA 算法发现」的强实证，作者含 Zhiyao Xie 组（DeepSeq3/HOLMES 同一脉络）。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">布线</span>
+        <span class="tag">时序驱动</span>
+        <span class="tag">布线树</span>
+        <span class="tag">断点优化</span>
+        <span class="tag">LLM智能体</span>
+        <span class="tag">SALT</span>
+        <span class="tag">Zhiyao Xie</span>
+        <span class="tag">ICCAD15</span>
+        <span class="tag">线长优化</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.30268" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2608.30268_FABO.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

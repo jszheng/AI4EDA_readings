@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（37篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（38篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+
+    <!-- 2608.30509 CHIPSMORE -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 CHIPSMORE：计算内互连与内存芯粒用于多模式多请求 LLM 推理加速——RRAM-ACIM + SRAM-DCIM 异构 PE + 可编程互连 + 可组合 KV 内存，较 H100 吞吐 2.38×、能效 27×</div>
+      <div class="abs-meta">arXiv:2608.30509 · cs.AR · 2026-08-31 · Yue Jiet Chong, Yimin Wang, Zhen Wu, Zixuan Wang, Wei Zhang, Xuanyao Fong</div>
+      <div class="abs-body">LLM 推理在适配模式、上下文长度与请求并发上差异巨大，给存内计算（CIM）加速器的利用率、内存效率与可扩展性能带来挑战。本文提出 CHIPSMORE——一个支持基模（base）模式与低秩适配（LoRA）推理的多模式、多请求 LLM 推理加速器，将计算内互连（compute-in-interconnect）与 CIM 结合。其异构处理单元由 RRAM-ACIM 与 SRAM-DCIM 构成，通过可编程 PE 间计算网络（IPCN）互连；可组合分层 KV 内存按负载动态分配路由 scratchpad、SRAM-DCIM 与 eDRAM，支持长上下文与批处理推理；非复制多请求执行流水线在不复制权重下利用请求级并行，状态感知资源重配置选择性保留运行时状态并对非活跃资源电源门控以提升能效。周期精确软硬件协同仿真显示：在 Mistral-7B 推理上相对 H100 取得最高 2.38× 吞吐与 27× 能效，且消除多请求服务中的权重复制。属「模拟与架构 / 芯粒 + CIM」方向，把计算内互连与内存芯粒化用于 LLM 推理加速，对多芯粒互连/内存架构的 AI 驱动设计有直接参考价值。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.30509" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.30509_CHIPSMORE.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">芯粒</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Chiplet</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">存内计算</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">CIM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM推理</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RRAM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SRAM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">KV内存</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">计算内互连</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多芯粒互连</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2608.28048 AI Hardware Accelerators for LLMs -->
     <div class="abs-card">

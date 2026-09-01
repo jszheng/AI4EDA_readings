@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（75篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（76篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2608.30268 FABO -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 FABO：代理引导的时序驱动布线树联合断点优化——发现 SALT 逐 sink 修复的结构性局限，Flow-Aware Breakpoint Optimization 跨共享线联合优化，129 万 ICCAD15 网表线长峰值降 2.66%（≥30 pin）</div>
+      <div class="abs-meta">arXiv:2608.30268 · cs.AR · 2026-08-31 · Shang Liu, Wenji Fang, Jing Wang, Hongxin Kong, Yao Lu, Zhiyao Xie</div>
+      <div class="abs-body">布线树拓扑决定多引脚网络如何分支与共享物理走线，直接影响线长、拥塞、电容与延迟。本文研究在约束每个 sink 的「根到 sink 路径拉伸」上限的同时最小化线长的核心早期布线问题，SALT 为当前最优构造算法。作者开发结合并行探索与独立检查的智能体框架，问语言模型引导搜索能否超越 SALT；应用于 SALT 后框架发现其结构性局限：一次只修复一个 sink 路径，从不为共享根侧走线的路径联合决定何处分叉，导致过早分叉、复制走线。该发现导出 Flow-Aware Breakpoint Optimization（FABO）：在保留每个 sink 拉伸预算的前提下，跨共享走线的根到 sink 路径联合优化断点。在 129 万条 ICCAD15 网表与 SALT 的 20 点拉伸容差表上，FABO 在每个设定下都降低平均 FLUTE 归一化线长，整体峰值降 0.83%、≥30 pin 网络降 2.66%；FABO-FAST 以 1.3× SALT 运行时间识别并优化大部分收益显著的网表。代码已开源。属「后端物理设计 / 布线树优化」方向，由 LLM 智能体引导发现经典算法结构性盲区并给出联合优化，是「智能体辅助 EDA 算法发现」的强实证。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.30268" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.30268_FABO.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序驱动</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布线树</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">断点优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SALT</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Zhiyao Xie</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ICCAD15</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">线长优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2608.28188 DeepSeq3 -->
     <div class="abs-card">
