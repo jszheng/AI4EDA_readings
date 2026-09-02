@@ -46,3 +46,41 @@
 ## 备注 / 后续改进点
 - WIR #154 检索未浮现超出已覆盖范围的独立 AI4EDA 条目；可后续关注 SemiEngineering 专家文章细分。
 - 行业动态选取标准维持：仅收录厂商产品/合作/融资/开源发布，排除 arXiv 公告类。
+
+---
+
+## 2026-09-03 执行摘要
+
+**前置状态（2026-09-02）**
+- papers: 314, batches: 117, news: 210
+- 最近一次站点更新日期：2026-09-02
+
+**本次新增内容**
+- 论文 +4 篇（取自 arXiv cs.AR / cs.AI，2026-09-01 公告）：
+  1. 2609.01286 Analog-DB——智能体优先模拟 IC 数据库，工艺中立 DSL + 可查询目录让 AI 设计智能体直接复用电路（→ analog 分类）
+  2. 2608.30954 Clock-Gating MSP430——开源 16 位核 32nm 可复现 PPA 研究，行为级 RTL 门控门级失效（hold race）、工具插入 ICG 干净通过（→ physical 分类）
+  3. 2609.01084 Block-Diffusion LLM 边缘加速——WIFiV-LPDDR + BRQ-KV + DAT-FFN 混合精度脉动阵列（→ analog 分类）
+  4. 2609.00857 IMC-NoC LEAP——IMC/NMC/INC 三层处理-通信织物 + prefill-decode 解耦（→ analog 分类）
+- 行业动态 +1 条：SemiWiki/ChipAgents——Agentic AI 把 IC 工程师变成「架构师」（Kexun Zhang 观点，2026-09-01，review 成 Amdahl 瓶颈、生成-评估-排序闭环比单纯代码生成更关键）
+- 4 篇 PDF 已下载至 content/dates/（Analog-DB 625KB / Clock-Gating 1.3MB / Block-Diffusion 4.6MB / IMC-NoC LEAP 9.5MB）
+
+**更新文件清单**
+- content/dates/2026-09-03.html（新建，4 卡片）
+- content/latest/2026-09-03.html（新建，4 卡片）
+- content/news/index.html（ChipAgents/SemiWiki 卡片 + nav + stats）
+- content/news/news_memory.json（lastUpdate/totalItems 210→211 + 新 item，无重复）
+- manifest.js（stats: 318/118/211；latest 与 dates 数组各插 2026-09-03）
+- content/categories/{analog,physical}.html（analog 计数 38→41 插 3 卡；physical 计数 76→77 插 1 卡）
+- content/papers/index.html（跳转刷新至 2026-09-03）
+
+**去重检查**
+- news_memory.json 无既有 ChipAgents/SemiWiki「架构师」记录
+- 4 个 arXiv ID 经 Grep 确认 content/ 下均不存在（无重复）
+- GitHub 开源检索：OpenROAD 常规 commit / librelane（OpenLane 继任）08-27 更新 / vibe-ic MCP-EDA 08-28 更新——均非重大 release，未单列开源新闻
+
+**Git**
+- commit: `auto update: 2026-09-03` (2023256)
+- push origin main 成功：e743b76..2023256
+- 13 files changed, 409 insertions(+), 13 deletions(-)
+
+**结果状态**：✅ 成功，全量更新已推送
