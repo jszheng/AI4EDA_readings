@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-09-03 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.AI，2026-09-01 公告：① 2609.01286 Analog-DB——智能体优先的模拟 IC 数据库，工艺中立 DSL 表征让 AI 设计智能体直接发现/复用电路，68 电路/16 类，开源 130nm chopper 仪表放大器案例定位 4 处手填缺陷 + 缺失 CMFB；② 2608.30954 Clock-Gating MSP430——开源 16 位核 32nm 可复现 PPA 研究，行为级 RTL 门控门级失效（hold race），工具插入 ICG 干净通过、动态功耗降 74-81%；③ 2609.01084 Block-Diffusion LLM 边缘加速——WIFiV-LPDDR + BRQ-KV + DAT-FFN 混合精度脉动阵列，1.5B/7B 能效 3.79×/3.96×、时延 2.88×/4.44×；④ 2609.00857 IMC-NoC LEAP——IMC/NMC/INC 三层处理-通信织物 + prefill-decode 解耦，较 GPU 吞吐 ≥1.52×、能效 24.91×）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2609.01286 Analog-DB -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.AR / eess.SP · 2026-09-01 · Danial Noori Zadeh, Mohamed B. Elamien</div>
+      <h4>🔬 Analog-DB：智能体优先的模拟集成电路数据库，从模块到系统——可版本化、工艺中立的设计表征，让 AI 设计智能体直接发现与复用电路</h4>
+      <p>模拟 IC 设计难以共享：代工 NDA 限制了设计所依赖的工艺细节，已发表结果背后的 testbench 也很少公开。本文提出 <strong>analog-db</strong>——一个开源、可版本化的数据库，构建于可共享的设计表征之上：一种领域特定语言把每个设计捕获为<strong>工艺中立的拓扑</strong>、可复用 testbench 与机器可读 datasheet，三者同属一个 schema，使设计被完整共享并能在所绑定的工艺套件上重新仿真。参数化方案把功能子块与器件尺寸暴露为带约束的具名参数，使电路可组合、可重定向；schema 约束的契约 + 可查询目录让 <strong>AI 设计智能体直接发现并复用</strong>。在稳压器语料上，三个开放套件上的 23 个电路-套件绑定全部满足各自记录的规格带（典型角、匹配器件、无版图），其中 10/23 满足通用类带；导入的 23 个尺寸中有 17 个初测失败、在带标注子块角色驱动的 gm/ID 定尺循环下于 1–3 轮内闭合。在受监督案例研究中，编码智能体基于发布产物在开放 130nm 套件上为 chopper 仪表放大器定尺运算放大器核，定位出 4 处手填缺陷与缺失的共模反馈（CMFB）环路——纯定尺基线未能修复。数据库含 16 类的 68 个电路，可在分级 harness 下于原理图级验证，并在功耗/性能计分板上追踪。属「模拟与架构 / 智能体优先数据库」方向，是用工艺中立 DSL + 查询目录把模拟电路资产化、供 AI 设计智能体直接检索复用的代表性基础设施，直接服务「AI 辅助模拟 IC 设计」中数据稀缺这一根本瓶颈。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">模拟IC</span>
+        <span class="tag">智能体优先</span>
+        <span class="tag">数据库</span>
+        <span class="tag">设计复用</span>
+        <span class="tag">工艺中立</span>
+        <span class="tag">DSL</span>
+        <span class="tag">gm/ID定尺</span>
+        <span class="tag">编码智能体</span>
+        <span class="tag">开源</span>
+        <span class="tag">130nm</span>
+        <span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.01286" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.01286_Analog_DB.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2608.30954 Clock-Gating MSP430 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-08-31 · Xingran Huang, Qiming Guo, Jinwen Tang, Wenqi Jia, Dongzheng Wang</div>
+      <h4>📐 Clock-Gating 插入策略在开源 MSP430 核上的可复现 PPA 研究——行为级 RTL 门控门级失效（hold race），工具插入 ICG 单元干净通过，动态功耗降 74-81%</h4>
+      <p>时钟门控是削减动态功耗的标准技术，可分为 RTL 层手写的<strong>行为级锁存时钟门</strong>与综合阶段自动插入的<strong>集成时钟门（ICG）单元</strong>两类，业界常把二者视为可互换。本文在开源 16 位微控制器核 openMSP430（32nm 标准单元库综合）上证明它们实践中并不等价：行为级锁存 RTL 门控在理想 RTL 仿真中功能正确（10/10 自检测试例，与未门控基线一致），却在门级失效——被门控的乘法器结果始终不被捕获、读为零；而工具插入的 ICG 单元干净通过门级仿真（10/10）。作者将失效根因定位为<strong>晚期锁存 + AND 门控时钟引入的 hold race</strong>，并证明其在含完整 SDF 反标在内的 8 种仿真配置下均存在，非仿真器设置假象。随后量化三种门控强度相对未门控基线的功耗/面积/时序（PPA）：RTL 行为级（Opt1）、综合 ICG（Opt2）、二者皆用（Opt3），跨四种负载与三种工艺角（ss/tt/ff）。收益对角稳健：ICG（Opt2）在每个角把动态功耗降 74-81%、总功耗降 25-30%。本文还指出在漏电主导的 32nm  regime，总功耗收益来自门控带来的面积/漏电降低（漏电 -24~30%），而非巨大的动态节省（动态节省主导活跃模式能耗）。结论建议开源核的低功耗设计优先采用工具插入的 ICG 而非手写行为级时钟门。完整流程（Design Compiler 综合、PrimeTime PX 功耗、自检测证）已作为开放制品发布（IEEE UEMCON 2026 录用）。属「后端物理设计 / 低功耗时钟门控」方向，是用可复现 PPA 实验揭示 RTL 行为级门控与 ICG 在门级的非等价性，对 AI 辅助低功耗 RTL 生成中「门控写法」的正确性是直接警示。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">低功耗</span>
+        <span class="tag">时钟门控</span>
+        <span class="tag">Clock Gating</span>
+        <span class="tag">ICG</span>
+        <span class="tag">PPA</span>
+        <span class="tag">门级仿真</span>
+        <span class="tag">hold race</span>
+        <span class="tag">openMSP430</span>
+        <span class="tag">32nm</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2608.30954" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2608.30954_Clock_Gating_MSP430.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.01084 Block-Diffusion LLM edge -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-01 · Wei-Hsing Huang, Kiseok Lee, Ming-Yen Lee, Weiyu Sun, Cheng-Jhih Shih, Gayatri Tanksali, Arpit Khandelwal, Pin-Jun Chen, Yingyan Celine Lin, Shimeng Yu</div>
+      <h4>🔬 面向边缘设备的块扩散（Block-Diffusion）LLM 硬件加速——WIFiV-LPDDR 精度标记读 + BRQ-KV 低秩+INT8 KV + DAT-FFN 漂移映射，1.5B/7B 能效 3.79×/3.96×、时延 2.88×/4.44×</h4>
+      <p>单流（batch-one）边缘推理无法在请求间摊薄权重搬运；全注意力扩散 LLM 每步重算整个序列，原生块扩散（block diffusion）使已完成块不可变且可被精确缓存，但精炼阶段仍流式传输前缀 KV 与 FFN 权重。本文协同设计：<strong>WIFiV-LPDDR</strong>——用于精度标记读（precision-tagged reads）的宽 I/O LPDDR 系统；<strong>BRQ-KV</strong>——典型低秩 + INT8 残差前缀，带查询依赖的逐条目精度；<strong>DAT-FFN</strong>——漂移映射的典型替换 / 邻阶段校正低比特 delta / 缓存状态携带，同时保持活激活不量化。三者均映射到输入驻留（input-stationary）混合精度脉动阵列。在建模的 Jetson 级平台上对 1.5B/7B 模型评估，整套方案在报告 DAT-FFN 设定下取得算术平均能效缩减 3.79×/3.96× 与算术平均时延加速 2.88×/4.44×，每个对应的压缩模型基准分数相对基线下降不足一个绝对百分点。属「模拟与架构 / AI 模型感知硬件加速器」方向，是用块扩散的「不可变块可缓存」特性重构内存系统与 FFN 数据通路以压低边缘 LLM 推理能耗的代表工作，与本站关注的「LLM 驱动硬件架构 / 内存墙」一脉相承。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">硬件加速器</span>
+        <span class="tag">LLM</span>
+        <span class="tag">块扩散</span>
+        <span class="tag">Block-Diffusion</span>
+        <span class="tag">边缘推理</span>
+        <span class="tag">混合精度</span>
+        <span class="tag">KV缓存</span>
+        <span class="tag">脉动阵列</span>
+        <span class="tag">能效</span>
+        <span class="tag">LPDDR</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.01084" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.01084_Block_Diffusion_LLM.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.00857 IMC-NoC LEAP -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-01 · Yimin Wang, Yue Jiet Chong, Xuanyao Fong</div>
+      <h4>🔬 面向 IMC-NoC 架构的 LLM 推理：均衡数据流 + 细粒度并行的软硬件协同设计（LEAP）——IMC/NMC/INC 三层处理-通信织物，prefill-decode 解耦，较 GPU 吞吐 ≥1.52×、能效 24.91×</h4>
+      <p>LLM 推理对内存带宽、计算密度与通信效率提出空前需求。存内计算（IMC）是解决内存墙的有前景方案，但 LLM 异构的数据动态性需要互补资源处理运行时产生的中间数据；海量参数还要求 scale-up 架构，而片上数据搬运常是主要性能瓶颈。本文提出软硬件协同设计框架，把分布式计算、内存与通信统一为无缝的<strong>处理-通信织物</strong>。硬件侧提出可扩展架构 <strong>LEAP</strong>，集成 IMC PE、NMC PE 与 INC：IMC 处理静态权重、NMC 处理动态数据、INC 做部分和归约，每层执行专门任务。软件侧提出面向 LLM 服务关键指标（吞吐、时延）的划分/映射/调度框架；针对 prefill 与 decode 阶段截然不同的计算强度，提出 <strong>prefill-decode 解耦</strong>方案，动态重配置 PE 组织以最大化资源利用率。相较商业 GPU 平台，该架构取得吞吐 ≥1.52×、能效 24.91× 的提升。本文为 LEAP（ICCAD'2025）的扩展版。属「模拟与架构 / 存内计算 + NoC」方向，是把 IMC 与片上网络统一为处理-通信织物、并以 prefill-decode 解耦化解 LLM 推理数据流瓶颈的代表性协同设计，对多芯粒/近存架构的 AI 驱动设计有参考价值。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">硬件架构</span>
+        <span class="tag">LLM推理</span>
+        <span class="tag">存内计算</span>
+        <span class="tag">IMC</span>
+        <span class="tag">NoC</span>
+        <span class="tag">软硬件协同设计</span>
+        <span class="tag">prefill-decode解耦</span>
+        <span class="tag">LEAP</span>
+        <span class="tag">处理-通信织物</span>
+        <span class="tag">能效</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.00857" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.00857_IMC_NoC_LEAP.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

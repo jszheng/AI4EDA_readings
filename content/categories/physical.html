@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（76篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（77篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2608.30954 Clock-Gating MSP430 -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 Clock-Gating 插入策略在开源 MSP430 核上的可复现 PPA 研究——行为级 RTL 门控门级失效（hold race），工具插入 ICG 单元干净通过，动态功耗降 74-81%</div>
+      <div class="abs-meta">arXiv:2608.30954 · cs.AR · 2026-08-31 · Xingran Huang, Qiming Guo, Jinwen Tang, Wenqi Jia, Dongzheng Wang</div>
+      <div class="abs-body">时钟门控分 RTL 手写行为级锁存门与综合自动插入的 ICG 单元，业界常视其可互换。本文在 openMSP430（32nm）上证明二者门级不等价：行为级 RTL 门控在理想 RTL 仿真 10/10 正确，却在门级失效（被门控乘法器结果读零）；工具插入 ICG 干净通过 10/10。根因是晚期锁存+AND 门控时钟引入的 hold race，在含 SDF 反标的 8 种配置下均存在。量化三种门控强度 PPA：ICG（Opt2）在每个工艺角把动态功耗降 74-81%、总功耗降 25-30%；漏电主导的 32nm 下总功耗收益来自面积/漏电降低。建议开源核低功耗设计优先 ICG 而非手写行为级门控。完整流程已作开放制品发布（IEEE UEMCON 2026 录用）。属「后端物理设计 / 低功耗时钟门控」方向，对 AI 辅助低功耗 RTL 生成中「门控写法」正确性是直接警示。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2608.30954" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2608.30954_Clock_Gating_MSP430.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">低功耗</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时钟门控</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Clock Gating</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ICG</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PPA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">门级仿真</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">hold race</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">openMSP430</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">32nm</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2608.30268 FABO -->
     <div class="abs-card">

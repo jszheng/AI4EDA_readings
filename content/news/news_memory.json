@@ -1,8 +1,15 @@
 {
-  "lastUpdate": "2026-09-02",
+  "lastUpdate": "2026-09-03",
   "cutoffDate": "2026-03-01",
-  "totalItems": 210,
+  "totalItems": 211,
   "items": [
+    {
+      "date": "2026-09-03",
+      "company": "ChipAgents",
+      "title": "🧭 SemiWiki 深度：ChipAgents 视角——Agentic AI 把 IC 工程师变成「架构师」：Kexun Zhang 谈智能体接管实现/验证后工程师上移到意图定义与架构，review 成 Amdahl 瓶颈，生成-评估-排序闭环比单纯代码生成更关键",
+      "link": "https://semiwiki.com/eda/chipagents-ai/372781-how-agentic-ai-turns-ic-engineers-into-architects",
+      "keywords": ["SemiWiki","ChipAgents","Agentic AI","IC工程师","架构师","设计自动化","Kexun Zhang","review瓶颈","Amdahl定律","生成-评估-排序闭环","观点","2026-09-01"]
+    },
     {
       "date": "2026-09-02",
       "company": "NVIDIA",

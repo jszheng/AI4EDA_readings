@@ -7,9 +7,48 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（38篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（41篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+
+    <!-- 2609.01286 Analog-DB -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 Analog-DB：智能体优先的模拟 IC 数据库，从模块到系统——工艺中立 DSL 表征 + 可查询目录，让 AI 设计智能体直接发现与复用电路（68 电路/16 类，开源 130nm chopper 仪表放大器案例定位 4 处手填缺陷 + 缺失 CMFB）</div>
+      <div class="abs-meta">arXiv:2609.01286 · cs.AI / cs.AR / eess.SP · 2026-09-01 · Danial Noori Zadeh, Mohamed B. Elamien</div>
+      <div class="abs-body">模拟 IC 设计难以共享：代工 NDA 限制工艺细节、testbench 鲜少公开。analog-db 用可版本化、工艺中立的设计表征（DSL 把每个设计捕获为拓扑 + 可复用 testbench + 机器可读 datasheet），使设计完整共享并能在所绑工艺套件上重仿真；参数化把功能子块与器件尺寸暴露为带约束具名参数，schema 契约 + 可查询目录让 AI 设计智能体直接发现/复用。稳压器语料上 3 个开放套件 23 个绑定全部满足规格带；17/23 导入尺寸初测失败、在 gm/ID 定尺循环下 1–3 轮闭合。编码智能体在开放 130nm 套件为 chopper 仪表放大器定尺运放核，定位 4 处手填缺陷 + 缺失 CMFB。数据库含 16 类 68 电路。属「模拟与架构 / 智能体优先数据库」方向，用工艺中立 DSL + 查询目录把模拟电路资产化供 AI 智能体检索复用，直击 AI 辅助模拟 IC 设计的数据稀缺瓶颈。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.01286" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.01286_Analog_DB.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟IC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">智能体优先</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">数据库</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计复用</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工艺中立</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">gm/ID</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">编码智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
+
+    <!-- 2609.01084 Block-Diffusion LLM edge -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 面向边缘设备的块扩散（Block-Diffusion）LLM 硬件加速——WIFiV-LPDDR 精度标记读 + BRQ-KV 低秩+INT8 KV + DAT-FFN 漂移映射，1.5B/7B 能效 3.79×/3.96×、时延 2.88×/4.44×</div>
+      <div class="abs-meta">arXiv:2609.01084 · cs.AR · 2026-09-01 · Wei-Hsing Huang, Kiseok Lee, Ming-Yen Lee, Weiyu Sun, Cheng-Jhih Shih, Gayatri Tanksali, Arpit Khandelwal, Pin-Jun Chen, Yingyan Celine Lin, Shimeng Yu</div>
+      <div class="abs-body">单流边缘推理无法摊薄权重搬运；全注意力扩散 LLM 每步重算整序列，块扩散使已完成块不可变且可精确缓存，但精炼仍流式传输前缀 KV 与 FFN 权重。本文协同设计 WIFiV-LPDDR（精度标记读宽 I/O LPDDR）、BRQ-KV（低秩+INT8 残差前缀，查询依赖逐条目精度）、DAT-FFN（漂移映射典型替换 / 邻阶段校正低比特 delta / 缓存状态携带，活激活不量化），三者映射到输入驻留混合精度脉动阵列。在建模 Jetson 级平台对 1.5B/7B 评估，能效缩减 3.79×/3.96×、时延加速 2.88×/4.44×，基准分数下降不足 1pp。属「模拟与架构 / AI 模型感知硬件加速器」方向，用块扩散「不可变块可缓存」特性重构内存与 FFN 数据通路压低边缘 LLM 推理能耗，与「LLM 驱动硬件架构 / 内存墙」一脉相承。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.01084" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.01084_Block_Diffusion_LLM.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件加速器</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">块扩散</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">边缘推理</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">混合精度</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">KV缓存</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">脉动阵列</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">能效</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2609.00857 IMC-NoC LEAP -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 面向 IMC-NoC 架构的 LLM 推理：均衡数据流 + 细粒度并行的软硬件协同设计（LEAP）——IMC/NMC/INC 三层处理-通信织物，prefill-decode 解耦，较 GPU 吞吐 ≥1.52×、能效 24.91×</div>
+      <div class="abs-meta">arXiv:2609.00857 · cs.AR · 2026-09-01 · Yimin Wang, Yue Jiet Chong, Xuanyao Fong</div>
+      <div class="abs-body">LLM 推理对内存带宽/算力密度/通信效率需求空前；IMC 解内存墙但异构数据动态性需互补资源，海量参数令片上搬运成主瓶颈。本文提出软硬件协同设计框架，把分布式计算/内存/通信统一为处理-通信织物：硬件侧可扩展架构 LEAP 集成 IMC PE、NMC PE 与 INC（IMC 静态权重、NMC 动态数据、INC 部分和归约）；软件侧面向吞吐/时延的划分-映射-调度框架，并以 prefill-decode 解耦动态重配 PE 组织最大化利用率。较商业 GPU 吞吐 ≥1.52×、能效 24.91×。为 LEAP（ICCAD'2025）扩展版。属「模拟与架构 / 存内计算 + NoC」方向，对多芯粒/近存架构的 AI 驱动设计有参考价值。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.00857" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.00857_IMC_NoC_LEAP.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM推理</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">存内计算</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">IMC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">NoC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">软硬件协同设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">prefill-decode解耦</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LEAP</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">能效</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2608.30509 CHIPSMORE -->
     <div class="abs-card">
