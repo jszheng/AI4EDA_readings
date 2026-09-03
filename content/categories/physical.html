@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（77篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（78篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2609.02470 Batch Before You Time -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 Batch Before You Time：面向时序感知逻辑重写的决策作用域代理执行——单决策全候选编译为作用域零延迟镜像，候选选择时间平均降 18.05%、移除 32.52% 定时候选评估</div>
+      <div class="abs-meta">arXiv:2609.02470 · cs.AR · 2026-09-02 · Pujun Su（Fudan University）</div>
+      <div class="abs-body">时序感知逻辑重写需在功能等价候选间选择，标准做法是用 SDF 反标开关仿真区分延迟相关活跃度，但逐候选评估都要重跑定时、编译与回放。零延迟代理可去定时评估，但逐候选生成代理可能比其节省的还贵。本文提出 BBYT，把一个重写决策的全部候选一次性编译成一份作用域限定的零延迟镜像，再提交明显分离的代理胜者或回退未改变的定时链。在 12 条平衡留出 holdout 序列上，候选选择时间平均降 18.05%；设计级降 5.84% 与 30.25%；C6288 平衡负载上比逐候选代理快 9.24%；五负载语料上移除 32.52% 定时候选评估，并在全部 250 个决策上与穷举定时选择一致。结论：按需时序感知重写选择中代理执行与保真续算应同决策作用域。属「后端物理设计 / 时序感知逻辑重写」方向，是用批量作用域代理执行削减逻辑重写定时评估开销的实用优化，对 AI 辅助综合/物理优化中重写候选快速定时筛选是直接可用的加速件。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.02470" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.02470_Batch_Before_You_Time.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">逻辑重写</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">代理执行</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">决策作用域</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">零延迟镜像</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SDF</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">C6288</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2608.30954 Clock-Gating MSP430 -->
     <div class="abs-card">

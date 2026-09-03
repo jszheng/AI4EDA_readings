@@ -1,8 +1,15 @@
 {
-  "lastUpdate": "2026-09-03",
+  "lastUpdate": "2026-09-04",
   "cutoffDate": "2026-03-01",
-  "totalItems": 211,
+  "totalItems": 212,
   "items": [
+    {
+      "date": "2026-09-04",
+      "company": "eInfochips",
+      "title": "📊 eInfochips 深度：AI 驱动芯片设计的底层生态——三大 EDA 巨头 AI 能力全景梳理（Synopsys DSO.ai/VSO.ai/TSO.ai/ASO.ai·Cadence Cerebrus/Verisium/JedAI/ChipStack·Siemens Fuse/Calibre/Solido），代工厂与先进封装同步导入 AI",
+      "link": "https://www.einfochips.com/?p=216712",
+      "keywords": ["eInfochips","行业综述","AI驱动芯片设计","Synopsys","DSO.ai","VSO.ai","TSO.ai","ASO.ai","Cadence","Cerebrus","Verisium","JedAI","ChipStack","Siemens EDA","Fuse","Calibre","Solido","TSMC","3DFabric","N2","A16","CoWoS","SoIC","AI能力全景","厂商对比","2026-09-02"]
+    },
     {
       "date": "2026-09-03",
       "company": "ChipAgents",

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-09-04 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.ET，2026-09-02 公告：① 2609.02470 Batch Before You Time——时序感知逻辑重写的决策作用域代理执行，12 条平衡留出的 holdout 序列候选选择时间平均降 18.05%、移除 32.52% 定时候选评估；② 2609.01775 Dictionary-Guided Mutation Operators——字典引导变异算子 + 仿真分歧故障定位的自动 HDL（Verilog）修复，CirFix 基准 14 个 bug 变体修复通过、含 CirFix 无法修的 6 处编辑多 bug 实例、相对 CirFix 最高 18× 加速）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2609.02470 Batch Before You Time -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-02 · Pujun Su（Fudan University）</div>
+      <h4>📐 Batch Before You Time：面向时序感知逻辑重写的决策作用域代理执行——单决策全候选编译为一份作用域零延迟镜像，候选选择时间平均降 18.05%、移除 32.52% 定时评估</h4>
+      <p>时序感知逻辑重写需在功能等价的多个候选间做选择，标准做法是用 Standard Delay Format（SDF）反标的开关仿真区分延迟相关活跃度，但逐个候选评估都要重跑定时、编译与回放，代价高昂。零延迟代理可去掉定时评估，但逐候选生成代理本身可能比它节省的定时工作还贵。本文提出 <strong>Batch Before You Time（BBYT）</strong>：把一个重写决策的全部候选一次性编译成<strong>一份作用域限定的零延迟镜像</strong>，再要么提交一个明显分离（well-separated）的代理胜者，要么回退到未改变的定时链。在 12 条平衡留出的 holdout 序列上，BBYT 把完整候选选择时间平均降低 18.05%；设计级降 5.84% 与 30.25%，置信区间均高于零；在 8,192 转移的 C6288 平衡负载上比逐候选代理启动快 9.24%；在五负载语料上移除 32.52% 的定时候选评估，并在全部 250 个被评估决策上与穷举定时选择一致。结论：按需时序感知重写选择中，代理执行与保真续算应使用同一决策作用域。属「后端物理设计 / 时序感知逻辑重写」方向，是用批量作用域代理执行削减逻辑重写中定时评估开销的实用优化，对 AI 辅助综合/物理优化中「重写候选快速定时筛选」是直接可用的加速件。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">逻辑重写</span>
+        <span class="tag">时序优化</span>
+        <span class="tag">逻辑综合</span>
+        <span class="tag">时序感知</span>
+        <span class="tag">代理执行</span>
+        <span class="tag">决策作用域</span>
+        <span class="tag">零延迟镜像</span>
+        <span class="tag">SDF</span>
+        <span class="tag">C6288</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.02470" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2609.02470_Batch_Before_You_Time.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.01775 Dictionary-Guided Mutation Operators for Automated HDL Repair -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.ET / cs.AI / cs.AR / cs.NE · 2026-09-01 · Maisha Mastora, Dean Sullivan</div>
+      <h4>🔧 Dictionary-Guided Mutation Operators for Automated HDL Repair：ANTLR 派生 DUT 专用变异词表 + 仿真分歧故障定位，无需 AST 操作或综合即可修复 Verilog，CirFix 基准 14 bug 变体通过、最高 18× 加速</h4>
+      <p>硬件描述语言（HDL）设计的自动修复长期受困于巨大的候选修复搜索空间与 HDL 语法/语义的强约束：通用变异策略压倒性地生成语法无效的候选，浪费编译与仿真预算；而综合驱动与模板方法又各自限制了通用性与可移植性。本文提出<strong>字典引导的 HDL 修复系统</strong>，把 ANTLR 派生的、针对被测设计（DUT）的<strong>变异词表</strong>与<strong>仿真分歧故障定位（FL）</strong>模块结合：变异算子通过正则匹配直接对 Verilog 源码做类别受限的 token 替换/插入/删除，无需 AST 操作或综合；FL 模块从单次仿真中识别分歧输出线，并按其与这些信号的<strong>结构邻近度</strong>给源码行打分，把变异搜索导向高嫌疑区域；确定性定向扫描先在高分行上穷举全部词典变异，再回退到遗传编程（GP）搜索。在 CirFix 基准的六个 DUT 族上，该方法对 14 个 bug 变体产出通过 oracle 的正确修复，包括一个 CirFix 无法修复的 6 处编辑多 bug 实例，并在双编辑变体上相对 CirFix 取得 18× 加速。结果表明：词典受限变异算子 + 轻量仿真分歧 FL 是无需形式分析或综合依赖、对常见 bug 类的实用且具竞争力的自动 HDL 修复路径。属「前端 RTL / 功能验证」方向，是用 DUT 专用词典变异 + 仿真分歧定位把自动 HDL 修复从「语法无效候选爆炸」中解放出来的代表工作，与本站关注的「RTL 生成-验证-反馈闭环」中「自动修复」环节直接对应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">功能验证</span>
+        <span class="tag">HDL修复</span>
+        <span class="tag">Verilog</span>
+        <span class="tag">自动修复</span>
+        <span class="tag">变异算子</span>
+        <span class="tag">故障定位</span>
+        <span class="tag">仿真分歧</span>
+        <span class="tag">遗传编程</span>
+        <span class="tag">CirFix</span>
+        <span class="tag">cs.ET</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.01775" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2609.01775_Dictionary_Guided_HDL_Repair.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

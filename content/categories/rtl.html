@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（84篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（85篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2609.01775 Dictionary-Guided Mutation Operators for Automated HDL Repair -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔧 Dictionary-Guided Mutation Operators for Automated HDL Repair：ANTLR 派生 DUT 专用变异词表 + 仿真分歧故障定位，无需 AST/综合即可修复 Verilog，CirFix 基准 14 bug 变体通过、最高 18× 加速</div>
+      <div class="abs-meta">arXiv:2609.01775 · cs.ET / cs.AI / cs.AR / cs.NE · 2026-09-01 · Maisha Mastora, Dean Sullivan</div>
+      <div class="abs-body">自动 HDL 修复受困于巨大候选空间与 HDL 强约束：通用变异压倒性生成语法无效候选，综合驱动/模板法又限制通用性。本文提出字典引导 HDL 修复系统，结合 ANTLR 派生的 DUT 专用变异词表与仿真分歧故障定位（FL）：变异算子经正则匹配直接对 Verilog 源码做类别受限 token 替换/插入/删除，无需 AST 或综合；FL 从单次仿真识别分歧输出线，按结构邻近度给源码行打分以导向高嫌疑区；确定性定向扫描先穷举高分行全部词典变异，再回退遗传编程。在 CirFix 六个 DUT 族上，对 14 个 bug 变体产出通过 oracle 的正确修复，含 CirFix 无法修的 6 处编辑多 bug 实例，双编辑变体上相对 CirFix 18× 加速。结果表明词典受限变异 + 轻量仿真分歧 FL 是无需形式分析/综合依赖、对常见 bug 类具竞争力的自动 HDL 修复路径。属「前端 RTL / 功能验证」方向，是用 DUT 专用词典变异 + 仿真分歧定位解放自动 HDL 修复的代表工作，与「RTL 生成-验证-反馈闭环」的自动修复环节直接对应。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.01775" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.01775_Dictionary_Guided_HDL_Repair.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HDL修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">自动修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">变异算子</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">故障定位</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">仿真分歧</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">遗传编程</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">CirFix</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.ET</span>
+      </div>
+    </div>
 
     <!-- 2608.30659 LLM-based Hardware Development -->
     <div class="abs-card">
