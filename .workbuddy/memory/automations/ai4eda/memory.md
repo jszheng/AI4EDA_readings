@@ -84,3 +84,77 @@
 - 13 files changed, 409 insertions(+), 13 deletions(-)
 
 **结果状态**：✅ 成功，全量更新已推送
+
+---
+
+## 2026-09-04 执行摘要
+
+**前置状态（2026-09-03）**
+- papers: 318, batches: 118, news: 211
+- 最近一次站点更新日期：2026-09-03
+
+**本次新增内容**
+- 论文 +2 篇（取自 arXiv cs.AR / cs.ET，2026-09-02 公告）：
+  1. 2609.02470 Batch Before You Time——时序感知逻辑重写的决策作用域代理执行（→ physical 分类）
+  2. 2609.01775 Dictionary-Guided Mutation Operators for Automated HDL Repair——ANTLR 派生 DUT 专用变异词表 + 仿真分歧故障定位的自动 Verilog 修复（→ rtl 分类）
+- 行业动态 +1 条：eInfochips《AI 驱动芯片设计》Part 3（2026-09-02）——三大 EDA 巨头 AI 能力全景梳理（Synopsys DSO.ai/VSO.ai/TSO.ai/ASO.ai·Cadence Cerebrus/Verisium/JedAI/ChipStack·Siemens Fuse/Calibre/Solido），代工厂与先进封装同步导入 AI
+- 2 篇 PDF 已下载至 content/dates/（Batch Before You Time 253KB / Dictionary-Guided HDL Repair 246KB）
+
+**更新文件清单**
+- content/dates/2026-09-04.html（新建，2 卡片）
+- content/latest/2026-09-04.html（新建，2 卡片）
+- content/news/index.html（eInfochips 卡片 + nav + stats）
+- content/news/news_memory.json（lastUpdate/totalItems 211→212 + 新 item，无重复）
+- manifest.js（stats: 320/119/212；latest 与 dates 数组各插 2026-09-04）
+- content/categories/{physical,rtl}.html（physical 计数 77→78 插 1 卡；rtl 计数 84→85 插 1 卡）
+- content/papers/index.html（跳转刷新至 2026-09-04）
+
+**去重检查**
+- news_memory.json 无既有 eInfochips「AI 驱动芯片设计生态全景」记录
+- 2 个 arXiv ID 经 Grep 确认 content/ 下均不存在（无重复）
+- GitHub 开源检索：OpenROAD 仅有常规 commit（最近 06-29），无重大 release；未单列开源新闻（#OpenROAD 2.0 传闻来自二手聚合源，未经官方确认，未收录）
+
+**Git**
+- commit: `auto update: 2026-09-04` (ddb5e29)
+- push origin main 成功：7560d88..ddb5e29
+- 10 files changed, 248 insertions(+), 11 deletions(-)
+
+**结果状态**：✅ 成功，全量更新已推送
+
+---
+
+## 2026-09-07 执行摘要
+
+**前置状态（2026-09-04）**
+- papers: 320, batches: 119, news: 212
+- 最近一次站点更新日期：2026-09-04
+
+**本次新增内容**
+- 论文 +4 篇（取自 arXiv cs.AR 2026-09-01~09-03 公告）：
+  1. 2609.03594 LevelSyn——物理感知逻辑综合（GNN 驱动，physical 分类）
+  2. 2609.00609 Version Space——版本空间等价检查与密钥计数（verify 分类）
+  3. 2609.03125 Photonic Interposer——时域编码光子芯粒中介层（analog 分类）
+  4. 2609.02988 Mesh-Native TCAD——网格物理信息 TCAD 代理模型（analog 分类）
+- 行业动态 +1 条：Synopsys FY2026 Q3 财报（2026-08-26 发布）——营收 $24.77 亿同比 +42%，Multiphysics Fusion 设计收敛 10×、3DIC Compiler 助 AMD MI455X 多芯粒封装、Agentic AI 平台 30+ 客户合作（经验证 RTL 压缩至多 50×）。链接采用 MarketBeat 财报电话会实录（官方 news.synopsys.com 原链接 404）。
+- 4 篇 PDF 已下载至 content/dates/（LevelSyn 1.49MB / Version_Space 481KB / Photonic_Interposer 6.39MB / Mesh_Native_TCAD 1.17MB）
+
+**更新文件清单**
+- content/dates/2026-09-07.html（新建，4 卡片）
+- content/latest/2026-09-07.html（新建，4 卡片）
+- content/news/index.html（Synopsys Q3 卡片 + nav + stats；⚠️ 本卡片 section 在 09-04 那次运行未实际落盘，本次已重建）
+- content/news/news_memory.json（lastUpdate/totalItems 212→213 + 新 item，无重复）
+- manifest.js（stats: 324/120/213；latest 与 dates 数组各插 2026-09-07）
+- content/categories/{physical,verify,analog}.html（physical 78→79；verify 38→39；analog 41→43）
+- content/papers/index.html（跳转刷新至 2026-09-07）
+
+**去重检查**
+- news_memory.json 无既有 Synopsys「FY2026 Q3 财报」记录
+- 4 个 arXiv ID 经 Grep 确认 content/ 下均不存在（无重复）
+- 180 天清理未执行：news_memory.json 中仍有 2026-03-02 / 2026-03-05 两条 >180 天旧条目（与历次运行一致，仅影响去重追踪，不影响渲染归档），cutoffDate 维持 2026-03-01
+
+**Git**
+- 待提交：`auto update: 2026-09-07`（含 09-04 未提交的 memory.md 段落一并纳入）
+
+**结果状态**：⏳ 待 git add/commit/push（本段落写入后执行）
+
+---

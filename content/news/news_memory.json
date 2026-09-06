@@ -1,49 +1,166 @@
 {
-  "lastUpdate": "2026-09-04",
+  "lastUpdate": "2026-09-07",
   "cutoffDate": "2026-03-01",
-  "totalItems": 212,
+  "totalItems": 213,
   "items": [
+    {
+      "date": "2026-09-07",
+      "company": "Synopsys",
+      "title": "📈 Synopsys FY2026 Q3 财报：营收 $24.77 亿同比 +42%，Multiphysics Fusion 设计收敛 10×、3DIC Compiler 助 AMD MI455X 多芯粒封装、Agentic AI 平台 30+ 客户合作（经验证 RTL 压缩至多 50×）",
+      "link": "https://www.marketbeat.com/instant-alerts/transcript-synopsys-q3-earnings-call-highlights-2026-08-26",
+      "keywords": [
+        "Synopsys",
+        "FY2026 Q3",
+        "财报",
+        "营收+42%",
+        "Multiphysics Fusion",
+        "设计收敛10×",
+        "3DIC Compiler",
+        "AMD MI455X",
+        "多芯粒封装",
+        "Agentic AI",
+        "RTL压缩50×",
+        "Ansys",
+        "NVIDIA",
+        "Cisco",
+        "MediaTek",
+        "Samsung Foundry",
+        "2026-08-26"
+      ]
+    },
     {
       "date": "2026-09-04",
       "company": "eInfochips",
       "title": "📊 eInfochips 深度：AI 驱动芯片设计的底层生态——三大 EDA 巨头 AI 能力全景梳理（Synopsys DSO.ai/VSO.ai/TSO.ai/ASO.ai·Cadence Cerebrus/Verisium/JedAI/ChipStack·Siemens Fuse/Calibre/Solido），代工厂与先进封装同步导入 AI",
       "link": "https://www.einfochips.com/?p=216712",
-      "keywords": ["eInfochips","行业综述","AI驱动芯片设计","Synopsys","DSO.ai","VSO.ai","TSO.ai","ASO.ai","Cadence","Cerebrus","Verisium","JedAI","ChipStack","Siemens EDA","Fuse","Calibre","Solido","TSMC","3DFabric","N2","A16","CoWoS","SoIC","AI能力全景","厂商对比","2026-09-02"]
+      "keywords": [
+        "eInfochips",
+        "行业综述",
+        "AI驱动芯片设计",
+        "Synopsys",
+        "DSO.ai",
+        "VSO.ai",
+        "TSO.ai",
+        "ASO.ai",
+        "Cadence",
+        "Cerebrus",
+        "Verisium",
+        "JedAI",
+        "ChipStack",
+        "Siemens EDA",
+        "Fuse",
+        "Calibre",
+        "Solido",
+        "TSMC",
+        "3DFabric",
+        "N2",
+        "A16",
+        "CoWoS",
+        "SoIC",
+        "AI能力全景",
+        "厂商对比",
+        "2026-09-02"
+      ]
     },
     {
       "date": "2026-09-03",
       "company": "ChipAgents",
       "title": "🧭 SemiWiki 深度：ChipAgents 视角——Agentic AI 把 IC 工程师变成「架构师」：Kexun Zhang 谈智能体接管实现/验证后工程师上移到意图定义与架构，review 成 Amdahl 瓶颈，生成-评估-排序闭环比单纯代码生成更关键",
       "link": "https://semiwiki.com/eda/chipagents-ai/372781-how-agentic-ai-turns-ic-engineers-into-architects",
-      "keywords": ["SemiWiki","ChipAgents","Agentic AI","IC工程师","架构师","设计自动化","Kexun Zhang","review瓶颈","Amdahl定律","生成-评估-排序闭环","观点","2026-09-01"]
+      "keywords": [
+        "SemiWiki",
+        "ChipAgents",
+        "Agentic AI",
+        "IC工程师",
+        "架构师",
+        "设计自动化",
+        "Kexun Zhang",
+        "review瓶颈",
+        "Amdahl定律",
+        "生成-评估-排序闭环",
+        "观点",
+        "2026-09-01"
+      ]
     },
     {
       "date": "2026-09-02",
       "company": "NVIDIA",
       "title": "🤝 NVIDIA 斥资 $3.5B 入股联发科并深化合作：联发科采用 NVLink Fusion 平台为客户开发定制 XPU——预验证多芯粒 XPU 开发基座（NVLink Fusion Chiplet / NVLink-C2C / NVHBM），把定制 AI 芯片接入 NVIDIA 机架级 AI 工厂",
       "link": "https://nvidianews.nvidia.com/news/nvidia-and-mediatek-deepen-long-standing-partnership-to-build-ai-edge-to-cloud-computing-platforms",
-      "keywords": ["NVIDIA","联发科","MediaTek","NVLink Fusion","NVHBM","定制XPU","多芯粒","Chiplet","先进封装","机架级AI工厂","AI芯片设计","2026-09-01"]
+      "keywords": [
+        "NVIDIA",
+        "联发科",
+        "MediaTek",
+        "NVLink Fusion",
+        "NVHBM",
+        "定制XPU",
+        "多芯粒",
+        "Chiplet",
+        "先进封装",
+        "机架级AI工厂",
+        "AI芯片设计",
+        "2026-09-01"
+      ]
     },
     {
       "date": "2026-08-31",
       "company": "SemiEngineering",
       "title": "📰 SemiEngineering WIR #153：Agentrys $24.5M 代理式设计自动化平台 / Celera $30M AI 模拟 IC / Keysight×AttoTude 设计周期 -50% 一次流片成功 / 多芯粒 2nm 主导 / 芯片安全持续防御",
       "link": "https://semiengineering.com/chip-industry-week-in-review-153/",
-      "keywords": ["SemiEngineering","WIR #153","周综述","Agentrys","Agentic Design Automation","Celera","AI模拟IC","Keysight","AttoTude","设计周期-50%","一次流片","多芯粒2nm","芯片安全","持续防御","形式验证属性","2026-08-29"]
+      "keywords": [
+        "SemiEngineering",
+        "WIR #153",
+        "周综述",
+        "Agentrys",
+        "Agentic Design Automation",
+        "Celera",
+        "AI模拟IC",
+        "Keysight",
+        "AttoTude",
+        "设计周期-50%",
+        "一次流片",
+        "多芯粒2nm",
+        "芯片安全",
+        "持续防御",
+        "形式验证属性",
+        "2026-08-29"
+      ]
     },
     {
       "date": "2026-08-31",
       "company": "SemiWiki",
       "title": "🧭 SemiWiki 深度：Agentic AI 能否做大开源 EDA 市场？——智能体降低开源工具门槛、加速改良，OpenROAD 闭环设计空间探索成标杆",
       "link": "https://semiwiki.com/eda/372107-will-agentic-ai-help-the-open-source-eda-market/",
-      "keywords": ["SemiWiki","开源EDA","Agentic AI","OpenROAD","智能体","设计空间探索","闭环反馈","自主OpenROAD","成熟节点","2026-08-28"]
+      "keywords": [
+        "SemiWiki",
+        "开源EDA",
+        "Agentic AI",
+        "OpenROAD",
+        "智能体",
+        "设计空间探索",
+        "闭环反馈",
+        "自主OpenROAD",
+        "成熟节点",
+        "2026-08-28"
+      ]
     },
     {
       "date": "2026-08-31",
       "company": "DeepSeek",
       "title": "🔧 DeepSeek 开源发布 Harness（dsh）：基于 Cordis 插件架构的 AI Agent 框架，接管 Xilinx Vivado 实现 FPGA 工程全自动开发",
       "link": "https://xasun.com/article/209/3800.html",
-      "keywords": ["DeepSeek","Harness","dsh","Cordis","Vivado","FPGA","开源","AI Agent","自动化开发","2026-08"]
+      "keywords": [
+        "DeepSeek",
+        "Harness",
+        "dsh",
+        "Cordis",
+        "Vivado",
+        "FPGA",
+        "开源",
+        "AI Agent",
+        "自动化开发",
+        "2026-08"
+      ]
     },
     {
       "date": "2026-08-28",

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-09-07 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR，2026-09-01~09-03 公告：① 2609.03594 LevelSyn——层级异步 GNN 物理感知逻辑综合，EPFL 上功耗均降 6.89%、时序延迟改善 27.48%、DRC 违规降 99.59%；② 2609.00609 A Version Space Approach——版本空间视角统一概率组合等价性检查与逻辑锁定密钥计数，TrustHub 70 例密钥熵均跌破标称长度；③ 2609.03125 Time-Encoded Analog Photonic Interposer——时域编码模拟光子芯粒中介层，无显式高精度 ADC/DAC，VWW 上 EDP 改善 2.04×；④ 2609.02988 Mesh-Native TCAD——四面体网格上物理信息图注意力代理，逐节点预测静电势/准费米能级，大模型阵列推理 <1s）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2609.03594 LevelSyn -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-03 · Jingyi Zhou, Zhengyuan Shi, Ziyang Zheng, Qiang Xu（The Chinese University of Hong Kong）</div>
+      <h4>📐 LevelSyn：基于层级异步图神经网络（Level-Asynchronous GNN）的物理感知逻辑综合——在 Berkeley ABC 内嵌物理信息综合引擎，EPFL 上平均功耗降 6.89%、时序延迟改善 27.48%、DRC 违规降 99.59%</h4>
+      <p>随着 IC 工艺进入纳米级，逻辑综合与物理设计长期割裂导致显著 PPA 劣化与设计收敛周期拉长：传统逻辑综合依赖非物理的线负载模型（WLM），而近期基于谱的布局预测器往往忽略网表固有的层次化逻辑深度与信号流，空间估计保真度低。本文提出 <strong>LevelSyn</strong>——一个融合层次化表示学习与线长驱动优化引擎的物理感知逻辑综合框架：核心是<strong>层级异步图神经网络（GNN）</strong>，通过捕捉 AIG（与-或图）的结构与方向语义预测高保真门级坐标；为适配工业级规模，引入<strong>层级对齐子图划分</strong>策略消除内存瓶颈同时保留局部逻辑依赖；这些空间洞察被无缝接入在 Berkeley ABC 框架内新开发的物理信息综合引擎。在 EPFL 基准上，LevelSyn 显著优于 SOTA——平均功耗降 6.89%、时序延迟改善 27.48%；<strong>布局布线后验证</strong>显示 DRC 违规降 99.59%，凸显其加速设计收敛的实效。属「后端物理设计 / 逻辑综合-物理协同」方向，用层次化 GNN 把物理空间信号回灌综合阶段，是「逻辑综合-布局布线早期协同」的代表性突破，与本站关注的 AI 辅助综合/PPA 优化直接对应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">逻辑综合</span>
+        <span class="tag">物理感知</span>
+        <span class="tag">GNN</span>
+        <span class="tag">布局线长</span>
+        <span class="tag">AIG</span>
+        <span class="tag">Berkeley ABC</span>
+        <span class="tag">时序延迟</span>
+        <span class="tag">功耗优化</span>
+        <span class="tag">DRC</span>
+        <span class="tag">EPFL</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.03594" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.03594_LevelSyn.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.00609 A Version Space Approach for Digital Circuit Analysis -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-01 · Mitchell A. Thornton（Southern Methodist University）</div>
+      <h4>🔬 A Version Space Approach for Digital Circuit Analysis：版本空间视角统一「概率组合等价性检查」与「逻辑锁定网表密钥计数」——求和-积递归精确计数，TrustHub 70 例密钥熵均跌破标称长度</h4>
+      <p>关于数字电路的许多问题同构为：一个隐藏对象与一组观测一致，想知道还有多少个对象仍一致、下一步该做哪次观测；存活候选的集合即<strong>版本空间（version space）</strong>，其规模（对数尺度）衡量观测已「收敛」多少。本文把版本空间视角发展为一类方法，并应用于两个通常被视为无关的逻辑分析问题。其一是<strong>概率组合等价性检查</strong>：候选是布尔函数、观测是修正 Haar 谱系数；2002 年的方法提出该计数问题却只解了两个特例，一般情形是指数级枚举；本文通过向块和（block sums）的重参数化，把嵌套系数间的依赖变为局部性，用<strong>求和-积递归</strong>在真值表规模多项式时间内精确计数存活函数（单一系数/系数对/任意祖先封闭集均有闭式），并证明 2002 年方法所用独立性近似的误差等于一个可计算格指标；所有公式对照穷举枚举复现了 2002 年表格。其二是<strong>逻辑锁定网表（logic-locked netlists）的密钥计数</strong>：候选是密钥、观测是 oracle 响应，同样的递归在门级因子图上运行，计算仍与一组查询一致的密钥数量；在 TrustHub 混淆发布的 70 个实例上，存活熵每次都跌破广告宣称的密钥长度。两个应用实为同一方法：见证提供观测、每次观测剔除候选、版本空间被精确计数。属「功能验证 / 等价性检查 + 硬件安全（逻辑锁定）」方向，用统一的版本空间递归把概率等价检查与密钥计数两难题一次性精确化，为「无测试平台正确性评估」与「混淆强度审计」提供新工具。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">功能验证</span>
+        <span class="tag">等价性检查</span>
+        <span class="tag">逻辑锁定</span>
+        <span class="tag">版本空间</span>
+        <span class="tag">密钥计数</span>
+        <span class="tag">修正Haar谱</span>
+        <span class="tag">硬件安全</span>
+        <span class="tag">形式化</span>
+        <span class="tag">TrustHub</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.00609" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.00609_Version_Space.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.03125 Time-Encoded Analog Photonic Interposer -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-02 · Subhradip Chakraborty, Zihan Yin, Xuming Chen, Chengwei Zhou, Gourav Datta, Akhilesh Jaiswal（University of Missouri）</div>
+      <h4>🌐 A Time-Encoded Analog Photonic Interposer：面向芯粒集成的时域编码模拟光子中介层——无显式高精度 ADC/DAC，模拟信号跨芯粒长距高保真传输，VWW 上 EDP 改善 2.04×</h4>
+      <p>本文提出一种<strong>时域编码模拟光子中介层（time-encoded analog photonic interposer）</strong>，实现空间分离芯粒（chiplet）之间模拟信号的长距、高保真传输。不同于此前仅限数字数据的硅光子链路，该中介层把振幅转换为时间间隔（经模拟-时间转换器 ATC），在波分复用（WDM）光子链路上传输，在接收端重建数值而无需显式的高精度 ADC/DAC 数据转换器管线；链路内嵌隐式 6-bit 时域量化，每个处理单元（PE）仅用单一波长（与比特精度无关）。在一个含像素内计算（IPC）传感器的全模拟视觉流水线上评估：在 560×560 Visual Wake Words（VWW）数据集上相对 8-bit 数字电学基线实现 <strong>2.04× 能量-延迟积（EDP）改善</strong>，且优势随链路长度拉大而扩大（即便对照精度匹配的 6-bit 基线亦然）；在 ResNet18 与 MobileNetV2 上对 VWW 取得 89.87% / 86.15% 准确率，并在 CIFAR-10 与 ModelNet40 上位于数字基线 2% 以内泛化。属「模拟与架构 / 芯粒互连」方向，用「时域编码 + 光子互连」把模拟信号直连跨芯粒搬运，是 Chiplet 系统中模拟/混合信号互连的低功耗新路径，与本站关注的「Chiplet 互连/热分布优化」细分直接呼应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">模拟与架构</span>
+        <span class="tag">芯粒</span>
+        <span class="tag">Chiplet</span>
+        <span class="tag">光子互连</span>
+        <span class="tag">模拟光子</span>
+        <span class="tag">中介层</span>
+        <span class="tag">时域编码</span>
+        <span class="tag">ADC/DAC</span>
+        <span class="tag">互连</span>
+        <span class="tag">EDP</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.03125" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.03125_Photonic_Interposer.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.02988 Mesh-Native Physics-Informed Graph Surrogates for TCAD -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-02 · Leonid Popryho, Ayoub Sadeghi, Inna Partin-Vaisband（University of Illinois Chicago）</div>
+      <h4>🔬 Mesh-Native Physics-Informed Graph Surrogates for TCAD-in-the-Loop DSE：四面体网格上直跑的物理信息图注意力代理——逐节点预测静电势/准费米能级，主动学习秒级筛池、大模型阵列推理 <1s</h4>
+      <p>高保真 TCAD 漂移-扩散（drift-diffusion）仿真虽是 FinFET 器件设计的主力，但计算昂贵，尤其在 3D 情形下运行时间随网格复杂度陡升，严重限制多目标设计空间探索（DSE）。现有 ML 代理把固定设计参数映射到少数标量器件指标，丢弃底层物理且跨器件几何/族泛化差。本文提出<strong>物理信息图注意力网络（GAT）代理</strong>：直接在四面体 TCAD 网格上运行，在<strong>每个网格节点</strong>预测静电势与电子/空穴准费米能级（漂移-扩散系统的基本未知量）；训练结合数据损失与有限体积电流连续性残差，把载流子输运物理嵌入目标；以网格为图带来<strong>尺寸泛化</strong>——在少鳍网格上训练的模型可原样用于大得多的阵列，推理仅受 GPU 显存限制。深度集成给出的逐节点不确定性驱动<strong>主动学习循环</strong>，秒级筛选大量候选池、只把信息量最大的设计送全仿真。在多变鳍三栅 FinFET 上对照 Sentaurus Device：三个漂移-扩散场以每场亚伏 RMSE 复现，单设计吞吐比全仿真高数个数量级；优势随器件尺寸放大——对直接 TCAD 扫描不可行的大阵列，推理仍 <1s/器件，使跨器件尺度的帕累托前沿探索成为可能。属「模拟与架构 / 多物理场 AI 分析」方向，用「网格即图 + 物理残差 + 主动学习」把器件级 TCAD 代理化，是 AI 驱动器件 DSE 的高信号工作，与本站关注的「多物理场机器学习分析」细分直接对应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">模拟与架构</span>
+        <span class="tag">多物理场</span>
+        <span class="tag">TCAD</span>
+        <span class="tag">器件仿真</span>
+        <span class="tag">图注意力网络</span>
+        <span class="tag">物理信息神经网络</span>
+        <span class="tag">主动学习</span>
+        <span class="tag">代理模型</span>
+        <span class="tag">漂移-扩散</span>
+        <span class="tag">FinFET</span>
+        <span class="tag">Sentaurus</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.02988" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.02988_Mesh_Native_TCAD.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
