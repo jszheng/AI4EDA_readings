@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（85篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（86篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2609.04058 AI-Assisted Design of a Post-Quantum Cryptographic Accelerator -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔧 AI-Assisted Design of a Post-Quantum Cryptographic Accelerator：代理式 LLM 从 RTL 到 PCIe 带通驱动 ML-KEM/ML-DSA 后量子密码加速器流片（Kintex-7 / 98.5% 切片占用），字节精确 oracle + 随机化对抗 soak 实现 30 万+ 签名零逃逸</div>
+      <div class="abs-meta">arXiv:2609.04058 · cs.CR / cs.AR · 2026-09-03 · Jungmin Park, Eunha Kim, Wooseop Kim, Seongjoon Cho, Byungho Cha</div>
+      <div class="abs-body">后量子迁移已有强制时间表，而流片后带缺陷的硅无法远程修补；标准验收闸门（已知答案测试 KAT）对整类 ML-DSA 缺陷无能为力。本文报告一个统一 ML-KEM-768 + ML-DSA-65 加速器在单颗 Kintex-7 XC7K160T 上「从 RTL 到 PCIe 带通」的部署案例：全量 KAT 回归虽通过，却带着一个跑不过块 RAM 延迟的范数检查，使每个候选最终系数未被验证，逃逸在 reject 循环第 5 次迭代才暴露。作者用「字节精确黄金参考 oracle + 随机化对抗 soak」替换该闸门——oracle 只判定产物、从不作者代码，把拒绝循环推过任何固定向量，实现 301,343 次数据相关签名、零逃逸；在 232 次记录实验中，一个代理式大语言模型驱动了含片上密钥托管的整套设计，成功率 71.6%，且沿「硬件耦合梯度」分布（文档/研究 77–85%、综合/带通 50–53%）。核心论点：信任得以与作者身份解耦，使「AI authorship 是否可信」成为可回答的问题。属「前端 RTL / LLM 实际应用 + 验证反馈闭环」方向，是用「独立 oracle 裁判 + AI 作者」把 RTL→硅实现中的验证从作者自证中剥离的代表性实战案例，与 RTL 生成-验证-反馈闭环及「信任可分离」主题直接呼应。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.04058" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.04058_AI_Assisted_PQC_Accelerator.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">agentic AI</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">后量子密码</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ML-KEM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ML-DSA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件实现</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-GDS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Kintex-7</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.01775 Dictionary-Guided Mutation Operators for Automated HDL Repair -->
     <div class="abs-card">

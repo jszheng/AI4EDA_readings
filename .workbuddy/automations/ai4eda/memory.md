@@ -1291,3 +1291,36 @@
 - **一致性**：news 无新增（209），news_memory 未改；PDF 磁盘与日期页/latest/四分类页链接一致。
 - **⚠️ 并发实例**：检测到重叠实例下载 `2608.26588_SeCRTLGen.pdf` / `2608.28160_GenTAS.pdf`（Gen-TAS 异名重复）/ `2608.28188_DeepSeq3.pdf`，并多轮触碰 agent/analog/manifest/papers/index 等索引文件（多轮 "modified since read" 竞态）。处置：将并发实例发现的 SeCRTLGen、DeepSeq3 并入本批次做成权威 4 篇超集（复用其已下载 PDF），避免其部分提交覆盖致 LLM Accelerator 丢失；计数据超集 308→310。注意 `content/dates/2608.28160_GenTAS.pdf` 为并发实例遗留孤儿 PDF（未纳入本次提交），待后续轮次核对清理。
 - **Git**：commit **6d5d9ba "auto update: 2026-09-01"**（12 files：日期页 + latest 页 + 4 PDF + agent/analog/rtl/physical 卡 + papers/index.html + manifest.js）→ push origin/main 成功（**5301925..6d5d9ba**）。
+
+---
+
+## 2026-09-08 执行摘要
+
+**前置状态（取自 manifest.js，2026-09-07）**
+- papers: 324, batches: 120, news: 213
+
+**本次新增内容**
+- 论文 +1 篇（arXiv cs.CR / cs.AR，2026-09-03 公告）：
+  1. 2609.04058 AI-Assisted Design of a Post-Quantum Cryptographic Accelerator——代理式 LLM 从 RTL 到 PCIe 带通驱动 ML-KEM/ML-DSA 后量子密码加速器流片（Kintex-7 / 98.5% 切片占用），字节精确 oracle + 随机化对抗 soak 实现 30 万+ 签名零逃逸；核心是「验证裁判」与「AI 作者」解耦（→ rtl 分类），PDF 735KB 已下载
+- 行业动态 +2 条：
+  1. SemiEngineering WIR #154（2026-09-04）：Andes×ChipAgents agentic AI 部署提速 30%+、验证 2–3 月→约 3 周；ESD 联盟 9/10 Gen-AI 芯片设计研讨会；Siemens 逻辑综合用于 NanoBridge；Cadence PCIe 6.0 IP 合规；MulticoreWare 收购 Simulus；NVIDIA $12.9B 收购 Hugging Face
+  2. 开源社区（DEV Community，2026-09-07）：双 AI 智能体 + 1 人用 10 亿 token 把 SHA-256 加速器从 RTL 走到 Sky130/OpenROAD/Yosys 10 项 signoff 全绿——AI 自主 RTL→GDSII 诚实复盘
+
+**更新文件清单**
+- content/dates/2026-09-08.html（新建，1 卡片）
+- content/latest/2026-09-08.html（新建，1 卡片）
+- content/news/index.html（WIR #154 + 开源社区 2 卡片 + nav + stats）
+- content/news/news_memory.json（lastUpdate/totalItems 213→215 + 2 新 item）
+- manifest.js（stats: 325/121/215；latest 与 dates 数组各插 2026-09-08）
+- content/categories/rtl.html（计数 85→86 插 1 卡）
+- content/papers/index.html（跳转刷新至 2026-09-08）
+
+**去重与核查**
+- news_memory.json 无既有 WIR #154 / 开源社区 SHA-256 记录；2609.04058 经 Grep 确认 content/ 下不存在
+- arXiv cs.AR/cs.LG 2026-09-04+ 批次（2609.04xxx/05xxx）逐一核查：仅 2609.04058 收录，2609.05327（量子电路综合，非数字 EDA）、2609.04266/2609.03149（模拟存内电路，非 EDA 方法）边界排除，其余为加速器微架构/可靠性/量子未收录
+- 注：本机 memory.md 此前停留在 2026-09-01（09-02~09-07 段落疑似未落盘），本次直接在文件尾追加 09-08
+
+**Git**
+- commit: `auto update: 2026-09-08`
+
+**结果状态**：⏳ 待 git add/commit/push（本段落写入后执行）

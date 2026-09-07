@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-09-08 动态</h1>
+  <p class="subtitle">共 1 篇论文 · 0 条行业动态 · 来源：arXiv（cs.CR / cs.AR，2026-09-03 公告：① 2609.04058 AI-Assisted Design of a Post-Quantum Cryptographic Accelerator——代理式 LLM 从 RTL 到 PCIe 带通驱动 ML-KEM/ML-DSA 后量子密码加速器流片（Kintex-7 / 98.5% 切片占用），字节精确 oracle + 随机化对抗 soak 实现 30 万+ 数据相关签名零逃逸，其核心是把「验证裁判」与「AI 作者」解耦，使 RTL→硅实现中的信任可分离、可证明）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2609.04058 AI-Assisted Design of a Post-Quantum Cryptographic Accelerator -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.CR / cs.AR · 2026-09-03 · Jungmin Park, Eunha Kim, Wooseop Kim, Seongjoon Cho, Byungho Cha</div>
+      <h4>🔧 AI-Assisted Design of a Post-Quantum Cryptographic Accelerator: A Deployed-Silicon Case Study——代理式 LLM 从 RTL 到 PCIe 带通驱动 ML-KEM/ML-DSA 加速器流片，字节精确 oracle soak 30 万+ 签名零逃逸、98.5% 切片占用</h4>
+      <p>后量子迁移已有强制时间表，而流片后带缺陷的硅无法远程修补；标准验收闸门（已知答案测试 KAT）对整类 ML-DSA 缺陷无能为力——签名会对不同消息重采样直到满足范数界，执行路径随消息变化，而 KAT 只采样固定值、深度受种子限制。本文报告一个统一 ML-KEM-768 + ML-DSA-65 加速器在单颗 Kintex-7 XC7K160T 上「从 RTL 到 PCIe 带通（bring-up）」的部署案例：其全量 KAT 回归虽通过，却带着一个跑不过块 RAM 延迟的范数检查，使每个候选的最终系数未被验证，逃逸在 reject 循环第 5 次迭代才暴露——盲点在仪表而非工程师，靠谨慎无法消除。<strong>他们用「字节精确黄金参考 oracle + 随机化对抗 soak」替换该闸门</strong>：oracle 只判定产物、从不作者代码，把拒绝循环推过任何固定向量，实现 301,343 次数据相关签名、零逃逸；该部署基线在同一 779,945 次检查零失败 soak 中存活。在 232 次记录实验中，一个<strong>代理式大语言模型</strong>驱动了含片上密钥托管（key custody）的整套设计，成功率 71.6%，且沿「硬件耦合梯度」分布：文档与研究类 77–85%、而综合与带通仅 50–53%——可观测性可解释这一落差（失败集中在纠错信号仅存在于物理侧之处）。核心论点：信任得以与作者身份解耦，使「AI authorship 是否可信」成为可回答的问题；一个如此不可靠的作者仍能产出跨全部六项 FIPS 操作字节精确的产物。属「前端 RTL / LLM 实际应用 + 验证反馈闭环」方向，是用「独立 oracle 裁判 + AI 作者」把 RTL→硅实现中的验证从作者自证中剥离的代表性实战案例，与本站关注的「RTL 生成-验证-反馈闭环」「信任可分离」主题直接呼应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">LLM</span>
+        <span class="tag">agentic AI</span>
+        <span class="tag">验证</span>
+        <span class="tag">后量子密码</span>
+        <span class="tag">ML-KEM</span>
+        <span class="tag">ML-DSA</span>
+        <span class="tag">硬件实现</span>
+        <span class="tag">RTL-to-GDS</span>
+        <span class="tag">Kintex-7</span>
+        <span class="tag">cs.AR</span>
+        <span class="tag">cs.CR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.04058" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.04058_AI_Assisted_PQC_Accelerator.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
