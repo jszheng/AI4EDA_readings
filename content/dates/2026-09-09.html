@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-09-09 动态</h1>
+  <p class="subtitle">共 2 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.RO / cs.AI，2026-09-04 公告：① 2609.05161 APEX-RBD——物理驱动搜索空间剪枝 + 代理模型实现 RBD 加速器面积降 1.9×、功耗降 1.8×；② 2609.04912 TreeFI 值感知统计故障注入，回归树划分数值区间将 DNN 故障注入预算最多减少 72.1×，ICCAD 2026）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2609.05161 APEX-RBD -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.RO · 2026-09-04 · Xingyu Liu, Hanwei Fan, Chaofang Ma, Jiawei Liang, Guangyu Hu, Jiang Xu, Wei Zhang</div>
+      <h4>⚡ APEX-RBD: Mixed-Precision Exploration Framework for Hardware-Efficient Robot Dynamics Accelerator Design——物理驱动搜索空间剪枝 + 数据高效代理模型实现 RBD 加速器面积降 1.9×、功耗降 1.8×</h4>
+      <p>Rigid Body Dynamics (RBD) 是实时机器人控制的计算核心，但其极高复杂度构成性能瓶颈、需专用硬件加速器；而加速器的硬件资源与功耗成本使其在资源受限边缘平台部署极具挑战。均匀量化虽能优化 RBD 硬件，却因忽视不同变量的量化敏感度而低效；混合精度更优，但搜索空间巨大、且闭环仿真评估运动精度代价高昂。本文提出 <strong>APEX-RBD</strong> 自动化框架，使混合精度探索在计算上可行并有效定位硬件高效配置：通过变量分组与敏感度分析做<strong>物理驱动搜索空间剪枝</strong>，并用数据高效、先验引导的<strong>代理模型</strong>快速预测轨迹误差，引导混合优化器在用户定义的精度/性能约束下找到面积与功耗高效设计。在多类机器人平台上，APEX-RBD 相比均匀精度基线实现最高 <strong>1.9× 面积缩减与 1.8× 功耗节省</strong>。属「模拟与架构 / 硬件设计自动化 DSE」方向，用物理驱动剪枝 + 代理模型把混合精度加速器设计空间探索成本压到可承受量级，与本站关注的「AI 辅助架构探索 / 设计空间探索」主题呼应（近似 DSO.ai 类优化但面向 RBD 加速器）。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">硬件设计自动化</span>
+        <span class="tag">设计空间探索</span>
+        <span class="tag">混合精度</span>
+        <span class="tag">代理模型</span>
+        <span class="tag">加速器</span>
+        <span class="tag">RBD</span>
+        <span class="tag">物理驱动剪枝</span>
+        <span class="tag">机器人控制</span>
+        <span class="tag">cs.AR</span>
+        <span class="tag">cs.RO</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.05161" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2609.05161_APEX_RBD.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.04912 TreeFI -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · 2026-09-04 · Noam Bires, Marcello Traiola, Angeliki Kritikakou, Elisa Fromont</div>
+      <h4>🔬 TreeFI: Value-Aware Statistical Fault Injection for Deep Neural Networks——回归树划分数值区间，将 DNN 故障注入预算最多减少 72.1×，ICCAD 2026</h4>
+      <p>DNN 在硬件故障下的可靠性评估通常依赖故障注入，但穷举式注入对现代模型与数据集不可行；统计故障注入降低了成本，却因未利用浮点故障的关键特性——位翻转的影响强烈依赖被腐蚀的数值——而仍需巨大注入预算。本文提出 <strong>TreeFI</strong>，一种面向 FP32 单比特故障（DNN 激活与权重）的<strong>值感知统计故障注入</strong>方法：用回归树学习每层数值分布中「位翻转行为相似」的区间并划分，按各区间对失效率估计的相关度跨区间分配注入量，在保持目标置信度与误差裕度的同时避免在低影响区域做无效注入。在 CIFAR-10 / ImageNet 的 CNN 与 Transformer 上验证：ResNet8 上 TreeFI 在同设置下比 SOTA 统计 FI 基线给出更准确估计；跨模型将所需注入预算最多减少 <strong>72.1×</strong>（激活平均 44.9×、权重执行 11.2×）。属「功能验证 / 硬件可靠性故障注入」方向，用值感知分层抽样把 DNN 硬件故障可靠性评估成本数量级压缩，与本站关注的「验证 / 可靠性 / 故障注入」主题呼应，并已被 ICCAD 2026 接收。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">功能验证</span>
+        <span class="tag">可靠性</span>
+        <span class="tag">故障注入</span>
+        <span class="tag">DNN</span>
+        <span class="tag">硬件故障</span>
+        <span class="tag">值感知</span>
+        <span class="tag">回归树</span>
+        <span class="tag">统计FI</span>
+        <span class="tag">ICCAD 2026</span>
+        <span class="tag">cs.AR</span>
+        <span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.04912" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2609.04912_TreeFI.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

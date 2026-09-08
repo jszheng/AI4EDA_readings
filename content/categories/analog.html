@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（43篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（44篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+
+    <!-- 2609.05161 APEX-RBD -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ APEX-RBD：自动化混合精度探索框架——物理驱动搜索空间剪枝 + 数据高效代理模型，RBD 加速器面积降 1.9×、功耗降 1.8×</div>
+      <div class="abs-meta">arXiv:2609.05161 · cs.AR / cs.RO · 2026-09-04 · Xingyu Liu, Hanwei Fan, Chaofang Ma, Jiawei Liang, Guangyu Hu, Jiang Xu, Wei Zhang</div>
+      <div class="abs-body">Rigid Body Dynamics (RBD) 是实时机器人控制的计算核心，但其极高复杂度需专用硬件加速器；加速器的硬件资源与功耗成本使边缘部署极具挑战。均匀量化因忽视不同变量的量化敏感度而低效；混合精度更优，但搜索空间巨大、闭环仿真评估运动精度代价高昂。APEX-RBD 提出自动化框架：通过变量分组与敏感度分析做物理驱动搜索空间剪枝，并用数据高效、先验引导的代理模型快速预测轨迹误差，引导混合优化器在用户定义的精度/性能约束下找到面积与功耗高效设计。多机器人平台上相比均匀精度基线实现最高 1.9× 面积缩减与 1.8× 功耗节省。属「模拟与架构 / 硬件设计自动化 DSE」方向，用物理驱动剪枝 + 代理模型把混合精度加速器设计空间探索成本压到可承受量级，呼应本站「AI 辅助架构探索 / 设计空间探索」主题。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.05161" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.05161_APEX_RBD.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件设计自动化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计空间探索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">混合精度</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">代理模型</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">加速器</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RBD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理驱动剪枝</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">机器人控制</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.03125 Time-Encoded Analog Photonic Interposer -->
     <div class="abs-card">

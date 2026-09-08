@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（39篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（40篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+
+    <!-- 2609.04912 TreeFI -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 TreeFI：值感知统计故障注入——回归树划分数值区间，将 DNN 故障注入预算最多减少 72.1×，ICCAD 2026</div>
+      <div class="abs-meta">arXiv:2609.04912 · cs.AR / cs.AI · 2026-09-04 · Noam Bires, Marcello Traiola, Angeliki Kritikakou, Elisa Fromont</div>
+      <div class="abs-body">DNN 在硬件故障下的可靠性评估依赖故障注入，但穷举不可行；统计故障注入降低成本，却因未利用浮点故障的关键特性——位翻转影响强烈依赖被腐蚀数值——而仍需巨大注入预算。TreeFI 提出面向 FP32 单比特故障（DNN 激活与权重）的值感知统计故障注入：用回归树学习每层数值分布中「位翻转行为相似」的区间并划分，按各区间对失效率估计的相关度跨区间分配注入量，保持目标置信度与误差裕度的同时避免低影响区域无效注入。在 CIFAR-10 / ImageNet 的 CNN 与 Transformer 上验证：ResNet8 上比 SOTA 统计 FI 基线估计更准确；跨模型将所需注入预算最多减少 72.1×（激活平均 44.9×、权重执行 11.2×）。属「功能验证 / 硬件可靠性故障注入」方向，用值感知分层抽样把 DNN 硬件故障可靠性评估成本数量级压缩，已被 ICCAD 2026 接收。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.04912" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.04912_TreeFI.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可靠性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">故障注入</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DNN</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件故障</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">值感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">回归树</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">统计FI</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ICCAD 2026</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.00609 A Version Space Approach for Digital Circuit Analysis -->
     <div class="abs-card">

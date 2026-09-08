@@ -1,8 +1,29 @@
 {
-  "lastUpdate": "2026-09-08",
+  "lastUpdate": "2026-09-09",
   "cutoffDate": "2026-03-01",
-  "totalItems": 215,
+  "totalItems": 216,
   "items": [
+    {
+      "date": "2026-09-09",
+      "company": "Synopsys",
+      "title": "🤝 Synopsys Converge Korea 2026：以代理式 AI 统一半导体设计流程——SNUG 与 Ansys Simulation World 首尔合并举办，打通设计/验证/制造与系统级仿真",
+      "link": "https://news.qq.com/rain/a/20260908A09UD400",
+      "keywords": [
+        "Synopsys",
+        "Converge Korea 2026",
+        "SNUG",
+        "Ansys",
+        "Simulation World",
+        "代理式AI",
+        "agentic AI",
+        "一体化工程",
+        "芯片到系统",
+        "多物理场",
+        "系统级仿真",
+        "收购Ansys",
+        "2026-09-08"
+      ]
+    },
     {
       "date": "2026-09-08",
       "company": "SemiEngineering",
