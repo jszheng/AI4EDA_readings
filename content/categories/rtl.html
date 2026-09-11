@@ -7,9 +7,48 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（86篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（89篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2609.10057 AutoTrans -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ AutoTrans：AI 辅助 RISC-V 安全断言自动翻译——正则信号抽取防幻觉 + 固定 prompt 模板 + JasperGold FPV 形式验证，跨 RISC-V 自动翻译接受率 78%</div>
+      <div class="abs-meta">arXiv:2609.10057 · cs.CR / cs.AR · 2026-09-09 · Sharjeel Imtiaz, Uljana Reinsalu, Tara Ghasempouri</div>
+      <div class="abs-body">复用已验证安全断言是 RISC-V 硬件安全验证最昂贵的瓶颈之一：人工逐条翻译需数小时，原生 LLM 翻译快却不可靠（制造信号幻觉、跨模型/跨版本输出漂移）。AutoTrans 用轻量正则 SystemVerilog 信号抽取器先识别信号以从根上防幻觉；引入固定 prompt 模板 + 钉死推理参数保证每次字节级一致的 prompt 装配，使流水线对模型更新鲁棒，且能从英文安全描述直接生成断言；最后接入 JasperGold FPV 形式验证，确保生成断言真正验证安全性而非静默混入结果集。在 Deepseek V4 上将安全断言从一个 RISC-V（如 IBEX）翻译到另一个，自动翻译接受率（TAR）达 78%、人工精修后 100%。属「前端 RTL / 安全验证」方向，用「信号抽取防幻觉 + 确定性 prompt + 形式验证裁判」把跨 RISC-V 安全断言复用变成可信自动流水线。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.10057" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.10057_AutoTrans.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">安全断言</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RISC-V</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">JasperGold</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">防幻觉</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2609.09526 HLS-Eval -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ HLS-Eval 代理式评测流：基于 mini-swe-agent 的 HLS 设计智能体基准——文件编辑工具 + C++ 编译器自验证，开源 LLM 解全部简单 HLS 任务（Architecture 2.0 @ ISCA 2026）</div>
+      <div class="abs-meta">arXiv:2609.09526 · cs.AR · 2026-09-08 · Stefan Abi-Karam, Callie Hao</div>
+      <div class="abs-body">既有 HLS-Eval 开源基准只评零样本生成/编辑，未回答「智能体如何完成 HLS 设计任务」。本文用开源 mini-swe-agent 框架把 HLS-Eval 扩展为代理式评测流：让 HLS 设计智能体使用文件编辑工具、调用 C++ 编译器做自验证、在推理中迭代精化，同时记录轨迹分析成本/Token/迭代次数。初评发现开源 LLM 配代理式 harness 能解出评测中每一个简单 HLS 代码生成任务，凸显需提升基准难度；轨迹分析揭示模型规模、Token 用量、轨迹长度与通过率的关系。属「前端 RTL / HLS 代理式设计」方向，用 SWE-agent 范式迁移到 HLS 并配编译器自验证闭环，是代理式 RTL/HLS 生成评测的代表性基础设施。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.09526" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.09526_HLS_Eval.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HLS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">高层次综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">agentic AI</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">智能体评测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">mini-swe-agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">C++编译器自验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ISCA 2026</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2609.09519 HLSFactory-Agent -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ HLSFactory-Agent：大规模代理式 HLS 数据集构建——LLM 智能体在 Docker 内跑 Pi 框架自动从大型代码库抽取可综合 HLS 设计（OSCAR @ ISCA 2026）</div>
+      <div class="abs-meta">arXiv:2609.09519 · cs.AR / cs.SE · 2026-09-08 · Kaushik Chandana, Jay Imperatori, Tanmay Shukla, Justin Zhou, Stefan Abi-Karam, Callie Hao</div>
+      <div class="abs-body">构建超越常见社区基准的大规模多样 HLS 设计数据集仍是开放挑战，而深度学习/LLM 用于硬件设计又亟需这类数据。HLSFactory-Agent 用 LLM 智能体把数据集整理自动化：在 Docker 内运行开源 Pi agent 框架，对每个抽取设计进行构建与评估；用户传入 GitHub 链接或代码目录即得到可直接并入 HLSFactory 的抽取设计文件夹，并提供开源脚本抓取索引体系结构/EDA/FPGA 会议中可能使用 HLS 的论文以加速人工发现。初评已成功从结构化代码库抽取可综合设计，并已开源。属「前端 RTL / HLS 数据集基础设施」方向，用 LLM 智能体 + 容器化构建验证把最耗人工的「从代码库抽取可综合 HLS 设计」环节自动化。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.09519" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.09519_HLSFactory_Agent.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HLS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">数据集构建</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">agentic AI</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Pi框架</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Docker</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HLSFactory</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.04058 AI-Assisted Design of a Post-Quantum Cryptographic Accelerator -->
     <div class="abs-card">

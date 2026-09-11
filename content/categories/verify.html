@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（40篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（41篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+
+    <!-- 2609.10057 AutoTrans -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ AutoTrans：AI 辅助 RISC-V 安全断言自动翻译——正则信号抽取防幻觉 + 固定 prompt 模板 + JasperGold FPV 形式验证，跨 RISC-V 自动翻译接受率 78%</div>
+      <div class="abs-meta">arXiv:2609.10057 · cs.CR / cs.AR · 2026-09-09 · Sharjeel Imtiaz, Uljana Reinsalu, Tara Ghasempouri</div>
+      <div class="abs-body">复用已验证安全断言是 RISC-V 硬件安全验证最昂贵的瓶颈之一：人工逐条翻译需数小时，原生 LLM 翻译快却不可靠（制造信号幻觉、跨模型/跨版本输出漂移）。AutoTrans 用轻量正则 SystemVerilog 信号抽取器先识别信号以从根上防幻觉；引入固定 prompt 模板 + 钉死推理参数保证每次字节级一致的 prompt 装配，使流水线对模型更新鲁棒，且能从英文安全描述直接生成断言；最后接入 JasperGold FPV 形式验证，确保生成断言真正验证安全性而非静默混入结果集。在 Deepseek V4 上将安全断言从一个 RISC-V（如 IBEX）翻译到另一个，自动翻译接受率（TAR）达 78%、人工精修后 100%。属「功能验证 / 安全断言形式验证」方向，用「信号抽取防幻觉 + 确定性 prompt + 形式验证裁判」把跨 RISC-V 安全断言复用变成可信自动流水线。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.10057" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.10057_AutoTrans.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">安全断言</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RISC-V</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">JasperGold</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">防幻觉</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.CR</span>
+      </div>
+    </div>
 
     <!-- 2609.04912 TreeFI -->
     <div class="abs-card">

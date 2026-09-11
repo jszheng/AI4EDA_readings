@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-09-11 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.CR / cs.LG / cs.SE，2026-09-08/09 公告：① 2609.10057 AutoTrans——正则信号抽取防幻觉 + 固定 prompt 模板 + JasperGold FPV 形式验证，安全断言跨 RISC-V 自动翻译接受率 78%；② 2609.09526 HLS-Eval——基于 mini-swe-agent 的代理式 HLS 评测流，开源 LLM 解全部简单 HLS 任务；③ 2609.09519 HLSFactory-Agent——LLM 智能体在 Docker 内自动从代码库抽取可综合 HLS 设计；④ 2609.08232 Routing Dense Layouts——历史感知离线 RL（LSTM）预测迭代代价权重，DRV 平均降 92%、运行时间降 10%，ICCAD 2026）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2609.10057 AutoTrans -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.CR / cs.AR · 2026-09-09 · Sharjeel Imtiaz, Uljana Reinsalu, Tara Ghasempouri</div>
+      <h4>⚡ AutoTrans: AI-Assisted Automatic Translation of Security Assertions for RISC-V Processors——正则信号抽取防幻觉 + 固定 prompt 模板 + JasperGold FPV 形式验证，安全断言跨 RISC-V 自动翻译接受率达 78%</h4>
+      <p>复用已验证的安全断言是 RISC-V 处理器安全验证中最昂贵的瓶颈之一：人工逐条翻译需数小时，原生 LLM 翻译虽快却不可靠——会制造<strong>信号幻觉</strong>（凭空编造目标 RTL 不存在的端口名），且输出随模型更新甚至同版本内部漂移。<strong>AutoTrans</strong> 针对性地给出三件改进：① 轻量正则 SystemVerilog 信号抽取器先识别可生成断言的信号，从根上防幻觉；② 引入固定 prompt 模板 + 钉死推理参数，保证每次运行字节级一致的 prompt 装配，使流水线输出对模型更新鲁棒；该模板还能仅从 RISC-V 的英文安全描述直接生成断言，无需人工编写；③ 接入 <strong>JasperGold FPV</strong> 形式验证，确保生成的安全断言真正验证了 RISC-V 的安全性，而非静默混入结果集。在 Deepseek V4 上将安全断言从一个 RISC-V（如 IBEX）翻译到另一个，实验显示 AutoTrans 自动达成 <strong>78% 自动翻译接受率（TAR）</strong>、人工精修后 100%。属「前端 RTL / 安全验证」方向，用「信号抽取防幻觉 + 确定性 prompt + 形式验证裁判」把跨 RISC-V 安全断言复用变成可信自动流水线，与 RTL 生成-验证-反馈闭环及「信任可分离」主题直接呼应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">安全断言</span>
+        <span class="tag">RISC-V</span>
+        <span class="tag">形式验证</span>
+        <span class="tag">JasperGold</span>
+        <span class="tag">信号抽取</span>
+        <span class="tag">防幻觉</span>
+        <span class="tag">LLM</span>
+        <span class="tag">安全验证</span>
+        <span class="tag">cs.CR</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.10057" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.10057_AutoTrans.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.09526 HLS-Eval -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-08 · Stefan Abi-Karam, Callie Hao</div>
+      <h4>⚡ Benchmarking Agentic HLS Design Tasks With HLS-Eval——基于 mini-swe-agent 的代理式 HLS 评测流，文件编辑工具 + C++ 编译器自验证，开源 LLM 解全部简单 HLS 任务（Architecture 2.0 @ ISCA 2026）</h4>
+      <p>大语言模型（LLM）与 AI 智能体日益用于硬件设计（含高层次综合 HLS），但既有工作集中在 HDL 代码生成与编辑，作者此前的 <strong>HLS-Eval</strong> 开源基准也只评零样本生成/编辑，未回答「智能体如何完成 HLS 设计任务」。本文用开源 <strong>mini-swe-agent</strong> 框架把 HLS-Eval 扩展为<strong>代理式评测流</strong>：让 HLS 设计智能体使用文件编辑工具、调用 C++ 编译器做自验证、在推理中迭代精化设计，同时记录智能体轨迹以分析成本、Token 用量与迭代次数。在既有 HLS-Eval 基准上的初评发现：<strong>开源 LLM 配代理式 harness 能解出评测中每一个简单 HLS 代码生成任务</strong>，凸显随着模型能力提升需提高基准难度；对通过与失败轨迹的分析揭示了模型规模、Token 用量、轨迹长度与设计通过率的关系。结果为代理式 HLS 设计奠基，并为更难的基准与新型智能体工具指明方向。属「前端 RTL / HLS 代理式设计」方向，用软件 SWE-agent 范式迁移到 HLS，配合编译器自验证闭环，是代理式 RTL/HLS 生成评测的代表性基础设施。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">HLS</span>
+        <span class="tag">高层次综合</span>
+        <span class="tag">agentic AI</span>
+        <span class="tag">智能体评测</span>
+        <span class="tag">mini-swe-agent</span>
+        <span class="tag">C++编译器自验证</span>
+        <span class="tag">LLM</span>
+        <span class="tag">ISCA 2026</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.09526" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.09526_HLS_Eval.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.09519 HLSFactory-Agent -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.SE · 2026-09-08 · Kaushik Chandana, Jay Imperatori, Tanmay Shukla, Justin Zhou, Stefan Abi-Karam, Callie Hao</div>
+      <h4>⚡ HLSFactory-Agent: Large-Scale Agentic HLS Dataset Construction from Academic and Open-Source Projects——LLM 智能体在 Docker 内跑 Pi 框架自动从大型代码库抽取可综合 HLS 设计（OSCAR @ ISCA 2026）</h4>
+      <p>构建超越常见社区基准的大规模多样 HLS 设计数据集仍是开放挑战，而深度学习与 LLM 用于硬件设计又亟需这类数据集来训练 QoR 模型、评测 LLM 的 HLS 任务。尽管持续拓宽来源，数据集整理仍依赖人工：在论文与开源中定位 HLS 设计、再从大型代码库抽取独立设计，过程易错、需要专家知识与逐仓库工程。<strong>HLSFactory-Agent</strong> 用 LLM 智能体把大规模 HLS 数据集整理自动化：在 Docker 容器内运行开源 <strong>Pi agent</strong> 框架，对每个抽取设计进行构建与评估；用户只需传入 GitHub 链接或代码目录，即得到可直接并入 HLSFactory 数据集框架的抽取设计文件夹。此外提供开源脚本，抓取并索引体系结构/EDA/FPGA 会议中可能实现或使用 HLS 的论文，加速人工发现与整理。初评在少量索引仓库上已成功抽取可综合设计，并已开源 HLSFactory-Agent 与索引脚本。属「前端 RTL / HLS 数据集基础设施」方向，用 LLM 智能体 + 容器化构建验证把「从代码库抽取可综合 HLS 设计」这一最耗人工的环节自动化，直接服务于 LLM-for-HLS 的训练与评测数据供给。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">HLS</span>
+        <span class="tag">数据集构建</span>
+        <span class="tag">agentic AI</span>
+        <span class="tag">LLM智能体</span>
+        <span class="tag">Pi框架</span>
+        <span class="tag">Docker</span>
+        <span class="tag">HLSFactory</span>
+        <span class="tag">开源</span>
+        <span class="tag">cs.AR</span>
+        <span class="tag">cs.SE</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.09519" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.09519_HLSFactory_Agent.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.08232 Routing Dense Layouts RL -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · 2026-09-08 · Afsara Khan, Austin Rovinski</div>
+      <h4>📐 Routing Dense Layouts with History-Aware Offline Reinforcement Learning using LSTM——轻量 LSTM + 保守 Q-learning 历史感知离线 RL 预测迭代代价权重，DRV 平均降 92%、运行时间降 10%（ICCAD 2026）</h4>
+      <p>详细布线因设计规则复杂度持续上升仍是物理设计的主要运行时瓶颈；现代布线器在密集运行条件下难以消解持续违规。近期工作用强化学习（RL）为每次布线迭代动态选择代价权重，但在高密度设计（布线解显著更难）上表现不佳。本文提出<strong>历史感知离线 RL 策略</strong>：利用布线器易得的现成特征，在密集区预测迭代代价权重以改善跨布局密度的收敛；延续保守 Q-learning 思路，但关键洞察是加入<strong>轻量 LSTM 架构与额外特征</strong>可保留序列上下文，跨多种密度与 route guide 质量改善布线收敛。该策略以最小流水线改动集成进任意基于代价的布线器，不干扰核心搜索算法。在留出的密度与调整设定（含密集布局与低 guide 质量等难点）上评估：相比顶级公开基线平均降低<strong>设计规则违规（DRV）92%</strong>，同时<strong>运行时间减少 10%</strong>。已被 ICCAD 2026 接收。属「后端物理设计 / 详细布线」方向，用历史感知离线 RL（LSTM 序列建模）把高密度条件下的布线代价权重决策从单步启发式升级为可学习的收敛优化，与本站关注的「RL/GNN 用于布线」主题直接呼应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">详细布线</span>
+        <span class="tag">强化学习</span>
+        <span class="tag">离线RL</span>
+        <span class="tag">LSTM</span>
+        <span class="tag">历史感知</span>
+        <span class="tag">保守Q-learning</span>
+        <span class="tag">DRV</span>
+        <span class="tag">ICCAD 2026</span>
+        <span class="tag">cs.AR</span>
+        <span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.08232" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.08232_Routing_Dense_Layouts_RL.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

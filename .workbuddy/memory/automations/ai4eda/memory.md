@@ -153,8 +153,63 @@
 - 180 天清理未执行：news_memory.json 中仍有 2026-03-02 / 2026-03-05 两条 >180 天旧条目（与历次运行一致，仅影响去重追踪，不影响渲染归档），cutoffDate 维持 2026-03-01
 
 **Git**
-- 待提交：`auto update: 2026-09-07`（含 09-04 未提交的 memory.md 段落一并纳入）
+- commit: `auto update: 2026-09-07` (9240664)
+- push origin main 成功（本段落原误标为「待提交」，实际已提交）
 
-**结果状态**：⏳ 待 git add/commit/push（本段落写入后执行）
+**结果状态**：✅ 成功（已推送）
 
 ---
+
+## 2026-09-08 执行摘要（补录）
+
+**前置状态（2026-09-07）**
+- papers: 324, batches: 120, news: 215（以 manifest 为准；memory.md 09-07 段落 news 数 213 为误记）
+- 最近一次站点更新日期：2026-09-07
+
+**本次新增内容**
+- 论文 +1 篇（arXiv cs.CR / cs.AR，2026-09-03 公告）：
+  1. 2609.04058 AI-Assisted Design of a Post-Quantum Cryptographic Accelerator——代理式 LLM 从 RTL 到 PCIe 带通驱动 ML-KEM/ML-DSA 后量子密码加速器流片（Kintex-7 / 98.5% 切片占用），字节精确 oracle + 随机化对抗 soak 实现 30 万+ 数据相关签名零逃逸，核心是把「验证裁判」与「AI 作者」解耦，使 RTL→硅实现中的信任可分离、可证明（→ rtl/verify 方向）
+- 行业动态 +0 条
+
+**更新文件**：content/dates/2026-09-08.html、content/latest/2026-09-08.html、manifest.js、content/categories/{rtl,verify}.html、content/papers/index.html（PDF：2609.04058_AI_Assisted_PQC_Accelerator.pdf）
+
+**Git**
+- commit: `auto update: 2026-09-08` (7a99af6)
+- push origin main 成功
+
+**结果状态**：✅ 成功（已推送；本文件此前缺条目）
+
+---
+
+## 2026-09-09 执行摘要（本次运行）
+
+**前置状态（2026-09-08）**
+- papers: 325, batches: 121, news: 215
+- 最近一次站点更新日期：2026-09-08
+
+**本次新增内容**
+- 论文 +2 篇（arXiv cs.AR / cs.RO，2026-09-04 提交）：
+  1. 2609.05161 APEX-RBD——自动化混合精度设计空间探索（DSE）框架，闭环搜索混合精度配置（→ analog/架构分类）
+  2. 2609.04912 TreeFI——值感知统计故障注入，DNN 可靠性评估（ICCAD 2026，→ verify 分类）
+- 行业动态 +1 条：Synopsys Converge Korea 2026——以代理式 AI 统一半导体设计流程（SNUG 与 Ansys Simulation World 在首尔合并举办），打通设计/验证/制造与系统级仿真
+- 2 篇 PDF 已下载至 content/dates/（APEX-RBD 3.0MB / TreeFI 771KB）
+
+**更新文件清单**
+- content/dates/2026-09-09.html（新建，2 卡片）
+- content/latest/2026-09-09.html（新建，2 卡片）
+- content/news/index.html（Synopsys Converge Korea 2026 卡片 + nav 链接 + stats 327/122/216 + subtitle）
+- content/news/news_memory.json（lastUpdate 2026-09-09；totalItems 修复 215→216 与实际 216 条目一致；插入 Synopsys 新 item，无重复）
+- manifest.js（stats: 327/122/216；latest 与 dates 数组各插 2026-09-09）
+- content/categories/{analog,verify}.html（analog 43→44 插 APEX-RBD 卡；verify 39→40 插 TreeFI 卡）
+- content/papers/index.html（跳转刷新至 2026-09-09）
+
+**去重检查**
+- news_memory.json 无既有 Synopsys Converge Korea 记录
+- 2 个 arXiv ID 经 Grep 确认 content/ 下不存在（无重复）
+
+**Git**
+- commit: `auto update: 2026-09-09` (d024218)
+- push origin main 成功：7a99af6..d024218
+- 10 files changed, 256 insertions(+), 14 deletions(-)
+
+**结果状态**：✅ 成功，全量更新已推送

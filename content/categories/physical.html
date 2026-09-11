@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（79篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（80篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2609.08232 Routing Dense Layouts RL -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 Routing Dense Layouts with History-Aware Offline RL using LSTM——轻量 LSTM + 保守 Q-learning 历史感知离线 RL 预测迭代代价权重，DRV 平均降 92%、运行时间降 10%（ICCAD 2026）</div>
+      <div class="abs-meta">arXiv:2609.08232 · cs.AR / cs.LG · 2026-09-08 · Afsara Khan, Austin Rovinski</div>
+      <div class="abs-body">详细布线因设计规则复杂度持续上升仍是物理设计的主要运行时瓶颈；现代布线器在密集条件下难以消解持续违规。近期工作用 RL 为每次布线迭代动态选择代价权重，但在高密度设计上表现不佳。本文提出历史感知离线 RL 策略：利用布线器易得特征在密集区预测迭代代价权重改善跨密度收敛；延续保守 Q-learning，但关键洞察是加入轻量 LSTM 与额外特征可保留序列上下文，跨多种密度与 route guide 质量改善收敛。该策略以最小改动集成进任意基于代价的布线器。在留出密度/调整设定上，相比顶级公开基线平均降低设计规则违规（DRV）92%，同时运行时间减少 10%。已被 ICCAD 2026 接收。属「后端物理设计 / 详细布线」方向，用历史感知离线 RL（LSTM 序列建模）把高密度布线代价权重决策升级为可学习收敛优化。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.08232" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.08232_Routing_Dense_Layouts_RL.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">详细布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">离线RL</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LSTM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">历史感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">保守Q-learning</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRV</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ICCAD 2026</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.03594 LevelSyn -->
     <div class="abs-card">
