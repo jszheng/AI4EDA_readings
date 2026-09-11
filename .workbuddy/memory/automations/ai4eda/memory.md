@@ -213,3 +213,41 @@
 - 10 files changed, 256 insertions(+), 14 deletions(-)
 
 **结果状态**：✅ 成功，全量更新已推送
+
+---
+
+## 2026-09-11 执行摘要（本次运行）
+
+**前置状态（2026-09-09）**
+- papers: 327, batches: 122, news: 216
+- 最近一次站点更新日期：2026-09-09
+
+**本次新增内容**
+- 论文 +4 篇（arXiv cs.AR / cs.CR / cs.LG / cs.SE，2026-09-08/09 公告）：
+  1. 2609.10057 AutoTrans——RISC-V 安全断言自动翻译（正则信号抽取防幻觉 + 固定 prompt 模板 + JasperGold FPV 形式验证，TAR 78%）（→ rtl/verify）
+  2. 2609.09526 HLS-Eval——基于 mini-swe-agent 的代理式 HLS 评测流，开源 LLM 解全部简单 HLS 任务（→ rtl/HLS）
+  3. 2609.09519 HLSFactory-Agent——LLM 智能体在 Docker 内自动从代码库抽取可综合 HLS 设计（→ rtl/HLS）
+  4. 2609.08232 Routing Dense Layouts——历史感知离线 RL（LSTM）预测迭代代价权重，DRV 平均降 92%、运行时间降 10%（ICCAD 2026，→ physical）
+- 行业动态 +1 条：开源 AI EDA Agent 工具集中涌现——① Booley（boldaxolotl/booley，Show HN 09-11）开源 agentic RTL IDE（VS Code+Docker+MCP，bwave 波形查询 + Ticket Mode 验收准则）；② EDA_MCP（SiliCAD/EDA_MCP，LobeHub 09-04）FastMCP 服务器把 AI IDE 直连 Cadence Virtuoso·Siemens Eldo 集群；③ ChipAgent（xsw632/ChipAgent）Claude Code 插件 NL→Chisel→Verilog 全流水线 + Chipyard→OpenROAD PnR 技能
+- 4 篇 PDF 已下载至 content/dates/（AutoTrans / HLS_Eval / HLSFactory_Agent / Routing_Dense_Layouts_RL）
+
+**更新文件清单**
+- content/dates/2026-09-11.html（新建，4 卡片）
+- content/latest/2026-09-11.html（新建，4 卡片）
+- content/news/index.html（开源 AI EDA Agent 工具 卡片 + nav 链接 + stats 331/123/217 + subtitle）
+- content/news/news_memory.json（lastUpdate 2026-09-11；totalItems 216→217 + 新 item，无重复）
+- manifest.js（stats: 331/123/217；latest 与 dates 数组各插 2026-09-11；dates count=4 仅计论文）
+- content/categories/{rtl,verify,physical}.html（rtl 86→89 插 3 卡；verify 40→41 插 AutoTrans 卡；physical 79→80 插 Routing 卡）
+- content/papers/index.html（跳转刷新至 2026-09-11）
+
+**去重检查**
+- news_memory.json 无既有「开源 AI EDA Agent 工具集中涌现」记录（company=开源社区 无同名）
+- 4 个 arXiv ID 经 Grep 确认 content/ 下均不存在（无重复）
+- 排除项：SemiEngineering WIR #155 检索 404（尚未发布）；NVIDIA Nemotron 3 Ultra/Agent Toolkit 实为 07-26，已在 07-31 收录，未重复；OpenROAD 仅有常规 commit，未单列；EDA_MCP 日期 09-04 但作为本轮开源工具综述合并入 09-11 单条
+
+**Git**
+- commit: `auto update: 2026-09-11` (6270cb2)
+- push origin main：首次因网络 broken pipe 失败，retry 成功 d024218..6270cb2
+- 14 files changed, 445 insertions(+), 16 deletions(-)
+
+**结果状态**：✅ 成功，全量更新已推送（含 memory.md 后续补录提交）
