@@ -1,7 +1,7 @@
 {
-  "lastUpdate": "2026-09-11",
+  "lastUpdate": "2026-09-12",
   "cutoffDate": "2026-03-01",
-  "totalItems": 217,
+  "totalItems": 218,
   "items": [
     {
       "date": "2026-09-09",
@@ -4639,6 +4639,26 @@
         "Chisel",
         "开源",
         "2026-09-11"
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "company": "开源社区",
+      "title": "OmniEDA 开源 PCB AI 设计评测集 OmniSch→OmniLayout→OmniRouting：原理图理解 1.1万张 / 器件布局 1681 块 PCB / 真实布线 24.5万网络，建立 AI 自动 PCB 设计可重复评测基准（omniEDA.com，EDA茶话会 09-10 报道）",
+      "link": "https://www.omnieda.com/",
+      "keywords": [
+        "OmniEDA",
+        "OmniSch",
+        "OmniLayout",
+        "OmniRouting",
+        "PCB 设计",
+        "原理图理解",
+        "器件布局",
+        "真实布线",
+        "评测基准",
+        "EMNLP 2026",
+        "开源",
+        "2026-09-10"
       ]
     }
   ]
