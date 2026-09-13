@@ -1,8 +1,29 @@
 {
-  "lastUpdate": "2026-09-12",
-  "cutoffDate": "2026-03-01",
-  "totalItems": 218,
+  "lastUpdate": "2026-09-14",
+  "cutoffDate": "2026-03-18",
+  "totalItems": 212,
   "items": [
+    {
+      "date": "2026-09-14",
+      "company": "华大九天（Empyrean）",
+      "title": "🇨🇳 华大九天董事长刘伟平 @ IICIE 2026：Agentic EDA 不是技术升级，是设计范式的根本革命——从「人操作工具」到「人指挥智能体」，多智能体+工具编排+数据飞轮成行业共识",
+      "link": "https://www.x-techcon.com/article/185129.html",
+      "keywords": [
+        "华大九天",
+        "Empyrean",
+        "国产EDA",
+        "Agentic EDA",
+        "设计范式",
+        "多智能体",
+        "工具编排",
+        "数据飞轮",
+        "刘伟平",
+        "IICIE 2026",
+        "智能体平台",
+        "人指挥智能体",
+        "2026-09-09"
+      ]
+    },
     {
       "date": "2026-09-09",
       "company": "Synopsys",
@@ -3571,28 +3592,6 @@
       ]
     },
     {
-      "date": "2026-03-02",
-      "company": "Normal Computing / CIRCT",
-      "title": "🤖 AI 智能体 43 天提交 2,968 次：CIRCT 分支新增开源 Verilog 仿真器、cocotb 集成",
-      "link": "https://www.normalcomputing.com/blog/building-an-open-source-verilog-simulator-with-ai-580k-lines-in-43-days",
-      "keywords": [
-        "Normal",
-        "Computing",
-        "CIRCT",
-        "Verilog",
-        "仿真器",
-        "AI",
-        "智能体",
-        "Claude",
-        "Codex",
-        "cocotb",
-        "UVM",
-        "BMC",
-        "LEC",
-        "2026-03-02"
-      ]
-    },
-    {
       "date": "2026-05-03",
       "company": "DAC / IEEE CEDA",
       "title": "📅 DAC 2026（7/26-29，长滩）技术程序持续更新，AI for EDA 论文完整入选名单公布",
@@ -4387,126 +4386,6 @@
         "MAGICAL",
         "系统实现模拟版图全自动化",
         "复旦大学"
-      ]
-    },
-    {
-      "date": "2026-03-17",
-      "company": "SemiEngineering",
-      "title": "AI 如何自动化芯片设计：Cadence VP 提出五级自动化分类法",
-      "link": "https://semiengineering.com/how-ai-will-automate-chip-design/",
-      "keywords": [
-        "AI",
-        "如何自动化芯片设计",
-        "Cadence",
-        "VP",
-        "提出五级自动化分类法",
-        "SemiEngineering"
-      ]
-    },
-    {
-      "date": "2026-03-16",
-      "company": "NVIDIA / Cadence / Synopsys / Siemens  ~17",
-      "title": "NVIDIA 宣布与四大工业软件巨头（含 Cadence、Synopsys、Siemens）深化 AI 智能体合作",
-      "link": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Global-Industrial-Software-Giants-Bring-Design-Engineering-and-Manufacturing-Into-the-AI-Era/default.aspx",
-      "keywords": [
-        "NVIDIA",
-        "宣布与四大工业软件巨头",
-        "含",
-        "Cadence",
-        "Synopsys",
-        "Siemens",
-        "深化",
-        "AI",
-        "智能体合作",
-        "NVIDIA",
-        "Cadence",
-        "Synopsys",
-        "Siemens",
-        "17"
-      ]
-    },
-    {
-      "date": "2026-03-15",
-      "company": "ISPD 2026  德国波恩  ~18",
-      "title": "ISPD 2026 Keynote：AI/ML 重塑 EDA 工程仿真 + Agentic AI 专题圆桌",
-      "link": "https://ispd.cc/ispd2026/index.php?page=program",
-      "keywords": [
-        "ISPD",
-        "2026",
-        "Keynote",
-        "AI",
-        "ML",
-        "重塑",
-        "EDA",
-        "工程仿真",
-        "Agentic",
-        "AI",
-        "专题圆桌",
-        "ISPD",
-        "2026",
-        "德国波恩",
-        "18"
-      ]
-    },
-    {
-      "date": "2026-03-13",
-      "company": "NSF / UCLA",
-      "title": "NSF Workshop on Agents for Chip Design Automation（UCLA）",
-      "link": "https://ai4eda-workshop.github.io/2026/",
-      "keywords": [
-        "NSF",
-        "Workshop",
-        "on",
-        "Agents",
-        "for",
-        "Chip",
-        "Design",
-        "Automation",
-        "UCLA",
-        "NSF",
-        "UCLA"
-      ]
-    },
-    {
-      "date": "2026-03-11",
-      "company": "Synopsys Converge 2026   发布",
-      "title": "🆕 Synopsys Multiphysics-Fusion™：首个 EDA × Ansys 多物理场融合平台发布，AgentEngineer™ 驱动自动化设计",
-      "link": "https://news.synopsys.com/2026-03-11-Synopsys-Outlines-Vision-for-Engineering-the-Future",
-      "keywords": [
-        "Synopsys",
-        "Multiphysics",
-        "Fusion",
-        "首个",
-        "EDA",
-        "Ansys",
-        "多物理场融合平台发布",
-        "AgentEngineer",
-        "驱动自动化设计",
-        "Synopsys",
-        "Converge",
-        "2026",
-        "发布"
-      ]
-    },
-    {
-      "date": "2026-03-05",
-      "company": "ChipAgents / Alpha Design AI",
-      "title": "ChipAgents 完成 $7400 万 A 轮融资，多智能体 AI 芯片验证首独角兽",
-      "link": "https://chipagents.ai/",
-      "keywords": [
-        "ChipAgents",
-        "完成",
-        "7400",
-        "万",
-        "A",
-        "轮融资",
-        "多智能体",
-        "AI",
-        "芯片验证首独角兽",
-        "ChipAgents",
-        "Alpha",
-        "Design",
-        "AI"
       ]
     },
     {

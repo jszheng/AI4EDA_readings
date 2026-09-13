@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="Sy6pgR2TGSgVQ9VDPsRpXA">
+<head data-page-node-id="Q9gy3AqqLPfbzaYEqzALTX">
+  <meta charset="UTF-8" data-page-node-id="thR2iQHtzfT71FMBF1iTwo" />
+  <link rel="stylesheet" href="../style.css" data-page-node-id="hunj6SJHswpC1G6VCboHYV" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body data-page-node-id="Ex0YnBtIir2YpSYIjVhbwa">
+<header data-page-node-id="pmTpX6nxSP4mxcAGtBbfrt">
+  <h1 data-page-node-id="qKtDPOlmDxBpS6lXrFNGPy">📅 2026-09-14 动态</h1>
+  <p class="subtitle" data-page-node-id="K2cG1EFltL9u4VGVZ1SfT6">共 1 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR，2026-09-11 公告：① 2609.10970 Fengshui——chiplet 生态与定制神经网络加速器（BASIC）协同设计框架，联合优化芯粒池构成与算子级解耦 ASIC，含布局布线（P&R）物理可实现性验证，8 芯粒实现能耗/EDP/EDPC 最高降 97.8%、距无约束异构仅差 4.1%）</p>
+</header>
+<section data-page-node-id="N2zgpdhTgPE7mqasXebJ1t">
+  <div class="abstracts" data-page-node-id="GVsPl320XmrAwIKpDSUFmN">
+
+    <!-- 2609.10970 Fengshui -->
+    <div class="abs-card" data-page-node-id="wZFengshui14">
+      <div class="src" data-page-node-id="xmFengshui14"><span class="dot" data-page-node-id="4sFengshui14"></span>arXiv · cs.AR · 2026-09-11 · Haoran Jin, Jirong Yang, Zhiheng Zhang, Justin Shin, Barry Lyu, Kangqi Zhang, Yunpeng Liu, Nathan Bleier</div>
+      <h4 data-page-node-id="5JFengshui14">🧩 Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign——chiplet 生态与定制 ASIC（BASIC）协同设计，联合优化芯粒池构成与算子级解耦，含布局布线（P&R）物理可实现性验证</h4>
+      <p data-page-node-id="A8Fengshui14">现代 ML 负载对时延与能效约束严苛，同质商用硬件难以高效承载；<strong data-page-node-id="rplFengshui14">算子级解耦</strong>（为每个算子定制微架构、批处理与存储层次）能突破瓶颈，但高度定制加速器的非经常性工程（NRE）成本 prohibitive。Chiplet 集成把 NRE 摊薄到多应用，但「选哪些芯粒、如何拼成加速器」与加速器质量<strong data-page-node-id="owtFengshui14">循环依赖</strong>。Fengshui 提出 chiplet 生态与加速器协同设计框架，<strong data-page-node-id="laoFengshui14">联合优化芯粒池构成与定制 ASIC（BASIC）设计</strong>：通过算子级解耦构建 BASIC，协同探索芯粒与存储异构、张量融合、流水线/张量/专家并行，并以<strong data-page-node-id="JaoFengshui14">布局布线（P&R）验证保证物理可实现性</strong>。仅用 8 个策略性选取的芯粒（含网络交换、存内处理单元、多种微架构加速器），Fengshui 生成的 BASIC 相对同质加速器在能耗、能耗成本积（EC）、能耗延时积（EDP）、能耗延时成本积（EDPC）上分别降 48.5% / 88.1% / 93.0% / 97.8%，且距无约束异构设计仅差 4.1%；数据中心 MoE 与稠密 LLM 服务的 prefill 能耗与 EC 最高降 16.8% / 28.7%，边缘自动驾驶感知在实时时延约束下能耗降 12.0%、EC 降 23.6%。属「模拟与架构 / Chiplet 协同设计」方向，用「芯粒池 + 定制 ASIC 联合优化 + P&R 验证」把多芯粒加速器设计空间探索做成可物理实现的闭环，与本站关注的「AI for Multi-Die/Chiplets、Chiplet 互连/系统协同」主题直接呼应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;" data-page-node-id="uAxFengshui14">
+        <span class="tag" data-page-node-id="j9Fengshui14">AI for EDA</span>
+        <span class="tag" data-page-node-id="tNFengshui14">Chiplet</span>
+        <span class="tag" data-page-node-id="efFengshui14">多芯粒</span>
+        <span class="tag" data-page-node-id="LPFengshui14">协同设计</span>
+        <span class="tag" data-page-node-id="BH1Fengshui14">加速器</span>
+        <span class="tag" data-page-node-id="WaFengshui14">设计空间探索</span>
+        <span class="tag" data-page-node-id="TUQFengshui14">算子级解耦</span>
+        <span class="tag" data-page-node-id="BH2Fengshui14">布局布线验证</span>
+        <span class="tag" data-page-node-id="KDFengshui14">P&amp;R</span>
+        <span class="tag" data-page-node-id="5DFengshui14">存内处理</span>
+        <span class="tag" data-page-node-id="UfFengshui14">张量融合</span>
+        <span class="tag" data-page-node-id="bNFengshui14">专家并行</span>
+        <span class="tag" data-page-node-id="ePFengshui14">能耗优化</span>
+        <span class="tag" data-page-node-id="BHFengshui14">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.10970" target="_blank" data-page-node-id="9kFengshui14">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.10970_Fengshui.pdf" data-page-node-id="4QFengshui14">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

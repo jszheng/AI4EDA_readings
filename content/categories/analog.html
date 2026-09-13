@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（44篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（45篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+
+    <!-- 2609.10970 Fengshui -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🧩 Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign——chiplet 生态与定制 ASIC（BASIC）协同设计，联合优化芯粒池构成与算子级解耦，含布局布线（P&R）物理可实现性验证</div>
+      <div class="abs-meta">arXiv:2609.10970 · cs.AR · 2026-09-11 · Haoran Jin, Jirong Yang, Zhiheng Zhang, Justin Shin, Barry Lyu, Kangqi Zhang, Yunpeng Liu, Nathan Bleier</div>
+      <div class="abs-body">现代 ML 负载对时延与能效约束严苛，同质商用硬件难以高效承载；<strong>算子级解耦</strong>（为每个算子定制微架构、批处理与存储层次）能突破瓶颈，但高度定制加速器的非经常性工程（NRE）成本 prohibitive。Chiplet 集成把 NRE 摊薄到多应用，但「选哪些芯粒、如何拼成加速器」与加速器质量<strong>循环依赖</strong>。Fengshui 提出 chiplet 生态与加速器协同设计框架，<strong>联合优化芯粒池构成与定制 ASIC（BASIC）设计</strong>：通过算子级解耦构建 BASIC，协同探索芯粒与存储异构、张量融合、流水线/张量/专家并行，并以<strong>布局布线（P&R）验证保证物理可实现性</strong>。仅用 8 个策略性选取的芯粒（含网络交换、存内处理单元、多种微架构加速器），Fengshui 生成的 BASIC 相对同质加速器在能耗、能耗成本积（EC）、能耗延时积（EDP）、能耗延时成本积（EDPC）上分别降 48.5% / 88.1% / 93.0% / 97.8%，且距无约束异构设计仅差 4.1%；数据中心 MoE 与稠密 LLM 服务的 prefill 能耗与 EC 最高降 16.8% / 28.7%，边缘自动驾驶感知在实时时延约束下能耗降 12.0%、EC 降 23.6%。属「模拟与架构 / Chiplet 协同设计」方向，用「芯粒池 + 定制 ASIC 联合优化 + P&R 验证」把多芯粒加速器设计空间探索做成可物理实现的闭环，与本站关注的「AI for Multi-Die/Chiplets、Chiplet 互连/系统协同」主题直接呼应。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.10970" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.10970_Fengshui.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Chiplet</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多芯粒</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">协同设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">加速器</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计空间探索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">算子级解耦</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局布线验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">P&amp;R</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">存内处理</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">张量融合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">专家并行</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">能耗优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.05161 APEX-RBD -->
     <div class="abs-card">

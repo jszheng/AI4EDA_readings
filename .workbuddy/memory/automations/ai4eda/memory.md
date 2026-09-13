@@ -251,3 +251,33 @@
 - 14 files changed, 445 insertions(+), 16 deletions(-)
 
 **结果状态**：✅ 成功，全量更新已推送（含 memory.md 后续补录提交）
+
+---
+
+## 2026-09-14 执行摘要（补录+修复运行）
+
+**背景**：本次为 09-12~09-14 周末空档的统一补录。前序轮次已创建 content/dates/2026-09-14.html、content/latest/2026-09-14.html、下载 2609.10970_Fengshui.pdf（2.09MB），并完成 news_memory.json 的 180 天清理（移除 7 条 >2026-03-18 旧条目，totalItems 218→212），但**卡插入未落盘**：analog.html 缺 Fengshui 卡（计数已误改为 45篇）、news/index.html 缺 2026-09-14 section 与 #2026-09-14 nav 锚点、stats 仍 331/123/217、manifest.js 仅 news 被误改为 218（papers/batches/lastUpdate 未动）。本轮修复全部缺口。
+
+**本次新增内容**
+- 论文 +1 篇：2609.10970 Fengshui——chiplet 生态与定制 ASIC（BASIC）协同设计，联合优化芯粒池构成与算子级解耦，含 P&R 物理可实现性验证（→ analog 分类）。已插卡至 analog.html 顶部（45篇 / 45 卡一致）。
+- 行业动态 +1 条：华大九天（Empyrean）董事长刘伟平 @ IICIE 2026——Agentic EDA 是设计范式根本革命，从「人操作工具」到「人指挥智能体」，多智能体+工具编排+数据飞轮成共识（链接 x-techcon/article/185129.html）。已补 2026-09-14 section + nav 锚点。
+
+**更新文件清单**
+- content/dates/2026-09-14.html（Fengshui 卡，已存在）
+- content/latest/2026-09-14.html（Fengshui 卡 + ../dates PDF 链接，已存在）
+- content/dates/2609.10970_Fengshui.pdf（2,090,359 bytes，已存在）
+- content/categories/analog.html（补 Fengshui 卡 + 计数 45篇 ✓）
+- content/news/index.html（补 09-14 section + nav 锚点 + stats 332/124/218 ✓）
+- content/news/news_memory.json（totalItems 212，Empyrean 居首，已存在）
+- manifest.js（papers 332 / batches 124 / news 218 / lastUpdate 2026-09-14 ✓）
+- content/papers/index.html（跳转 2026-09-14，已存在）
+
+**计数一致性说明（已知问题）**
+- manifest news=218 与 news/index.html 显示 218 已对齐；但 news/index.html 实际卡片数 219→本次 220，显示数与卡片数存在 2 张历史低估（非本轮引入）；news_memory.json totalItems=212 为清理后去重跟踪数，与显示数 218 的差异源于 180 天清理仅作用于去重表、未按站规同步删页（历史惯例未强制）。后续可考虑统一。
+- OmniEDA 实际 section 日期为 2026-09-10（非 subtitle 所述 09-12），内容完整存在，仅 changelog 日期标注偏差，无需修。
+
+**Git**
+- commit: `auto update: 2026-09-14`
+- push origin main（retry once if needed）
+
+**结果状态**：✅ 补录+修复完成，待推送
