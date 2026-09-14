@@ -103,6 +103,7 @@ window.SITE_MANIFEST = {
   ],
 
   dates: [
+    { date: "2026-09-14", title: "2026-09-14", count: 1, file: "content/dates/2026-09-14.html" },
     { date: "2026-09-11", title: "2026-09-11", count: 4, file: "content/dates/2026-09-11.html" },
     { date: "2026-09-09", title: "2026-09-09", count: 2, file: "content/dates/2026-09-09.html" },
     { date: "2026-09-08", title: "2026-09-08", count: 1, file: "content/dates/2026-09-08.html" },
