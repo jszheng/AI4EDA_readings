@@ -1,8 +1,36 @@
 {
-  "lastUpdate": "2026-09-14",
+  "lastUpdate": "2026-09-15",
   "cutoffDate": "2026-03-18",
-  "totalItems": 212,
+  "totalItems": 213,
   "items": [
+    {
+      "date": "2026-09-15",
+      "company": "Cadence",
+      "title": "🌡️ Cadence 发布 Celsius Studio AI 热分析智能体：多物理场热-电协同仿真进入「签核级分钟级」，3D-IC 热热点预测与布局反哺闭环",
+      "link": "https://newsroom.cadence.com/press-releases/press-release-details/2026/Cadence-Introduces-Celsius-Studio-AI-Thermal-Agent-for-3D-IC-Multiphysics/default.aspx",
+      "keywords": [
+        "Cadence",
+        "Celsius Studio",
+        "多物理场",
+        "热分析",
+        "热-电协同仿真",
+        "3D-IC",
+        "Chiplet",
+        "AI 智能体",
+        "签核级分钟级",
+        "布局反哺",
+        "GNN",
+        "物理代理模型",
+        "CUDA-X",
+        "Millennium M2000",
+        "AuraStack",
+        "热点预测",
+        "热梯度",
+        "电源规划",
+        "产品发布",
+        "2026-09-12"
+      ]
+    },
     {
       "date": "2026-09-14",
       "company": "华大九天（Empyrean）",

@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（80篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（81篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2609.11589 PlaceGO -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 PlaceGO：强化学习宏布局与时钟树协同优化——把时钟树预算作为布局奖励的一部分，DRV 与时钟偏差（skew）联合下降</div>
+      <div class="abs-meta">arXiv:2609.11589 · cs.AR / cs.LG · 2026-09-13 · Daniel Okonkwo, Priya Venkatasubramanian, Tobias Krüger, Serena Liu, Raghav Mehta</div>
+      <div class="abs-body">传统宏布局（macro placement）与时钟树综合（CTS）分阶段进行，布局阶段看不到时钟约束，导致后续 CTS 长时钟线、拥塞与时序难以收敛。PlaceGO 提出<strong>布局-时钟协同优化</strong>框架：以强化学习智能体在布局过程中即时估计时钟树代价（线长、skew 上界、缓冲需求），把<strong>时钟树预算折进布局奖励</strong>，使宏与标准单元的摆放天然避开时钟热点；动作空间采用可微分 softmax 摆放 + 策略梯度，状态编码融合网表超图、拥塞图与时序关键度。在 ISPD/TCAD 基准与开源 OpenROAD 流程上，相对仅做线长/拥塞优化的基线，最差负裕量（WNS）改善 9.4%、设计规则违例（DRV）降 31%、时钟 skew 降 22%，且总绕线拥塞降 14%。属「后端物理设计 / 强化学习布局布线」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.11589" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.11589_PlaceGO.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">宏布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时钟树综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">CTS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序收敛</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRV</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
 
     <!-- 2609.08232 Routing Dense Layouts RL -->
     <div class="abs-card">

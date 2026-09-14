@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（89篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（90篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+    <!-- 2609.11342 Spec2RTL-Agent -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ Spec2RTL-Agent：多智能体 RTL 生成-验证闭环——意图规格自动拆解为模块契约，生成器/仿真器/审查器三类智能体迭代收敛至可综合、零 Lint 的 Verilog</div>
+      <div class="abs-meta">arXiv:2609.11342 · cs.SE / cs.AI · 2026-09-12 · Lin Zhao, Wei Chen, Ananya Rao, Marcus Feldman, Hao Sun</div>
+      <div class="abs-body">大语言模型生成 RTL 的瓶颈不在「写出第一行代码」，而在「生成-验证-修复」的闭环成本高、反馈稀疏。Spec2RTL-Agent 把自然语言/文档规格自动拆解为带接口契约的模块级子任务，由<strong>生成智能体</strong>（产出可综合 Verilog）、<strong>仿真智能体</strong>（自动构造 testbench、跑 Icarus/Yosys 收集真实波形与报错）、<strong>审查智能体</strong>（对照契约做覆盖与一致性裁决）三类智能体闭环迭代；引入<strong>契约驱动的中间表示（CDIR）</strong>把「规格↔RTL↔仿真」三态对齐，使失败可定位到具体信号与周期而非整段重写。在 VerilogEval-Human 与 RTLLM v2.1 子集上相对单步生成 pass@1 提升 18.6pp，平均修复轮次降 41%，且 92% 的最终设计零 Lint 告警。属「前端 RTL / 智能体协作的 RTL 生成-验证-反馈闭环」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.11342" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.11342_Spec2RTL_Agent.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">生成-验证闭环</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">契约中间表示</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">仿真反馈</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VerilogEval</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTLLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.SE</span>
+      </div>
+    </div>
+
 
     <!-- 2609.10057 AutoTrans -->
     <div class="abs-card">

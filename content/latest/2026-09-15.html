@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-09-15 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.AI / cs.LG，2026-09-12~09-14 公告：① 2609.11342 Spec2RTL-Agent——多智能体 RTL 生成-验证闭环 ② 2609.11589 PlaceGO——强化学习宏布局与时钟树协同优化 ③ 2609.11876 ThermalGNN——GNN 驱动 3D-IC 热分布与多物理场协同预测 ④ 2609.12031 EDA-AgentBench——端到端芯片设计智能体标准化评测基准）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2609.11342 Spec2RTL-Agent -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE / cs.AI · 2026-09-12 · Lin Zhao, Wei Chen, Ananya Rao, Marcus Feldman, Hao Sun</div>
+      <h4>⚡ Spec2RTL-Agent：多智能体 RTL 生成-验证闭环——意图规格自动拆解为模块契约，生成器/仿真器/审查器三类智能体迭代收敛至可综合、零 Lint 的 Verilog</h4>
+      <p>大语言模型生成 RTL 的瓶颈不在「写出第一行代码」，而在「生成-验证-修复」的闭环成本高、反馈稀疏。Spec2RTL-Agent 把自然语言/文档规格自动拆解为带接口契约的模块级子任务，由<strong>生成智能体</strong>（产出可综合 Verilog）、<strong>仿真智能体</strong>（自动构造 testbench、跑 Icarus/Yosys 收集真实波形与报错）、<strong>审查智能体</strong>（对照契约做覆盖与一致性裁决）三类智能体闭环迭代；引入<strong>契约驱动的中间表示（CDIR）</strong>把「规格↔RTL↔仿真」三态对齐，使失败可定位到具体信号与周期而非整段重写。在 VerilogEval-Human 与 RTLLM v2.1 子集上相对单步生成 pass@1 提升 18.6pp，平均修复轮次降 41%，且 92% 的最终设计零 Lint 告警。属「前端 RTL / 智能体协作的 RTL 生成-验证-反馈闭环」方向，用「多智能体 + 契约中间表示 + 真实仿真反馈」把 RTL 生成从一次性吐码升级为可收敛的闭环工程流程，与本站持续追踪的「生成-评估-排序闭环比单纯代码生成更关键」主线直接呼应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">生成-验证闭环</span>
+        <span class="tag">契约中间表示</span>
+        <span class="tag">Verilog</span>
+        <span class="tag">仿真反馈</span>
+        <span class="tag">Lint</span>
+        <span class="tag">VerilogEval</span>
+        <span class="tag">RTLLM</span>
+        <span class="tag">cs.SE</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.11342" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.11342_Spec2RTL_Agent.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.11589 PlaceGO -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · 2026-09-13 · Daniel Okonkwo, Priya Venkatasubramanian, Tobias Krüger, Serena Liu, Raghav Mehta</div>
+      <h4>📐 PlaceGO：强化学习宏布局与时钟树协同优化——把时钟树预算作为布局奖励的一部分，DRV 与时钟偏差（skew）联合下降</h4>
+      <p>传统宏布局（macro placement）与时钟树综合（CTS）分阶段进行，布局阶段看不到时钟约束，导致后续 CTS 长时钟线、拥塞与时序难以收敛。PlaceGO 提出<strong>布局-时钟协同优化</strong>框架：以强化学习智能体在布局过程中即时估计时钟树代价（线长、skew 上界、缓冲需求），把<strong>时钟树预算折进布局奖励</strong>，使宏与标准单元的摆放天然避开时钟热点；动作空间采用可微分 softmax 摆放 + 策略梯度，状态编码融合网表超图、拥塞图与时序关键度。在 ISPD/TCAD 基准与开源 OpenROAD 流程上，相对仅做线长/拥塞优化的基线，最差负裕量（WNS）改善 9.4%、设计规则违例（DRV）降 31%、时钟 skew 降 22%，且总绕线拥塞降 14%。属「后端物理设计 / 强化学习布局布线」方向，用「时钟感知的 RL 奖励」把布局与时钟树从串行黑盒改成联合可微闭环，与本站关注的「RL 在布局布线/单元尺寸调整/缓冲器插入」细分一致。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">宏布局</span>
+        <span class="tag">强化学习</span>
+        <span class="tag">时钟树综合</span>
+        <span class="tag">CTS</span>
+        <span class="tag">时序收敛</span>
+        <span class="tag">DRV</span>
+        <span class="tag">OpenROAD</span>
+        <span class="tag">拥塞</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.11589" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.11589_PlaceGO.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.11876 ThermalGNN -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.ET · 2026-09-14 · Yuji Tanaka, Elena Petrova, Mohammed Al-Farsi, Grace Whittaker, Kang Li</div>
+      <h4>🌡️ ThermalGNN：图神经网络驱动 3D-IC 热分布与多物理场协同预测——在网表-封装图上学热传导，秒级给出全芯片热点图并反哺布局约束</h4>
+      <p>3D-IC 与芯粒堆叠使热成为与功耗、时序、可靠性耦合的硬约束，但全芯片热仿真（有限元/有限体积）动辄数小时，无法嵌入布局迭代。ThermalGNN 把芯片-封装堆叠建模为<strong>异构图</strong>（器件/单元/微凸点/TMV 为节点，热阻/功率耦合为边），用图神经网络在<strong>网表-封装联合图</strong>上直接回归稳态与瞬态温度场，并以<strong>物理残差（热流守恒）</strong>做训练正则保证守恒无源漏；推理秒级给出全芯片热点图，并输出「热约束反哺布局」的可微分梯度提示（高功耗单元远离热敏感 macro）。在 2.5D/3D 开源基准上与商业有限元对齐 RMSE < 1.8°C，推理 240× 加速，下游布局优化使峰值温度降 7.3%、热梯度降 12%。属「后端物理设计 / 多物理场 AI 分析」方向，把热从「事后签核」前置为「布局可微约束」，与本站关注的「Chiplet 系统热分布优化、多物理场 AI 分析」主题直接对应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">多物理场</span>
+        <span class="tag">3D-IC</span>
+        <span class="tag">Chiplet</span>
+        <span class="tag">热分析</span>
+        <span class="tag">图神经网络</span>
+        <span class="tag">GNN</span>
+        <span class="tag">热分布优化</span>
+        <span class="tag">物理残差</span>
+        <span class="tag">可微约束</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.11876" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.11876_ThermalGNN.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.12031 EDA-AgentBench -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.LG · 2026-09-14 · Sofia Andersson, Rajeev Kumar, Meiling Zhou, Thomas Berg, Aisha Rahman</div>
+      <h4>🤖 EDA-AgentBench：端到端芯片设计智能体标准化评测基准——50 个真实子任务覆盖 RTL 生成→综合→验证→布局布线，含可复现评分与失败分类</h4>
+      <p>智能体能否「真正跑通芯片设计」长期停留在厂商宣发，缺乏可复现、可横向比较的评测。EDA-AgentBench 提出首个<strong>端到端芯片设计智能体评测基准</strong>：把设计流程拆为 50 个带真实工具链（Yosys/Verilator/OpenROAD/Siemens Questa 容器化）的可执行子任务，覆盖<strong>RTL 生成→逻辑综合→功能验证→布局布线</strong>全链路，每个任务给出确定性验收准则（面积/时序/功耗预算、覆盖率与变异测试门槛、DRC/LVS 通过）；评分自动产出，并把失败归因到「生成/调试/工具调用/规格理解」四类。对 6 个主流 LLM 智能体评测显示，当前最优仅在 23% 的端到端任务上一次通过，且「工具调用」是最大瓶颈（占失败 47%）。属「AI Agent / 评测基准」方向，把「智能体能否真正跑通芯片设计」从宣发拉回可测量，与本站持续追踪的「开源 EDA 智能体生态加速成熟」主线呼应，也为 RTL-to-GDSII 自主流程的公平比较提供标尺。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">AI Agent</span>
+        <span class="tag">评测基准</span>
+        <span class="tag">端到端</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">逻辑综合</span>
+        <span class="tag">功能验证</span>
+        <span class="tag">布局布线</span>
+        <span class="tag">OpenROAD</span>
+        <span class="tag">失败归因</span>
+        <span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.12031" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.12031_EDA_AgentBench.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

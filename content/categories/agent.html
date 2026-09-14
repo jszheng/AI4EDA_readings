@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（44篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（45篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+    <!-- 2609.12031 EDA-AgentBench -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 EDA-AgentBench：端到端芯片设计智能体标准化评测基准——50 个真实子任务覆盖 RTL 生成→综合→验证→布局布线，含可复现评分与失败分类</div>
+      <div class="abs-meta">arXiv:2609.12031 · cs.AI / cs.LG · 2026-09-14 · Sofia Andersson, Rajeev Kumar, Meiling Zhou, Thomas Berg, Aisha Rahman</div>
+      <div class="abs-body">智能体能否「真正跑通芯片设计」长期停留在厂商宣发，缺乏可复现、可横向比较的评测。EDA-AgentBench 提出首个<strong>端到端芯片设计智能体评测基准</strong>：把设计流程拆为 50 个带真实工具链（Yosys/Verilator/OpenROAD/Siemens Questa 容器化）的可执行子任务，覆盖<strong>RTL 生成→逻辑综合→功能验证→布局布线</strong>全链路，每个任务给出确定性验收准则；评分自动产出，并把失败归因到「生成/调试/工具调用/规格理解」四类。对 6 个主流 LLM 智能体评测显示，当前最优仅在 23% 的端到端任务上一次通过，且「工具调用」是最大瓶颈（占失败 47%）。属「AI Agent / 评测基准」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.12031" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.12031_EDA_AgentBench.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">评测基准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">端到端</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">逻辑综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
+
 
     <!-- 2608.30932 Beacon -->
     <div class="abs-card">
