@@ -7,9 +7,23 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（45篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（46篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+
+    <!-- 2609.13789 AgentEDA-Survey -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 AgentEDA-Survey：端到端芯片设计智能体协同设计全景综述——把 Spec→RTL→综合→验证→PnR 拆成可编排智能体，厘清工具调用瓶颈与评估缺口</div>
+      <div class="abs-meta">arXiv:2609.13789 · cs.AI / cs.SE · 2026-09-16 · Praveen Iyer, Marta Salgado, Kenji Watanabe, Ingrid Larsson, Tomás Ferreira</div>
+      <div class="abs-body">2026 年「Agentic EDA」从厂商宣发涌入真实研发，但缺乏把零散工作统一起来的综述。AgentEDA-Survey 首次系统梳理<strong>端到端芯片设计智能体协同设计</strong>：按设计阶段把智能体拆为规格理解、RTL 生成、逻辑综合、功能验证、布局布线、签核六类角色，抽象出「规划-执行-反思-工具调用」通用循环，并对比 Synopsys AgentEngineer、Cadence AuraStack/ChipStack、Siemens Fuse、开源 OpenROAD-MCP 等路线的编排差异；文中明确指出当前最大瓶颈是<strong>工具调用可靠性</strong>（占端到端失败 ~47%，与本站 09-15 收录的 EDA-AgentBench 实测一致），并归纳评估缺口——缺乏覆盖「RTL→GDSII」全链路、带确定性验收的可复现基准。属「AI Agent / 综述·协同设计」方向，把「智能体能否真正跑通芯片设计」从单点成果拉成可横向比较的地图，与本站持续追踪的「开源 EDA 智能体生态加速成熟」主线呼应，也为 RTL-to-GDSII 自主流程的公平评测提供分类标尺。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.13789" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.13789_AgentEDA_Survey.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">综述</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">端到端</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">协同设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">逻辑综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工具调用</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
+
     <!-- 2609.12031 EDA-AgentBench -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

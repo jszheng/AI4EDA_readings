@@ -7,9 +7,23 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（81篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（82篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2609.13342 MacroRoute-RL -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 MacroRoute-RL：强化学习全局布线——历史感知拥塞预测 + 时序关键路径加权，溢出与 DRV 联合下降</div>
+      <div class="abs-meta">arXiv:2609.13342 · cs.AR / cs.LG · 2026-09-15 · Marco Ricci, Anjali Deshmukh, Björn Lindqvist, Chen-Wei Huang, Saoirse Murphy</div>
+      <div class="abs-body">全局布线（global routing）决定后续详细布线的拥塞与可绕性，但传统 Steiner/ILP 方法对「布线后拥塞」只能事后补救。MacroRoute-RL 把全局布线建模为<strong>序列决策</strong>，以强化学习智能体逐区选择布线资源分配：状态编码融合<strong>历史感知拥塞图</strong>（对过去迭代中反复溢出的网格加权）、网表超图与时序关键度；奖励函数把<strong>溢出（overflow）</strong>与<strong>设计规则违例（DRV）</strong>联合惩罚，并对时序关键网络（critical net）给予更高权重以优先保时序。在 ISPD/TCAD 基准与开源 OpenROAD 流程上，相对仅做线长/拥塞优化的基线，总溢出降 47%、DRV 降 34%、最差负裕量（WNS）改善 8.1%，且下游详细布线绕通率提升。属「后端物理设计 / 强化学习布局布线」方向，用「历史感知拥塞 + 时序加权的 RL 奖励」把全局布线从一次性分配升级为带记忆的可收敛决策，与本站关注的「RL 在布局布线/缓冲器插入」细分一致。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.13342" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.13342_MacroRoute_RL.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">全局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拥塞优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRV</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序关键路径</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">溢出</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">历史感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
     <!-- 2609.11589 PlaceGO -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

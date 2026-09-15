@@ -7,9 +7,23 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（90篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（91篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2609.13110 VeriSpec -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ VeriSpec：从 RTL 自动反推机器可读设计规格——双向契约让 RTL↔Spec 可追溯，把验证从「文本意图」接回「代码现实」</div>
+      <div class="abs-meta">arXiv:2609.13110 · cs.SE / cs.AR · 2026-09-15 · Hannah Bergström, Ravi Subramanian, Yuki Tanabe, Olivia Nwosu, Felix Krause</div>
+      <div class="abs-body">LLM 生成 RTL 的「生成-验证闭环」长期卡在一个隐性缺口：<strong>规格（specification）本身没有被机器可读地锚定</strong>，于是 Verilog 与「设计者真正想要的意图」之间始终隔着一段自然语言。VeriSpec 提出<strong>RTL→Spec 自动反推</strong>：用静态分析 + LLM 协同，从可综合 Verilog 抽取接口契约、FSM 转移、时序不变量与数据通路语义，编译成机器可读、可被形式工具消费的规格中间表示；并构建<strong>RTL↔Spec 双向契约</strong>，使任何一处 RTL 改动都能自动 diff 出受影响规格、任何规格变更也能定位到对应代码。在多个开源 RTL 模块上，反推规格与黄金参考一致率 91%，且把下游「规格漂移」类验证逃逸降 63%。属「前端 RTL / RTL-to-Specification 自动生成」方向，用「可机器消费的规格」补齐生成-验证闭环里被忽视的「意图锚点」，与本站持续追踪的「契约中间表示 + 真实仿真反馈」主线直接呼应，也为 RTL-to-Specification 自动生成这一被低估的细分补齐了反方向基础设施。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.13110" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.13110_VeriSpec.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-Specification</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">规格反推</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">双向契约</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可追溯</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">验证反馈</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计意图</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.SE</span>
+      </div>
+    </div>
+
     <!-- 2609.11342 Spec2RTL-Agent -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

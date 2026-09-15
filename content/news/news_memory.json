@@ -1,8 +1,29 @@
 {
-  "lastUpdate": "2026-09-15",
+  "lastUpdate": "2026-09-16",
   "cutoffDate": "2026-03-18",
-  "totalItems": 213,
+  "totalItems": 214,
   "items": [
+    {
+      "date": "2026-09-16",
+      "company": "Siemens EDA",
+      "title": "🟢 Siemens EDA 发布 Calibre AI 3.0：机器学习物理验证 DRC/LVS 自学习违例聚类 + 签核收敛提速，把物理验证从「海量违例清单」变成「可解释修复队列」",
+      "link": "https://news.sw.siemens.com/en-us/siemens-edas-calibre-ai-3-0-brings-machine-learning-to-physical-verification/",
+      "keywords": [
+        "Siemens EDA",
+        "Calibre AI 3.0",
+        "机器学习物理验证",
+        "DRC",
+        "LVS",
+        "自学习违例聚类",
+        "签核收敛",
+        "物理验证",
+        "AI-Native Design",
+        "Fuse",
+        "可解释修复",
+        "产品发布",
+        "2026-09-16"
+      ]
+    },
     {
       "date": "2026-09-15",
       "company": "Cadence",
