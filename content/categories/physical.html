@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（82篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（83篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2609.14357 BufFormer -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 BufFormer：强化学习驱动缓冲器插入与单元大小联合优化——时序/功耗/面积多目标在布局后协同收敛</div>
+      <div class="abs-meta">arXiv:2609.14357 · cs.AR / cs.LG · 2026-09-17 · Daniel Okafor, Mei-Ling Chen, Arun Patil, Hannah Schmidt, Yuto Kobayashi</div>
+      <div class="abs-body">布局后优化（post-placement optimization）里，<strong>缓冲器插入</strong>与<strong>单元大小调整（cell sizing）</strong>长期被当作两道串行工序：先定缓冲再定尺寸，彼此割裂导致局部最优。BufFormer 把二者建模为<strong>联合序列决策</strong>，以强化学习智能体在网表图上逐节点决定「是否插缓冲、插几级、邻近单元选大驱动还是小驱动」：状态融合时序关键度、净电容、翻转率与拥塞；奖励对<strong>最差负裕量（WNS）</strong>、<strong>总负裕量（TNS）</strong>、漏电功耗与面积做帕累托加权。为避免 RL 不可微，BufFormer 用<strong>可微分代理目标</strong>预热策略、再切换真实签核指标微调。在 ISPD/TCAD 基准与开源 OpenROAD 流程上，相对 Synopsys 系商业 PPO + 独立 sizing 基线，WNS 改善 11.3%、漏电降 9.7%、面积增仅 1.8%，且详细布线绕通率提升。属「后端物理设计 / 强化学习在单元大小调整、缓冲器插入的应用」方向，用「RL 联合决策 + 可微分预热」把两道割裂工序升级为带记忆的可收敛协同优化，与本站关注的「RL 在布局布线/缓冲器插入」细分一致。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.14357" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.14357_BufFormer.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">缓冲器插入</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">单元大小调整</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序收敛</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功耗优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多目标优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.13342 MacroRoute-RL -->
     <div class="abs-card">

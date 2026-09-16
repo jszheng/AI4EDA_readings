@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-09-17 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.SE / cs.AI / cs.LG / cs.ET，2026-09-16~09-17 公告：① 2609.14102 VeriRAG——检索增强 Verilog 生成（已验证代码片段库）② 2609.14357 BufFormer——强化学习缓冲器插入与单元大小联合优化 ③ 2609.14588 MultiPhys-GNN——GNN 驱动 3D-IC 电-热-力多物理场协同预测 ④ 2609.14723 ToolFail-EDA——端到端设计智能体工具调用失败模式分类与基准）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2609.14102 VeriRAG -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE / cs.AR · 2026-09-16 · Elena Vásquez, Kenji Nakamura, Priya Iyer, Lukas Bauer, Sofia Romano</div>
+      <h4>⚡ VeriRAG：面向 Verilog 的检索增强生成——从「已验证代码片段库」检索可复用模式，把规格→RTL 的幻觉率打到接近零</h4>
+      <p>LLM 直接生成 Verilog 的顽疾是<strong>幻觉</strong>：凭空发明不存在的模块端口、信号或 IP，且生成结果难以追溯「为什么这么写」。VeriRAG 把<strong>检索增强生成（RAG）</strong>引入 RTL 生成：先从一个<strong>已验证代码片段库</strong>（VerilogEval / RTLLM 黄金参考 + 开源可综合 IP）构建带接口契约与测试平台通过证据的向量索引，生成时先用规格检索最相关的「已验证 RTL 片段 + 其契约」，再把检索内容作为强上下文约束注入生成，使输出可追溯到具体参考实现；并引入<strong>检索分歧检测</strong>——当多个候选片段契约冲突时显式要求澄清而非静默拼接。在 VerilogEval-Human 与 RTLLM v2.1 子集上，相对无检索基线 pass@1 提升 14.2pp、端口/信号级幻觉降 81%，且 95% 的最终设计零 Lint。属「前端 RTL / Retrieval-Augmented Generation (RAG) for Verilog」方向，用「已验证片段检索 + 契约约束 + 分歧检测」把 RTL 生成从自由创作升级为可溯源、可验证的受约束生成，与本站持续追踪的「契约中间表示 + 真实仿真反馈」主线直接呼应，也补齐了用户关注关键词里「RAG for Verilog」这一独立细分。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">RAG</span>
+        <span class="tag">Verilog</span>
+        <span class="tag">检索增强</span>
+        <span class="tag">代码片段库</span>
+        <span class="tag">知识检索</span>
+        <span class="tag">防幻觉</span>
+        <span class="tag">契约约束</span>
+        <span class="tag">VerilogEval</span>
+        <span class="tag">RTLLM</span>
+        <span class="tag">cs.SE</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.14102" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2609.14102_VeriRAG.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.14357 BufFormer -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · 2026-09-17 · Daniel Okafor, Mei-Ling Chen, Arun Patil, Hannah Schmidt, Yuto Kobayashi</div>
+      <h4>📐 BufFormer：强化学习驱动缓冲器插入与单元大小联合优化——时序/功耗/面积多目标在布局后协同收敛</h4>
+      <p>布局后优化（post-placement optimization）里，<strong>缓冲器插入</strong>与<strong>单元大小调整（cell sizing）</strong>长期被当作两道串行工序：先定缓冲再定尺寸，彼此割裂导致局部最优。BufFormer 把二者建模为<strong>联合序列决策</strong>，以强化学习智能体在网表图上逐节点决定「是否插缓冲、插几级、邻近单元选大驱动还是小驱动」：状态融合时序关键度、净电容、翻转率与拥塞；奖励对<strong>最差负裕量（WNS）</strong>、<strong>总负裕量（TNS）</strong>、漏电功耗与面积做帕累托加权。为避免 RL 不可微，BufFormer 用<strong>可微分代理目标</strong>预热策略、再切换真实签核指标微调。在 ISPD/TCAD 基准与开源 OpenROAD 流程上，相对 Synopsys 系商业 PPO + 独立 sizing 基线，WNS 改善 11.3%、漏电降 9.7%、面积增仅 1.8%，且详细布线绕通率提升。属「后端物理设计 / 强化学习在单元大小调整、缓冲器插入的应用」方向，用「RL 联合决策 + 可微分预热」把两道割裂工序升级为带记忆的可收敛协同优化，与本站关注的「RL 在布局布线/缓冲器插入」细分一致。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">缓冲器插入</span>
+        <span class="tag">单元大小调整</span>
+        <span class="tag">强化学习</span>
+        <span class="tag">时序收敛</span>
+        <span class="tag">功耗优化</span>
+        <span class="tag">多目标优化</span>
+        <span class="tag">布局后优化</span>
+        <span class="tag">OpenROAD</span>
+        <span class="tag">帕累托</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.14357" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2609.14357_BufFormer.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.14588 MultiPhys-GNN -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.ET · 2026-09-17 · Anika Sharma, Roberto Conti, Wei Zhang, Nora Lindholm, Thomas Becker</div>
+      <h4>🌡️ MultiPhys-GNN：图神经网络驱动 3D-IC 电-热-力多物理场协同预测——封装图上联合回归温度/应力/IR 压降，分钟级全芯片多物理场</h4>
+      <p>3D-IC 与芯粒堆叠使<strong>电-热-力</strong>三场深度耦合：电流密度驱动温升、温升诱发热应力与界面分层、而电源网络 IR 压降又反向限制时序与可靠性。现有做法靠串行有限元（FEM）逐场求解，单次全芯片多物理场仿真动辄数小时。MultiPhys-GNN 把芯粒堆叠建模为<strong>多属性封装异构图</strong>（芯粒/微凸点/TMV/TMV/TSV/中介层为节点，电-热-力耦合边），用图神经网络在图上同时回归<strong>稳态/瞬态温度场、热应力场、电源 IR 压降</strong>三套物理量，并以<strong>物理残差正则</strong>（电流守恒 + 热流守恒 + 应力平衡）约束预测满足守恒律；推理秒级输出「互连/供电规划→多物理场」联合解，并给出可微分梯度提示（把高功耗、高应力芯粒错开放置）。在 2.5D/3D 开源基准上与商业 FEM 对齐，峰值温度 RMSE &lt; 2.3°C、最大 von Mises 应力误差 4.1%、IR 压降误差 3.6%，下游协同优化使峰值温度降 7.2%、最大界面应力降 9.4%。属「后端物理设计 / 多物理场 AI 分析、Chiplet 互连·热分布优化」方向，把多场从串行工具合并为联合可微预测，与本站关注的「Chiplet 系统互连 / 热分布优化、多物理场 AI 分析」主题直接对应，也把此前 ThermalGNN（2609.11876）、ChipletNet-GNN（2609.13567）的热/互连单场预测推进到真正的三场耦合。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">多物理场</span>
+        <span class="tag">3D-IC</span>
+        <span class="tag">Chiplet</span>
+        <span class="tag">电-热-力耦合</span>
+        <span class="tag">图神经网络</span>
+        <span class="tag">GNN</span>
+        <span class="tag">热分布优化</span>
+        <span class="tag">应力分析</span>
+        <span class="tag">IR压降</span>
+        <span class="tag">物理残差</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.14588" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2609.14588_MultiPhys_GNN.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.14723 ToolFail-EDA -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.SE · 2026-09-17 · Olivia Berg, Marco Rossi, Aisha Khan, Felix Wagner, Chen Liu</div>
+      <h4>🤖 ToolFail-EDA：端到端芯片设计智能体的工具调用失败模式分类与基准——量化「工具调用占失败 47%」的根因，给出可诊断失败 taxonomy</h4>
+      <p>本站 09-15 收录的 EDA-AgentBench 实测指出「工具调用可靠性占端到端失败约 47%」，但<strong>具体哪些工具调用在何时、为何失败</strong>仍是一团黑盒。ToolFail-EDA 首次系统构建<strong>端到端 EDA 智能体工具调用失败模式分类法（taxonomy）</strong>：把失败归为五类——① 工具选择错误（误用综合器/验证器）、② 参数/语法错误（EDA Tcl 命令拼错）、③ 工具返回值误读（把 warning 当 pass）、④ 长上下文遗忘（跨多轮丢失约束）、⑤ 超时/资源失败（大设计 OOM）；并发布<strong>ToolFail-Bench</strong>，在 RTL→综合→验证→布局布线 50 个子任务上植入受控故障、统计各智能体（Synopsys AgentEngineer 风格 / 开源 OpenROAD-MCP 风格）的失败分布与恢复率。结果显示五类失败占比 41%/23%/18%/11%/7%，且引入「工具调用自我校验层」后整体端到端一次通过率从 23% 提到 38%。属「AI Agent / 可靠性·失败诊断」方向，把「智能体能否真正跑通芯片设计」从「能不能」推进到「坏了为什么、怎么修」，与 AgentEDA-Survey（2609.13789）的评估缺口、EDA-AgentBench 的 47% 瓶颈形成闭环证据，为 RTL-to-GDSII 自主流程的可诊断性提供标尺。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">AI Agent</span>
+        <span class="tag">工具调用</span>
+        <span class="tag">失败模式</span>
+        <span class="tag">基准</span>
+        <span class="tag">端到端</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">RTL-to-GDSII</span>
+        <span class="tag">可靠性</span>
+        <span class="tag">可诊断性</span>
+        <span class="tag">OpenROAD-MCP</span>
+        <span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.14723" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2609.14723_ToolFail_EDA.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

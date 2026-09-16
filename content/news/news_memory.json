@@ -1,8 +1,31 @@
 {
-  "lastUpdate": "2026-09-16",
+  "lastUpdate": "2026-09-17",
   "cutoffDate": "2026-03-18",
-  "totalItems": 214,
+  "totalItems": 215,
   "items": [
+    {
+      "date": "2026-09-17",
+      "company": "Synopsys",
+      "title": "🟣 Synopsys DSO.ai 客户案例：AI 驱动 PnR 把某 AI 加速器公司收敛周期从 6 周压到 9 天、功耗降 12%——商用 RL 优化器在先进制程量产落地的量化证据",
+      "link": "https://news.synopsys.com/index.php?s=20295&item=122380",
+      "keywords": [
+        "Synopsys",
+        "DSO.ai",
+        "客户案例",
+        "AI驱动PnR",
+        "强化学习",
+        "布局布线优化",
+        "收敛周期6周→9天",
+        "功耗降12%",
+        "先进制程",
+        "量产落地",
+        "RL优化器",
+        "商用工具",
+        "Fusion Compiler",
+        "产品发布",
+        "2026-09-17"
+      ]
+    },
     {
       "date": "2026-09-16",
       "company": "Siemens EDA",

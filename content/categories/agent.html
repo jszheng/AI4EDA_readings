@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（46篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（47篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+
+    <!-- 2609.14723 ToolFail-EDA -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 ToolFail-EDA：端到端芯片设计智能体的工具调用失败模式分类与基准——量化「工具调用占失败 47%」的根因，给出可诊断失败 taxonomy</div>
+      <div class="abs-meta">arXiv:2609.14723 · cs.AI / cs.SE · 2026-09-17 · Olivia Berg, Marco Rossi, Aisha Khan, Felix Wagner, Chen Liu</div>
+      <div class="abs-body">本站 09-15 收录的 EDA-AgentBench 实测指出「工具调用可靠性占端到端失败约 47%」，但<strong>具体哪些工具调用在何时、为何失败</strong>仍是一团黑盒。ToolFail-EDA 首次系统构建<strong>端到端 EDA 智能体工具调用失败模式分类法（taxonomy）</strong>：把失败归为五类——① 工具选择错误（误用综合器/验证器）、② 参数/语法错误（EDA Tcl 命令拼错）、③ 工具返回值误读（把 warning 当 pass）、④ 长上下文遗忘（跨多轮丢失约束）、⑤ 超时/资源失败（大设计 OOM）；并发布<strong>ToolFail-Bench</strong>，在 RTL→综合→验证→布局布线 50 个子任务上植入受控故障、统计各智能体失败分布与恢复率。结果显示五类失败占比 41%/23%/18%/11%/7%，且引入「工具调用自我校验层」后整体端到端一次通过率从 23% 提到 38%。属「AI Agent / 可靠性·失败诊断」方向，把「智能体能否真正跑通芯片设计」从「能不能」推进到「坏了为什么、怎么修」，与 AgentEDA-Survey（2609.13789）的评估缺口、EDA-AgentBench 的 47% 瓶颈形成闭环证据，为 RTL-to-GDSII 自主流程的可诊断性提供标尺。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.14723" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.14723_ToolFail_EDA.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工具调用</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">失败模式</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">基准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">端到端</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-GDSII</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可靠性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可诊断性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
 
     <!-- 2609.13789 AgentEDA-Survey -->
     <div class="abs-card">

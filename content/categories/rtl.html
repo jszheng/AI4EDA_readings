@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（91篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（92篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2609.14102 VeriRAG -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ VeriRAG：面向 Verilog 的检索增强生成——从「已验证代码片段库」检索可复用模式，把规格→RTL 的幻觉率打到接近零</div>
+      <div class="abs-meta">arXiv:2609.14102 · cs.SE / cs.AR · 2026-09-16 · Elena Vásquez, Kenji Nakamura, Priya Iyer, Lukas Bauer, Sofia Romano</div>
+      <div class="abs-body">LLM 直接生成 Verilog 的顽疾是<strong>幻觉</strong>：凭空发明不存在的模块端口、信号或 IP，且生成结果难以追溯「为什么这么写」。VeriRAG 把<strong>检索增强生成（RAG）</strong>引入 RTL 生成：先从一个<strong>已验证代码片段库</strong>（VerilogEval / RTLLM 黄金参考 + 开源可综合 IP）构建带接口契约与测试平台通过证据的向量索引，生成时先用规格检索最相关的「已验证 RTL 片段 + 其契约」，再把检索内容作为强上下文约束注入生成，使输出可追溯到具体参考实现；并引入<strong>检索分歧检测</strong>——当多个候选片段契约冲突时显式要求澄清而非静默拼接。在 VerilogEval-Human 与 RTLLM v2.1 子集上，相对无检索基线 pass@1 提升 14.2pp、端口/信号级幻觉降 81%，且 95% 的最终设计零 Lint。属「前端 RTL / Retrieval-Augmented Generation (RAG) for Verilog」方向，用「已验证片段检索 + 契约约束 + 分歧检测」把 RTL 生成从自由创作升级为可溯源、可验证的受约束生成，与本站持续追踪的「契约中间表示 + 真实仿真反馈」主线直接呼应，也补齐了用户关注关键词里「RAG for Verilog」这一独立细分。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.14102" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.14102_VeriRAG.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RAG</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">检索增强</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">防幻觉</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">契约约束</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VerilogEval</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTLLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.SE</span>
+      </div>
+    </div>
 
     <!-- 2609.13110 VeriSpec -->
     <div class="abs-card">
