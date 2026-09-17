@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（83篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（84篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2609.15142 CongestGNN -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 CongestGNN：图神经网络驱动布局拥塞热力图预测——把拥塞场反传为可微布局梯度，下游详细布线 DRC 违例降 24%</div>
+      <div class="abs-meta">arXiv:2609.15142 · cs.AR / cs.LG · 2026-09-18 · Wei-Lin Huang, Camila Souza, Oliver Brandt, Yara Haddad, Satoshi Inoue</div>
+      <div class="abs-body">布局（placement）与布线（routing）的割裂是物理设计 PPA 损失的主要来源：布局阶段看不到布线拥塞，等详细布线报出海量 DRC 违例再回头调布局，代价高昂。CongestGNN 在<strong>全局布局</strong>解出密度图后，用图神经网络在网表-通道异构图（单元/宏为节点，布线通道为边）上<strong>预测各通道拥塞概率热力图</strong>；关键创新是把热力图反传为布局代价函数的<strong>可微梯度</strong>——高拥塞通道附近的单元被「推开」，从而把拥塞感知前移进布局优化本身，而非事后修线。在 ISPD 2019/2020 与 ICCAD 2023 基准上，相对无拥塞感知基线，详细布线拥塞相关 DRC 违例降 <strong>24%</strong>、总绕线长度仅增 1.1%，且把后续 MacroRoute-RL 类布线 RL 的收敛轮次降 33%。属「后端物理设计 / GNN for Placement、RL for Routing」方向，用「可微拥塞梯度」把两道割裂工序连成同一优化目标，与本站关注的「GNN 在布局、RL 在布线」细分一致，并为 MultiPhys-GNN（2609.14588）那种图建模思路补上「布局-布线」这一最现实的应用落点。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.15142" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.15142_CongestGNN.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拥塞预测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">图神经网络</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">GNN</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可微梯度</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">全局布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRC违例</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ISPD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RL for Routing</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.14357 BufFormer -->
     <div class="abs-card">

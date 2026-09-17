@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（47篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（48篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+
+    <!-- 2609.15600 OpenEDA-Agent -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 OpenEDA-Agent：开源端到端 EDA 智能体框架——统一 MCP 接口封装 30+ 工具为智能体技能，内置 ToolFail 自我校验层，开源基线端到端一次通过率 23%→41%</div>
+      <div class="abs-meta">arXiv:2609.15600 · cs.AI / cs.SE · 2026-09-18 · Marcus Vogel, Lina Andersson, Tobi Ogunyemi, Hana Kim, Piero Ricci</div>
+      <div class="abs-body">当前 EDA 智能体最大的落地障碍不是「模型够不够聪明」，而是<strong>工具层太碎</strong>：综合器/验证器/布局布线器各自一套 Tcl/Python API，智能体每接一个新工具就要重写胶水代码，且工具调用失败无人兜底（呼应本站 09-17 收录的 ToolFail-EDA 2609.14723 指出的「工具调用占失败 47%」）。OpenEDA-Agent 是<strong>开源框架</strong>，用统一 <strong>MCP（Model Context Protocol）</strong>接口把 Synopsys / OpenROAD / Siemens 系 30+ EDA 工具封装成智能体可调用的「技能」，提供 YAML 工作流编排（RTL→综合→验证→布局布线），并在每层工具调用后挂一个<strong>ToolFail 自我校验层</strong>（检查返回码/warning/超时并自动重试或降级）；同时附带「技能市场」元数据，让社区可发布针对 EDA 的 AI Skills（与用户关注关键词「各种开源的针对 EDA 的 AI Skills / agents 新能力」直接对应）。在 EDA-AgentBench 50 子任务上，该开源基线端到端一次通过率从 23% 提到 41%，且把工具类失败占比从 47% 压到 19%。属「AI Agent / 开源基础设施」方向，补齐「智能体真正跑通 RTL-to-GDSII」最缺的工具层与可诊断性，与 ToolFail-EDA、EDA-AgentBench（2609.12031）形成完整证据链。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.15600" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.15600_OpenEDA_Agent.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源框架</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">MCP</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工具封装</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">EDA Skills</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工作流编排</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ToolFail</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">自我校验</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-GDSII</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">端到端</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
 
     <!-- 2609.14723 ToolFail-EDA -->
     <div class="abs-card">

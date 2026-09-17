@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（92篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（93篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2609.14910 RTLRepair-Agent -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ RTLRepair-Agent：多智能体 RTL 自动修复闭环——仿真失败二分定位、生成最小 diff 修复、回归验证零逃逸，把「生成-验证-反馈」做成可终止的回路</div>
+      <div class="abs-meta">arXiv:2609.14910 · cs.SE / cs.AR · 2026-09-17 · Sara Lindqvist, Hiroshi Yamamoto, Ava Thompson, Diego Morales, Jingwen Liu</div>
+      <div class="abs-body">LLM 生成 RTL 的「生成-验证-反馈闭环」长期矮化为「生成→整段重写」：一次仿真失败就推倒重来，既浪费已通过的部分，又因为改动面大引入新逃逸。RTLRepair-Agent 把闭环拆成三个专职智能体：① <strong>Locator（定位器）</strong>用仿真波形与报错做二分搜索，把故障收敛到具体信号/周期而非整模块；② <strong>Repairer（修复器）</strong>只产出<strong>最小 diff 修复</strong>（保留通过路径，仅改坏点），避免大改引入回归；③ <strong>Regressor（回归器）</strong>跑全部 testbench 确认零逃逸后才交付。三者通过共享「修复契约」串联：Locator 的结论直接约束 Repairer 的改动边界，Regressor 的失败再喂回 Locator。在 RTLLM v2.1 修复子集与 VerilogEval 失败样本上，相对单步重写 SOTA 可修复率提升 19.4pp、平均修复 diff 行数降 57%、回归逃逸降 72%。属「前端 RTL / 智慧体协作的 RTL 生成-验证-反馈闭环」方向，用「定位-最小修复-回归」三智能体把模糊的「再生成一次」升级为可终止、可追责的修复回路，与本站持续追踪的 Spec2RTL-Agent（2609.11342）、VeriRAG（2609.14102）主线首尾衔接。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.14910" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.14910_RTLRepair_Agent.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">自动修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">生成-验证闭环</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">最小diff</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">仿真定位</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">回归验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTLLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VerilogEval</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">反馈回路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.SE</span>
+      </div>
+    </div>
 
     <!-- 2609.14102 VeriRAG -->
     <div class="abs-card">

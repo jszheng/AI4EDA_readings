@@ -1,8 +1,29 @@
 {
-  "lastUpdate": "2026-09-17",
+  "lastUpdate": "2026-09-18",
   "cutoffDate": "2026-03-18",
-  "totalItems": 215,
+  "totalItems": 216,
   "items": [
+    {
+      "date": "2026-09-18",
+      "company": "NVIDIA",
+      "title": "🟢 NVIDIA 发布 cuLitho 2.0 与 Blackwell 平台深度集成：生成式逆光刻把掩模合成从小时级压到秒级，加速 AI 工厂芯片量产周转",
+      "link": "https://developer.nvidia.com/blog/culitho-2-generative-inverse-lithography-blackwell/",
+      "keywords": [
+        "NVIDIA",
+        "cuLitho",
+        "生成式逆光刻",
+        "ILT",
+        "计算光刻",
+        "Blackwell",
+        "掩模合成",
+        "秒级",
+        "AI工厂",
+        "量产周转",
+        "晶圆厂AI",
+        "产品发布",
+        "2026-09-18"
+      ]
+    },
     {
       "date": "2026-09-17",
       "company": "Synopsys",

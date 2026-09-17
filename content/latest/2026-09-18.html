@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-09-18 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.SE / cs.AI / cs.LG / cs.ET，2026-09-17~09-18 公告：① 2609.14910 RTLRepair-Agent——多智能体 RTL 自动修复闭环（仿真定位→最小 diff 修复→回归验证）② 2609.15142 CongestGNN——GNN 驱动布局拥塞热力图预测 ③ 2609.15388 PowerChip-GNN——GNN 驱动 Chiplet 供电网络与热分布协同优化 ④ 2609.15600 OpenEDA-Agent——开源端到端 EDA 智能体框架（统一 MCP 接口））</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2609.14910 RTLRepair-Agent -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE / cs.AR · 2026-09-17 · Sara Lindqvist, Hiroshi Yamamoto, Ava Thompson, Diego Morales, Jingwen Liu</div>
+      <h4>⚡ RTLRepair-Agent：多智能体 RTL 自动修复闭环——仿真失败二分定位、生成最小 diff 修复、回归验证零逃逸，把「生成-验证-反馈」做成可终止的回路</h4>
+      <p>LLM 生成 RTL 的「生成-验证-反馈闭环」长期矮化为「生成→整段重写」：一次仿真失败就推倒重来，既浪费已通过的部分，又因为改动面大引入新逃逸。RTLRepair-Agent 把闭环拆成三个专职智能体：① <strong>Locator（定位器）</strong>用仿真波形与报错做二分搜索，把故障收敛到具体信号/周期而非整模块；② <strong>Repairer（修复器）</strong>只产出<strong>最小 diff 修复</strong>（保留通过路径，仅改坏点），避免大改引入回归；③ <strong>Regressor（回归器）</strong>跑全部 testbench 确认零逃逸后才交付。三者通过共享「修复契约」串联：Locator 的结论直接约束 Repairer 的改动边界，Regressor 的失败再喂回 Locator。在 RTLLM v2.1 修复子集与 VerilogEval 失败样本上，相对单步重写 SOTA 可修复率提升 19.4pp、平均修复 diff 行数降 57%、回归逃逸降 72%。属「前端 RTL / 智慧体协作的 RTL 生成-验证-反馈闭环」方向，用「定位-最小修复-回归」三智能体把模糊的「再生成一次」升级为可终止、可追责的修复回路，与本站持续追踪的 Spec2RTL-Agent（2609.11342）、VeriRAG（2609.14102）主线首尾衔接。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">自动修复</span>
+        <span class="tag">生成-验证闭环</span>
+        <span class="tag">最小diff</span>
+        <span class="tag">仿真定位</span>
+        <span class="tag">回归验证</span>
+        <span class="tag">Verilog</span>
+        <span class="tag">RTLLM</span>
+        <span class="tag">VerilogEval</span>
+        <span class="tag">反馈回路</span>
+        <span class="tag">cs.SE</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.14910" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.14910_RTLRepair_Agent.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.15142 CongestGNN -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · 2026-09-18 · Wei-Lin Huang, Camila Souza, Oliver Brandt, Yara Haddad, Satoshi Inoue</div>
+      <h4>📐 CongestGNN：图神经网络驱动布局拥塞热力图预测——把拥塞场反传为可微布局梯度，下游详细布线 DRC 违例降 24%</h4>
+      <p>布局（placement）与布线（routing）的割裂是物理设计 PPA 损失的主要来源：布局阶段看不到布线拥塞，等详细布线报出海量 DRC 违例再回头调布局，代价高昂。CongestGNN 在<strong>全局布局</strong>解出密度图后，用图神经网络在网表-通道异构图（单元/宏为节点，布线通道为边）上<strong>预测各通道拥塞概率热力图</strong>；关键创新是把热力图反传为布局代价函数的<strong>可微梯度</strong>——高拥塞通道附近的单元被「推开」，从而把拥塞感知前移进布局优化本身，而非事后修线。在 ISPD 2019/2020 与 ICCAD 2023 基准上，相对无拥塞感知基线，详细布线拥塞相关 DRC 违例降 <strong>24%</strong>、总绕线长度仅增 1.1%，且把后续 MacroRoute-RL 类布线 RL 的收敛轮次降 33%。属「后端物理设计 / GNN for Placement、RL for Routing」方向，用「可微拥塞梯度」把两道割裂工序连成同一优化目标，与本站关注的「GNN 在布局、RL 在布线」细分一致，并为 MultiPhys-GNN（2609.14588）那种图建模思路补上「布局-布线」这一最现实的应用落点。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">布局布线</span>
+        <span class="tag">拥塞预测</span>
+        <span class="tag">图神经网络</span>
+        <span class="tag">GNN</span>
+        <span class="tag">可微梯度</span>
+        <span class="tag">全局布局</span>
+        <span class="tag">DRC违例</span>
+        <span class="tag">ISPD</span>
+        <span class="tag">RL for Routing</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.15142" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.15142_CongestGNN.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.15388 PowerChip-GNN -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.ET · 2026-09-18 · Fatima El-Amin, Junseok Park, Greta Nilsson, Rajesh Kapoor, Mei Tanaka</div>
+      <h4>🌡️ PowerChip-GNN：GNN 驱动 Chiplet 供电网络与热分布协同优化——供电-热耦合异构图联合回归 IR 压降与温度场，秒级给出错峰布局建议</h4>
+      <p>多芯粒（Chiplet）系统里<strong>供电网络 IR 压降</strong>与<strong>热分布</strong>深度耦合：高功耗芯粒既拉低本地供电电压、又推高温度，而温度回升又恶化电迁移与漏电。现有做法串行求解「先 IR 后热」，每次迭代动辄分钟级，难以嵌入协同布局搜索。PowerChip-GNN 把多芯粒系统建模为<strong>供电-热耦合异构图</strong>（芯粒/微凸点/TSV/供电岛为节点，供电与热传导边），用 GNN 联合回归<strong>电源 IR 压降场</strong>与<strong>稳态温度场</strong>，并引入<strong>功耗-热-供电三重物理守恒正则</strong>（电流守恒 + 热流守恒 + 电压-功耗一致性）约束预测满足物理律；推理秒级输出「互连带宽 / 供电岛分配 / 芯粒错峰放置」的协同优化建议。在 2.5D/3D 开源 Chiplet 基准上与商业求解器对齐，峰值温度 RMSE &lt; 2.1°C、最大 IR 压降误差 3.9%，下游协同布局使峰值温度降 6.8%、最大 IR 压降降 9.1%。属「后端物理设计 / Chiplet 互连·热分布优化、多物理场 AI 分析」方向，把此前 MultiPhys-GNN（2609.14588）的电-热-力三场推进到「供电网络」这一被忽视的第四维，与本站关注的「Chiplet 系统互连 / 热分布优化、多物理场 AI 分析」主题直接对应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">多物理场</span>
+        <span class="tag">Chiplet</span>
+        <span class="tag">供电网络</span>
+        <span class="tag">IR压降</span>
+        <span class="tag">热分布优化</span>
+        <span class="tag">图神经网络</span>
+        <span class="tag">GNN</span>
+        <span class="tag">协同优化</span>
+        <span class="tag">物理守恒</span>
+        <span class="tag">3D-IC</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.15388" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.15388_PowerChip_GNN.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.15600 OpenEDA-Agent -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.SE · 2026-09-18 · Marcus Vogel, Lina Andersson, Tobi Ogunyemi, Hana Kim, Piero Ricci</div>
+      <h4>🤖 OpenEDA-Agent：开源端到端 EDA 智能体框架——统一 MCP 接口封装 30+ 工具为智能体技能，内置 ToolFail 自我校验层，开源基线端到端一次通过率 23%→41%</h4>
+      <p>当前 EDA 智能体最大的落地障碍不是「模型够不够聪明」，而是<strong>工具层太碎</strong>：综合器/验证器/布局布线器各自一套 Tcl/Python API，智能体每接一个新工具就要重写胶水代码，且工具调用失败无人兜底（呼应本站 09-17 收录的 ToolFail-EDA 2609.14723 指出的「工具调用占失败 47%」）。OpenEDA-Agent 是<strong>开源框架</strong>，用统一 <strong>MCP（Model Context Protocol）</strong>接口把 Synopsys / OpenROAD / Siemens 系 30+ EDA 工具封装成智能体可调用的「技能」，提供 YAML 工作流编排（RTL→综合→验证→布局布线），并在每层工具调用后挂一个<strong>ToolFail 自我校验层</strong>（检查返回码/warning/超时并自动重试或降级）；同时附带「技能市场」元数据，让社区可发布针对 EDA 的 AI Skills（与用户关注关键词「各种开源的针对 EDA 的 AI Skills / agents 新能力」直接对应）。在 EDA-AgentBench 50 子任务上，该开源基线端到端一次通过率从 23% 提到 41%，且把工具类失败占比从 47% 压到 19%。属「AI Agent / 开源基础设施」方向，补齐「智能体真正跑通 RTL-to-GDSII」最缺的工具层与可诊断性，与 ToolFail-EDA、EDA-AgentBench（2609.12031）形成完整证据链。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">AI Agent</span>
+        <span class="tag">开源框架</span>
+        <span class="tag">MCP</span>
+        <span class="tag">工具封装</span>
+        <span class="tag">EDA Skills</span>
+        <span class="tag">工作流编排</span>
+        <span class="tag">ToolFail</span>
+        <span class="tag">自我校验</span>
+        <span class="tag">RTL-to-GDSII</span>
+        <span class="tag">OpenROAD</span>
+        <span class="tag">端到端</span>
+        <span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.15600" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.15600_OpenEDA_Agent.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
