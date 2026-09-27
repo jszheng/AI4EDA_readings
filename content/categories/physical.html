@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（84篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（85篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2609.16342 DRVRepair-RL -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 DRVRepair-RL：强化学习驱动设计规则违例（DRV）自动修复——把 DRC 违例聚类为可学习的布局后修复策略，详细布线违例降 29%</div>
+      <div class="abs-meta">arXiv:2609.16342 · cs.AR / cs.LG · 2026-09-25 · Priya Venkatesh, Björn Sandberg, Aiko Tanaka, Marco Bellini, Serena Fischer</div>
+      <div class="abs-body">布局后优化（post-placement optimization）里，<strong>设计规则违例（DRV）</strong>——最小面积、最小间距、阱连接、天线效应等——往往在详细布线阶段才集中爆发，而此时回改布局代价高昂。DRVRepair-RL 把 DRV 修复建模为<strong>序列决策</strong>：强化学习智能体在布局后图上逐簇处理违例，动作空间覆盖<strong>单元微移、well-tap 插入、填充单元（filler）布局、天线二极管插入</strong>，状态编码融合局部密度、违例类型分布与拥塞图；奖励函数把<strong>违例计数</strong>与<strong>可布线性惩罚</strong>联合加权，并引入<strong>违例聚类引导</strong>——先把同类违例聚成可批量修复的「修复单元」，再让 RL 学出该簇的最优修复组合，避免逐条修引入新违例。在 ISPD/TCAD 基准与开源 OpenROAD 流程上，相对商业 PPO + 逐条修复基线，详细布线 DRV 总数降 <strong>29%</strong>、修复迭代轮次降 36%、面积增仅 1.4%。属「后端物理设计 / 强化学习在单元大小调整、缓冲器插入、布局后优化的应用」方向，把此前 BufFormer（2609.14357）的 RL 联合决策扩展到「DRV 自动修复」这一最琐碎也最烧人力的工序，与本站关注的「RL 在布局布线」细分一致。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.16342" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.16342_DRVRepair_RL.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计规则违例</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRV</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">自动修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拥塞优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局后优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多目标优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.15142 CongestGNN -->
     <div class="abs-card">

@@ -1,8 +1,29 @@
 {
-  "lastUpdate": "2026-09-18",
+  "lastUpdate": "2026-09-25",
   "cutoffDate": "2026-03-18",
-  "totalItems": 216,
+  "totalItems": 217,
   "items": [
+    {
+      "date": "2026-09-25",
+      "company": "RapidSilicon",
+      "title": "🚀 RapidSilicon 发布 RapidFPGA Studio：AI 辅助 RTL-to-GDSII 开源设计平台——把 AI 智能体接入开源 OpenLane/Sky130 流程，中小团队可复用 30+ 预置 EDA Agent Skills 完成自主 PnR",
+      "link": "https://www.rapidsilicon.com/news/rapidfpga-studio-ai-agentic-rtl-to-gdsii/",
+      "keywords": [
+        "RapidSilicon",
+        "RapidFPGA Studio",
+        "开源EDA",
+        "RTL-to-GDSII",
+        "OpenLane",
+        "Sky130",
+        "AI Agent",
+        "EDA Skills",
+        "自主PnR",
+        "中小团队",
+        "agentic 设计",
+        "产品发布",
+        "2026-09-25"
+      ]
+    },
     {
       "date": "2026-09-18",
       "company": "NVIDIA",

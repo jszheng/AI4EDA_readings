@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（93篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（94篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2609.16110 RTLReview-Agent -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ RTLReview-Agent：多智能体 RTL 生成后审查闭环——自动审查生成 RTL 的设计缺陷、可维护性与规格漂移，把「生成-审查」做成可追责的质量闸门</div>
+      <div class="abs-meta">arXiv:2609.16110 · cs.SE / cs.AR · 2026-09-24 · Mateo Ferreira, Yuko Sato, Liam O'Connor, Nadia Hassan, Christoffer Berg</div>
+      <div class="abs-body">LLM 生成 RTL 的「生成-验证闭环」里，<strong>审查（review）</strong>长期被弱化为「仿真过了就行」，而真实工程里更多返工来自<strong>设计缺陷、可维护性差、规格漂移</strong>这类仿真不报错但后续会爆雷的问题。RTLReview-Agent 在生成之后接一道<strong>生成后审查闭环</strong>：① <strong>Defect-Reviewer（缺陷审查器）</strong>用静态分析 + LLM 对照契约检查死代码/锁存推断/异步复位缺失等可综合陷阱；② <strong>Maintain-Reviewer（可维护性审查器）</strong>评估模块耦合度、命名与接口一致性、可测试性，给出可执行的重构建议；③ <strong>Drift-Reviewer（漂移审查器）</strong>把生成 RTL 与原始规格做双向 diff，标出「代码变了但规格没跟上」的漂移点。三者结论汇总成一份<strong>可追溯审查报告</strong>，未通过阈值的 RTL 退回到生成器重做。在 RTLLM v2.1 与 VerilogEval 子集上，相对「仅仿真」基线，下游首次流片级返工降 41%、代码评审人工工时降 58%。属「前端 RTL / 智慧体协作的 RTL 生成-验证-反馈闭环」方向，把此前 Spec2RTL-Agent（2609.11342）、VeriRAG（2609.14102）、RTLRepair-Agent（2609.14910）聚焦的「生成-修复」补上最缺失的「生成后审查」质量闸门，使闭环从「能跑」升级到「可维护、可追溯」。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.16110" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.16110_RTLReview_Agent.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">生成-审查闭环</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">代码审查</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">规格漂移</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计缺陷</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可维护性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">静态分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VerilogEval</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">质量闸门</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">反馈回路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.SE</span>
+      </div>
+    </div>
 
     <!-- 2609.14910 RTLRepair-Agent -->
     <div class="abs-card">

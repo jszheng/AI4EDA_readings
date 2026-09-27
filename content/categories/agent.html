@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（48篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（49篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+
+    <!-- 2609.16723 EDAgent-SkillHub -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 EDAgent-SkillHub：面向 EDA 的 AI Skills 与 Agents 协同市场——社区可发布/复用针对 EDA 的智能体技能，统一评测与版本管理，技能库覆盖 RTL→GDSII 全链路</div>
+      <div class="abs-meta">arXiv:2609.16723 · cs.AI / cs.SE · 2026-09-25 · Anika Schulz, Diego Ramirez, Wei Liu, Marta Kowalski, Hassan Farouk</div>
+      <div class="abs-body">当前 EDA 智能体的落地瓶颈之一是<strong>技能碎片化</strong>：每个团队把「综合/验证/布局布线」封装成各自私有的 Agent Skill，难以跨项目复用，也没有统一评测与版本治理（呼应本站 09-18 收录的 OpenEDA-Agent 2609.15600 指出的「工具层太碎」）。EDAgent-SkillHub 提出一个<strong>面向 EDA 的 AI Skills 与 Agents 协同市场</strong>：用统一的技能描述规范（接口契约 + 输入/输出 schema + 依赖环境）让社区<strong>发布与复用针对 EDA 的智能体技能</strong>，平台提供<strong>自动评测</strong>（在标准化 RTL→综合→验证→布局布线容器上跑 pass/fail + QoR 回归）与<strong>语义版本管理</strong>（技能变更自动触发下游影响分析）；并附带<strong>技能组合推荐</strong>，按设计阶段把单点技能编排成端到端流水线。首发技能库已覆盖 RTL 生成、Lint、形式验证、OpenROAD PnR 等 30+ 预置技能，在 EDA-AgentBench（2609.12031）子任务上复用社区技能使新智能体端到端一次通过率从 41% 提到 52%。属「AI Agent / 开源基础设施·技能生态」方向，把「EDA 智能体真正跑通 RTL-to-GDSII」从单点工具升级为有治理、可复用的技能生态，与用户关注关键词「各种开源的针对 EDA 的 AI Skills / agents 新能力」直接对应，也为 OpenEDA-Agent 的 MCP 封装层补上「技能发现与评测」这一缺失环节。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.16723" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.16723_EDAgent_SkillHub.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源框架</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Agent Skills</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">技能市场</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">EDA Skills</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">协同市场</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">版本管理</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">统一评测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-GDSII</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">MCP</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工具封装</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">社区</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
 
     <!-- 2609.15600 OpenEDA-Agent -->
     <div class="abs-card">
