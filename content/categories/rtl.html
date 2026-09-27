@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（94篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（95篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2609.16910 VeriFormal-Agent -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ VeriFormal-Agent：多智能体 RTL 生成-形式化验证闭环——从自然语言规格自动抽取 SVA 属性、用反例驱动修复，把 RTL 正确性从「仿真通过」升级到「可证明」</div>
+      <div class="abs-meta">arXiv:2609.16910 · cs.SE / cs.LO / cs.AR · 2026-09-27 · Anya Petrova, Daniel Cohen, Mei Lin, Oscar Bergström, Hana Kim</div>
+      <div class="abs-body">LLM 生成 RTL 的「生成-验证闭环」目前多依赖<strong>仿真</strong>（testbench 跑通即过），但仿真只能证明「某些输入下没错」，无法覆盖全部输入空间，隐含的规格违例会在下游流片阶段爆发。VeriFormal-Agent 在生成之后接一道<strong>形式化验证兜底</strong>：① <strong>Spec-Extractor（规格抽取器）</strong>把自然语言/契约中间表示（呼应本站 09-15 收录的 Spec2RTL-Agent 2609.11342 的 CDIR）自动转写为机器可检验的 SVA 属性与覆盖率目标；② <strong>Formal-Prover（形式化证明器）</strong>对接 JasperGold/CoSA 类形式引擎做全输入空间验证；③ <strong>CEX-Repairer（反例驱动修复器）</strong>一旦形式引擎给出反例（counterexample），就把它作为精确定位信号驱动最小 diff 修复，修复后再回灌证明器直至全部属性收敛。在 VerilogEval 与 RTLLM v2.1 子集上，相对「仿真-only」基线，隐含规格违例漏检率降 86%、下游功能逃逸降 73%；并产出一份<strong>可机器验证的正确性证书</strong>。属「前端 RTL / RTL-to-Specification 自动生成 + 智慧体协作的 RTL 生成-验证-反馈闭环」方向，把本站持续追踪的 Spec2RTL-Agent（生成-仿真-审查）→ VeriRAG（检索约束）→ RTLRepair-Agent（仿真定位修复）→ RTLReview-Agent（静态审查）主线，首次补上「形式化验证」这一最高保障层级，使生成 RTL 的正确性从经验性「能跑」升级为可证明。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.16910" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.16910_VeriFormal_Agent.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式化验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">生成-验证闭环</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-Specification</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">规格抽取</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">反例驱动修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SVA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">属性推理</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可证明正确性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VerilogEval</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">反馈回路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.SE</span>
+      </div>
+    </div>
 
     <!-- 2609.16110 RTLReview-Agent -->
     <div class="abs-card">

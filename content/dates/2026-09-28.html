@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-09-28 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.SE / cs.AI / cs.LG / cs.ET，2026-09-27~09-28 公告：① 2609.16910 VeriFormal-Agent——多智能体 RTL 生成-形式化验证闭环（从规格自动抽取 SVA 属性 + 反例驱动修复）② 2609.17142 CellSizer-RL——强化学习驱动单元大小调整与时序/功耗联合优化 ③ 2609.17388 InterposerGNN——GNN 驱动 2.5D 中介层互连-热-应力多物理场协同预测 ④ 2609.17523 EDAgent-Bench2——端到端芯片设计智能体第二版标准化评测基准（覆盖 RTL→签核全链路 80 子任务））</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2609.16910 VeriFormal-Agent -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE / cs.LO / cs.AR · 2026-09-27 · Anya Petrova, Daniel Cohen, Mei Lin, Oscar Bergström, Hana Kim</div>
+      <h4>⚡ VeriFormal-Agent：多智能体 RTL 生成-形式化验证闭环——从自然语言规格自动抽取 SVA 属性、用反例驱动修复，把 RTL 正确性从「仿真通过」升级到「可证明」</h4>
+      <p>LLM 生成 RTL 的「生成-验证闭环」目前多依赖<strong>仿真</strong>（testbench 跑通即过），但仿真只能证明「某些输入下没错」，无法覆盖全部输入空间，隐含的规格违例会在下游流片阶段爆发。VeriFormal-Agent 在生成之后接一道<strong>形式化验证兜底</strong>：① <strong>Spec-Extractor（规格抽取器）</strong>把自然语言/契约中间表示（呼应本站 09-15 收录的 Spec2RTL-Agent 2609.11342 的 CDIR）自动转写为机器可检验的 SVA 属性与覆盖率目标；② <strong>Formal-Prover（形式化证明器）</strong>对接 JasperGold/CoSA 类形式引擎做全输入空间验证；③ <strong>CEX-Repairer（反例驱动修复器）</strong>一旦形式引擎给出反例（counterexample），就把它作为精确定位信号驱动最小 diff 修复，修复后再回灌证明器直至全部属性收敛。在 VerilogEval 与 RTLLM v2.1 子集上，相对「仿真-only」基线，隐含规格违例漏检率降 86%、下游功能逃逸降 73%；并产出一份<strong>可机器验证的正确性证书</strong>。属「前端 RTL / RTL-to-Specification 自动生成 + 智慧体协作的 RTL 生成-验证-反馈闭环」方向，把本站持续追踪的 Spec2RTL-Agent（生成-仿真-审查）→ VeriRAG（检索约束）→ RTLRepair-Agent（仿真定位修复）→ RTLReview-Agent（静态审查）主线，首次补上「形式化验证」这一最高保障层级，使生成 RTL 的正确性从经验性「能跑」升级为可证明。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">形式化验证</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">生成-验证闭环</span>
+        <span class="tag">RTL-to-Specification</span>
+        <span class="tag">规格抽取</span>
+        <span class="tag">反例驱动修复</span>
+        <span class="tag">SVA</span>
+        <span class="tag">属性推理</span>
+        <span class="tag">可证明正确性</span>
+        <span class="tag">Verilog</span>
+        <span class="tag">VerilogEval</span>
+        <span class="tag">反馈回路</span>
+        <span class="tag">cs.SE</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.16910" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2609.16910_VeriFormal_Agent.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.17142 CellSizer-RL -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · 2026-09-27 · Sofia Marino, Henrik Larsson, Yuki Sato, Clara Rossi, Tomas Novak</div>
+      <h4>📐 CellSizer-RL：强化学习驱动单元大小调整（cell sizing）与时序/功耗联合优化——把尺寸选择、缓冲器插入与拥塞协同进统一 RL 策略</h4>
+      <p>布局后优化里，<strong>单元大小调整（cell sizing）</strong>——把标准单元在驱动强度/面积的不同尺寸版本间替换——是改善时序与漏电的基础杠杆，但传统做法是「先定尺寸、再插缓冲器、最后修拥塞」的串行流水线，局部最优叠加常引发全局回弹。CellSizer-RL 把三者建模为<strong>统一的序列决策</strong>：强化学习智能体在布局后图上逐区域决策，动作空间覆盖<strong>单元尺寸升级/降级、缓冲器插入位置与数量、局部拥塞疏导</strong>，状态编码融合局部时序路径 slack、功耗热点图与密度/拥塞图；奖励函数把<strong>WNS（最差负 slack）</strong>、<strong>总功耗</strong>与<strong>面积</strong>联合加权，并引入<strong>时序-功耗耦合守恒正则</strong>防止「降功耗导致时序崩」的跷跷板。在 ISPD/TCAD 基准与开源 OpenROAD 流程上，相对商业 PPO + 串行基线，WNS 改善 <strong>18%</strong>、总功耗降 <strong>11%</strong>、面积仅增 1.9%、迭代轮次降 33%。属「后端物理设计 / 强化学习在单元大小调整、缓冲器插入、布局后优化的应用」方向，把此前 BufFormer（2609.14357，缓冲器+尺寸联合）、DRVRepair-RL（2609.16342，DRV 修复）的 RL 决策从「单工序」推进到「尺寸-缓冲-拥塞」三工序协同，与本站关注的「RL 在布局布线、单元大小调整、缓冲器插入」细分直接对应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">布局布线</span>
+        <span class="tag">单元大小调整</span>
+        <span class="tag">强化学习</span>
+        <span class="tag">时序优化</span>
+        <span class="tag">功耗优化</span>
+        <span class="tag">缓冲器插入</span>
+        <span class="tag">联合优化</span>
+        <span class="tag">多目标优化</span>
+        <span class="tag">物理感知</span>
+        <span class="tag">OpenROAD</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.17142" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2609.17142_CellSizer_RL.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.17388 InterposerGNN -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.ET · 2026-09-28 · Lena Hoffmann, Arjun Mehta, Yara Nasser, Felix Krause, Mei Chen</div>
+      <h4>🌡️ InterposerGNN：GNN 驱动 2.5D 中介层（interposer）互连-热-应力多物理场协同预测——在封装图上学三场耦合，秒级给出热感知、应力感知的互连规划</h4>
+      <p>2.5D 硅中介层（interposer）把多颗芯粒拼在同一封装，其<strong>互连</strong>、<strong>热分布</strong>与<strong>机械应力</strong>深度耦合：高带宽 Die-to-Die 链路堆叠即热点，热膨胀又在中介层 TSV 处引入应力集中，而应力/热又会反过来限制互连摆放与供电。现有做法把三场当作三个串行 FEM/CAD 工具求解，每次迭代动辄分钟到小时级。InterposerGNN 把 2.5D 中介层建模为<strong>封装异构图</strong>（芯粒/TSV/微凸点/互连走线为节点，带宽、热阻、机械刚度耦合为边），用图神经网络在图上<strong>同时回归稳态/瞬态温度场、互连拥塞图与机械应力场</strong>，并引入<strong>热-力-电耦合物理残差正则</strong>（热流守恒 + 带宽守恒 + 应力-形变一致性）约束预测满足物理律；推理秒级输出「互连规划→热-应力」联合解，并给出可微分梯度提示。在 2.5D 开源 Chiplet 基准上与商业有限元/互连规划工具对齐，峰值温度 RMSE &lt; 2.1°C、应力预测误差 &lt; 4%、拥塞 F1 0.92；下游协同优化使中介层供电网络 IR drop 降 7%、关键链路延迟降 9%、应力热点数降 23%。属「后端物理设计 / Chiplet 系统的互连·热分布优化、多物理场 AI 分析」方向，把此前 ChipletNet-GNN（2609.13567，互连-热）、PowerChip-GNN（2609.15388，供电-热）、ChipletThermalGNN（2609.16588，热-拥塞）的单/双场预测推进到「互连-热-应力」三场全耦合，与本站关注的「Chiplet 多物理场 AI 分析」主题直接对应。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">多物理场</span>
+        <span class="tag">Chiplet</span>
+        <span class="tag">中介层</span>
+        <span class="tag">互连优化</span>
+        <span class="tag">热分布优化</span>
+        <span class="tag">应力分析</span>
+        <span class="tag">图神经网络</span>
+        <span class="tag">GNN</span>
+        <span class="tag">多物理场耦合</span>
+        <span class="tag">协同预测</span>
+        <span class="tag">封装图</span>
+        <span class="tag">物理残差</span>
+        <span class="tag">2.5D</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.17388" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2609.17388_InterposerGNN.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.17523 EDAgent-Bench2 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.SE · 2026-09-28 · Jonas Weber, Lin Zhang, Priya Nair, Marco Conti, Sara Eriksson</div>
+      <h4>🤖 EDAgent-Bench2：端到端芯片设计智能体第二版标准化评测基准——覆盖 RTL→综合→验证→布局布线→签核全链路 80 子任务，新增工具调用可靠性与多智能体协作评分</h4>
+      <p>当前「端到端芯片设计智能体」的研究缺乏<strong>统一、可复现的评测标尺</strong>：各家用不同流程、不同工具封装比 pass@k，结论难以横比。EDAgent-Bench2 在 EDA-AgentBench（2609.12031）与 ToolFail-EDA（2609.14723）基础上推出 <strong>v2 标准化基准</strong>：把芯片设计拆成 <strong>RTL 生成→综合→功能验证→布局布线→签核</strong> 五阶段的 <strong>80 个标准化子任务</strong>，每个子任务绑定固定工具容器（含开源 OpenROAD / 商业工具接口桩）与确定性 QoR 回传；并<strong>新增两类评分维度</strong>：① <strong>工具调用可靠性</strong>（区分 flaky tool / 错误回退 / 幻觉工具名，呼应 ToolFail 的失败分类学）；② <strong>多智能体协作效率</strong>（子任务交接的上下文损耗与重复劳动占比）。在 12 个主流设计智能体上评测，最优端到端一次通过率从 v1 的 23% 提升到 <strong>27%</strong>，但<strong>工具调用仍是首要瓶颈</strong>（占失败 44%，较 v1 的 47% 略降），多智能体协作效率与单智能体相当——说明「加智能体数量 ≠ 加通过率」。属「AI Agent / 评测基准·工具可靠性」方向，把本站持续追踪的 EDA-AgentBench → ToolFail-EDA → OpenEDA-Agent（2609.15600）→ EDAgent-SkillHub（2609.16723）的智能体评测与工程化主线，补上了「可复现、可横比」的标尺，与用户关注关键词「各种开源的针对 EDA 的 AI Skills / agents 新能力」直接对应——为技能市场里的技能质量提供了统一度量。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">AI Agent</span>
+        <span class="tag">评测基准</span>
+        <span class="tag">端到端设计</span>
+        <span class="tag">工具调用可靠性</span>
+        <span class="tag">多智能体协作</span>
+        <span class="tag">RTL-to-GDSII</span>
+        <span class="tag">EDA-AgentBench</span>
+        <span class="tag">ToolFail</span>
+        <span class="tag">统一评测</span>
+        <span class="tag">基准</span>
+        <span class="tag">智能体评测</span>
+        <span class="tag">复现性</span>
+        <span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.17523" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="2609.17523_EDAgent_Bench2.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>

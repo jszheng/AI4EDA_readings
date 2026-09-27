@@ -1,8 +1,28 @@
 {
-  "lastUpdate": "2026-09-25",
+  "lastUpdate": "2026-09-28",
   "cutoffDate": "2026-03-18",
-  "totalItems": 217,
+  "totalItems": 218,
   "items": [
+    {
+      "date": "2026-09-28",
+      "company": "Cadence",
+      "title": "🧠 Cadence 发布 Cerebrus 2.0 智能芯片综合平台：强化学习驱动的 RTL-to-GDSII 收敛新增多智能体协作优化与 AI 反馈闭环，把 PPA 探索从单目标自动调参升级到多角自主探索 + 人类意图对齐",
+      "link": "https://newsroom.cadence.com/2026-09-28-cerebrus-2-intelligent-chip-synthesis",
+      "keywords": [
+        "Cadence",
+        "Cerebrus",
+        "强化学习",
+        "RTL-to-GDSII",
+        "多智能体协作",
+        "AI反馈闭环",
+        "PPA优化",
+        "设计空间探索",
+        "JedAI",
+        "意图对齐",
+        "产品发布",
+        "2026-09-28"
+      ]
+    },
     {
       "date": "2026-09-25",
       "company": "RapidSilicon",

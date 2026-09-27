@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（50篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（51篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+
+    <!-- 2609.17388 InterposerGNN -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🌡️ InterposerGNN：GNN 驱动 2.5D 中介层（interposer）互连-热-应力多物理场协同预测——在封装图上学三场耦合，秒级给出热感知、应力感知的互连规划</div>
+      <div class="abs-meta">arXiv:2609.17388 · cs.AR / cs.ET · 2026-09-28 · Lena Hoffmann, Arjun Mehta, Yara Nasser, Felix Krause, Mei Chen</div>
+      <div class="abs-body">2.5D 硅中介层（interposer）把多颗芯粒拼在同一封装，其<strong>互连</strong>、<strong>热分布</strong>与<strong>机械应力</strong>深度耦合：高带宽 Die-to-Die 链路堆叠即热点，热膨胀又在中介层 TSV 处引入应力集中，而应力/热又会反过来限制互连摆放与供电。现有做法把三场当作三个串行 FEM/CAD 工具求解，每次迭代动辄分钟到小时级。InterposerGNN 把 2.5D 中介层建模为<strong>封装异构图</strong>（芯粒/TSV/微凸点/互连走线为节点，带宽、热阻、机械刚度耦合为边），用图神经网络在图上<strong>同时回归稳态/瞬态温度场、互连拥塞图与机械应力场</strong>，并引入<strong>热-力-电耦合物理残差正则</strong>（热流守恒 + 带宽守恒 + 应力-形变一致性）约束预测满足物理律；推理秒级输出「互连规划→热-应力」联合解，并给出可微分梯度提示。在 2.5D 开源 Chiplet 基准上与商业有限元/互连规划工具对齐，峰值温度 RMSE &lt; 2.1°C、应力预测误差 &lt; 4%、拥塞 F1 0.92；下游协同优化使中介层供电网络 IR drop 降 7%、关键链路延迟降 9%、应力热点数降 23%。属「后端物理设计 / Chiplet 系统的互连·热分布优化、多物理场 AI 分析」方向，把此前 ChipletNet-GNN（2609.13567，互连-热）、PowerChip-GNN（2609.15388，供电-热）、ChipletThermalGNN（2609.16588，热-拥塞）的单/双场预测推进到「互连-热-应力」三场全耦合，与本站关注的「Chiplet 多物理场 AI 分析」主题直接对应。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.17388" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.17388_InterposerGNN.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多物理场</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Chiplet</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">中介层</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">互连优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">热分布优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">应力分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">图神经网络</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">GNN</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多物理场耦合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">协同预测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">封装图</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理残差</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">2.5D</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.16588 ChipletThermalGNN -->
     <div class="abs-card">

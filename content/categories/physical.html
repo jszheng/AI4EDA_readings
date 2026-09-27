@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（85篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（86篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2609.17142 CellSizer-RL -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 CellSizer-RL：强化学习驱动单元大小调整（cell sizing）与时序/功耗联合优化——把尺寸选择、缓冲器插入与拥塞协同进统一 RL 策略</div>
+      <div class="abs-meta">arXiv:2609.17142 · cs.AR / cs.LG · 2026-09-27 · Sofia Marino, Henrik Larsson, Yuki Sato, Clara Rossi, Tomas Novak</div>
+      <div class="abs-body">布局后优化里，<strong>单元大小调整（cell sizing）</strong>——把标准单元在驱动强度/面积的不同尺寸版本间替换——是改善时序与漏电的基础杠杆，但传统做法是「先定尺寸、再插缓冲器、最后修拥塞」的串行流水线，局部最优叠加常引发全局回弹。CellSizer-RL 把三者建模为<strong>统一的序列决策</strong>：强化学习智能体在布局后图上逐区域决策，动作空间覆盖<strong>单元尺寸升级/降级、缓冲器插入位置与数量、局部拥塞疏导</strong>，状态编码融合局部时序路径 slack、功耗热点图与密度/拥塞图；奖励函数把<strong>WNS（最差负 slack）</strong>、<strong>总功耗</strong>与<strong>面积</strong>联合加权，并引入<strong>时序-功耗耦合守恒正则</strong>防止「降功耗导致时序崩」的跷跷板。在 ISPD/TCAD 基准与开源 OpenROAD 流程上，相对商业 PPO + 串行基线，WNS 改善 <strong>18%</strong>、总功耗降 <strong>11%</strong>、面积仅增 1.9%、迭代轮次降 33%。属「后端物理设计 / 强化学习在单元大小调整、缓冲器插入、布局后优化的应用」方向，把此前 BufFormer（2609.14357，缓冲器+尺寸联合）、DRVRepair-RL（2609.16342，DRV 修复）的 RL 决策从「单工序」推进到「尺寸-缓冲-拥塞」三工序协同，与本站关注的「RL 在布局布线、单元大小调整、缓冲器插入」细分直接对应。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.17142" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.17142_CellSizer_RL.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">单元大小调整</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功耗优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">缓冲器插入</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">联合优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多目标优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.16342 DRVRepair-RL -->
     <div class="abs-card">

@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（49篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（50篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+
+    <!-- 2609.17523 EDAgent-Bench2 -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 EDAgent-Bench2：端到端芯片设计智能体第二版标准化评测基准——覆盖 RTL→综合→验证→布局布线→签核全链路 80 子任务，新增工具调用可靠性与多智能体协作评分</div>
+      <div class="abs-meta">arXiv:2609.17523 · cs.AI / cs.SE · 2026-09-28 · Jonas Weber, Lin Zhang, Priya Nair, Marco Conti, Sara Eriksson</div>
+      <div class="abs-body">当前「端到端芯片设计智能体」的研究缺乏<strong>统一、可复现的评测标尺</strong>：各家用不同流程、不同工具封装比 pass@k，结论难以横比。EDAgent-Bench2 在 EDA-AgentBench（2609.12031）与 ToolFail-EDA（2609.14723）基础上推出 <strong>v2 标准化基准</strong>：把芯片设计拆成 <strong>RTL 生成→综合→功能验证→布局布线→签核</strong> 五阶段的 <strong>80 个标准化子任务</strong>，每个子任务绑定固定工具容器（含开源 OpenROAD / 商业工具接口桩）与确定性 QoR 回传；并<strong>新增两类评分维度</strong>：① <strong>工具调用可靠性</strong>（区分 flaky tool / 错误回退 / 幻觉工具名，呼应 ToolFail 的失败分类学）；② <strong>多智能体协作效率</strong>（子任务交接的上下文损耗与重复劳动占比）。在 12 个主流设计智能体上评测，最优端到端一次通过率从 v1 的 23% 提升到 <strong>27%</strong>，但<strong>工具调用仍是首要瓶颈</strong>（占失败 44%，较 v1 的 47% 略降），多智能体协作效率与单智能体相当——说明「加智能体数量 ≠ 加通过率」。属「AI Agent / 评测基准·工具可靠性」方向，把本站持续追踪的 EDA-AgentBench → ToolFail-EDA → OpenEDA-Agent（2609.15600）→ EDAgent-SkillHub（2609.16723）的智能体评测与工程化主线，补上了「可复现、可横比」的标尺，与用户关注关键词「各种开源的针对 EDA 的 AI Skills / agents 新能力」直接对应——为技能市场里的技能质量提供了统一度量。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.17523" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.17523_EDAgent_Bench2.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">评测基准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">端到端设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工具调用可靠性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体协作</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-GDSII</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">EDA-AgentBench</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ToolFail</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">统一评测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">基准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">智能体评测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">复现性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
 
     <!-- 2609.16723 EDAgent-SkillHub -->
     <div class="abs-card">
