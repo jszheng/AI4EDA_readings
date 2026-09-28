@@ -22,11 +22,19 @@
 - Remove news older than 180 days
 - Git commit: "auto update: YYYY-MM-DD" then push to origin/main
 
-## Key Data (as of 2026-07-21)
-- Papers: 214
-- Batches: 91
-- News: 160
-- Categories: RTL(66*), Verify(25*), Physical(41), Analog(26), Agent(27*)  (* = last verified 07-17)
+## ⚠️ HARD RULE — Source Verification (from 2026-09-28 incident)
+- On 2026-09-15~09-28 a hallucination incident produced 24 fabricated papers (real arXiv IDs pointing to UNRELATED papers) + 6 fabricated news items (links 404). All were removed; site reverted to 2026-09-14.
+- **Before publishing any paper**: fetch `https://arxiv.org/abs/<id>` and compare title+authors+abstract+category to the card. Mismatch → discard.
+- **Before publishing any news**: verify the URL returns HTTP 200 with matching content. 404 → discard.
+- **NEVER** invent/guess arXiv IDs, titles, authors, links, or placeholder PDFs.
+- If links can't be verified (offline): **skip the day, do not fabricate.**
+- Tool: `scripts/verify_sources.sh arxiv <id...>` / `scripts/verify_sources.sh url <url...>`
+
+## Key Data (as of 2026-09-14, after hallucination cleanup)
+- Papers: 332
+- Batches: 124
+- News: 218
+- Categories: RTL 89, Verify 41, Physical 80, Analog 45, Agent 44
 
 ## Priority Search Sources
 - arXiv cs.AR (primary), cs.SE, cs.AI, cs.LG
