@@ -7,88 +7,9 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（86篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（80篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
-
-    <!-- 2609.17142 CellSizer-RL -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">📐 CellSizer-RL：强化学习驱动单元大小调整（cell sizing）与时序/功耗联合优化——把尺寸选择、缓冲器插入与拥塞协同进统一 RL 策略</div>
-      <div class="abs-meta">arXiv:2609.17142 · cs.AR / cs.LG · 2026-09-27 · Sofia Marino, Henrik Larsson, Yuki Sato, Clara Rossi, Tomas Novak</div>
-      <div class="abs-body">布局后优化里，<strong>单元大小调整（cell sizing）</strong>——把标准单元在驱动强度/面积的不同尺寸版本间替换——是改善时序与漏电的基础杠杆，但传统做法是「先定尺寸、再插缓冲器、最后修拥塞」的串行流水线，局部最优叠加常引发全局回弹。CellSizer-RL 把三者建模为<strong>统一的序列决策</strong>：强化学习智能体在布局后图上逐区域决策，动作空间覆盖<strong>单元尺寸升级/降级、缓冲器插入位置与数量、局部拥塞疏导</strong>，状态编码融合局部时序路径 slack、功耗热点图与密度/拥塞图；奖励函数把<strong>WNS（最差负 slack）</strong>、<strong>总功耗</strong>与<strong>面积</strong>联合加权，并引入<strong>时序-功耗耦合守恒正则</strong>防止「降功耗导致时序崩」的跷跷板。在 ISPD/TCAD 基准与开源 OpenROAD 流程上，相对商业 PPO + 串行基线，WNS 改善 <strong>18%</strong>、总功耗降 <strong>11%</strong>、面积仅增 1.9%、迭代轮次降 33%。属「后端物理设计 / 强化学习在单元大小调整、缓冲器插入、布局后优化的应用」方向，把此前 BufFormer（2609.14357，缓冲器+尺寸联合）、DRVRepair-RL（2609.16342，DRV 修复）的 RL 决策从「单工序」推进到「尺寸-缓冲-拥塞」三工序协同，与本站关注的「RL 在布局布线、单元大小调整、缓冲器插入」细分直接对应。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.17142" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.17142_CellSizer_RL.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">单元大小调整</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功耗优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">缓冲器插入</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">联合优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多目标优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
-      </div>
-    </div>
-
-    <!-- 2609.16342 DRVRepair-RL -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">📐 DRVRepair-RL：强化学习驱动设计规则违例（DRV）自动修复——把 DRC 违例聚类为可学习的布局后修复策略，详细布线违例降 29%</div>
-      <div class="abs-meta">arXiv:2609.16342 · cs.AR / cs.LG · 2026-09-25 · Priya Venkatesh, Björn Sandberg, Aiko Tanaka, Marco Bellini, Serena Fischer</div>
-      <div class="abs-body">布局后优化（post-placement optimization）里，<strong>设计规则违例（DRV）</strong>——最小面积、最小间距、阱连接、天线效应等——往往在详细布线阶段才集中爆发，而此时回改布局代价高昂。DRVRepair-RL 把 DRV 修复建模为<strong>序列决策</strong>：强化学习智能体在布局后图上逐簇处理违例，动作空间覆盖<strong>单元微移、well-tap 插入、填充单元（filler）布局、天线二极管插入</strong>，状态编码融合局部密度、违例类型分布与拥塞图；奖励函数把<strong>违例计数</strong>与<strong>可布线性惩罚</strong>联合加权，并引入<strong>违例聚类引导</strong>——先把同类违例聚成可批量修复的「修复单元」，再让 RL 学出该簇的最优修复组合，避免逐条修引入新违例。在 ISPD/TCAD 基准与开源 OpenROAD 流程上，相对商业 PPO + 逐条修复基线，详细布线 DRV 总数降 <strong>29%</strong>、修复迭代轮次降 36%、面积增仅 1.4%。属「后端物理设计 / 强化学习在单元大小调整、缓冲器插入、布局后优化的应用」方向，把此前 BufFormer（2609.14357）的 RL 联合决策扩展到「DRV 自动修复」这一最琐碎也最烧人力的工序，与本站关注的「RL 在布局布线」细分一致。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.16342" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.16342_DRVRepair_RL.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计规则违例</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRV</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">自动修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拥塞优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局后优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多目标优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
-      </div>
-    </div>
-
-    <!-- 2609.15142 CongestGNN -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">📐 CongestGNN：图神经网络驱动布局拥塞热力图预测——把拥塞场反传为可微布局梯度，下游详细布线 DRC 违例降 24%</div>
-      <div class="abs-meta">arXiv:2609.15142 · cs.AR / cs.LG · 2026-09-18 · Wei-Lin Huang, Camila Souza, Oliver Brandt, Yara Haddad, Satoshi Inoue</div>
-      <div class="abs-body">布局（placement）与布线（routing）的割裂是物理设计 PPA 损失的主要来源：布局阶段看不到布线拥塞，等详细布线报出海量 DRC 违例再回头调布局，代价高昂。CongestGNN 在<strong>全局布局</strong>解出密度图后，用图神经网络在网表-通道异构图（单元/宏为节点，布线通道为边）上<strong>预测各通道拥塞概率热力图</strong>；关键创新是把热力图反传为布局代价函数的<strong>可微梯度</strong>——高拥塞通道附近的单元被「推开」，从而把拥塞感知前移进布局优化本身，而非事后修线。在 ISPD 2019/2020 与 ICCAD 2023 基准上，相对无拥塞感知基线，详细布线拥塞相关 DRC 违例降 <strong>24%</strong>、总绕线长度仅增 1.1%，且把后续 MacroRoute-RL 类布线 RL 的收敛轮次降 33%。属「后端物理设计 / GNN for Placement、RL for Routing」方向，用「可微拥塞梯度」把两道割裂工序连成同一优化目标，与本站关注的「GNN 在布局、RL 在布线」细分一致，并为 MultiPhys-GNN（2609.14588）那种图建模思路补上「布局-布线」这一最现实的应用落点。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.15142" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.15142_CongestGNN.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拥塞预测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">图神经网络</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">GNN</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可微梯度</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">全局布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRC违例</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ISPD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RL for Routing</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
-      </div>
-    </div>
-
-    <!-- 2609.14357 BufFormer -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">📐 BufFormer：强化学习驱动缓冲器插入与单元大小联合优化——时序/功耗/面积多目标在布局后协同收敛</div>
-      <div class="abs-meta">arXiv:2609.14357 · cs.AR / cs.LG · 2026-09-17 · Daniel Okafor, Mei-Ling Chen, Arun Patil, Hannah Schmidt, Yuto Kobayashi</div>
-      <div class="abs-body">布局后优化（post-placement optimization）里，<strong>缓冲器插入</strong>与<strong>单元大小调整（cell sizing）</strong>长期被当作两道串行工序：先定缓冲再定尺寸，彼此割裂导致局部最优。BufFormer 把二者建模为<strong>联合序列决策</strong>，以强化学习智能体在网表图上逐节点决定「是否插缓冲、插几级、邻近单元选大驱动还是小驱动」：状态融合时序关键度、净电容、翻转率与拥塞；奖励对<strong>最差负裕量（WNS）</strong>、<strong>总负裕量（TNS）</strong>、漏电功耗与面积做帕累托加权。为避免 RL 不可微，BufFormer 用<strong>可微分代理目标</strong>预热策略、再切换真实签核指标微调。在 ISPD/TCAD 基准与开源 OpenROAD 流程上，相对 Synopsys 系商业 PPO + 独立 sizing 基线，WNS 改善 11.3%、漏电降 9.7%、面积增仅 1.8%，且详细布线绕通率提升。属「后端物理设计 / 强化学习在单元大小调整、缓冲器插入的应用」方向，用「RL 联合决策 + 可微分预热」把两道割裂工序升级为带记忆的可收敛协同优化，与本站关注的「RL 在布局布线/缓冲器插入」细分一致。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.14357" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.14357_BufFormer.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">缓冲器插入</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">单元大小调整</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序收敛</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功耗优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多目标优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
-      </div>
-    </div>
-
-    <!-- 2609.13342 MacroRoute-RL -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">📐 MacroRoute-RL：强化学习全局布线——历史感知拥塞预测 + 时序关键路径加权，溢出与 DRV 联合下降</div>
-      <div class="abs-meta">arXiv:2609.13342 · cs.AR / cs.LG · 2026-09-15 · Marco Ricci, Anjali Deshmukh, Björn Lindqvist, Chen-Wei Huang, Saoirse Murphy</div>
-      <div class="abs-body">全局布线（global routing）决定后续详细布线的拥塞与可绕性，但传统 Steiner/ILP 方法对「布线后拥塞」只能事后补救。MacroRoute-RL 把全局布线建模为<strong>序列决策</strong>，以强化学习智能体逐区选择布线资源分配：状态编码融合<strong>历史感知拥塞图</strong>（对过去迭代中反复溢出的网格加权）、网表超图与时序关键度；奖励函数把<strong>溢出（overflow）</strong>与<strong>设计规则违例（DRV）</strong>联合惩罚，并对时序关键网络（critical net）给予更高权重以优先保时序。在 ISPD/TCAD 基准与开源 OpenROAD 流程上，相对仅做线长/拥塞优化的基线，总溢出降 47%、DRV 降 34%、最差负裕量（WNS）改善 8.1%，且下游详细布线绕通率提升。属「后端物理设计 / 强化学习布局布线」方向，用「历史感知拥塞 + 时序加权的 RL 奖励」把全局布线从一次性分配升级为带记忆的可收敛决策，与本站关注的「RL 在布局布线/缓冲器插入」细分一致。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.13342" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.13342_MacroRoute_RL.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">全局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拥塞优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRV</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序关键路径</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">溢出</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">历史感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
-      </div>
-    </div>
-
-    <!-- 2609.11589 PlaceGO -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">📐 PlaceGO：强化学习宏布局与时钟树协同优化——把时钟树预算作为布局奖励的一部分，DRV 与时钟偏差（skew）联合下降</div>
-      <div class="abs-meta">arXiv:2609.11589 · cs.AR / cs.LG · 2026-09-13 · Daniel Okonkwo, Priya Venkatasubramanian, Tobias Krüger, Serena Liu, Raghav Mehta</div>
-      <div class="abs-body">传统宏布局（macro placement）与时钟树综合（CTS）分阶段进行，布局阶段看不到时钟约束，导致后续 CTS 长时钟线、拥塞与时序难以收敛。PlaceGO 提出<strong>布局-时钟协同优化</strong>框架：以强化学习智能体在布局过程中即时估计时钟树代价（线长、skew 上界、缓冲需求），把<strong>时钟树预算折进布局奖励</strong>，使宏与标准单元的摆放天然避开时钟热点；动作空间采用可微分 softmax 摆放 + 策略梯度，状态编码融合网表超图、拥塞图与时序关键度。在 ISPD/TCAD 基准与开源 OpenROAD 流程上，相对仅做线长/拥塞优化的基线，最差负裕量（WNS）改善 9.4%、设计规则违例（DRV）降 31%、时钟 skew 降 22%，且总绕线拥塞降 14%。属「后端物理设计 / 强化学习布局布线」方向。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.11589" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.11589_PlaceGO.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">宏布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时钟树综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">CTS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序收敛</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRV</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
-      </div>
-    </div>
-
 
     <!-- 2609.08232 Routing Dense Layouts RL -->
     <div class="abs-card">

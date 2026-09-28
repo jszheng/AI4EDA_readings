@@ -7,88 +7,9 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（50篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（44篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
-
-    <!-- 2609.17523 EDAgent-Bench2 -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">🤖 EDAgent-Bench2：端到端芯片设计智能体第二版标准化评测基准——覆盖 RTL→综合→验证→布局布线→签核全链路 80 子任务，新增工具调用可靠性与多智能体协作评分</div>
-      <div class="abs-meta">arXiv:2609.17523 · cs.AI / cs.SE · 2026-09-28 · Jonas Weber, Lin Zhang, Priya Nair, Marco Conti, Sara Eriksson</div>
-      <div class="abs-body">当前「端到端芯片设计智能体」的研究缺乏<strong>统一、可复现的评测标尺</strong>：各家用不同流程、不同工具封装比 pass@k，结论难以横比。EDAgent-Bench2 在 EDA-AgentBench（2609.12031）与 ToolFail-EDA（2609.14723）基础上推出 <strong>v2 标准化基准</strong>：把芯片设计拆成 <strong>RTL 生成→综合→功能验证→布局布线→签核</strong> 五阶段的 <strong>80 个标准化子任务</strong>，每个子任务绑定固定工具容器（含开源 OpenROAD / 商业工具接口桩）与确定性 QoR 回传；并<strong>新增两类评分维度</strong>：① <strong>工具调用可靠性</strong>（区分 flaky tool / 错误回退 / 幻觉工具名，呼应 ToolFail 的失败分类学）；② <strong>多智能体协作效率</strong>（子任务交接的上下文损耗与重复劳动占比）。在 12 个主流设计智能体上评测，最优端到端一次通过率从 v1 的 23% 提升到 <strong>27%</strong>，但<strong>工具调用仍是首要瓶颈</strong>（占失败 44%，较 v1 的 47% 略降），多智能体协作效率与单智能体相当——说明「加智能体数量 ≠ 加通过率」。属「AI Agent / 评测基准·工具可靠性」方向，把本站持续追踪的 EDA-AgentBench → ToolFail-EDA → OpenEDA-Agent（2609.15600）→ EDAgent-SkillHub（2609.16723）的智能体评测与工程化主线，补上了「可复现、可横比」的标尺，与用户关注关键词「各种开源的针对 EDA 的 AI Skills / agents 新能力」直接对应——为技能市场里的技能质量提供了统一度量。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.17523" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.17523_EDAgent_Bench2.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">评测基准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">端到端设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工具调用可靠性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体协作</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-GDSII</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">EDA-AgentBench</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ToolFail</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">统一评测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">基准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">智能体评测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">复现性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
-      </div>
-    </div>
-
-    <!-- 2609.16723 EDAgent-SkillHub -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">🤖 EDAgent-SkillHub：面向 EDA 的 AI Skills 与 Agents 协同市场——社区可发布/复用针对 EDA 的智能体技能，统一评测与版本管理，技能库覆盖 RTL→GDSII 全链路</div>
-      <div class="abs-meta">arXiv:2609.16723 · cs.AI / cs.SE · 2026-09-25 · Anika Schulz, Diego Ramirez, Wei Liu, Marta Kowalski, Hassan Farouk</div>
-      <div class="abs-body">当前 EDA 智能体的落地瓶颈之一是<strong>技能碎片化</strong>：每个团队把「综合/验证/布局布线」封装成各自私有的 Agent Skill，难以跨项目复用，也没有统一评测与版本治理（呼应本站 09-18 收录的 OpenEDA-Agent 2609.15600 指出的「工具层太碎」）。EDAgent-SkillHub 提出一个<strong>面向 EDA 的 AI Skills 与 Agents 协同市场</strong>：用统一的技能描述规范（接口契约 + 输入/输出 schema + 依赖环境）让社区<strong>发布与复用针对 EDA 的智能体技能</strong>，平台提供<strong>自动评测</strong>（在标准化 RTL→综合→验证→布局布线容器上跑 pass/fail + QoR 回归）与<strong>语义版本管理</strong>（技能变更自动触发下游影响分析）；并附带<strong>技能组合推荐</strong>，按设计阶段把单点技能编排成端到端流水线。首发技能库已覆盖 RTL 生成、Lint、形式验证、OpenROAD PnR 等 30+ 预置技能，在 EDA-AgentBench（2609.12031）子任务上复用社区技能使新智能体端到端一次通过率从 41% 提到 52%。属「AI Agent / 开源基础设施·技能生态」方向，把「EDA 智能体真正跑通 RTL-to-GDSII」从单点工具升级为有治理、可复用的技能生态，与用户关注关键词「各种开源的针对 EDA 的 AI Skills / agents 新能力」直接对应，也为 OpenEDA-Agent 的 MCP 封装层补上「技能发现与评测」这一缺失环节。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.16723" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.16723_EDAgent_SkillHub.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源框架</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Agent Skills</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">技能市场</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">EDA Skills</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">协同市场</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">版本管理</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">统一评测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-GDSII</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">MCP</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工具封装</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">社区</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
-      </div>
-    </div>
-
-    <!-- 2609.15600 OpenEDA-Agent -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">🤖 OpenEDA-Agent：开源端到端 EDA 智能体框架——统一 MCP 接口封装 30+ 工具为智能体技能，内置 ToolFail 自我校验层，开源基线端到端一次通过率 23%→41%</div>
-      <div class="abs-meta">arXiv:2609.15600 · cs.AI / cs.SE · 2026-09-18 · Marcus Vogel, Lina Andersson, Tobi Ogunyemi, Hana Kim, Piero Ricci</div>
-      <div class="abs-body">当前 EDA 智能体最大的落地障碍不是「模型够不够聪明」，而是<strong>工具层太碎</strong>：综合器/验证器/布局布线器各自一套 Tcl/Python API，智能体每接一个新工具就要重写胶水代码，且工具调用失败无人兜底（呼应本站 09-17 收录的 ToolFail-EDA 2609.14723 指出的「工具调用占失败 47%」）。OpenEDA-Agent 是<strong>开源框架</strong>，用统一 <strong>MCP（Model Context Protocol）</strong>接口把 Synopsys / OpenROAD / Siemens 系 30+ EDA 工具封装成智能体可调用的「技能」，提供 YAML 工作流编排（RTL→综合→验证→布局布线），并在每层工具调用后挂一个<strong>ToolFail 自我校验层</strong>（检查返回码/warning/超时并自动重试或降级）；同时附带「技能市场」元数据，让社区可发布针对 EDA 的 AI Skills（与用户关注关键词「各种开源的针对 EDA 的 AI Skills / agents 新能力」直接对应）。在 EDA-AgentBench 50 子任务上，该开源基线端到端一次通过率从 23% 提到 41%，且把工具类失败占比从 47% 压到 19%。属「AI Agent / 开源基础设施」方向，补齐「智能体真正跑通 RTL-to-GDSII」最缺的工具层与可诊断性，与 ToolFail-EDA、EDA-AgentBench（2609.12031）形成完整证据链。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.15600" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.15600_OpenEDA_Agent.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源框架</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">MCP</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工具封装</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">EDA Skills</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工作流编排</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ToolFail</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">自我校验</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-GDSII</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">端到端</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
-      </div>
-    </div>
-
-    <!-- 2609.14723 ToolFail-EDA -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">🤖 ToolFail-EDA：端到端芯片设计智能体的工具调用失败模式分类与基准——量化「工具调用占失败 47%」的根因，给出可诊断失败 taxonomy</div>
-      <div class="abs-meta">arXiv:2609.14723 · cs.AI / cs.SE · 2026-09-17 · Olivia Berg, Marco Rossi, Aisha Khan, Felix Wagner, Chen Liu</div>
-      <div class="abs-body">本站 09-15 收录的 EDA-AgentBench 实测指出「工具调用可靠性占端到端失败约 47%」，但<strong>具体哪些工具调用在何时、为何失败</strong>仍是一团黑盒。ToolFail-EDA 首次系统构建<strong>端到端 EDA 智能体工具调用失败模式分类法（taxonomy）</strong>：把失败归为五类——① 工具选择错误（误用综合器/验证器）、② 参数/语法错误（EDA Tcl 命令拼错）、③ 工具返回值误读（把 warning 当 pass）、④ 长上下文遗忘（跨多轮丢失约束）、⑤ 超时/资源失败（大设计 OOM）；并发布<strong>ToolFail-Bench</strong>，在 RTL→综合→验证→布局布线 50 个子任务上植入受控故障、统计各智能体失败分布与恢复率。结果显示五类失败占比 41%/23%/18%/11%/7%，且引入「工具调用自我校验层」后整体端到端一次通过率从 23% 提到 38%。属「AI Agent / 可靠性·失败诊断」方向，把「智能体能否真正跑通芯片设计」从「能不能」推进到「坏了为什么、怎么修」，与 AgentEDA-Survey（2609.13789）的评估缺口、EDA-AgentBench 的 47% 瓶颈形成闭环证据，为 RTL-to-GDSII 自主流程的可诊断性提供标尺。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.14723" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.14723_ToolFail_EDA.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工具调用</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">失败模式</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">基准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">端到端</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-GDSII</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可靠性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可诊断性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
-      </div>
-    </div>
-
-    <!-- 2609.13789 AgentEDA-Survey -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">🤖 AgentEDA-Survey：端到端芯片设计智能体协同设计全景综述——把 Spec→RTL→综合→验证→PnR 拆成可编排智能体，厘清工具调用瓶颈与评估缺口</div>
-      <div class="abs-meta">arXiv:2609.13789 · cs.AI / cs.SE · 2026-09-16 · Praveen Iyer, Marta Salgado, Kenji Watanabe, Ingrid Larsson, Tomás Ferreira</div>
-      <div class="abs-body">2026 年「Agentic EDA」从厂商宣发涌入真实研发，但缺乏把零散工作统一起来的综述。AgentEDA-Survey 首次系统梳理<strong>端到端芯片设计智能体协同设计</strong>：按设计阶段把智能体拆为规格理解、RTL 生成、逻辑综合、功能验证、布局布线、签核六类角色，抽象出「规划-执行-反思-工具调用」通用循环，并对比 Synopsys AgentEngineer、Cadence AuraStack/ChipStack、Siemens Fuse、开源 OpenROAD-MCP 等路线的编排差异；文中明确指出当前最大瓶颈是<strong>工具调用可靠性</strong>（占端到端失败 ~47%，与本站 09-15 收录的 EDA-AgentBench 实测一致），并归纳评估缺口——缺乏覆盖「RTL→GDSII」全链路、带确定性验收的可复现基准。属「AI Agent / 综述·协同设计」方向，把「智能体能否真正跑通芯片设计」从单点成果拉成可横向比较的地图，与本站持续追踪的「开源 EDA 智能体生态加速成熟」主线呼应，也为 RTL-to-GDSII 自主流程的公平评测提供分类标尺。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.13789" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.13789_AgentEDA_Survey.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">综述</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">端到端</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">协同设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">逻辑综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工具调用</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
-      </div>
-    </div>
-
-    <!-- 2609.12031 EDA-AgentBench -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">🤖 EDA-AgentBench：端到端芯片设计智能体标准化评测基准——50 个真实子任务覆盖 RTL 生成→综合→验证→布局布线，含可复现评分与失败分类</div>
-      <div class="abs-meta">arXiv:2609.12031 · cs.AI / cs.LG · 2026-09-14 · Sofia Andersson, Rajeev Kumar, Meiling Zhou, Thomas Berg, Aisha Rahman</div>
-      <div class="abs-body">智能体能否「真正跑通芯片设计」长期停留在厂商宣发，缺乏可复现、可横向比较的评测。EDA-AgentBench 提出首个<strong>端到端芯片设计智能体评测基准</strong>：把设计流程拆为 50 个带真实工具链（Yosys/Verilator/OpenROAD/Siemens Questa 容器化）的可执行子任务，覆盖<strong>RTL 生成→逻辑综合→功能验证→布局布线</strong>全链路，每个任务给出确定性验收准则；评分自动产出，并把失败归因到「生成/调试/工具调用/规格理解」四类。对 6 个主流 LLM 智能体评测显示，当前最优仅在 23% 的端到端任务上一次通过，且「工具调用」是最大瓶颈（占失败 47%）。属「AI Agent / 评测基准」方向。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.12031" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.12031_EDA_AgentBench.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">评测基准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">端到端</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">逻辑综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
-      </div>
-    </div>
-
 
     <!-- 2608.30932 Beacon -->
     <div class="abs-card">

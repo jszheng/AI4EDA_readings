@@ -7,88 +7,9 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（95篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（89篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
-
-    <!-- 2609.16910 VeriFormal-Agent -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">⚡ VeriFormal-Agent：多智能体 RTL 生成-形式化验证闭环——从自然语言规格自动抽取 SVA 属性、用反例驱动修复，把 RTL 正确性从「仿真通过」升级到「可证明」</div>
-      <div class="abs-meta">arXiv:2609.16910 · cs.SE / cs.LO / cs.AR · 2026-09-27 · Anya Petrova, Daniel Cohen, Mei Lin, Oscar Bergström, Hana Kim</div>
-      <div class="abs-body">LLM 生成 RTL 的「生成-验证闭环」目前多依赖<strong>仿真</strong>（testbench 跑通即过），但仿真只能证明「某些输入下没错」，无法覆盖全部输入空间，隐含的规格违例会在下游流片阶段爆发。VeriFormal-Agent 在生成之后接一道<strong>形式化验证兜底</strong>：① <strong>Spec-Extractor（规格抽取器）</strong>把自然语言/契约中间表示（呼应本站 09-15 收录的 Spec2RTL-Agent 2609.11342 的 CDIR）自动转写为机器可检验的 SVA 属性与覆盖率目标；② <strong>Formal-Prover（形式化证明器）</strong>对接 JasperGold/CoSA 类形式引擎做全输入空间验证；③ <strong>CEX-Repairer（反例驱动修复器）</strong>一旦形式引擎给出反例（counterexample），就把它作为精确定位信号驱动最小 diff 修复，修复后再回灌证明器直至全部属性收敛。在 VerilogEval 与 RTLLM v2.1 子集上，相对「仿真-only」基线，隐含规格违例漏检率降 86%、下游功能逃逸降 73%；并产出一份<strong>可机器验证的正确性证书</strong>。属「前端 RTL / RTL-to-Specification 自动生成 + 智慧体协作的 RTL 生成-验证-反馈闭环」方向，把本站持续追踪的 Spec2RTL-Agent（生成-仿真-审查）→ VeriRAG（检索约束）→ RTLRepair-Agent（仿真定位修复）→ RTLReview-Agent（静态审查）主线，首次补上「形式化验证」这一最高保障层级，使生成 RTL 的正确性从经验性「能跑」升级为可证明。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.16910" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.16910_VeriFormal_Agent.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式化验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">生成-验证闭环</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-Specification</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">规格抽取</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">反例驱动修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SVA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">属性推理</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可证明正确性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VerilogEval</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">反馈回路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.SE</span>
-      </div>
-    </div>
-
-    <!-- 2609.16110 RTLReview-Agent -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">⚡ RTLReview-Agent：多智能体 RTL 生成后审查闭环——自动审查生成 RTL 的设计缺陷、可维护性与规格漂移，把「生成-审查」做成可追责的质量闸门</div>
-      <div class="abs-meta">arXiv:2609.16110 · cs.SE / cs.AR · 2026-09-24 · Mateo Ferreira, Yuko Sato, Liam O'Connor, Nadia Hassan, Christoffer Berg</div>
-      <div class="abs-body">LLM 生成 RTL 的「生成-验证闭环」里，<strong>审查（review）</strong>长期被弱化为「仿真过了就行」，而真实工程里更多返工来自<strong>设计缺陷、可维护性差、规格漂移</strong>这类仿真不报错但后续会爆雷的问题。RTLReview-Agent 在生成之后接一道<strong>生成后审查闭环</strong>：① <strong>Defect-Reviewer（缺陷审查器）</strong>用静态分析 + LLM 对照契约检查死代码/锁存推断/异步复位缺失等可综合陷阱；② <strong>Maintain-Reviewer（可维护性审查器）</strong>评估模块耦合度、命名与接口一致性、可测试性，给出可执行的重构建议；③ <strong>Drift-Reviewer（漂移审查器）</strong>把生成 RTL 与原始规格做双向 diff，标出「代码变了但规格没跟上」的漂移点。三者结论汇总成一份<strong>可追溯审查报告</strong>，未通过阈值的 RTL 退回到生成器重做。在 RTLLM v2.1 与 VerilogEval 子集上，相对「仅仿真」基线，下游首次流片级返工降 41%、代码评审人工工时降 58%。属「前端 RTL / 智慧体协作的 RTL 生成-验证-反馈闭环」方向，把此前 Spec2RTL-Agent（2609.11342）、VeriRAG（2609.14102）、RTLRepair-Agent（2609.14910）聚焦的「生成-修复」补上最缺失的「生成后审查」质量闸门，使闭环从「能跑」升级到「可维护、可追溯」。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.16110" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.16110_RTLReview_Agent.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">生成-审查闭环</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">代码审查</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">规格漂移</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计缺陷</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可维护性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">静态分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VerilogEval</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">质量闸门</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">反馈回路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.SE</span>
-      </div>
-    </div>
-
-    <!-- 2609.14910 RTLRepair-Agent -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">⚡ RTLRepair-Agent：多智能体 RTL 自动修复闭环——仿真失败二分定位、生成最小 diff 修复、回归验证零逃逸，把「生成-验证-反馈」做成可终止的回路</div>
-      <div class="abs-meta">arXiv:2609.14910 · cs.SE / cs.AR · 2026-09-17 · Sara Lindqvist, Hiroshi Yamamoto, Ava Thompson, Diego Morales, Jingwen Liu</div>
-      <div class="abs-body">LLM 生成 RTL 的「生成-验证-反馈闭环」长期矮化为「生成→整段重写」：一次仿真失败就推倒重来，既浪费已通过的部分，又因为改动面大引入新逃逸。RTLRepair-Agent 把闭环拆成三个专职智能体：① <strong>Locator（定位器）</strong>用仿真波形与报错做二分搜索，把故障收敛到具体信号/周期而非整模块；② <strong>Repairer（修复器）</strong>只产出<strong>最小 diff 修复</strong>（保留通过路径，仅改坏点），避免大改引入回归；③ <strong>Regressor（回归器）</strong>跑全部 testbench 确认零逃逸后才交付。三者通过共享「修复契约」串联：Locator 的结论直接约束 Repairer 的改动边界，Regressor 的失败再喂回 Locator。在 RTLLM v2.1 修复子集与 VerilogEval 失败样本上，相对单步重写 SOTA 可修复率提升 19.4pp、平均修复 diff 行数降 57%、回归逃逸降 72%。属「前端 RTL / 智慧体协作的 RTL 生成-验证-反馈闭环」方向，用「定位-最小修复-回归」三智能体把模糊的「再生成一次」升级为可终止、可追责的修复回路，与本站持续追踪的 Spec2RTL-Agent（2609.11342）、VeriRAG（2609.14102）主线首尾衔接。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.14910" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.14910_RTLRepair_Agent.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">自动修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">生成-验证闭环</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">最小diff</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">仿真定位</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">回归验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTLLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VerilogEval</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">反馈回路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.SE</span>
-      </div>
-    </div>
-
-    <!-- 2609.14102 VeriRAG -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">⚡ VeriRAG：面向 Verilog 的检索增强生成——从「已验证代码片段库」检索可复用模式，把规格→RTL 的幻觉率打到接近零</div>
-      <div class="abs-meta">arXiv:2609.14102 · cs.SE / cs.AR · 2026-09-16 · Elena Vásquez, Kenji Nakamura, Priya Iyer, Lukas Bauer, Sofia Romano</div>
-      <div class="abs-body">LLM 直接生成 Verilog 的顽疾是<strong>幻觉</strong>：凭空发明不存在的模块端口、信号或 IP，且生成结果难以追溯「为什么这么写」。VeriRAG 把<strong>检索增强生成（RAG）</strong>引入 RTL 生成：先从一个<strong>已验证代码片段库</strong>（VerilogEval / RTLLM 黄金参考 + 开源可综合 IP）构建带接口契约与测试平台通过证据的向量索引，生成时先用规格检索最相关的「已验证 RTL 片段 + 其契约」，再把检索内容作为强上下文约束注入生成，使输出可追溯到具体参考实现；并引入<strong>检索分歧检测</strong>——当多个候选片段契约冲突时显式要求澄清而非静默拼接。在 VerilogEval-Human 与 RTLLM v2.1 子集上，相对无检索基线 pass@1 提升 14.2pp、端口/信号级幻觉降 81%，且 95% 的最终设计零 Lint。属「前端 RTL / Retrieval-Augmented Generation (RAG) for Verilog」方向，用「已验证片段检索 + 契约约束 + 分歧检测」把 RTL 生成从自由创作升级为可溯源、可验证的受约束生成，与本站持续追踪的「契约中间表示 + 真实仿真反馈」主线直接呼应，也补齐了用户关注关键词里「RAG for Verilog」这一独立细分。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.14102" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.14102_VeriRAG.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RAG</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">检索增强</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">防幻觉</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">契约约束</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VerilogEval</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTLLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.SE</span>
-      </div>
-    </div>
-
-    <!-- 2609.13110 VeriSpec -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">⚡ VeriSpec：从 RTL 自动反推机器可读设计规格——双向契约让 RTL↔Spec 可追溯，把验证从「文本意图」接回「代码现实」</div>
-      <div class="abs-meta">arXiv:2609.13110 · cs.SE / cs.AR · 2026-09-15 · Hannah Bergström, Ravi Subramanian, Yuki Tanabe, Olivia Nwosu, Felix Krause</div>
-      <div class="abs-body">LLM 生成 RTL 的「生成-验证闭环」长期卡在一个隐性缺口：<strong>规格（specification）本身没有被机器可读地锚定</strong>，于是 Verilog 与「设计者真正想要的意图」之间始终隔着一段自然语言。VeriSpec 提出<strong>RTL→Spec 自动反推</strong>：用静态分析 + LLM 协同，从可综合 Verilog 抽取接口契约、FSM 转移、时序不变量与数据通路语义，编译成机器可读、可被形式工具消费的规格中间表示；并构建<strong>RTL↔Spec 双向契约</strong>，使任何一处 RTL 改动都能自动 diff 出受影响规格、任何规格变更也能定位到对应代码。在多个开源 RTL 模块上，反推规格与黄金参考一致率 91%，且把下游「规格漂移」类验证逃逸降 63%。属「前端 RTL / RTL-to-Specification 自动生成」方向，用「可机器消费的规格」补齐生成-验证闭环里被忽视的「意图锚点」，与本站持续追踪的「契约中间表示 + 真实仿真反馈」主线直接呼应，也为 RTL-to-Specification 自动生成这一被低估的细分补齐了反方向基础设施。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.13110" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.13110_VeriSpec.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL-to-Specification</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">规格反推</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">双向契约</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可追溯</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">验证反馈</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计意图</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.SE</span>
-      </div>
-    </div>
-
-    <!-- 2609.11342 Spec2RTL-Agent -->
-    <div class="abs-card">
-      <span class="badge-new">NEW</span>
-      <div class="abs-title">⚡ Spec2RTL-Agent：多智能体 RTL 生成-验证闭环——意图规格自动拆解为模块契约，生成器/仿真器/审查器三类智能体迭代收敛至可综合、零 Lint 的 Verilog</div>
-      <div class="abs-meta">arXiv:2609.11342 · cs.SE / cs.AI · 2026-09-12 · Lin Zhao, Wei Chen, Ananya Rao, Marcus Feldman, Hao Sun</div>
-      <div class="abs-body">大语言模型生成 RTL 的瓶颈不在「写出第一行代码」，而在「生成-验证-修复」的闭环成本高、反馈稀疏。Spec2RTL-Agent 把自然语言/文档规格自动拆解为带接口契约的模块级子任务，由<strong>生成智能体</strong>（产出可综合 Verilog）、<strong>仿真智能体</strong>（自动构造 testbench、跑 Icarus/Yosys 收集真实波形与报错）、<strong>审查智能体</strong>（对照契约做覆盖与一致性裁决）三类智能体闭环迭代；引入<strong>契约驱动的中间表示（CDIR）</strong>把「规格↔RTL↔仿真」三态对齐，使失败可定位到具体信号与周期而非整段重写。在 VerilogEval-Human 与 RTLLM v2.1 子集上相对单步生成 pass@1 提升 18.6pp，平均修复轮次降 41%，且 92% 的最终设计零 Lint 告警。属「前端 RTL / 智能体协作的 RTL 生成-验证-反馈闭环」方向。</div>
-      <div class="abs-links">
-        <a href="https://arxiv.org/abs/2609.11342" target="_blank">📄 arXiv</a>
-        <a class="local" href="../dates/2609.11342_Spec2RTL_Agent.pdf">📥 本地PDF</a>
-        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">生成-验证闭环</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">契约中间表示</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">仿真反馈</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VerilogEval</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTLLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.SE</span>
-      </div>
-    </div>
-
 
     <!-- 2609.10057 AutoTrans -->
     <div class="abs-card">
