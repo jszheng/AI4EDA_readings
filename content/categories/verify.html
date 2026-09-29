@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（41篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（42篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+
+    <!-- 2609.30131 LLM4PDR -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">✅ LLM4PDR：Enhancing Word-Level Property Directed Reachability with LLM-Driven Semantic Guidance——LLM 为字级 PDR 提供谓词/子句/断言三类语义引导，Pono 上算术基准 28/33（baseline 13/33）</div>
+      <div class="abs-meta">arXiv:2609.30131 · cs.AR · 2026-09-24 · Guangyu Hu, Mingkai Miao, Zhiyuan Yan, Xiaofeng Zhou, Wei Zhang, Hongce Zhang</div>
+      <div class="abs-body">性质定向可达性（PDR）是硬件形式验证的重要算法。位级 PDR 在 datapath 密集设计上常因位爆破掩盖高层语义而失效；字级 PDR 通过对位向量与数组理论推理缓解，但性能仍受限于发现证明相关的字级关系。本文提出 LLM4PDR，用 LLM 通过三种机制引导字级 PDR：谓词生成、子句生成与断言生成，并集成进 Pono 模型检验器。在算术微基准、HLS 流水线、开源 RTL 与 HWMCC 实例上评测：最强配置在 33 个算术基准中解出 28 个（原始 Pono 13 个、AVR 11 个）；HWMCC 困难实例显著加速并避免超时。表明 LLM 生成、经检验器校验的语义提示可作为传统字级 PDR 的实用补充。属「功能验证 / LLM 辅助形式验证」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.30131" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.30131_LLM4PDR.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PDR</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">字级</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM引导</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Pono</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">谓词生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HWMCC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.10057 AutoTrans -->
     <div class="abs-card">

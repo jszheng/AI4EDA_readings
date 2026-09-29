@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-09-29 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.AI，论文提交于 2026-09-21~28，2026-09-29 检索并逐篇经 arxiv.org/abs 核验）。本日无经核验可达的行业新闻，新闻条目为 0。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2609.34452 C2FPlace -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-28 · Biao Liu, Zhiping Jin, Kaixuan Sun, Zengrui Lu, Qingquan Zhang, Bo Yuan</div>
+      <h4>📐 C2FPlace: Coarse-to-Fine Macro Placement via Evolutionary Search and Critical Macro Tuning——粗到细宏布局框架，演化搜索 + 关键宏微调，ISPD2005 上 HPWL 较 EGPlace/RollPlace 降 17.8%，ICCAD2025 平均排名最佳</h4>
+      <p>宏布局是芯片物理设计中显著影响下游实现质量的关键环节。近期基于搜索的方法通过局部重构改进已有布局，但质量偏置或空间受限的宏选择限制了重构方案的多样性，可能阻碍跳出局部最优；且粗网格表示限制了布局精度。本文提出 C2FPlace，一个将群体演化搜索与细粒度精化结合的粗到细宏布局框架：粗粒度优化阶段用锦标赛选择从随机分组的布局中挑选有前景的父代，并用随机部分撕除与重放生成子代；两阶段调度先以较高重构比例、后以较低比例采样，兼顾广泛探索与保守精化；细粒度优化阶段用关键宏微调实现超出粗网格的位置调整，获得额外 HPWL 降低。在 ISPD2005 基准上，C2FPlace 相对 EGPlace 与 RollPlace 平均 HPWL 降低 17.82% / 17.86%；在 ICCAD2025 基准上取得参与对比方法中的最佳平均排名。代码已开源。属「后端物理设计 / 宏布局」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">物理设计</span>
+        <span class="tag">宏布局</span>
+        <span class="tag">布局规划</span>
+        <span class="tag">演化搜索</span>
+        <span class="tag">关键宏微调</span>
+        <span class="tag">HPWL</span>
+        <span class="tag">ICCAD2025</span>
+        <span class="tag">粗到细</span>
+        <span class="tag">开源</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.34452" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.34452_C2FPlace.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.34785 BEHAVE -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 2026-09-28 · Yuheng Wu, Berk Gokmen, Sujeeth Jinesh, Lauren McLane, Aarav Wattal, Qi Yang Huang, Zhaozhuo Xu, Thierry Tambe</div>
+      <h4>🤖 BEHAVE: Functional Behavior Modeling Enables Self-Improving Agents for Hardware Design and Verification——行为 IR + 功能行为建模的多轮硬件设计-验证智能体，用规范-行为对提供可验证 RL 奖励，自提升使 Qwen3.8-27B 的 RTL pass@1 从 55%→75%</h4>
+      <p>开发面向硬件设计-验证的智能体需要可靠的正确性反馈。由于硬件规范可能允许具有不同时延的正确实现，逐周期比对设计与参考输出会拒绝有效设计。本文提出 BEHAVE，一个通过功能行为建模实现多轮联合硬件设计与验证的智能体框架：定义 Behavior IR 把任务功能表达为可执行行为模型，不规定规范之外的实现时序；智能体迭代地开发 RTL 设计与作为验证参考的行为模型。其评估器 BEHAVE-Sim 用随机采样与求解器引导搜索生成的输入激励对照隐藏的黄金行为模型检查。训练中，同一评估器从规范-行为对提供可验证的强化学习奖励，无需参考 RTL；自提升阶段持续搜索能力缺口相关的高层实现并在扩充任务池上训练。发布 BEHAVE-Train 与 BEHAVE-Eval（600 条人工审校规范-行为对）。从 60 个种子任务出发自提升新增 100 个任务，Qwen3.8-27B 在 BEHAVE-Eval 上的 RTL pass@1 从 55.0% 提升至 75.0%。属「AI Agent / 硬件设计-验证闭环」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">多智能体</span>
+        <span class="tag">硬件设计</span>
+        <span class="tag">功能验证</span>
+        <span class="tag">行为建模</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">自提升</span>
+        <span class="tag">强化学习奖励</span>
+        <span class="tag">BEHAVE</span>
+        <span class="tag">Qwen</span>
+        <span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.34785" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.34785_BEHAVE.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.26830 LLM Circuit Eval -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-21 · Ali Hedayati Pirouzan</div>
+      <h4>⚡ Validation and Simulation Catch Different Errors: Four Levels of Evaluation for LLM-Generated Circuits——LLM 生成电路的四级评测，揭示结构有效性 ≠ 可仿真执行，提出 schema/拓扑/后端可执行/组件集一致性四级，150 电路基准量化两类错误</h4>
+      <p>对 LLM 生成的电路，仿真成功并不等价于结构正确。本文在 150 电路三语言基准上定义并度量四级评测——模式有效性、拓扑有效性、后端可执行性与组件集一致性。四级并不嵌套：在 gpt-4o-mini 上，150 个电路中有 16 个被拓扑校验器拒绝却在 ngspice 中无错执行（其中 12 个恰含所请求组件但有一端子悬空）；相反 7 个通过校验却被 ngspice 拒绝；说明两种检查各自捕获对方遗漏的一类错误。配对消融显示模型修复把拓扑有效性从 40.0% 提升至 84.4%（无回归）。结论：结构校验与仿真应作为 LLM 生成电路的两个独立评测阶段报告。属「前端 RTL / 生成电路质量评测」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">RTL生成</span>
+        <span class="tag">电路生成评测</span>
+        <span class="tag">结构校验</span>
+        <span class="tag">仿真</span>
+        <span class="tag">拓扑有效性</span>
+        <span class="tag">ngspice</span>
+        <span class="tag">LLM</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.26830" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.26830_LLMCircuitEval.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2609.30131 LLM4PDR -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-24 · Guangyu Hu, Mingkai Miao, Zhiyuan Yan, Xiaofeng Zhou, Wei Zhang, Hongce Zhang</div>
+      <h4>✅ LLM4PDR: Enhancing Word-Level Property Directed Reachability with LLM-Driven Semantic Guidance——LLM 为字级 PDR 提供谓词/子句/断言三类语义引导，Pono 上算术基准 28/33（baseline 13/33），强化字级形式验证</h4>
+      <p>性质定向可达性（PDR）是硬件形式验证的重要算法。位级 PDR 在 datapath 密集设计上常因位爆破掩盖高层语义而失效；字级 PDR 通过对位向量与数组理论推理缓解，但性能仍受限于发现证明相关的字级关系。本文提出 LLM4PDR，用大语言模型通过三种机制引导字级 PDR 搜索：谓词生成（归纳泛化抽取状态关系候选谓词）、子句生成（校验后产生候选帧引理加速收敛）、断言生成（合成辅助断言强化目标性质）。在 Pono 模型检验器中实现并在算术微基准、HLS 流水线、开源 RTL 与 HWMCC 实例上评测：最强配置在 33 个算术基准中解出 28 个（原始 Pono 13 个、AVR 11 个）；HWMCC 困难实例上显著加速并避免超时。表明 LLM 生成、经检验器校验的语义提示可作为传统字级 PDR 的实用补充。属「功能验证 / LLM 辅助形式验证」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span>
+        <span class="tag">功能验证</span>
+        <span class="tag">形式验证</span>
+        <span class="tag">PDR</span>
+        <span class="tag">字级</span>
+        <span class="tag">LLM引导</span>
+        <span class="tag">Pono</span>
+        <span class="tag">谓词生成</span>
+        <span class="tag">HWMCC</span>
+        <span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.30131" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.30131_LLM4PDR.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

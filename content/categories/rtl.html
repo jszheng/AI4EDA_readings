@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（89篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（90篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2609.26830 LLM Circuit Eval -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ LLM 生成电路的四级评测：Validation and Simulation Catch Different Errors——结构有效性 ≠ 可仿真执行，150 电路基准量化两类错误，模型修复使拓扑有效性 40%→84%</div>
+      <div class="abs-meta">arXiv:2609.26830 · cs.AR · 2026-09-21 · Ali Hedayati Pirouzan</div>
+      <div class="abs-body">对 LLM 生成的电路，仿真成功并不等价于结构正确。本文在 150 电路三语言基准上定义并度量四级评测——模式有效性、拓扑有效性、后端可执行性与组件集一致性，基于以类型化电路交换表示为核心的已部署流水线。四级并不嵌套：gpt-4o-mini 上 16 个电路被拓扑校验器拒绝却在 ngspice 中无错执行（其中 12 个恰含所请求组件但有一端子悬空），相反 7 个通过校验却被 ngspice 拒绝；两种检查各自捕获对方遗漏的一类错误。配对消融显示模型修复把拓扑有效性从 40.0% 提升至 84.4%（无回归），可执行性净变动 +6、组件一致性 +2。结论：结构校验与仿真应作为 LLM 生成电路的两个独立评测阶段报告。属「前端 RTL / 生成电路质量评测」方向，为 LLM 生成电路（模拟/数字）的可靠性评测提供了方法论基础。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.26830" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.26830_LLMCircuitEval.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">电路生成评测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">结构校验</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">仿真</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拓扑有效性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ngspice</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.10057 AutoTrans -->
     <div class="abs-card">

@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（44篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（45篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+
+    <!-- 2609.34785 BEHAVE -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 BEHAVE：Functional Behavior Modeling Enables Self-Improving Agents for Hardware Design and Verification——行为 IR + 功能行为建模的多轮硬件设计-验证智能体，自提升使 Qwen3.8-27B 的 RTL pass@1 从 55%→75%</div>
+      <div class="abs-meta">arXiv:2609.34785 · cs.AI · 2026-09-28 · Yuheng Wu, Berk Gokmen, Sujeeth Jinesh, Lauren McLane, Aarav Wattal, Qi Yang Huang, Zhaozhuo Xu, Thierry Tambe</div>
+      <div class="abs-body">开发面向硬件设计-验证的智能体需要可靠的正确性反馈。由于硬件规范可能允许具有不同时延的正确实现，逐周期比对会拒绝有效设计。本文提出 BEHAVE，通过功能行为建模实现多轮联合硬件设计与验证：定义 Behavior IR 把任务功能表达为可执行行为模型，智能体迭代开发 RTL 与验证参考行为模型；评估器 BEHAVE-Sim 用随机采样与求解器引导搜索对照黄金行为模型检查。训练中同一评估器从规范-行为对提供可验证 RL 奖励，无需参考 RTL；自提升阶段搜索能力缺口相关实现并在扩充任务池训练。发布 BEHAVE-Train/Eval（600 条人工审校规范-行为对）。从 60 种子任务自提升新增 100 任务，Qwen3.8-27B 的 RTL pass@1 从 55.0% 提升至 75.0%。属「AI Agent / 硬件设计-验证闭环」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.34785" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.34785_BEHAVE.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">行为建模</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">自提升</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习奖励</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">BEHAVE</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Qwen</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
 
     <!-- 2608.30932 Beacon -->
     <div class="abs-card">

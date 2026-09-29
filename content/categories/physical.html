@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（80篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（81篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2609.34452 C2FPlace -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 C2FPlace：Coarse-to-Fine Macro Placement via Evolutionary Search and Critical Macro Tuning——演化搜索 + 关键宏微调的粗到细宏布局，ISPD2005 上 HPWL 较 EGPlace/RollPlace 降 17.8%，ICCAD2025 平均排名最佳</div>
+      <div class="abs-meta">arXiv:2609.34452 · cs.AR · 2026-09-28 · Biao Liu, Zhiping Jin, Kaixuan Sun, Zengrui Lu, Qingquan Zhang, Bo Yuan</div>
+      <div class="abs-body">宏布局是芯片物理设计中显著影响下游实现质量的关键环节。近期基于搜索的方法通过局部重构改进布局，但质量偏置或空间受限的宏选择限制重构方案多样性、阻碍跳出局部最优，且粗网格表示限制精度。本文提出 C2FPlace，将群体演化搜索与细粒度精化结合的粗到细宏布局框架：粗粒度阶段用锦标赛选择挑父代、随机部分撕除与重放生成子代，两阶段调度先高后低采样重构比例；细粒度阶段用关键宏微调获得超出粗网格的额外 HPWL 降低。在 ISPD2005 上相对 EGPlace/RollPlace 平均 HPWL 降 17.82%/17.86%；在 ICCAD2025 上取得对比方法最佳平均排名。代码已开源。属「后端物理设计 / 宏布局」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.34452" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.34452_C2FPlace.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">宏布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局规划</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">演化搜索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">关键宏微调</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HPWL</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ICCAD2025</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">粗到细</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2609.08232 Routing Dense Layouts RL -->
     <div class="abs-card">
