@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>
+  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+    .pending { display: inline-block; background: #fff7ed; color: #c2410c; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; border: 1px dashed #fdba74; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-09-30 动态</h1>
+  <p class="subtitle">共 6 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.AI / cs.LG / cs.SE，论文提交于 2026-09-20~27，2026-09-30 检索并逐篇经 arxiv.org/abs 核验标题/作者/摘要一致；PDF 来自 arxiv.org/pdf 真实下载）。本日无经核验可达的行业新闻，新闻条目为 0。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2609.33699 SpecRead -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.SE · 2026-09-27 · Feilian Huang</div>
+      <h4>⚡ SpecRead: A Benchmark for Measuring Whether Language Models Understand Hardware Specifications——规格理解评测基准</h4>
+      <p>基准把「规格理解」与「代码生成」解耦——对 10 个开源 OpenTitan IP 块设 385 题（精确检索、跨节推理、变异规格矛盾检测、spec-RTL 一致性检查），仅保留 Icarus Verilog 仿真证明确实改变可观测行为的真实 RTL 变异；with-spec 与 without-spec 消融表明题目真正需要规格而非训练记忆（without-spec 在 t1/t2 子集仅 3/20）；小模型 Ministral-3B 总体 33.2%（128/385，宏平均 39.0%），检索 55.2%、跨节推理 51.7%。衡量 LM 是否真读懂硬件规格，是 RTL 生成前的关键能力评测。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">规格理解</span><span class="tag">硬件规范</span><span class="tag">评测基准</span><span class="tag">LLM</span><span class="tag">OpenTitan</span><span class="tag">spec-RTL一致性</span><span class="tag">矛盾检测</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.33699" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.33699_SpecRead.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2609.33106 CARVE -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · 2026-09-27 · Jiefu Zhang, Haixiang Sun, Yang Xu, Vaneet Aggarwal, Zishen Wan</div>
+      <h4>📐 CARVE: Breaking Data Barriers in Chip Placement by Harnessing Reusable Expertise——宏布局知识复用</h4>
+      <p>持续适应框架把积累的专业知识表示为冻结基策略 + 不可变专家 + 经本地校验的任务凭证；新任务先查既有专家、无合格者才从冻结基训练新专家，在固定任务分布与校验规则下给出期望性能保证与最坏情形本地样本界。宏布局中「优先复用」把记录训练时间降 58.5%（9.66→4.01 小时），平均 HPWL 增益仅从 8.41% 微降至 7.86%；模拟接收部署中 7 个新 IBM 电路有 6 个直接复用导入专家（接收端零训练），平均 HPWL 增益 5.76%。解决预训练布局策略在陌生设计上的复用与灾难性遗忘问题。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">宏布局</span><span class="tag">持续学习</span><span class="tag">知识复用</span><span class="tag">专家策略</span><span class="tag">HPWL</span><span class="tag">迁移</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.33106" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.33106_CARVE.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2609.27067 ChipMEM -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG / cs.CL · 2026-09-22 · Abdulrahman AlRabah, Joshua Mabry, Dilek Hakkani-Tür, Abdussalam Alawini, Hamid Shojaei, Kartik Hegde, Sandesh Adhikary</div>
+      <h4>🤖 ChipMEM: Verification-Grounded Memory for EDA Agents——EDA 智能体验证驱动记忆</h4>
+      <p>面向 EDA 智能体的验证驱动记忆层——组合跨任务程序性记忆与轨迹内统计引导：程序性组件仅在技能通过综合/仿真/形式检查后才蒸馏存储（而非依赖模型自评），贝叶斯组件对工具调用结果维护分层 Beta 估计并排序在相似错误下成功的恢复策略；通用适配器让同一记忆接口服务于 RTL 优化与测试平台生成两类智能体。RTLRewriter-Bench 在匹配模型与工具设置下，记忆使等价通过输出从 35/54 升至 39/54，并在未见任务上验证技能迁移。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">多智能体</span><span class="tag">EDA Agents</span><span class="tag">记忆机制</span><span class="tag">验证驱动</span><span class="tag">RTL优化</span><span class="tag">测试平台生成</span><span class="tag">技能迁移</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.27067" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.27067_ChipMEM.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2609.25873 AgenticSizing -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.AR · 2026-09-22 · Yijia Hao, Pratibha Verma, Dongxu Guo, Cristian Sestito, Michael O'Boyle, Christos-Savvas Bouganis, Themis Prodromakis</div>
+      <h4>🔬 AgenticSizing: A Large Language Model-based Multi-Agent Framework for Analog Circuit Sizing——模拟电路尺寸确定多智能体框架</h4>
+      <p>面向复杂模拟电路尺寸确定的多智能体 LLM 框架：先解析电路拓扑、把网表分解为功能块与子结构并抽取轻量设计知识；规划器协调多个角色专精的尺寸智能体更新设计变量、达成全局性能规格，模拟专家模拟设计团队的协作流程，提供结构化、可解释、仿真驱动的优化过程。在 8 个电路上验证，最大含 55 晶体管 / 60 尺寸变量；LDO 基准上成功率 60%、平均 83 次迭代（经典优化器找不到可行解）；消融证明拓扑理解、设计知识注入与智能体专精各自贡献。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟电路</span><span class="tag">电路尺寸确定</span><span class="tag">多智能体</span><span class="tag">LLM</span><span class="tag">拓扑理解</span><span class="tag">设计知识复用</span><span class="tag">LDO</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.25873" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.25873_AgenticSizing.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2609.25335 GRADE-RTL -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.PL · 2026-09-21 · Hepziba Susan, Shivaranjani G. R., Malik Imran, Muhammad Rashid, Sumathi Gokulanathan, Zain Ul Abideen</div>
+      <h4>✅ GRADE-RTL: Evaluating LLM-Generated RTL Beyond Compilation——超越编译的 RTL 评测</h4>
+      <p>超越编译评估 LLM 生成 RTL 的框架——固定 prompt 与校验设置，施加端口签名 / 编译 / 展开 / 模块完备性 / 对照可信参考 RTL 的功能等价五类检查，用紧凑指标定位失败并区分端到端成功与可下游综合资格；在 10 个边缘 IP 上评估 9 个通用与 RTL 专精 LLM（3 次生成尝试 + 失败导向反馈），端到端成功率 0%→70%，失败超出编译延伸到层级解析、逻辑不完整与行为错配；FPGA 实现与 65nm ASIC 综合显示功能等价 RTL 在资源 / 时序 / 面积 / 功耗上差异显著，PID 控制器 P&R 案例揭示不同 RTL 实现的物理设计后果。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">RTL生成</span><span class="tag">RTL评测</span><span class="tag">功能等价</span><span class="tag">编译</span><span class="tag">模块完备性</span><span class="tag">LLM</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.25335" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.25335_GRADE_RTL.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2609.23444 WaveletECO -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · 2026-09-20 · Guoxiang Xu, Guozhen Ji, Zijian Luo, Zhengrui Chen, Qi Sun, Cheng Zhuo</div>
+      <h4>📐 WaveletECO: A Closed-Loop Physical ECO Platform and a Specialized Local Language Model——闭环物理 ECO 平台与本地 LLM</h4>
+      <p>工程变更（ECO）是芯片设计后期修复时序 / 电气违例的关键步骤。现有 Agentic EDA 多聚焦工具调用，忽视模型决策质量与针对性训练。WaveletECO 把闭环执行平台与大语言模型结合使智能体有效执行 ECO 决策；并用执行示范与决策偏好数据经 SFT + CPO-SimPO 训练本地 9B 模型，使 ECO 决策可在本地部署模型上完成。22 个设计的 594 次评测中 WaveletECO-Policy（BF16/INT8）得分 79.63/79.65，高于 GPT-6 Astra 的 77.44；INT8 推理成本约为其 1/147，且量化下保持修复质量。证明专用模型训练可支撑有效、低成本的 ECO 多轮修复。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">ECO</span><span class="tag">工程变更</span><span class="tag">闭环平台</span><span class="tag">本地LLM</span><span class="tag">9B模型</span><span class="tag">INT8量化</span><span class="tag">多轮决策</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.23444" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.23444_WaveletECO.pdf">📥 本地PDF</a>
+    </div>
+
+
+  </div>
+</section>
+</body>
+</html>

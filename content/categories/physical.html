@@ -7,9 +7,37 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（81篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（83篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2609.33106 CARVE -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 宏布局知识复用：CARVE: Breaking Data Barriers in Chip Placement by Harnessing Reusable Expertise</div>
+      <div class="abs-meta">arXiv:2609.33106 · cs.LG · 2026-09-27 · Jiefu Zhang, Haixiang Sun, Yang Xu, Vaneet Aggarwal, Zishen Wan</div>
+      <div class="abs-body">持续适应框架把积累的专业知识表示为冻结基策略 + 不可变专家 + 经本地校验的任务凭证；新任务先查既有专家、无合格者才从冻结基训练新专家，在固定任务分布与校验规则下给出期望性能保证与最坏情形本地样本界。宏布局中「优先复用」把记录训练时间降 58.5%（9.66→4.01 小时），平均 HPWL 增益仅从 8.41% 微降至 7.86%；模拟接收部署中 7 个新 IBM 电路有 6 个直接复用导入专家（接收端零训练），平均 HPWL 增益 5.76%。解决预训练布局策略在陌生设计上的复用与灾难性遗忘问题。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.33106" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.33106_CARVE.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">宏布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">持续学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">知识复用</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">专家策略</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HPWL</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">迁移</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.LG</span>
+      </div>
+    </div>
+
+
+    <!-- 2609.23444 WaveletECO -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 闭环物理 ECO 平台与本地 LLM：WaveletECO: A Closed-Loop Physical ECO Platform and a Specialized Local Language Model</div>
+      <div class="abs-meta">arXiv:2609.23444 · cs.AR / cs.AI · 2026-09-20 · Guoxiang Xu, Guozhen Ji, Zijian Luo, Zhengrui Chen, Qi Sun, Cheng Zhuo</div>
+      <div class="abs-body">工程变更（ECO）是芯片设计后期修复时序 / 电气违例的关键步骤。现有 Agentic EDA 多聚焦工具调用，忽视模型决策质量与针对性训练。WaveletECO 把闭环执行平台与大语言模型结合使智能体有效执行 ECO 决策；并用执行示范与决策偏好数据经 SFT + CPO-SimPO 训练本地 9B 模型，使 ECO 决策可在本地部署模型上完成。22 个设计的 594 次评测中 WaveletECO-Policy（BF16/INT8）得分 79.63/79.65，高于 GPT-6 Astra 的 77.44；INT8 推理成本约为其 1/147，且量化下保持修复质量。证明专用模型训练可支撑有效、低成本的 ECO 多轮修复。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.23444" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.23444_WaveletECO.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ECO</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工程变更</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">闭环平台</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">本地LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">9B模型</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">INT8量化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多轮决策</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
 
     <!-- 2609.34452 C2FPlace -->
     <div class="abs-card">
