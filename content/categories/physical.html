@@ -7,9 +7,36 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（83篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（85篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2609.30534 GRACIDIT -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 GRACIDIT: Graph-Circuit Digital Twin for Configuration-Induced Routing Delay Prediction in Zynq UltraScale+ FPGAs——GRACIDIT：Zynq UltraScale+ FPGA 配置诱发布线时延预测的图-电路数字孪生</div>
+      <div class="abs-meta">arXiv:2609.30534 · eess.SY ; cs.AR ; cs.ET · 2026-09-30 · Mostafa Darvishi</div>
+      <div class="abs-body">GRACIDIT 是针对 Zynq UltraScale+ FPGA 配置诱发布线时延退化的图-电路数字孪生框架：从厂商设计数据库提取 XCZU7EV 可编程布线资源图，识别活跃走线旁的非活跃可编程互联点，以分支拓扑/几何跨度/扇出/物理区域/下游负载刻画各扰动；结合标定降阶电路模型估计单点与累积布线分支激活引入的时延。在 ZCU104 上生成受控等价配置扰动并用互补布线域振荡器与相位扫描探针表征，MAE 7.8 ps、对违例扰动的召回 87.4%、最脆弱布线资源 Recall@10 达 0.90。属「物理设计 / 布线时延预测」方向，为 FPGA 时序签核提供可定位的脆弱性图谱。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.30534" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.30534_GRACIDIT.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">FPGA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布线时延</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">数字孪生</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">图表示</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.ET</span>
+      </div>
+    </div>
+
+    <!-- 2609.29965 EZ130 -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 An Open-Source Standard-Cell Library for IHP 130nm Developed by Students——学生开发的开源标准单元库：IHP 130nm（EZ130 8T，含 220 单元）</div>
+      <div class="abs-meta">arXiv:2609.29965 · cs.AR · 2026-09-30 · Oscar Castañeda</div>
+      <div class="abs-body">苏黎世 ETH 的 VLSI 5 课程让学生用 IHP 开源 130nm SG13G2 PDK 设计/版图/表征并集成自有标准单元；首期 19 名学生产出 EZ130 8T——含 220 单元的开源八轨标准单元库。在 8 个综合基准上，EZ130 8T 相较 SG13G2 库在竞争时序下面积显著减小；对一个布局后 8×8 矩阵-向量乘法器，EZ130 8T 把单元面积降 35%、能耗降 39% 而时钟周期基本不变。该库已被 ETH 其他 VLSI 课程采用，使「学生从晶体管级完全自主设计芯片」成为可能。属「物理设计 / 开源标准单元基础设施」方向，是开源 EDA 教育与实践生态的标杆案例。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.29965" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.29965_EZ130_StdCell.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">标准单元库</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">IHP 130nm</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SG13G2</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VLSI教育</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">数字设计流程</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+
 
     <!-- 2609.33106 CARVE -->
     <div class="abs-card">

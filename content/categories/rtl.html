@@ -7,9 +7,36 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（91篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（93篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+    <!-- 2609.38601 PRISM -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ Structure-augmented LLMs for High-Level Synthesis Pragma Optimization——结构增强 LLM 用于高层次综合 Pragma 优化（PRISM）</div>
+      <div class="abs-meta">arXiv:2609.38601 · cs.AR · 2026-10-01 · Haocheng Xu</div>
+      <div class="abs-body">PRISM 把编译器级程序结构推理注入预训练代码 LLM，融合 AST/CFG/DFG 三层层次化表示，以跨注意力门在指定 transformer 层注入结构化信号，并在结构信号无用时回退到预训练表示。零样本 HLS-Eval 中合成的 kernel 数为 Llama3-8B 的 3.5×（26.9% vs 7.7%），成功案例上几何平均比 GPT-5-mini 快 2.31×；代理式流程把 HLS-Eval 套件平均归一化改进推到 26.4%。属「前端 RTL / HLS 生成-优化」方向，是突破通用 LLM 缺乏程序结构意识的代表性工作（MLCAD 2026）。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.38601" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.38601_PRISM_HLS_Pragma.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HLS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">高层次综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Pragma优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">结构增强LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AST/CFG/DFG</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">MLCAD 2026</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2609.37021 HDL-lowlevel -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ Low-level optimizations in high-level HDLs: Is there a benefit?——高层 HDL 中的底层优化：究竟有没有收益？（函数式硬件 Clash vs Verilog）</div>
+      <div class="abs-meta">arXiv:2609.37021 · cs.AR · 2026-09-30 · Oliver Keszocze</div>
+      <div class="abs-body">用函数式 HDL Clash 以 16 种配置实现无符号位串行乘累加（MAC）单元，对比高层抽象构造与底层位操作优化对综合后面积的影响；实验表明 Clash 若干高层构造对电路面积影响可忽略，说明用函数式编程的全部能力做硬件设计可行，但相较于资深工程师手写的 Verilog 仍存在固有开销。属「前端 RTL / HDL 设计方法论」方向，为「高层 HDL 表达力 vs 综合面积代价」提供了实证基线。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2609.37021" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2609.37021_HDL_LowLevel_Opt.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HDL</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">函数式硬件</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Clash</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ASIC综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">面积优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+
 
     <!-- 2609.33699 SpecRead -->
     <div class="abs-card">

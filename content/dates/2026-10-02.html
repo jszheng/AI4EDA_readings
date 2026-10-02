@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-10-02 动态</h1>
+  <p class="subtitle">共 6 篇论文 · 0 条行业动态（行业动态见 news/index.html 本日新增 Synopsys Autopilot Platform 一节）· 来源：arXiv（cs.AR / cs.LG，论文提交于 2026-09-30~10-01，2026-10-02 检索并逐篇经 arxiv.org/abs 核验标题/作者/摘要一致；PDF 来自 arxiv.org/pdf 真实下载，体积 0.3–2.9MB 已校验为 %PDF）。本批次覆盖 RTL/HLS 生成、功能验证、模拟电路自动化、物理设计（FPGA 布线时延 / 开源标准单元）。</p>
+</header>
+<section>
+  <div class="abstracts">
+    <!-- 2609.38601 PRISM -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-10-01 · Haocheng Xu</div>
+      <h4>⚡ Structure-augmented LLMs for High-Level Synthesis Pragma Optimization——结构增强 LLM 用于高层次综合 Pragma 优化（PRISM）</h4>
+      <p>PRISM 把编译器级程序结构推理注入预训练代码 LLM，融合 AST/CFG/DFG 三层层次化表示，以跨注意力门在指定 transformer 层注入结构化信号，并在结构信号无用时回退到预训练表示。零样本 HLS-Eval 中合成的 kernel 数为 Llama3-8B 的 3.5×（26.9% vs 7.7%），成功案例上几何平均比 GPT-5-mini 快 2.31×；代理式流程把 HLS-Eval 套件平均归一化改进推到 26.4%。属「前端 RTL / HLS 生成-优化」方向，是突破通用 LLM 缺乏程序结构意识的代表性工作（MLCAD 2026）。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">HLS</span><span class="tag">高层次综合</span><span class="tag">Pragma优化</span><span class="tag">结构增强LLM</span><span class="tag">AST/CFG/DFG</span><span class="tag">MLCAD 2026</span><span class="tag">LLM</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.38601" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.38601_PRISM_HLS_Pragma.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2609.37021 HDL-lowlevel -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-30 · Oliver Keszocze</div>
+      <h4>⚡ Low-level optimizations in high-level HDLs: Is there a benefit?——高层 HDL 中的底层优化：究竟有没有收益？（函数式硬件 Clash vs Verilog）</h4>
+      <p>用函数式 HDL Clash 以 16 种配置实现无符号位串行乘累加（MAC）单元，对比高层抽象构造与底层位操作优化对综合后面积的影响；实验表明 Clash 若干高层构造对电路面积影响可忽略，说明用函数式编程的全部能力做硬件设计可行，但相较于资深工程师手写的 Verilog 仍存在固有开销。属「前端 RTL / HDL 设计方法论」方向，为「高层 HDL 表达力 vs 综合面积代价」提供了实证基线。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">HDL</span><span class="tag">函数式硬件</span><span class="tag">Clash</span><span class="tag">Verilog</span><span class="tag">ASIC综合</span><span class="tag">面积优化</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.37021" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.37021_HDL_LowLevel_Opt.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2609.36111 DDR5-Verif -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-30 · Manan Patel</div>
+      <h4>✅ Automated Pre-Silicon Verification of High-Speed DDR5 and LPDDR5/6 Memory Controllers: Closed-Loop Timing, Mode Register, and PHY Synchronization in UVM——高速 DDR5 / LPDDR5-6 存储控制器预硅验证自动化（UVM 闭环时序/模式寄存器/PHY 同步）</h4>
+      <p>提出面向存储控制器预硅验证的自动化配置与闭环初始化框架：直接从第三方 DRAM 验证 IP（如 Denali SOMA 文件）解析 JEDEC 时序与配置参数来配置 DUT 寄存器，MR-RAL 层实时跟踪易失 DRAM 状态；动态、免重编译的 PHY 初始化流程在 testbench 内随机化接口参数、经系统调用运行时生成配置并解析回写序列。把自动化方法学融入预硅流程可消除搭建开销、避免伪协议违例、实现对复杂 PHY/控制器配置的全面随机化测试。属「功能验证 / 存储接口预硅验证」方向，直击 DDR5/LPDDR5-6 控制器验证这一行业普遍痛点。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">存储控制器</span><span class="tag">DDR5</span><span class="tag">LPDDR5/6</span><span class="tag">UVM</span><span class="tag">预硅验证</span><span class="tag">PHY同步</span><span class="tag">JEDEC</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.36111" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.36111_DDR5_Presilicon_Verif.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2609.36752 cktFormer -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG ; cs.AR · 2026-09-30 · Pasindu Dodampegama</div>
+      <h4>🔬 cktFormer: Transformer-Based Approach for Automated Analog Circuit Design——cktFormer：基于 Transformer 的自动化模拟电路设计</h4>
+      <p>提出双 Transformer 架构弥合 AI 与电路设计：把网表结构化为基于图的表示以学习电路拓扑与元件交互，由节点预测模型提议元件、边预测模型推断合法连接，解耦协作地同时捕捉元件级语义与全局结构一致性；实验在生成电路的合法性上优于 AnalogGenie、cktGNN 等近期模型，并提供 AI 驱动电路综合基准。属「模拟/电路设计自动化」方向，是用注意力机制建模非序列电路关系的代表性工作。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟电路</span><span class="tag">电路设计自动化</span><span class="tag">Transformer</span><span class="tag">图表示</span><span class="tag">生成式AI</span><span class="tag">网表生成</span><span class="tag">电路综合</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.36752" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.36752_cktFormer.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2609.30534 GRACIDIT -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · eess.SY ; cs.AR ; cs.ET · 2026-09-30 · Mostafa Darvishi</div>
+      <h4>📐 GRACIDIT: Graph-Circuit Digital Twin for Configuration-Induced Routing Delay Prediction in Zynq UltraScale+ FPGAs——GRACIDIT：Zynq UltraScale+ FPGA 配置诱发布线时延预测的图-电路数字孪生</h4>
+      <p>GRACIDIT 是针对 Zynq UltraScale+ FPGA 配置诱发布线时延退化的图-电路数字孪生框架：从厂商设计数据库提取 XCZU7EV 可编程布线资源图，识别活跃走线旁的非活跃可编程互联点，以分支拓扑/几何跨度/扇出/物理区域/下游负载刻画各扰动；结合标定降阶电路模型估计单点与累积布线分支激活引入的时延。在 ZCU104 上生成受控等价配置扰动并用互补布线域振荡器与相位扫描探针表征，MAE 7.8 ps、对违例扰动的召回 87.4%、最脆弱布线资源 Recall@10 达 0.90。属「物理设计 / 布线时延预测」方向，为 FPGA 时序签核提供可定位的脆弱性图谱。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">布局布线</span><span class="tag">FPGA</span><span class="tag">布线时延</span><span class="tag">数字孪生</span><span class="tag">图表示</span><span class="tag">时序分析</span><span class="tag">cs.ET</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.30534" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.30534_GRACIDIT.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2609.29965 EZ130 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-09-30 · Oscar Castañeda</div>
+      <h4>📐 An Open-Source Standard-Cell Library for IHP 130nm Developed by Students——学生开发的开源标准单元库：IHP 130nm（EZ130 8T，含 220 单元）</h4>
+      <p>苏黎世 ETH 的 VLSI 5 课程让学生用 IHP 开源 130nm SG13G2 PDK 设计/版图/表征并集成自有标准单元；首期 19 名学生产出 EZ130 8T——含 220 单元的开源八轨标准单元库。在 8 个综合基准上，EZ130 8T 相较 SG13G2 库在竞争时序下面积显著减小；对一个布局后 8×8 矩阵-向量乘法器，EZ130 8T 把单元面积降 35%、能耗降 39% 而时钟周期基本不变。该库已被 ETH 其他 VLSI 课程采用，使「学生从晶体管级完全自主设计芯片」成为可能。属「物理设计 / 开源标准单元基础设施」方向，是开源 EDA 教育与实践生态的标杆案例。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">标准单元库</span><span class="tag">开源EDA</span><span class="tag">IHP 130nm</span><span class="tag">SG13G2</span><span class="tag">VLSI教育</span><span class="tag">数字设计流程</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2609.29965" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2609.29965_EZ130_StdCell.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

@@ -1,8 +1,26 @@
 {
-  "lastUpdate": "2026-09-14",
+  "lastUpdate": "2026-09-28",
   "cutoffDate": "2026-03-18",
-  "totalItems": 212,
+  "totalItems": 213,
   "items": [
+    {
+      "date": "2026-09-28",
+      "company": "Synopsys",
+      "title": "🤖 Synopsys 发布 AgentEngineer™ 长程智能体组合 + Autopilot™ Platform：开放安全的自主工程平台，验证收敛最高 50×、覆盖 +20%、生产力 +30%",
+      "link": "https://news.synopsys.com/2026-09-28-Synopsys-Powers-Autonomous-Engineering-with-a-Broad-Portfolio-of-Long-Horizon-Agents-and-Autopilot-Platform",
+      "keywords": [
+        "Synopsys",
+        "AgentEngineer",
+        "Autopilot Platform",
+        "自主工程",
+        "长程智能体",
+        "agentic AI",
+        "EDA三巨头",
+        "验证收敛",
+        "开放安全架构",
+        "2026-09-28"
+      ]
+    },
     {
       "date": "2026-09-14",
       "company": "华大九天（Empyrean）",
