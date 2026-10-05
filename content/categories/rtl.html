@@ -7,9 +7,48 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（93篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（96篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+    <!-- 2610.03219 Evidence-Guided RTL Repair -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ Evidence-Guided Repository-Level RTL Repair——证据引导的仓库级 RTL 修复</div>
+      <div class="abs-meta">arXiv:2610.03219 · cs.AR · 2026-10-02 · Yuxin Du, Juxin Niu, Zhe Jiang, Nan Guan</div>
+      <div class="abs-body">仓库级 RTL 修复须定位跨文件、跨模块、跨时钟周期的故障，并一致地传播修复。现有方法仅在源码层面推理（能揭示可能行为却看不到失败执行，也无法判断局部修复是否一致传播）。本文提出证据引导框架，含三模块：① 故障定基——把问题陈述转为可复现的失败运行 + 失败锚点；② 波形引导定位——用定位工具箱把观测违例收敛为候选机理与证据链；③ 一致性感知修复与验证——把种子扩展为协同补丁并回放同一场景确认违例消失。在 HWE-Bench 上优于基线。属「前端 RTL / 生成-验证-反馈闭环」方向，把"失败执行级证据"引入 RTL 修复，直击 LLM 改代码缺乏执行验证的痛点。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.03219" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.03219_EvidenceGuided_RTL_Repair.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">仓库级修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">验证闭环</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">波形定位</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HWE-Bench</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">执行级验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.00106 SyntheticHLS -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ SyntheticHLS: Building Diverse Synthetic High-Level Synthesis Datasets using LLMs——用 LLM 构建多样合成高层次综合（HLS）数据集</div>
+      <div class="abs-meta">arXiv:2610.00106 · cs.AR ; cs.LG · 2026-09-09 · Stefan Abi-Karam, Miaoyan Zhou, Callie Hao</div>
+      <div class="abs-body">深度学习与 LLM 在半导体设计中快速普及，推高对训练数据的需求；既有工作多聚焦硬件描述语言（HDL），而高层次综合（HLS，领域专用加速器的主流路径）数据集稀缺、偏手工整理或参数化，少有高质量 LLM 生成，也缺乏代码长度/层次/设计空间规模/时延/资源占用/应用域的多样性，限制模型泛化。本文提出 SyntheticHLS——用 LLM 生成大规模、复杂、多样合成 HLS 数据集的框架：① 反馈引导的迭代变异环（用配对 HLS 源码与设计空间规格把种子设计逐步演化为更复杂、可扩展的设计）；② 可量化的 HLS 设计复杂度与可扩展度指标（作为 LLM 引导变异的可测目标）。在常见 HLS 基准、零样本合成设计、迭代变异合成设计间交叉验证一个 HLS QoR 深度学习模型：合成设计对常见基准测试集迁移性好而反之不成立；迭代变异设计提供最具泛化性的训练语料，且变异轨迹在改善目标指标同时不回归非目标指标。框架、数据集与评测均开源。属「前端 RTL / HLS 数据驱动生成」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.00106" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.00106_SyntheticHLS.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HLS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">高层次综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">数据集</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">合成数据</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计空间</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">泛化性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.LG</span>
+      </div>
+    </div>
+
+    <!-- 2610.02544 CITADEL -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ CITADEL: CWE-Guided Insertion of Hardware Trojans via Analysis of DFG-Enabled LLMs——基于 CWE 引导、DFG 赋能 LLM 的硬件木马插入</div>
+      <div class="abs-meta">arXiv:2610.02544 · cs.CR · 2026-10-01 · Jayanth Thangellamudi, Raghul Saravanan, Sudipta Paria, Swarup Bhunia, Sai Manoj P D</div>
+      <div class="abs-body">硬件木马（HT）与系统级漏洞日益复杂，构建真实 HT 场景负担沉重：研究者须手工分析复杂 RTL 结构、定位合理弱点、构造隐蔽且可综合、保持功能正确的插入。本文提出 CITADEL——用大语言模型（LLM）与数据流图（DFG）自动化 CWE 根基的 HT 综合：以结构化 CWE 语义结合 DFG 派生的结构上下文，辅助用户识别相关漏洞、定位插入点周边模块，并执行意图条件化的 RTL 修改；产出最小、可综合、保持接口的 HT（含极罕见触发器）。在多种 RTL 设计上的评估显示：所有生成 HT 100% 语法正确、在大规模随机仿真下不可检测、在预期激活条件下功能可触发。CITADEL 展示了"LLM+DFG 结构化分析 RTL"在硬件安全基准生成上的可扩展、原则化方法，也反向提示 RTL 结构分析智能体的攻防两面。属「前端 RTL / LLM+RTL 结构分析（安全基准）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.02544" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.02544_CITADEL.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件安全</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件木马</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL结构分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DFG</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">CWE</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">基准生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.CR</span>
+      </div>
+    </div>
+
     <!-- 2609.38601 PRISM -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

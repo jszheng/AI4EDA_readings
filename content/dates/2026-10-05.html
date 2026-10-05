@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-10-05 动态</h1>
+  <p class="subtitle">共 5 篇论文 · 0 条行业动态（本日未添加新闻，原因见执行摘要：未找到可核验 HTTP 200 的行业新闻 URL，遵照第 0 步「宁可空白、绝不编造」规则）· 来源：arXiv（cs.AR / cs.LG / cs.CR，论文提交于 2026-09-09~10-02，2026-10-05 检索并逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，体积 0.38–2.9MB 已校验为 %PDF）。本批次覆盖前端 RTL（仓库级 RTL 修复 / LLM 合成 HLS 数据集 / LLM+RTL 结构分析的安全基准）与后端物理设计（布局后时序驱动逻辑重映射 / SRAM FPGA 脆弱性加权布线）。</p>
+</header>
+<section>
+  <div class="abstracts">
+    <!-- 2610.03219 Evidence-Guided RTL Repair -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-10-02 · Yuxin Du, Juxin Niu, Zhe Jiang, Nan Guan</div>
+      <h4>⚡ Evidence-Guided Repository-Level RTL Repair——证据引导的仓库级 RTL 修复</h4>
+      <p>仓库级 RTL 修复须定位跨文件、跨模块、跨时钟周期的故障，并一致地传播修复。现有方法仅在源码层面推理（能揭示可能行为却看不到失败执行，也无法判断局部修复是否一致传播）。本文提出证据引导框架，含三模块：① 故障定基——把问题陈述转为可复现的失败运行 + 失败锚点；② 波形引导定位——用定位工具箱把观测违例收敛为候选机理与证据链；③ 一致性感知修复与验证——把种子扩展为协同补丁并回放同一场景确认违例消失。在 HWE-Bench 上优于基线。属「前端 RTL / 生成-验证-反馈闭环」方向，把"失败执行级证据"引入 RTL 修复，直击 LLM 改代码缺乏执行验证的痛点。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">RTL修复</span><span class="tag">仓库级修复</span><span class="tag">验证闭环</span><span class="tag">波形定位</span><span class="tag">HWE-Bench</span><span class="tag">执行级验证</span><span class="tag">LLM</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.03219" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.03219_EvidenceGuided_RTL_Repair.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2610.00106 SyntheticHLS -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR ; cs.LG · 2026-09-09 · Stefan Abi-Karam, Miaoyan Zhou, Callie Hao</div>
+      <h4>⚡ SyntheticHLS: Building Diverse Synthetic High-Level Synthesis Datasets using LLMs——用 LLM 构建多样合成高层次综合（HLS）数据集</h4>
+      <p>深度学习与 LLM 在半导体设计中快速普及，推高对训练数据的需求；既有工作多聚焦硬件描述语言（HDL），而高层次综合（HLS，领域专用加速器的主流路径）数据集稀缺，且偏手工整理或参数化，少有高质量 LLM 生成，也缺乏代码长度/层次/设计空间规模/时延/资源占用/应用域的多样性，限制模型泛化。本文提出 SyntheticHLS——用 LLM 生成大规模、复杂、多样合成 HLS 数据集的框架：① 反馈引导的迭代变异环（用配对 HLS 源码与设计空间规格把种子设计逐步演化为更复杂、可扩展的设计）；② 可量化的 HLS 设计复杂度与可扩展度指标（作为 LLM 引导变异的可测目标）。在常见 HLS 基准、零样本合成设计、迭代变异合成设计间交叉验证一个 HLS QoR 深度学习模型：合成设计对常见基准测试集迁移性好而反之不成立；迭代变异设计提供最具泛化性的训练语料，且变异轨迹在改善目标指标同时不回归非目标指标。框架、数据集与评测均开源。属「前端 RTL / HLS 数据驱动生成」方向，为 LLM+HLS 提供高质量、多样、可扩展的训练数据基础设施。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">HLS</span><span class="tag">高层次综合</span><span class="tag">数据集</span><span class="tag">LLM</span><span class="tag">合成数据</span><span class="tag">设计空间</span><span class="tag">泛化性</span><span class="tag">开源</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.00106" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.00106_SyntheticHLS.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2610.02544 CITADEL -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.CR · 2026-10-01 · Jayanth Thangellamudi, Raghul Saravanan, Sudipta Paria, Swarup Bhunia, Sai Manoj P D</div>
+      <h4>⚡ CITADEL: CWE-Guided Insertion of Hardware Trojans via Analysis of DFG-Enabled LLMs——基于 CWE 引导、DFG 赋能 LLM 的硬件木马插入</h4>
+      <p>硬件木马（HT）与系统级漏洞日益复杂，构建真实 HT 场景负担沉重：研究者须手工分析复杂 RTL 结构、定位合理弱点、构造隐蔽且可综合、保持功能正确的插入。本文提出 CITADEL——用大语言模型（LLM）与数据流图（DFG）自动化 CWE 根基的 HT 综合：以结构化 CWE 语义结合 DFG 派生的结构上下文，辅助用户识别相关漏洞、定位插入点周边模块，并执行意图条件化的 RTL 修改；产出最小、可综合、保持接口的 HT（含极罕见触发器）。在多种 RTL 设计上的评估显示：所有生成 HT 100% 语法正确、在大规模随机仿真下不可检测、在预期激活条件下功能可触发。CITADEL 展示了"LLM+DFG 结构化分析 RTL"这一能力在硬件安全基准生成上的可扩展、原则化方法，也反向提示 RTL 结构分析智能体的攻防两面。属「前端 RTL / LLM+RTL 结构分析（安全基准）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">硬件安全</span><span class="tag">硬件木马</span><span class="tag">RTL结构分析</span><span class="tag">DFG</span><span class="tag">LLM</span><span class="tag">CWE</span><span class="tag">基准生成</span><span class="tag">cs.CR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.02544" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.02544_CITADEL.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2610.01918 Timing-Driven Remapping -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2026-10-01 · Zijian Jiang, Hongyang Pan, Cunqing Lan, Keren Zhu</div>
+      <h4>📐 Timing-Driven Logic Remapping with Local Physical Context——带局部物理上下文的时序驱动逻辑重映射</h4>
+      <p>映射电路的实际时序同时取决于逻辑实现与其所处的物理环境；在布局之后重新审视映射决策，需要一套考虑周边时序约束、扇出负载与互连效应的搜索流程。本文研究该场景下的局部重映射，提出把离散映射搜索与物理实现反馈耦合的框架：以有界窗口隔离时序关键区域（窗口接口保留周边电路上下文），在窗口内用混合整数规划联合选择逻辑切割、信号极性与库单元（延迟模型由估计位置与互连寄生驱动）；连续松弛先过滤搜索空间，再用离散优化产出时序相近、结构不同的替代实现，经合法化、基于布线的寄生估计与时序分析重建评估，把经物理验证的改进并入设计，更新后的上下文指导后续搜索。为"在已有布局约束下系统回访局部逻辑实现"提供方法。属「物理设计 / 布局后时序优化」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">逻辑重映射</span><span class="tag">时序驱动</span><span class="tag">布局后优化</span><span class="tag">物理感知</span><span class="tag">混合整数规划</span><span class="tag">寄生估计</span><span class="tag">Keren Zhu</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.01918" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.01918_TimingDriven_Remapping.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2610.00281 Vulnerability-Weighted Routing -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · eess.SY ; cs.AR ; cs.ET ; cs.PF ; eess.SP · 2026-09-24 · Mostafa Darvishi</div>
+      <h4>📐 Vulnerability-Weighted Routing of Timing-Critical Nets for Configuration-Upset-Resilient SRAM-Based FPGAs——面向配置扰动鲁棒 SRAM FPGA 的时序关键网络脆弱性加权布线</h4>
+      <p>传统 FPGA 布线优化时序、拥塞与可布线性，却不区分"标称性能相近但配置诱发时延退化敏感度迥异"的走线。本文提出面向 SRAM 型 FPGA 的脆弱性加权布线方法，把预测布线故障严重度直接纳入布线目标：连续脆弱性代价把"可被电性挂载的休眠布线资源"引发的时延扰动与下游可用时序裕度关联，配套的"配置集中度"项抑制脆弱资源的过度局部化；为减小实现扰动，仅对最高风险网络选择性撕除重布，其余路由保持不变。在 Zynq UltraScale+ XCZU7EV 上用 Vivado/RapidWright 流程实现，对照商业时序驱动布线、脆弱性无关重布、二进制脆弱资源规避，经受控配置等价扰动做硬件级验证：把配置诱发的总时序脆弱性降 41.7%，标称时序仅退化约 1.0%，且仅重布最高风险 5% 网络即捕获扩预算方案 85.8% 的脆弱性削减。同一作者延续 GRACIDIT 的 FPGA 配置诱发退化研究，属「物理设计 / FPGA 布线鲁棒性」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">布局布线</span><span class="tag">FPGA</span><span class="tag">布线鲁棒性</span><span class="tag">脆弱性加权</span><span class="tag">配置诱发退化</span><span class="tag">SRAM</span><span class="tag">RapidWright</span><span class="tag">Zynq</span><span class="tag">cs.ET</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.00281" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.00281_VulnerabilityWeighted_Routing.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

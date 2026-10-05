@@ -7,9 +7,35 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（85篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（87篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2610.01918 Timing-Driven Remapping -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 Timing-Driven Logic Remapping with Local Physical Context——带局部物理上下文的时序驱动逻辑重映射</div>
+      <div class="abs-meta">arXiv:2610.01918 · cs.AR · 2026-10-01 · Zijian Jiang, Hongyang Pan, Cunqing Lan, Keren Zhu</div>
+      <div class="abs-body">映射电路的实际时序同时取决于逻辑实现与其所处的物理环境；在布局之后重新审视映射决策，需要一套考虑周边时序约束、扇出负载与互连效应的搜索流程。本文研究该场景下的局部重映射，提出把离散映射搜索与物理实现反馈耦合的框架：以有界窗口隔离时序关键区域（窗口接口保留周边电路上下文），在窗口内用混合整数规划联合选择逻辑切割、信号极性与库单元（延迟模型由估计位置与互连寄生驱动）；连续松弛先过滤搜索空间，再用离散优化产出时序相近、结构不同的替代实现，经合法化、基于布线的寄生估计与时序分析重建评估，把经物理验证的改进并入设计，更新后的上下文指导后续搜索。为"在已有布局约束下系统回访局部逻辑实现"提供方法。属「物理设计 / 布局后时序优化」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.01918" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.01918_TimingDriven_Remapping.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">逻辑重映射</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序驱动</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局后优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">混合整数规划</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">寄生估计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Keren Zhu</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.00281 Vulnerability-Weighted Routing -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 Vulnerability-Weighted Routing of Timing-Critical Nets for Configuration-Upset-Resilient SRAM-Based FPGAs——面向配置扰动鲁棒 SRAM FPGA 的时序关键网络脆弱性加权布线</div>
+      <div class="abs-meta">arXiv:2610.00281 · eess.SY ; cs.AR ; cs.ET ; cs.PF ; eess.SP · 2026-09-24 · Mostafa Darvishi</div>
+      <div class="abs-body">传统 FPGA 布线优化时序、拥塞与可布线性，却不区分"标称性能相近但配置诱发时延退化敏感度迥异"的走线。本文提出面向 SRAM 型 FPGA 的脆弱性加权布线方法，把预测布线故障严重度直接纳入布线目标：连续脆弱性代价把"可被电性挂载的休眠布线资源"引发的时延扰动与下游可用时序裕度关联，配套的"配置集中度"项抑制脆弱资源的过度局部化；为减小实现扰动，仅对最高风险网络选择性撕除重布，其余路由保持不变。在 Zynq UltraScale+ XCZU7EV 上用 Vivado/RapidWright 流程实现，对照商业时序驱动布线、脆弱性无关重布、二进制脆弱资源规避，经受控配置等价扰动做硬件级验证：把配置诱发的总时序脆弱性降 41.7%，标称时序仅退化约 1.0%，且仅重布最高风险 5% 网络即捕获扩预算方案 85.8% 的脆弱性削减。同一作者延续 GRACIDIT 的 FPGA 配置诱发退化研究，属「物理设计 / FPGA 布线鲁棒性」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.00281" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.00281_VulnerabilityWeighted_Routing.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">FPGA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布线鲁棒性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">脆弱性加权</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">配置诱发退化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SRAM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RapidWright</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Zynq</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.ET</span>
+      </div>
+    </div>
+
     <!-- 2609.30534 GRACIDIT -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

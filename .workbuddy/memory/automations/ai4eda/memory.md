@@ -600,3 +600,77 @@
 5. PDF 走 `https://arxiv.org/pdf/<id>`，后台下载（前台易被 SIGTERM/超时打断），下载后查体积 >100KB 且头部为 `%PDF` 以排除占位文件。
 6. 新闻无 URL 可核验时**坚决不写**（历史教训：伪造新闻 URL 全部 404）。
 7. 卡片格式：日期/最新页用 `.src`/`h4`/`p`/`.tag`；分类页用 `abs-card`/`abs-title`/`abs-meta`/`abs-body`/`abs-links`，并同步页头"（N篇）"计数。
+
+---
+
+## 2026-10-02 执行摘要（本次运行）
+
+**前置状态（2026-09-30 基线）**
+- papers: 342, batches: 126, news: 218, lastUpdate: 2026-09-30
+
+**环境说明（关键）**：本环境为真实 2026-10-02 时间线——`arxiv.org/list/cs.AR/recent` 返回 HTTP 200、ID 前缀 2609（2026-09 公告）、头部日期 Thu 1 Oct / Wed 30 Sep 2026，证实为真实 arXiv 数据。全程**逐篇实际抓取 `arxiv.org/abs/<id>` 核验标题/作者/摘要/分类一致**，PDF 均来自 `arxiv.org/pdf/<id>` 真实下载（0.3–2.9MB，`%PDF-1.7` 头已校验），**无任何伪造 ID / 标题 / 占位 PDF**。
+
+**本次新增内容（论文 +6，全部经逐篇核验）**
+- 2609.38601 PRISM——结构增强 LLM 用于 HLS Pragma 优化（AST/CFG/DFG 注入，HLS-Eval 26.9% vs Llama3-8B 7.7%）→ rtl（91→93）
+- 2609.37021 高层 HDL 底层优化实证（Clash vs Verilog 面积代价基线）→ rtl（91→93）
+- 2609.36111 DDR5/LPDDR5-6 存储控制器预硅验证自动化（UVM 闭环，JEDEC/SOMA 解析）→ verify（43→44）
+- 2609.36752 cktFormer——双 Transformer 自动化模拟电路设计（节点/边预测，优于 AnalogGenie/cktGNN）→ analog（46→47）
+- 2609.30534 GRACIDIT——Zynq UltraScale+ FPGA 配置诱发布线时延图-电路数字孪生（MAE 7.8ps，Recall@10 0.90）→ physical（83→85）
+- 2609.29965 EZ130 8T——ETH 学生开源 IHP 130nm 标准单元库（220 单元，面积 -35%/能耗 -39%）→ physical（83→85）
+
+**行业动态 +1（经 curl 核验 HTTP 200 + 内容一致）**
+- Synopsys 发布 AgentEngineer™ 长程智能体组合 + Autopilot™ Platform（2026-09-28 新闻稿，news.synopsys.com 原链 HTTP 200 含 "Autopilot Platform"/"AgentEngineer"/"Sept. 28, 2026"）。新增 news/index.html `2026-09-28` section + nav 锚点 + stats 219；news_memory.json 插入新 item（totalItems 212→213，lastUpdate 2026-09-28）。已确认 news/index.html 原无 Autopilot/该公告卡片（无重复）。
+
+**更新文件清单**
+- content/dates/2026-10-02.html、content/latest/2026-10-02.html（新建，6 论文卡 + 本地 PDF 链接）
+- content/dates/2609.*_*.pdf（6 篇真实 PDF）
+- content/categories/{rtl,verify,analog,physical}.html（各 +N 卡；计数同步，agent 不变 46）
+- content/news/index.html（补 09-28 section + nav 锚点 + 同步 header 总数 348/127/219）
+- content/news/news_memory.json（totalItems 213 + 新 item）
+- manifest.js（stats: 348/127/219；latest 与 dates 数组各插 2026-10-02；lastUpdate 2026-10-02）
+- content/papers/index.html（跳转刷新至 2026-10-02）
+
+**去重检查**
+- 6 个 arXiv ID 经比对 content/ 下此前不存在（无重复）
+- 新闻 URL 经 grep 确认 news/index.html 原无该 Synopsys Autopilot 公告（无重复）
+
+**Git**
+- commit: `auto update: 2026-10-02`（16 files changed: 8 modified + 2 HTML + 6 PDF）
+- push origin main：执行中（大体积 PDF 推送较慢，后台运行）
+
+**结果状态**：✅ 全量更新已落盘，论文与新闻均经真实性核验；git 提交完成、推送进行中
+
+---
+
+## 2026-10-05 执行摘要（本次运行）
+
+**前置状态（2026-10-02 基线）**
+- papers: 348, batches: 127, news: 219, lastUpdate: 2026-10-02
+
+**环境说明（关键）**：本环境为真实 2026-10-05 时间线——`arxiv.org/list/cs.AR/recent` 返回 HTTP 200、最新公告批次为 2610.xxxxx（2026-10-02 公告，即 2026 年 10 月数据），证实为真实 arXiv 数据。全程**逐篇实际抓取 `arxiv.org/abs/<id>` 核验标题/作者/摘要/分类/提交日期一致**，PDF 均来自 `arxiv.org/pdf/<id>` 真实下载（380KB–2.9MB，`%PDF` 头已校验），**无任何伪造 ID / 标题 / 占位 PDF**。
+
+**本次新增内容（论文 +5，全部经逐篇核验）**
+- 2610.03219 Evidence-Guided Repository-Level RTL Repair——证据引导的仓库级 RTL 修复（失败执行级证据引入 RTL 修复闭环，HWE-Bench 优于基线）→ rtl（93→96）
+- 2610.00106 SyntheticHLS——LLM 生成多样合成 HLS 数据集（反馈引导迭代变异 + 复杂度/可扩展度指标，框架开源）→ rtl（93→96）
+- 2610.02544 CITADEL——CWE 引导、DFG 赋能 LLM 的硬件木马插入（LLM+RTL 结构分析的安全基准，100% 语法正确、随机仿真不可检测）→ rtl（93→96）
+- 2610.01918 Timing-Driven Logic Remapping with Local Physical Context——带局部物理上下文的时序驱动逻辑重映射（混合整数规划 + 物理实现反馈）→ physical（85→87）
+- 2610.00281 Vulnerability-Weighted Routing for SRAM FPGAs——配置扰动鲁棒 SRAM FPGA 脆弱性加权布线（Zynq UltraScale+ / RapidWright，总脆弱性 -41.7%、标称时序仅 -1.0%）→ physical（85→87）
+
+**行业动态 +0**：本日**未添加**任何行业新闻。原因：在 2026-10-05 时间线内无法获得可核验（HTTP 200 且内容吻合）的行业新闻 URL；为杜绝重演历史"新闻 100% 404"事故，严格遵循第 0 步规则**宁可空白、绝不编造或猜测 URL**。news 计数维持 219。
+
+**更新文件清单**
+- content/dates/2026-10-05.html、content/latest/2026-10-05.html（新建，5 论文卡 + 本地 PDF 链接）
+- content/dates/2610.*_*.pdf（5 篇真实 PDF，均 %PDF 头、380KB–2.9MB）
+- content/categories/{rtl,physical}.html（rtl 93→96 插 3 卡；physical 85→87 插 2 卡；计数同步）
+- content/papers/index.html（跳转刷新至 2026-10-05）
+- manifest.js（stats: 353/128/219；latest 与 dates 数组各插 2026-10-05；lastUpdate 2026-10-05）
+
+**去重检查**
+- 5 个 arXiv ID 经 Grep 确认 content/ 下此前不存在（无重复）
+- 新闻：未添加，无去重动作
+
+**Git**
+- commit: `auto update: 2026-10-05`（待提交）
+- push origin main（retry once if needed）
+
+**结果状态**：✅ 论文更新已落盘（5 篇均经真实性核验，PDF 真实），待提交推送
