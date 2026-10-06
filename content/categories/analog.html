@@ -7,9 +7,23 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（47篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（48篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+    <!-- 2610.02461 DAIST -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 DAIST: A Composable AI-Accelerated Iterative Solver for 3D-IC Thermal Modeling——可组合的 AI 加速 3D-IC 热分析迭代求解器</div>
+      <div class="abs-meta">arXiv:2610.02461 · cs.LG · 2026-10-01 · Yixing Li, Jiahang Zhou, Zhiyu Zeng, Xin Ai</div>
+      <div class="abs-body">异构 2.5D/3D-IC 封装的精确热分析不可或缺却计算昂贵：单次全封装 FEM 仿真动辄数小时，而现有 AI 代理模型把整个封装当作单一预测目标，每当 die 数量或拓扑变化就必须重新训练。DAIST（Domain-Decomposed AI-Accelerated Iterative Solver for Thermal Analysis）提出可组合热求解器：把全局封装仿真分解为块级子域问题，用神经算子替代子域求解器，并通过界面温度与热流的迭代交换耦合。这种"局部到全局"架构消除了单体模型的拓扑锁定——块级神经算子可直接复用于未见过的封装组合而无需重训；迭代耦合策略还提供可控的精度-运行时权衡（可调迭代预算权衡精度与耗时）。在多芯粒系统与先进封装系统上，DAIST 相对传统 FEM 求解器取得最高 178× 加速、平均温度误差极小。属「模拟与架构 / 多物理场 AI 热分析」方向，直接呼应本站「热分析与多物理场机器学习分析、Chiplet 互连/热分布优化」主题。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.02461" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.02461_DAIST_Thermal.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多物理场</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">3D-IC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">热分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">神经算子</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">域分解</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">封装仿真</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">加速比</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.LG</span>
+      </div>
+    </div>
+
+
     <!-- 2609.36752 cktFormer -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

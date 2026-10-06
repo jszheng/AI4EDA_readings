@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-10-06 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 0 条行业动态（本日未添加新闻，原因见执行摘要：未找到可核验 HTTP 200 且内容吻合的 2026-10-06 行业新闻 URL，遵照第 0 步「宁可空白、绝不编造」规则）· 来源：arXiv（cs.LG / cs.PL / cs.AI，论文提交于 2026-10-01~10-02，2026-10-06 检索并逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，体积 164KB–2.67MB 已校验为 %PDF）。本批次覆盖后端物理设计/多物理场 AI 热分析（3D-IC 热分析神经算子求解器）、AI Agent（硬件-软件协同设计智能体平台）与 AI 驱动硬件设计空间探索（RL 驱动硬件感知 NAS 的在线保角校准）。</p>
+</header>
+<section>
+  <div class="abstracts">
+    <!-- 2610.02461 DAIST -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · 2026-10-01 · Yixing Li, Jiahang Zhou, Zhiyu Zeng, Xin Ai</div>
+      <h4>🔬 DAIST: A Composable AI-Accelerated Iterative Solver for 3D-IC Thermal Modeling——可组合的 AI 加速 3D-IC 热分析迭代求解器</h4>
+      <p>异构 2.5D/3D-IC 封装的精确热分析不可或缺却计算昂贵：单次全封装 FEM 仿真动辄数小时，而现有 AI 代理模型把整个封装当作单一预测目标，每当 die 数量或拓扑变化就必须重新训练。DAIST（Domain-Decomposed AI-Accelerated Iterative Solver for Thermal Analysis）提出可组合热求解器：把全局封装仿真分解为块级子域问题，用神经算子替代子域求解器，并通过界面温度与热流的迭代交换耦合。这种"局部到全局"架构消除了单体模型的拓扑锁定——块级神经算子可直接复用于未见过的封装组合而无需重训；迭代耦合策略还提供可控的精度-运行时权衡（可调迭代预算权衡精度与耗时）。在多芯粒系统与先进封装系统上，DAIST 相对传统 FEM 求解器取得最高 178× 加速、平均温度误差极小。属「模拟与架构 / 多物理场 AI 热分析」方向，直接呼应本站「热分析与多物理场机器学习分析、Chiplet 互连/热分布优化」主题。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">多物理场</span><span class="tag">3D-IC</span><span class="tag">热分析</span><span class="tag">神经算子</span><span class="tag">域分解</span><span class="tag">封装仿真</span><span class="tag">加速比</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.02461" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.02461_DAIST_Thermal.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2610.02376 Coco -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.PL ; cs.AI · 2026-10-01 · Samuel Kushnir, Kavya Sreedhar, Yeshwanth Reddy Pogula, Amir Yazdanbakhsh, Narges Shahidi, Ming Liu, Varun Gohil, Ravi Iyer, Parthasarathy Ranganathan, Christina Delimitrou, Suvinay Subramanian</div>
+      <h4>🤖 Coco: An Agentic Copilot for the Hardware–Software Co-Design Lifecycle——面向硬件-软件协同设计生命周期的智能体副驾</h4>
+      <p>协同设计 ML 模型与其运行的加速器是一项特殊推理任务：架构师须对尚不存在的系统给出高置信、高风险结论，而模型演进与硬件节奏使分析负担逐季增长；每次决策背后的证据（数百 GB 全新仿真扫描）天然不在任何 LLM 预训练语料中，也无外部文献可检索，朴素"与数据对话"方案恰好在最需正确的地方产生幻觉。本文提出 Coco（Copilot for Codesign）——与 TPU 架构师一起部署的智能体平台，加速"搭建实验、扫描仿真、提取洞察"的协同设计生命周期。Coco 由四层构成：① 数据层自动把每次仿真扫描注册为归一化关系模式，使智能体每个数字都锚定 SQL 查询而非抓取异构文件；② 带类型 API 的工具库供智能体自主组合、无需人工编排；③ 把反复出现的分析流程编码为智能体（最显著的是 iso-execution…）。属「AI Agent / 硬件-软件协同设计」方向，是 LLM 智能体扎根真实仿真数据仓库、规避幻觉的工程化代表作。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">多智能体</span><span class="tag">EDA Agents</span><span class="tag">硬件-软件协同设计</span><span class="tag">智能体平台</span><span class="tag">HW-SW Co-design</span><span class="tag">TPU</span><span class="tag">仿真扫描</span><span class="tag">LLM扎根</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.02376" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.02376_Coco.pdf">📥 本地PDF</a>
+    </div>
+
+
+    <!-- 2610.03127 HW-aware NAS -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · 2026-10-02 · Pedro Brandimarte, Nerea Aranjuelo, Marcos Nieto, Oihana Otaegui</div>
+      <h4>📐 Coverage You Can Steer: Online Conformal Calibration for RL-Driven Hardware-Aware NAS——可控覆盖度：面向 RL 驱动硬件感知 NAS 的在线保角校准</h4>
+      <p>硬件感知神经架构搜索（NAS）被评估成本主导：每个架构须先训练才能得到奖励。保角预测过滤器通过剪除"预测奖励上界低于阈值"的候选来削减成本，并以免分布假设保证至多 δ 比例被误删。但该保证假设校准与测试候选可交换，而外围的强化学习（RL）循环违背了这一点：策略提案随搜索推进而改善，且在逐层构造中每轮都发生偏移。本文用在线反馈控制（自适应保角推断，含免调参、局地自适应、组条件变体）替代一次性分位数估计，恢复可操控的覆盖度：拨动目标即可单调、可复现地达到任意序列。在三类神经网络架构族、单步与序列搜索（三种子）上，它在约 10⁻³ 精度内跟踪每个请求水平，在零实测精度代价下剪除 25–50% 评估，而静态校准则失去覆盖度控制。属「物理设计 / AI 驱动硬件设计空间探索」方向，为 RL-NAS 的可信候选剪枝提供理论扎实且可调的控制器。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">神经架构搜索</span><span class="tag">NAS</span><span class="tag">硬件感知</span><span class="tag">强化学习</span><span class="tag">保角预测</span><span class="tag">设计空间探索</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.03127" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.03127_HWawareNAS.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

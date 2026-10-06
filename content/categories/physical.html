@@ -7,9 +7,23 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（87篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（88篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2610.03127 HW-aware NAS -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 Coverage You Can Steer: Online Conformal Calibration for RL-Driven Hardware-Aware NAS——可控覆盖度：面向 RL 驱动硬件感知 NAS 的在线保角校准</div>
+      <div class="abs-meta">arXiv:2610.03127 · cs.LG · 2026-10-02 · Pedro Brandimarte, Nerea Aranjuelo, Marcos Nieto, Oihana Otaegui</div>
+      <div class="abs-body">硬件感知神经架构搜索（NAS）被评估成本主导：每个架构须先训练才能得到奖励。保角预测过滤器通过剪除"预测奖励上界低于阈值"的候选来削减成本，并以免分布假设保证至多 δ 比例被误删。但该保证假设校准与测试候选可交换，而外围的强化学习（RL）循环违背了这一点：策略提案随搜索推进而改善，且在逐层构造中每轮都发生偏移。本文用在线反馈控制（自适应保角推断，含免调参、局地自适应、组条件变体）替代一次性分位数估计，恢复可操控的覆盖度：拨动目标即可单调、可复现地达到任意序列。在三类神经网络架构族、单步与序列搜索（三种子）上，它在约 10⁻³ 精度内跟踪每个请求水平，在零实测精度代价下剪除 25–50% 评估，而静态校准则失去覆盖度控制。属「物理设计 / AI 驱动硬件设计空间探索」方向，为 RL-NAS 的可信候选剪枝提供理论扎实且可调的控制器。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.03127" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.03127_HWawareNAS.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">神经架构搜索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">NAS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">保角预测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计空间探索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.LG</span>
+      </div>
+    </div>
+
+
     <!-- 2610.01918 Timing-Driven Remapping -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>
