@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（91篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（92篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2610.02401 Backside_Clock -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 Design Space Exploration of Backside Clock Meshes for 2 nm GAAFET BSPDN Technology——面向 2nm GAAFET BSPDN 技术的背面时钟网格设计空间探索</div>
+      <div class="abs-meta">arXiv:2610.02401 · cs.AR · 1 Oct 2026 · Wajid Ali, Muhammad Hadir Khan, Dalton Gaddy, Matthew Guthaus</div>
+      <div class="abs-body">时钟网格在高性能 VLSI 设计中用于最小化偏移并容忍片上工艺偏差，但会占用稀缺的顶层金属布线资源。背面供电（backside power delivery）新增了厚且低阻的背面金属层，其电源网格并未占满——背面时钟网格因此成为可能，但触发器位于正面、每个连接须穿过硅通孔（TSV），无法直接驱动。本文给出首个背面时钟网格的设计空间探索：基于 OpenROAD 在 GT2N（2nm 纳米片工艺）上实现，用多目标贝叶斯优化搜索四个基准（1,938~15,311 触发器），并以晶体管级 SPICE 仿真验证每个设计点（环形网格无法用静态时序分析评估）。相比相同正面网格，背面网格平均偏移降 45%、sink 压摆降 25%、功耗降 4.5%、正面时钟布线减少 28%，且 10,000 次蒙特卡洛下的偏移散布仅为正面网格的三分之一。属「物理设计 / 时钟网格 + 背面供电 + 贝叶斯 DSE」方向，把机器学习驱动的设计空间探索用于先进节点物理实现。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.02401" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.02401_Backside_Clock.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时钟网格</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">背面供电</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">BSPDN</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">贝叶斯优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">2nm</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">GAAFET</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
     <!-- 2610.06937 FAPO -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

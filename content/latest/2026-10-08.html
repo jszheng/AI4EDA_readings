@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🔥 2026-10-08 最新</h1>
+  <p class="subtitle">共 2 篇论文 · 0 条行业动态（本日未添加新闻，原因见执行摘要：检索到的行业动态均为已收录 Synopsys AgentEngineer/Autopilot（2026-09-28 已收录）的二次报道，或来源链接无法稳定核验 HTTP 200 且内容一致，遵照第 0 步「宁可空白、绝不编造」规则）· 来源：arXiv（cs.AR / cs.AI / cs.LG，论文提交于 2026-10-01 与 2026-10-06，2026-10-07 公告，2026-10-08 检索并逐篇经 arxiv.org/abs 核验；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF）。本批次覆盖后端物理设计（2nm 背面时钟网格的贝叶斯设计空间探索，OpenROAD 实现）与模拟与架构（可解释 ML 驱动的片上功耗建模）。</p>
+</header>
+<section>
+  <div class="abstracts">
+    <!-- 2610.02401 Backside_Clock -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 1 Oct 2026 · Wajid Ali, Muhammad Hadir Khan, Dalton Gaddy, Matthew Guthaus</div>
+      <h4>📐 Design Space Exploration of Backside Clock Meshes for 2 nm GAAFET BSPDN Technology——面向 2nm GAAFET BSPDN 技术的背面时钟网格设计空间探索</h4>
+      <p>时钟网格在高性能 VLSI 设计中用于最小化偏移并容忍片上工艺偏差，但会占用稀缺的顶层金属布线资源。背面供电（backside power delivery）新增了厚且低阻的背面金属层，其电源网格并未占满——背面时钟网格因此成为可能，但触发器位于正面、每个连接须穿过硅通孔（TSV），无法直接驱动。本文给出首个背面时钟网格的设计空间探索：基于 OpenROAD 在 GT2N（2nm 纳米片工艺）上实现，用多目标贝叶斯优化搜索四个基准（1,938~15,311 触发器），并以晶体管级 SPICE 仿真验证每个设计点（环形网格无法用静态时序分析评估）。相比相同正面网格，背面网格平均偏移降 45%、sink 压摆降 25%、功耗降 4.5%、正面时钟布线减少 28%，且 10,000 次蒙特卡洛下的偏移散布仅为正面网格的三分之一。属「物理设计 / 时钟网格 + 背面供电 + 贝叶斯 DSE」方向，把机器学习驱动的设计空间探索用于先进节点物理实现。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">时钟网格</span><span class="tag">背面供电</span><span class="tag">BSPDN</span><span class="tag">贝叶斯优化</span><span class="tag">OpenROAD</span><span class="tag">2nm</span><span class="tag">GAAFET</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.02401" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.02401_Backside_Clock.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.08502 X_OPM -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.AI · cs.LG · 6 Oct 2026 · Jingbo Jiang, Xizi Chen, Jian Peng, Wei Zhang</div>
+      <h4>🔬 X-OPM: Explainable Automatic Digital On-Chip Power Modeling for Enhanced Robustness——X-OPM：面向更强鲁棒性的可解释自动数字片上功耗建模</h4>
+      <p>主动式功耗管理系统通过运行时功耗预测与功耗感知调度降低处理器动态功耗，而准确、稳定且低开销的数字片上功耗计（OPM）是提升预测质量的关键。已有研究尝试线性模型、决策树、多层感知机（MLP）等多种建模方法，但多数端到端训练、未分析特征的可解释性，泛化到未见负载时性能下降。X-OPM 立足于同步数字 VLSI 电路设计原理，提出鲁棒特征工程框架：用基于树的模型捕获特征交互、用线性模型做预测，并引入人在回路（human-in-the-loop）工作流在模型精度与建模代价间权衡。在商用 C906 向量处理器上评测，X-OPM 在所有负载下稳定取得 R²&gt;0.93（采样窗口 &lt;8 周期）；而 APOLLO、COBIT 与标准 MLP 均无法在所有测试用例泛化。商用 EDA 工具布图显示其面积开销 &lt;0.1%，与轻量树/线性模型相当、远小于 MLP 模型。属「模拟与架构 / ML 驱动的片上功耗建模」方向，把可解释机器学习用于芯片物理分析。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">片上功耗建模</span><span class="tag">OPM</span><span class="tag">机器学习</span><span class="tag">可解释性</span><span class="tag">人在回路</span><span class="tag">特征工程</span><span class="tag">cs.AR</span><span class="tag">cs.AI</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.08502" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.08502_X_OPM.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
