@@ -7,9 +7,36 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（48篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（50篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+    <!-- 2610.06148 RL_PDN -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 Reinforcement Learning-Based Optimization of Workload-Aware Power Delivery Networks——基于强化学习的负载感知电源配送网络优化</div>
+      <div class="abs-meta">arXiv:2610.06148 · cs.AR · 5 Oct 2026 · Oran Hayes, Maria Pantazi-Kypraiou, Athanasios Tziouvaras, George Stamoulis, Anuj Pathania, Shreejith Shanker, George Floros</div>
+      <div class="abs-body">电源配送网络（PDN）是现代 VLSI 芯片的关键部件，须在满足电迁移（EM）与 IR-drop 约束下提供稳定电压；传统 PDN 设计多依赖最坏情况假设，常导致过度配置与资源浪费。本文提出基于强化学习的负载感知 PDN 优化框架：先由系统级仿真得到的架构级功率轨迹生成负载感知 PDN，把功率轨迹映射为空间功率密度分布，依局部电流需求自适应分配 PDN 资源；再由 RL 智能体做线宽优化，在满足 EM 与电压完整性约束下最小化 PDN 面积（电气与可靠性指标由 SPICE 电路分析与 EM 寿命估计给出）。在 4/8/16 核多处理器布图（PARSEC、SPLASH-2 负载）数据集上，基于 DQN 的优化器在全部约束满足下使归一化 PDN 面积平均降 47%，相较模拟退火质量相当却快约 26×。属「模拟与架构 / 多物理场 AI 电源网络优化」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.06148" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.06148_RL_PDN.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多物理场</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">电源网络</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PDN</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DQN</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">电迁移</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.03934 SGAnalog -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 SGAnalog: An End-to-End Circuit Benchmark from Open-Source Silicon Tapeouts——SGAnalog：源自开源硅流片的全流程电路基准</div>
+      <div class="abs-meta">arXiv:2610.03934 · cs.AI · 2 Oct 2026 · Yueting Li, Weihang Ding</div>
+      <div class="abs-body">现有模拟集成电路设计基准难以回答两个问题：模型学到的是可迁移电路技能还是记住了熟悉样例？其输出在既定工艺与测试条件下是否真的可用？本文提出基于 Tiny Tapeout 制造 shuttle 的人类设计开源电路基准，含 273 个拓扑各异的顶层设计；每源文件按 shuttle 提交版本取回，在固定容器环境中处理，从同一源文件导出原理图图像与 SPICE 网表（给转录精确结构参照），提交日期支持按模型训练截止的分析，作者测试平台提供尺寸仿真上下文。基准评测原理图→网表转录与器件尺寸。七个模型在 66 个固定转录任务上最强仅达 56.1% 精确图同构，六个模型在中层相对小层骤降；17 个尺寸任务上领先模型在所有 17 个提案收敛、相对人类参考达 91.2/100，而两个最新 Claude 模型对同样提示拒绝 4 与 11 次；无尺寸提案计零分。两任务给出不同模型排名，暴露出视觉与设计能力的差异，以及某家族的策略（而非能力）限制。属「模拟与架构 / 模拟电路基准」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.03934" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.03934_SGAnalog.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟电路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">基准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">原理图转录</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">器件尺寸</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Tiny Tapeout</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
+
+
     <!-- 2610.02461 DAIST -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

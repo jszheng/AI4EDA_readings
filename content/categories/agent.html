@@ -7,9 +7,36 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（47篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（49篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+    <!-- 2610.05037 SparseCraft -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 SparseCraft: Agentic Hardware-Software Co-Optimization for Sparse Computing——SparseCraft：面向稀疏计算的智能体式硬件-软件协同优化</div>
+      <div class="abs-meta">arXiv:2610.05037 · cs.AR · 4 Oct 2026 · Rajatabha Chakraborty, M P Samartha, Vedant Pahariya, Priyesh Shukla</div>
+      <div class="abs-body">稀疏加速器设计空间通常对照解析模型搜索，设计点凭“模型预测”而非“硬件实测”入册。SparseCraft 用置于闭环 CHIA 中的语言模型弥合该鸿沟：在 15 次迭代中，模型读取上一次实测结果，经 MCP 工具服务器编辑 Gemmini 加速器的 Chisel RTL、内存配置与稀疏核调度；任一候选须经合法性检查、展开、周期精确仿真、与黄金参考逐位比对、综合后才计数。该框架把每次测量转为下一份工作单——带策略引导的诊断瓶颈、已试设计历史与模型自身预测的评分，另一模型修复未过闸的改动。在 512×512 GraphChallenge 稀疏 DNN 层上，相对块稀疏 Gemmini 基线达到 2.1× 更少周期、9.8× 更少片外流量、22.8% 更少面积，建模能效比高 5.61×、EDP 低 11.8×；杠杆跨三层：保持稠密操作数常驻的调度消去 9.8× 流量，模型用 Chisel 写的零门控 MAC 与零行跳过单元削减能耗，重设内存削减面积。属「AI Agent / 智能体驱动硬件-软件协同优化」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.05037" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.05037_SparseCraft.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件-软件协同</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Chisel RTL</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">MCP</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Gemmini</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.07191 Agentic_DSE -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 Agentic Design Space Exploration for Joint Hardware Configuration Selection and Mapping of AI Inference Workloads on Heterogeneous Edge SoCs——面向异构边缘 SoC 上 AI 推理负载联合硬件配置选择与映射的智能体式设计空间探索</div>
+      <div class="abs-meta">arXiv:2610.07191 · cs.AR · 5 Oct 2026 · Geetha Prasuna Yarramneni, Surya Selvam, Wilfried Haensch, Anand Raghunathan</div>
+      <div class="abs-body">现代边缘 SoC 集成 CPU/GPU/NPU 等异构处理单元，各有不同性能与能耗特征；在实时延迟与能耗约束下部署 AI 推理负载，须联合把负载映射到 PU 并配置各 PU（活跃核数、工作频率等），该联合空间组合爆炸。既有 DSE 多用黑盒优化（进化搜索），每次评估仅返回延迟、能耗等聚合指标；近期 LLM 引导 DSE 也依赖同样稀疏反馈，导致效率受限、无法洞察设计空间与选择理由、浪费 LLM 推理能力。本文提出 TraceDSE——面向异构 SoC 上 AI 推理的联合负载映射与 PU 配置的智能体 DSE 流程：以“系统执行轨迹”这一更丰富反馈驱动的提议者-批评者迭代循环——LLM 提议者生成候选映射与 PU 配置供硬件评估，配备程序化轨迹分析工具的 LLM 批评者分析轨迹、定位瓶颈并建议针对性精化。该循环带来对每个设计点更深的洞察、更高质量决策与更有效搜索。在 Intel Meteor Lake SoC 上四种 AI 推理负载（不同复杂度模型与多模型流水线）评测，TraceDSE 稳定优于两种 SOTA 黑盒优化工具，Pareto 前沿超体积较 NSGA-II 最高提升 35%、较贝叶斯优化最高 68%，且所需硬件评估少约 6–9×。属「AI Agent / 智能体驱动设计空间探索」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.07191" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.07191_Agentic_DSE.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计空间探索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">异构SoC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">负载映射</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">执行轨迹</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+
 
     <!-- 2610.02376 Coco -->
     <div class="abs-card">

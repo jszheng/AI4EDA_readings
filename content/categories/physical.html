@@ -7,9 +7,49 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（88篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（91篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2610.06937 FAPO -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 FAPO: Fanout-Aware Post-Mapping Optimization for LUT-Based FPGAs——FAPO：面向 LUT 型 FPGA 的扇出感知映射后优化</div>
+      <div class="abs-meta">arXiv:2610.06937 · cs.AR · 3 Oct 2026 · Xiaoyu Hao, Keren Zhu</div>
+      <div class="abs-body">FPGA 技术映射阶段降低逻辑深度并不能消除所得 LUT 网络的扇出瓶颈：仅靠复制高扇出 LUT 缓解瓶颈会消耗面积并加重上游负载。本文提出 FAPO——与映射器无关的映射后优化器，在最终面积约束下联合精化汇点分配与 LUT 切割：以所得活动 LUT 网络评估切割切换与恢复，推导延迟降低的必要条件（全关键路径条件），并在受限同切图中以最小割得到最少复制方案；该方案与贪心精化互补，由全网络面积与时序选出最优映射。在 EPFL 基准上用三种初始映射器实现扇出感知面积-时序积（ATP）最高 14.48% 的几何均值下降，相对 ABC if 路由后关键路径延迟降 7.04%。属「物理设计 / FPGA 映射后优化」方向，把扇出瓶颈的缓解前移到映射后阶段。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.06937" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.06937_FAPO.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">FPGA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">映射后优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">扇出瓶颈</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">面积-时序积</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LUT</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Keren Zhu</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.08457 CircuitTiming_KD -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 Climbing the Design Ladder: Sequential Knowledge Distillation for Early-Stage Circuit Timing Prediction——登上设计阶梯：面向早期电路时序预测的序贯知识蒸馏</div>
+      <div class="abs-meta">arXiv:2610.08457 · cs.LG · 5 Oct 2026 · Reza Moravej, Fahad Rahman Amik, Zhanguang Zhang, Didier Chételat, Yingxue Zhang</div>
+      <div class="abs-body">集成电路设计横跨逻辑综合、布图规划、布局、布线多阶段，每阶段耗时数小时至数周；若到布线后才暴露时序违例，须回溯早期阶段重做，代价高昂。现有 ML 方法难以跨越“综合后逻辑描述”与“布线后物理版图”之间的巨大抽象鸿沟。本文提出 STEP-KD（基于渐进式知识蒸馏的时序评估）：以中间设计阶段为“踏脚石”做渐进知识迁移——在布线后、布局后、布图规划后分别训练教师模型，再经表征对齐把知识顺序蒸馏到综合后学生模型。在多种电路上，STEP-KD 相较直接蒸馏与监督基线降低时序预测误差，多数设定下优于工业级静态时序分析（STA）工具：总负裕量（TNS）预测加权平均绝对百分比误差降至 19.78%，而 STA 为 74.84%。属「物理设计 / 早期时序预测」方向，让时序问题在设计早期暴露，规避昂贵的晚期返工。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.08457" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.08457_CircuitTiming_KD.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序预测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">知识蒸馏</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">早期时序</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">STA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计阶段</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.LG</span>
+      </div>
+    </div>
+
+    <!-- 2610.04957 Trinity_Floorplan -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 Trinity: One Differentiable Physics for Training, Refining and Scoring Generative Floorplanners——Trinity：用于训练、精化与评分生成式布图器的统一可微物理</div>
+      <div class="abs-meta">arXiv:2610.04957 · cs.LG · 4 Oct 2026 · Shih-Ying Yeh, Tzu-Sian Wang, Xuehai Wang, Jia-Hua Lee, Daniel Z. Kaplan, Ming-Qi Xu, Wuqian Tang, Chun-Yao Wang, Shang-Hong Lai, Chun-Yi Lee</div>
+      <div class="abs-body">布图规划需在“拉拢模块、短连线、小外形”的目标与“不重叠、簇、MIB 形状、边界块”等约束间折中；近期扩散布局器仅在参考布局上训练，把这套耦合系统丢给引导、事后循环与合法器，只报告终点指标，掩盖了生成器的真实贡献。本文在统一配方下复现其中四种，对原始/精化/合法化布局在同一尺度打分，并提出 Trinity——流匹配布图器，其六个约束与目标的可微函数同时作为训练损失项、采样后闭式精化器的能量、以及各阶段软代价的基底。网络由此学到了先前布局器在采样器中施加的校正先验，采样无需引导。逐阶段看：训练项把朴素 transformer 的原始软代价降 26%（在短预算下收益最大）；共享精化器决定最终代价多于生成器，并以 16–660× 更少步数匹配移植布局器的循环；Trinity 精化软代价比最佳移植流水线低 36%；软代价对设置的排序与竞赛硬代价一致；在 FloorSet 验证集上以 1.63s/例达到均值硬代价 1.014。属「物理设计 / 生成式布图规划」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.04957" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.04957_Trinity_Floorplan.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布图规划</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">生成式</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">流匹配</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可微约束</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.LG</span>
+      </div>
+    </div>
+
+
     <!-- 2610.03127 HW-aware NAS -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

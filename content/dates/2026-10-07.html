@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-10-07 动态</h1>
+  <p class="subtitle">共 11 篇论文 · 0 条行业动态（本日未添加新闻，原因见执行摘要：未找到可核验 HTTP 200 且内容吻合的 2026-10-07 行业新闻 URL，遵照第 0 步「宁可空白、绝不编造」规则）· 来源：arXiv（cs.AR / cs.LG / cs.DC / cs.PL / cs.AI，论文提交于 2026-10-02~10-06，2026-10-07 检索并逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，体积已校验为 %PDF）。本批次覆盖前端 RTL 生成（LLM 修复 HLS/VHDL 基准、异步电路 HLS 流程）、后端物理设计（FPGA 映射后优化、早期时序预测、生成式布图规划）、功能验证（DSA 验证框架）、模拟与架构（RL 电源网络、模拟电路基准）与 AI Agent（智能体驱动硬件-软件协同优化、异构 SoC 设计空间探索）。</p>
+</header>
+<section>
+  <div class="abstracts">
+    <!-- 2610.06937 FAPO -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 3 Oct 2026 · Xiaoyu Hao, Keren Zhu</div>
+      <h4>📐 FAPO: Fanout-Aware Post-Mapping Optimization for LUT-Based FPGAs——FAPO：面向 LUT 型 FPGA 的扇出感知映射后优化</h4>
+      <p>FPGA 技术映射阶段降低逻辑深度并不能消除所得 LUT 网络的扇出瓶颈：仅靠复制高扇出 LUT 缓解瓶颈会消耗面积并加重上游负载。本文提出 FAPO——与映射器无关的映射后优化器，在最终面积约束下联合精化汇点分配与 LUT 切割：以所得活动 LUT 网络评估切割切换与恢复，推导延迟降低的必要条件（全关键路径条件），并在受限同切图中以最小割得到最少复制方案；该方案与贪心精化互补，由全网络面积与时序选出最优映射。在 EPFL 基准上用三种初始映射器实现扇出感知面积-时序积（ATP）最高 14.48% 的几何均值下降，相对 ABC if 路由后关键路径延迟降 7.04%。属「物理设计 / FPGA 映射后优化」方向，把扇出瓶颈的缓解前移到映射后阶段。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">FPGA</span><span class="tag">映射后优化</span><span class="tag">扇出瓶颈</span><span class="tag">面积-时序积</span><span class="tag">LUT</span><span class="tag">Keren Zhu</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.06937" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.06937_FAPO.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.08457 CircuitTiming_KD -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · 5 Oct 2026 · Reza Moravej, Fahad Rahman Amik, Zhanguang Zhang, Didier Chételat, Yingxue Zhang</div>
+      <h4>📐 Climbing the Design Ladder: Sequential Knowledge Distillation for Early-Stage Circuit Timing Prediction——登上设计阶梯：面向早期电路时序预测的序贯知识蒸馏</h4>
+      <p>集成电路设计横跨逻辑综合、布图规划、布局、布线多阶段，每阶段耗时数小时至数周；若到布线后才暴露时序违例，须回溯早期阶段重做，代价高昂。现有 ML 方法难以跨越“综合后逻辑描述”与“布线后物理版图”之间的巨大抽象鸿沟。本文提出 STEP-KD（基于渐进式知识蒸馏的时序评估）：以中间设计阶段为“踏脚石”做渐进知识迁移——在布线后、布局后、布图规划后分别训练教师模型，再经表征对齐把知识顺序蒸馏到综合后学生模型。在多种电路上，STEP-KD 相较直接蒸馏与监督基线降低时序预测误差，多数设定下优于工业级静态时序分析（STA）工具：总负裕量（TNS）预测加权平均绝对百分比误差降至 19.78%，而 STA 为 74.84%。属「物理设计 / 早期时序预测」方向，让时序问题在设计早期暴露，规避昂贵的晚期返工。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">时序预测</span><span class="tag">知识蒸馏</span><span class="tag">早期时序</span><span class="tag">STA</span><span class="tag">设计阶段</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.08457" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.08457_CircuitTiming_KD.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.08372 vTen -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.DC · 6 Oct 2026 · Chanmin Baek, Keehyuk Lee, Mincheol Cha, Somi Hong, Xuan Truong Nguyen, Hyuk-Jae Lee</div>
+      <h4>✅ vTen: Tensor-Centric Verification Framework for Domain-Specific Accelerators——vTen：面向领域专用加速器的张量为中心验证框架</h4>
+      <p>面向领域专用加速器（DSA）的验证中，张量为中心软件模型与信号级硬件测试平台之间的语义鸿沟造成巨大生产力瓶颈；Cocotb 等现有框架因细粒度交互带来高昂同步开销。本文提出 vTen——以数据为中心的验证框架，严格解耦验证意图与执行机制：借助声明式 DSL 与核粒度批处理，把宿主-仿真器交互频率降至最低。在量产级 3D U-Net 加速器上的评测显示，vTen 相对 Cocotb 取得仿真时延 2× 提升、代码复杂度降 60.3%。属「功能验证 / 加速器验证框架」方向，为 DSA 验证提供低开销、解耦式的工程化方案。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">加速器验证</span><span class="tag">DSA</span><span class="tag">Cocotb</span><span class="tag">DSL</span><span class="tag">批处理</span><span class="tag">cs.DC</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.08372" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.08372_vTen.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.06148 RL_PDN -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 5 Oct 2026 · Oran Hayes, Maria Pantazi-Kypraiou, Athanasios Tziouvaras, George Stamoulis, Anuj Pathania, Shreejith Shanker, George Floros</div>
+      <h4>🔬 Reinforcement Learning-Based Optimization of Workload-Aware Power Delivery Networks——基于强化学习的负载感知电源配送网络优化</h4>
+      <p>电源配送网络（PDN）是现代 VLSI 芯片的关键部件，须在满足电迁移（EM）与 IR-drop 约束下提供稳定电压；传统 PDN 设计多依赖最坏情况假设，常导致过度配置与资源浪费。本文提出基于强化学习的负载感知 PDN 优化框架：先由系统级仿真得到的架构级功率轨迹生成负载感知 PDN，把功率轨迹映射为空间功率密度分布，依局部电流需求自适应分配 PDN 资源；再由 RL 智能体做线宽优化，在满足 EM 与电压完整性约束下最小化 PDN 面积（电气与可靠性指标由 SPICE 电路分析与 EM 寿命估计给出）。在 4/8/16 核多处理器布图（PARSEC、SPLASH-2 负载）数据集上，基于 DQN 的优化器在全部约束满足下使归一化 PDN 面积平均降 47%，相较模拟退火质量相当却快约 26×。属「模拟与架构 / 多物理场 AI 电源网络优化」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">多物理场</span><span class="tag">电源网络</span><span class="tag">PDN</span><span class="tag">强化学习</span><span class="tag">DQN</span><span class="tag">电迁移</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.06148" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.06148_RL_PDN.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.03971 HLS_Repair_Bench -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 2 Oct 2026 · Maisha Mastora, Dean Sullivan</div>
+      <h4>⚡ An Executable Benchmark for LLM-Based HLS Repair: Design Complexity and Repair Underconstraint——面向 LLM 的 HLS 修复可执行基准：设计复杂度与修复欠约束</h4>
+      <p>用大语言模型自动修复高层次综合（HLS）设计是新兴却乏人问津的问题：LLM 在 RTL Verilog 修复上表现强劲，但唯一先行的 HLS 逻辑修复系统研究仅报告 GPT-4 校正准确率 10.5%，且未分析失败原因与难度来源。本文给出首个 LLM 基于 HLS 修复的系统性评测：横跨 GPT-4o/4o-mini/5.4/Claude Opus 4.6 四种模型、125 个基准实例、覆盖三个开源 HLS 套件（CHStone/MachSuite/Polybench）的八类逻辑缺陷。我们构建了首个可执行的 APR 式 HLS 修复基准（套件专属功能预言机支持 pass@k 评测，而非先前的字符串近似）。发现设计上下文与规模（而非缺陷类型）主导修复难度：复杂密码学核（CHStone）修复率仅 6–45%，而紧凑算法核（MachSuite）达 81–93%。引入“解的多重性”作为修复欠约束的经验度量，跨四模型强预测失败（Spearman ρ=−0.393）。前沿模型把欠约束实例从 41–46 降到 3（Claude Opus 4.6），pass@1 从 42–53% 提到 73–76%。属「RTL生成 / LLM 修复基准」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">HLS修复</span><span class="tag">LLM修复</span><span class="tag">基准</span><span class="tag">pass@k</span><span class="tag">欠约束</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.03971" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.03971_HLS_Repair_Bench.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.05380 VHDL_REPOBENCH -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.PL · 4 Oct 2026 · Prashanth Vijayaraghavan, Akul Malhotra, Ashutosh Jadhav, Ehsan Degan, Vandana Mukherjee</div>
+      <h4>⚡ VHDL-REPOBENCH: A Repository-Level Benchmark for Evaluating Large Language Models on VHDL Design Generation——VHDL-REPOBENCH：面向 LLM 的仓库级 VHDL 设计生成评测基准</h4>
+      <p>LLM 正加速进入硬件设计自动化，在生成与理解硬件描述语言上潜力巨大，但现有基准多聚焦 Verilog，对工业与学术界仍广泛使用的 VHDL（尤其 FPGA 与安全关键系统）评测有限。本文提出 VHDL-REPOBENCH——大规模、跨文件、仓库级 VHDL 设计生成与分析基准：精选约 100 个开源 VHDL 仓库（约 2.5k 文件、500 个测试平台），提供结构化问题陈述、模块桩与自验证测试平台，支持句法、语义正确、层次推理、跨文件依赖解析与功能验证的端到端评测。对 GPT-4o/Llama-3-70B/Qwen2.5-72B/CodeLlama-70B 及 Reflexion、CoDes 等多步推理方法的评测显示：当前 LLM 行/块级准确率尚可，但在多文件推理、层次设计理解与“规格→模块”生成上仍有显著挑战。属「RTL生成 / VHDL 基准」方向，是首个大规模 VHDL 聚焦基准。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">VHDL</span><span class="tag">基准</span><span class="tag">仓库级</span><span class="tag">跨文件推理</span><span class="tag">LLM</span><span class="tag">cs.PL</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.05380" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.05380_VHDL_REPOBENCH.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.04957 Trinity_Floorplan -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · 4 Oct 2026 · Shih-Ying Yeh, Tzu-Sian Wang, Xuehai Wang, Jia-Hua Lee, Daniel Z. Kaplan, Ming-Qi Xu, Wuqian Tang, Chun-Yao Wang, Shang-Hong Lai, Chun-Yi Lee</div>
+      <h4>📐 Trinity: One Differentiable Physics for Training, Refining and Scoring Generative Floorplanners——Trinity：用于训练、精化与评分生成式布图器的统一可微物理</h4>
+      <p>布图规划需在“拉拢模块、短连线、小外形”的目标与“不重叠、簇、MIB 形状、边界块”等约束间折中；近期扩散布局器仅在参考布局上训练，把这套耦合系统丢给引导、事后循环与合法器，只报告终点指标，掩盖了生成器的真实贡献。本文在统一配方下复现其中四种，对原始/精化/合法化布局在同一尺度打分，并提出 Trinity——流匹配布图器，其六个约束与目标的可微函数同时作为训练损失项、采样后闭式精化器的能量、以及各阶段软代价的基底。网络由此学到了先前布局器在采样器中施加的校正先验，采样无需引导。逐阶段看：训练项把朴素 transformer 的原始软代价降 26%（在短预算下收益最大）；共享精化器决定最终代价多于生成器，并以 16–660× 更少步数匹配移植布局器的循环；Trinity 精化软代价比最佳移植流水线低 36%；软代价对设置的排序与竞赛硬代价一致；在 FloorSet 验证集上以 1.63s/例达到均值硬代价 1.014。属「物理设计 / 生成式布图规划」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">布图规划</span><span class="tag">生成式</span><span class="tag">流匹配</span><span class="tag">可微约束</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.04957" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.04957_Trinity_Floorplan.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.03934 SGAnalog -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 2 Oct 2026 · Yueting Li, Weihang Ding</div>
+      <h4>🔬 SGAnalog: An End-to-End Circuit Benchmark from Open-Source Silicon Tapeouts——SGAnalog：源自开源硅流片的全流程电路基准</h4>
+      <p>现有模拟集成电路设计基准难以回答两个问题：模型学到的是可迁移电路技能还是记住了熟悉样例？其输出在既定工艺与测试条件下是否真的可用？本文提出基于 Tiny Tapeout 制造 shuttle 的人类设计开源电路基准，含 273 个拓扑各异的顶层设计；每源文件按 shuttle 提交版本取回，在固定容器环境中处理，从同一源文件导出原理图图像与 SPICE 网表（给转录精确结构参照），提交日期支持按模型训练截止的分析，作者测试平台提供尺寸仿真上下文。基准评测原理图→网表转录与器件尺寸。七个模型在 66 个固定转录任务上最强仅达 56.1% 精确图同构，六个模型在中层相对小层骤降；17 个尺寸任务上领先模型在所有 17 个提案收敛、相对人类参考达 91.2/100，而两个最新 Claude 模型对同样提示拒绝 4 与 11 次；无尺寸提案计零分。两任务给出不同模型排名，暴露出视觉与设计能力的差异，以及某家族的策略（而非能力）限制。属「模拟与架构 / 模拟电路基准」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">模拟电路</span><span class="tag">基准</span><span class="tag">原理图转录</span><span class="tag">器件尺寸</span><span class="tag">Tiny Tapeout</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.03934" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.03934_SGAnalog.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.05037 SparseCraft -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 4 Oct 2026 · Rajatabha Chakraborty, M P Samartha, Vedant Pahariya, Priyesh Shukla</div>
+      <h4>🤖 SparseCraft: Agentic Hardware-Software Co-Optimization for Sparse Computing——SparseCraft：面向稀疏计算的智能体式硬件-软件协同优化</h4>
+      <p>稀疏加速器设计空间通常对照解析模型搜索，设计点凭“模型预测”而非“硬件实测”入册。SparseCraft 用置于闭环 CHIA 中的语言模型弥合该鸿沟：在 15 次迭代中，模型读取上一次实测结果，经 MCP 工具服务器编辑 Gemmini 加速器的 Chisel RTL、内存配置与稀疏核调度；任一候选须经合法性检查、展开、周期精确仿真、与黄金参考逐位比对、综合后才计数。该框架把每次测量转为下一份工作单——带策略引导的诊断瓶颈、已试设计历史与模型自身预测的评分，另一模型修复未过闸的改动。在 512×512 GraphChallenge 稀疏 DNN 层上，相对块稀疏 Gemmini 基线达到 2.1× 更少周期、9.8× 更少片外流量、22.8% 更少面积，建模能效比高 5.61×、EDP 低 11.8×；杠杆跨三层：保持稠密操作数常驻的调度消去 9.8× 流量，模型用 Chisel 写的零门控 MAC 与零行跳过单元削减能耗，重设内存削减面积。属「AI Agent / 智能体驱动硬件-软件协同优化」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">AI Agent</span><span class="tag">硬件-软件协同</span><span class="tag">智能体</span><span class="tag">Chisel RTL</span><span class="tag">MCP</span><span class="tag">Gemmini</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.05037" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.05037_SparseCraft.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.05112 Async_HLS_Flow -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 4 Oct 2026 · Mayuresh Warunjikar, Madhav Desai</div>
+      <h4>⚡ An ASIC Design Flow for High-Level Synthesis of Asynchronous Circuits——面向异步电路高层综合的 ASIC 设计流程</h4>
+      <p>异步电路相较同步电路有更低空闲功耗、潜在更低延迟、无时钟分布问题等优势，但工业级 EDA 支撑（尤其从命令式程序做异步系统高层综合 HLS）仍有限。本文给出用 AHIR HLS 框架从命令式程序综合异步电路的方法：以受限的 1-安全且活（1-safe and live）Petri 网建模控制通路；由此出发生成带延迟不敏感控制器、单轨数据通路（控制器与数据通路间为类 micropipelines 的 bundled-data 交互）的异步电路，并形式化正确运行所需的时序约束，证明其单侧（可行）、必要且充分；还开发了静态时序分析器检查约束满足。该流程无缝接入现成 ASIC 工具链与标准同步单元库。以 AES 加密算法端到端实现演示，并用布局后电路仿真验证正确性、估计性能。属「RTL生成 / 异步电路 HLS 流程」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">HLS流程</span><span class="tag">异步电路</span><span class="tag">Petri网</span><span class="tag">静态时序分析</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.05112" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.05112_Async_HLS_Flow.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.07191 Agentic_DSE -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 5 Oct 2026 · Geetha Prasuna Yarramneni, Surya Selvam, Wilfried Haensch, Anand Raghunathan</div>
+      <h4>🤖 Agentic Design Space Exploration for Joint Hardware Configuration Selection and Mapping of AI Inference Workloads on Heterogeneous Edge SoCs——面向异构边缘 SoC 上 AI 推理负载联合硬件配置选择与映射的智能体式设计空间探索</h4>
+      <p>现代边缘 SoC 集成 CPU/GPU/NPU 等异构处理单元，各有不同性能与能耗特征；在实时延迟与能耗约束下部署 AI 推理负载，须联合把负载映射到 PU 并配置各 PU（活跃核数、工作频率等），该联合空间组合爆炸。既有 DSE 多用黑盒优化（进化搜索），每次评估仅返回延迟、能耗等聚合指标；近期 LLM 引导 DSE 也依赖同样稀疏反馈，导致效率受限、无法洞察设计空间与选择理由、浪费 LLM 推理能力。本文提出 TraceDSE——面向异构 SoC 上 AI 推理的联合负载映射与 PU 配置的智能体 DSE 流程：以“系统执行轨迹”这一更丰富反馈驱动的提议者-批评者迭代循环——LLM 提议者生成候选映射与 PU 配置供硬件评估，配备程序化轨迹分析工具的 LLM 批评者分析轨迹、定位瓶颈并建议针对性精化。该循环带来对每个设计点更深的洞察、更高质量决策与更有效搜索。在 Intel Meteor Lake SoC 上四种 AI 推理负载（不同复杂度模型与多模型流水线）评测，TraceDSE 稳定优于两种 SOTA 黑盒优化工具，Pareto 前沿超体积较 NSGA-II 最高提升 35%、较贝叶斯优化最高 68%，且所需硬件评估少约 6–9×。属「AI Agent / 智能体驱动设计空间探索」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">AI Agent</span><span class="tag">设计空间探索</span><span class="tag">智能体</span><span class="tag">异构SoC</span><span class="tag">负载映射</span><span class="tag">执行轨迹</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.07191" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.07191_Agentic_DSE.pdf">📥 本地PDF</a>
+    </div>
+
+
+  </div>
+</section>
+</body>
+</html>

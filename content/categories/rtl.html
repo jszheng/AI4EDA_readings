@@ -7,9 +7,49 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（96篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（99篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+    <!-- 2610.03971 HLS_Repair_Bench -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ An Executable Benchmark for LLM-Based HLS Repair: Design Complexity and Repair Underconstraint——面向 LLM 的 HLS 修复可执行基准：设计复杂度与修复欠约束</div>
+      <div class="abs-meta">arXiv:2610.03971 · cs.AR · 2 Oct 2026 · Maisha Mastora, Dean Sullivan</div>
+      <div class="abs-body">用大语言模型自动修复高层次综合（HLS）设计是新兴却乏人问津的问题：LLM 在 RTL Verilog 修复上表现强劲，但唯一先行的 HLS 逻辑修复系统研究仅报告 GPT-4 校正准确率 10.5%，且未分析失败原因与难度来源。本文给出首个 LLM 基于 HLS 修复的系统性评测：横跨 GPT-4o/4o-mini/5.4/Claude Opus 4.6 四种模型、125 个基准实例、覆盖三个开源 HLS 套件（CHStone/MachSuite/Polybench）的八类逻辑缺陷。我们构建了首个可执行的 APR 式 HLS 修复基准（套件专属功能预言机支持 pass@k 评测，而非先前的字符串近似）。发现设计上下文与规模（而非缺陷类型）主导修复难度：复杂密码学核（CHStone）修复率仅 6–45%，而紧凑算法核（MachSuite）达 81–93%。引入“解的多重性”作为修复欠约束的经验度量，跨四模型强预测失败（Spearman ρ=−0.393）。前沿模型把欠约束实例从 41–46 降到 3（Claude Opus 4.6），pass@1 从 42–53% 提到 73–76%。属「RTL生成 / LLM 修复基准」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.03971" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.03971_HLS_Repair_Bench.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HLS修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">基准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">pass@k</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">欠约束</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.05380 VHDL_REPOBENCH -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ VHDL-REPOBENCH: A Repository-Level Benchmark for Evaluating Large Language Models on VHDL Design Generation——VHDL-REPOBENCH：面向 LLM 的仓库级 VHDL 设计生成评测基准</div>
+      <div class="abs-meta">arXiv:2610.05380 · cs.PL · 4 Oct 2026 · Prashanth Vijayaraghavan, Akul Malhotra, Ashutosh Jadhav, Ehsan Degan, Vandana Mukherjee</div>
+      <div class="abs-body">LLM 正加速进入硬件设计自动化，在生成与理解硬件描述语言上潜力巨大，但现有基准多聚焦 Verilog，对工业与学术界仍广泛使用的 VHDL（尤其 FPGA 与安全关键系统）评测有限。本文提出 VHDL-REPOBENCH——大规模、跨文件、仓库级 VHDL 设计生成与分析基准：精选约 100 个开源 VHDL 仓库（约 2.5k 文件、500 个测试平台），提供结构化问题陈述、模块桩与自验证测试平台，支持句法、语义正确、层次推理、跨文件依赖解析与功能验证的端到端评测。对 GPT-4o/Llama-3-70B/Qwen2.5-72B/CodeLlama-70B 及 Reflexion、CoDes 等多步推理方法的评测显示：当前 LLM 行/块级准确率尚可，但在多文件推理、层次设计理解与“规格→模块”生成上仍有显著挑战。属「RTL生成 / VHDL 基准」方向，是首个大规模 VHDL 聚焦基准。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.05380" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.05380_VHDL_REPOBENCH.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VHDL</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">基准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">仓库级</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">跨文件推理</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.PL</span>
+      </div>
+    </div>
+
+    <!-- 2610.05112 Async_HLS_Flow -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ An ASIC Design Flow for High-Level Synthesis of Asynchronous Circuits——面向异步电路高层综合的 ASIC 设计流程</div>
+      <div class="abs-meta">arXiv:2610.05112 · cs.AR · 4 Oct 2026 · Mayuresh Warunjikar, Madhav Desai</div>
+      <div class="abs-body">异步电路相较同步电路有更低空闲功耗、潜在更低延迟、无时钟分布问题等优势，但工业级 EDA 支撑（尤其从命令式程序做异步系统高层综合 HLS）仍有限。本文给出用 AHIR HLS 框架从命令式程序综合异步电路的方法：以受限的 1-安全且活（1-safe and live）Petri 网建模控制通路；由此出发生成带延迟不敏感控制器、单轨数据通路（控制器与数据通路间为类 micropipelines 的 bundled-data 交互）的异步电路，并形式化正确运行所需的时序约束，证明其单侧（可行）、必要且充分；还开发了静态时序分析器检查约束满足。该流程无缝接入现成 ASIC 工具链与标准同步单元库。以 AES 加密算法端到端实现演示，并用布局后电路仿真验证正确性、估计性能。属「RTL生成 / 异步电路 HLS 流程」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.05112" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.05112_Async_HLS_Flow.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HLS流程</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">异步电路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Petri网</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">静态时序分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+
     <!-- 2610.03219 Evidence-Guided RTL Repair -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>
