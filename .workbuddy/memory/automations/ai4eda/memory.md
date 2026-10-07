@@ -748,7 +748,7 @@
 - 新闻：未添加，无去重动作
 
 **Git**
-- commit: `auto update: 2026-10-07`（待提交）
-- push origin main（retry once if needed）
+- commit: `auto update: 2026-10-07`（ed90668）
+- push origin main 成功：534ba92..ed90668
 
-**结果状态**：✅ 全量更新已落盘，11 篇论文均经真实性核验、PDF 真实，待提交推送
+**结果状态**：✅ 全量更新已落盘，11 篇论文均经真实性核验、PDF 真实，已提交推送
