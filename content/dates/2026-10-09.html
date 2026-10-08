@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-10-09 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态（本日未添加新闻：检索到的行业动态均为已收录条目（Synopsys AgentEngineer/Autopilot 2026-09-28 已收录等）的二次报道，或来源链接无法稳定核验 HTTP 200 且内容一致，遵照第 0 步「宁可空白、绝不编造」规则）· 来源：arXiv（cs.AR / cs.LG / cs.IR，4 篇均提交于 2026-10-07、2026-10-08 公告、2026-10-09 检索，并逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，体积已校验为 %PDF：2610.10129=2.4MB、2610.09447=15.6MB、2610.09549=1.9MB、2610.09361=2.4MB）。本批次覆盖 AI Agent（EDA 中智能体式算法探索案例 + EDA 文档功能感知检索问答）、模拟与架构（智能体驱动的微架构基准自动构建）、功能验证（面向 AIG 的逻辑一致电路级功能建模）。</p>
+</header>
+<section>
+  <div class="abstracts">
+    <!-- 2610.10129 Agentic_EDA -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 7 Oct 2026 · Keren Zhu, Yu Deng, Xiaoyu Hao, Liwen Jiang, Zijian Jiang, Cunqing Lan, Boxiang Song, Pujun Su, Yaojia Wang</div>
+      <h4>🤖 When Algorithmic Exploration Becomes Cheap: A Case Study of Agentic Research in EDA——当算法探索变得廉价：EDA 中智能体式研究的案例研究</h4>
+      <p>作为 EDA 研究者，作者团队开展了八次刻意设计的「智能体式算法探索」试验，选题刻意落在自身并非专长的方向：一名教师与七名学生（含无发表经验者）参与，在少量算法干预下，智能体自主构造数学结构、分析既有工具并实现改进，部分努力未达预期目标，也真实暴露了当前 agentic research 的边界。团队还用 AI 对 2022–2026 年四个 EDA 会议与两本期刊的 8,420 篇论文做收集、分类与分析：在 2,380 篇核心（primary-core）论文中，97.7% 仅凭标题与摘要即可归为「计算封闭（computationally closed）」型工作（含新形式化）。结论指出，EDA 大量课题为「可执行的算法研究」提供了天然环境，工具开发者可借机验证此前无暇尝试的想法；同时作者抛出发人深省的问题——当结果比「审查结果」更易产出时，EDA 该如何验证与奖励研究、论文与会议标签又该继续传达什么。属「AI Agent / 智能体式 EDA 研究」方向，是 agentic AI 进入 EDA 科研方法论的诚实一手记录。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">AI Agent</span><span class="tag">智能体式研究</span><span class="tag">算法探索</span><span class="tag">文献计量</span><span class="tag">EDA 方法论</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.10129" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.10129_Agentic_EDA.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.09447 BenchmarkAnything -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 7 Oct 2026 · Xiangfeng Sun, Ceyu Xu, Chen Bai, Yuan Xie</div>
+      <h4>🔬 BenchmarkAnything: Agent-Driven Construction of Simulator-Ready Microarchitecture Benchmarks——BenchmarkAnything：智能体驱动的「可仿真器运行」微架构基准自动构建</h4>
+      <p>基准工作负载的选择在计算机体系结构研究中举足轻重，是架构创新被度量与引导的「标尺」。然而数十年来 SPEC 套件（仅数十个工作负载）一直是学术架构研究的默认标准，并被频繁当作主要优化目标——当如此小的套件被重度依赖，便存在架构过拟合风险：过度聚焦会高估某些创新，产出在 SPEC 上优异、在更宽泛真实负载下却拉胯的核心。为缓解过拟合，采用大规模综合基准是天然解法，但把软件剥离成仿真器所需的干净、无干扰二进制可执行文件，需要巨大工程量、极不现实。本文指出 AI 智能体提供了优雅解法：不是再手动策划一套静态基准，而是引入一个 agent-driven 工作流，能自主把任意开源仓库转化为「可仿真器运行」的可执行文件，使负载收集高度可扩展，迅速从公共仓库收割数百个多样化应用；与 SPEC 的对比显示，该 agent 生成套件不仅给出更高保真的性能评估，还揭示出传统静态套件未能暴露的新架构洞见。属「模拟与架构 / 智能体驱动的微架构基准构建」方向，把 agentic AI 用于架构研究基础设施自动化。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">AI Agent</span><span class="tag">智能体</span><span class="tag">微架构基准</span><span class="tag">基准构建</span><span class="tag">SPEC</span><span class="tag">计算机体系结构</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.09447" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.09447_BenchmarkAnything.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.09549 CircuitGate -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · 7 Oct 2026 · Qifan Zhang, Ruijie Li, Fangzhou Zhang, Qian Ma, Hui Li, Furui Zhan, Yongpeng Wang, Liying Hao, Shikai Guo</div>
+      <h4>✅ CircuitGate: Logic-Consistent Circuit-Level Functional Modeling for And-Inverter Graphs——CircuitGate：面向与或非图（AIG）的逻辑一致电路级功能建模</h4>
+      <p>与或非图（AIG）是电子设计自动化（EDA）中逻辑综合与验证的基础表示。作为复杂数字系统的结构化表示，AIG 要求模型能刻画超越局部结构的功能依赖，并对「保持功能等价的变换」保持鲁棒。现有基于学习的 AIG 表示主要依赖 GNN 与门级局部消息传递，难以捕获电路级功能上下文，且学到的表示对拓扑特定模式敏感。为此本文提出 CircuitGate——一个从「门级语义」推进到「电路级功能建模」的功能感知 AIG 表示学习框架：显式编码全局初级输入（PI）支撑集、建模扇入间「支撑重叠感知的再汇聚（reconvergence）」，并引入受逻辑启发的布尔约束以鼓励功能一致的表示。在大规模 ForgeEDA 基准上评测、并在 EPFL 与 ITC'99 上验证：在等价门识别与信号概率预测任务上，CircuitGate 分别取得最高 21.7% 与 14.2% 的 MAE 下降；在无需微调的 ForgeEDA→OpenABC 直迁中同样取得最佳等价门识别表现，展现强跨数据集泛化。属「功能验证 / AIG 功能表示学习」方向，为逻辑综合与形式验证的下游任务提供更鲁棒的电路级功能表征。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">AIG</span><span class="tag">与或非图</span><span class="tag">逻辑综合</span><span class="tag">表示学习</span><span class="tag">电路功能建模</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.09549" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.09549_CircuitGate.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.09361 EDA_Doc_QA -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.IR · 7 Oct 2026 · Xiaotian Qiu, Kairui Liu, Shi Chenyi, Jinyuan Deng, Qi Sun, Cheng Zhuo</div>
+      <h4>🤖 From Chunks to Functional Evidence: Function-Aware Retrieval for EDA Documentation QA——从分块到功能证据：面向 EDA 文档问答的功能感知检索</h4>
+      <p>检索增强生成（RAG）被广泛用于让回答「扎根」于文档。但在复杂技术文档中，主要瓶颈往往不是模型推理，而是「查询」与「知识组织方式」之间的错配——这一错配在 EDA 文档中尤为突出：回答问题所需信息散布在异构却紧密耦合的制品（artifact）中。为此本文重新设计了 RAG 的基本检索单元：不再对孤立分块或二元关系操作，而是把带类型的制品聚合成「EDA 功能单元（functional unit）」，每个单元记录为一条超边（hyperedge）并链接其源分块；随后训练编码器让查询与功能单元对齐，并将「单元检索」与「直接分块检索」结合；映射回源后由统一重排器（reranker）挑选给生成器的证据。在新构建的 EDADocEval-QA 数据集上，该方法相较 Chunk RAG 提升 ROUGE-L 37.1%、相较最强图基线提升 55.6%；在公开 ORD-MMBench 上相较最强基线提升 30.0%。属「AI Agent / 面向 EDA 文档的功能感知 RAG」方向，直接服务于 EDA 工具文档问答与智能体知识获取。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">AI Agent</span><span class="tag">RAG</span><span class="tag">检索增强生成</span><span class="tag">EDA 文档</span><span class="tag">文档问答</span><span class="tag">功能感知检索</span><span class="tag">cs.IR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.09361" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.09361_EDA_Doc_QA.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

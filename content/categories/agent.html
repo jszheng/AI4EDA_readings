@@ -7,9 +7,35 @@
 </head>
 <body>
 <section id="cat-agent">
-  <div class="section-title"><span class="icon">🤖</span> AI Agent（49篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🤖</span> AI Agent（51篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">智能体框架、多智能体、EDA 自动化流水线</p>
   <div class="abstracts">
+    <!-- 2610.10129 Agentic_EDA -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 When Algorithmic Exploration Becomes Cheap: A Case Study of Agentic Research in EDA——当算法探索变得廉价：EDA 中智能体式研究的案例研究</div>
+      <div class="abs-meta">arXiv:2610.10129 · cs.AR · 7 Oct 2026 · Keren Zhu, Yu Deng, Xiaoyu Hao, Liwen Jiang, Zijian Jiang, Cunqing Lan, Boxiang Song, Pujun Su, Yaojia Wang</div>
+      <div class="abs-body">作为 EDA 研究者，作者团队开展了八次刻意设计的「智能体式算法探索」试验，选题刻意落在自身并非专长的方向：一名教师与七名学生（含无发表经验者）参与，在少量算法干预下，智能体自主构造数学结构、分析既有工具并实现改进，部分努力未达预期目标，也真实暴露了当前 agentic research 的边界。团队还用 AI 对 2022–2026 年四个 EDA 会议与两本期刊的 8,420 篇论文做收集、分类与分析：在 2,380 篇核心论文中，97.7% 仅凭标题与摘要即可归为「计算封闭」型工作。结论指出，EDA 大量课题为「可执行的算法研究」提供了天然环境，工具开发者可借机验证此前无暇尝试的想法；同时作者抛出发人深省的问题——当结果比「审查结果」更易产出时，EDA 该如何验证与奖励研究。属「AI Agent / 智能体式 EDA 研究」方向，是 agentic AI 进入 EDA 科研方法论的诚实一手记录。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.10129" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.10129_Agentic_EDA.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">智能体式研究</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">算法探索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">文献计量</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.09361 EDA_Doc_QA -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🤖 From Chunks to Functional Evidence: Function-Aware Retrieval for EDA Documentation QA——从分块到功能证据：面向 EDA 文档问答的功能感知检索</div>
+      <div class="abs-meta">arXiv:2610.09361 · cs.IR · 7 Oct 2026 · Xiaotian Qiu, Kairui Liu, Shi Chenyi, Jinyuan Deng, Qi Sun, Cheng Zhuo</div>
+      <div class="abs-body">检索增强生成（RAG）被广泛用于让回答「扎根」于文档。但在复杂技术文档中，主要瓶颈往往不是模型推理，而是「查询」与「知识组织方式」之间的错配——这一错配在 EDA 文档中尤为突出：回答问题所需信息散布在异构却紧密耦合的制品（artifact）中。为此本文重新设计了 RAG 的基本检索单元：不再对孤立分块或二元关系操作，而是把带类型的制品聚合成「EDA 功能单元（functional unit）」，每个单元记录为一条超边（hyperedge）并链接其源分块；随后训练编码器让查询与功能单元对齐，并将「单元检索」与「直接分块检索」结合；映射回源后由统一重排器（reranker）挑选给生成器的证据。在新构建的 EDADocEval-QA 数据集上，该方法相较 Chunk RAG 提升 ROUGE-L 37.1%、相较最强图基线提升 55.6%；在公开 ORD-MMBench 上相较最强基线提升 30.0%。属「AI Agent / 面向 EDA 文档的功能感知 RAG」方向，直接服务于 EDA 工具文档问答与智能体知识获取。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.09361" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.09361_EDA_Doc_QA.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI Agent</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RAG</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">EDA 文档</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">文档问答</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.IR</span>
+      </div>
+    </div>
+
     <!-- 2610.05037 SparseCraft -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>
