@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（52篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（53篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+    <!-- 2610.10985 ATLAS -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 ATLAS: Adaptive TDA-guided Landscape-Aware Transistor Sizing——ATLAS：基于拓扑数据分析（TDA）的自适应版图感知晶体管尺寸优化</div>
+      <div class="abs-meta">arXiv:2610.10985 · cs.AR · 7 Oct 2026 · Youngmin Oh, Jihwan Won, Yuntae Park, Bosun Hwang, Suwan Kim</div>
+      <div class="abs-body">模拟晶体管尺寸优化（寻找同时满足多项性能指标的器件参数）是电路设计中最费人工的瓶颈。已有自动化方法（贝叶斯优化 BO、强化学习 RL 等）对可行设计空间的拓扑结构视而不见——由于工作区切换、指标权衡冲突与器件物理非凸，可行域常碎裂为互不连通的区域，导致优化器收敛于单一可行域、错过更优设计。本文提出 ATLAS：一个利用拓扑数据分析（TDA）的 BO 框架。每轮在代理模型预测的可行域上构造 Mapper 图以估计连通区域，从第一次迭代起即实现拓扑感知探索（无需任何已观测可行点）；并用「拓扑敏感度分数」将候选点分类为桥接/边界/内部点，向采集函数注入定向探索奖励。在 GF180 与 SKY130 工艺的四个模拟电路基准上，ATLAS 以显著更少的仿真次数找到可行设计，优于 RL 与 BO 基线。据作者所知，这是首篇将拓扑数据分析用于模拟电路设计自动化的工作。属「模拟与架构 / 模拟电路尺寸优化」方向，把拓扑感知的贝叶斯优化用于版图级器件参数搜索。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.10985" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.10985_ATLAS.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟电路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">晶体管尺寸</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拓扑数据分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">TDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">贝叶斯优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
     <!-- 2610.09447 BenchmarkAnything -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>
