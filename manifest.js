@@ -6,8 +6,8 @@ window.SITE_MANIFEST = {
   stats: {
     papers: 376,
     batches: 133,
-    news: 221,
-    lastUpdate: "2026-10-12"
+    news: 222,
+    lastUpdate: "2026-10-14"
   },
 
   /* 侧边栏「按日期」视图 */

@@ -840,7 +840,122 @@
 - 新闻：未添加，无去重动作
 
 **Git**
-- commit: `auto update: 2026-10-09`（待提交）
+- commit: `auto update: 2026-10-09`（8c46c44）
+- push origin main 成功：925f5d8..8c46c44
+
+**结果状态**：✅ 全量更新已落盘，4 篇论文均经真实性核验、PDF 真实，已提交推送
+
+---
+
+## 2026-10-12 执行摘要（本次运行）
+
+**前置状态（2026-10-09 基线）**
+- papers: 373, batches: 132, news: 219, lastUpdate: 2026-10-09
+
+**环境说明（关键）**：本环境为真实 2026-10-12 时间线——`arxiv.org/list/cs.AR/recent` 等返回 HTTP 200、公告批次为 2610.10xxx（2026-10-09 公告批次，即 2026 年 10 月数据），证实为真实 arXiv 数据。全程**逐篇实际抓取 `arxiv.org/abs/<id>` 核验标题/作者/摘要/分类/提交日期一致**，PDF 均来自 `arxiv.org/pdf/<id>` 真实下载（581KB–1.9MB，`%PDF` 头已校验），**无任何伪造 ID / 标题 / 占位 PDF**。
+
+**检索流程（严谨性）**
+- arXiv API `submittedDate` 窗口 `[20261008 TO 20261010]` 拉取 cs.AR/cs.LG/cs.SE/cs.AI 全量（/recent 列表截断于 50 条），强 EDA 关键词（rtl/verilog/EDA/placement/routing/physical/芯片/chip/circuit/AIG 等）过滤。
+- 10-09 公告批次 cs.AR 完整 9 条、cs.SE 完整 49 条；cs.LG/cs.AI 经 API 拉全量复核。重扫确认 cs.LG/cs.AI 命中均为量子电路、MoE 路由、视图合成等通用 ML，**不属于 AI for EDA**。
+- 最终 3 篇经 abs 页逐字核验为真，content/ 内此前均不存在（无重复）。
+
+**本次新增内容（论文 +3，全部经逐篇核验）**
+- 2610.10985 ATLAS——Adaptive TDA-guided Landscape-Aware Transistor Sizing（Youngmin Oh, Jihwan Won, Yuntae Park, Bosun Hwang, Suwan Kim；cs.AR；7 Oct 2026）→ analog（52→53）
+- 2610.10858 RFChipAgent——Multi-Agentic AI Flow for Analog/RF Chip Design（Awani Khodkumbhe, Yunfei Feng, Raj Rangarajan, Kevin Wang, Kamal Sahota；cs.AR/cs.AI/cs.LG；7 Oct 2026）→ agent（51→52）
+- 2610.10580 A Survey on LLM-Integrated Hardware Design Verification（Hao Zheng, Jaime Rafael Imperial, Bardia Nadimi, Xiangfei Kong；cs.AR/cs.AI/cs.SE；6 Oct 2026）→ verify（46→47）
+
+**行业动态 +2（均经严格 Step-0 核验，HTTP 200 且内容吻合）**
+- Cadence RTL Generation Agent——基于 wisevoter.com 报道（经 WebFetch 核验：24% 面积 / 18% 功耗 / 100% 功能正确性，目标 Q4 2026）；news/index.html 新增 `2026-10-12` section + nav 锚点，news_memory.json 插入 Cadence 2026-10-06 item。
+- Synopsys × OpenAI「GPT-Synopsys」——经 curl 核验 SemiEngineering WIR #158（HTTP 200）为可靠来源；news_memory.json 插入 Synopsys/OpenAI 2026-09-30 item。
+- 已排除项：NVIDIA 链接重定向至通用「News Archive」内容不符、Globe&Mail/cadence newsroom/community/cloudnews 等源 403/000/404、Synopsys newsroom 猜测 slug 404——均不收录，严守「宁可空白、绝不编造」。
+
+**更新文件清单**
+- content/dates/2026-10-12.html（新建，3 论文卡 + 本地 PDF 链接）
+- content/latest/2026-10-12.html（新建，3 论文卡 + ../../dates PDF 链接）
+- content/dates/2610.10985_ATLAS.pdf（1,647,064 B）/ 2610.10858_RFChipAgent.pdf（581,400 B）/ 2610.10580_LLM_Hardware_Verification_Survey.pdf（1,874,342 B）（均 %PDF 头、真实下载）
+- content/categories/{analog,agent,verify}.html（analog 52→53 / agent 51→52 / verify 46→47，各插 1 卡 + 同步页头计数）
+- content/news/index.html（补 2026-10-12 section + nav 锚点 + subtitle + stats）
+- content/news/news_memory.json（totalItems 213→215；lastUpdate 2026-10-12；插入 Cadence/Synopsys 两条，无重复）
+- manifest.js（stats: 376/133/221；latest 与 dates 数组各插 2026-10-12；lastUpdate 2026-10-12）
+- content/papers/index.html（跳转刷新至 2026-10-12）
+
+**一致性核验（.news_tmp/verify_all.py）**
+- news_memory.json VALID；manifest 统计 papers:376 / batches:133 / news:221 / lastUpdate:"2026-10-12" ✓
+- 分类计数 analog=53 / agent=52 / verify=47：每个新 ID 在其目标分类出现 4×、其它分类 0×（无重复跨类）
+- 日期/最新页含全部 3 ID + 3 个本地 PDF 链接 ✓
+- 新闻 section id="2026-10-12" + nav 锚点 + Cadence RTL / GPT-Synopsys 双卡均存在 ✓
+- 3 个 PDF 均存在、%PDF 头合法、体积正确 ✓
+
+**Git**
+- commit: `auto update: 2026-10-12`（a5bc5aa）
+- push origin main 成功：8c46c44..a5bc5aa（12 files changed, 268 insertions(+), 15 deletions(-)）
+- 注：暂存时显式排除 `.arxiv_tmp/`、`.news_tmp/` 两个本地草稿目录，未污染仓库
+
+**结果状态**：✅ 全量更新已落盘，3 篇论文 + 2 条新闻均经真实性核验、PDF 真实，已提交推送
+
+---
+
+## 2026-10-13 执行摘要（本次运行）
+
+**前置状态（2026-10-12 基线）**
+- papers: 376, batches: 133, news: 221, lastUpdate: 2026-10-12
+
+**环境说明（关键）**：本环境为真实 2026-10-13 时间线——`arxiv.org/list/cs.AR/recent` 返回 HTTP 200、最新公告批次头为 **Mon, 12 Oct 2026**（2610.11748–2610.13843，10 条 cs.AR 条目，submittedDate 实际为 2026-10-08/09），证实为真实 arXiv 数据。本次严格按第 0 步核验纪律执行，全量扫描后未编造任何 ID/标题/新闻。
+
+**检索流程（严谨性）**
+- 抓取 cs.AR recent 完整列表（Mon 12 Oct 批次 10 条 + Fri 9 Oct 批次 9 条 + 更早批次），逐条评估 AI4EDA 相关性。
+- 对 cs.LG/cs.AI/cs.SE/cs.CE/cs.ET/eess.SY 用 arXiv API 在 submittedDate 窗口 `[20261008 TO 20261013]` 做两轮关键词扫描（精确 EDA 术语 + 2-信号 moderate 过滤，共 41 条候选），逐条人工复核标题与摘要。
+- Mon 12 Oct 批次 10 篇均非 AI4EDA（3D 高斯渲染 / FPGA Max-Cut 退火 / 协同路口 / RTL 仿真范式 / 缓存 / GPU benchmark / 离子阱量子指令集 / CPU-GPU 内存 / 恶意检测器 PPA 研究 / MSDF 早退推理）。
+- 跨类候选中唯一 borderline 为 2610.12762（LLM 构建层级硬件知识图谱）——经 abs 页核验，其对象为「硬件器件数据手册 → 元件选型/兼容性验证」（电子元器件级），非芯片设计自动化（RTL/综合/物理设计/验证），判定超出本站 AI for EDA 范畴，排除。
+
+**本次新增内容**
+- 论文 +0 篇：最新 arXiv 公告批次（Mon 12 Oct）及 `[20261008 TO 20261013]` 窗口内，所有 AI4EDA 论文已于既往运行（10-07~10-12）收录；本次无新增候选通过相关性判定。
+- 行业动态 +0 条：未获得可核验（HTTP 200 且内容吻合）的 2026-10-13 行业新闻 URL；严格遵循第 0 步「宁可空白、绝不编造或猜测 URL」。
+
+**更新文件清单**
+- 无站点文件变更（无新增论文/新闻，故不新建日期页、不改 manifest.js / news_memory.json / news/index.html / 分类页 / papers/index.html）。
+
+**去重检查**
+- 无新增条目，无需去重动作。已收录 ID（2610.10985/10858/10580 等）复核均在站、无重复风险。
+
+**Git**
+- 本次无内容更新，未执行 `git add`/commit/push（避免空提交与伪造「更新成功」）。仅本 memory.md 执行记录落盘（未提交，与「仅更新成功才提交」规则一致）。
+
+**结果状态**：✅ 完成核验，当日无新增 AI4EDA 内容（最新批次无相关论文 + 无可核验新闻）；站点维持 2026-10-12 状态（papers 376 / batches 133 / news 221）。
+
+---
+
+## 2026-10-14 执行摘要（本次运行）
+
+**前置状态（2026-10-12 基线，10-13 无变更）**
+- papers: 376, batches: 133, news: 221, lastUpdate: 2026-10-12
+
+**环境说明（关键）**：本环境为真实 2026-10-14 时间线——`arxiv.org/list/cs.AR/recent` 返回 HTTP 200、最新公告批次头为 **Mon, 12 Oct 2026**（即 2026-10-12 批次，10 条 cs.AR 条目），证实为真实 arXiv 数据；Tue 13 Oct 批次在 07:35 GMT+8 尚未发布（arXiv 每日公告约 08:00 北京时间）。全程严守第 0 步核验纪律，未编造任何 ID/标题/新闻。
+
+**检索流程（严谨性）**
+- arXiv API `submittedDate:[20261009 TO 20261013]` 扫描 cs.AR/cs.LG/cs.AI/cs.SE/cs.CE/cs.ET/eess.SY 全量，强 EDA 关键词过滤后逐条比对标题与摘要。
+- cs.AR 窗口内 7 条、cs.LG 193、cs.AI 128、cs.SE 20、cs.CE 1、cs.ET 5、eess.SY 18，除以下 borderline 外均无真正 AI for EDA 命中：
+  - **2610.13067 TPCS**——Transaction-Pruned Cycle Simulation：面向微架构建模/周期精确仿真/可综合 RTL 实现的统一中间抽象。**经 abs 页逐字核验**，其为确定性仿真/性能建模方法（事务函数调用 + 宿主 CPU 控制流剪枝），**非 AI/ML/LLM 方法**，超出本站「AI for EDA」范畴 → 排除（与 10-13 运行判定一致）。
+  - 其余命中（2610.13368 FPGA 上 Max-Cut 退火、2610.13477 量子输入空间电路逼近、2610.13273 Agent4Spec 软件 API 规格优化等）均为 ML-on-FPGA / 量子 / 通用软件智能体，非 AI for EDA。
+- Mon 12 Oct 批次已于 2026-10-13 运行完整收录判定（10 篇均非 AI4EDA），本次复核一致。
+
+**本次新增内容**
+- 论文 +0 篇：窗口内无通过相关性 + AI 方法判定的 AI4EDA 论文；唯一 borderline（TPCS）为确定性仿真框架，排除。
+- 行业动态 +1（经严格 Step-0 核验，HTTP 200 且页面含所述内容）：
+  - **NVIDIA 发布 Open Agent Safety Platform + Cadence 集成进 AI Super Agents**——NVIDIA 推出结合开源软件与 BlueField-4 DPU 硬件护栏的代理式 AI 安全平台（Sentry 参考设计，硅级监控/隔离越界智能体）；Cadence 将其集成进 AI Super Agents，为自主芯片设计工作流（autonomous chip-design workflows）加运行时控制。来源 SemiEngineering WIR #158（HTTP 200 核验，页面明确含 "Open Agent Safety Platform" + "Cadence is integrating the platform with its AI Super Agents... around autonomous chip-design workflows"；Cadence 官方 community 域名链接经 curl 核验返回 403，故引用可核验的 WIR #158）。该条与同文中已收录的 Synopsys×OpenAI（2026-09-30 条目）为不同事件，dedup 无冲突。
+
+**更新文件清单**
+- content/news/index.html（新增 `2026-10-13` section + nav 锚点 + header subtitle「最后更新：2026-10-14」+ 统计 222）
+- content/news/news_memory.json（插入 NVIDIA/Cadence 新 item；lastUpdate 2026-10-14；执行 180 天清理：移除 30 条 <2026-04-17 旧条目，totalItems 215→186，cutoffDate 2026-03-18→2026-04-17）
+- manifest.js（stats: 376/133/222；lastUpdate 2026-10-14）
+- 注：未新建论文日期页；batches 维持 133（无新论文批次）
+
+**去重检查**
+- 新新闻条目 company=NVIDIA / Cadence 与既有 items 无重复（既有 WIR #158 条目为 Synopsys/OpenAI，不冲突）
+- 论文：窗口内候选经 abs 核验后均排除，无新增、无重复风险
+
+**Git**
+- commit: `auto update: 2026-10-14`（待提交）
 - push origin main（retry once if needed）
 
-**结果状态**：✅ 全量更新已落盘，4 篇论文均经真实性核验、PDF 真实，待提交推送
+**结果状态**：✅ 论文无新增（最新批次无 AI4EDA 论文，TPCS 经 abs 核验为确定性仿真框架、排除）；新闻 +1（NVIDIA Open Agent Safety Platform + Cadence AI Super Agents 集成，WIR #158 HTTP 200 已核验）；已落盘并待提交推送。站点：papers 376 / batches 133 / news 222 / lastUpdate 2026-10-14。

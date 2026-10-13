@@ -21,14 +21,16 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-10-12 · 今日新增 2 条行业动态（① Cadence 发布 RTL Generation Agent，作为 ChipStack AI Super Agent 新成员，自然语言→RTL、评测面积 -24%/功耗 -18%/100% 功能准确、Q4 2026 面向早期客户；② Synopsys × OpenAI 多年协议开发 GPT-Synopsys 专用模型，直接驱动 Synopsys EDA 工具做 RTL/验证/PPA 自主优化）· 今日新增 1 条行业动态（华大九天 刘伟平 @ IICIE 2026：Agentic EDA 是设计范式根本革命——从「人操作工具」到「人指挥智能体」，多智能体+工具编排+数据飞轮成行业共识）+ 1 篇论文（2609.10970 Fengshui chiplet+定制 ASIC 协同设计，含 P&R 物理可实现性验证）</p> · 08-07 新增 5 条行业动态（① 芯华章 @ CCF 芯片大会发布 X-IVS 智能验证 + X-IDS 智能设计系统，主打「证据闭环」可信 AI4EDA；② OpenROAD-MCP 发布 v1.0：官方 MCP 服务器切换 TypeScript 主线、npx 一键接入 10 个工具；③ Anthropic 官宣自研 Claude 专用 AI 芯片，大模型厂商掀软硬协同造芯潮；④ vibe-IC 开源 AI 原生 IC 设计插件 + MCP-EDA 服务器，自然语言跑通 RTL→GDS；⑤ digital-chip-design-agents v1.8.0：14 领域 Claude Code 智能体插件，新增 Memory IP Design）+ 6 篇论文（EDATracer / PDMarks / LLM 辅助 Verilog 硬件安全漏洞检测 / Chiplet 与 LLM 时代硬件安全 / 符号化时序分析 / ORACLE 多目标 RL 模拟电路优化）
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-10-14 · 今日新增 1 条行业动态（NVIDIA 发布 Open Agent Safety Platform——开源软件 + BlueField-4 硬件护栏，Cadence 集成进 AI Super Agents 为自主芯片设计工作流加运行时安全控制） · 今日新增 2 条行业动态（① Cadence 发布 RTL Generation Agent，作为 ChipStack AI Super Agent 新成员，自然语言→RTL、评测面积 -24%/功耗 -18%/100% 功能准确、Q4 2026 面向早期客户；② Synopsys × OpenAI 多年协议开发 GPT-Synopsys 专用模型，直接驱动 Synopsys EDA 工具做 RTL/验证/PPA 自主优化）· 今日新增 1 条行业动态（华大九天 刘伟平 @ IICIE 2026：Agentic EDA 是设计范式根本革命——从「人操作工具」到「人指挥智能体」，多智能体+工具编排+数据飞轮成行业共识）+ 1 篇论文（2609.10970 Fengshui chiplet+定制 ASIC 协同设计，含 P&R 物理可实现性验证）</p> · 08-07 新增 5 条行业动态（① 芯华章 @ CCF 芯片大会发布 X-IVS 智能验证 + X-IDS 智能设计系统，主打「证据闭环」可信 AI4EDA；② OpenROAD-MCP 发布 v1.0：官方 MCP 服务器切换 TypeScript 主线、npx 一键接入 10 个工具；③ Anthropic 官宣自研 Claude 专用 AI 芯片，大模型厂商掀软硬协同造芯潮；④ vibe-IC 开源 AI 原生 IC 设计插件 + MCP-EDA 服务器，自然语言跑通 RTL→GDS；⑤ digital-chip-design-agents v1.8.0：14 领域 Claude Code 智能体插件，新增 Memory IP Design）+ 6 篇论文（EDATracer / PDMarks / LLM 辅助 Verilog 硬件安全漏洞检测 / Chiplet 与 LLM 时代硬件安全 / 符号化时序分析 / ORACLE 多目标 RL 模拟电路优化）
   <div class="stats">
     <div class="stat">    <div class="num">376</div><div class="label">论文收录</div></div>
     <div class="stat"><div class="num">133</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">221</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">222</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <nav>
+  <a href="#2026-10-13">261013 🔐 NVIDIA 发布 Open Agent Safety Platform（开源软件 + BlueField-4 硬件护栏），Cadence 集成进 AI Super Agents 为自主芯片设计工作流加运行时安全控制</a>
+
   <a href="#2026-10-12">261012 🤖 Cadence RTL Generation Agent（ChipStack AI Super Agent，自然语言→RTL，面积 -24%/功耗 -18%/100% 功能准确，Q4 2026）+ 🤝 Synopsys×OpenAI GPT-Synopsys 多年协议（专用模型驱动 EDA 工具，RTL/验证/PPA 自主优化）</a>
 
   <a href="#2026-09-28">260928 🤖 Synopsys 发布 AgentEngineer™ 长程智能体组合 + Autopilot™ Platform：开放安全自主工程平台，验证收敛最高 50×、覆盖 +20%</a>
@@ -189,6 +191,33 @@
       <p>2026-09-30 Synopsys 与 OpenAI 签署多年协议，共同开发 <strong>GPT-Synopsys</strong>——一个专门针对半导体设计与验证训练的专用模型。目标不是用聊天机器人生成 RTL 或答疑，而是让 AI 智能体接收设计目标、直接运行 Synopsys EDA 工具、解读结果、修改设计并反复校验，直到产出供工程师审阅的结果，覆盖功耗/性能/面积（PPA）优化等任务；该模型将专精于像专家用户一样使用 Synopsys 工具，并与 Synopsys.ai、Synopsys Autopilot 集成，运行在 OpenAI 托管的基础设施上。这一合作与 Synopsys 同期公布的「领域专用长程智能体组合（AgentEngineer）」叠加，标志着 EDA 从「AI 辅助编码」走向「AI 作为流程内的决策与执行层」，与本站持续追踪的「智能体协作的 RTL 生成-验证-反馈闭环」主线高度一致。</p>
       <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
         <span class="tag">Synopsys</span><span class="tag">OpenAI</span><span class="tag">GPT-Synopsys</span><span class="tag">合作公告</span><span class="tag">专用模型</span><span class="tag">EDA工具</span><span class="tag">RTL生成</span><span class="tag">验证</span><span class="tag">PPA优化</span><span class="tag">agentic AI</span><span class="tag">2026-09-30</span>
+      </div>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-158" target="_blank">📰 SemiEngineering WIR #158（semiengineering.com，已核验可达）</a>
+    </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="2026-10-13">
+  <div class="section-title"><span class="icon">🌍</span> 2026-10-13 <span class="badge-new">1条行业动态</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-10-13 行业动态（1条）</h3>
+      <span class="badge-count">1</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+
+    <!-- NEWS: NVIDIA Open Agent Safety Platform + Cadence AI Super Agents -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>NVIDIA / Cadence · 产品发布/厂商动态 · 2026-10-13（来源：Semiconductor Engineering Chip Industry Week In Review #158，链接经 curl 核验 HTTP 200 且内容含所述 Open Agent Safety Platform 与 Cadence 集成表述；Cadence 官方 community 域名链接经 curl 核验返回 403，故引用可核验的 WIR #158 周综述）</div>
+      <h4>🔐 NVIDIA 发布 Open Agent Safety Platform（开源软件 + BlueField-4 硬件护栏），Cadence 将集成进 AI Super Agents 为自主芯片设计工作流加上运行时安全控制</h4>
+      <p>NVIDIA 推出 <strong>Open Agent Safety Platform</strong>——结合开源软件与硬件级控制（其 Sentry 参考设计运行在 <strong>BlueField-4 DPU</strong> 上）的代理式 AI 安全平台，能在芯片内独立监控智能体行为、强制执行安全策略，对越界智能体实施硅级隔离（quarantine）。Cadence 正将该平台集成进其 <strong>AI Super Agents</strong>，为自主芯片设计工作流（autonomous chip-design workflows）添加运行时控制（runtime controls）。这是继 Cadence ChipStack/AuraStack、Synopsys AgentEngineer/Autopilot 之后，头部 EDA 厂商把「自主智能体」推向生产级时，开始系统性补上「安全护栏」的信号——自主芯片设计从「能跑通 RTL→GDS」走向「可信、可控、可隔离」，与本站持续追踪的「智能体协作的 RTL 生成-验证-反馈闭环」主线高度契合。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">NVIDIA</span><span class="tag">Cadence</span><span class="tag">Open Agent Safety Platform</span><span class="tag">BlueField-4</span><span class="tag">AI Super Agents</span><span class="tag">agentic AI 安全</span><span class="tag">自主芯片设计</span><span class="tag">运行时控制</span><span class="tag">2026-10-13</span>
       </div>
       <a href="https://semiengineering.com/chip-industry-week-in-review-158" target="_blank">📰 SemiEngineering WIR #158（semiengineering.com，已核验可达）</a>
     </div>
