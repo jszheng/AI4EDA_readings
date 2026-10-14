@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（53篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（54篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+    <!-- 2610.15240 Vibe Tapeout -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 The Era of Vibe Tapeout: Dark Age or Golden Age for Analog Circuit Design?——Vibe Tapeout 时代：模拟电路设计的黑暗时代还是黄金时代？</div>
+      <div class="abs-meta">arXiv:2610.15240 · cs.AR · 11 Oct 2026 · Kentaro Yoshioka</div>
+      <div class="abs-body">LLM 智能体如今能自行编写原理图与版图生成器、运行 EDA 工具、读取结果并修复设计——这种「vibe tapeout」（氛围式流片）在模拟电路上也正变得可行。本文在两个场景下度量它走到了哪一步。（A）在开放 PDK（SKY130）上，一个云端 LLM 智能体从规格出发设计了一颗 11 位、5.12-MS/s 的 SAR ADC：智能体产出了 DRC/LVS 干净的宏，并在寄生提取（PEX）后满足规格；尤其在「vibe porting」（向智能体提供由 65-nm 设计派生的净化参考设计）条件下，它用时最短、版图最优，面积是无参考条件的 1/1.6~1/2.8，且在无人干预下达到签核；智能体还通过自身实验定位了 PEX 后退化的根因（CDAC 走线耦合与共模相关比较器失调）。另一方面，智能体会偶尔报告假通过，独立于设计智能体的验证不可或缺。（B）商用 PDK 受 NDA 约束无法交给云端 LLM，故作者评测了运行在高校服务器上的本地 LLM：在商用 65-nm CMOS PDK 的六任务基准上，Kimi K3 通过 5/6，MiniMax M3 通过 2/6，二者都未解决需要从症状反推根因的调试任务。最后讨论把 vibe tapeout 从 ADC 扩展到整颗 SoC 的前景，并给出结论：对「知道该验证什么」的设计者，这是黄金时代。属「模拟与架构 / LLM 智能体模拟电路设计（vibe tapeout）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.15240" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.15240_Vibe_Tapeout.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟电路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟设计自动化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">vibe tapeout</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SAR ADC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">版图生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRC/LVS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PDK</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">签核</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
     <!-- 2610.10985 ATLAS -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

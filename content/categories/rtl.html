@@ -7,9 +7,35 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（99篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（101篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+    <!-- 2610.17445 When Is RTL Better -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ When Is RTL Better? Auditing Evaluation Stability with Tool-Grounded Requirement Profiles——何时 RTL 更优？以工具接地需求档案审计评测稳定性</div>
+      <div class="abs-meta">arXiv:2610.17445 · cs.AR · 12 Oct 2026 · Bodong Hou, Zhixin Pan</div>
+      <div class="abs-body">RTL 生成研究越来越频繁地报告功能正确性与综合后质量，但「评测器本身」很少被当作实验变量。当一个安全规则、协议义务、目标上下文、可行性门、不确定性策略或来源约束被省略时，一个候选可能显得更优。本文提出「工具接地需求档案」（tool-grounded requirement profiles）：把每条需求的含义绑定到其可执行证据与比较规则的可机读契约，并配套跨需求门、不确定性处理与来源追溯。作者通过冻结候选对、仅扰动其评测档案来审计评测器稳定性。在一个预注册的受控试点中（6 个设计、12 对、3 个需求族、6 种评测条件、72 个决策），一个通用「单元计数」评测器对 6/12 对（50%；Wilson 95% 区间 25.4–74.6%）报告了无支撑的改进；配对评测器则侦测到全部 12 个注入式回退，而语法、通用综合、上下文失配与门消融各自对 12/12 对丢失了应有的区分度。在一项独立冻结的外部验证中（全部 290 个公开 RTLLM v1.1 纯文本候选），81/215 个可评测比较（37.7%；任务簇 95% 区间 24.8–51.4%）产生了无支撑的标量改进，含 72 个功能门反转；另有 26 次 OpenROAD-flow-scripts 运行说明时序上下文与活动性限定为何必须纳入契约。本研究不对生成器排名，而是把「评测器配置」确立为一个可度量、可审计的结论不稳定性来源。属「前端 RTL / RTL 生成评测方法论审计」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.17445" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.17445_RTL_Eval_Audit.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成评测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">评测稳定性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">需求档案</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTLLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能正确性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenROAD</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工具接地</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.15205 MoSAIC -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ MoSAIC: Learning DAG Scheduling Heuristics from Optimal Schedules through Motif-Aware Recovery and LLM-Guided Reasoning——MoSAIC：通过主题感知恢复与 LLM 引导推理从最优调度学习 DAG 调度启发式</div>
+      <div class="abs-meta">arXiv:2610.15205 · cs.AR · 10 Oct 2026 · Shiva Ahir, Hashmath Shaik, Alex Doboli, Nadeem Yaseen, Simona Doboli</div>
+      <div class="abs-body">异构计算系统的任务调度在嵌入式与高层次综合（HLS）流程中仍是基础挑战。本文提出 MoSAIC（Motif-aware Scheduling with AI-driven Cognition）——一个学习式框架，弥合 DAG 应用「精确调度」与「启发式调度」之间的鸿沟。系统利用大语言模型（LLM）的推理能力学习 DAG 结构与调度优先级函数之间的关系：先用 OR-Tools CP-SAT 求解器生成最优调度，再以之监督、通过贝叶斯优化学习紧凑的「基于优先级」调度函数；所学启发式捕捉调度决策与 rank/深度/扇出等结构图特征之间的关系，从而在不同 DAG 实例间构建可复用的知识库。在合成图族与 PolyBench、MachSuite 等真实基准上的实验表明，所学启发式一致优于 HEFT 等经典方法，同时保持低运行开销；结果提示「最优监督 + 学习式泛化」为可扩展、自适应的任务调度提供了一条实用路径。属「前端 RTL / HLS 流程调度启发式学习」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.15205" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.15205_MoSAIC.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HLS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">高层次综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">任务调度</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">调度启发式</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">贝叶斯优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DAG</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">CP-SAT</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
     <!-- 2610.03971 HLS_Repair_Bench -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

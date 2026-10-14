@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-10-15 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态（本日未添加新闻：在 2026-10-15 时间线内未检索到可核验（HTTP 200 且内容吻合）的行业新闻 URL，遵照第 0 步「宁可空白、绝不编造」规则）· 来源：arXiv（cs.AR / cs.LG / cs.AI / cs.SE，4 篇均来自 cs.AR 2026-10-14 公告批次、提交于 2026-10-10~12，并逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF：2610.17445=515KB、2610.15205=354KB、2610.17449=697KB、2610.15240=558KB）。本批次覆盖 RTL生成（RTL 生成评测稳定性审计、LLM 引导的 DAG 调度启发式学习）、功能验证（形式化引导的贝叶斯优化覆盖收敛）、模拟与架构（LLM 智能体模拟电路 vibe tapeout）。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2610.17445 When Is RTL Better -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 12 Oct 2026 · Bodong Hou, Zhixin Pan</div>
+      <h4>⚡ When Is RTL Better? Auditing Evaluation Stability with Tool-Grounded Requirement Profiles——何时 RTL 更优？以工具接地需求档案审计评测稳定性</h4>
+      <p>RTL 生成研究越来越频繁地报告功能正确性与综合后质量，但「评测器本身」很少被当作实验变量。当一个安全规则、协议义务、目标上下文、可行性门、不确定性策略或来源约束被省略时，一个候选可能显得更优。本文提出「工具接地需求档案」（tool-grounded requirement profiles）：把每条需求的含义绑定到其可执行证据与比较规则的可机读契约，并配套跨需求门、不确定性处理与来源追溯。作者通过冻结候选对、仅扰动其评测档案来审计评测器稳定性。在一个预注册的受控试点中（6 个设计、12 对、3 个需求族、6 种评测条件、72 个决策），一个通用「单元计数」评测器对 6/12 对（50%；Wilson 95% 区间 25.4–74.6%）报告了无支撑的改进；配对评测器则侦测到全部 12 个注入式回退，而语法、通用综合、上下文失配与门消融各自对 12/12 对丢失了应有的区分度。在一项独立冻结的外部验证中（全部 290 个公开 RTLLM v1.1 纯文本候选），81/215 个可评测比较（37.7%；任务簇 95% 区间 24.8–51.4%）产生了无支撑的标量改进，含 72 个功能门反转；另有 26 次 OpenROAD-flow-scripts 运行说明时序上下文与活动性限定为何必须纳入契约。本研究不对生成器排名，而是把「评测器配置」确立为一个可度量、可审计的结论不稳定性来源。属「前端 RTL / RTL 生成评测方法论审计」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">RTL生成评测</span><span class="tag">评测稳定性</span><span class="tag">需求档案</span><span class="tag">RTLLM</span><span class="tag">功能正确性</span><span class="tag">OpenROAD</span><span class="tag">工具接地</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.17445" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.17445_RTL_Eval_Audit.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.15205 MoSAIC -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 10 Oct 2026 · Shiva Ahir, Hashmath Shaik, Alex Doboli, Nadeem Yaseen, Simona Doboli</div>
+      <h4>⚡ MoSAIC: Learning DAG Scheduling Heuristics from Optimal Schedules through Motif-Aware Recovery and LLM-Guided Reasoning——MoSAIC：通过主题感知恢复与 LLM 引导推理从最优调度学习 DAG 调度启发式</h4>
+      <p>异构计算系统的任务调度在嵌入式与高层次综合（HLS）流程中仍是基础挑战。本文提出 MoSAIC（Motif-aware Scheduling with AI-driven Cognition）——一个学习式框架，弥合 DAG 应用「精确调度」与「启发式调度」之间的鸿沟。系统利用大语言模型（LLM）的推理能力学习 DAG 结构与调度优先级函数之间的关系：先用 OR-Tools CP-SAT 求解器生成最优调度，再以之监督、通过贝叶斯优化学习紧凑的「基于优先级」调度函数；所学启发式捕捉调度决策与 rank/深度/扇出等结构图特征之间的关系，从而在不同 DAG 实例间构建可复用的知识库。在合成图族与 PolyBench、MachSuite 等真实基准上的实验表明，所学启发式一致优于 HEFT 等经典方法，同时保持低运行开销；结果提示「最优监督 + 学习式泛化」为可扩展、自适应的任务调度提供了一条实用路径。属「前端 RTL / HLS 流程调度启发式学习」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">HLS</span><span class="tag">高层次综合</span><span class="tag">任务调度</span><span class="tag">调度启发式</span><span class="tag">LLM</span><span class="tag">贝叶斯优化</span><span class="tag">DAG</span><span class="tag">CP-SAT</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.15205" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.15205_MoSAIC.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.17449 Formal-Verification-Guided BO Coverage Closure -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 12 Oct 2026 · Chengjia Liu, Priyadarsi Mishra, David Kebo Houngninou, Michael Quinn, Aakash Tyagi, Jiang Hu</div>
+      <h4>✅ Formal-Verification-Guided Bayesian Optimization for Non-Intrusive Last-Mile Coverage Closure——形式化引导的贝叶斯优化用于非侵入式最后一公里覆盖收敛</h4>
+      <p>现代芯片设计的功能覆盖收敛在「最后一公里」代价高昂——成熟 UVM 环境暴露大量控制项，而剩余覆盖仓（bin）直接命中稀少。本文提出一个非侵入式工作流，在既有、人工编写的功能覆盖模型上闭合预定义 bin，而非从设计规格合成验证目标。工作流先用抽象语法树（AST）解析与影响锥（COI）追踪，把每个残余目标映射到已有测试平台旋钮；在匹配 20 次仿真预算下，将贝叶斯优化（BO）与持续约束随机验证（CRV）、随机搜索在同一 AST/COI 缩减空间对比。随后形式化可达性只移除「完整不可达证明」支撑的目标；保留目标按形式化难度分组，在第二个匹配 20 次预算下由分组专属 BO 处理——清理与分组不新增分子 bin，仅仿真覆盖产物会。在 OpenTitan AES 上：首轮缩减空间 BO 达 241/271 bin；形式化清理移除 2 个分母 bin；集成的「清理后」阶段（难度分组+策略路由+分组 BO）新增 20 个仿真确认的命中，原始覆盖 261/271（96.31%）、有效覆盖 261/269（97.03%）。在 Entropy Source 上：首轮 2117/2277，清理移除 10 个分母 bin，清理后阶段新增 93 个确认命中，原始 2210/2277（97.06%）、有效 2210/2267（97.49%）。该工作刻画了「诊断+搜索」集成工作流。属「功能验证 / 形式化引导的贝叶斯优化覆盖收敛」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">形式化验证</span><span class="tag">覆盖收敛</span><span class="tag">贝叶斯优化</span><span class="tag">功能覆盖</span><span class="tag">UVM</span><span class="tag">可达性分析</span><span class="tag">测试平台</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.17449" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.17449_Formal_Verif_BO_Coverage.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.15240 Vibe Tapeout -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 11 Oct 2026 · Kentaro Yoshioka</div>
+      <h4>🔬 The Era of Vibe Tapeout: Dark Age or Golden Age for Analog Circuit Design?——Vibe Tapeout 时代：模拟电路设计的黑暗时代还是黄金时代？</h4>
+      <p>LLM 智能体如今能自行编写原理图与版图生成器、运行 EDA 工具、读取结果并修复设计——这种「vibe tapeout」（氛围式流片）在模拟电路上也正变得可行。本文在两个场景下度量它走到了哪一步。（A）在开放 PDK（SKY130）上，一个云端 LLM 智能体从规格出发设计了一颗 11 位、5.12-MS/s 的 SAR ADC：智能体产出了 DRC/LVS 干净的宏，并在寄生提取（PEX）后满足规格；尤其在「向智能体提供由我们 65-nm 设计派生的净化参考设计（vibe porting）」条件下，它用时最短、版图最优，面积是无参考条件的 1/1.6~1/2.8，且该条件在无人干预下达到签核；智能体还通过自身实验定位了 PEX 后退化的根因（CDAC 走线耦合与共模相关比较器失调）。另一方面，智能体会偶尔报告假通过，独立于设计智能体的验证不可或缺。（B）商用 PDK 受 NDA 约束无法交给云端 LLM，故作者评测了运行在高校服务器上的本地 LLM：在商用 65-nm CMOS PDK 的六任务基准上，Kimi K3 通过 5/6，MiniMax M3 通过 2/6，二者都未解决需要从症状反推根因的调试任务。最后讨论把 vibe tapeout 从 ADC 扩展到整颗 SoC 的前景，并给出结论：对「知道该验证什么」的设计者，这是黄金时代。属「模拟与架构 / LLM 智能体模拟电路设计（vibe tapeout）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">模拟电路</span><span class="tag">模拟设计自动化</span><span class="tag">LLM智能体</span><span class="tag">vibe tapeout</span><span class="tag">SAR ADC</span><span class="tag">版图生成</span><span class="tag">DRC/LVS</span><span class="tag">PDK</span><span class="tag">签核</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.15240" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.15240_Vibe_Tapeout.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

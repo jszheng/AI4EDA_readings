@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（47篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（48篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+    <!-- 2610.17449 Formal-Verification-Guided BO Coverage Closure -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">✅ Formal-Verification-Guided Bayesian Optimization for Non-Intrusive Last-Mile Coverage Closure——形式化引导的贝叶斯优化用于非侵入式最后一公里覆盖收敛</div>
+      <div class="abs-meta">arXiv:2610.17449 · cs.AR · cs.LG · 12 Oct 2026 · Chengjia Liu, Priyadarsi Mishra, David Kebo Houngninou, Michael Quinn, Aakash Tyagi, Jiang Hu</div>
+      <div class="abs-body">现代芯片设计的功能覆盖收敛在「最后一公里」代价高昂——成熟 UVM 环境暴露大量控制项，而剩余覆盖仓（bin）直接命中稀少。本文提出一个非侵入式工作流，在既有、人工编写的功能覆盖模型上闭合预定义 bin，而非从设计规格合成验证目标。工作流先用抽象语法树（AST）解析与影响锥（COI）追踪，把每个残余目标映射到已有测试平台旋钮；在匹配 20 次仿真预算下，将贝叶斯优化（BO）与持续约束随机验证（CRV）、随机搜索在同一 AST/COI 缩减空间对比。随后形式化可达性只移除「完整不可达证明」支撑的目标；保留目标按形式化难度分组，在第二个匹配 20 次预算下由分组专属 BO 处理——清理与分组不新增分子 bin，仅仿真覆盖产物会。在 OpenTitan AES 上：首轮缩减空间 BO 达 241/271 bin；形式化清理移除 2 个分母 bin；集成的「清理后」阶段（难度分组+策略路由+分组 BO）新增 20 个仿真确认的命中，原始覆盖 261/271（96.31%）、有效覆盖 261/269（97.03%）。在 Entropy Source 上：首轮 2117/2277，清理移除 10 个分母 bin，清理后阶段新增 93 个确认命中，原始 2210/2277（97.06%）、有效 2210/2267（97.49%）。该工作刻画了「诊断+搜索」集成工作流。属「功能验证 / 形式化引导的贝叶斯优化覆盖收敛」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.17449" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.17449_Formal_Verif_BO_Coverage.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式化验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">覆盖收敛</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">贝叶斯优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能覆盖</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">UVM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可达性分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">测试平台</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
     <!-- 2610.10580 LLM Hardware Verification Survey -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>
