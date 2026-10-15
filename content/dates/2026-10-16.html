@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-10-16 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态（本日未添加新闻：在 2026-10-16 时间线内未检索到可核验（HTTP 200 且内容吻合）的行业新闻 URL，遵照第 0 步「宁可空白、绝不编造」规则）· 来源：arXiv（cs.AR / cs.LG / cs.AI，4 篇均来自 2026-10-15 公告批次，提交于 2026-10-08~14，并逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF：2610.18890=166KB、2610.18891=2.9MB、2610.20224=222KB、2610.19508=1.9MB）。本批次覆盖 前端RTL（LLM 辅助 Verilog 生成与设计竞赛闭环）、物理设计（AI 驱动时序感知功耗优化、GNN-RL 合法化后布局设计空间探索）、模拟与架构（晶体管级模拟电路图变分自编码器）。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2610.18891 From Prompts to Silicon / AI-HDL -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 9 Oct 2026 · Parsa Mirfasihi, Harish Kumar Dharavath, Muhtasim Alam Chowdhury, Sujan Ghimire, Banafsheh Saber Latibari, Rozhin Yasaei, Pratik Satam, Soheil Salehi</div>
+      <h4>🤖 From Prompts to Silicon: Scaling LLM-Assisted Chip Design with the AI Hardware Design League——从提示词到硅：用 AI 硬件设计联赛扩展 LLM 辅助芯片设计</h4>
+      <p>半导体人才短缺重新激发了「让没有传统 VLSI 训练的学生也能做芯片设计」的兴趣。本文提出 AI 硬件设计联赛（AI-HDL）：一个国际性、项目制的竞赛，学生用大语言模型（LLM）生成并迭代精化 Verilog，而仿真、综合、时序分析、安全审查与物理验证提供用于校验结果的工程反馈。两个年度周期中，AI-HDL 参与人数由 172 增至 604，项目基数由 40 起步持续扩张；这证明 LLM 辅助的「生成—反馈」闭环可大幅降低芯片设计门槛，呼应「前端 RTL / LLM 辅助 RTL 生成与验证」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">LLM</span><span class="tag">Verilog生成</span><span class="tag">芯片设计</span><span class="tag">AI-HDL</span><span class="tag">设计竞赛</span><span class="tag">生成-验证闭环</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.18891" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.18891_Prompts_to_Silicon_AI_HDL.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.18890 AI-Driven Timing-Aware Power Optimization -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 8 Oct 2026 · Amit Sharma</div>
+      <h4>⚡ AI-Driven, Timing-Aware Power Optimization——AI 驱动的时序感知功耗优化</h4>
+      <p>布线后功耗恢复需在时序、电气与物理强耦合约束下替换单元，而每次改动的价值取决于修复其副作用的代价。本文提出一个 AI 驱动框架，由学习模型同时驱动两个阶段：对「尝试哪些功耗恢复编辑」与「随后执行哪些修复动作」排序，而确定性的电子设计自动化（EDA）分析管控每一次接受。框架记录基线约束裕量，识别每次恢复事务在各分析视图中引入的损伤，形成「预测损伤—排序编辑—确定性回退」的闭环。属「物理设计 / 时序感知功耗优化」方向，把机器学习用于布线后功耗—时序协同修复。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">功耗优化</span><span class="tag">时序感知</span><span class="tag">布线后优化</span><span class="tag">功耗恢复</span><span class="tag">EDA</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.18890" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.18890_AI_Driven_Power_Opt.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.20224 RL Post-Legalization Placement -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 14 Oct 2026 · Foteini Oikonomou, Maria Pantazi-Kypraiou, George Goudroumanis, Pavlos Stoikos, Athanasios Tziouvaras, Christos Anagnostopoulos et al.</div>
+      <h4>📐 Design Space Exploration of Reinforcement Learning Configurations for Post-Legalization Placement——面向合法化后布局的强化学习配置设计空间探索</h4>
+      <p>图神经网络（GNN）与强化学习（RL）近期被用于 VLSI 布局优化，但其在「合法化后布局精化」上的有效性仍不明朗。本文对 GNN-PPO 框架做系统性设计空间探索，覆盖 ISPD2015 三个基准、18 种配置（奖励函数、GNN 架构、动作空间、候选集大小、训练策略），据此分析所得结果以识别陷阱并评估 RL 用于合法化后布局的前景；并提出一种设计分类方法以引导 RL 模型的决策。属「物理设计 / RL 布局优化」方向，为 GNN-RL 布局提供配置经验与选型指南。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">布局优化</span><span class="tag">强化学习</span><span class="tag">GNN</span><span class="tag">PPO</span><span class="tag">合法化后布局</span><span class="tag">ISPD2015</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.20224" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.20224_RL_PostLegalization_Placement.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.19508 CktHGVAE -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · 14 Oct 2026 · Shigeyasu Uno</div>
+      <h4>🔬 CktHGVAE: A Symmetric Design/State Heterogeneous Graph Variational Autoencoder for Transistor-level Analog/Mixed-signal Circuit Design and Analysis——CktHGVAE：面向晶体管级模拟/混合信号电路设计与分析的设计/状态对称异构图变分自编码器</h4>
+      <p>本文提出 CktHGVAE——一种面向晶体管级模拟/混合信号 CMOS 电路的异构图变分自编码器，同时把设计变量与状态变量作为输入与输出。在单一超参数配置（无拓扑特定调参）下，模型生成值与 SPICE 仿真值的对比显示：典型单端电压放大器与 CMOS 反相器中值 R² > 0.9，差分放大器 0.81–0.96；在 PCA 约简潜空间内用贝叶斯/进化/随机/准穷举搜索做潜空间优化，93.3–100% 的模型建议候选满足规格，SPICE 验证 90–100% 确实满足；预训练于一批拓扑后可零样本迁移到未见拓扑（跨单端→差分迁移中值 R² 0.72–0.90）。该模型有望成为 AMS CMOS 电路设计自动化的基础。属「模拟与架构 / 模拟电路设计自动化（图神经网络）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">模拟电路</span><span class="tag">模拟设计自动化</span><span class="tag">图神经网络</span><span class="tag">VAE</span><span class="tag">晶体管级</span><span class="tag">SPICE</span><span class="tag">零样本迁移</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.19508" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.19508_CktHGVAE_Analog.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

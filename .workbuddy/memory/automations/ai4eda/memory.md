@@ -959,3 +959,44 @@
 - push origin main（retry once if needed）
 
 **结果状态**：✅ 论文无新增（最新批次无 AI4EDA 论文，TPCS 经 abs 核验为确定性仿真框架、排除）；新闻 +1（NVIDIA Open Agent Safety Platform + Cadence AI Super Agents 集成，WIR #158 HTTP 200 已核验）；已落盘并待提交推送。站点：papers 376 / batches 133 / news 222 / lastUpdate 2026-10-14。
+
+---
+
+## 2026-10-15 执行摘要（本次运行）
+
+**前置状态（2026-10-14 基线）**
+- papers: 376, batches: 133, news: 222, lastUpdate: 2026-10-14
+
+**环境说明（关键）**：本环境为真实 2026-10-15 时间线——`arxiv.org/list/cs.AR/recent` 返回 HTTP 200、最新公告批次头为 **Wed, 14 Oct 2026**（23 条 cs.AR 条目，10-12/10-09/10-08 批次已分日收录完毕）。全程**逐篇实际抓取 `arxiv.org/abs/<id>` 核验标题/作者/摘要/分类/提交日期一致**，PDF 均来自 `arxiv.org/pdf/<id>` 真实下载（354KB–697KB，`%PDF-1.7` 头已校验），**无任何伪造 ID / 标题 / 占位 PDF**。
+
+**检索流程（严谨性）**
+- 抓 `cs.AR/recent` 完整 Wed 14 Oct 批次（23 条），逐条评估 AI4EDA 相关性；另用 arXiv API（submittedDate `[20261013 TO 20261015]`）扫描 cs.LG/cs.AI/cs.SE/cs.CE/cs.ET/eess.SY 全量（444 条候选），强 EDA 关键词 + 人工复核筛选。
+- cs.LG/cs.AI/cs.SE 命中的 26 条均为通用 LLM/智能体/RL 论文（软件/机器人/ML 语境，非 EDA），全部排除。
+- cs.AR Wed 14 Oct 23 条中，仅 4 篇经 abs 页逐字核验为真正 AI4EDA 论文；其余（FPGA/MEMS 补偿器、射线追踪、退火 Max-Cut、CPU-GPU 内存、HPC 恶意检测器、量子/光子、LLM 压缩等）均非芯片设计自动化，排除。
+- 边界剔除：2610.16213 SafeDSE（约束模型 DSE、无 AI 方法）、2610.15925 GarageWorks（测试平台框架、AI 仅偶然提及）——均排除，维持「AI for EDA」站点定位。
+
+**本次新增内容（论文 +4，全部经逐篇 abs 核验）**
+- 2610.17445 When Is RTL Better?——以工具接地需求档案审计 RTL 生成评测稳定性（冻结候选对、仅扰动评测档案；RTLLM v1.1 外部验证 37.7% 比较产生无支撑改进）→ rtl（99→101）
+- 2610.15205 MoSAIC——LLM 引导推理从 CP-SAT 最优调度学习 DAG 调度启发式（贝叶斯优化、可复用知识库，优于 HEFT）→ rtl（99→101）
+- 2610.17449 Formal-Verification-Guided BO Coverage Closure——AST/COI 缩减空间贝叶斯优化 + 形式化可达性清理的非侵入式覆盖收敛（OpenTitan AES 97.03% 有效覆盖）→ verify（47→48）
+- 2610.15240 The Era of Vibe Tapeout——LLM 智能体在 SKY130 上自主设计 11-bit SAR ADC（DRC/LVS 干净、无人干预签核）+ 本地 LLM 商用 PDK 评测 → analog（53→54）
+
+**行业动态 +0**：本日**未添加**任何行业新闻。检索到的 2026-10-15 时间线内无满足「HTTP 200 且内容吻合」的行业新闻 URL；严格遵循第 0 步「宁可空白、绝不编造或猜测 URL」。news 计数维持 222。
+
+**更新文件清单**
+- content/dates/2026-10-15.html（新建，4 论文卡 + 本地 PDF 链接）
+- content/latest/2026-10-15.html（新建，4 论文卡 + ../../dates PDF 链接）
+- content/dates/2610.*_*.pdf（4 篇真实 PDF，均 %PDF-1.7 头、354–697KB）
+- content/categories/{rtl,verify,analog}.html（rtl 99→101 插 2 卡；verify 47→48 插 1 卡；analog 53→54 插 1 卡；页头计数同步）
+- content/papers/index.html（跳转刷新至 2026-10-15）
+- manifest.js（stats: 380/134/222；latest 与 dates 数组各插 2026-10-15；lastUpdate 2026-10-15）
+
+**去重检查**
+- 4 个 arXiv ID 经 Grep 确认 content/ 下此前不存在（无重复）
+- 新闻：未添加，无去重动作
+
+**Git**
+- commit: `auto update: 2026-10-15`（79ba440）
+- push origin main 成功：d33cb15..79ba440
+
+**结果状态**：✅ 全量更新已落盘，4 篇论文均经真实性核验、PDF 真实，已提交推送；新闻因无可核验来源留空。站点：papers 380 / batches 134 / news 222 / lastUpdate 2026-10-15。
