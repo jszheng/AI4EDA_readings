@@ -1110,7 +1110,7 @@
 - 新闻：news_memory 无既有 Keysight「ADS 2027 agentic AI」记录（既有 Keysight 条目为 2026-08-20「Engineering Intelligence at the Core」，不重复）
 
 **Git**
-- 待 commit: `auto update: 2026-10-20`（含 3 HTML + 1 PDF 新增 + 5 修改；已排除本地草稿目录）
-- push origin main（retry once if needed）
+- commit `04afa2d`：`auto update: 2026-10-20`（9 files changed, 244 insertions(+), 109 deletions(-)；含 3 HTML + 1 PDF 新增 + 5 修改 + memory.md；已排除本地草稿目录）
+- push origin main ✅ 成功：`f7c0f82..04afa2d  main -> main`（退出码 0，无错误）
 
-**结果状态**：✅ 全量更新已落盘，1 篇论文 + 1 条新闻均经真实性核验、PDF 真实，待提交推送。站点：papers 388 / batches 137 / news 223 / lastUpdate 2026-10-20。
+**结果状态**：✅ 全量更新已落盘并通过第 0 步真实性核验，1 篇论文 + 1 条新闻均经逐篇 abs / HTTP 200 核验、PDF 真实下载，且已 git commit 并 push 至 origin/main。站点最终状态：papers 388 / batches 137 / news 223 / lastUpdate 2026-10-20。
