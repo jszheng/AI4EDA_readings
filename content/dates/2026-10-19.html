@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-10-19 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 0 条行业动态（本日未添加新闻：在 2026-10-19 时间线内未检索到可核验（HTTP 200 且内容吻合）的行业新闻 URL，遵照第 0 步「宁可空白、绝不编造」规则）· 来源：arXiv（cs.AR / cs.AI，3 篇均来自 2026-10-15 公告批次、提交于 2026-10-15，并逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF：2610.21570=178KB、2610.21591=1.7MB、2610.22214=2.1MB）。本批次覆盖 功能验证（LLM 驱动功能覆盖收敛的独立数据完整性校验）、模拟与架构（面向模拟 IC 设计的开放数据集与基准 LOADBench）、物理设计（GNN 引导的 DSA-MP 版图分解，ICCAD 2026）。注：同日另有 cs.AR 候选 2610.22230「Meta 面向 AMD GPU 的端到端软硬协同设计」经 abs 核验为 ML 训练性能可移植性（计算机体系结构/系统方向），非 AI 用于 EDA 工具链，按站点「AI for EDA」定位排除。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2610.21570 Independent Data-Integrity Verification for LLM-Driven Functional Coverage Closure -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.AI · cs.SE · 15 Oct 2026 · Venkata Krishna Kumar Vedantam</div>
+      <h4>✅ Independent Data-Integrity Verification for LLM-Driven Functional Coverage Closure in Hardware Design——面向硬件设计的 LLM 驱动功能覆盖收敛的独立数据完整性验证</h4>
+      <p>LLM 智能体可写定向测试来闭合功能覆盖，但「覆盖」只表明到达了某个状态，并不保证沿途数据正确——这是验证领域长期已知的盲点，本文并未声称其为新发现。作者描述一个小型覆盖收敛智能体，把它接入 LLM 闭环：覆盖率从仿真自身导出的报告（cocotb-coverage YAML）读取、绝不采用模型自报的账本，并由与模型解耦的记分板（scoreboard）做数据完整性校验。在三个架构各异的 RTL 设计（异步 FIFO、UART 发送器、AHB2APB 桥）上，该智能体把覆盖率从 91.7% / 88.9% / 67.4% 进一步提升。属「功能验证 / LLM 辅助验证闭环、覆盖收敛」方向，凸显了「验证裁判与生成作者解耦」这一可信 AI4EDA 的关键原则。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">LLM</span><span class="tag">覆盖收敛</span><span class="tag">功能覆盖</span><span class="tag">cocotb</span><span class="tag">数据完整性</span><span class="tag">RTL验证</span><span class="tag">智能体</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.21570" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.21570_LLM_Functional_Coverage.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.21591 LOADBench -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 15 Oct 2026 · M. Leibl, F. Azevedo, S. Uhlich, A. Bonetti, A. Venkitaraman, C. Hsieh, P. Pham, L. Servadei, H. Graeb, R. Martins</div>
+      <h4>🔬 LOADBench: A Large Open Analog Dataset and Benchmark for Machine Learning in IC Design——LOADBench：面向 IC 设计中机器学习的大型开放模拟数据集与基准</h4>
+      <p>机器学习用于模拟 IC 设计长期受限于开放数据稀缺与缺乏标准评测：不同论文用各自封闭数据集与临时指标，跨方法比较不可靠。本文同时填补两块空白——提供大型开源数据集与一套标准化基准。数据集含 100+ 运算放大器（opamp）拓扑（1/2/3 级），均基于 SkyWater130 PDK，每个附带结构与功能标注、拓扑特定的尺寸约束（对称与尺寸规则）、Ngspice 测试平台，以及多目标 NSGA-II 尺寸优化运行产物。属「模拟与架构 / 模拟电路设计自动化（开放数据集 + 基准）」方向（MLCAD 2026），为模拟 IC 设计的 ML 方法提供可复现、可比较的评测基座。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">模拟IC</span><span class="tag">模拟电路</span><span class="tag">开放数据集</span><span class="tag">基准评测</span><span class="tag">MLforEDA</span><span class="tag">SkyWater130</span><span class="tag">opamp</span><span class="tag">NSGA-II</span><span class="tag">MLCAD26</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.21591" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.21591_LOADBench.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.22214 GNN-Guided Local Refinement for Layout Decomposition with DSA-MP -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 15 Oct 2026 · Yu Feng, Liyi Zhou, Haoyu Wang, Yiming Xu, Hao Geng, Shaozhi Deng, Ningsheng Xu, Shisheng Xiong</div>
+      <h4>📐 GNN-Guided Local Refinement for Efficient Layout Decomposition with DSA-MP——面向 DSA-MP 高效版图分解的 GNN 引导局部精化</h4>
+      <p>多重 patterning 光刻（MPL）在先进节点用于提升光刻分辨率，但特征尺寸缩小后成本受限。定向自组装（DSA）作为高性价比补充，把光学光刻分辨率拓展到 10nm 以下；将 DSA 融入 MPL（DSA-MP）进一步增强接触孔/通孔的图形化分辨率。然而设计复杂度上升暴露出现有分解方法的局限：难以兼顾解质量与运行时间，且忽略 DSA 模板的边到边间距约束，损害可制造性。为此本文提出一种新的冲突图模型，并以 GNN 引导的局部精化在质量与效率间取得平衡。属「物理设计 / 计算光刻（版图分解、DSA-MP）」方向，ICCAD 2026 录用。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">计算光刻</span><span class="tag">版图分解</span><span class="tag">DSA-MP</span><span class="tag">多重patterning</span><span class="tag">GNN</span><span class="tag">可制造性</span><span class="tag">ICCAD26</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.22214" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.22214_GNN_Layout_Decomposition.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
