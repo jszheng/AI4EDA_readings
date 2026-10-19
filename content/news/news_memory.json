@@ -1,8 +1,32 @@
 {
-  "lastUpdate": "2026-10-14",
-  "cutoffDate": "2026-04-17",
-  "totalItems": 186,
+  "lastUpdate": "2026-10-20",
+  "cutoffDate": "2026-04-23",
+  "totalItems": 182,
   "items": [
+    {
+      "date": "2026-10-19",
+      "company": "Keysight（是德科技）",
+      "title": "🔧 Keysight 在 ADS 2027 中加入 agentic AI——工程师可将 AI 智能体接入 RF 工具做电路生成/验证/优化；ADS 2027 把图形化 RF 设计转成机器可读表示、让智能体学习可复用工程工作流，解决 LLM 对原理图与版图解读不一致的难题",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-159/",
+      "keywords": [
+        "Keysight",
+        "是德科技",
+        "ADS 2027",
+        "agentic AI",
+        "AI Agent",
+        "RF",
+        "EDA",
+        "电路生成",
+        "验证",
+        "优化",
+        "机器可读表示",
+        "工程工作流",
+        "原理图",
+        "版图",
+        "WIR #159",
+        "2026-10-19"
+      ]
+    },
     {
       "date": "2026-10-13",
       "company": "NVIDIA / Cadence",
@@ -3812,101 +3836,6 @@
         "Siemens",
         "EDA",
         "TSMC"
-      ]
-    },
-    {
-      "date": "2026-04-22",
-      "company": "Synopsys 官方新闻稿",
-      "title": "🔥 Synopsys × TSMC 重磅公告：AI 驱动 EDA 流程覆盖 N3/N2/A16/A14 全节点",
-      "link": "https://news.synopsys.com/2026-04-22-Synopsys-Partners-with-TSMC-to-Power-Next-Generation-AI-Systems-with-Silicon-Proven-IP-and-Certified-EDA-Flows",
-      "keywords": [
-        "Synopsys",
-        "TSMC",
-        "重磅公告",
-        "AI",
-        "驱动",
-        "EDA",
-        "流程覆盖",
-        "N3",
-        "N2",
-        "A16",
-        "A14",
-        "全节点",
-        "Synopsys",
-        "官方新闻稿"
-      ]
-    },
-    {
-      "date": "2026-04-22",
-      "company": "Cadence 官方新闻稿",
-      "title": "🔥 Cadence × TSMC Agentic AI 公告：从工具流到目标驱动 Agentic 执行",
-      "link": "https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-collaborates-with-tsmc-to-accelerate-design-of-next.html",
-      "keywords": [
-        "Cadence",
-        "TSMC",
-        "Agentic",
-        "AI",
-        "公告",
-        "从工具流到目标驱动",
-        "Agentic",
-        "执行",
-        "Cadence",
-        "官方新闻稿"
-      ]
-    },
-    {
-      "date": "2026-04-21",
-      "company": "Needham × Cadence",
-      "title": "💰 Needham 上调 Cadence 目标价至 $400 — 称 EDA 行业迎来\"ChatGPT 时刻\"",
-      "link": "https://www.morningstar.com/news/marketwatch/20260420338/why-cadences-chatgpt-moment-may-have-already-arrived",
-      "keywords": [
-        "Needham",
-        "上调",
-        "Cadence",
-        "目标价至",
-        "400",
-        "称",
-        "EDA",
-        "行业迎来",
-        "ChatGPT",
-        "时刻",
-        "Needham",
-        "Cadence"
-      ]
-    },
-    {
-      "date": "2026-04-20",
-      "company": "Morningstar/MarketWatch",
-      "title": "💰 Cadence\"ChatGPT时刻\"持续发酵 — 代理式 AI 有潜力将效率提升最高 1000 倍",
-      "link": "https://www.morningstar.com/news/marketwatch/20260420338/why-cadences-chatgpt-moment-may-have-already-arrived",
-      "keywords": [
-        "Cadence",
-        "ChatGPT时刻",
-        "持续发酵",
-        "代理式",
-        "AI",
-        "有潜力将效率提升最高",
-        "1000",
-        "倍",
-        "Morningstar",
-        "MarketWatch"
-      ]
-    },
-    {
-      "date": "2026-04-17",
-      "company": "DAC 2026",
-      "title": "🔥 DAC 2026 完整技术程序今日正式公布 — AI for EDA 专场完整入选名单披露",
-      "link": "https://www.dac.com/2026",
-      "keywords": [
-        "DAC",
-        "2026",
-        "完整技术程序今日正式公布",
-        "AI",
-        "for",
-        "EDA",
-        "专场完整入选名单披露",
-        "DAC",
-        "2026"
       ]
     },
     {

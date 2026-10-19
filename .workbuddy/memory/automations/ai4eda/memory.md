@@ -1038,3 +1038,79 @@
 - push origin main 成功：79ba440..6c13960（13 files changed, 275 insertions, 8 deletions；已显式排除本地草稿 .arxiv_tmp/）
 
 **结果状态**：✅ 全量更新已落盘，4 篇论文均经真实性核验、PDF 真实，已提交推送；新闻因无可核验来源留空。站点：papers 384 / batches 135 / news 222 / lastUpdate 2026-10-16。
+
+---
+
+## 2026-10-19 执行摘要（本次运行）
+
+**前置状态（2026-10-16 基线）**
+- papers: 384, batches: 135, news: 222, lastUpdate: 2026-10-16
+
+**环境说明（关键）**：真实 2026-10-19 时间线。`arxiv.org/list/cs.AR/recent` 返回 HTTP 200，确认新公告批次（ID 至 2610.22269，提交于 10-15/10-16、公告于 10-19）。全程**逐篇实际抓取 `arxiv.org/abs/<id>` 核验标题/作者/摘要/分类/提交日期一致**，PDF 均来自 `arxiv.org/pdf/<id>` 真实下载（`%PDF-1.7` 头已校验），**无任何伪造 ID / 标题 / 占位 PDF**。
+
+**检索流程（严谨性）**
+- arXiv API 初始 `submittedDate:[20261017 TO 20261019]` 返回 0；改为 `YYYYMMDDHHMM` 格式后，发现该窗口 cs.AR 实际 0 提交——新论文在 10-15/10-16 提交、10-19 公告。扫描窗口放宽到 `202610140000 TO 202610200000`（cs.AR/cs.LG/cs.AI/cs.SE/cs.CE/cs.ET/eess.SY），648 篇新文，强 EDA 关键词 + 人工复核筛选。
+- 候选中 abs 逐字核验为真者 4 篇；另有 2610.22230（Meta 面向 AMD GPU 端到端协同设计）经 abs 核验为 ML 训练性能可移植性（计算机体系结构/系统方向），**非 AI for EDA 工具链，按站点定位排除**。
+
+**本次新增内容（论文 +3，全部经逐篇 abs 核验）**
+- 2610.21570 Independent Data-Integrity Verification for LLM-Driven Functional Coverage Closure——LLM 闭环覆盖收敛 + 与生成模型解耦的记分板数据完整性校验（cocotb-coverage；异步 FIFO/UART/AHB2APB）→ verify（48→49）
+- 2610.21591 LOADBench——面向 IC 设计 ML 的大型开放模拟数据集与基准（100+ opamp、SkyWater130、NSGA-II；MLCAD 2026）→ analog（55→56）
+- 2610.22214 GNN-Guided Local Refinement for Layout Decomposition with DSA-MP——GNN 引导 DSA-MP 版图分解局部精化（冲突图建模；ICCAD 2026）→ physical（94→95）
+
+**行业动态 +0**：本日**未添加**任何行业新闻。在 2026-10-19 时间线内未检索到可核验（HTTP 200 且内容吻合）的行业新闻 URL，严格遵循第 0 步「宁可空白、绝不编造或猜测 URL」。news 计数维持 222。
+
+**更新文件清单**
+- content/dates/2026-10-19.html、content/latest/2026-10-19.html（新建，3 论文卡 + 本地 PDF 链接）
+- content/dates/2610.21570_LLM_Functional_Coverage.pdf（178KB）、2610.21591_LOADBench.pdf（1.7MB）、2610.22214_GNN_Layout_Decomposition.pdf（2.1MB）（均 %PDF 头）
+- content/categories/{verify,analog,physical}.html（verify 48→49 / analog 55→56 / physical 94→95 各插 1 卡 + 同步页头计数）
+- content/papers/index.html（跳转刷新至 2026-10-19）
+- manifest.js（stats: 387/136/222；latest 与 dates 数组各插 2026-10-19；lastUpdate 2026-10-19）
+
+**去重检查**
+- 3 个 arXiv ID 经 Grep 确认 content/ 下此前不存在（无重复）
+- 新闻：未添加，无去重动作
+
+**Git**
+- commit: `auto update: 2026-10-19`（f7c0f82）
+- push origin main 成功：d334b3b..f7c0f82（10 files changed, 183 insertions, 8 deletions；已显式排除本地草稿 .arxiv_tmp/）
+
+**结果状态**：✅ 全量更新已落盘，3 篇论文均经真实性核验、PDF 真实，已提交推送；新闻因无可核验来源留空。站点：papers 387 / batches 136 / news 222 / lastUpdate 2026-10-19。
+
+---
+
+## 2026-10-20 执行摘要（本次运行）
+
+**前置状态（2026-10-19 基线）**
+- papers: 387, batches: 136, news: 222, lastUpdate: 2026-10-19
+
+**环境说明（关键）**：真实 2026-10-20 时间线。`arxiv.org/list/cs.AR/recent` 返回 HTTP 200、最新公告批次头为 **Mon, 19 Oct 2026**（12 条 cs.AR 新 ID：2610.22520–2610.23767），证实为真实 arXiv 数据。全程**逐篇实际抓取 `arxiv.org/abs/<id>` 核验标题/作者/摘要/分类/提交日期一致**，PDF 均来自 `arxiv.org/pdf/<id>` 真实下载（851KB，`%PDF-1.7` 头已校验），**无任何伪造 ID / 标题 / 占位 PDF**。
+
+**检索流程（严谨性）**
+- 解析 cs.AR/recent 的 Mon 19 Oct 批次（12 条），逐一评估 AI4EDA 相关性：仅 2610.23724 为 agentic AI 用于（异构/芯片）系统设计；其余 11 条（TileDRAM 3D DRAM 布局 / GUMPIM PIM / qGAMMA DNN 映射 / 量子剪枝 / 边缘 GPU 等）经 abs 核验均为体系结构与 ML-on-hardware，非 AI 用于 EDA 工具链，排除。
+- 跨类扫描 cs.LG/cs.AI/cs.SE/cs.CE/cs.ET/eess.SY 的 19 Oct 公告批次（arXiv API submittedDate 窗口 + recent 页面标题扫描），54 个关键词候选全部为 LLM 智能体用于编码/药物发现/机器人等通用方向（TriRouter=EEG 路由、ScoutRoute=MoE 专家路由等均为误报），无真正 AI4EDA 论文，排除。
+- 边界判定：2610.23724 为分层多智能体框架 ArchAgent（LLM 规划器 + 专家智能体 + 确定性解析评估器，闭环做芯片/纵向/横向扩展系统设计），其「chip」子问题直接对应芯片设计智能体生成-评估闭环，按站点「AI Agent」定位收录（类比 10-09 的 Agentic Research / 10-12 的 RFChipAgent）。
+
+**本次新增内容（论文 +1，全部经逐篇 abs 核验）**
+- 2610.23724 Agentic AI for Heterogeneous System Design Across Chip, Scale-Up, and Scale-Out Domains（Murali Emani, Kashyap R Manjusha；cs.AR/cs.DC；提交 2026-10-16）→ agent（52→53）。PDF 真实下载 851,466 B，%PDF 头校验通过。
+
+**行业动态 +1（经严格 Step-0 核验，HTTP 200 且内容吻合）**
+- Keysight 在 ADS 2027 中加入 agentic AI——工程师可将 AI 智能体接入 RF 工具做电路生成/验证/优化；ADS 2027 把图形化 RF 设计转成机器可读表示、让智能体学习可复用工程工作流，解决 LLM 对原理图与版图解读不一致的难题。来源 SemiEngineering WIR #159（HTTP 200 核验，页面含 "Keysight added agentic AI to its design software… ADS 2027" 表述），与既有 WIR #158（NVIDIA/Cadence、Synopsys/OpenAI）为不同事件，dedup 无冲突。news_memory.json 插入 Keysight 新 item（无重复），并执行 180 天清理：移除 5 条 <2026-04-23 旧条目（2026-04-17~04-22），totalItems 186→182，cutoffDate 2026-04-17→2026-04-23。
+
+**更新文件清单**
+- content/dates/2026-10-20.html、content/latest/2026-10-20.html（新建，1 论文卡 + 本地 PDF 链接）
+- content/dates/2610.23724_ArchAgent.pdf（851,466 B，%PDF 头、真实下载）
+- content/categories/agent.html（插 1 卡；头部计数 52→53）
+- content/news/index.html（补 2026-10-19 section + nav 锚点 261019 + subtitle + 同步 header 统计 388/137/223）
+- content/news/news_memory.json（插入 Keysight 新 item；lastUpdate 2026-10-20；180 天清理 totalItems 182 / cutoffDate 2026-04-23）
+- manifest.js（stats: 388/137/223；latest 与 dates 数组各插 2026-10-20；lastUpdate 2026-10-20）
+- content/papers/index.html（跳转刷新至 2026-10-20）
+
+**去重检查**
+- 2610.23724 经 Grep 确认 content/ 下此前不存在（无重复），且仅出现在 agent 分类（无跨类重复）
+- 新闻：news_memory 无既有 Keysight「ADS 2027 agentic AI」记录（既有 Keysight 条目为 2026-08-20「Engineering Intelligence at the Core」，不重复）
+
+**Git**
+- 待 commit: `auto update: 2026-10-20`（含 3 HTML + 1 PDF 新增 + 5 修改；已排除本地草稿目录）
+- push origin main（retry once if needed）
+
+**结果状态**：✅ 全量更新已落盘，1 篇论文 + 1 条新闻均经真实性核验、PDF 真实，待提交推送。站点：papers 388 / batches 137 / news 223 / lastUpdate 2026-10-20。

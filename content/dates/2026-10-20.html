@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-10-20 动态</h1>
+  <p class="subtitle">共 1 篇论文 · 1 条行业动态（Keysight 在 ADS 2027 中加入 agentic AI——见行业动态页，来源 SemiEngineering WIR #159，链接经核验 HTTP 200 且内容含所述表述）· 来源：arXiv（cs.AR / cs.DC，2610.23724 来自 2026-10-19 公告批次、提交于 2026-10-16，已逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF：2610.23724=832KB）。本批次覆盖 AI Agent（面向芯片/纵向扩展/横向扩展异构系统设计的分层多智能体框架 ArchAgent）。注：同日 cs.AR 公告批次（2610.22520–2610.23767，共 12 篇）其余 11 篇经标题/摘要核验均为 GPU 内存/PIM/加速器/量子/可靠性等体系结构与 ML-on-hardware 方向，非「AI 用于 EDA 工具链」，按站点定位排除。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2610.23724 Agentic AI for Heterogeneous System Design (ArchAgent) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.DC · 16 Oct 2026 · Murali Emani, Kashyap R Manjusha</div>
+      <h4>🤖 Agentic AI for Heterogeneous System Design Across Chip, Scale-Up, and Scale-Out Domains——面向芯片/纵向扩展/横向扩展异构系统设计的智能体式 AI（ArchAgent）</h4>
+      <p>现代 AI/HPC 系统的设计空间横跨 GPU、数据流处理器、RISC-V 加速器等计算架构，HBM/GDDR/SRAM 等存储技术，以及 NVLink、UALink、InfiniBand、Ultra Ethernet 等互连，组合爆炸远超人工探索能力。本文提出 ArchAgent——一个分层多智能体框架：LLM 规划器把系统设计分解为「芯片（chip）、纵向扩展（scale-up）、横向扩展（scale-out）」三个子问题，每个由专家智能体处理；一个确定性的解析评估器闭合循环，确保所有性能估计都来自解析模型而非 LLM 生成（从根源上避免 LLM 编造数值）。在 1MW 功耗预算下的混合 AI+HPC 负载上，ArchAgent 发现的异构设计相较同构 GPU 基线取得 1.93× 加权几何平均加速，且仅需 18 次评估（爬山法需 100 次、仅 1.65×）。属「AI Agent / 面向芯片与系统设计的智能体式设计空间探索」方向——其「chip」子问题直接对应芯片设计智能体的生成-评估闭环，是 agentic AI 进入系统/芯片协同设计的方法论实证。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">AI Agent</span><span class="tag">多智能体</span><span class="tag">系统级设计</span><span class="tag">芯片设计</span><span class="tag">LLM规划器</span><span class="tag">ArchAgent</span><span class="tag">异构系统</span><span class="tag">设计空间探索</span><span class="tag">解析评估器</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.23724" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.23724_ArchAgent.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
