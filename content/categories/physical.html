@@ -7,9 +7,49 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（95篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（98篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2610.28276 RPolyPlan -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 RPolyPlan: A Unified Global Floorplanning and Legalization Framework for Rectilinear Soft Modules——RPolyPlan：面向直角多边形软模块的统一全局布图规划与合法化框架</div>
+      <div class="abs-meta">arXiv:2610.28276 · cs.AR · 20 Oct 2026 · Fuxing Huang, Wenxing Zhu, Xinning Liu, Ziran Zhu</div>
+      <div class="abs-body">采用直角多边形（RPoly）软模块的布图规划通过让模块适配多边形形状提升面积利用率与线长，但现有方法通常在获得矩形全局解后再增量精化多边形，把多边形探索限制在初始布图所诱导的邻域内。本文提出 RPolyPlan——一个无轮廓约束与固定轮廓约束布图规划的统一框架，把可连续形变的直角多边形直接纳入全局布图规划。为此引入结构化连续表示与可微多边形塑形模型，基于重叠动态优化直角模块形状，使连续形状优化在基于梯度的全局布图规划中可行；并以增广拉格朗日处理重叠与边界约束，将直角多边形优化与全局布图联合求解。属「物理设计 / 布图规划与合法化（可微直角多边形 + 梯度优化 + 增广拉格朗日）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.28276" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.28276_RPolyPlan.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布图规划</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">floorplanning</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">合法化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">直角多边形</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">软模块</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可微表示</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">梯度优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">线长</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.28246 DiffRMST -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 DiffRMST: A GPU-Accelerated Fully Differentiable Rectilinear Minimum Spanning Tree Wirelength Model for Global Placement——DiffRMST：面向全局布局的 GPU 加速全可微直角最小生成树线长模型</div>
+      <div class="abs-meta">arXiv:2610.28246 · cs.AR · 20 Oct 2026 · Fuxing Huang, Hao Ai, Wenxing Zhu, Xinning Liu, Ziran Zhu</div>
+      <div class="abs-body">解析全局布局需要能准确反映布线互连代价的、可微的线长目标。广泛使用的半周长线长（HPWL）高效但忽略多引脚网络的内部拓扑；直角 Steiner 最小树（RSMT）保真度更高，但其判定问题 NP 完备、离散构造无法用于梯度优化；直角最小生成树（RMST）是多项式时间替代，却因在离散生成树上取极小而不可微。为此本文提出 DiffRMST——一个面向解析全局布局的全可微 RMST 线长模型。DiffRMST 结合空间平滑与 log-sum-exp 松弛，在生成树上定义连续分布；基于基尔霍夫矩阵给出可微的线长估计，并以 GPU 加速实现。属「物理设计 / 全局布局可微线长模型（RMST + log-sum-exp 松弛 + GPU）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.28246" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.28246_DiffRMST.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">全局布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">global placement</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">线长模型</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RMST</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可微</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">解析布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">log-sum-exp</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">GPU加速</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.26432 E-Layout -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 E-Layout: Layout-Stage Logic Restructuring via RL-Optimized Equality-Saturated Graph Retrieval-Augmented Generation——E-Layout：基于 RL 优化的等式饱和图检索增强生成的布局阶段逻辑重构</div>
+      <div class="abs-meta">arXiv:2610.26432 · cs.AR · 19 Oct 2026 · Wenji Fang, Rongjian Liang, Yi-Chen Lu, Cunxi Yu, Chen Chen, Shang Liu, Chenhui Deng, Wenkai Li, Haoxing Ren, Zhiyao Xie</div>
+      <div class="abs-body">先进 IC 的高签核性能越来越依赖真实物理条件下的布局阶段优化。尽管近期工作走向综合-布局融合，多数仍只把估计物理信息提前引入综合，其优化与真实布局阶段行为并不完全相关；而布局阶段优化又基本局限于固定逻辑结构、仅靠缓冲与尺寸调整，从根本上限制了真实物理条件下的优化空间。为此本文提出 E-Layout——一个 ML 驱动的布局后逻辑重构框架，在设计级时序反馈下跨多个子电路联合优化逻辑变换与物理实现，从而选出时序收益最大的若干互不相交的重构子电路组成优化电路。具体做法：先用 e-graph 等式饱和构造等价保持的逻辑备选，再用基于图的检索增强生成（RAG）模型把逻辑选择耦合到物理实现，最后在设计级时序反馈下用强化学习精炼这些局部逻辑-物理决策。在 9 个多样设计上，相较业界领先的商业物理设计流程，平均取得 TNS 改进 6%、WNS 改进 2%，面积还降低 1%。属「物理设计 / 布局阶段 ML 逻辑重构（等式饱和 + RAG + 强化学习）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.26432" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.26432_E_Layout.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局阶段优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">逻辑重构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">等式饱和</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">e-graph</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">检索增强生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RAG</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">强化学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">TNS/WNS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">商业物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
     <!-- 2610.22214 GNN-Guided Local Refinement for Layout Decomposition with DSA-MP -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

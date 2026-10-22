@@ -7,9 +7,36 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（102篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（104篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2610.28676 VHDLBench -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ VHDLBench: Benchmarking and Fine-Tuning Large Language Models for VHDL-Based Chip Design——VHDLBench：面向 VHDL 芯片设计的大语言模型基准评测与微调</div>
+      <div class="abs-meta">arXiv:2610.28676 · cs.AR · cs.AI · 19 Oct 2026 · Patrik Drazic, Benaoumeur Senouci, Boualem Benatallah</div>
+      <div class="abs-body">数字电路复杂度快速演进要求硬件设计自动化的创新方法。尽管大语言模型（LLM）已深刻影响软件开发，其在硬件描述语言（HDL）生成上的应用仍鲜有探索，尤其对 VHDL。本文给出面向 AI 辅助数字电路设计的综合研究：构建含 18,500+ 条语法校验样本的 VHDL 数据集（来自开源仓库与转换后的 Verilog 设计）；用参数高效 QLoRA 微调 5 个 7B 参数 LLM，便于在资源受限环境部署；并建立严格的三级评测流水线——(1) 语法与综合校验、(2) 带测试平台的功能仿真、(3) 功能正确性度量。属「RTL生成 / VHDL 代码生成基准与微调（QLoRA + 三级评测）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.28676" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.28676_VHDLBench.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">VHDL</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">微调</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">QLoRA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">数据集</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硬件描述语言</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">综合校验</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能仿真</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.25881 Learn the Interface, Not the Implementation -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ Learn the Interface, Not the Implementation: Output Representation Dominates Training Regime in LLM-Based RTL Generation——学接口，而非学实现：在基于 LLM 的 RTL 生成中，输出表示比训练方式更关键</div>
+      <div class="abs-meta">arXiv:2610.25881 · cs.LG · cs.AR · 19 Oct 2026 · Siddharth Patel, Vikram Singh, Siddharth Savyasachi Malu, Rohit Singh</div>
+      <div class="abs-body">基于 LLM 的 RTL 生成一直聚焦「如何训练模型」——微调、持续预训练、基于验证器的强化学习；本文认为这是二阶问题。在一个有界、可形式化规约的任务（生成单纠错双检错 SECDED ECC 存储包装器）上，固定任务、数据与正确性预言机，独立变化两个轴：训练方式（7 种设置）与输出表示（4 级，从完全展开的扁平 Verilog 到由确定性生成器展开的八字段配置）。因存在参考生成器，正确性由约千万点设计空间上的形式等价判定，而非采样自手写测试平台。两点结论：(1) 表示占主导——每个接近原始 RTL 的表示通过率至多 0.17，而配置表示无需训练即达 0.83；一旦模型输出配置，所有训练方式通过率均落在 0.89–1.00。(2) 原始 RTL 触及硬性输出长度上限：512 位设计需 44,237 token 的扁平 Verilog，配置仅 69 token，故原生生成在 32 位数据字以上即不可行而非仅是失准。一个从零训练、参数少于 5000 万的模型配合已验证生成器取得 0.89 形式等价（320 亿参数微调模型为 1.00），单次正确设计推理能耗约低 1600 倍；且推理能耗主导摊薄训练能耗。启示是「学接口，而非学实现」。属「RTL生成 / LLM 生成表示研究（形式等价评测 + 推理能耗）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.25881" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.25881_LLM_RTL_Output_Repr.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">输出表示</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SECDED</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ECC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式等价</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">训练方式</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Verilog</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">推理能耗</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.LG</span>
+      </div>
+    </div>
+
     <!-- 2610.18891 From Prompts to Silicon / AI-HDL -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

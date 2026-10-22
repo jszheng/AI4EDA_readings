@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🔥 2026-10-21 最新</h1>
+  <p class="subtitle">共 3 篇论文 · 0 条行业动态（本日未检索到可核验（HTTP 200 且内容吻合）的行业新闻来源，严格遵循第 0 步「宁可空白、绝不编造或猜测 URL」）· 来源：arXiv（cs.AR / cs.LG / cs.AI，2610.24234 提交于 2026-10-16、2610.25881 与 2610.26432 提交于 2026-10-19，均来自 2026-10-20 公告批次，已逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF）。本批次覆盖 模拟与架构 / RTL生成 / 物理设计 三大方向。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2610.24234 Who Plans, Who Edits? LLM-Driven Analog Layout Repair -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.AI · 16 Oct 2026 · Xilai Dai, Saeed Mohammadi</div>
+      <h4>🔬 Who Plans, Who Edits? Verified, Cost-Aware Division of Labor for LLM-Driven Analog Layout Repair——谁规划、谁编辑？面向 LLM 驱动模拟版图修复的已验证、成本感知分工</h4>
+      <p>LLM 智能体能在签核工具把关每次编辑的前提下修复模拟版图，但「哪个模型该规划、哪个该编辑、成本几何」仍是开放问题。本文的工具接地修复智能体让模型只选择有界的版图算子，签核工具在每次编辑后重跑契约检查，失败版图永不被接受。在 LVS/DRC/后版图修复三项设计（一款量产高压 DAC、5V 振荡器、SKY130 OTA）上，用两家厂商的 6 个档位匹配模型做 182 次盲测：廉价模型能执行计划但几乎无法单独完成（最廉价模型单独 11 次仅 1 次成功，在旗舰规划器下 17 次中 16 次；p&lt;0.001）；廉价规划器更易失败；没有固定分工在所有任务上最省。作者提出学习型控制器：首次工具评估后即各角色选模型并排定升级顺序，每次尝试后更新贝叶斯估计。规则与初始估计冻结前提下，控制器在 4 个封存留出任务修复 8 段中的 7 段，与 OpenAI 旗舰单独使用持平，3 个任务仅花旗舰每次修复成本的 15–40%，总体高 8%；最廉中档模型单独修复 8 段中的 6 段、单次成本最低但漏掉最难任务。32 个抽出的 DAC 修复在每一码值上均与人工引导 LVS 修复的 INL 误差在 0.005 LSB 内。属「模拟与架构 / LLM 驱动模拟版图修复（成本感知分工 + 签核闭环）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">模拟版图</span><span class="tag">版图修复</span><span class="tag">LLM智能体</span><span class="tag">LVS</span><span class="tag">DRC</span><span class="tag">签核工具</span><span class="tag">成本感知</span><span class="tag">分工</span><span class="tag">贝叶斯估计</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.24234" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.24234_LLM_Analog_Layout_Repair.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.25881 Learn the Interface, Not the Implementation -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG · cs.AR · 19 Oct 2026 · Siddharth Patel, Vikram Singh, Siddharth Savyasachi Malu, Rohit Singh</div>
+      <h4>⚡ Learn the Interface, Not the Implementation: Output Representation Dominates Training Regime in LLM-Based RTL Generation——学接口，而非学实现：在基于 LLM 的 RTL 生成中，输出表示比训练方式更关键</h4>
+      <p>基于 LLM 的 RTL 生成一直聚焦「如何训练模型」——微调、持续预训练、基于验证器的强化学习；本文认为这是二阶问题。在一个有界、可形式化规约的任务（生成单纠错双检错 SECDED ECC 存储包装器）上，固定任务、数据与正确性预言机，独立变化两个轴：训练方式（7 种设置）与输出表示（4 级，从完全展开的扁平 Verilog 到由确定性生成器展开的八字段配置）。因存在参考生成器，正确性由约千万点设计空间上的形式等价判定，而非采样自手写测试平台。两点结论：(1) 表示占主导——每个接近原始 RTL 的表示通过率至多 0.17，而配置表示无需训练即达 0.83；一旦模型输出配置，所有训练方式通过率均落在 0.89–1.00。(2) 原始 RTL 触及硬性输出长度上限：512 位设计需 44,237 token 的扁平 Verilog，配置仅 69 token，故原生生成在 32 位数据字以上即不可行而非仅是失准。一个从零训练、参数少于 5000 万的模型配合已验证生成器取得 0.89 形式等价（320 亿参数微调模型为 1.00），单次正确设计推理能耗约低 1600 倍；且推理能耗主导摊薄训练能耗。启示是「学接口，而非学实现」。属「RTL生成 / LLM 生成表示研究（形式等价评测 + 推理能耗）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">LLM</span><span class="tag">输出表示</span><span class="tag">SECDED</span><span class="tag">ECC</span><span class="tag">形式等价</span><span class="tag">训练方式</span><span class="tag">Verilog</span><span class="tag">推理能耗</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.25881" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.25881_LLM_RTL_Output_Repr.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.26432 E-Layout -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 19 Oct 2026 · Wenji Fang, Rongjian Liang, Yi-Chen Lu, Cunxi Yu, Chen Chen, Shang Liu, Chenhui Deng, Wenkai Li, Haoxing Ren, Zhiyao Xie</div>
+      <h4>📐 E-Layout: Layout-Stage Logic Restructuring via RL-Optimized Equality-Saturated Graph Retrieval-Augmented Generation——E-Layout：基于 RL 优化的等式饱和图检索增强生成的布局阶段逻辑重构</h4>
+      <p>先进 IC 的高签核性能越来越依赖真实物理条件下的布局阶段优化。尽管近期工作走向综合-布局融合，多数仍只把估计物理信息提前引入综合，其优化与真实布局阶段行为并不完全相关；而布局阶段优化又基本局限于固定逻辑结构、仅靠缓冲与尺寸调整，从根本上限制了真实物理条件下的优化空间。为此本文提出 E-Layout——一个 ML 驱动的布局后逻辑重构框架，在设计级时序反馈下跨多个子电路联合优化逻辑变换与物理实现，从而选出时序收益最大的若干互不相交的重构子电路组成优化电路。具体做法：先用 e-graph 等式饱和构造等价保持的逻辑备选，再用基于图的检索增强生成（RAG）模型把逻辑选择耦合到物理实现，最后在设计级时序反馈下用强化学习精炼这些局部逻辑-物理决策。在 9 个多样设计上，相较业界领先的商业物理设计流程，平均取得 TNS 改进 6%、WNS 改进 2%，面积还降低 1%。属「物理设计 / 布局阶段 ML 逻辑重构（等式饱和 + RAG + 强化学习）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">布局阶段优化</span><span class="tag">逻辑重构</span><span class="tag">等式饱和</span><span class="tag">e-graph</span><span class="tag">检索增强生成</span><span class="tag">RAG</span><span class="tag">强化学习</span><span class="tag">时序</span><span class="tag">TNS/WNS</span><span class="tag">商业物理设计</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.26432" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.26432_E_Layout.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🔥 2026-10-23 最新</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态（本日未检索到可核验（HTTP 200 且内容吻合）的行业新闻来源，严格遵循第 0 步「宁可空白、绝不编造或猜测 URL」）· 来源：arXiv（cs.AR，来自 2026-10-21 与 2026-10-22 公告批次；4 篇均逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF）。本批次覆盖 RTL生成 / 物理设计 / 模拟与架构 三大方向。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2610.28676 VHDLBench -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.AI · 19 Oct 2026 · Patrik Drazic, Benaoumeur Senouci, Boualem Benatallah</div>
+      <h4>⚡ VHDLBench: Benchmarking and Fine-Tuning Large Language Models for VHDL-Based Chip Design——VHDLBench：面向 VHDL 芯片设计的大语言模型基准评测与微调</h4>
+      <p>数字电路复杂度的快速演进要求硬件设计自动化的创新方法。尽管大语言模型（LLM）已深刻影响软件开发，其在硬件描述语言（HDL）生成上的应用仍鲜有探索，尤其对 VHDL。本文给出面向 AI 辅助数字电路设计的综合研究，弥合当前 EDA 工作流的空白：构建含 18,500+ 条语法校验样本的 VHDL 数据集（来自开源仓库与转换后的 Verilog 设计）；用参数高效 QLoRA 微调 5 个 7B 参数 LLM，便于在资源受限环境部署；并建立严格的三级评测流水线——(1) 语法与综合校验、(2) 带测试平台的功能仿真、(3) F（摘要截断处为功能正确性度量）。属「RTL生成 / VHDL 代码生成基准与微调（QLoRA + 三级评测）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">VHDL</span><span class="tag">LLM</span><span class="tag">微调</span><span class="tag">QLoRA</span><span class="tag">数据集</span><span class="tag">硬件描述语言</span><span class="tag">综合校验</span><span class="tag">功能仿真</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.28676" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.28676_VHDLBench.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.28276 RPolyPlan -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 20 Oct 2026 · Fuxing Huang, Wenxing Zhu, Xinning Liu, Ziran Zhu</div>
+      <h4>📐 RPolyPlan: A Unified Global Floorplanning and Legalization Framework for Rectilinear Soft Modules——RPolyPlan：面向直角多边形软模块的统一全局布图规划与合法化框架</h4>
+      <p>采用直角多边形（RPoly）软模块的布图规划通过让模块适配多边形形状提升面积利用率与线长，但现有方法通常在获得矩形全局解后再增量精化多边形，把多边形探索限制在初始布图所诱导的邻域内。本文提出 RPolyPlan——一个无轮廓约束与固定轮廓约束布图规划的统一框架，把可连续形变的直角多边形直接纳入全局布图规划。为此引入结构化连续表示与可微多边形塑形模型，基于重叠动态优化直角模块形状，使连续形状优化在基于梯度的全局布图规划中可行；并以增广拉格朗日处理重叠与边界约束，将直角多边形优化与全局布图联合求解。属「物理设计 / 布图规划与合法化（可微直角多边形 + 梯度优化 + 增广拉格朗日）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">布图规划</span><span class="tag">floorplanning</span><span class="tag">合法化</span><span class="tag">直角多边形</span><span class="tag">软模块</span><span class="tag">可微表示</span><span class="tag">梯度优化</span><span class="tag">线长</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.28276" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.28276_RPolyPlan.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.28246 DiffRMST -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 20 Oct 2026 · Fuxing Huang, Hao Ai, Wenxing Zhu, Xinning Liu, Ziran Zhu</div>
+      <h4>📐 DiffRMST: A GPU-Accelerated Fully Differentiable Rectilinear Minimum Spanning Tree Wirelength Model for Global Placement——DiffRMST：面向全局布局的 GPU 加速全可微直角最小生成树线长模型</h4>
+      <p>解析全局布局需要能准确反映布线互连代价的、可微的线长目标。广泛使用的半周长线长（HPWL）高效但忽略多引脚网络的内部拓扑；直角 Steiner 最小树（RSMT）保真度更高，但其判定问题 NP 完备、离散构造无法用于梯度优化；直角最小生成树（RMST）是多项式时间替代，却因在离散生成树上取极小而不可微。为此本文提出 DiffRMST——一个面向解析全局布局的全可微 RMST 线长模型。DiffRMST 结合空间平滑与 log-sum-exp 松弛，在生成树上定义连续分布；基于基尔霍夫矩阵给出可微的线长估计，并以 GPU 加速实现。属「物理设计 / 全局布局可微线长模型（RMST + log-sum-exp 松弛 + GPU）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">全局布局</span><span class="tag">global placement</span><span class="tag">线长模型</span><span class="tag">RMST</span><span class="tag">可微</span><span class="tag">解析布局</span><span class="tag">log-sum-exp</span><span class="tag">GPU加速</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.28246" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.28246_DiffRMST.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.28677 Multi-Agent AI Design of Nanowatt LPF -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 19 Oct 2026 · Danial Noori Zadeh, Devanshu Prasad, Mohamed B. Elamien</div>
+      <h4>🔬 Multi-Agent AI Design of a Nanowatt Biomedical Low-Pass Filter from Topology to Layout——多智能体 AI 从拓扑到版图设计纳瓦级生物医学低通滤波器</h4>
+      <p>我们展示一个把模拟电路从拓扑综合带到版图的多智能体框架。研究智能体指挥原理图智能体与版图智能体，四级记忆存储规格与经验，独立智能体评审设计；确定性工具在每次优化试错中提供通过/失败仿真报告、符号分析、基于图的网表等价、寄生注入，以及带 DRC 与 LVS 的提取。人类批准规格与版图规划。针对一款四阶、250Hz 亚阈值生物电位低通滤波器，研究智能体通过仿真引导的试错综合出一种新颖的电流复用架构，在超源跟随双二阶与翻转电压跟随双二阶间共享单一直流偏置支路。智能体在 130nm IHP SG13G2 CMOS 上完成 DRC/LVS 干净的版图，满足规格（摘要截断处为响应指标）。属「模拟与架构 / 多智能体模拟电路设计自动化（拓扑→版图 + DRC/LVS 闭环）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">模拟电路</span><span class="tag">多智能体</span><span class="tag">AI设计</span><span class="tag">拓扑综合</span><span class="tag">版图</span><span class="tag">DRC</span><span class="tag">LVS</span><span class="tag">低通滤波器</span><span class="tag">130nm</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.28677" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.28677_MultiAgent_Analog_LPF.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

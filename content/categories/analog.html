@@ -7,9 +7,36 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（56篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（58篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+
+    <!-- 2610.28677 Multi-Agent AI Design of Nanowatt LPF -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 Multi-Agent AI Design of a Nanowatt Biomedical Low-Pass Filter from Topology to Layout——多智能体 AI 从拓扑到版图设计纳瓦级生物医学低通滤波器</div>
+      <div class="abs-meta">arXiv:2610.28677 · cs.AR · 19 Oct 2026 · Danial Noori Zadeh, Devanshu Prasad, Mohamed B. Elamien</div>
+      <div class="abs-body">我们展示一个把模拟电路从拓扑综合带到版图的多智能体框架。研究智能体指挥原理图智能体与版图智能体，四级记忆存储规格与经验，独立智能体评审设计；确定性工具在每次优化试错中提供通过/失败仿真报告、符号分析、基于图的网表等价、寄生注入，以及带 DRC 与 LVS 的提取。人类批准规格与版图规划。针对一款四阶、250Hz 亚阈值生物电位低通滤波器，研究智能体通过仿真引导的试错综合出一种新颖的电流复用架构，在超源跟随双二阶与翻转电压跟随双二阶间共享单一直流偏置支路。智能体在 130nm IHP SG13G2 CMOS 上完成 DRC/LVS 干净的版图，满足规格。属「模拟与架构 / 多智能体模拟电路设计自动化（拓扑→版图 + DRC/LVS 闭环）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.28677" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.28677_MultiAgent_Analog_LPF.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟电路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拓扑综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">版图</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LVS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">低通滤波器</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">130nm</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.24234 LLM-Driven Analog Layout Repair -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 Who Plans, Who Edits? Verified, Cost-Aware Division of Labor for LLM-Driven Analog Layout Repair——谁规划、谁编辑？面向 LLM 驱动模拟版图修复的已验证、成本感知分工</div>
+      <div class="abs-meta">arXiv:2610.24234 · cs.AR · cs.AI · 16 Oct 2026 · Xilai Dai, Saeed Mohammadi</div>
+      <div class="abs-body">LLM 智能体能在签核工具把关每次编辑的前提下修复模拟版图，但「哪个模型该规划、哪个该编辑、成本几何」仍是开放问题。本文的工具接地修复智能体让模型只选择有界的版图算子，签核工具在每次编辑后重跑契约检查，失败版图永不被接受。在 LVS/DRC/后版图修复三项设计（一款量产高压 DAC、5V 振荡器、SKY130 OTA）上，用两家厂商的 6 个档位匹配模型做 182 次盲测：廉价模型能执行计划但几乎无法单独完成（最廉价模型单独 11 次仅 1 次成功，在旗舰规划器下 17 次中 16 次；p&lt;0.001）；廉价规划器更易失败；没有固定分工在所有任务上最省。作者提出学习型控制器：首次工具评估后即各角色选模型并排定升级顺序，每次尝试后更新贝叶斯估计。规则与初始估计冻结前提下，控制器在 4 个封存留出任务修复 8 段中的 7 段，与 OpenAI 旗舰单独使用持平，3 个任务仅花旗舰每次修复成本的 15–40%，总体高 8%；最廉中档模型单独修复 8 段中的 6 段、单次成本最低但漏掉最难任务。32 个抽出的 DAC 修复在每一码值上均与人工引导 LVS 修复的 INL 误差在 0.005 LSB 内。属「模拟与架构 / LLM 驱动模拟版图修复（成本感知分工 + 签核闭环）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.24234" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.24234_LLM_Analog_Layout_Repair.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟版图</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">版图修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LVS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">签核工具</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">成本感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">分工</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">贝叶斯估计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
     <!-- 2610.21591 LOADBench -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>
