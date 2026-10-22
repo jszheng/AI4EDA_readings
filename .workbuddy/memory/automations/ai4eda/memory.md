@@ -1148,6 +1148,8 @@
 - 新闻：未添加，无去重动作
 
 **Git**
-- 待提交后 push origin main（retry once if needed）
+- 本提交合并了 2026-10-21 与 2026-10-23 两批次此前未提交的工作树（2026-10-21：3 篇 2610.24234/25881/26432 + 日期页/最新页/PDF/分类卡/计数；2026-10-23：4 篇 + 同套文件），以及本轮 .gitignore 新增 `.arxiv_tmp/` 排除本地草稿目录。
+- commit: `auto update: 2026-10-21 & 2026-10-23 (combined, all papers verified)`（ff2bfe3）
+- push origin main ✅ 成功：`9a4df4c..ff2bfe3  main -> main`（退出码 0，无错误；首次 git push 因大体积 PDF 网络耗时较长，后台运行约 3 分钟完成）
 
-**结果状态**：✅ 全量更新已落盘，4 篇论文均经真实性核验、PDF 真实，待提交推送；新闻因无可核验来源留空。站点：papers 395 / batches 139 / news 223 / lastUpdate 2026-10-23。
+**结果状态**：✅ 全量更新已落盘并通过第 0 步真实性核验，7 篇论文（10-21 三篇 + 10-23 四篇）均经逐篇 abs / %PDF 核验、PDF 真实下载，且已 git commit 并 push 至 origin/main；两日均无新闻，news 维持 223。站点最终状态：papers 395 / batches 139 / news 223 / lastUpdate 2026-10-23。
