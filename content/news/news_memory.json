@@ -1,7 +1,7 @@
 {
-  "lastUpdate": "2026-10-20",
-  "cutoffDate": "2026-04-23",
-  "totalItems": 182,
+  "lastUpdate": "2026-10-27",
+  "cutoffDate": "2026-04-30",
+  "totalItems": 186,
   "items": [
     {
       "date": "2026-10-19",
@@ -3988,6 +3988,80 @@
         "EMNLP 2026",
         "开源",
         "2026-09-10"
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "company": "Rambus / ChipAgents",
+      "title": "🤝 Rambus 全公司采用 ChipAgents 代理式 AI 平台并战略投资——将 agentic AI 设计智能体纳入 chiplet/接口 IP 研发流程",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-161/",
+      "keywords": [
+        "Rambus",
+        "ChipAgents",
+        "agentic AI",
+        "战略投资",
+        "chiplet",
+        "接口 IP",
+        "设计自动化",
+        "AI Agent",
+        "WIR #161",
+        "2026-10-23"
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "company": "Altera (Intel FPGA)",
+      "title": "🤖 Altera 在 FPGA 设计软件中引入 AI 助手——自然语言驱动 Quartus/FPGA 设计流程，降低 HDL 与工具复杂性门槛",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-161/",
+      "keywords": [
+        "Altera",
+        "Intel",
+        "FPGA",
+        "AI 助手",
+        "Quartus",
+        "HDL",
+        "自然语言",
+        "AI Agent",
+        "WIR #161",
+        "2026-10-23"
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "company": "Cadence",
+      "title": "🤖 Cadence AI Super Agents 落地部署：Socionext 用 InnoStack 开发 3nm SoC、Nokia 用 AuraStack Millennium M2000 做 5G 基础设施芯片",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-161/",
+      "keywords": [
+        "Cadence",
+        "AI Super Agents",
+        "InnoStack",
+        "AuraStack",
+        "Socionext",
+        "Nokia",
+        "3nm SoC",
+        "5G",
+        "自主芯片设计",
+        "agentic AI",
+        "WIR #161",
+        "2026-10-23"
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "company": "Infineon",
+      "title": "🔧 Infineon 在 ModusToolbox 中加入 AI 编程助手——面向嵌入式/MCU 开发的代码生成与调试辅助",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-161/",
+      "keywords": [
+        "Infineon",
+        "ModusToolbox",
+        "AI 编程助手",
+        "MCU",
+        "嵌入式",
+        "代码生成",
+        "调试",
+        "AI Agent",
+        "WIR #161",
+        "2026-10-23"
       ]
     }
   ]

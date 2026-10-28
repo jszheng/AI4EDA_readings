@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🔥 2026-10-27 最新</h1>
+  <p class="subtitle">共 2 篇论文 · 0 条行业动态（行业动态见新闻页，已于同日从 SemiEngineering WIR #161 收录 4 条）· 来源：arXiv（cs.AR / cs.SE，来自 2026-10-23 公告批次；2610.32597 与 2610.32279 均提交于 2026-10-23，逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF）。本批次覆盖 RTL生成 / 物理设计 两大方向。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2610.32597 Automated Multi-Line Bug Repair Using Model Checker Aided LLMs -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.SE · 23 Oct 2026 · Debleena Das, Chandan Kumar Jha, Muhammad Hassan, Rolf Drechsler, Ansuman Banerjee, Subhra K. Das, Amlan Chakrabarti</div>
+      <h4>⚡ Automated Multi-Line Bug Repair Using Model Checker Aided LLMs: A Case Study on RISC-V Processors——基于模型检验器辅助 LLM 的自动化多行缺陷修复：以 RISC-V 处理器为例</h4>
+      <p>RTL 设计的功能验证已成为现代半导体开发的关键瓶颈，常占据项目资源的大头；其中调试尤其耗时，需要仔细分析仿真轨迹或反例。近期工作探索用大语言模型（LLM）做 RTL 调试与修复，前景广阔，但既有方法大多针对单行缺陷、以开环方式运行、高度依赖提示或检索、缺乏可扩展性，且常产生错误修复。本文提出一种新颖的自动化 RTL 缺陷修复方法，将 LLM、断言与模型检验器结合，提供可扩展、可信的语义支撑与形式化保证：利用失败的断言引导 LLM 为多行缺陷生成补丁，每个候选补丁都经模型检验器形式化验证。该方法把「AI 作者」与「验证裁判」解耦，实现 RTL→修复的零逃逸闭环，是直接面向 RTL 验证/修复的 LLM + 形式化协同范式。属「RTL生成 / RTL 缺陷修复（LLM + 模型检验器 + 形式保证）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">RTL生成</span><span class="tag">RTL修复</span><span class="tag">缺陷修复</span><span class="tag">bug repair</span><span class="tag">LLM</span><span class="tag">形式验证</span><span class="tag">model checker</span><span class="tag">RISC-V</span><span class="tag">多行缺陷</span><span class="tag">验证闭环</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.32597" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.32597_RTL_Bug_Repair_LLM.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.32279 TranSAGE -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 23 Oct 2026 · Chi Zhang, Yi Sun, Weichuang Zhang, Quan Chen, Jieru Zhao</div>
+      <h4>📐 TranSAGE: Automating Spatial Accelerator Generation for Large-Scale Transformer Models——TranSAGE：面向大规模 Transformer 的空间加速器自动生成</h4>
+      <p>大规模 Transformer 在 NLP、计算机视觉与机器人领域取得巨大成功，但其日益增长的计算与存储需求对高效推理提出挑战。空间加速器在片上带宽与能效上有优势，但为大模型设计仍昂贵且耗时；现有加速器生成器多聚焦单操作支持，忽略多操作流水线的收益，限制了吞吐与能效。本文提出 TranSAGE——一个基于编译器的框架，在多操作流水线之下联合优化大规模 Transformer 的调度并生成相应加速器实现。方法整合设计空间探索（DSE）引擎、多操作数据流优化与基于动态规划的图划分算法，高效识别适合流水线的操作簇及其最优数据流参数，从模型规格自动生成可实现的加速器。属「物理设计 / 空间加速器生成自动化（调度 + DSE + 数据流协同）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">空间加速器</span><span class="tag">spatial accelerator</span><span class="tag">加速器生成</span><span class="tag">DSE</span><span class="tag">设计空间探索</span><span class="tag">调度</span><span class="tag">数据流</span><span class="tag">编译</span><span class="tag">Transformer</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.32279" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.32279_TranSAGE.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
