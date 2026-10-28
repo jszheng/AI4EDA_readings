@@ -7,9 +7,35 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（99篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（101篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2610.33099 EGGPlacer -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 EGGPlacer: Energy-Guided Generative Chip Placement with Diffusion Models——EGGPlacer：能量引导的扩散模型生成式芯片布局</div>
+      <div class="abs-meta">arXiv:2610.33099 · cs.AR · 22 Oct 2026 · Qi Zhou, Guojun Liu, Juanhong Zhao, Guangzhi Qi, Zehao Chen, Ming Lu</div>
+      <div class="abs-body">芯片布局强烈影响绕线线长与热行为，但这些下游指标在宏布局阶段难以评估。基于学习的宏布局器常优化仅含宏的半周长线长（mHPWL），忽略了标准单元连通性与空间需求；而解析混和尺寸布局器优化可微全网表线长与密度目标，却通常不知热效应。本文提出 EGGPlacer——将解析布局反馈与热反馈注入宏布局生成的能量引导扩散框架：解析布局器作为在线物理响应模型，暴露每个中间宏布局诱导的标准单元分布与全 netlist 线长代理；可微热模型提供温度反馈。这些信号被构造为可组合能量，在反向扩散全过程注入而无需重训底层生成模型。在公开布局基准上，EGGPlacer 相对强解析与学习布局器取得有竞争力的混和尺寸 HPWL；端到端评测中，其平均绕线线长与峰值温度均为参评方法最低。属「物理设计 / 扩散模型生成式芯片布局（解析+热反馈）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.33099" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.33099_EGGPlacer.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">芯片布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">宏布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">扩散模型</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">生成式</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可微优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">热反馈</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.33510 DiffRouter -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 DiffRouter: A Differentiable Routing Framework for UltraScale FPGAs——DiffRouter：面向 UltraScale FPGA 的可微布线框架</div>
+      <div class="abs-meta">arXiv:2610.33510 · cs.AR · cs.LG · 24 Oct 2026 · Xiaohan Gao, Zhili Xiong, Yusu Wang, David Z. Pan</div>
+      <div class="abs-body">布线已成为大规模 FPGA 设计流程的主要瓶颈——传统布线器依赖逐网顺序处理与 rip-up-reroute 启发式，其固有的顺序性限制了并行度、导致布线资源利用次优，并显著拉长现代 FPGA 上的运行时间。本文提出 DiffRouter——首个带 GPU 加速的可微、梯度式 FPGA 布线框架：把布线提升到连续优化空间，在把解投影回离散结构前实现高并发布线与更优全局性。框架分三阶段：(1) 资源剪枝预处理，为每网抽取紧凑布线变量以降低内存与问题复杂度；(2) 梯度下降可微全局布线，将布线建模为拉格朗日松弛优化，在迭代中把连通性与拥塞约束作为松弛项最小化线长；(3) 后处理，把连续线分布映射为合法 UltraScale 布线解并用详细布线补全。在 FPGA 2024 布线竞赛基准上，DiffRouter 优于现有并行布线器：比 RWRoute 快 5×、比 Vivado 快 2×，比最优学术 FPGA 布线器 Potter 快 18% 且关键路径线长具竞争力。属「物理设计 / 可微 FPGA 布线（GPU 加速）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.33510" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.33510_DiffRouter.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">FPGA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可微优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">梯度下降</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">GPU加速</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">UltraScale</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拥塞</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.LG</span>
+      </div>
+    </div>
 
     <!-- 2610.32279 TranSAGE -->
     <div class="abs-card">

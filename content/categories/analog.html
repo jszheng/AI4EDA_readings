@@ -7,9 +7,48 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（58篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（61篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+
+    <!-- 2610.37319 AnalogScout -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 AnalogScout: Simulation-Efficient PVT-Aware Analog Sizing with LLM Agents——AnalogScout：基于 LLM 智能体的仿真高效 PVT 感知模拟电路尺寸综合</div>
+      <div class="abs-meta">arXiv:2610.37319 · cs.AR · cs.AI · 27 Oct 2026 · Yichen Long, Keren Zhu</div>
+      <div class="abs-body">模拟器件尺寸综合必须在所有工艺/电压/温度（PVT）角下满足规格才能流片成功，但在所有角上仿真每个候选会主导尺寸综合时间、拖慢迭代。传统代理模型优化器直接搜索尺寸空间，近期 LLM 智能体把电路知识引入设计却仍把尺寸交给全局优化器；二者都依赖重复的多次角 SPICE 仿真、在有限仿真预算下代价高昂。本文提出 AnalogScout——由 LLM 智能体驱动的仿真高效 PVT 感知尺寸综合框架，结合精英设计复用、解析 gm/Id 局部尺寸综合与全角验证下的全局精化。在三个复杂度递增的 SKY130 OTA 上，相同 16k 仿真预算下功耗比进化策略 CMA-ES 低 43.3%，且仅用 CMA-ES 预算的 7.0% 就达到其最终功耗；在全部三个 OTA 上均优于贝叶斯优化，在两个 OTA 上优于两套复现的 LLM 驱动流程。属「模拟与架构 / LLM 智能体驱动模拟电路尺寸综合（PVT 感知 + 仿真高效）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.37319" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.37319_AnalogScout.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟电路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">尺寸综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PVT</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">仿真高效</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SKY130</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OTA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">gm/Id</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">贝叶斯优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.33088 AnalogPortBench -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 AnalogPortBench: Benchmarking LLMs on Analog Circuit Porting——AnalogPortBench：面向 LLM 的模拟电路移植基准</div>
+      <div class="abs-meta">arXiv:2610.33088 · cs.AR · cs.AI · cs.LG · 21 Oct 2026 · Saeid Rajabi, Aly Moussa, Vishal Saxena, Chengmo Yang, Satwik Patnaik</div>
+      <div class="abs-body">模拟电路设计高度依赖专家知识，把已验证设计移植到新工艺节点是反复出现的瓶颈；随供电电压降低、可用电压裕度收紧，可用拓扑可能需要重新设计或无法满足规格。尽管 LLM 已开始生成与优化模拟电路，现有基准多聚焦单一工艺节点且假设规格可行。本文提出 AnalogPortBench——包含 54 个任务的基准，将 10 款电路（从电流镜到望远镜放大器）从 0.18μm 工艺移植到开源 SKY130 PDK，任务从直接移植、降低供电电压与更严规格到不可行规格，每个可行任务都有在五个工艺角验证过的参考设计。评测 6 个前沿 LLM 在两个推理层级、带/不带仿真反馈下的表现：模型能移植简单电路，却很少重新设计裕度敏感放大器、几乎不能识别不可行规格，且从仿真反馈中获益多于更多样本或更强推理。属「模拟与架构 / LLM 驱动的模拟电路移植基准（跨工艺节点）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.33088" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.33088_AnalogPortBench.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟电路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM基准</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">电路移植</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">跨工艺节点</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SKY130</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">仿真反馈</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
+
+    <!-- 2610.34838 PaFeDSE -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 PaFeDSE: Pareto-Feedback-Guided Microarchitecture Design Space Exploration for Efficient Pareto Search——PaFeDSE：Pareto 反馈引导的微架构设计空间探索</div>
+      <div class="abs-meta">arXiv:2610.34838 · cs.AR · 26 Oct 2026 · Joonyong Park, Hyojeong Lee, Sejeong Yang, Joo-Young Kim</div>
+      <div class="abs-body">高效的微架构设计空间探索（DSE）对优化现代乱序处理器的性能/功耗/面积折衷至关重要。机器学习类 DSE 显著降低了穷举评估大设计空间的成本，但现有方法仍把宝贵仿真浪费在无法改进 Pareto 前沿的「Pareto-miss」候选上，并在迭代探索中反复处理冗余候选。本文提出 PaFeDSE——Pareto 反馈引导的微架构 DSE 框架：利用 Pareto-hit 反馈优先探索有望改进前沿的候选，用 Pareto-miss 反馈抑制无前途局部区域，并过滤跨迭代持续低优先级的冗余候选。在 SPEC CPU 2017 负载上，PaFeDSE 比最强基线少 49.0% 仿真即可达到目标超体积水平，并通过自适应候选过滤把探索开销降低 7.1×。属「模拟与架构 / 机器学习驱动微架构设计空间探索（Pareto 反馈）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.34838" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.34838_PaFeDSE.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">微架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计空间探索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DSE</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">机器学习</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Pareto</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SPEC CPU2017</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2610.28677 Multi-Agent AI Design of Nanowatt LPF -->
     <div class="abs-card">

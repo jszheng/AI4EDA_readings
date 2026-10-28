@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🔥 2026-10-28 最新</h1>
+  <p class="subtitle">共 5 篇论文 · 0 条行业动态（本日未检索到可核验（HTTP 200 且内容吻合）的 2026-10-28 行业新闻来源；最新行业动态仍为 2026-10-23 的 SemiEngineering WIR #161 四条，详见新闻页）· 来源：arXiv（cs.AR / cs.AI / cs.LG，来自 2026-10-21~10-27 公告批次；5 篇均逐篇经 arxiv.org/abs 核验标题/作者/摘要/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF）。本批次覆盖 模拟与架构 / 物理设计 两大方向。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2610.37319 AnalogScout -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.AI · 27 Oct 2026 · Yichen Long, Keren Zhu</div>
+      <h4>🔬 AnalogScout: Simulation-Efficient PVT-Aware Analog Sizing with LLM Agents——AnalogScout：基于 LLM 智能体的仿真高效 PVT 感知模拟电路尺寸综合</h4>
+      <p>模拟器件尺寸综合必须在所有工艺/电压/温度（PVT）角下满足规格才能流片成功，但在所有角上仿真每个候选会主导尺寸综合时间、拖慢迭代。传统代理模型优化器直接搜索尺寸空间，近期 LLM 智能体把电路知识引入设计却仍把尺寸交给全局优化器；二者都依赖重复的多次角 SPICE 仿真、在有限仿真预算下代价高昂。本文提出 AnalogScout——由 LLM 智能体驱动的仿真高效 PVT 感知尺寸综合框架，结合精英设计复用、解析 gm/Id 局部尺寸综合与全角验证下的全局精化。在三个复杂度递增的 SKY130 OTA 上，相同 16k 仿真预算下功耗比进化策略 CMA-ES 低 43.3%，且仅用 CMA-ES 预算的 7.0% 就达到其最终功耗；在全部三个 OTA 上均优于贝叶斯优化，在两个 OTA 上优于两套复现的 LLM 驱动流程。属「模拟与架构 / LLM 智能体驱动模拟电路尺寸综合（PVT 感知 + 仿真高效）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">模拟电路</span><span class="tag">尺寸综合</span><span class="tag">LLM智能体</span><span class="tag">PVT</span><span class="tag">仿真高效</span><span class="tag">SKY130</span><span class="tag">OTA</span><span class="tag">gm/Id</span><span class="tag">贝叶斯优化</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.37319" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.37319_AnalogScout.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.33088 AnalogPortBench -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.AI · cs.LG · 21 Oct 2026 · Saeid Rajabi, Aly Moussa, Vishal Saxena, Chengmo Yang, Satwik Patnaik</div>
+      <h4>🔬 AnalogPortBench: Benchmarking LLMs on Analog Circuit Porting——AnalogPortBench：面向 LLM 的模拟电路移植基准</h4>
+      <p>模拟电路设计高度依赖专家知识，把已验证设计移植到新工艺节点是反复出现的瓶颈；随供电电压降低、可用电压裕度收紧，可用拓扑可能需要重新设计或无法满足规格。尽管 LLM 已开始生成与优化模拟电路，现有基准多聚焦单一工艺节点且假设规格可行。本文提出 AnalogPortBench——包含 54 个任务的基准，将 10 款电路（从电流镜到望远镜放大器）从 0.18μm 工艺移植到开源 SKY130 PDK，任务从直接移植、降低供电电压与更严规格到不可行规格，每个可行任务都有在五个工艺角验证过的参考设计。评测 6 个前沿 LLM 在两个推理层级、带/不带仿真反馈下的表现：模型能移植简单电路，却很少重新设计裕度敏感放大器、几乎不能识别不可行规格，且从仿真反馈中获益多于更多样本或更强推理。属「模拟与架构 / LLM 驱动的模拟电路移植基准（跨工艺节点）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">模拟电路</span><span class="tag">LLM基准</span><span class="tag">电路移植</span><span class="tag">跨工艺节点</span><span class="tag">SKY130</span><span class="tag">仿真反馈</span><span class="tag">cs.AR</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.33088" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.33088_AnalogPortBench.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.34838 PaFeDSE -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 26 Oct 2026 · Joonyong Park, Hyojeong Lee, Sejeong Yang, Joo-Young Kim</div>
+      <h4>🔬 PaFeDSE: Pareto-Feedback-Guided Microarchitecture Design Space Exploration for Efficient Pareto Search——PaFeDSE：Pareto 反馈引导的微架构设计空间探索</h4>
+      <p>高效的微架构设计空间探索（DSE）对优化现代乱序处理器的性能/功耗/面积折衷至关重要。机器学习类 DSE 显著降低了穷举评估大设计空间的成本，但现有方法仍把宝贵仿真浪费在无法改进 Pareto 前沿的「Pareto-miss」候选上，并在迭代探索中反复处理冗余候选。本文提出 PaFeDSE——Pareto 反馈引导的微架构 DSE 框架：利用 Pareto-hit 反馈优先探索有望改进前沿的候选，用 Pareto-miss 反馈抑制无前途局部区域，并过滤跨迭代持续低优先级的冗余候选。在 SPEC CPU 2017 负载上，PaFeDSE 比最强基线少 49.0% 仿真即可达到目标超体积水平，并通过自适应候选过滤把探索开销降低 7.1×。属「模拟与架构 / 机器学习驱动微架构设计空间探索（Pareto 反馈）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">微架构</span><span class="tag">设计空间探索</span><span class="tag">DSE</span><span class="tag">机器学习</span><span class="tag">Pareto</span><span class="tag">SPEC CPU2017</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.34838" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.34838_PaFeDSE.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.33099 EGGPlacer -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 22 Oct 2026 · Qi Zhou, Guojun Liu, Juanhong Zhao, Guangzhi Qi, Zehao Chen, Ming Lu</div>
+      <h4>📐 EGGPlacer: Energy-Guided Generative Chip Placement with Diffusion Models——EGGPlacer：能量引导的扩散模型生成式芯片布局</h4>
+      <p>芯片布局强烈影响绕线线长与热行为，但这些下游指标在宏布局阶段难以评估。基于学习的宏布局器常优化仅含宏的半周长线长（mHPWL），忽略了标准单元连通性与空间需求；而解析混和尺寸布局器优化可微全网表线长与密度目标，却通常不知热效应。本文提出 EGGPlacer——将解析布局反馈与热反馈注入宏布局生成的能量引导扩散框架：解析布局器作为在线物理响应模型，暴露每个中间宏布局诱导的标准单元分布与全 netlist 线长代理；可微热模型提供温度反馈。这些信号被构造为可组合能量，在反向扩散全过程注入而无需重训底层生成模型。在公开布局基准上，EGGPlacer 相对强解析与学习布局器取得有竞争力的混和尺寸 HPWL；端到端评测中，其平均绕线线长与峰值温度均为参评方法最低。属「物理设计 / 扩散模型生成式芯片布局（解析+热反馈）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">芯片布局</span><span class="tag">宏布局</span><span class="tag">扩散模型</span><span class="tag">生成式</span><span class="tag">可微优化</span><span class="tag">热反馈</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.33099" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.33099_EGGPlacer.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.33510 DiffRouter -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.LG · 24 Oct 2026 · Xiaohan Gao, Zhili Xiong, Yusu Wang, David Z. Pan</div>
+      <h4>📐 DiffRouter: A Differentiable Routing Framework for UltraScale FPGAs——DiffRouter：面向 UltraScale FPGA 的可微布线框架</h4>
+      <p>布线已成为大规模 FPGA 设计流程的主要瓶颈——传统布线器依赖逐网顺序处理与 rip-up-reroute 启发式，其固有的顺序性限制了并行度、导致布线资源利用次优，并显著拉长现代 FPGA 上的运行时间。本文提出 DiffRouter——首个带 GPU 加速的可微、梯度式 FPGA 布线框架：把布线提升到连续优化空间，在把解投影回离散结构前实现高并发布线与更优全局性。框架分三阶段：(1) 资源剪枝预处理，为每网抽取紧凑布线变量以降低内存与问题复杂度；(2) 梯度下降可微全局布线，将布线建模为拉格朗日松弛优化，在迭代中把连通性与拥塞约束作为松弛项最小化线长；(3) 后处理，把连续线分布映射为合法 UltraScale 布线解并用详细布线补全。在 FPGA 2024 布线竞赛基准上，DiffRouter 优于现有并行布线器：比 RWRoute 快 5×、比 Vivado 快 2×，比最优学术 FPGA 布线器 Potter 快 18% 且关键路径线长具竞争力。属「物理设计 / 可微 FPGA 布线（GPU 加速）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">物理设计</span><span class="tag">FPGA</span><span class="tag">布线</span><span class="tag">可微优化</span><span class="tag">梯度下降</span><span class="tag">GPU加速</span><span class="tag">UltraScale</span><span class="tag">拥塞</span><span class="tag">cs.AR</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.33510" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../../dates/2610.33510_DiffRouter.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
