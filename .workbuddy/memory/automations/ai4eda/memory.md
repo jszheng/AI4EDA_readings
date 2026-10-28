@@ -1153,3 +1153,52 @@
 - push origin main ✅ 成功：`9a4df4c..ff2bfe3  main -> main`（退出码 0，无错误；首次 git push 因大体积 PDF 网络耗时较长，后台运行约 3 分钟完成）
 
 **结果状态**：✅ 全量更新已落盘并通过第 0 步真实性核验，7 篇论文（10-21 三篇 + 10-23 四篇）均经逐篇 abs / %PDF 核验、PDF 真实下载，且已 git commit 并 push 至 origin/main；两日均无新闻，news 维持 223。站点最终状态：papers 395 / batches 139 / news 223 / lastUpdate 2026-10-23。
+
+---
+
+## 2026-10-27 执行摘要（本会话补录）
+
+**本次新增内容（论文 +2，全部经逐篇 abs 核验）**
+- 2610.32279 TranSAGE——面向大规模 Transformer 的空间加速器自动生成（DSE + 多操作数据流 + 动态规划图划分）→ physical（99篇）
+- 2610.32597 RTL_Bug_Repair_LLM——基于 LLM 的 RTL Bug 修复（提交于 2026-10-23，cs.AR）→ rtl
+- 行业动态 +4：SemiEngineering WIR #161（HTTP 200, 2026-10-23）四条——Rambus/ChipAgents、Altera、Cadence/Socionext/Nokia、Infineon/ModusToolbox；均满足「独立、可核验、非重复产品发布/合作」标准，正文含全部公司原文。
+
+**更新文件清单**
+- content/dates/2026-10-27.html、content/latest/2026-10-27.html（新建，2 论文卡 + 本地 PDF）
+- content/dates/2610.32279_TranSAGE.pdf、2610.32597_RTL_Bug_Repair_LLM.pdf（真实 PDF，%PDF 校验）
+- content/categories/{physical,rtl}.html（插卡 + 计数）
+- content/news/index.html、content/news/news_memory.json（4 条 WIR #161 + 去重）
+- manifest.js（stats 395/139/223 → 397/139/227；lastUpdate 2026-10-27）
+
+**Git**：commit `auto update: 2026-10-27`（c1b38b2）；push origin main ✅。
+
+**结果状态**：✅ 2 篇论文 + 4 条新闻全部经第 0 步核验并推送；papers 397 / news 227 / lastUpdate 2026-10-27。
+
+---
+
+## 2026-10-28 执行摘要（本会话主运行）
+
+**本次新增内容（论文 +5，全部经逐篇 abs 核验，来自 arXiv 2026-10-21~10-27 公告批次，提交日期 21~27 Oct 2026）**
+- 2610.37319 AnalogScout——LLM 智能体驱动、仿真高效的 PVT 感知模拟尺寸综合（SKY130 OTA）→ analog（61篇）
+- 2610.33088 AnalogPortBench——LLM 模拟电路跨工艺移植基准（54 任务，0.18μm→SKY130）→ analog（61篇）
+- 2610.34838 PaFeDSE——Pareto 反馈引导的微架构设计空间探索（SPEC CPU2017，仿真 −49%）→ analog（61篇）
+- 2610.33099 EGGPlacer——能量引导扩散模型生成式芯片布局（解析+热反馈）→ physical（101篇）
+- 2610.33510 DiffRouter——GPU 加速可微 FPGA 布线（UltraScale，比 RWRoute 快 5×）→ physical（101篇）
+- 行业动态 +0：本日未检索到可核验（HTTP 200 且内容吻合）的 2026-10-28 行业新闻源；最新行业动态仍为 2026-10-23 的 WIR #161 四条。严格遵循第 0 步，未编造。news 维持 227。
+
+**已排除的非 AI 论文**：2610.34046 Floorplanning（仅经典 SDP/ALM/SOCP 数值优化）、36481（HLS）、35569（热 PDE）、32830（碳排分析）——均无 AI/ML 方法，不收录。
+
+**更新文件清单**
+- content/dates/2026-10-28.html、content/latest/2026-10-28.html（新建，5 论文卡 + 本地 PDF 链接）
+- content/dates/2610.{37319,33088,34838,33099,33510}_*.pdf（5 篇真实 PDF，均 %PDF 头：357KB/407KB/840KB/704KB/1.16MB）
+- content/categories/analog.html（58→61 插 3 卡）、content/categories/physical.html（99→101 插 2 卡）
+- content/papers/index.html（跳转刷新至 2026-10-28）
+- manifest.js（stats 397/139/227 → 402/140/227；latest 与 dates 数组各插 2026-10-28；lastUpdate 2026-10-28）
+
+**去重检查**
+- 5 个 arXiv ID 经 Grep 确认 content/ 下此前不存在（无重复），各自仅出现于目标分类
+- 新闻：未添加，无去重动作
+
+**Git**：commit `auto update: 2026-10-28`（ab5755f）；push origin main ✅（`c746f23..ab5755f main -> main`）。11 files changed, 255 insertions(+), 6 deletions(-)。
+
+**结果状态**：✅ 全量更新已落盘并通过第 0 步真实性核验，5 篇论文均经逐篇 abs / %PDF 核验、PDF 真实下载，且已 git commit 并 push 至 origin/main；本日无新闻，news 维持 227。站点最终状态：papers 402 / batches 140 / news 227 / lastUpdate 2026-10-28。
