@@ -1,8 +1,42 @@
 {
-  "lastUpdate": "2026-10-27",
+  "lastUpdate": "2026-10-30",
   "cutoffDate": "2026-04-30",
-  "totalItems": 186,
+  "totalItems": 188,
   "items": [
+    {
+      "date": "2026-10-29",
+      "company": "Cadence",
+      "title": "🤝 Cadence 加入 Genesis Mission Consortium——向 DOE 公私合作计划贡献 AI 驱动的 EDA / 系统设计与多物理场 / 数字孪生能力，加速先进微电子与科学发现",
+      "link": "https://newsroom.cadence.com/press-releases/press-release-details/2026/Cadence-Joins-the-Genesis-Mission-Consortium-to-Advance-AI-Driven-Scientific-Discovery-and-Microelectronics-Innovation/default.aspx",
+      "keywords": [
+        "Cadence",
+        "Genesis Mission",
+        "DOE",
+        "合作公告",
+        "AI for EDA",
+        "多物理场",
+        "数字孪生",
+        "3D-IC",
+        "先进封装",
+        "2026-10-29"
+      ]
+    },
+    {
+      "date": "2026-10-26",
+      "company": "Cadence",
+      "title": "🚀 Cadence 发布 Maestro 领域专用 AI 模型组合——驱动 AuraStack/ChipStack/InnoStack/ViraStack 四大超级智能体，QoR 最高 +30% / token 效率最高 5×，支持 on-premises",
+      "link": "https://newsroom.cadence.com/press-releases/press-release-details/2026/Cadence-Introduces-Maestro-a-Domain-Specialized-AI-Model-Portfolio-to-Revolutionize-Agentic-Chip-and-System-Design/default.aspx",
+      "keywords": [
+        "Cadence",
+        "Maestro",
+        "AI Super Agents",
+        "领域专用模型",
+        "强化学习闭环",
+        "NVIDIA Nemotron",
+        "on-premises",
+        "2026-10-26"
+      ]
+    },
     {
       "date": "2026-10-19",
       "company": "Keysight（是德科技）",
