@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-11-04 动态</h1>
+  <p class="subtitle">共 3 篇论文 · 0 条行业动态（本批次 2 条行业动态为 2026-10-21 发布的 Siemens×NVIDIA 与 Synopsys@GTC Berlin，已收录于新闻页）· 来源：arXiv（cs.AR / cs.AI / cs.LG，来自 2026-10-18~10-28 公告批次；3 篇均逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF）。本批次覆盖 前端 RTL / 模拟与架构 两大方向。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2610.24977 CorrectRTL -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 18 Oct 2026 · Jing Wang, Shang Liu, Hangan Zhou, Wenji Fang, Yuchao Wu, Yugao Zhu, Zhiyao Xie</div>
+      <h4>⚡ CorrectRTL: Boost RTL Generation Quality Through Automated Self-Correction with Instruction Decomposition——CorrectRTL：基于指令分解的自动化自校正提升 RTL 生成质量</h4>
+      <p>大语言模型（LLM）在「规格→RTL」生成上展现强潜力，自校正范式显著推进了该方向，但两重挑战限制进一步进展：现有基准已被先进 LLM 饱和，难以评估智能体自校正框架；单体自校正一次重写整个设计，LLM 易受错误混淆、破坏原本正确的代码。针对基准挑战，本文贡献 <strong>ScaleBench</strong>——含 200 个复杂 RTL 设计的更具挑战性基准；针对方法挑战，提出 <strong>CorrectRTL</strong>——实现「先分解后校正」新范式的智能体框架，显式解耦脚手架构建与细节实现，含三项核心技术：面向结构的分解、基于代码片段的 RAG、基于 SVA 的自校正。在 ScaleBench 上，CorrectRTL 将 Pass@1 从 20.5% 提升至 49.0%（+28.5%）；在 VerilogEval 上取得最高 96.1% 的 Pass@1，在简单与复杂设计上均一致提升。属「前端 RTL / 智能体自校正 RTL 生成（指令分解 + SVA）」方向。已录用 ICCAD'26。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">RTL生成</span><span class="tag">自校正</span><span class="tag">智能体</span><span class="tag">指令分解</span><span class="tag">ScaleBench</span><span class="tag">SVA</span><span class="tag">RAG</span><span class="tag">VerilogEval</span><span class="tag">ICCAD'26</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.24977" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.24977_CorrectRTL.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.37706 MCTS-SFT -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.AI · 26 Oct 2026 · Matthew DeLorenzo, Kevin Tieu, Prithwish Jana, Piyush Jha, Dileep Kalathil, Vijay Ganesh, Jeyavijayan Rajendran</div>
+      <h4>⚡ Search-Guided Reasoning Trace Curation for Verilog Generation——面向 Verilog 生成的搜索引导推理轨迹筛选（MCTS-SFT）</h4>
+      <p>近期 LLM 提升了 Verilog 生成，但多数训练管线蒸馏自然语言推理轨迹，其中间设计决策结构松散、主要依据最终 RTL 正确性筛选。本文提出 <strong>MCTS-SFT</strong>——一个验证器引导的框架，用于策划 Verilog 生成模型监督微调（SFT）的推理轨迹：将轨迹构建建模为对中间推理状态的搜索，并用蒙特卡洛树搜索（MCTS）把完整 Verilog rollout 的功能反馈传播到更早的设计决策。在此框架内引入 <strong>Plan-MCTS</strong>，在显式表示接口、时序、状态、行为与更新规则的紧凑硬件设计计划上搜索；并研究计划保持监督（把搜索到的结构化状态保留为下游 SFT 目标）。实验表明 Plan-MCTS 取得最高功能轨迹产出率（84.2% 正确轨迹 vs 一次性结构化规划 81.9% / 无引导树搜索 82.0%）；在相同的 Plan-MCTS 轨迹与 Verilog 输出下，SFT 中保留显式计划把 pass@10 从 52.56% 提升到 57.7%；一项 6000 轨迹研究里，MCTS 策划的监督比完整回复的链式思维蒸馏 pass@10 最高提升 3.7 个点，同时把下游生成长度缩短约 50%（VerilogEval-v2）。表明结构化硬件规划、验证器引导搜索与显式中间状态监督可互补地构造更有效的 token 高效训练数据。属「前端 RTL / 验证器引导的 Verilog 生成训练数据策划（MCTS-SFT）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">Verilog生成</span><span class="tag">监督微调SFT</span><span class="tag">MCTS</span><span class="tag">蒙特卡洛树搜索</span><span class="tag">推理轨迹</span><span class="tag">计划保持监督</span><span class="tag">训练数据</span><span class="tag">cs.AR</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.37706" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.37706_MCTSSFT.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.38426 Analog Layout Agents -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.AI · 28 Oct 2026 · Minxing Chu, Anhang Li, Martins Atilla, Ruichen Qi, Mehdi Saligane</div>
+      <h4>🔬 The Code Behind the Layout: AI Agents for Analog Layout Generators——版图背后的代码：面向模拟版图生成器的 AI 智能体</h4>
+      <p>模拟版图至今仍高度手工、难以自动化。gLayout 等生成器框架把版图表达为程序，由参数化、感知设计规则的生成器产出版图；但编写这类生成器仍需专家投入。LLM 现已能写生成器代码，前沿模型甚至能依设计意图直接绘制版图几何。这引出实际问题：若模型能直接绘制版图，生成器框架还有什么价值？把模型用于生成器框架是否优于从零绘制？通过在 SKY130 上 gLayout 的受控实验，本文发现直接绘制的主要障碍是时间与 token 成本，而基于生成器框架建模的主要优势是可复用性——其经验证的原语让每次模型编辑足够小以便于检查，其参数让一次编辑能在整个版图族上评估。因此模型最有效的做法是：从设计意图所属族群的生成器源码出发开发版图，并在最可能出现故障的族成员上测试每次编辑，使一次经验证的改动改善生成器产出的每一个版图；这些族测试结果可作为本地模型的监督，以远低于推理成本的代价学到跨族普适的编辑。属「模拟与架构 / LLM 智能体驱动模拟版图生成器（可复用性 + 经验证原语）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">模拟版图</span><span class="tag">LLM智能体</span><span class="tag">gLayout</span><span class="tag">SKY130</span><span class="tag">生成器框架</span><span class="tag">可复用性</span><span class="tag">版图生成</span><span class="tag">cs.AR</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.38426" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.38426_AnalogLayoutAgents.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

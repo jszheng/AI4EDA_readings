@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（61篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（62篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+
+    <!-- 2610.38426 The Code Behind the Layout: AI Agents for Analog Layout Generators -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 The Code Behind the Layout: AI Agents for Analog Layout Generators——版图背后的代码：面向模拟版图生成器的 AI 智能体</div>
+      <div class="abs-meta">arXiv:2610.38426 · cs.AR · cs.AI · 28 Oct 2026 · Minxing Chu, Anhang Li, Martins Atilla, Ruichen Qi, Mehdi Saligane</div>
+      <div class="abs-body">模拟版图至今仍高度手工、难以自动化。gLayout 等生成器框架把版图表达为程序，由参数化、感知设计规则的生成器产出版图；但编写这类生成器仍需专家投入。LLM 现已能写生成器代码，前沿模型甚至能依设计意图直接绘制版图几何。这引出实际问题：若模型能直接绘制版图，生成器框架还有什么价值？把模型用于生成器框架是否优于从零绘制？通过在 SKY130 上 gLayout 的受控实验，本文发现直接绘制的主要障碍是时间与 token 成本，而基于生成器框架建模的主要优势是可复用性——其经验证的原语让每次模型编辑足够小以便于检查，其参数让一次编辑能在整个版图族上评估。因此模型最有效的做法是：从设计意图所属族群的生成器源码出发开发版图，并在最可能出现故障的族成员上测试每次编辑，使一次经验证的改动改善生成器产出的每一个版图；这些族测试结果可作为本地模型的监督，以远低于推理成本的代价学到跨族普适的编辑。属「模拟与架构 / LLM 智能体驱动模拟版图生成器（可复用性 + 经验证原语）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.38426" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.38426_AnalogLayoutAgents.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟版图</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">gLayout</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SKY130</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">生成器框架</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可复用性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">版图生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
 
     <!-- 2610.37319 AnalogScout -->
     <div class="abs-card">

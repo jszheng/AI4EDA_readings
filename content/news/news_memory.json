@@ -1,7 +1,7 @@
 {
-  "lastUpdate": "2026-10-30",
-  "cutoffDate": "2026-04-30",
-  "totalItems": 188,
+  "lastUpdate": "2026-11-04",
+  "cutoffDate": "2026-05-08",
+  "totalItems": 190,
   "items": [
     {
       "date": "2026-10-29",
@@ -4096,6 +4096,48 @@
         "AI Agent",
         "WIR #161",
         "2026-10-23"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "company": "Siemens / NVIDIA",
+      "title": "🤝 Siemens 与 NVIDIA 在 GTC 2026 深化 agentic AI 合作，把 3D-IC 电热协同设计从数周压缩到小时级——跨 7 款 EDA 工具自动编排 9 个流程阶段",
+      "link": "https://news.siemens.com/zh-cn/siemens-nvidia-gtc-3d-ic-thermal-ai",
+      "keywords": [
+        "Siemens",
+        "NVIDIA",
+        "agentic AI",
+        "3D-IC",
+        "电热协同设计",
+        "多物理场",
+        "Calibre 3DThermal",
+        "Fuse EDA AI Agent",
+        "NVIDIA Agent Toolkit",
+        "CUDA-X",
+        "设计空间探索",
+        "GTC 2026",
+        "2026-10-21"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "company": "Synopsys",
+      "title": "🤝 Synopsys @ NVIDIA GTC Berlin：展示 20+ GPU 加速 EDA 与多物理场方案，集成 50 个 CUDA-X 库加速 AI 工厂设计收敛与签核",
+      "link": "https://news.synopsys.com/2026-10-21-Synopsys-at-NVIDIA-GTC-Berlin-Delivering-Engineering-Precision-with-Speed",
+      "keywords": [
+        "Synopsys",
+        "NVIDIA",
+        "GTC Berlin",
+        "CUDA-X",
+        "cuDSS",
+        "多物理场",
+        "GPU加速",
+        "EDA",
+        "Ansys",
+        "物理AI",
+        "虚拟原型",
+        "设计收敛",
+        "2026-10-21"
       ]
     }
   ]
