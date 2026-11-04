@@ -451,3 +451,30 @@
 - 8 篇候选 PDF（2610.38489/39395/39515/39570/39882/40042/41225/41227）虽下载但无任何 HTML 引用且未经第 0 步核验 → 不收录、不提交
 - 3 个重复/冗余 PDF（2610.37706_MCTS_SFT_Verilog.pdf、2610.38426_Analog_Layout_Agents.pdf、2610.25881_LearnInterfaceRTL.pdf）为重复下载 → 不提交
 - 临时文件 .arxiv_tmp_csar.html → 不提交
+
+## 2026-11-02 补录摘要（11-04 后人工追补，commit 08b4cab → origin/main）
+
+**背景**：11-02、11-03 的自动运行因「上下文窗口耗尽」中途夭折（git 在 10-30~11-04 间无提交；PDF 于 11-02 20:26 下载、临时脚本 11-03 07:3x 残留），未生成任何 HTML、未提交。11-04 用户追查后要求「全都做吧」：蒸馏 memory.md + 改 prompt（先核验后下载 / 候选≤4 / 显式 git add）+ 改调度 05:00→08:00 + 逐篇核验 8 个孤儿 PDF。
+
+**逐篇核验结果（WebFetch arxiv abs）**——8 篇全部真实、属 AI4EDA，仅 1 篇因范围剔除：
+- 收录 7 篇（已建 2026-11-02 日期页/最新页 + 加卡至 rtl/analog 分类页）：
+  - 2610.38489 GI-RTL-Fuzz（cs.AR/cs.CR，RTL 模糊测试）→ rtl
+  - 2610.39570 LLM Agent 驱动 RISC-V CPU 设计 + FPGA-in-the-loop（cs.AR/cs.AI）→ rtl
+  - 2610.41225 RTL-Interact（cs.AI，EDA 交互式 RTL 生成）→ rtl
+  - 2610.39395 OPERA（cs.AR/cs.AI，opamp 规格→布局）→ analog
+  - 2610.39515 APPlace（cs.AR，模拟布局，ASP-DAC 2027）→ analog
+  - 2610.39882 LAMP（cs.AR，LLM 模拟布局）→ analog
+  - 2610.41227 Delta-Seeker（eess.SY，电路发现）→ analog
+- 剔除 1 篇：2610.40042 UPPAAi（cs.SE/cs.AI/cs.LO，UPPAAL 时间自动机）——非 IC/EDA 范畴，不入站、不提交。
+
+**统计变更**：papers 405→412，batches 141→142；rtl 107→110，analog 62→66；manifest latest/dates 数组前置 2026-11-02（count 7）；papers/index.html 跳转改指 2026-11-02.html。
+
+**提交纪律**：显式 git add 14 个文件（2 个 HTML 页 + 2 个分类页 + manifest.js + papers/index.html + 7 个 PDF + memory.md）；**刻意排除** 2610.40042_UPPAAi.pdf、3 个重复 PDF（2610.37706_MCTS_SFT_Verilog、2610.38426_Analog_Layout_Agents、2610.25881_LearnInterfaceRTL）、临时文件 .arxiv_tmp_csar.html。`git push` 前两次因大 PDF（Delta-Seeker 11MB）传输被 SIGTERM 中断，第三次（verbose）成功 420c5c1..08b4cab。
+
+## 关键修复：11-02/11-03 失败根因与对策（已生效）
+- **根因**：单轮任务过重 + memory.md 失控增长（曾 1269 行/106KB，超出 Read 上限）→ 累积上下文压力 → 静默上下文窗口溢出（err2.txt 为 0 字节，无异常抛出）。
+- **对策（已落地）**：
+  1. memory.md 蒸馏至 454 行，保留顶部 HARD RULE 整块；后续只读顶部硬性规则 + 最近 30 天段落。
+  2. 自动化 prompt 增加「先核验、后下载」「每轮候选 ≤4 篇」「优先完成 commit/push 再结束」「仅用显式路径 git add，严禁 git add .」。
+  3. 调度由 05:00 改 08:00（原 05:00 笔记本多休眠，11-02 实际 20:26 才在唤醒后运行）。
+- **待清理（未删除，需用户确认）**：工作区残留未跟踪文件 `.arxiv_tmp_csar.html`、`2610.25881_LearnInterfaceRTL.pdf` 为孤儿/临时文件，不影响站点，可随时删除。
