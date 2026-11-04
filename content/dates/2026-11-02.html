@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-11-02 动态</h1>
+  <p class="subtitle">共 7 篇论文 · 0 条行业动态（补录：本批 7 篇为 2026-11-02 定时运行下载并核验、但因该次运行上下文耗尽而未落盘的候选；均逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF；提交日期 28–30 Oct 2026。覆盖 前端 RTL / 模拟与架构 两大方向。其中 2610.40042（UPPAAi，UPPAAL 时序自动机形式验证，非 IC/EDA 范畴）已按策展范围剔除。）</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2610.38489 GI-RTL-Fuzz -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.CR · 28 Oct 2026 · Ziyue Zheng, Zhi Qu, Yangdi Lyu</div>
+      <h4>⚡ GI-RTL-Fuzz: Grammar-Informed RTL Generation with LLMs for End-to-End Differential Simulator Fuzzing——GI-RTL-Fuzz：语法引导的 LLM 生成 RTL 用于端到端差分仿真器模糊测试</h4>
+      <p>RTL 仿真器是现代 IC 设计流程的基础，但常含影响仿真精度的关键缺陷。本文提出 GI-RTL-Fuzz——语法引导的模糊测试框架，用 LLM 生成高质量 RTL 测试用例，并用 BNF 语法覆盖率信息引导生成过程以探索复杂而少被测的语言特性；通过对不同 RTL 仿真器做差分测试，在主流 Verilog 仿真器的 lint 过程与仿真结果中都发现了大量此前未知的不一致。属「前端 RTL / 验证 / LLM 生成 RTL 差分模糊测试仿真器」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">验证</span><span class="tag">RTL生成</span><span class="tag">模糊测试</span><span class="tag">差分测试</span><span class="tag">仿真器</span><span class="tag">BNF语法</span><span class="tag">cs.AR</span><span class="tag">cs.CR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.38489" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.38489_GI_RTL_Fuzz.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.39570 RISC-V CPU Agent + FPGA -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.AI · 29 Oct 2026 · Leo Itoh, Junichiro Kadomoto</div>
+      <h4>⚡ LLM Agent-Based Design of RISC-V CPUs with FPGA-in-the-Loop Evaluation——基于 LLM 智能体的 RISC-V CPU 设计与人环 FPGA 评估</h4>
+      <p>LLM 智能体开发 CPU 时，长程 RTL 仿真耗时数小时、短诊断又易漏掉后期才出现的性能退化。本文提出包含 FPGA 在环评估的开发环境：LLM 智能体在 FPGA 上实现 CPU 候选并用板上性能测量指导设计决策；将单周期 RV32I 核人工监督地发展为三发射乱序 RV32IM 核，最终在 Artix-7 上达 5.61 CoreMark/MHz@130MHz，同样 8000 次 CoreMark 迭代下 FPGA 评估比单线程 RTL 仿真快 9.6×，并揭示了一例短诊断改善但长程退化的候选，从而指导候选选择与 RTL 根因修复。属「前端 RTL / LLM 智能体 CPU 开发（FPGA 在环评估）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">RTL生成</span><span class="tag">LLM智能体</span><span class="tag">RISC-V</span><span class="tag">CPU设计</span><span class="tag">FPGA在环</span><span class="tag">CoreMark</span><span class="tag">cs.AR</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.39570" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.39570_RISC_V_CPU_Agent.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.41225 RTL-Interact -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 30 Oct 2026 · Wenxuan Shi, Yaoyu Zhu, Di Huang, Chongxiao Li, et al.</div>
+      <h4>⚡ RTL-Interact: Training EDA-Interactive Models for Multi-Task RTL Design——RTL-Interact：训练面向多任务 RTL 设计的 EDA 交互模型</h4>
+      <p>LLM 为 RTL 设计提供新路径，但可靠实现需基于 EDA 工具反馈的检查与修订。本文提出 RTL-Interact——多任务后训练框架，训练单一 RTL 专用模型生成 RTL、构建恰当的 EDA 检查、并用工具反馈修订实现，结合自动构建的多任务演示与从思维链到工具集成推理的分阶段监督；并引入 Pattern-Aware Policy Optimization（PAPO）做多任务强化学习。RTL-Interact-32B 在 CVDP 上达 48.7% 加权 Pass@1、68.9% Pass@5，超越教师模型 DeepSeek-V3.2，两模型均在 VerilogEval v2 与 RTLLM v2 上优于所有 RTL 专用基线，且 PAPO 可在提升 Pass@1 的同时减少 63.8% 平均工具调用。属「前端 RTL / EDA 交互式 RTL 生成与多任务强化学习」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">RTL生成</span><span class="tag">EDA交互</span><span class="tag">多任务</span><span class="tag">强化学习</span><span class="tag">PAPO</span><span class="tag">VerilogEval</span><span class="tag">RTLLM</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.41225" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.41225_RTL_Interact.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.39395 OPERA -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · cs.AI · 29 Oct 2026 · Vishal Saxena, Soumyajit Mandal</div>
+      <h4>🔬 OPERA: OPamp Design by an Expert-Taught Reasoning Agent, from Specifications to Layout——OPERA：由专家教导的推理智能体完成的运放设计，从规格到版图</h4>
+      <p>模拟流程从规格到签核版图常需大量手工迭代，现有 LLM 智能体多在器件维度上用优化器循环定尺寸并止步于原理图。本文提出 OPERA——通用 LLM 智能体在开源工具下从规格到后版图签核设计 CMOS 运放：先由设计者教导 gm/Id 法（映射规格到跨导与最小电流、按角色选 gm/Id、由方程定尺寸、留少量旋钮可搜且可解释），再学 gLayout 框架与版图实践、写出可复用的版图生成器闭环版图与提取；在 SKY130 上设计出共享恒 gm 偏置与六款运放（5T、折叠套筒与望远镜 OTA；Miller、折叠套筒与望远镜两级），全部 DRC 干净、LVS 匹配，提取网表在全部 15 个 PVT 角满足目标。属「模拟与架构 / LLM 推理智能体运放设计（规格→版图 + gLayout）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">模拟电路</span><span class="tag">运放</span><span class="tag">LLM智能体</span><span class="tag">gm/Id</span><span class="tag">gLayout</span><span class="tag">SKY130</span><span class="tag">规格到版图</span><span class="tag">cs.AR</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.39395" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.39395_OPERA.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.39515 APPlace -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 29 Oct 2026 · Bingyang Liu, Xiaohan Gao, Souradip Poddar, David Z. Pan</div>
+      <h4>🔬 APPlace: Co-Optimizing Device Locations and Access Points for Routing-Aware Analog Placement——APPlace：联合优化器件位置与接入点、面向布线感知的模拟版图</h4>
+      <p>模拟版图自动化中寄生与失配强烈影响性能，而布局约束布线解空间与可达后版图性能，尤为关键。现有解析布局在中心化线长代理下优化器件坐标、把接入点（AP）选择留给布线；但模拟中布线引脚是延伸的金属而非固定点，最优 AP 取决于相连器件位置。本文提出 APPlace——全局布局阶段联合优化器件位置与 AP 选择、再经合法化保留全局结构；四个真实模拟基准上取得优于基线的后版图性能，消融显示去掉 AP 协同优化在 OTA 上最多损失 13dB CMRR、比较器延迟增 23%。已录用 ASP-DAC 2027。属「模拟与架构 / 布线感知模拟布局（器件位置 + 接入点协同）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">模拟版图</span><span class="tag">布局</span><span class="tag">接入点</span><span class="tag">布线感知</span><span class="tag">ASP-DAC</span><span class="tag">SKY130</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.39515" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.39515_APPlace.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.39882 LAMP -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 29 Oct 2026 · Zecheng Xu, Guanhua Chen, Yumao Wu, Keren Zhu</div>
+      <h4>🔬 LAMP: LLM-Driven Analog Placement through Adaptive Tool Composition——LAMP：通过自适应工具组合由 LLM 驱动的模拟布局</h4>
+      <p>模拟布局需在面积、匹配、可布线性与电性能间做电路相关的权衡，靠固定目标与固定流程难以平衡。本文提出 LAMP——LLM 作为版图工程师、通过可组合布局构件工作的框架：构件支持约束管理、布局与合法化、可布线性与电性能的轻量评估；LLM 用初始与演进设计的多模态检查点选择并组合构件、构建并修订自身布局流程，还能通过重开模块或分割重组器件来适配层次，经验技能提供可复用知识；在两块 SMIC 180nm 电路上面积更小、多数后版图指标更优。属「模拟与架构 / LLM 驱动模拟布局（自适应工具组合 + 经验技能）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">模拟版图</span><span class="tag">布局</span><span class="tag">LLM智能体</span><span class="tag">工具组合</span><span class="tag">经验技能</span><span class="tag">SMIC180</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.39882" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.39882_LAMP.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2610.41227 Delta-Seeker -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · eess.SY · 30 Oct 2026 · Dinithi Jayasuriya, Devangshu Dutta, Aravind Saravanan, Nilesh Ahuja, Amit Trivedi</div>
+      <h4>🔬 Delta-Seeker: Closed-Loop Generative Search for Novel Circuit Design Discovery——Delta-Seeker：面向新颖电路设计发现的闭环生成式搜索</h4>
+      <p>生成模型日益用于电路综合与优化，但能否支持「设计发现」（生成结构须偏离已知设计且产生可复现电行为）仍待探究。本文提出 Delta-Seeker——闭环电路搜索框架，结合离散扩散做拓扑生成与变异、结构检查、SPICE 在环定尺寸、Pareto 选择与来自既往搜索的反馈；搜索控制器据进展与反复结构失败分配评估精力。在运放拓扑发现中，相较固定控制产出 54 个在至少三个独立复尺寸中仍可行的设计（固定控制 38 个），其中 18 个额外通过器件级检查与电源-温度角分析；在 DC-DC 转换器中识别出一个语料缺失拓扑，开关电流路径改变使其最近训练父本从四角均不可行变为四角均可行、中位效率由 31.2% 升至 98.96%。属「模拟与架构 / 闭环生成式电路拓扑发现（SPICE 在环 + 跨代反馈）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">电路设计发现</span><span class="tag">生成模型</span><span class="tag">离散扩散</span><span class="tag">SPICE在环</span><span class="tag">拓扑发现</span><span class="tag">DC-DC</span><span class="tag">eess.SY</span>
+      </div>
+      <a href="https://arxiv.org/abs/2610.41227" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2610.41227_Delta_Seeker.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

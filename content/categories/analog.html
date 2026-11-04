@@ -7,7 +7,7 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（62篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（66篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
 
@@ -21,6 +21,58 @@
         <a href="https://arxiv.org/abs/2610.38426" target="_blank">📄 arXiv</a>
         <a class="local" href="../dates/2610.38426_AnalogLayoutAgents.pdf">📥 本地PDF</a>
         <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟版图</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">gLayout</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SKY130</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">生成器框架</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可复用性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">版图生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
+
+    <!-- 2610.39395 OPERA -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 OPERA: OPamp Design by an Expert-Taught Reasoning Agent, from Specifications to Layout——OPERA：由专家教导的推理智能体完成的运放设计，从规格到版图</div>
+      <div class="abs-meta">arXiv:2610.39395 · cs.AR · cs.AI · 29 Oct 2026 · Vishal Saxena, Soumyajit Mandal</div>
+      <div class="abs-body">模拟流程从规格到签核版图常需大量手工迭代，现有 LLM 智能体多在器件维度上用优化器循环定尺寸并止步于原理图。本文提出 OPERA——通用 LLM 智能体在开源工具下从规格到后版图签核设计 CMOS 运放：先由设计者教导 gm/Id 法（映射规格到跨导与最小电流、按角色选 gm/Id、由方程定尺寸、留少量旋钮可搜且可解释），再学 gLayout 框架与版图实践、写出可复用的版图生成器闭环版图与提取；在 SKY130 上设计出共享恒 gm 偏置与六款运放（5T、折叠套筒与望远镜 OTA；Miller、折叠套筒与望远镜两级），全部 DRC 干净、LVS 匹配，提取网表在全部 15 个 PVT 角满足目标。属「模拟与架构 / LLM 推理智能体运放设计（规格→版图 + gLayout）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.39395" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.39395_OPERA.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟电路</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">运放</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">gm/Id</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">gLayout</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SKY130</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">规格到版图</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
+
+    <!-- 2610.39515 APPlace -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 APPlace: Co-Optimizing Device Locations and Access Points for Routing-Aware Analog Placement——APPlace：联合优化器件位置与接入点、面向布线感知的模拟版图</div>
+      <div class="abs-meta">arXiv:2610.39515 · cs.AR · 29 Oct 2026 · Bingyang Liu, Xiaohan Gao, Souradip Poddar, David Z. Pan</div>
+      <div class="abs-body">模拟版图自动化中寄生与失配强烈影响性能，而布局约束布线解空间与可达后版图性能，尤为关键。现有解析布局在中心化线长代理下优化器件坐标、把接入点（AP）选择留给布线；但模拟中布线引脚是延伸的金属而非固定点，最优 AP 取决于相连器件位置。本文提出 APPlace——全局布局阶段联合优化器件位置与 AP 选择、再经合法化保留全局结构；四个真实模拟基准上取得优于基线的后版图性能，消融显示去掉 AP 协同优化在 OTA 上最多损失 13dB CMRR、比较器延迟增 23%。已录用 ASP-DAC 2027。属「模拟与架构 / 布线感知模拟布局（器件位置 + 接入点协同）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.39515" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.39515_APPlace.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟版图</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">接入点</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布线感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ASP-DAC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SKY130</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.39882 LAMP -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 LAMP: LLM-Driven Analog Placement through Adaptive Tool Composition——LAMP：通过自适应工具组合由 LLM 驱动的模拟布局</div>
+      <div class="abs-meta">arXiv:2610.39882 · cs.AR · 29 Oct 2026 · Zecheng Xu, Guanhua Chen, Yumao Wu, Keren Zhu</div>
+      <div class="abs-body">模拟布局需在面积、匹配、可布线性与电性能间做电路相关的权衡，靠固定目标与固定流程难以平衡。本文提出 LAMP——LLM 作为版图工程师、通过可组合布局构件工作的框架：构件支持约束管理、布局与合法化、可布线性与电性能的轻量评估；LLM 用初始与演进设计的多模态检查点选择并组合构件、构建并修订自身布局流程，还能通过重开模块或分割重组器件来适配层次，经验技能提供可复用知识；在两块 SMIC 180nm 电路上面积更小、多数后版图指标更优。属「模拟与架构 / LLM 驱动模拟布局（自适应工具组合 + 经验技能）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.39882" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.39882_LAMP.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟版图</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">工具组合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">经验技能</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SMIC180</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2610.41227 Delta-Seeker -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 Delta-Seeker: Closed-Loop Generative Search for Novel Circuit Design Discovery——Delta-Seeker：面向新颖电路设计发现的闭环生成式搜索</div>
+      <div class="abs-meta">arXiv:2610.41227 · eess.SY · 30 Oct 2026 · Dinithi Jayasuriya, Devangshu Dutta, Aravind Saravanan, Nilesh Ahuja, Amit Trivedi</div>
+      <div class="abs-body">生成模型日益用于电路综合与优化，但能否支持「设计发现」（生成结构须偏离已知设计且产生可复现电行为）仍待探究。本文提出 Delta-Seeker——闭环电路搜索框架，结合离散扩散做拓扑生成与变异、结构检查、SPICE 在环定尺寸、Pareto 选择与来自既往搜索的反馈；搜索控制器据进展与反复结构失败分配评估精力。在运放拓扑发现中，相较固定控制产出 54 个在至少三个独立复尺寸中仍可行的设计（固定控制 38 个），其中 18 个额外通过器件级检查与电源-温度角分析；在 DC-DC 转换器中识别出一个语料缺失拓扑，开关电流路径改变使其最近训练父本从四角均不可行变为四角均可行、中位效率由 31.2% 升至 98.96%。属「模拟与架构 / 闭环生成式电路拓扑发现（SPICE 在环 + 跨代反馈）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2610.41227" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2610.41227_Delta_Seeker.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">电路设计发现</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">生成模型</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">离散扩散</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SPICE在环</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拓扑发现</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DC-DC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">eess.SY</span>
       </div>
     </div>
 
