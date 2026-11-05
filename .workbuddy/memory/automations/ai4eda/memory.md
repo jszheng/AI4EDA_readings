@@ -478,3 +478,26 @@
   2. 自动化 prompt 增加「先核验、后下载」「每轮候选 ≤4 篇」「优先完成 commit/push 再结束」「仅用显式路径 git add，严禁 git add .」。
   3. 调度由 05:00 改 08:00（原 05:00 笔记本多休眠，11-02 实际 20:26 才在唤醒后运行）。
 - **待清理（未删除，需用户确认）**：工作区残留未跟踪文件 `.arxiv_tmp_csar.html`、`2610.25881_LearnInterfaceRTL.pdf` 为孤儿/临时文件，不影响站点，可随时删除。
+
+## 2026-11-05 执行摘要（本次运行）
+
+**前置状态（2026-11-04 基线）**
+- papers: 412, batches: 142, news: 231, lastUpdate: 2026-11-04
+
+**本次新增内容（论文 +4，全部经逐篇 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF 头）**
+- 2611.01473 GNN 时钟网格代理模型（Khan, Ali, Manikandan, Guthaus；cs.AR；1 Nov 2026）——GNN 代理模型做变化感知时钟网格分析与设计空间探索，延迟/斜率/偏移误差 3.40/4.14/4.46ps，比 SOTA 近似法 74.37/27.51ps 大幅改善，OCV 下加速 18×–1706× → physical（101→103）
+- 2611.00187 CAPER（Roy；cs.AR；30 Oct 2026）——电路感知 PEFT（LoRA 旁加分支读各级属性）做模拟电路验证助手，标记 PVT 下潜在失效；比较器锁存器 90 个 LLM 设计 11 个 PVT 失效被 CAPER 学会标记 → analog（66→67）
+- 2611.02784 HLSClaw（Ge, Liu, Liang, Li, Ahmad, Xu；cs.SE；2 Nov 2026）——首个 HLS 专用技能式智能体框架，把 HLS 优化重构为技能式智能体控制问题；真实基准 39.12× 几何均值延迟加速，超 ScaleHLS 1.98×、Claude Code 1.86×、Codex 1.70× → rtl（110→111）
+- 2611.02304 流匹配+约束A* 全局布线（Jin, Lee, Kang；eess.SY；1 Nov 2026）——流匹配构建全局代价图引导约束 A* 搜索，复杂布线实例强求解、跨规模鲁棒泛化 → physical（101→103）
+
+**论文检索流程（严谨性 / 本次关键修复）**
+- **根因修复（本次发现）**：`export.arxiv.org/api/query` 现已返回 **HTTP 301**（强制 HTTPS）。旧 http 调用导致上一轮运行**静默空输出、整轮无产出**——这正是「任务总失败」的直接技术原因之一。已改为 `https://` + SSL 跳过 + 输出落盘文件（`.workbuddy/tmp_candidates.txt`），杜绝空输出被吞。
+- 扫描窗口 `submittedDate:[20261030 TO 20261105]`，cs.AR 用 API 全量（51 篇）+ cs.LG/cs.AI/cs.SE/cs.CE/eess.SY 严格关键词过滤（16 候选）。初版脚本 7 类顺序扫描超时 SIGTERM（印证「单轮过重→超时」旧病灶），改 cs.AR 优先 + 跨类窄窗口（5 天）后稳定完成。
+- 候选中 2611.02023 Naviq SoC 仿真器（score=7，无 AI 方法）按「AI for EDA」定位排除（类比既往 TPCS 排除）；其余命中为 ML-on-FPGA/无线/EV/ARC-AGI/扩散/数据库等误报，全部排除。
+
+**行业动态 +0（严格遵守第 0 步「宁可空白、绝不编造」）**
+- 检索 SemiEngineering WIR #158/#161 及 Altera 官网：① Synopsys AgentEngineer/OpenAI、Cadence AI Super Agents/NVIDIA、Cadence Maestro、NVIDIA Open Agent Safety 均已于既往运行收录；② Altera **QuartusIQ**（10-21 发布，FPGA 设计软件 AI 助手）经核验即 2026-10-23 WIR #161 已收录的「Altera 在 FPGA 设计软件中引入 AI 助手」同事件（news_memory.json 已含 Altera 条目）→ 判为重复，不新增。无满足「独立、可核验、非重复」标准的新条目。news 维持 231。
+
+**统计变更**：papers 412→416，batches 142（未新增公告批次计数，仅论文数），news 231，lastUpdate 2026-11-05；manifest latest/dates 数组前置 2026-11-05（count 4）；rtl 110→111 / analog 66→67 / physical 101→103；papers/index.html 跳转改指 2026-11-05.html。
+
+**提交纪律**：仅用显式路径 git add（2 日期页 + 3 分类页 + manifest.js + papers/index.html + 4 PDF + memory.md）；刻意排除孤儿 PDF（2610.25881_LearnInterfaceRTL.pdf 等）与 .workbuddy 临时脚本。

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-11-05 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.SE / eess.SY，来自 2026-10-30~11-02 公告批次；4 篇均逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF）。本批次覆盖 前端 RTL / 模拟与架构 / 后端物理设计 三大方向。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2611.01473 GNN Clock-Mesh Surrogate -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 1 Nov 2026 · Khan, Muhammad Hadir, Ali, Wajid, Manikandan, Arya Thottiparambil, Guthaus, Matthew</div>
+      <h4>📐 A Surrogate Model for Variation-Aware Clock-Mesh Analysis and Design-Space Exploration using Graph Neural Networks——基于图神经网络、面向变化感知时钟网格分析与设计空间探索的代理模型</h4>
+      <p>时钟网格在高性能 VLSI 系统中广泛用于最小化偏移并容忍纳米级片上工艺偏差（OCV）。但网格存在重汇聚路径与多源驱动，使静态时序分析（STA）工具难以处理网格环路，SPICE 成为工业标准；SPICE 精确却缓慢，故时钟网格综合依赖忽略关键效应（如输入斜率与输入偏移引起的非线性缓冲驱动）的近似模型。本文提出基于图神经网络（GNN）的时钟网格代理模型，含新的图表示与网络架构，在预测功耗的同时提升汇点处的延迟与斜率预测、并刻画 OCV 下的偏移直方图。在 SPICE 数据上训练、对未见真实设计测试，本模型延迟/斜率/偏移平均误差为 3.40ps/4.14ps/4.46ps，优于此前模型的 6.28/12.35/11.62ps，更远优于当前 SOTA 近似方法的 74.37ps 延迟与 27.51ps 偏移；功耗预测与 SPICE 平均误差仅 3.4%，并在 OCV 建模下比近似方法加速 18×–1706×，从而支撑更快更准的时钟网格设计空间探索。在某真实设计上的案例进一步显示，该代理模型找到的缓冲方案在均衡折衷下，相比 SOTA 把 99 分位偏移改善 49.1%、功耗降 25.7%、面积降 37.3%，代价是 99 分位最大斜率上升 6.8%。属「后端物理设计 / 时钟网格分析（GNN 代理模型 + OCV 偏移直方图 + 设计空间探索）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">后端物理设计</span><span class="tag">时钟网格</span><span class="tag">物理设计</span><span class="tag">GNN</span><span class="tag">代理模型</span><span class="tag">设计空间探索</span><span class="tag">OCV</span><span class="tag">时序偏差</span><span class="tag">功耗</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.01473" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.01473_GNN_ClockMesh.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.00187 CAPER -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 30 Oct 2026 · Roy, Saion K.</div>
+      <h4>🔬 CAPER: Circuit-Aware Parameter-Efficient Reasoning in LLMs for Analog Verification——CAPER：面向模拟验证、电路感知的参数高效 LLM 推理</h4>
+      <p>大语言模型（LLM）正越来越多用于生成模拟电路，但每张网表都必须经过验证。本文把 LLM 用作模拟电路的验证助手，标记未满足的规格与在工艺-电压-温度（PVT）变化下才出现的可靠性问题。这些问题源自电路各级如何组合，而通用参数高效微调（PEFT）方法（如 LoRA）并不捕捉这种结构。为此本文提出 CAPER——一种电路感知的 PEFT 方法，在 LoRA 旁增加一个小分支，从 LLM 读取各级的属性并加以组合。在判断反馈环是否为负反馈时，LoRA 与高秩适配器仅接近随机水平，而 CAPER 对每个测试用例都答对；对于比较器锁存器，90 个由 LLM 写出的设计中有 11 个在标称条件下工作、却在 PVT 变化下失效，CAPER 同样学会标记这类潜在失效，而通用适配器仍接近随机。结果表明，给 PEFT 注入电路知识，可使此类模拟验证检查变得可通过微调习得。属「模拟与架构 / LLM 辅助模拟电路验证（电路感知 PEFT + PVT 潜在失效标记）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">模拟验证</span><span class="tag">LLM</span><span class="tag">PEFT</span><span class="tag">LoRA</span><span class="tag">CAPER</span><span class="tag">PVT</span><span class="tag">电路感知</span><span class="tag">比较器锁存器</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.00187" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.00187_CAPER.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.02784 HLSClaw -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE · 2 Nov 2026 · Ge, Jinming, Liu, Shang, Liang, Jiawei, Li, Shangkun, Ahmad, Afzal, Xu, Jiang</div>
+      <h4>⚡ HLSClaw: Bringing Vibe Coding to High-Level Synthesis through Skill-Based Agentic Harness——HLSClaw：通过基于技能的智能体框架把「氛围编程」引入高层次综合</h4>
+      <p>LLM 智能体正把软件开发推向意图驱动的「氛围编程」，但在高层次综合（HLS）中其效果急剧下降——代码优化须同时考虑设计结构、编译指示（directive）搜索与下游硬件约束。既有 HLS 优化方法（含启发式与近期 LLM 辅助流水线）多在固定抽象层级或弱耦合阶段运行，难以利用源码重构与指示搜索之间的强耦合。本文核心洞见是：HLS 优化可从固定的硬编码变换流水线，重构为「基于技能的智能体控制问题」——配备模块化、可执行优化技能与反馈驱动编排器的 LLM 智能体，可自主在代码重构与指示搜索的耦合空间中导航。据此设计 HLSClaw——首个面向 HLS 的、基于技能的智能体式整体优化框架。在真实 HLS 基准上，HLSClaw 取得 39.12× 几何均值延迟加速，优于编译器基线 ScaleHLS 1.98×，并分别超过商用编程智能体 Claude Code、Codex 的 1.86× 与 1.70×，同时保持强时序鲁棒性。属「前端 RTL / HLS 优化（技能式智能体 + 代码重构-指示搜索耦合）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">HLS</span><span class="tag">高层次综合</span><span class="tag">智能体</span><span class="tag">氛围编程</span><span class="tag">技能式框架</span><span class="tag">代码重构</span><span class="tag">指示搜索</span><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">cs.SE</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.02784" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.02784_HLSClaw.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.02304 Global Routing Flow Matching -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · eess.SY · 1 Nov 2026 · Jin, Sanghoon, Lee, Sumin, Kang, Namwoo</div>
+      <h4>📐 A Global Routing Method for Electronic Circuit Design Integrating Flow Matching and Constrained A*——融合流匹配与约束 A* 的集成电路全局布线方法</h4>
+      <p>全局布线是电路设计的基础问题，直接关系到集成电路系统整体布局的效率、可靠性与紧凑度。随有限芯片面积内对更高功能与可靠性的需求增长，布线作为设计考量的重要性空前。高效全局布线优化需在满足多网络间拥塞与干扰约束下，以最小线长连接所有引脚；而待布线网络数增加使设计空间天然存在组合爆炸，可行解愈发难求。本文聚焦基于启发式 A* 框架的约束全局布线，提出把约束 A* 与流匹配（Flow Matching, FM）相融合的混合方法：用 FM 构建捕捉设计空间布线倾向的全局代价图，再以此引导约束 A* 搜索过程，从而在满足布线约束下高效探索解空间。实验表明，该方法在广泛场景下取得与基线相当的线长与过孔用量，同时保持约束满足；框架在常规方法难以处理的复杂布线实例上展现出强求解能力，并对不同问题规模与网络配置具备鲁棒泛化性能。属「后端物理设计 / 全局布线（流匹配 + 约束 A* 混合）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">后端物理设计</span><span class="tag">物理设计</span><span class="tag">全局布线</span><span class="tag">流匹配</span><span class="tag">Flow Matching</span><span class="tag">约束A*</span><span class="tag">线长</span><span class="tag">拥塞</span><span class="tag">eess.SY</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.02304" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.02304_GlobalRouting_FlowMatch.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

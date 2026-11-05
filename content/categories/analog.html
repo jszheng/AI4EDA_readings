@@ -7,9 +7,23 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（66篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（67篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+
+    <!-- 2611.00187 CAPER -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 CAPER: Circuit-Aware Parameter-Efficient Reasoning in LLMs for Analog Verification——CAPER：面向模拟验证、电路感知的参数高效 LLM 推理</div>
+      <div class="abs-meta">arXiv:2611.00187 · cs.AR · 30 Oct 2026 · Roy, Saion K.</div>
+      <div class="abs-body">大语言模型（LLM）正越来越多用于生成模拟电路，但每张网表都必须经过验证。本文把 LLM 用作模拟电路的验证助手，标记未满足的规格与在工艺-电压-温度（PVT）变化下才出现的可靠性问题。这些问题源自电路各级如何组合，而通用参数高效微调（PEFT）方法（如 LoRA）并不捕捉这种结构。为此本文提出 CAPER——一种电路感知的 PEFT 方法，在 LoRA 旁增加一个小分支，从 LLM 读取各级的属性并加以组合。在判断反馈环是否为负反馈时，LoRA 与高秩适配器仅接近随机水平，而 CAPER 对每个测试用例都答对；对于比较器锁存器，90 个由 LLM 写出的设计中有 11 个在标称条件下工作、却在 PVT 变化下失效，CAPER 同样学会标记这类潜在失效，而通用适配器仍接近随机。结果表明，给 PEFT 注入电路知识，可使此类模拟验证检查变得可通过微调习得。属「模拟与架构 / LLM 辅助模拟电路验证（电路感知 PEFT + PVT 潜在失效标记）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.00187" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.00187_CAPER.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PEFT</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LoRA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">CAPER</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PVT</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">电路感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">比较器锁存器</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
 
     <!-- 2610.38426 The Code Behind the Layout: AI Agents for Analog Layout Generators -->
     <div class="abs-card">

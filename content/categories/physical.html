@@ -7,9 +7,36 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（101篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（103篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2611.01473 GNN Clock-Mesh Surrogate -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 A Surrogate Model for Variation-Aware Clock-Mesh Analysis and Design-Space Exploration using Graph Neural Networks——基于图神经网络、面向变化感知时钟网格分析与设计空间探索的代理模型</div>
+      <div class="abs-meta">arXiv:2611.01473 · cs.AR · 1 Nov 2026 · Khan, Muhammad Hadir, Ali, Wajid, Manikandan, Arya Thottiparambil, Guthaus, Matthew</div>
+      <div class="abs-body">时钟网格在高性能 VLSI 系统中广泛用于最小化偏移并容忍纳米级片上工艺偏差（OCV）。但网格存在重汇聚路径与多源驱动，使静态时序分析（STA）工具难以处理网格环路，SPICE 成为工业标准；SPICE 精确却缓慢，故时钟网格综合依赖忽略关键效应（如输入斜率与输入偏移引起的非线性缓冲驱动）的近似模型。本文提出基于图神经网络（GNN）的时钟网格代理模型，含新的图表示与网络架构，在预测功耗的同时提升汇点处的延迟与斜率预测、并刻画 OCV 下的偏移直方图。在 SPICE 数据上训练、对未见真实设计测试，本模型延迟/斜率/偏移平均误差为 3.40ps/4.14ps/4.46ps，优于此前模型的 6.28/12.35/11.62ps，更远优于当前 SOTA 近似方法的 74.37ps 延迟与 27.51ps 偏移；功耗预测与 SPICE 平均误差仅 3.4%，并在 OCV 建模下比近似方法加速 18×–1706×，从而支撑更快更准的时钟网格设计空间探索。在某真实设计上的案例进一步显示，该代理模型找到的缓冲方案在均衡折衷下，相比 SOTA 把 99 分位偏移改善 49.1%、功耗降 25.7%、面积降 37.3%，代价是 99 分位最大斜率上升 6.8%。属「后端物理设计 / 时钟网格分析（GNN 代理模型 + OCV 偏移直方图 + 设计空间探索）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.01473" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.01473_GNN_ClockMesh.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">后端物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时钟网格</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">GNN</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">代理模型</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计空间探索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OCV</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序偏差</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功耗</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2611.02304 Global Routing Flow Matching -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 A Global Routing Method for Electronic Circuit Design Integrating Flow Matching and Constrained A*——融合流匹配与约束 A* 的集成电路全局布线方法</div>
+      <div class="abs-meta">arXiv:2611.02304 · eess.SY · 1 Nov 2026 · Jin, Sanghoon, Lee, Sumin, Kang, Namwoo</div>
+      <div class="abs-body">全局布线是电路设计的基础问题，直接关系到集成电路系统整体布局的效率、可靠性与紧凑度。随有限芯片面积内对更高功能与可靠性的需求增长，布线作为设计考量的重要性空前。高效全局布线优化需在满足多网络间拥塞与干扰约束下，以最小线长连接所有引脚；而待布线网络数增加使设计空间天然存在组合爆炸，可行解愈发难求。本文聚焦基于启发式 A* 框架的约束全局布线，提出把约束 A* 与流匹配（Flow Matching, FM）相融合的混合方法：用 FM 构建捕捉设计空间布线倾向的全局代价图，再以此引导约束 A* 搜索过程，从而在满足布线约束下高效探索解空间。实验表明，该方法在广泛场景下取得与基线相当的线长与过孔用量，同时保持约束满足；框架在常规方法难以处理的复杂布线实例上展现出强求解能力，并对不同问题规模与网络配置具备鲁棒泛化性能。属「后端物理设计 / 全局布线（流匹配 + 约束 A* 混合）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.02304" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.02304_GlobalRouting_FlowMatch.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">后端物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">全局布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">流匹配</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Flow Matching</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">约束A*</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">线长</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">拥塞</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">eess.SY</span>
+      </div>
+    </div>
+
 
     <!-- 2610.33099 EGGPlacer -->
     <div class="abs-card">
