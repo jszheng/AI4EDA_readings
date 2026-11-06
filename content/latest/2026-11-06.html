@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-11-06 动态</h1>
+  <p class="subtitle">共 1 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR，来自 2026-11-05 公告批次；1 篇经逐篇 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF）。本批次覆盖 前端 RTL（HLS 生成与修复）方向。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2611.07324 MementoHLS -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 5 Nov 2026 · Zhu, Xianjing, Lou, Wenqi, Wen, Yuanbo, Wang, Teng, Gong, Lei, Wang, Chao, Zhou, Xuehai</div>
+      <h4>⚡ Rule-Guided and Trajectory-Aware Repair for LLM-Based HLS Generation——面向 LLM 化 HLS 生成的规则引导、轨迹感知修复（MementoHLS）</h4>
+      <p>大语言模型（LLM）为从自然语言规格直接生成功能正确、可综合的 HLS-C 提供了有前景的路径，但现有方法往往难以把多轮工具反馈与可复用的 HLS 知识转化为有效修订，限制了端到端生成成功率。本文提出 MementoHLS——一个以「可执行、可证伪的双重记忆引导修复」为核心的智能体式 HLS 生成框架：一方面用可执行修复契约库（ERCL）把跨任务 HLS 知识转化为证据门控的修复动作；另一方面用评审扎根的证伪账本（RFL）把任务局部修复历史转化为轨迹证据，以抑制无效路径、保留已验证进展。为保证结果归因可靠，Same-Candidate Reviewer 把解析、编译、测试平台（TB）与综合（Synth）的结果绑定到对应候选，Single-Commit Arbiter 每轮最多提交一个候选。在 94 个 HLS-Eval 与 170 个 Bench4HLS 任务上评测，MementoHLS 将同候选 TB∧Synth 的 pass@1/pass@5 从 41.7%/57.4% 提升至 58.9%/68.1%（HLS-Eval），以及从 15.5%/32.9% 提升至 32.4%/50.6%（Bench4HLS），端到端 HLS 生成可靠性显著改善。属「前端 RTL / HLS 生成与修复（双重记忆引导 + 轨迹感知证伪 + 单候选提交仲裁）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">HLS</span><span class="tag">高层次综合</span><span class="tag">智能体</span><span class="tag">代码生成与修复</span><span class="tag">可执行修复契约</span><span class="tag">轨迹感知</span><span class="tag">证伪账本</span><span class="tag">HLS-Eval</span><span class="tag">Bench4HLS</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.07324" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.07324_MementoHLS.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

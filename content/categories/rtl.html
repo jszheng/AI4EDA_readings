@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（111篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（112篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+
+    <!-- 2611.07324 MementoHLS -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚡ Rule-Guided and Trajectory-Aware Repair for LLM-Based HLS Generation——面向 LLM 化 HLS 生成的规则引导、轨迹感知修复（MementoHLS）</div>
+      <div class="abs-meta">arXiv:2611.07324 · cs.AR · 5 Nov 2026 · Zhu, Xianjing, Lou, Wenqi, Wen, Yuanbo, Wang, Teng, Gong, Lei, Wang, Chao, Zhou, Xuehai</div>
+      <div class="abs-body">大语言模型（LLM）为从自然语言规格直接生成功能正确、可综合的 HLS-C 提供了有前景的路径，但现有方法往往难以把多轮工具反馈与可复用的 HLS 知识转化为有效修订，限制了端到端生成成功率。本文提出 MementoHLS——一个以「可执行、可证伪的双重记忆引导修复」为核心的智能体式 HLS 生成框架：一方面用可执行修复契约库（ERCL）把跨任务 HLS 知识转化为证据门控的修复动作；另一方面用评审扎根的证伪账本（RFL）把任务局部修复历史转化为轨迹证据，以抑制无效路径、保留已验证进展。为保证结果归因可靠，Same-Candidate Reviewer 把解析、编译、测试平台（TB）与综合（Synth）的结果绑定到对应候选，Single-Commit Arbiter 每轮最多提交一个候选。在 94 个 HLS-Eval 与 170 个 Bench4HLS 任务上评测，MementoHLS 将同候选 TB∧Synth 的 pass@1/pass@5 从 41.7%/57.4% 提升至 58.9%/68.1%（HLS-Eval），以及从 15.5%/32.9% 提升至 32.4%/50.6%（Bench4HLS），端到端 HLS 生成可靠性显著改善。属「前端 RTL / HLS 生成与修复（双重记忆引导 + 轨迹感知证伪 + 单候选提交仲裁）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.07324" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.07324_MementoHLS.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">前端RTL</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HLS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">高层次综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">代码生成与修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可执行修复契约</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">轨迹感知</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">证伪账本</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">HLS-Eval</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Bench4HLS</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2611.02784 HLSClaw -->
     <div class="abs-card">
