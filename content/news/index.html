@@ -16,6 +16,16 @@
     .abs-card a:hover { opacity: .75; }
     .date-group { margin-bottom: 40px; }
     .date-header { display: flex; align-items: center; gap: 12px; background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #4f46e5; border-radius: 10px; padding: 12px 18px; margin-bottom: 16px; cursor: pointer; user-select: none; transition: box-shadow .2s; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); }
+
+    /* 目录：默认收起，展开后低调小字、可滚动，不干扰正文阅读 */
+    details.toc { margin: 0 0 18px; border: 1px solid #e2e8f0; border-radius: 10px; background: #f8fafc; overflow: hidden; }
+    details.toc > summary { cursor: pointer; padding: 10px 16px; font-size: .82rem; font-weight: 600; color: #64748b; user-select: none; list-style: none; }
+    details.toc > summary::-webkit-details-marker { display: none; }
+    details.toc > summary::before { content: "\25B8  "; transition: transform .15s; }
+    details.toc[open] > summary::before { content: "\25BE  "; }
+    details.toc nav { padding: 0 16px 14px; max-height: 38vh; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
+    details.toc nav a { font-size: .76rem; line-height: 1.5; color: #94a3b8; text-decoration: none; padding: 3px 6px; border-radius: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    details.toc nav a:hover { background: #eef2ff; color: #4f46e5; }
   </style>
 </head>
 <body>
@@ -28,97 +38,65 @@
     <div class="stat"><div class="num">173</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
-<nav>  <a href="#2026-10-29">20261029 🤝 Cadence 加入 Genesis Mission Conso…</a>
-  <a href="#2026-10-26">20261026 🚀 Cadence 发布 Maestro——面向芯片与系统设计的领域…</a>
-  <a href="#2026-10-23">20261023 🤝 Rambus 全公司采用 ChipAgents 代理式 AI 平…</a>
-  <a href="#2026-10-21">20261021 🤝 Siemens 与 NVIDIA 在 GTC 2026 深化 a…</a>
-  <a href="#2026-10-19">20261019 🔧 Keysight 在 ADS 2027 中加入 agentic …</a>
-  <a href="#2026-10-13">20261013 🔐 NVIDIA 发布 Open Agent Safety Plat…</a>
-  <a href="#2026-10-12">20261012 🤖 Cadence 发布 RTL Generation Agent：…</a>
-  <a href="#2026-09-28">20260928 🤖 Synopsys 发布 AgentEngineer™ 长程智能体…</a>
-  <a href="#2026-09-14">20260914 🇨🇳 华大九天董事长刘伟平 @ IICIE 2026：Agentic…</a>
-  <a href="#2026-09-11">20260911 🔧 开源 AI EDA Agent 工具集中涌现：Booley 开源…</a>
-  <a href="#2026-09-10">20260910 🔧 OmniEDA 开源 PCB AI 设计评测集 OmniSch→…</a>
-  <a href="#2026-09-09">20260909 🤝 Synopsys Converge Korea 2026：以代理…</a>
-  <a href="#2026-09-08">20260908 📰 SemiEngineering WIR #154：Andes×C…</a>
-  <a href="#2026-09-07">20260907 📈 Synopsys FY2026 Q3 财报：营收 $24.77 …</a>
-  <a href="#2026-09-04">20260904 📊 eInfochips 深度：AI 驱动芯片设计的底层生态——三大…</a>
-  <a href="#2026-09-03">20260903 🧭 SemiWiki 深度：ChipAgents 视角——Agent…</a>
-  <a href="#2026-09-02">20260902 🤝 NVIDIA 斥资 $3.5B 入股联发科并深化合作：联发科采用…</a>
-  <a href="#2026-08-31">20260831 📰 SemiEngineering Chip Industry We…</a>
-  <a href="#2026-08-28">20260828 📰 SemiEngineering 闭门圆桌：Agentic AI …</a>
-  <a href="#2026-08-27">20260827 📰 Synopsys：客户形式验证 Agentic 工作流实现 5×…</a>
-  <a href="#2026-08-26">20260826 🔧 verilog-generator v2.0.0 发布：面向 V…</a>
-  <a href="#2026-08-24">20260824 📰 SemiEngineering《Chip Industry We…</a>
-  <a href="#2026-08-21">20260821 🏛️ 密歇根大学 × 洛斯阿拉莫斯国家实验室（LANL）获美国能源部…</a>
-  <a href="#2026-08-20">20260820 🟢 Keysight 是德科技「Engineering Intell…</a>
-  <a href="#2026-08-18">20260818 🏛️ Siemens EDA Forum Seoul 2026：发布…</a>
-  <a href="#2026-08-17">20260817 📰 SemiEngineering WIR #151：Google …</a>
-  <a href="#2026-08-13">20260813 🔧 chip-claw：从零实现的 RTL 设计 Agent——自然…</a>
-  <a href="#2026-08-12">20260812 🇨🇳 UCAgent 开源 + HimaFormal MC：国产形式…</a>
-  <a href="#2026-08-11">20260811 🇨🇳 IC Coder 2.0 上线内测：面向真实 FPGA 工程闭…</a>
-  <a href="#2026-08-07">20260807 🔧 vibe-IC 开源：AI 原生 IC 设计插件 + MCP-E…</a>
-  <a href="#2026-08-06">20260806 🤝 Intel 选定 Synopsys 为首要 EDA 供应商——多…</a>
-  <a href="#2026-08-05">20260805 🌍 三巨头 EDA 智能体正从「Copilot 副驾」走向「Auto…</a>
-  <a href="#2026-08-04">20260804 🔧 agent-r2g：把「开源 RTL-to-GDS 全签核」封装…</a>
-  <a href="#2026-08-03">20260803 🗺️ 首份系统性 AI4EDA 全景图：三类产品分型 + S1–S5…</a>
-  <a href="#2026-07-31">20260731 🇨🇳 芯和半导体 (Xpeedic) @ DAC 2026：发布 E…</a>
-  <a href="#2026-07-30">20260730 🤖 Synopsys × Microsoft × AMD：首个跑在 …</a>
-  <a href="#2026-07-29">20260729 🤖 Synopsys × NVIDIA @ DAC 2026：发布全…</a>
-  <a href="#2026-07-27">20260727 🏛️ Cadence Agentic AI 设计愿景亮相 DAC 2…</a>
-  <a href="#2026-07-24">20260724 🎨 Chipmind 发布 RTL Canvas：业界首个工程师与 …</a>
-  <a href="#2026-07-23">20260723 🏛️ Siemens EDA @ DAC 2026：Agentic …</a>
-  <a href="#2026-07-22">20260722 🚀 月之暗面 Kimi K3 演示 48 小时自主芯片设计：以开源 …</a>
-  <a href="#2026-07-21">20260721 🚀 NVIDIA @ DAC 2026 发布多项 EDA AI 研究…</a>
-  <a href="#2026-07-20">20260720 📰 Chip Industry Week In Review #14…</a>
-  <a href="#2026-07-17">20260717 🚀 Cadence 发布 AuraStack AI 超级智能体 — …</a>
-  <a href="#2026-07-16">20260716 🏭 TSMC 将 sub-7nm 产能调度与 Validated F…</a>
-  <a href="#2026-07-15">20260715 📊 EDA/SIP 营收同比增长 12.7%，APAC 强势反弹 —…</a>
-  <a href="#2026-07-14">20260714 🚀 Cadence 发布 AgentStack 总控智能体 + Vi…</a>
-  <a href="#2026-07-13">20260713 🤝 NVIDIA × SK hynix 达成多年技术合作 — 将 A…</a>
-  <a href="#2026-07-11">20260711 📰 Chip Industry Week In Review #14…</a>
-  <a href="#2026-07-10">20260710 🧩 AI 正在重写 IP 游戏规则 — 半导体 IP 的创建与验证方…</a>
-  <a href="#2026-07-08">20260708 🔬 多芯粒现场测试必须建立在既有测试方法论之上</a>
-  <a href="#2026-07-07">20260707 </a>
-  <a href="#2026-07-06">20260706 </a>
-  <a href="#2026-07-03">20260703 </a>
-  <a href="#2026-07-02">20260702 </a>
-  <a href="#2026-07-01">20260701 </a>
-  <a href="#2026-06-30">20260630 </a>
-  <a href="#2026-06-27">20260627 </a>
-  <a href="#2026-06-26b">20260626 </a>
-  <a href="#2026-06-25">20260625 </a>
-  <a href="#2026-06-24">20260624 </a>
-  <a href="#2026-06-23">20260623 </a>
-  <a href="#2026-06-19">20260619 </a>
-  <a href="#2026-06-18">20260618 </a>
-  <a href="#2026-06-16">20260616 </a>
-  <a href="#2026-06-12">20260612 </a>
-  <a href="#2026-06-11">20260611 </a>
-  <a href="#2026-06-10">20260610 </a>
-  <a href="#2026-06-09">20260609 </a>
-  <a href="#2026-06-08">20260608 </a>
-  <a href="#2026-06-06">20260606 </a>
-  <a href="#2026-06-05">20260605 </a>
-  <a href="#2026-06-04">20260604 </a>
-  <a href="#2026-06-03">20260603 </a>
-  <a href="#2026-06-02">20260602 </a>
-  <a href="#2026-06-01">20260601 </a>
-  <a href="#2026-05-29">20260529 </a>
-  <a href="#2026-05-28">20260528 </a>
-  <a href="#2026-05-27">20260527 </a>
-  <a href="#2026-05-25">20260525 </a>
-  <a href="#2026-05-22">20260522 </a>
-  <a href="#2026-05-21">20260521 </a>
-  <a href="#2026-05-20">20260520 </a>
-  <a href="#2026-05-19">20260519 </a>
-  <a href="#2026-05-18">20260518 </a>
-  <a href="#2026-05-15">20260515 </a>
-  <a href="#2026-05-14">20260514 </a>
-  <a href="#2026-05-13">20260513 🏛️ DATE 2026 回顾：下一波 EDA 浪潮 — AI 深度…</a>
-  <a href="#2026-05-12">20260512 🏆 MLCAD 2026 Alpha 结果公布：东南大学 SEUTi…</a>
-  <a href="#2026-05-08">20260508 📰 Chip Industry Week In Review：AI …</a>
-</nav>
+<details class="toc">
+  <summary>📑 目录（点击展开 / 收起，共 54 条）</summary>
+  <nav>
+  <a href="#2026-10-29">2026-10-29 — 🤝 Cadence 加入 Genesis Missi…</a>
+  <a href="#2026-10-26">2026-10-26 — 🚀 Cadence 发布 Maestro——面向芯片…</a>
+  <a href="#2026-10-23">2026-10-23 — 🤝 Rambus 全公司采用 ChipAgents …</a>
+  <a href="#2026-10-21">2026-10-21 — 🤝 Siemens 与 NVIDIA 在 GTC 2…</a>
+  <a href="#2026-10-19">2026-10-19 — 🔧 Keysight 在 ADS 2027 中加入 …</a>
+  <a href="#2026-10-13">2026-10-13 — 🔐 NVIDIA 发布 Open Agent Saf…</a>
+  <a href="#2026-10-12">2026-10-12 — 🤖 Cadence 发布 RTL Generatio…</a>
+  <a href="#2026-09-28">2026-09-28 — 🤖 Synopsys 发布 AgentEnginee…</a>
+  <a href="#2026-09-14">2026-09-14 — 🇨🇳 华大九天董事长刘伟平 @ IICIE 2026…</a>
+  <a href="#2026-09-11">2026-09-11 — 🔧 开源 AI EDA Agent 工具集中涌现：B…</a>
+  <a href="#2026-09-10">2026-09-10 — 🔧 OmniEDA 开源 PCB AI 设计评测集 …</a>
+  <a href="#2026-09-09">2026-09-09 — 🤝 Synopsys Converge Korea …</a>
+  <a href="#2026-09-08">2026-09-08 — 📰 SemiEngineering WIR #154…</a>
+  <a href="#2026-09-07">2026-09-07 — 📈 Synopsys FY2026 Q3 财报：营收…</a>
+  <a href="#2026-09-04">2026-09-04 — 📊 eInfochips 深度：AI 驱动芯片设计的…</a>
+  <a href="#2026-09-03">2026-09-03 — 🧭 SemiWiki 深度：ChipAgents 视…</a>
+  <a href="#2026-09-02">2026-09-02 — 🤝 NVIDIA 斥资 $3.5B 入股联发科并深化…</a>
+  <a href="#2026-08-31">2026-08-31 — 📰 SemiEngineering Chip Ind…</a>
+  <a href="#2026-08-28">2026-08-28 — 📰 SemiEngineering 闭门圆桌：Age…</a>
+  <a href="#2026-08-27">2026-08-27 — 📰 Synopsys：客户形式验证 Agentic …</a>
+  <a href="#2026-08-26">2026-08-26 — 🔧 verilog-generator v2.0.0…</a>
+  <a href="#2026-08-24">2026-08-24 — 📰 SemiEngineering《Chip Ind…</a>
+  <a href="#2026-08-21">2026-08-21 — 🏛️ 密歇根大学 × 洛斯阿拉莫斯国家实验室（LAN…</a>
+  <a href="#2026-08-20">2026-08-20 — 🟢 Keysight 是德科技「Engineerin…</a>
+  <a href="#2026-08-18">2026-08-18 — 🏛️ Siemens EDA Forum Seoul…</a>
+  <a href="#2026-08-17">2026-08-17 — 📰 SemiEngineering WIR #151…</a>
+  <a href="#2026-08-13">2026-08-13 — 🔧 chip-claw：从零实现的 RTL 设计 A…</a>
+  <a href="#2026-08-12">2026-08-12 — 🇨🇳 UCAgent 开源 + HimaFormal…</a>
+  <a href="#2026-08-11">2026-08-11 — 🇨🇳 IC Coder 2.0 上线内测：面向真实 …</a>
+  <a href="#2026-08-07">2026-08-07 — 🔧 vibe-IC 开源：AI 原生 IC 设计插件…</a>
+  <a href="#2026-08-06">2026-08-06 — 🤝 Intel 选定 Synopsys 为首要 ED…</a>
+  <a href="#2026-08-05">2026-08-05 — 🌍 三巨头 EDA 智能体正从「Copilot 副驾…</a>
+  <a href="#2026-08-04">2026-08-04 — 🔧 agent-r2g：把「开源 RTL-to-GD…</a>
+  <a href="#2026-08-03">2026-08-03 — 🗺️ 首份系统性 AI4EDA 全景图：三类产品分型…</a>
+  <a href="#2026-07-31">2026-07-31 — 🇨🇳 芯和半导体 (Xpeedic) @ DAC 2…</a>
+  <a href="#2026-07-30">2026-07-30 — 🤖 Synopsys × Microsoft × A…</a>
+  <a href="#2026-07-29">2026-07-29 — 🤖 Synopsys × NVIDIA @ DAC …</a>
+  <a href="#2026-07-27">2026-07-27 — 🏛️ Cadence Agentic AI 设计愿景…</a>
+  <a href="#2026-07-24">2026-07-24 — 🎨 Chipmind 发布 RTL Canvas：业…</a>
+  <a href="#2026-07-23">2026-07-23 — 🏛️ Siemens EDA @ DAC 2026：…</a>
+  <a href="#2026-07-22">2026-07-22 — 🚀 月之暗面 Kimi K3 演示 48 小时自主芯…</a>
+  <a href="#2026-07-21">2026-07-21 — 🚀 NVIDIA @ DAC 2026 发布多项 E…</a>
+  <a href="#2026-07-20">2026-07-20 — 📰 Chip Industry Week In Re…</a>
+  <a href="#2026-07-17">2026-07-17 — 🚀 Cadence 发布 AuraStack AI …</a>
+  <a href="#2026-07-16">2026-07-16 — 🏭 TSMC 将 sub-7nm 产能调度与 Val…</a>
+  <a href="#2026-07-15">2026-07-15 — 📊 EDA/SIP 营收同比增长 12.7%，APA…</a>
+  <a href="#2026-07-14">2026-07-14 — 🚀 Cadence 发布 AgentStack 总控…</a>
+  <a href="#2026-07-13">2026-07-13 — 🤝 NVIDIA × SK hynix 达成多年技术…</a>
+  <a href="#2026-07-11">2026-07-11 — 📰 Chip Industry Week In Re…</a>
+  <a href="#2026-07-10">2026-07-10 — 🧩 AI 正在重写 IP 游戏规则 — 半导体 IP…</a>
+  <a href="#2026-07-08">2026-07-08 — 🔬 多芯粒现场测试必须建立在既有测试方法论之上</a>
+  <a href="#2026-05-13">2026-05-13 — 🏛️ DATE 2026 回顾：下一波 EDA 浪潮…</a>
+  <a href="#2026-05-12">2026-05-12 — 🏆 MLCAD 2026 Alpha 结果公布：东南…</a>
+  <a href="#2026-05-08">2026-05-08 — 📰 Chip Industry Week In Re…</a>
+  </nav>
+</details>
 <div class="container">
 
 <section id="2026-10-29">
