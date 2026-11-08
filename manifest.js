@@ -312,7 +312,6 @@ window.SITE_MANIFEST = {
       { key: "analog",   title: "模拟与架构",  icon: "🔬", file: "content/categories/analog.html" },
       { key: "agent",    title: "AI Agent",    icon: "🤖", file: "content/categories/agent.html" }
     ],
-    news:      { title: "🌍 行业动态",   icon: "🌍", file: "content/news/index.html" },
-    tracking:  { title: "📌 待追踪",     icon: "📌", file: "content/tracking.html" }
+    news:      { title: "🌍 行业动态",   icon: "🌍", file: "content/news/index.html" }
   }
 };
