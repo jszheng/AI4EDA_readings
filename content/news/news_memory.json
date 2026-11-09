@@ -1,8 +1,68 @@
 {
-  "lastUpdate": "2026-11-04",
+  "lastUpdate": "2026-11-09",
   "cutoffDate": "2026-05-08",
-  "totalItems": 190,
+  "totalItems": 193,
   "items": [
+    {
+      "date": "2026-11-04",
+      "company": "Siemens / NVIDIA",
+      "title": "🤝 Siemens 与 NVIDIA 深化代理式 AI 合作，将自验证 Agentic AI 能力拓展至 3D IC 电热协同设计（工程工作量最多 -95%、设计探索覆盖最高 50×）",
+      "link": "https://news.siemens.com/en-us/siemens-nvidia-gtc-3d-ic-thermal-ai/",
+      "keywords": [
+        "Siemens",
+        "NVIDIA",
+        "合作",
+        "代理式AI",
+        "3D-IC",
+        "电热协同设计",
+        "electrothermal",
+        "多物理场",
+        "Calibre",
+        "Agentic AI",
+        "Fuse EDA",
+        "2026-11-04"
+      ]
+    },
+    {
+      "date": "2026-11-04",
+      "company": "NVIDIA / 合作生态",
+      "title": "🏭 NVIDIA 提出「AI 定义晶圆厂（AI-defined fab）」概念：cuLitho 进 Calibre（17×）、PhysicsNeMo 形貌仿真（35×）、NeMo Switchyard 选模型，制造仿真最高提速 35×",
+      "link": "https://aiproducthub.cn/newsflash/nvidia-ai-defined-fab-accelerated-simulation-speeds-up-process-design",
+      "keywords": [
+        "NVIDIA",
+        "AI定义晶圆厂",
+        "合作生态",
+        "cuLitho",
+        "PhysicsNeMo",
+        "Calibre",
+        "COMSOL",
+        "应用材料",
+        "泛林",
+        "爱德万",
+        "制造仿真",
+        "2026-11-04"
+      ]
+    },
+    {
+      "date": "2026-11-02",
+      "company": "芯和半导体 (Xpeedic)",
+      "title": "🚀 芯和半导体 2026 用户生态大会发布 EDA2027：AgentEvo 代理式 AI 超级智能体平台 + XAI 可信物理智能底座，联想 EDA Agent 2.0 效率提升约 5×",
+      "link": "https://finance.sina.com.cn/jjxw/2026-11-02/doc-inixiira7247020.shtml",
+      "keywords": [
+        "芯和半导体",
+        "Xpeedic",
+        "EDA2027",
+        "AgentEvo",
+        "XAI",
+        "AI for EDA",
+        "STCO",
+        "系统级EDA",
+        "多物理场",
+        "3DIC",
+        "产品发布",
+        "2026-11-02"
+      ]
+    },
     {
       "date": "2026-10-29",
       "company": "Cadence",

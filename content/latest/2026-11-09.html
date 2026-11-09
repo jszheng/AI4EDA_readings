@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-11-09 动态</h1>
+  <p class="subtitle">共 0 篇论文 · 3 条行业动态 · 来源：Siemens Newsroom 官方新闻稿 / 中文科技媒体（AI产品库、新浪财经）；3 条行业动态均经 URL 核验 HTTP 200 且页面含所述内容。本页为 2026-11-09 新闻段更新，新闻原文日期 2026-11-04 / 2026-11-02。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- NEWS: Siemens x NVIDIA 3D IC electrothermal agentic AI -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Siemens / NVIDIA · 合作/厂商动态 · 2026-11-04（来源：Siemens Newsroom 官方新闻稿，链接经核验 HTTP 200 且页面含所述表述）</div>
+      <h4>🤝 Siemens 与 NVIDIA 深化代理式 AI 合作，将自验证 Agentic AI 能力拓展至 3D IC 电热协同设计</h4>
+      <p>Siemens 宣布扩展与 NVIDIA 合作开发的 EDA 代理式 AI 产品组合：在 DAC 2026 发布的自验证 Agentic AI 能力基础上，结合 NVIDIA 加速计算，将其延伸至先进封装领域的 3D IC 电气、电源、热分析与协同设计。新工作流借助 Siemens 设计空间探索与优化（DSE/DSO）技术，用达到签核级精度的物理求解器自动评估数百种设计方案。基准测试显示：工程工作量最多减少 95%（数周→数小时），跨七款 EDA 工具的流程设置时间最多减少 99%（数天→不到 5 分钟），设计空间探索覆盖最高达 50×。该工作流跨七款 Siemens EDA 工具（Innovator3D IC Integrator、Calibre 3DThermal、Simcenter Flotherm、Calibre xACT、Solido Characterizer、Solido SPICE、mPower Digital）自动编排九个阶段，并借助 NVIDIA Agent Toolkit 与 Nemotron-3.5-Lightning、CUDA-X 库加速仿真，是 Siemens 可长时间运行、自验证的 EDA Agentic AI 平台组合的一部分。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Siemens</span><span class="tag">NVIDIA</span><span class="tag">合作</span><span class="tag">代理式AI</span><span class="tag">3D-IC</span><span class="tag">电热协同设计</span><span class="tag">多物理场</span><span class="tag">Calibre</span><span class="tag">Agentic AI</span><span class="tag">2026-11-04</span>
+      </div>
+      <a href="https://news.siemens.com/en-us/siemens-nvidia-gtc-3d-ic-thermal-ai/" target="_blank">📰 Siemens Newsroom 官方新闻稿（news.siemens.com，已核验可达）</a>
+    </div>
+
+    <!-- NEWS: NVIDIA AI-defined fab -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>NVIDIA · 合作/厂商动态 · 2026-11-04（来源：AI产品库（中文科技媒体），链接经核验 HTTP 200 且页面含所述表述）</div>
+      <h4>🏭 NVIDIA 提出「AI 定义晶圆厂」概念：GPU 加速 + 物理 AI + 智能体 + 数字孪生，将制造仿真提速最高 35×</h4>
+      <p>NVIDIA 于 11 月初提出「AI 定义晶圆厂（AI-defined fab）」概念，将加速计算、基于物理的 AI 模型、AI 智能体与数字孪生串成闭环，让晶圆厂工程师在设计、测试与制造环节更快拿到答案。合作方进展：西门子将 NVIDIA cuLitho 集成进 Calibre 光刻软件，关键仿真负载最高提速 17×；COMSOL 接入 cuDSS 后半导体制造仿真最高提速 10×；应用材料（Applied Materials）Ginestra 平台集成 cuDSS 较纯 CPU 方案最高快 10×，ACE+ 平台借 PhysicsNeMo 使形貌仿真最高快 35×；泛林研究（Lam Research）用 PhysicsNeMo 在毫秒级预测等离子体行为（原为需数天的完整仿真）；爱德万测试（Advantest）用 NeMo Switchyard 智能体自动选模型，响应从数小时降至数分钟。其本质是把更多工程决策留在虚拟环境中完成，降低真机试错成本，与「AI for EDA / 物理仿真加速」主线一致。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">NVIDIA</span><span class="tag">AI定义晶圆厂</span><span class="tag">合作生态</span><span class="tag">cuLitho</span><span class="tag">PhysicsNeMo</span><span class="tag">Calibre</span><span class="tag">COMSOL</span><span class="tag">应用材料</span><span class="tag">泛林</span><span class="tag">爱德万</span><span class="tag">制造仿真</span><span class="tag">2026-11-04</span>
+      </div>
+      <a href="https://aiproducthub.cn/newsflash/nvidia-ai-defined-fab-accelerated-simulation-speeds-up-process-design" target="_blank">📰 AI产品库 报道（aiproducthub.cn，已核验可达）</a>
+    </div>
+
+    <!-- NEWS: Xpeedic EDA2027 / AgentEvo / XAI -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>芯和半导体 (Xpeedic) · 产品发布/厂商动态 · 2026-11-02（来源：新浪财经，链接经核验 HTTP 200 且页面含所述表述）</div>
+      <h4>🚀 芯和半导体 2026 用户生态大会发布 EDA2027：AgentEvo 代理式 AI 超级智能体平台 + XAI 可信物理智能底座</h4>
+      <p>10 月 30 日，2026 芯和半导体用户生态大会在上海举办，主题为「芯跃系统，智驭万变」，超千名产业链企业与高校代表围绕 STCO（芯片到系统协同优化）、系统级 EDA 与 AI for EDA 展开交流。芯和发布 EDA2027 版本：除全新 3DIC PDK 与光电联合仿真平台外，更重要的变化是 AI for EDA 从单点功能走向平台化、产品化——Agentic AI 超级智能体平台 AgentEvo 负责理解设计任务、编排工程流程并调用专业 EDA 工具；Physics AI 可信物理智能底座 XAI 利用 AI 进行建模、预测与优化，扩大可探索设计空间。联想与芯和联合打造的 EDA Agent 2.0 现场演示显示，设计迭代效率提升约 5×、人工操作减少约 90%，形成「AI 探索、专业 EDA 验证」闭环。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">芯和半导体</span><span class="tag">Xpeedic</span><span class="tag">EDA2027</span><span class="tag">AgentEvo</span><span class="tag">XAI</span><span class="tag">AI for EDA</span><span class="tag">STCO</span><span class="tag">系统级EDA</span><span class="tag">多物理场</span><span class="tag">3DIC</span><span class="tag">产品发布</span><span class="tag">2026-11-02</span>
+      </div>
+      <a href="https://finance.sina.com.cn/jjxw/2026-11-02/doc-inixiira7247020.shtml" target="_blank">📰 新浪财经报道（finance.sina.com.cn，已核验可达）</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
