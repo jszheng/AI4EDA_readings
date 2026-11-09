@@ -28,6 +28,10 @@
 
 ## 运行索引（一行/天；详情不展开，避免本文件再次膨胀）
 
+- 2026-11-09 论文 +3：SAFTAC(2611.08543, cs.AR, 模拟电路 LLM 仿真增强微调)、PCBRouteAgent(2611.08175, cs.AI, PCB 布线智能体)、OpenYieldV2(2611.09248, cs.LG, SRAM 拓扑-定尺寸联合优化)；3 篇均经 arxiv.org/abs 逐篇核验（标题/作者/摘要/分类/提交日期一致）且 arxiv.org/pdf 真实下载校验 %PDF 头；新建 date/latest 页（仅论文卡片）、analog+2 / physical+1、manifest.papers 417→420、batches 142→143。（补完：新闻段 11-09 留下的 untracked PDF 与未建日期页）
+
+- 2026-11-09 新闻 +3：Siemens×NVIDIA 3D IC 电热协同设计（Siemens Newsroom）、NVIDIA「AI 定义晶圆厂」（AI产品库）、芯和 EDA2027/AgentEvo/XAI（新浪财经）；3 条 URL 均核验 HTTP 200 + 内容吻合；manifest.news 231→234、JSON totalItems 190→193、页面卡片 173→176（三者历史基线不一，各自 +3）；论文段 11-09 PDF 仍 untracked（论文日期页未建，待论文段处理）。
+
 | 2026-11-08 | 维护 | 站点维护（无论文/新闻新增）：① 新闻页大清理——去重 + 移除 >180 天陈旧条目 + 时间倒序 + 清理 header 累加垃圾与冗长 nav，卡片 233→173、区块 129→90；② 拆分自动化为「AI4EDA 论文段(工作日08:00)」+「AI4EDA 新闻段(工作日08:20)」两个轻量运行，技能 ai4eda-daily-update 新增 SCOPE 段与 memory.md 防膨胀纪律；③ 清理 5 个孤儿文件（3 个同 ID 重复 PDF、1 个超范围 PDF 2610.40042、1 个临时 html）。 |
 
 - 2026-09-02~09-14 基线期：站点 139→累计正常更新（09-28 曾整体回退至 09-14）
