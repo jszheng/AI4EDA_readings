@@ -7,9 +7,35 @@
 </head>
 <body>
 <section id="cat-analog">
-  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（67篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">🔬</span> 模拟与架构（69篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">模拟 IC、FPGA、体系结构、电路仿真、多物理场</p>
   <div class="abstracts">
+
+    <!-- 2611.09248 OpenYieldV2 -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 Topology as a Design Variable: Joint Architecture-Sizing Optimization for SRAM——把拓扑作为设计变量：SRAM 架构-定尺寸联合优化（OpenYieldV2）</div>
+      <div class="abs-meta">arXiv:2611.09248 · cs.LG · 6 Nov 2026 · Wang, Can, Ma, Junhao, Wang, Yikai, Shen, Shan, Xing, Wei W.</div>
+      <div class="abs-body">SRAM 的功耗-性能-面积-稳定性折衷取决于位元胞拓扑这一离散架构选择，而它与连续晶体管定尺寸不可分割地耦合。然而尚无开源 SRAM 工具把拓扑当作可优化变量：OpenRAM 只生成版图、不做优化；OpenYield 支持高保真评估，却把优化限制在固定 6T 单元上的标量定尺寸。本文的 OpenYieldV2 通过三项集成贡献弥补这一空白：把拓扑（bitcell 架构）作为设计变量，与晶体管定尺寸做联合优化；引入机器学习代理/多目标优化以高效探索拓扑-尺寸这一混合离散-连续空间；在开源框架内打通「架构选择 + 定尺寸 + 良率/鲁棒性评估」的端到端流程，使 SRAM 设计能在更广的设计空间中搜索更优的 PPA-稳定性权衡。属「模拟与架构 / SRAM 设计空间探索（拓扑作为变量 + 架构-定尺寸联合优化）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.09248" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.09248_OpenYieldV2.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SRAM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">架构探索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">器件定尺寸</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">联合优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计空间探索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">机器学习代理</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多目标优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">良率</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">OpenYieldV2</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.LG</span>
+      </div>
+    </div>
+
+    <!-- 2611.08543 SAFTAC -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔬 SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design——SAFTAC：面向模拟电路设计、仿真增强的开源 LLM 微调</div>
+      <div class="abs-meta">arXiv:2611.08543 · cs.AR · 5 Nov 2026 · Huang, Junsheng, Sun, Yifan, Zhang, Zhuoer, Wei, Ning, Liu, Yening, Molter, Michael, Hanumolu, Pavan Kumar, Rosenbaum, Elyse, Hu, Bin, Zhang, Huan</div>
+      <div class="abs-body">模拟集成电路（IC）设计之所以困难，是因为电路拓扑、器件定尺寸与电路性能三者紧密耦合。现有基于大语言模型（LLM）的方法要么在冻结模型上做推理期修正，要么仅在有限电路类型上训练、并不直接把仿真结果当作训练信号；核心瓶颈在于已有数据集缺乏端到端规格驱动任务所需的充分信息。本文提出 SAFTAC——对开源 LLM 做「仿真增强微调」：把仿真反馈作为训练信号注入微调过程，使模型在模拟电路设计（从规格到可用网表/尺寸）任务上直接学到与仿真一致性更强的行为，而非仅依赖冻结模型的推理期打补丁。属「模拟与架构 / LLM 辅助模拟电路设计（仿真增强微调 + 开源模型）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.08543" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.08543_SAFTAC.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟与架构</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模拟电路设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">仿真增强微调</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源模型</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">器件定尺寸</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">规格驱动</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SAFTAC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AI</span>
+      </div>
+    </div>
 
     <!-- 2611.00187 CAPER -->
     <div class="abs-card">
