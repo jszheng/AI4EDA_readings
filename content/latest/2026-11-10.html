@@ -19,10 +19,58 @@
 <body>
 <header>
   <h1>📅 2026-11-10 动态</h1>
-  <p class="subtitle">共 0 篇论文 · 2 条行业动态 · 来源：Synopsys 官方博客（链接经核验 HTTP 200 且页面含所述内容）/ SemiEngineering 官方周刊（链接经核验 HTTP 200 且页面含所述内容）；新闻原文日期 2026-11-09 / 2026-11-06。本页为 2026-11-10 新闻段更新（仅新闻，无当日论文）。</p>
+  <p class="subtitle">共 4 篇论文 · 2 条行业动态 · 论文来源：arXiv（cs.AI / cs.SE，2026-11-09 公告批次；4 篇均经逐篇 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致，PDF 来自 arxiv.org/pdf 真实下载并校验 %PDF 头，非占位）；新闻来源：Synopsys 官方博客 / SemiEngineering 官方周刊（链接均经核验 HTTP 200 且页面含所述内容）。本页为 2026-11-10 论文段（4 篇）+ 新闻段（2 条）合并更新。</p>
 </header>
 <section>
   <div class="abstracts">
+
+    <!-- 2611.12048 Chip Floorplanning Agents (physical) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 9 Nov 2026 · Silicon Team</div>
+      <h4>📐 Evaluating AI Agents for Industrial-Level Chip Floorplanning: A Framework and Empirical Study——评估面向工业级芯片布图规划的 AI 智能体：一个框架与实证研究</h4>
+      <p>布图规划是把逻辑电路转化为物理芯片的早期步骤：它摆放大型电路模块并约束后续逻辑布局与连线的可用空间。这些决策影响拥塞与时序，但其物理后果需经由下游实现才能显现。对 AI 智能体而言，该任务要求把工程约束转译为「质量无法仅靠工具执行成功与否判断」的空间决策。本文提出一个评估框架，将提交的布局连接到规定的下游实现流程，检查几何合法性并报告拥塞/时序代理指标，从而对工业级芯片布图规划中的 AI 智能体给出可比、可复现的评测。属「物理设计 / 芯片布图规划（AI 智能体评估框架 + 工业级下游流程闭环）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">后端物理设计</span><span class="tag">物理设计</span><span class="tag">芯片布图规划</span><span class="tag">布图规划</span><span class="tag">AI智能体</span><span class="tag">评估框架</span><span class="tag">工业级</span><span class="tag">拥塞时序</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.12048" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.12048_ChipFloorplanningAgents.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.11848 CSCA Verilog (rtl) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 9 Nov 2026 · Du, Yali, Li, Ming</div>
+      <h4>⚡ Causal Signal Credit Assignment for Verilog Code Generation via Counterfactual Hardware Verification——基于反事实硬件验证的 Verilog 代码生成因果信号信用分配</h4>
+      <p>大语言模型（LLM）改善了 Verilog 生成，但功能正确性仍难优化——因为仿真通常只给出粗粒度的模块级「通过/失败」结果，既丢弃了部分正确 RTL 模块中的有用证据，也无法判断某条源语句是否对观测到的输出行为负有功能责任。本文提出 CSCA（因果信号信用分配）——一个面向 Verilog 生成的反事实偏好优化框架：先对信号级行为做连续验证，把模块级反馈分解为每条语句/信号的细粒度因果信用，再用反事实偏好优化指导生成，让模型学到「哪条语句导致哪个输出」，从而显著提升功能正确性。属「前端 RTL / Verilog 生成（反事实偏好优化 + 信号级因果信用 + 硬件验证）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">Verilog</span><span class="tag">代码生成</span><span class="tag">功能正确性</span><span class="tag">反事实偏好优化</span><span class="tag">信号级因果信用</span><span class="tag">硬件验证</span><span class="tag">大语言模型</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.11848" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.11848_CSCA_Verilog.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.12712 SVApshot (verify) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE · 9 Nov 2026 · Homs, Bernat, Palomar, Oscar, Moreto, Miquel, Orenes-Vera, Marcelo</div>
+      <h4>✅ Will AI mess my RTL? A snapshot-based approach to verifying AI-written RTL——AI 会搞乱我的 RTL 吗？一种基于快照、验证 AI 生成 RTL 的方法</h4>
+      <p>随着用 AI 进行 RTL 硬件开发的兴趣增长，稳健且全面的验证变得空前重要。LLM 越来越多地辅助创建与修改 RTL 设计，确保这些改动不破坏既有功能、建立对 AI 驱动工作流的信任至关重要。本文提出 SVApshot——一个全自动框架：利用 LLM 为 RTL 模块生成并系统化尝试修正 SystemVerilog 断言（SVA），彻底移除人工在断言编写与调试中的负担；通过对 RTL 改动做「快照」式比对来验证功能一致性。属「功能验证 / AI 生成 RTL 验证（SVA 自动生成与修正 + 快照式一致性校验）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">RTL验证</span><span class="tag">AI生成RTL</span><span class="tag">SystemVerilog断言</span><span class="tag">SVA</span><span class="tag">快照式一致性</span><span class="tag">LLM</span><span class="tag">自动化验证</span><span class="tag">cs.SE</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.12712" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.12712_SVApshot.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.12333 AMSchem (analog) -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 9 Nov 2026 · Shi, Yichen, Wang, Zhiyuan, Cui, Jianing, Lai, Yao, Zhang, Jinting, Tao, Zhuofu, Wang, Hongyang, Yu, Zhiping, Lin, Ting Jung, He, Lei</div>
+      <h4>🔬 AMSchem: Automated Schematic Visualization of AMS Circuits via Verifiable Agentic Generation——AMSchem：基于可验证智能体生成的模拟/混合信号电路原理图自动可视化</h4>
+      <p>数十年来，「网表到原理图」的鸿沟一直是设计自动化中的持久难题，对模拟与混合信号（AMS）电路尤甚：网表编码连通性而非视觉呈现，人工转绘可读原理图既耗时又依赖专家规范；同一鸿沟也使基于 LLM 的设计工具缺少结构化视觉反馈，被迫在「看不见的电路」上迭代。本文提出 AMSchem——一个免训练、验证器引导的智能体框架，从 AMS 网表自动生成人类可读的原理图；其通过可验证的生成闭环保证拓扑与连线正确，为 AMS 设计自动化与 LLM 辅助设计提供视觉反馈。属「模拟与架构 / AMS 电路原理图自动生成（免训练智能体 + 验证器引导）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">AMS</span><span class="tag">混合信号</span><span class="tag">原理图生成</span><span class="tag">网表到原理图</span><span class="tag">智能体</span><span class="tag">验证器引导</span><span class="tag">免训练</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.12333" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.12333_AMSchem.pdf">📥 本地PDF</a>
+    </div>
 
     <!-- NEWS: Synopsys agentic AI adoption paths blog -->
     <div class="abs-card">
