@@ -30,6 +30,8 @@
 
 - 2026-11-10 新闻 +2：Synopsys 发布代理式 AI 芯片设计「三条采用路径」框架（Synopsys 官方博客）/ SemiEngineering WIR #163（Synopsys×EU Chips JU、UCSD×Qualcomm $750K AI 芯片设计、AI 接管初级工程任务）；2 条 URL 均核验 HTTP 200 + 内容吻合；manifest.news 234→236、JSON totalItems 193→195、页面卡片 176→178（三者基线不一，各自 +2）。注：Cadence ChipStack 社区博客 URL 返回 403 未达 200、且其官方新闻稿实为 2026-02-10 超 180 天，按铁律不予收录。
 
+- 2026-11-10 论文 +4：ChipFloorplanningAgents(2611.12048, cs.AI, 工业级芯片布图规划智能体评估框架)、CSCA-Verilog(2611.11848, cs.AI, 反事实硬件验证的 Verilog 因果信号信用分配)、SVApshot(2611.12712, cs.SE, 基于快照验证 AI 生成 RTL)、AMSchem(2611.12333, cs.AI, AMS 电路原理图自动生成)；4 篇均经 arxiv.org/abs 逐篇核验（标题/作者/摘要/分类/提交日期一致）且 arxiv.org/pdf 真实下载校验 %PDF 头；并入 date/latest 页（与新闻段 2 条合并，共 6 卡片）、physical/rtl/verify/analog 各 +1、manifest.papers 420→424、batches 143→144、dates[2026-11-10].count 2→6、papers/index.html 跳转更新；联网正常，无跳过重算、无幻觉。
+
 - 2026-11-09 论文 +3：SAFTAC(2611.08543, cs.AR, 模拟电路 LLM 仿真增强微调)、PCBRouteAgent(2611.08175, cs.AI, PCB 布线智能体)、OpenYieldV2(2611.09248, cs.LG, SRAM 拓扑-定尺寸联合优化)；3 篇均经 arxiv.org/abs 逐篇核验（标题/作者/摘要/分类/提交日期一致）且 arxiv.org/pdf 真实下载校验 %PDF 头；新建 date/latest 页（仅论文卡片）、analog+2 / physical+1、manifest.papers 417→420、batches 142→143。（补完：新闻段 11-09 留下的 untracked PDF 与未建日期页）
 
 - 2026-11-09 新闻 +3：Siemens×NVIDIA 3D IC 电热协同设计（Siemens Newsroom）、NVIDIA「AI 定义晶圆厂」（AI产品库）、芯和 EDA2027/AgentEvo/XAI（新浪财经）；3 条 URL 均核验 HTTP 200 + 内容吻合；manifest.news 231→234、JSON totalItems 190→193、页面卡片 173→176（三者历史基线不一，各自 +3）；论文段 11-09 PDF 仍 untracked（论文日期页未建，待论文段处理）。
