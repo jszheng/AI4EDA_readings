@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-11-10 动态</h1>
+  <p class="subtitle">共 0 篇论文 · 2 条行业动态 · 来源：Synopsys 官方博客（链接经核验 HTTP 200 且页面含所述内容）/ SemiEngineering 官方周刊（链接经核验 HTTP 200 且页面含所述内容）；新闻原文日期 2026-11-09 / 2026-11-06。本页为 2026-11-10 新闻段更新（仅新闻，无当日论文）。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- NEWS: Synopsys agentic AI adoption paths blog -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Synopsys · 官方博客/观点 · 2026-11-09（来源：Synopsys 官方博客，链接经核验 HTTP 200 且页面含所述表述）</div>
+      <h4>🧭 Synopsys 发布代理式 AI 芯片设计「三条采用路径」框架：全栈 Synopsys / 客户自建或混合栈 / 前沿模型主导（GPT-Synopsys）</h4>
+      <p>Synopsys 发布官方博客《Agentic AI Should Fit the Way You Engineer》，提出客户落地代理式 AI 的三条路径：（1）全栈 Synopsys——Autopilot Platform + AgentEngineer + 专用任务智能体 + EDA 工具一体化，开箱即用；（2）客户自建或混合栈——保留企业既有智能体平台，通过开放的 Autopilot 架构接入 Synopsys 能力与可信工程工具；（3）前沿模型主导栈——以 GPT-Synopsys（与 OpenAI 联合为芯片设计后训练）为代表，OpenAI 提供前沿推理、Synopsys 提供领域知识与工程真值。文章强调「AI 层可以变，工程真值不能变」，无论哪条路径，设计仍需以确定性、经晶圆厂认证的 EDA 工具完成签核，核心口号是「In AI we believe, but in physics we trust」。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Synopsys</span><span class="tag">Agentic AI</span><span class="tag">Autopilot Platform</span><span class="tag">AgentEngineer</span><span class="tag">采用路径</span><span class="tag">全栈</span><span class="tag">混合栈</span><span class="tag">GPT-Synopsys</span><span class="tag">OpenAI</span><span class="tag">MCP</span><span class="tag">A2A</span><span class="tag">工程真值</span><span class="tag">2026-11-09</span>
+      </div>
+      <a href="https://www.synopsys.com/blogs/chip-design/agentic-ai-adoption-paths-chip-design.html" target="_blank">📰 Synopsys 官方博客（synopsys.com，已核验可达）</a>
+    </div>
+
+    <!-- NEWS: SemiEngineering WIR #163 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>SemiEngineering · 周综述/行业动态 · 2026-11-06（来源：SemiEngineering 官方周刊，链接经核验 HTTP 200 且页面含所述表述）</div>
+      <h4>📰 SemiEngineering WIR #163：Synopsys × EU Chips JU 扩大初创/研究 EDA 软件可及性（EuroCDP €525M）；UCSD × Qualcomm $750K AI 驱动芯片设计研究；SE roundtable 谈 AI 智能体接管初级工程任务</h4>
+      <p>SemiEngineering 本周综述（#163）要点：① 合作/生态——Synopsys 与欧盟 Chips JU 签署协议，通过欧洲芯片设计平台 EuroCDP（€525M）向半导体初创企业与研究团队扩大 EDA 软件可及性；欧洲 Fabless 半导体协会正式成立，ESIA 呼吁在 2028–2034 预算中设立专属半导体研发与先进封装基金。② AI for EDA 研究——UC San Diego 与 Qualcomm 启动 $750K AI 驱动芯片设计研究计划（SoC 设计、处理器架构、硬件加速器、内存系统与互连的 AI 方法）。③ 人才/教育——UCLA 公布首期 10 名半导体中心博士 Fellow（3D-IC、先进封装、硅光、存内计算、AI 硬件），实习合作方含 Synopsys、GlobalFoundries；SE 圆桌讨论「AI 正改变工程毕业生预期」——AI 智能体开始接管部分初级工程任务，要求新人具备更强实践经验、AI 素养与更高层级工程能力；美国劳工部开放 $40M 学徒激励基金（含半导体制造）。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">SemiEngineering</span><span class="tag">WIR #163</span><span class="tag">周综述</span><span class="tag">Synopsys</span><span class="tag">EU Chips JU</span><span class="tag">EuroCDP</span><span class="tag">欧洲芯片设计平台</span><span class="tag">Qualcomm</span><span class="tag">UCSD</span><span class="tag">AI芯片设计</span><span class="tag">工程教育</span><span class="tag">AI Agent</span><span class="tag">初级工程师</span><span class="tag">2026-11-06</span>
+      </div>
+      <a href="https://semiengineering.com/chip-industry-week-in-review-163/" target="_blank">📰 SemiEngineering 官方周刊（semiengineering.com，已核验可达）</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

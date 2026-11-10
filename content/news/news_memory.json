@@ -1,8 +1,22 @@
 {
-  "lastUpdate": "2026-11-09",
+  "lastUpdate": "2026-11-10",
   "cutoffDate": "2026-05-08",
-  "totalItems": 193,
+  "totalItems": 195,
   "items": [
+    {
+      "date": "2026-11-09",
+      "company": "Synopsys",
+      "title": "🧭 Synopsys 发布代理式 AI 芯片设计「三条采用路径」框架：全栈 Synopsys / 客户自建或混合栈 / 前沿模型主导（GPT-Synopsys），强调 Autopilot 开放架构与「工程真值不可替代」",
+      "link": "https://www.synopsys.com/blogs/chip-design/agentic-ai-adoption-paths-chip-design.html",
+      "keywords": ["Synopsys", "Agentic AI", "Autopilot Platform", "AgentEngineer", "采用路径", "全栈", "混合栈", "GPT-Synopsys", "OpenAI", "MCP", "A2A", "工程真值", "2026-11-09"]
+    },
+    {
+      "date": "2026-11-06",
+      "company": "SemiEngineering",
+      "title": "📰 SemiEngineering WIR #163：Synopsys × EU Chips JU 扩大初创/研究 EDA 软件可及性（EuroCDP €525M 欧洲芯片设计平台）；UCSD × Qualcomm $750K AI 驱动芯片设计研究；SE roundtable 谈 AI 智能体接管初级工程任务、对工程毕业生提出更高 AI 素养要求",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-163/",
+      "keywords": ["SemiEngineering", "WIR #163", "周综述", "Synopsys", "EU Chips JU", "EuroCDP", "欧洲芯片设计平台", "Qualcomm", "UCSD", "AI芯片设计", "工程教育", "AI Agent", "初级工程师", "2026-11-06"]
+    },
     {
       "date": "2026-11-04",
       "company": "Siemens / NVIDIA",
