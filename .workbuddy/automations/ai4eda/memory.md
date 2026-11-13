@@ -28,6 +28,8 @@
 
 ## 运行索引（一行/天；详情不展开，避免本文件再次膨胀）
 
+- 2026-11-13 论文 +4：TowardAutonomousRTL(2611.13713, cs.AI, 自主 RTL 与综合优化 Dr. RTL 多智能体)、UVMTestbenchAgent(2611.16202, cs.AR, LLM 驱动 UVM 测试平台双闭环)、TAPCO-G(2611.13931, cs.AR, LLM+图基物理先验时序功耗协同优化)、AgenticAIFormalVerif(2611.13705, cs.AI, 智能体式 AI 遇见形式验证)；4 篇均经 arxiv.org/abs 逐篇核验（标题/作者/摘要/分类/提交日期一致）且 arxiv.org/pdf 真实下载校验 %PDF 头+%%EOF；并入 date/latest 页（仅论文卡片）、rtl114/verify51/physical106/agent54 各 +1、manifest.papers 424→428、lastUpdate→2026-11-13（paper scope，新闻段由 news 自动化另行更新）。
+
 - 2026-11-10 新闻 +2：Synopsys 发布代理式 AI 芯片设计「三条采用路径」框架（Synopsys 官方博客）/ SemiEngineering WIR #163（Synopsys×EU Chips JU、UCSD×Qualcomm $750K AI 芯片设计、AI 接管初级工程任务）；2 条 URL 均核验 HTTP 200 + 内容吻合；manifest.news 234→236、JSON totalItems 193→195、页面卡片 176→178（三者基线不一，各自 +2）。注：Cadence ChipStack 社区博客 URL 返回 403 未达 200、且其官方新闻稿实为 2026-02-10 超 180 天，按铁律不予收录。
 
 - 2026-11-10 论文 +4：ChipFloorplanningAgents(2611.12048, cs.AI, 工业级芯片布图规划智能体评估框架)、CSCA-Verilog(2611.11848, cs.AI, 反事实硬件验证的 Verilog 因果信号信用分配)、SVApshot(2611.12712, cs.SE, 基于快照验证 AI 生成 RTL)、AMSchem(2611.12333, cs.AI, AMS 电路原理图自动生成)；4 篇均经 arxiv.org/abs 逐篇核验（标题/作者/摘要/分类/提交日期一致）且 arxiv.org/pdf 真实下载校验 %PDF 头；并入 date/latest 页（与新闻段 2 条合并，共 6 卡片）、physical/rtl/verify/analog 各 +1、manifest.papers 420→424、batches 143→144、dates[2026-11-10].count 2→6、papers/index.html 跳转更新；联网正常，无跳过重算、无幻觉。

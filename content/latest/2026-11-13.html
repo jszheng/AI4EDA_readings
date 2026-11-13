@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-11-13 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 来源：arXiv（cs.AR / cs.AI，来自 2026-11-10~11-12 公告批次；4 篇均逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致；PDF 来自 arxiv.org/pdf 真实下载，已校验 %PDF 头，非占位）。本批次覆盖 前端 RTL / 功能验证 / 后端物理设计 / AI Agent 四大方向。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2611.13713 Toward Autonomous RTL and Synthesis Optimization -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 10 Nov 2026 · Fang, Wenji, Lu, Yao, Wang, Jinghua, Xie, Zhiyao</div>
+      <h4>⚡ Toward Autonomous RTL and Synthesis Optimization: Benchmarking and Self-Improving Agents——迈向自主 RTL 与综合优化：基准评测与自改进智能体</h4>
+      <p>大语言模型（LLM）与自主智能体正为硬件设计优化创造新机遇。本文探讨通往自主 RTL 与综合优化的三个关联方向：(1) 真实基准评测——讨论基于参考与开放式 RTL 优化基准，在真实 EDA 工作流下评估优化机会；(2) 工具接地的 RTL 优化——提出 Dr. RTL 多智能体框架，自动化关键路径分析、RTL 重写与实现级评测，并通过可复用优化技能持续改进；在 20 个真实 RTL 设计上，Dr. RTL 相对商业综合取得平均 WNS/TNS 改善 21%/17%、面积降 6%；(3) 设计专属的综合优化——探索智能体驱动的综合脚本调优，以及跨中间表示、工艺无关优化与工艺映射的可执行综合算法发现。最终展望由验证约束与实现反馈引导、联合探索架构/RTL/EDA 算法设计空间的 AI 原生设计自动化。属「前端 RTL / RTL 与综合优化（多智能体 Dr. RTL + 工具接地 + 自改进优化技能）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">RTL优化</span><span class="tag">综合优化</span><span class="tag">自主智能体</span><span class="tag">Dr. RTL</span><span class="tag">多智能体框架</span><span class="tag">工具接地</span><span class="tag">自改进</span><span class="tag">基准评测</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.13713" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.13713_TowardAutonomousRTL.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.16202 Agentic Python Framework for LLM-Driven UVM Testbench Synthesis -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 12 Nov 2026 · Kumar, Vikash</div>
+      <h4>✅ An Agentic Python Framework for LLM-Driven UVM Testbench Synthesis with Closed-Loop Compiler Feedback——面向 LLM 驱动 UVM 测试平台综合、带闭环编译器反馈的智能体式 Python 框架</h4>
+      <p>协议桥验证是 SoC 开发的持久瓶颈：每新增一个桥实例，工程师都要从零手工搭建完整 UVM 测试平台，耗费 40–100 工程小时。本文提出一个智能体式 Python 框架，从结构化「验证清单」（编码接口拓扑、协议语义与覆盖意图的 JSON 规格）为任意 IP 与子系统配置生成完整、协议感知的 UVM 测试平台。框架采用双闭环架构：内层编译器反馈环注入分类后的 UVM 诊断（而非原始工具输出），外层覆盖环由针对清单的意图缺口分析驱动。在 AMBA AHB-to-APB 桥（代表性生产级协议桥，含 7 态控制 FSM、两阶段 APB 握手、非平凡突发串行化逻辑）上验证，实现 96.8% 功能覆盖率、4.7× 启动加速、协议验证完整度 0.87，生成的 4623 行测试平台仅 2.1% 需人工修正；其生成的记分板还独立发现了一个手工基线完全遗漏的关键 RTL 功能故障。跨四类协议族验证显示加速随协议复杂度上升（APB 从属 3.1× 到 CHI 从属 6.1×）。属「功能验证 / UVM 测试平台生成（智能体式框架 + 双闭环编译器/覆盖反馈）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">UVM</span><span class="tag">测试平台生成</span><span class="tag">智能体式框架</span><span class="tag">闭环编译器反馈</span><span class="tag">覆盖意图</span><span class="tag">SoC验证</span><span class="tag">AHB-APB</span><span class="tag">协议桥</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.16202" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.16202_UVMTestbenchAgent.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.13931 TAPCO-G -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 10 Nov 2026 · Tang, Wuqian, Wang, Zixiao, Lin, Che-Chien, Fu, Fong-Hua, Shion-Korsak, Laura Angélica, Zhang, Xinyun, Yu, Bei, Wang, Chun-Yao</div>
+      <h4>📐 TAPCO-G: LLM-Guided Design-Adaptive Timing and Power Co-Optimization with Graph-Based Physical Priors——TAPCO-G：以图基物理先验引导、LLM 引导的设计自适应时序与功耗协同优化</h4>
+      <p>布局后时序与功耗协同优化对满足建立时间目标、在布局约束内降功耗至关重要。一次单元替换可改善某条路径时序，却增大其它路径功耗或减小其裕量；传统优化器依固定规则调度与接受修复，难以针对设计专属瓶颈。LLM 可提议修改这些规则，但本身无法可靠估计单元替换对端点裕量与功耗的影响。TAPCO-G 将 LLM 引导的优化器自适应与图基物理先验结合评估候选单元替换：外环用物理设计反馈调优工具设置、并在调优停滞时修订可执行修复策略；内环把时延估计锚定到静态时序分析（STA）快照，计入上游驱动-负载变化并把时延漂移传播到时序端点，再结合粗到细的功耗筛选优先物理试验候选。TAPCO-G 生成的实现布局合法、逻辑等价，并在 MLCAD 2026 竞赛全部 8 个 ASAP7 基准上超越 CERBERUS（平均质量分增益 5.516），平均比 TAPCO 高 21.648 分。属「后端物理设计 / 时序-功耗协同优化（LLM 引导 + 图基物理先验 + STA 锚定）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">后端物理设计</span><span class="tag">物理设计</span><span class="tag">时序优化</span><span class="tag">功耗协同优化</span><span class="tag">TAPCO-G</span><span class="tag">LLM引导</span><span class="tag">图基物理先验</span><span class="tag">STA锚定</span><span class="tag">ASAP7</span><span class="tag">MLCAD2026</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.13931" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.13931_TAPCO_G.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.13705 Agentic AI Meets Formal Verification -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI · 10 Nov 2026 · Fang, Wenji, Wu, Yuchao, Wang, Jing, Xie, Zhiyao</div>
+      <h4>🤖 Agentic AI Meets Formal Verification in the Era of Agentic Hardware Development——智能体式 AI 遇见形式验证：智能体式硬件开发时代</h4>
+      <p>随着 AI 智能体生成与优化硬件电路的能力日益增强，确保 AI 生成设计的正确性变得愈发重要；同时 AI 的进步降低了开发与运用形式化方法的门槛，为自动化与改进硬件验证创造新机遇。这篇邀请论文概述 AI 时代硬件形式化方法的 methodology 与应用：首先考察智能体式 AI 如何在规范、证明构造与推理引擎三个层面推进硬件形式方法；其次讨论形式方法如何通过 RTL 生成、调试与保持正确性的优化来支撑可靠的 AI 驱动硬件开发；综述代表性研究及作者近期贡献，提炼关键技术进展与实验洞见；最后探讨「证明原生（proof-native）硬件开发」的未来方向——形式推理有望成为自主硬件设计不可分割的一部分。属「AI Agent / 智能体式硬件开发 + 形式验证（规范-证明-推理三层面 + 证明原生愿景）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">AI Agent</span><span class="tag">智能体式AI</span><span class="tag">形式验证</span><span class="tag">形式方法</span><span class="tag">硬件开发</span><span class="tag">证明原生</span><span class="tag">RTL生成</span><span class="tag">调试</span><span class="tag">正确性保持</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.13705" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.13705_AgenticAIFormalVerif.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（105篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（106篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+
+    <!-- 2611.13931 TAPCO-G -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 TAPCO-G: LLM-Guided Design-Adaptive Timing and Power Co-Optimization with Graph-Based Physical Priors——TAPCO-G：以图基物理先验引导、LLM 引导的设计自适应时序与功耗协同优化</div>
+      <div class="abs-meta">arXiv:2611.13931 · cs.AR · 10 Nov 2026 · Tang, Wuqian, Wang, Zixiao, Lin, Che-Chien, Fu, Fong-Hua, Shion-Korsak, Laura Angélica, Zhang, Xinyun, Yu, Bei, Wang, Chun-Yao</div>
+      <div class="abs-body">布局后时序与功耗协同优化对满足建立时间目标、在布局约束内降功耗至关重要。一次单元替换可改善某条路径时序，却增大其它路径功耗或减小其裕量；传统优化器依固定规则调度与接受修复，难以针对设计专属瓶颈。LLM 可提议修改这些规则，但本身无法可靠估计单元替换对端点裕量与功耗的影响。TAPCO-G 将 LLM 引导的优化器自适应与图基物理先验结合评估候选单元替换：外环用物理设计反馈调优工具设置、并在调优停滞时修订可执行修复策略；内环把时延估计锚定到静态时序分析（STA）快照，计入上游驱动-负载变化并把时延漂移传播到时序端点，再结合粗到细的功耗筛选优先物理试验候选。TAPCO-G 生成的实现布局合法、逻辑等价，并在 MLCAD 2026 竞赛全部 8 个 ASAP7 基准上超越 CERBERUS（平均质量分增益 5.516），平均比 TAPCO 高 21.648 分。属「后端物理设计 / 时序-功耗协同优化（LLM 引导 + 图基物理先验 + STA 锚定）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.13931" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.13931_TAPCO_G.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">后端物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">时序优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功耗协同优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">TAPCO-G</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM引导</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">图基物理先验</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">STA锚定</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ASAP7</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">MLCAD2026</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
 
     <!-- 2611.12048 Chip Floorplanning Agents -->
     <div class="abs-card">
