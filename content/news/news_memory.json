@@ -1,8 +1,59 @@
 {
-  "lastUpdate": "2026-11-10",
+  "lastUpdate": "2026-11-13",
   "cutoffDate": "2026-05-08",
-  "totalItems": 195,
+  "totalItems": 197,
   "items": [
+    {
+      "date": "2026-11-13",
+      "company": "华大九天 (Empyrean) / 亚科鸿禹 / 思尔芯 (S2C)",
+      "title": "🇨🇳 华大九天联合大湾区基金完成国产数字前端 EDA 专业化整合——亚科鸿禹与思尔芯合并重组为「新禹思」(HyperS2C)，获央企战新基金与华大九天共同领投、合计 5 亿元增资，推进 EDA+AI 战略（智能体产品导入验证流程）",
+      "link": "https://www.cs.com.cn/ssgs/01/2026/11/13/detail_2026111310052083.html",
+      "keywords": [
+        "华大九天",
+        "Empyrean",
+        "新禹思",
+        "HyperS2C",
+        "亚科鸿禹",
+        "思尔芯",
+        "S2C",
+        "国产EDA",
+        "数字前端",
+        "EDA整合",
+        "EDA+AI",
+        "智能体EDA",
+        "大湾区基金",
+        "央企战新基金",
+        "5亿增资",
+        "IC China 2026",
+        "2026-11-13"
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "company": "SemiEngineering / Siemens / Cadence / Expedera",
+      "title": "📰 SemiEngineering WIR #164：Siemens 发布融合领域专用 AI 智能体的 SI/PI 验证工具包（SerDes/DDR/信号完整性/电源完整性 + 物理仿真）；Expedera×Cadence 预硅前仿真演示边缘 AI 子系统；Cadence 借 EuroCDP 向欧洲初创开放 EDA 工具、并推板级互联设计环境",
+      "link": "https://semiengineering.com/chip-industry-week-in-review-164/",
+      "keywords": [
+        "SemiEngineering",
+        "WIR #164",
+        "周综述",
+        "Siemens",
+        "AI Agent",
+        "SI/PI验证",
+        "信号完整性",
+        "电源完整性",
+        "SerDes",
+        "DDR",
+        "Cadence",
+        "Expedera",
+        "边缘AI",
+        "预硅前仿真",
+        "EuroCDP",
+        "欧洲初创",
+        "板级设计",
+        "2026-11-13"
+      ]
+    },
     {
       "date": "2026-11-09",
       "company": "Synopsys",
