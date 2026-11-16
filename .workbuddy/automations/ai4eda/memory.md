@@ -28,6 +28,10 @@
 
 ## 运行索引（一行/天；详情不展开，避免本文件再次膨胀）
 
+- 2026-11-16 新闻 +2：新思科技×台积电以 AI 与先进设计加速系统创新（A14 制程认证+代理式 AI 多晶粒设计+COUPE/CPO，11-10 中央社/IEK，HTTP 200 核验）；Cognichip 公开 ACI Enterprise AI 芯片设计平台（千万级样本+智能体工作流+项目记忆，周期数月→数天，客户含瑞萨/SiTime，11-12 IT时代网/网易，HTTP 200 核验）；2 条均为厂商/产品/合作类动态、内容吻合、非 arXiv/征稿、已去重。当日日期页原先不存在（论文段未建）→ 新建仅含新闻的 date/latest 页（各 2 卡），papers/index.html 跳转补指向 11-16；manifest.news 238→240、lastUpdate→2026-11-16、latest/dates 数组顶部插入 11-16（count=2）；JSON totalItems 197→199、新闻页卡片 180→182、TOC 60→62；cutoffDate 维持 2026-05-08（大整理范畴，本次不清理）。排除项：Siemens HyperLynx Agentic Toolkit（11-10 官方稿）内容=11-13 WIR#164 已收录的 SI/PI 工具包，去重跳过；华大九天新禹思(11-14 转载)/Cadence Maestro(10-26 已收录)重复；复旦微 GREVO 页面 000 无法连接；ic-king「新思×英伟达40%」为 GTC 2025 旧稿；WIR#165 尚不存在(404)。遗留：content/dates/2611.18517_OpenLayout.pdf 为论文段残留（未被页面引用），未纳入本次提交。
+
+- 2026-11-13 新闻 +2：华大九天联合大湾区基金完成数字前端 EDA 整合——亚科鸿禹×思尔芯合并为「新禹思」(HyperS2C)，央企战新基金+华大九天领投、合计 5 亿增资，推进 EDA+AI 智能体战略（中国证券报·中证网，HTTP 200 核验）；SemiEngineering WIR #164（11-13）含 AI4EDA：Siemens 发布融合领域专用 AI 智能体的 SI/PI 验证工具包、Expedera×Cadence 边缘 AI 预硅前仿真、Cadence 借 EuroCDP 向欧洲初创开放 EDA（semiengineering.com，HTTP 200 核验）；2 条均经核验、内容吻合、非 arXiv/征稿；manifest.news 236→238、JSON totalItems 195→197、页面卡片 178→180、日期页 11-13 追加剧新闻卡（count 4→6）；日期页已由论文段创建故仅追加新闻卡，papers/index.html 无需重做。
+
 - 2026-11-13 论文 +4：TowardAutonomousRTL(2611.13713, cs.AI, 自主 RTL 与综合优化 Dr. RTL 多智能体)、UVMTestbenchAgent(2611.16202, cs.AR, LLM 驱动 UVM 测试平台双闭环)、TAPCO-G(2611.13931, cs.AR, LLM+图基物理先验时序功耗协同优化)、AgenticAIFormalVerif(2611.13705, cs.AI, 智能体式 AI 遇见形式验证)；4 篇均经 arxiv.org/abs 逐篇核验（标题/作者/摘要/分类/提交日期一致）且 arxiv.org/pdf 真实下载校验 %PDF 头+%%EOF；并入 date/latest 页（仅论文卡片）、rtl114/verify51/physical106/agent54 各 +1、manifest.papers 424→428、lastUpdate→2026-11-13（paper scope，新闻段由 news 自动化另行更新）。
 
 - 2026-11-10 新闻 +2：Synopsys 发布代理式 AI 芯片设计「三条采用路径」框架（Synopsys 官方博客）/ SemiEngineering WIR #163（Synopsys×EU Chips JU、UCSD×Qualcomm $750K AI 芯片设计、AI 接管初级工程任务）；2 条 URL 均核验 HTTP 200 + 内容吻合；manifest.news 234→236、JSON totalItems 193→195、页面卡片 176→178（三者基线不一，各自 +2）。注：Cadence ChipStack 社区博客 URL 返回 403 未达 200、且其官方新闻稿实为 2026-02-10 超 180 天，按铁律不予收录。

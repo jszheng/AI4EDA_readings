@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-11-16 动态</h1>
+  <p class="subtitle">共 2 条行业动态 · 本页为新闻段单独更新（当日暂无论文卡片）· 新闻来源：中央社/IEK 产业情报网（新思科技×台积电）、IT时代网/网易（Cognichip ACI Enterprise）；链接均经核验 HTTP 200 且页面含所述内容，均为厂商/产品/合作类行业动态，非 arXiv 论文通知或学术征稿。同公司同事件已去重。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- NEWS: Synopsys × TSMC -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Synopsys / TSMC · 厂商合作/产品认证 · 2026-11-10（来源：中央社 · IEK 产业情报网，链接经核验 HTTP 200 且页面含所述表述）</div>
+      <h4>🤝 新思科技（Synopsys）携手台积电以 AI 与先进设计加速系统创新——A14 制程认证横跨数字/模拟流程、代理式 AI 自动化多晶粒设计、COUPE 光子引擎助推 CPO 共同封装光学</h4>
+      <p>11 月 10 日新思科技发布新闻稿，宣布通过 AI 驱动 EDA 流程、多晶粒（multi-die）设计流程以及经硅验证的接口与基础 IP，与台积电协同帮助客户应对日益增长的芯片设计复杂度，并加速台积电最新制程与先进封装技术的采用。要点：① 横跨数字与 analog 流程的 A14 制程认证，并支持代理式 AI（agentic AI）能力；② 借助代理式 AI 自动完成模拟、数字与多晶粒设计工作流，提升生产力与自主性；③ 通过贯通 3DIC 实现与多物理场分析/优化的整合式光电共设计流程，利用台积电紧凑型通用光子引擎（COUPE）技术实现共封装光学（CPO）设计，协助共同客户高效开发并验证采用多晶粒设计的先进光学互连架构系统。台积电表示，与 Synopsys 等 OIP 生态伙伴协作，持续满足 AI 与高性能运算快速增长的需求。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Synopsys</span><span class="tag">新思科技</span><span class="tag">TSMC</span><span class="tag">台积电</span><span class="tag">合作</span><span class="tag">AI驱动EDA</span><span class="tag">A14制程</span><span class="tag">代理式AI</span><span class="tag">多晶粒设计</span><span class="tag">3DIC</span><span class="tag">多物理场</span><span class="tag">COUPE</span><span class="tag">CPO</span><span class="tag">共封装光学</span><span class="tag">2026-11-10</span>
+      </div>
+      <a href="https://ieknet.iek.org.tw/ieknews/news_more.aspx?nsl_id=200e4578ab8b48f999e80520e10a27fb" target="_blank">📰 中央社 · IEK 产业情报网（ieknet.iek.org.tw，已核验可达）</a>
+    </div>
+
+    <!-- NEWS: Cognichip ACI Enterprise -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>Cognichip · 初创公司/产品发布 · 2026-11-12（来源：IT时代网 · 网易，链接经核验 HTTP 200 且页面含所述表述）</div>
+      <h4>🚀 Cognichip 公开 AI 芯片设计平台 ACI Enterprise——千万级训练样本 + 智能体工作流 + 项目记忆，目标把设计周期从数月压缩到数天，客户含瑞萨/SiTime</h4>
+      <p>11 月 12 日，Cognichip 公开展示其 AI 辅助芯片设计平台 ACI Enterprise，把专用模型、智能体（agentic）工作流、项目记忆与推理算力整合为可部署系统，目标让芯片设计周期从数月缩短到数天。平台训练数据集已超一千万条样本（含自研方案与合成技术生成数据）；ACI 可读取规格说明、探索微架构选项、生成 RTL、执行验证、定位并修复功能问题，并在满足功耗/性能/面积（PPA）目标下优化设计，也可接入企业既有工具链。其首席产品官表示，架构、微架构与 RTL 处于同一抽象体系，微架构调整会自动反映到 RTL、反之亦然，可在工程师选定方案前并行评估多种架构路径。公司已参与 40 余个客户项目（涵盖微控制器与加密芯片等），客户包括瑞萨（Renesas）与 SiTime；在一次评估中以客户提供的 55 页微架构规格为输入探索设计方案。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">Cognichip</span><span class="tag">ACI Enterprise</span><span class="tag">AI芯片设计</span><span class="tag">智能体工作流</span><span class="tag">项目记忆</span><span class="tag">RTL生成</span><span class="tag">验证</span><span class="tag">微架构探索</span><span class="tag">PPA优化</span><span class="tag">1000万训练样本</span><span class="tag">瑞萨</span><span class="tag">SiTime</span><span class="tag">2026-11-12</span>
+      </div>
+      <a href="https://www.163.com/dy/article/LBGG6KML05527PMU.html" target="_blank">📰 IT时代网 · 网易（163.com，已核验可达）</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

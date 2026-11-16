@@ -1,8 +1,61 @@
 {
-  "lastUpdate": "2026-11-13",
+  "lastUpdate": "2026-11-16",
   "cutoffDate": "2026-05-08",
-  "totalItems": 197,
+  "totalItems": 199,
   "items": [
+    {
+      "date": "2026-11-16",
+      "company": "Synopsys / TSMC",
+      "title": "🤝 新思科技（Synopsys）携手台积电以 AI 与先进设计加速系统创新（11-10）——A14 制程认证横跨数字/模拟流程、代理式 AI 自动化多晶粒设计、COUPE 光子引擎助推 CPO 共同封装光学",
+      "link": "https://ieknet.iek.org.tw/ieknews/news_more.aspx?nsl_id=200e4578ab8b48f999e80520e10a27fb",
+      "keywords": [
+        "Synopsys",
+        "新思科技",
+        "TSMC",
+        "台积电",
+        "合作",
+        "AI驱动EDA",
+        "A14制程",
+        "代理式AI",
+        "agentic AI",
+        "多粒粒设计",
+        "3DIC",
+        "多物理场",
+        "COUPE",
+        "CPO",
+        "共同封装光学",
+        "硅验证IP",
+        "OIP生态",
+        "2026-11-10",
+        "2026-11-16"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "company": "Cognichip",
+      "title": "🚀 Cognichip 公开 AI 芯片设计平台 ACI Enterprise（11-12）——千万级训练样本 + 智能体工作流 + 项目记忆，目标把设计周期从数月压缩到数天，客户含瑞萨/SiTime",
+      "link": "https://www.163.com/dy/article/LBGG6KML05527PMU.html",
+      "keywords": [
+        "Cognichip",
+        "ACI Enterprise",
+        "AI芯片设计",
+        "智能体工作流",
+        "项目记忆",
+        "RTL生成",
+        "验证",
+        "微架构探索",
+        "PPA优化",
+        "1000万训练样本",
+        "40+客户项目",
+        "Renesas",
+        "瑞萨",
+        "SiTime",
+        "55页规格",
+        "UVM覆盖率",
+        "2026-11-12",
+        "2026-11-16"
+      ]
+    },
     {
       "date": "2026-11-13",
       "company": "华大九天 (Empyrean) / 亚科鸿禹 / 思尔芯 (S2C)",
@@ -59,14 +112,43 @@
       "company": "Synopsys",
       "title": "🧭 Synopsys 发布代理式 AI 芯片设计「三条采用路径」框架：全栈 Synopsys / 客户自建或混合栈 / 前沿模型主导（GPT-Synopsys），强调 Autopilot 开放架构与「工程真值不可替代」",
       "link": "https://www.synopsys.com/blogs/chip-design/agentic-ai-adoption-paths-chip-design.html",
-      "keywords": ["Synopsys", "Agentic AI", "Autopilot Platform", "AgentEngineer", "采用路径", "全栈", "混合栈", "GPT-Synopsys", "OpenAI", "MCP", "A2A", "工程真值", "2026-11-09"]
+      "keywords": [
+        "Synopsys",
+        "Agentic AI",
+        "Autopilot Platform",
+        "AgentEngineer",
+        "采用路径",
+        "全栈",
+        "混合栈",
+        "GPT-Synopsys",
+        "OpenAI",
+        "MCP",
+        "A2A",
+        "工程真值",
+        "2026-11-09"
+      ]
     },
     {
       "date": "2026-11-06",
       "company": "SemiEngineering",
       "title": "📰 SemiEngineering WIR #163：Synopsys × EU Chips JU 扩大初创/研究 EDA 软件可及性（EuroCDP €525M 欧洲芯片设计平台）；UCSD × Qualcomm $750K AI 驱动芯片设计研究；SE roundtable 谈 AI 智能体接管初级工程任务、对工程毕业生提出更高 AI 素养要求",
       "link": "https://semiengineering.com/chip-industry-week-in-review-163/",
-      "keywords": ["SemiEngineering", "WIR #163", "周综述", "Synopsys", "EU Chips JU", "EuroCDP", "欧洲芯片设计平台", "Qualcomm", "UCSD", "AI芯片设计", "工程教育", "AI Agent", "初级工程师", "2026-11-06"]
+      "keywords": [
+        "SemiEngineering",
+        "WIR #163",
+        "周综述",
+        "Synopsys",
+        "EU Chips JU",
+        "EuroCDP",
+        "欧洲芯片设计平台",
+        "Qualcomm",
+        "UCSD",
+        "AI芯片设计",
+        "工程教育",
+        "AI Agent",
+        "初级工程师",
+        "2026-11-06"
+      ]
     },
     {
       "date": "2026-11-04",
