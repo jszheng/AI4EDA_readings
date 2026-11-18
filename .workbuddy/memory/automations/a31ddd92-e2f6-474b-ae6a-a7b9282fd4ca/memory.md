@@ -1,3 +1,17 @@
+# AI4EDA 新闻段自动化运行记录 — 2026-11-18
+
+## 2026-11-18 · 新闻段（scope=news，自动化触发，unattended）
+
+- 当日 date/latest 页已由论文段创建（4 论文卡，commit 39fee96）→ 仅追加新闻卡片（各 6 卡：4 论文 + 2 新闻）；papers/index.html 跳转无需重做。
+- 新增 2 条行业动态（均经 HTTP 200 核验 + 内容吻合，非 arXiv/征稿，已去重）：
+  1. Siemens 签署协议收购 Breker Verification Systems（11-17 官方新闻室）——AI 驱动 SoC 级验证（测试套件合成 + System VIP）并入 Questa One / Avery 验证 IP 组合，应对 AI/HPC、Chiplet、多晶粒验证复杂度，预计 2026-12 交割。
+  2. 芯星元（NovaSilicon）完成近亿元 Pre-A+ 融资（11-17 财联社·科创板日报，腾讯新闻转载）——成立 5 个月连融三轮，CDK 电路设计套件 + 多 AI 智能体重构「规格→GDS」，已落地 UCIe PHY IP 与 3D 存算一体设计服务。
+- 排除项：Socionext×Cadence InnoStack 3nm SoC 物理设计（evertiq 11-17，HTTP 200）实为 10-23 已收录的同一部署事件，去重跳过；Synopsys@SC'26（11-16）为展会展示非产品/合作公告，不收录；SemiEngineering WIR #165 尚不存在（404）；华大九天新禹思/Cadence Maestro/Synopsys EuroCDP 均已收录。
+- 计数更新：manifest.news 240→242、dates[11-18].count 4→6、lastUpdate 维持 11-18；JSON totalItems 199→201、lastUpdate→11-18、cutoffDate 维持 2026-05-08；新闻页卡片 182→184、TOC 62→64、头部最后更新→11-18。180 天清理评估：JSON 有 27 条早于 2026-05-22，但展示页 11-08 已清至 05-08，属周期性大整理范畴，本次 news 段仅追加。
+- 提交：git add 显式路径（content/dates/2026-11-18.html、content/latest/2026-11-18.html、content/news/index.html、content/news/news_memory.json、manifest.js；无 git add .）→ commit → push origin/main。
+
+---
+
 # AI4EDA 新闻段自动化运行记录 — 2026-11-16
 
 ## 2026-11-16 · 新闻段（scope=news，自动化触发，unattended）
