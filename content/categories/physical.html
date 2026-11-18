@@ -7,9 +7,23 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（107篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（108篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2611.21954 ThermLeT -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 ThermLeT: Transformer-based Temperature Prediction for 2.5D Chiplet Architecture——ThermLeT：面向 2.5D 芯粒架构的 Transformer 温度预测</div>
+      <div class="abs-meta">arXiv:2611.21954 · cs.AR / cs.AI / cs.LG · 16 Nov 2026 · Parekh, Varun Darshana, Devulapally, Anusha, Devarapalli, Sivani, Henderson, Cassius, Yu, Shimeng, Narayanan, Vijaykrishnan</div>
+      <div class="abs-body">异构 2.5D 芯粒封装带来高性能与定制能力，但密度提升放大了热挑战。ThermLeT 是一个多模态、基于 Transformer、尺度不变的代理模型，融合功率密度图、空间坐标嵌入、材料属性与传热率，在 13 ms 内预测稳态温度，比 ANSYS 等有限元求解器快约四个数量级。作者构建含 6,221 个芯粒布局的数据集（由三种代表性架构扰动生成）；150 样本测试集上 RMSE 3.16°C、MAE 2.24°C，较 ThermEDGe 精度提升 35%、较 HotSpot 提升 71%，推理延迟分别低约 6× 与 11×，消融证实对未见布图规划鲁棒泛化，代码与数据集开源。属「后端物理设计 / 芯粒热建模（多模态 Transformer 代理 + 快速热 DSE）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.21954" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.21954_ThermLeT.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">后端物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">2.5D芯粒</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">热预测</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Transformer</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多模态代理模型</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">设计空间探索</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">有限元加速</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">开源</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+
 
     <!-- 2611.18517 OpenLayout -->
     <div class="abs-card">

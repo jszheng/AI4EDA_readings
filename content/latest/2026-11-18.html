@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-11-18 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 0 条行业动态 · 论文来源：arXiv（cs.AR / cs.LG / cs.AI，2026-11-13~11-17 公告批次；已逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致，PDF 来自 arxiv.org/pdf 真实下载并校验 %PDF 头与 %%EOF，非占位）。本次为论文段（scope=paper），仅收录论文；行业动态由新闻段另行更新。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2611.22328 PVTSizing 2.0 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · 17 Nov 2026 · Kong, Zichen, Song, Minghuan, Tang, Xiyuan, Wei, Ziming, Zhong, Yi, Wang, Yuan</div>
+      <h4>🔬 PVTSizing 2.0: A Fast and Reliable Analog Circuit Sizing Operator for Agentic EDA Workflows——PVTSizing 2.0：面向智能体式 EDA 工作流的快速可靠模拟电路尺寸综合算子</h4>
+      <p>模拟电路设计自动化既需要协调的工具执行，也需要高效的数值搜索。LLM 为组织工具执行提供了新途径，但找到满足跨工艺/电压/温度（PVT）角规格的单一尺寸方案仍然代价高昂。PVTSizing 2.0 提出一套以独立可用数值优化器为核心的人机协同工作流：智能体承接设计师批准的任务并执行与复核结果；优化器通过损失引导更新减少不必要的训练，并用评论家引导的局部细化探索更多候选，同时处理跨角冲突；可选的 LLM 顾问提供参数间关系，把数值搜索聚焦到电路感知的方向，而优化器自行选择调整幅度并通过仿真验证效果。在 4 个电路基准上，独立优化器完成全部 40 次运行，总平均运行时间较原始 PVTSizing 加速 7.3×；最佳知识注入配置相比独立优化器进一步降低平均运行时间 39.9%、仿真样本数 35.4%。属「模拟电路设计自动化 / PVT 感知尺寸综合（智能体工作流 + 数值优化器 + 可选 LLM 知识注入）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟电路设计</span><span class="tag">尺寸综合</span><span class="tag">PVT角</span><span class="tag">智能体工作流</span><span class="tag">LLM顾问</span><span class="tag">数值优化</span><span class="tag">损失引导</span><span class="tag">评论家引导细化</span><span class="tag">知识注入</span><span class="tag">7.3x加速</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.22328" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.22328_PVTSizing2.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.21954 ThermLeT -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI / cs.LG · 16 Nov 2026 · Parekh, Varun Darshana, Devulapally, Anusha, Devarapalli, Sivani, Henderson, Cassius, Yu, Shimeng, Narayanan, Vijaykrishnan</div>
+      <h4>📐 ThermLeT: Transformer-based Temperature Prediction for 2.5D Chiplet Architecture——ThermLeT：面向 2.5D 芯粒架构的Transformer 温度预测</h4>
+      <p>异构 2.5D 芯粒封装带来无与伦比的性能与定制能力，但密度提升也放大了热挑战。为加速设计空间探索，本文提出 ThermLeT——一个多模态、基于 Transformer、尺度不变的代理模型，融合功率密度图、空间坐标嵌入、材料属性与传热率，在 13 ms 内预测稳态温度，比 ANSYS 等传统有限元求解器快约四个数量级。为训练该 Transformer，作者还构建了包含 6,221 个芯粒布局（由三种代表性架构扰动生成）的数据集；在 150 样本测试集上，ThermLeT 达到 RMSE 3.16°C、MAE 2.24°C，较 ThermEDGe 精度提升 35%、较 HotSpot 提升 71%，推理延迟分别低约 6× 与 11×；消融研究证实其对未见布图规划的鲁棒泛化能力。代码与数据集已开源。属「后端物理设计 / 芯粒热建模（多模态 Transformer 代理 + 快速热设计空间探索）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">后端物理设计</span><span class="tag">2.5D芯粒</span><span class="tag">热预测</span><span class="tag">Transformer</span><span class="tag">多模态代理模型</span><span class="tag">设计空间探索</span><span class="tag">功率密度图</span><span class="tag">有限元加速</span><span class="tag">开源</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.21954" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.21954_ThermLeT.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.21678 RTLReviewBench -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · 14 Nov 2026 · Mahmud, Yasir</div>
+      <h4>✅ RTLReviewBench: LLM Hardware Reviewers Rarely Miss Bugs but Routinely Reject Correct RTL——RTLReviewBench：LLM 硬件审查者很少漏掉 Bug，却常常误拒正确的 RTL</h4>
+      <p>硬件团队越来越多地让大语言模型（LLM）审查寄存器传输级（RTL）代码，但模型能否在不仿真的情况下区分正确模块与有缺陷模块尚不清楚。本文提出 RTLReviewBench——一个包含 114 对「有缺陷 / 正确」Verilog 模块配对的基准：每对共享同一规格，多数缺陷模块来自 LLM 代码生成器的真实失败案例，所有标签均经仿真确认。评测 12 个商用与开源模型发现一致的不对称性：审查者很少接受有缺陷代码，却频繁拒绝正确代码——每漏掉一个 Bug 就会产生五个以上误拒。合成变异体掩盖了部分问题：在同一设计上，模型漏掉的注入 Bug 远少于真实 Bug；让模型在给出结论前先推理可显著降低较弱审查者的误拒率，且推理出现在输出中的位置比「要求推理」的指令更关键，而采样与多数投票无帮助；盲审进一步表明部分「判为有缺陷」的正确结论建立在错误技术论断之上。基准、更难拆分集、全部模型回复与评测代码已开源。属「功能验证 / LLM RTL 代码审查基准（RTL Bug 检测 + 正确代码误拒分析）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">RTL审查</span><span class="tag">LLM评测基准</span><span class="tag">Verilog</span><span class="tag">Bug检测</span><span class="tag">误拒分析</span><span class="tag">114配对</span><span class="tag">仿真确认</span><span class="tag">开源</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.21678" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.21678_RTLReviewBench.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.19056 Run, Read Back, Refine -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 14 Nov 2026 · Liu, Yang, Hou, Shiwei, Chen, Xiyuan, Yuan, Sen, You, Shao, Chen, Feifan, Li, Wencheng, Hu, Shuyang, Xia, Emma, Lu, Xiaojing, Zhang, Wenchuan, Wang, Hao, Xu, Fan, Li, Yanfeng, Li, Hongwen, Zhu, Yiming</div>
+      <h4>🤖 Run, Read Back, Refine: Observation Fidelity in Execution-Grounded EDA Agents——运行、回读、精化：执行接地型 EDA 智能体中的观测保真度</h4>
+      <p>设计工程师大量时间花在编排流程、修补封闭 EDA 工具拒绝互操作的缝隙上。本文提出一个面向 PyAether、SKILL 与 Tcl 的执行接地型 LLM 智能体，在统一的 MCP 工具（API 检索、文档、沙箱执行）上闭环「生成—执行—精化」，并已部署于生产 EDA 流程；作者提出 grounding-gap 框架，指出 EDA 脚本正确性的瓶颈在于 L4（情境）层的观测保真度，而仅靠模型规模无法触及。在 EDA-Scripting-Bench（449 个任务、三种语言、四种商用运行时）上，该系统达到 76.5% 的合并 Pass@1，而纯 LLM 为 19.7%：在模型固定时，系统级观测轴跨度达 56.8 个百分点，超过在框架固定时骨干模型 23.3 个百分点的范围——两条轴回答不同问题；观测是一条回报可度量且分级的、长期被低投的轴。属「AI Agent / 执行接地型 EDA 脚本智能体（MCP 工具闭环 + 观测保真度分析 + 生产部署）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">AI Agent</span><span class="tag">EDA脚本</span><span class="tag">执行接地</span><span class="tag">MCP工具</span><span class="tag">生成-执行-精化闭环</span><span class="tag">观测保真度</span><span class="tag">grounding-gap</span><span class="tag">PyAether</span><span class="tag">生产部署</span><span class="tag">76.5% Pass@1</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.19056" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.19056_ExecutionGroundedEDA.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
