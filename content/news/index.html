@@ -31,16 +31,18 @@
 <body>
 <header>
   <h1>🌍 行业动态</h1>
-  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-11-18 · 页面于 2026-11-08 重新整理（去重 + 移除 180 天前陈旧条目 + 时间倒序） · 行业动态（去重后 184 条）</p>
+  <p class="subtitle" style="margin-top:4px;font-size:.8rem;">最后更新：2026-11-19 · 页面于 2026-11-08 重新整理（去重 + 移除 180 天前陈旧条目 + 时间倒序） · 行业动态（去重后 186 条）</p>
   <div class="stats">
     <div class="stat">    <div class="num">417</div><div class="label">论文收录</div></div>
     <div class="stat"><div class="num">142</div><div class="label">更新批次</div></div>
-    <div class="stat"><div class="num">184</div><div class="label">行业动态（去重后）</div></div>
+    <div class="stat"><div class="num">186</div><div class="label">行业动态（去重后）</div></div>
   </div>
 </header>
 <details class="toc">
-  <summary>📑 目录（点击展开 / 收起，共 64 条）</summary>
+  <summary>📑 目录（点击展开 / 收起，共 66 条）</summary>
   <nav>
+  <a href="#2026-11-19">2026-11-19 — 🚀 OpenAI 芯片设计技术报告：AI 重写 RTL 使 AMD 旗舰 GPU PPA 最高 +14%，Jalapeño 面积 -13%/-10%</a>
+  <a href="#2026-11-19">2026-11-19 — 🇨🇳 ICC × 智擎微联合发布 Wisdom 工程智能平台 + ChipAce/WiseRF/WiseModel/WiseKey 四款 AI 原生工具</a>
   <a href="#2026-11-18">2026-11-18 — 🤝 西门子收购 Breker Verification Systems：AI 驱动 SoC 级验证并入 Questa One / Avery 组合</a>
   <a href="#2026-11-18">2026-11-18 — 💰 芯星元 NovaSilicon 完成近亿元 Pre-A+ 融资：CDK + 多智能体重构「规格→GDS」</a>
   <a href="#2026-11-16">2026-11-16 — 🤝 新思科技×台积电以 AI 与先进设计加速系统创新：A14 制程认证 + 代理式 AI 多晶粒设计 + COUPE/CPO</a>
@@ -108,6 +110,44 @@
   </nav>
 </details>
 <div class="container">
+
+<section id="2026-11-19">
+  <div class="section-title"><span class="icon">🌍</span> 2026-11-19 <span class="badge-new">2条行业动态</span> <span class="line"></span></div>
+  <div class="date-group">
+    <div class="date-header" onclick="toggleDate(this)">
+      <h3>2026-11-19 行业动态（2条）</h3>
+      <span class="badge-count">2</span>
+      <span class="toggle">▼</span>
+    </div>
+    <div class="date-body">
+      <div class="abstracts">
+
+    <!-- NEWS: OpenAI 芯片设计技术报告 / AMD PPA +14% -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>OpenAI / AMD / Synopsys · 技术报告 / 厂商合作成果 · 2026-11-18（来源：腾讯新闻转载报道 OpenAI 官方技术报告《Advancing chip design with OpenAI models》；链接经核验 HTTP 200 且页面含所述表述）</div>
+      <h4>🚀 OpenAI 发布芯片设计技术报告：AI 重写 SystemVerilog RTL 使 AMD 旗舰 GPU IP 的 PPA 最高提升 14%，自研 Jalapeño 向量 / 矩阵单元标准单元面积减少约 13% / 10%，并与 Synopsys 合作训练 GPT-Synopsys</h4>
+      <p>OpenAI 于 11 月 18 日发布技术报告《Advancing chip design with OpenAI models》，披露用前沿模型辅助芯片设计的量化进展，是其 8 月 Jalapeño 自研推理芯片报道的深入续篇。要点：① 自 2025 年初起用 GPT-4o 辅助设计 Jalapeño，模型在向量单元（浮点加/乘、转换函数、归约逻辑、特殊功能单元）与矩阵单元（浮点运算、低精度点积）提出改进——其中一项乘法器重设计使综合后标准单元面积减少约 15%、延迟由两个时钟周期缩短到一个；团队估算向量单元标准单元面积合计减少约 13%、矩阵单元约 10%，相关优化已在 Jalapeño 硅验证（silicon bring-up）中证实；② 与 AMD 合作中，模型通过重写描述电路的 SystemVerilog RTL，在高度优化的旗舰 GPU IP 基线上取得最高 14% 的功耗/性能/面积（PPA）改善，相当于把约一年的设计进展压缩到不足 5 个月；AMD 已将部分变更纳入近期送交制造的芯片设计，另一些写入生产设计文件供后续版本使用，并在下一代旗舰 CPU 的关键模块上验证了个位数百分比的 PPA 提升；③ 模型用 Synopsys 工具验证每次 RTL 重写保持功能等价并评估 PPA 权衡，OpenAI 同时与 Synopsys 合作训练能像专业工程师一样使用其 EDA 工具的 GPT-Synopsys（该合作公告 9-30 已收录，本条为 11-18 技术成果报告，属不同事件）；④ 在 PicoRV32 与 OpenTitan 的 Ibex 两款开源 32 位 RISC-V 核上评估各代模型，约 11.2 万 token/次的可比预算下 GPT-6.2 Astra 平均得分最高；OpenAI 同时提示局限——从规格重新设计可能省略性能计数器等特性，且未做物理综合后的时序检查，故这些结果不能直接等同于整颗 GPU/CPU 的同比例提升。此为厂商技术报告与合作成果类行业动态，非 arXiv 论文通知。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">OpenAI</span><span class="tag">AMD</span><span class="tag">Synopsys</span><span class="tag">GPT-Synopsys</span><span class="tag">Jalapeño</span><span class="tag">SystemVerilog RTL重写</span><span class="tag">PPA提升14%</span><span class="tag">标准单元面积</span><span class="tag">硅验证</span><span class="tag">RISC-V</span><span class="tag">PicoRV32</span><span class="tag">Ibex</span><span class="tag">EDA工具链</span><span class="tag">2026-11-18</span>
+      </div>
+      <a href="https://news.qq.com/rain/a/20261119A03UVJ00" target="_blank">📰 腾讯新闻（news.qq.com，已核验 HTTP 200；OpenAI 官方页自动访问返回 403，故采用内容一致的中文媒体报道）</a>
+    </div>
+
+    <!-- NEWS: ICC × 智擎微 Wisdom 平台与四款 AI 原生工具 -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>上海集成电路技术与产业促进中心（ICC）/ 智擎微（上海）电子科技有限公司 · 产品联合发布 · 2026-11-19（来源：ICC 官网 icc.sh.cn，链接经核验 HTTP 200 且页面含所述内容）</div>
+      <h4>🇨🇳 ICC × 智擎微联合发布芯片设计全生命周期工程智能平台 Wisdom 及四款 AI 原生工具：AI IC 工程师 ChipAce、WiseRF / WiseModel / WiseKey，整体部署于 ICC 1.5 代 EDA 云平台</h4>
+      <p>11 月 19 日至 20 日，第三十二届集成电路设计业展览会（ICCAD-Expo 2026）在北京·北人亦创国际会展中心举行。展会期间，上海集成电路技术与产业促进中心（ICC）与智擎微（上海）电子科技有限公司联合发布面向芯片设计全生命周期的人工智能新产品——工程智能平台 Wisdom（Workflow Intelligence for Silicon Design, Optimization and Manufacturing）及四款 AI 原生工具。要点：① Wisdom 面向芯片从设计、优化到制造的完整链条，把 AI 能力嵌入实际工程流程的关键环节，让工具从被动执行走向主动理解与决策，为设计团队构建可持续复用、可不断积累的智能化工程底座；② ChipAce 定位为「具备三到五年经验的模拟芯片设计工程师」，可直接参与设计流程、加速处理节奏、把工程师技术能力沉淀为企业可持续积累的知识资产、缩短研发周期并辅助生产管理流程优化；③ WiseRF 根据用户给出的目标频率、电感值和 Q 值自动完成器件选型、版图生成与电磁仿真校准，交付器件模型与 PDK 组件；WiseModel 为智能化模型提参工具，WiseKey 为自动化测试结构生成工具；④ Wisdom 与四款工具整体部署于上海 ICC AI 赋能的 1.5 代 EDA 云平台——ICC 提供云端运行环境、国产 EDA 工具链集成与开箱即用交付，智擎微提供 AI 原生工具能力，形成「云平台底座 + AI 工具」的一体化交付路径（ICC 展位 H041、H042）。此为国产 EDA 云平台 + AI 原生工具的产品联合发布类行业动态。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">ICC</span><span class="tag">智擎微</span><span class="tag">Wisdom</span><span class="tag">ChipAce</span><span class="tag">WiseRF</span><span class="tag">WiseModel</span><span class="tag">WiseKey</span><span class="tag">ICCAD-Expo 2026</span><span class="tag">AI原生工具</span><span class="tag">1.5代EDA云平台</span><span class="tag">模拟芯片设计</span><span class="tag">PDK</span><span class="tag">国产EDA</span><span class="tag">2026-11-19</span>
+      </div>
+      <a href="https://www.icc.sh.cn/list_39/142.html" target="_blank">📰 ICC 上海集成电路技术与产业促进中心官网（icc.sh.cn，已核验 HTTP 200）</a>
+    </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="2026-11-18">
   <div class="section-title"><span class="icon">🌍</span> 2026-11-18 <span class="badge-new">2条行业动态</span> <span class="line"></span></div>

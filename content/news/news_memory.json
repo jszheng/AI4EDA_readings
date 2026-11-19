@@ -1,8 +1,57 @@
 {
-  "lastUpdate": "2026-11-18",
+  "lastUpdate": "2026-11-19",
   "cutoffDate": "2026-05-08",
-  "totalItems": 201,
+  "totalItems": 203,
   "items": [
+    {
+      "date": "2026-11-19",
+      "company": "OpenAI / AMD / Synopsys",
+      "title": "🚀 OpenAI 发布芯片设计技术报告：AI 重写 SystemVerilog RTL 使 AMD 旗舰 GPU IP 的 PPA 最高提升 14%，Jalapeño 向量/矩阵单元面积减少约 13%/10%，并与 Synopsys 合作训练 GPT-Synopsys",
+      "link": "https://news.qq.com/rain/a/20261119A03UVJ00",
+      "keywords": [
+        "OpenAI",
+        "AMD",
+        "Synopsys",
+        "GPT-Synopsys",
+        "Jalapeño",
+        "Advancing chip design with OpenAI models",
+        "技术报告",
+        "SystemVerilog RTL重写",
+        "PPA提升14%",
+        "标准单元面积",
+        "硅验证",
+        "RISC-V",
+        "PicoRV32",
+        "Ibex",
+        "EDA工具链",
+        "2026-11-18",
+        "2026-11-19"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "company": "上海集成电路技术与产业促进中心（ICC）/ 智擎微",
+      "title": "🇨🇳 ICC × 智擎微联合发布芯片设计全生命周期工程智能平台 Wisdom 及四款 AI 原生工具：ChipAce / WiseRF / WiseModel / WiseKey，整体部署于 ICC 1.5 代 EDA 云平台",
+      "link": "https://www.icc.sh.cn/list_39/142.html",
+      "keywords": [
+        "ICC",
+        "上海集成电路技术与产业促进中心",
+        "智擎微",
+        "Wisdom",
+        "ChipAce",
+        "WiseRF",
+        "WiseModel",
+        "WiseKey",
+        "ICCAD-Expo 2026",
+        "AI原生工具",
+        "1.5代EDA云平台",
+        "模拟芯片设计",
+        "PDK",
+        "国产EDA",
+        "产品联合发布",
+        "2026-11-19"
+      ]
+    },
     {
       "date": "2026-11-18",
       "company": "Siemens EDA / Breker Verification Systems",
