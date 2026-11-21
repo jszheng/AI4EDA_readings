@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-11-20 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 论文来源：arXiv（cs.AR / cs.AI / cs.SE，2026-11-19 提交 / 11-20 可见批次；已逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致，PDF 来自 arxiv.org/pdf 真实下载并校验 %PDF 头与 %%EOF，非占位）。本页为 2026-11-20 论文段更新，行业动态待新闻段另行更新。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2611.25891 Meta-RTL -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.AR · 19 Nov 2026 · Xiong, Xinzhuang, Wang, Yonghao, Sun, Shengyao, Li, Chengxi, Young, Evangeline</div>
+      <h4>⚡ Meta-RTL: Evolving Agent Harnesses for RTL Optimization——Meta-RTL：为 RTL 优化演化智能体外壳</h4>
+      <p>大语言模型让智能体能够借助 EDA 反馈优化 RTL，但其可执行搜索流程大多仍靠手工设计。Meta-RTL 提出一个 EDA 接地框架，从最小循环出发「演化」出 RTL 优化智能体外壳（harness），同时固定优化模型、EDA 流程与每设计预算不变。相比 Dr. RTL，Meta-RTL* 在 20 个开发设计上把 WNS/TNS 违例总量分别降低 7.8%/11.0%，其中 70% 设计面积得到缩减；无需再次演化即可迁移到 10 个未见过的 IC-RTL 设计，WNS/TNS 违例总量降低 20.5%/14.0%、综合总面积降低 12.6%。论文还刻画了演化外壳中的三种搜索机制，并通过消融与案例研究评估各自贡献。属「前端 RTL / 智能体式 RTL 优化（EDA 反馈闭环 + 自动演化搜索流程 + 跨设计迁移）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">RTL优化</span><span class="tag">智能体外壳演化</span><span class="tag">EDA反馈闭环</span><span class="tag">WNS/TNS违例</span><span class="tag">时序优化</span><span class="tag">跨设计迁移</span><span class="tag">Dr.RTL基线</span><span class="tag">cs.AI</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.25891" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.25891_MetaRTL.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.25661 GRODE-RTL (占位已移除，见下方 CRAFT/SGLayout/Verify) -->
+
+    <!-- 2611.25908 CRAFT -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 19 Nov 2026 · Park, Hyunjun, Han, Seungyub, Lee, Jason Jaesung, Kim, Kahyun, Kim, Soohyun, Nam, Inwoo, Kim, Sunmin, Choi, Wooyoung, Kim, Junhyung</div>
+      <h4>🔬 CRAFT: Analog Circuit Design by Reasoning LLM Agents from Pre-Computed Lookup Tables——CRAFT：基于预计算查找表、由推理型 LLM 智能体完成的模拟电路设计</h4>
+      <p>从黑盒优化器到近来的 LLM 智能体，模拟电路自动尺寸方法通常把 SPICE 仿真器放在搜索回路中，而有经验的工程师靠手工分析推导设计。CRAFT 提出一种让 LLM 智能体像设计师一样「通过计算」设计给定拓扑、且无需初始尺寸的流程：智能体仅通过 DeX 服务工作——该服务用预计算查找表提供器件特性，并求解整个网表的工作点与小信号响应，因此设计过程无需 SPICE，每个最终设计再用 HSPICE 独立验证。作者在商用 28nm 工艺的四个电路上测试 CRAFT，最大为 37 管三级放大器，含 53 个设计变量、20 项规格与 74 条饱和约束；使用 Claude Opus 5.5，CRAFT 在全部 20 次运行（每电路 5 次）中满足所有规格与约束。在该放大器上，用 DeX 替代 HSPICE 且请求相同时，同一智能体 10/10 次通过（对比 HSPICE 的 6/10），中位速度快 2.0×。属「模拟电路设计自动化 / 免 SPICE 推理式尺寸综合（预计算查找表服务 + LLM 智能体 + HSPICE 独立验证）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟电路设计</span><span class="tag">尺寸综合</span><span class="tag">推理型LLM智能体</span><span class="tag">预计算查找表</span><span class="tag">DeX服务</span><span class="tag">免SPICE设计</span><span class="tag">HSPICE验证</span><span class="tag">28nm商用工艺</span><span class="tag">三级运放</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.25908" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.25908_CRAFT.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.25410 SGLayout -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · 19 Nov 2026 · Chen, Siyang, Pu, Yuan, Qin, Yuhan, Lin, Zhaotan, Liang, Siyuan, He, Zhuolun, Zhang, Lining, Yu, Bei</div>
+      <h4>📐 SGLayout: Schema-Guided Closed-Loop Refinement for LLM-Driven Parameterized Layout Generation——SGLayout：面向 LLM 驱动参数化版图生成的模式引导闭环精化</h4>
+      <p>大语言模型在借助工具的代码合成、参数化版图生成上展现出潜力，但缺乏空间感知，一次性生成不可靠；版图质量虽可用既有技术评估，几何域评估结果却无法直接转成可执行的代码级修复，迭代精化因而陷入盲目重构。SGLayout 提出一个自精化框架，以模式引导机制弥合这一鸿沟：代码执行后，结构化模式捕获每个代码级实例与其几何属性的对应关系，建立代码空间与几何空间的双向链接；仿照工程师评审，SGLayout 沿两个互补维度评估版图——通过定量结构检查与定性视觉语言评估判断「意图合规」，通过 DRC 判断「规则合规」；所有识别出的违例再经模式反向投影到精确代码目标，实现外科手术式修复，闭环迭代直至版图收敛。在基于 GDSFactory 构建的 112 个参数化版图生成任务基准上，SGLayout 达到 76.79% 通过率，显著优于最强基线的 50.89%。属「后端物理设计 / LLM 参数化版图生成（模式引导代码-几何双向映射 + DRC/视觉语言评估 + 闭环精化）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">后端物理设计</span><span class="tag">参数化版图生成</span><span class="tag">LLM代码合成</span><span class="tag">模式引导</span><span class="tag">闭环精化</span><span class="tag">代码-几何双向映射</span><span class="tag">DRC</span><span class="tag">视觉语言评估</span><span class="tag">GDSFactory</span><span class="tag">76.79%通过率</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.25410" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.25410_SGLayout.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.26588 Verify the Verifier -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.SE / cs.AI / cs.AR · 19 Nov 2026 · Sanchez Villalobos, Ana E., Quinn, Michael D., Tyagi, Aakash, Luu, Minh D., Houngninou, David Kebo</div>
+      <h4>✅ Verify the Verifier: Specification-Grounded LLM Cross-Checking for Bugs That Escape UVM Scoreboards——验证验证者：面向逃过 UVM 记分板的 Bug、以规格为 grounding 的 LLM 交叉核对</h4>
+      <p>UVM 回归通过只说明设计在记分板检查的范围内与参考模型一致，并不等于满足规格。那些通过所有测试却违反规格的 Bug（称为 scoreboard escapes）能在成熟测试平台中幸存。本文提出 Verify the Verifier——据作者所知首个用基于 LLM 的异常交叉核对器（Anomaly Cross-Checker）审查「已通过」回归轨迹并对照规格进行核对的框架。在向四个 OpenTitan IP 注入的 564 个 Bug 中，68 个是候选 scoreboard escape：非等价、被测试覆盖、却仍然通过；该框架确认其中 41 个为 scoreboard escape——断言在有 Bug 设计上失败、在原设计上被证明通过。属「功能验证 / 规格接地的 LLM 交叉核对（检测逃过 UVM 记分板的隐蔽 Bug + 断言形式化确认）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">UVM</span><span class="tag">记分板逃逸Bug</span><span class="tag">规格接地</span><span class="tag">LLM交叉核对</span><span class="tag">断言确认</span><span class="tag">OpenTitan</span><span class="tag">形式化证明</span><span class="tag">cs.SE</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.26588" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.26588_VerifyTheVerifier.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

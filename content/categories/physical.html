@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（108篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（109篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2611.25410 SGLayout -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 SGLayout: Schema-Guided Closed-Loop Refinement for LLM-Driven Parameterized Layout Generation——SGLayout：面向 LLM 驱动参数化版图生成的模式引导闭环精化</div>
+      <div class="abs-meta">arXiv:2611.25410 · cs.AR / cs.AI · 19 Nov 2026 · Chen, Siyang, Pu, Yuan, Qin, Yuhan, Lin, Zhaotan, Liang, Siyuan, He, Zhuolun, Zhang, Lining, Yu, Bei</div>
+      <div class="abs-body">LLM 在工具辅助代码合成、参数化版图生成上有潜力但缺乏空间感知，一次性生成不可靠；几何域评估结果无法直接转成代码级修复，迭代精化陷入盲目重构。SGLayout 提出自精化框架：代码执行后，结构化模式捕获每个代码级实例与几何属性的对应关系，建立代码-几何双向链接；仿照工程师评审，沿两维度评估——定量结构检查+定性视觉语言评估判断意图合规、DRC 判断规则合规；所有违例经模式反向投影到精确代码目标实现外科修复，闭环迭代至收敛。在 GDSFactory 构建的 112 个参数化版图任务基准上达 76.79% 通过率，显著优于最强基线 50.89%。属「后端物理设计 / LLM 参数化版图生成（模式引导代码-几何映射 + DRC/视觉语言评估 + 闭环精化）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.25410" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.25410_SGLayout.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">后端物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">参数化版图生成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM代码合成</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">模式引导</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">闭环精化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">DRC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">GDSFactory</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
     <!-- 2611.21954 ThermLeT -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>
