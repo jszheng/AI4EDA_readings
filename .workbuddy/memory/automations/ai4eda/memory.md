@@ -501,3 +501,11 @@
 **统计变更**：papers 412→416，batches 142（未新增公告批次计数，仅论文数），news 231，lastUpdate 2026-11-05；manifest latest/dates 数组前置 2026-11-05（count 4）；rtl 110→111 / analog 66→67 / physical 101→103；papers/index.html 跳转改指 2026-11-05.html。
 
 **提交纪律**：仅用显式路径 git add（2 日期页 + 3 分类页 + manifest.js + papers/index.html + 4 PDF + memory.md）；刻意排除孤儿 PDF（2610.25881_LearnInterfaceRTL.pdf 等）与 .workbuddy 临时脚本。
+
+## 2026-11-18 执行摘要（论文段 scope=paper，高层记录）
+
+> 论文 +4（均经 arxiv.org/abs 逐字核验 + PDF %PDF/%%EOF 校验）：PVTSizing2(2611.22328)、ThermLeT(2611.21954)、RTLReviewBench(2611.21678)、ExecutionGroundedEDA(2611.19056)。manifest.papers 429→433、lastUpdate 2026-11-18；分类 analog/physical/verify/agent 各 +1；新建 date/latest 页（仅论文卡）。commit 39fee96 已推送 origin/main。详细索引见精简版 .workbuddy/automations/ai4eda/memory.md。
+
+## 2026-11-23 执行摘要（论文段 scope=paper，高层记录）
+
+> 论文 +4：GRADPlace(2611.27287)、MindTheDelta/DiffScope(2611.27035)、ARGUS(2611.26815)、RFIC像素化无源 LM(2611.27559)。四篇均经 arxiv.org/abs 逐字核验标题/作者/摘要/分类/提交日期一致，PDF 从 arxiv.org/pdf 并行断点续传下载并校验 %PDF 头与 %%EOF（0.28–1.47MB）。manifest.papers 437→441、lastUpdate 2026-11-23；分类 rtl/physical/verify/analog 各 +1；新建 date/latest 页（仅论文卡），papers/index 跳转更新；顺手补齐 rtl.html 历史遗留未闭合 div。提交采用显式路径 git add，未纳入孤儿 PDF 与临时文件。详细索引见精简版 .workbuddy/automations/ai4eda/memory.md。

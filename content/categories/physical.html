@@ -7,9 +7,22 @@
 </head>
 <body>
 <section id="cat-physical">
-  <div class="section-title"><span class="icon">📐</span> 物理设计（109篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">📐</span> 物理设计（110篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">布局布线、PPA 优化、3D-IC、逻辑综合、布图规划、逆光刻</p>
   <div class="abstracts">
+    <!-- 2611.27287 GRADPlace -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">📐 GRADPlace: Geometry-Based Routing-Augmented Differentiable Placement for Routability Optimization——GRADPlace：几何驱动的布线增强可微布局与可布线性优化</div>
+      <div class="abs-meta">arXiv:2611.27287 · cs.AR · 20 Nov 2026 · Shen, Xurong, Zhao, Xueyan, Huang, Zhipeng, Xing, Chaoyu, Xie, Biwei</div>
+      <div class="abs-body">可布线性驱动布局需要能反映单元移动如何重新分配布线需求的梯度。GRADPlace 把概率加权候选布线表示为可移动的水平和垂直线段：布线反馈设定其概率，线段几何与期望需求随单元坐标一起演化；静电布线目标经该几何把梯度传播到相连单元，与 cell inflation 互补，避免了黑盒拥塞预测器或冻结的虚拟单元拥塞场。ISPD 2015 基准上，复现的 Xplace-route 与已发表 DCGP 平均分别有 GRADPlace 的 3.37×/2.56× 设计规则违例，且 GRADPlace 过孔更多、布线线长相当。属「后端物理设计 / 可布线性驱动可微布局（几何感知布线 + 梯度传播 + DRC 违例下降）」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.27287" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.27287_GRADPlace.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">后端物理设计</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可微布局</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">可布线性</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">几何感知布线</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">梯度传播</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">ISPD 2015</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
     <!-- 2611.25410 SGLayout -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>

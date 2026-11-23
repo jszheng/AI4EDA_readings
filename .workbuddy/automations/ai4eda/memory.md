@@ -28,6 +28,11 @@
 
 ## 运行索引（一行/天；详情不展开，避免本文件再次膨胀）
 
+- 2026-11-23 论文 +4（scope=paper）：GRADPlace(2611.27287, cs.AR, 几何感知候选布线+可微布局, ISPD2015 DRC 违例较 Xplace-route/DCGP 少 3.37×/2.56×)、MindTheDelta/DiffScope(2611.27035, cs.AR, 免训练 anytime RTL 变体早停, 初映射残差方差 -73.6×, 43 家族评估量 -44.9%)、ARGUS(2611.26815, cs.AR/cs.SE, 规格接地覆盖率收敛+形式化 .el 排除, token -27.2×~180×, 21,071+ 排除零误判)、RFIC像素化无源 LM(2611.27559, cs.AI/cs.AR, 读图预测 20-100GHz 阻抗+5 次 EM 预算调试 7/7 改善 5 达标)；4 篇均经 arxiv.org/abs 逐字核验（标题/作者/摘要/分类/提交日期一致）+ arxiv.org/pdf 真实下载（0.28–1.47MB，%PDF-1.7 头+%%EOF 已校验，并行断点续传）；新建 date/latest 页（仅 4 论文卡）、papers/index 跳转改指 11-23；rtl 115→116/physical 109→110/verify 53→54/analog 72→73，manifest.papers 437→441、lastUpdate→2026-11-23、latest/dates 前置 11-23(count=4)；顺手补齐 rtl.html 历史遗留未闭合 div；孤儿 PDF 2611.20414/23905/24037 仍未纳入提交；联网正常，无幻觉。
+
+- 2026-11-20 论文 +4（scope=paper）：Meta-RTL(2611.25891, cs.AI/cs.AR, RTL优化智能体外壳演化, 跨设计迁移 WNS/TNS -20.5%/-14%)、CRAFT(2611.25908, cs.AR, 免SPICE推理式模拟尺寸综合, 28nm 20/20 达标)、SGLayout(2611.25410, cs.AR/cs.AI, LLM参数化版图模式引导闭环精化, 76.79% 通过率)、VerifyTheVerifier(2611.26588, cs.SE/cs.AI/cs.AR, 规格接地LLM核对逃过UVM记分板Bug, OpenTitan 确认41个)；4 篇均经 arxiv.org/abs 逐字核验（标题/作者/摘要/分类/提交日期一致）+ arxiv.org/pdf 真实下载校验 %PDF 头与 %%EOF（0.2–2.05MB 非占位，SGLayout 经多次断点续传补全）；新建 date/latest 页（仅4论文卡）、papers/index 跳转改指 11-20；rtl 114→115/verify 52→53/physical 108→109/analog 71→72，manifest.papers 433→437、lastUpdate→2026-11-20、latest/dates 数组前置 11-20(count=4)；孤儿 PDF 2611.20414/23905/24037 未纳入提交；联网正常，无幻觉。
+
+- 2026-11-19 新闻 +2：OpenAI 11-18 技术报告《Advancing chip design with OpenAI models》——AI 重写 SystemVerilog RTL 使 AMD 旗舰 GPU IP PPA 最高 +14%（AMD 已纳入送交制造的设计，下一代 CPU 关键模块个位数提升）、Jalapeño 向量/矩阵单元面积 -13%/-10%（硅验证）、PicoRV32/Ibex RISC-V 评测、与 Synopsys 合作 GPT-Synopsys（9-30 合作公告为不同事件已去重）（腾讯新闻 news.qq.com，HTTP 200 核验；OpenAI 官方页 curl 403 无法作为链接故采用内容一致的中文媒体报道）；ICC × 智擎微在 ICCAD-Expo 2026 联合发布 Wisdom 工程智能平台 + ChipAce/WiseRF/WiseModel/WiseKey 四款 AI 原生工具，部署于 ICC 1.5 代 EDA 云平台（icc.sh.cn 官网，HTTP 200 核验，页面中文为 HTML 实体需解码核对）。当日 date/latest 页原先不存在（论文段未建）→ 新建仅含新闻的 date/latest 页（各 2 卡）并把 papers/index.html 跳转改指 11-19；manifest.news 242→244、lastUpdate→2026-11-19、latest/dates 数组顶部插入 11-19(count=2)；JSON totalItems 201→203、lastUpdate→11-19；新闻页卡片 184→186、TOC 64→66、头部最后更新→11-19。排除项：SemiEngineering WIR#165 仍不存在；Siemens 收购 Lauterbach（11-13，与已收录 Breker 为不同事件但已过首轮窗口）与 Silvaco token 定价（theinference.org 二手聚合，原 SemiEngineering 稿 9-09 旧稿）本次未收；SemiEngineering Blog Review 11-18 为博客观点汇总非产品/合作公告，不收录。180 天清理评估：JSON 有 29 条早于 2026-05-23（180 天线），但展示页 11-08 已清至 05-08、三套计数基线本就不同（JSON 203 / 页面 186 / manifest 244），大规模清理仍属周期性大整理范畴，本次 news 段仅追加。联网正常，无幻觉。
 - 2026-11-18 新闻 +2：Siemens 收购 Breker Verification Systems（11-17 官方新闻室，AI 驱动 SoC 级验证并入 Questa One/Avery VIP，12 月交割，HTTP 200 核验）；芯星元 NovaSilicon 近亿元 Pre-A+ 融资（11-17 科创板日报，CDK+多智能体「规格→GDS」，HTTP 200 核验）；2 条均经核验、内容吻合、非 arXiv/征稿、已去重（Socionext×InnoStack 3nm 10-23 已收录、WIR#165 404 排除）。当日 date/latest 页已由论文段创建（4 论文卡，commit 39fee96）→ 仅追加 2 新闻卡（共 6 卡）、subtitle 更新、papers/index 跳转无需重做；manifest.news 240→242、dates[11-18].count 4→6、lastUpdate 维持 11-18；JSON totalItems 199→201、lastUpdate→11-18；新闻页卡片 182→184、TOC 62→64、头部最后更新→11-18。cutoffDate 维持 2026-05-08（27 条 JSON 档案早于 180 天线，展示页 11-08 已清至 05-08，大规模清理属周期性大整理范畴，本次仅追加）。联网正常，无幻觉。
 
 - 2026-11-18 论文 +4（scope=paper）：PVTSizing2(2611.22328, cs.AR/cs.LG, 模拟尺寸综合 PVT 角, 7.3x 加速)、ThermLeT(2611.21954, cs.AR/cs.AI/cs.LG, 2.5D 芯粒 Transformer 热预测)、RTLReviewBench(2611.21678, cs.AR/cs.LG, LLM RTL 审查基准 114 配对)、ExecutionGroundedEDA(2611.19056, cs.AR, 执行接地 EDA 智能体 MCP 闭环 76.5% Pass@1)；4 篇均经 arxiv.org/abs 逐字核验（标题/作者/摘要/分类/提交日期一致）+ arxiv.org/pdf 真实下载校验 %PDF-1.7 头与 %%EOF（0.43–5.5MB 非占位，ThermLeT 经 6 次断点续传补全）；新建 date/latest 页（仅 4 论文卡）、papers/index 跳转改指 11-18；analog 70→71/physical 107→108/verify 51→52/agent 54→55，manifest.papers 429→433、lastUpdate→2026-11-18、latest/dates 数组前置 11-18(count=4)；排除未按基线核验的孤立 PDF 2611.20414（未被页面引用）；联网正常，无幻觉。
@@ -50,23 +55,7 @@
 
 | 2026-11-08 | 维护 | 站点维护（无论文/新闻新增）：① 新闻页大清理——去重 + 移除 >180 天陈旧条目 + 时间倒序 + 清理 header 累加垃圾与冗长 nav，卡片 233→173、区块 129→90；② 拆分自动化为「AI4EDA 论文段(工作日08:00)」+「AI4EDA 新闻段(工作日08:20)」两个轻量运行，技能 ai4eda-daily-update 新增 SCOPE 段与 memory.md 防膨胀纪律；③ 清理 5 个孤儿文件（3 个同 ID 重复 PDF、1 个超范围 PDF 2610.40042、1 个临时 html）。 |
 
-- 2026-09-02~09-14 基线期：站点 139→累计正常更新（09-28 曾整体回退至 09-14）
-- 2026-09-15~09-28 ❌ 全为幻觉，已撤回（见顶部告警）
-- 2026-09-29 论文 +N（逐篇核验恢复）
-- 2026-10-02 papers 342→348（+6）news 218→219（Synopsys AgentEngineer/Autopilot）
-- 2026-10-05 348→353（+5）
-- 2026-10-06 353→356（+3）
-- 2026-10-07 356→367（+11）
-- 2026-10-08 367→369（+2，同日重复触发无新增）
-- 2026-10-09 369→373（+4）
-- 2026-10-12 373→376（+3）news +2（Cadence RTL Agent）
-- 2026-10-13 0 新增
-- 2026-10-14 0 论文 / news +1（NVIDIA Open Agent Safety + Cadence AI Super Agents）
-- 2026-10-15 376→380（+4）
-- 2026-10-16 380→384（+4）
-- 2026-10-19 384→387（+3）
-- 2026-10-20 387→388（+1）news +1（Keysight ADS 2027 agentic AI）
-- 2026-10-23 388→392（+4）(10-21/10-22 无运行)
+- 2026-09-02~10-23 基线期归档（明细已折叠，保留计数轨迹）：papers 139→392，news 218→~227；其中 09-15~09-28 ❌ 全为幻觉已撤回（见顶部告警），09-29 起逐篇核验恢复。期间关键事件：Synopsys AgentEngineer/Autopilot、Cadence RTL Agent、NVIDIA Open Agent Safety、Keysight ADS 2027 agentic AI；10-13 零新增，10-21/10-22 无运行。
 - 2026-10-27 补录 +2（TranSAGE / RTL_Bug_Repair）news +4（WIR #161：Rambus/ChipAgents、Altera、Cadence/Socionext/Nokia、Infineon）
 - 2026-10-28 +5（AnalogScout/AnalogPortBench/PaFeDSE/EGGPlacer/DiffRouter）
 - 2026-10-30 0 论文 / news +1（Cadence Maestro 领域专用 AI 模型）

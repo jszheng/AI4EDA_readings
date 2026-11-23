@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-11-23 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 论文来源：arXiv（cs.AR / cs.AI / cs.SE，2026-11-19~20 提交 / 11-23 可见批次；已逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致，PDF 来自 arxiv.org/pdf 真实下载并校验 %PDF 头与 %%EOF，非占位）。本页为 2026-11-23 论文段更新，行业动态待新闻段另行更新。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2611.27287 GRADPlace -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 20 Nov 2026 · Shen, Xurong, Zhao, Xueyan, Huang, Zhipeng, Xing, Chaoyu, Xie, Biwei</div>
+      <h4>📐 GRADPlace: Geometry-Based Routing-Augmented Differentiable Placement for Routability Optimization——GRADPlace：几何驱动的布线增强可微布局与可布线性优化</h4>
+      <p>可布线性驱动的布局需要能反映单元移动如何重新分配布线需求的梯度。既有 cell inflation 只间接利用布线反馈，可微方法则依赖黑盒拥塞预测器或在布线更新之间冻结的虚拟单元拥塞场。GRADPlace 把概率加权的候选布线表示为可移动的水平和垂直线段：布线反馈设定其概率，而线段几何与期望需求随单元坐标一起演化；静电布线目标经由该几何把梯度传播到相连单元，与 cell inflation 形成互补。在 ISPD 2015 基准上，复现的 Xplace-route 与已发表的 DCGP 结果平均分别有 GRADPlace 的 3.37× 与 2.56× 设计规则违例，且 GRADPlace 过孔更多、布线线长相当。属「后端物理设计 / 可布线性驱动的可微布局（几何感知候选布线 + 梯度传播 + DRC 违例大幅下降）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">后端物理设计</span><span class="tag">可微布局</span><span class="tag">可布线性优化</span><span class="tag">几何感知布线</span><span class="tag">拥塞预测</span><span class="tag">静电布线目标</span><span class="tag">梯度传播</span><span class="tag">cell inflation</span><span class="tag">ISPD 2015</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.27287" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.27287_GRADPlace.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.27035 Mind the Delta / DiffScope -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 20 Nov 2026 · Cai, Siyang, Li, Cangyuan, Gao, Haoyu, Wang, Kun, Li, Mochen, Zhong, Yilin, Xu, Ke, Han, Yinhe, Wang, Ying</div>
+      <h4>⚡ Mind the Delta: Early Pruning of RTL Variants for Agentic Hardware Optimization——关注差值：面向智能体式硬件优化的 RTL 变体早期剪枝</h4>
+      <p>LLM 驱动的编码智能体已能高吞吐地为既有 RTL 设计写出多种微架构变体，瓶颈随之转移到逻辑综合：商业工具链每个变体耗时数小时，「提出变体」与「评估变体」之间出现严重的算力不对称。现有快速评估器难以应对——细微 RTL 改动会引发非线性综合漂移，学习式预测器与编码智能体无法解析；降 effort 的综合代理要么改变优化轨迹，要么保留大部分运行时间。作者指出选择变体无需回归跨设计的绝对 QoR，只需判定候选能否超过已完成的最佳可行实现。基于综合轨迹与基准设计共享强烈设计专属偏置的观察，提出 DiffScope——一个免训练、随时可用的选择框架，并行竞速完整综合：把实时面积遥测与已综合的基准轨迹配对，抵消早期映射膨胀，使初始映射阶段的残差方差降低 73.6×；再用其它设计谱系校准的下界提前终止无竞争力的运行。在从小型模块到数百万单元处理器的 43 个设计家族上，DiffScope 唯一地恢复了穷举综合的最优解，总评估工作量减少 44.9%（1.81×），L-tier 设计上达 2.18×。属「前端 RTL / 智能体式 RTL 优化评估加速（免训练 anytime 选择 + 综合轨迹基线校准 + 早停剪枝）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">智能体式RTL优化</span><span class="tag">逻辑综合</span><span class="tag">DiffScope</span><span class="tag">免训练评估</span><span class="tag">早期剪枝</span><span class="tag">面积遥测</span><span class="tag">轨迹基线校准</span><span class="tag">QoR</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.27035" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.27035_MindTheDelta.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.26815 ARGUS -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.SE · 19 Nov 2026 · Mohan, Veni</div>
+      <h4>✅ Specification-Grounded Adaptive Triage and Formal Invariant Exclusion Synthesis for Autonomous Silicon Coverage Closure——规格接地、自适应分流与形式化不变量排除：面向自主流片覆盖率收敛</h4>
+      <p>收敛最后 5%–15% 的代码与功能覆盖率是流片进度的主要瓶颈。既有 LLM 覆盖闭环把未覆盖的 RTL 行或分支直接塞进迭代提示，在工业子系统上会因三类问题失败：分别查询数千个相关空洞导致 token/上下文爆炸、违反跨信号不变量的非法激励造成脏覆盖、以及对结构上不可达死代码产生不安全的排除幻觉。本文提出 ARGUS（Autonomous Reachability &amp; Guided Unified Stimulus）：从微架构规格与 SystemVerilog 断言中挖掘形式化 Block Contract，再以每模块空洞密度阈值 τ 在宏聚类与微手术两种模式间自适应分流——密集模块把相关空洞折叠为根因模式、FSM 与背压聚类，稀疏模块则用 AST 与循环域可达性区分可达角落和可证明不可达的不变量；定向测试搭配逐位精确的 golden scoreboard，不可达不变量输出带形式证明的工具原生 .el 排除。在五个核心基准（3 个 LowRISC OpenTitan IP 与 2 个商用 AI 加速器 Tensor Layout Converter 数据通路，共 53 个 SV 模块、376,127 个覆盖点）及 2,626 模块工业互连子系统上，ARGUS 用 0.265 s 完成 2,626 模块分流，token 用量降低 27.2× 至 180× 以上，经三步 sanity gating 实现零脏合并，有效覆盖率达 99.32%–100.0%，21,071+ 个已证明排除零误判。属「功能验证 / 自主覆盖率收敛（规格接地 + 形式化排除生成 + 自适应空洞分流）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">覆盖率收敛</span><span class="tag">ARGUS</span><span class="tag">规格接地</span><span class="tag">SystemVerilog断言</span><span class="tag">形式化不变量排除</span><span class="tag">自适应分流</span><span class="tag">定向测试生成</span><span class="tag">OpenTitan</span><span class="tag">流片</span><span class="tag">cs.AR</span><span class="tag">cs.SE</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.26815" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.26815_ARGUS.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.27559 RFIC pixelated passives + LM -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.AR / physics.app-ph · 20 Nov 2026 · Zhou, Jonathan, Sengupta, Kaushik</div>
+      <h4>🔬 Can Language Models See the Circuit in Pixelated RFIC Passives?——语言模型能看懂像素化射频无源器件中的电路吗？</h4>
+      <p>面向微波与毫米波的逆向设计像素化无源器件是 RFIC 设计的重要进展：这些形似二维码的结构处在高维、可泛化的设计空间，也包含常规无源拓扑，但对设计师极不直观，性能偏差难以调试。本文检验前沿语言模型能否理解、预测并编辑像素化无源器件的响应与版图结构：在禁用所有工具的情况下，让智能体读取 18×18 与 27×27 网格版图，并在单次回复中预测 20–100 GHz 的输入阻抗与损耗。在 8 个 GA 综合版图与 5 个随机填充上，预测的 Smith 圆图轨迹紧随全波仿真结果，仅存在使特征频率较电磁仿真低约 16% 的系统性偏移；在多径环结构上能成功识别陷波，频率偏置约为忽略拐角的理想传输线模型的一半。随后让智能体调试 7 个不达标设计，在 5 次电磁仿真与最多 12 个像素改动的预算下，7 个设计全部改善、其中 5 个进入规格。表明语言模型可作为逆向设计无源器件的可解释性与调试工具。属「模拟与架构 / 逆向设计无源器件（LM 版图读图 + 阻抗/损耗预测 + 有限预算像素级调试）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">RFIC</span><span class="tag">逆向设计</span><span class="tag">像素化无源器件</span><span class="tag">语言模型</span><span class="tag">Smith圆图</span><span class="tag">全波仿真</span><span class="tag">版图理解</span><span class="tag">可解释性调试</span><span class="tag">cs.AI</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.27559" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.27559_RFICPassivesLM.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
