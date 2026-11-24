@@ -19,7 +19,7 @@
 <body>
 <header>
   <h1>📅 2026-11-24 动态</h1>
-  <p class="subtitle">共 2 条行业动态 · 当日论文段尚未产出，本页为新闻段新建的仅新闻日期页。来源：Businesswire 官方新闻稿全文转载（ChipAgents 扩大 Renesas 全球采用，官方 businesswire.com 自动访问 000 / Morningstar 转载 403，故采用内容一致的 200 转载页）与腾讯新闻（新禹思 HyperS2C「编译 + 调试」双 EDA 智能体）；两条链接均经核验 HTTP 200 且页面含所述内容，非 arXiv 论文通知 / 学术征稿，已按公司 + 事件去重。</p>
+  <p class="subtitle">共 4 篇论文 + 2 条行业动态 · 论文来源：arXiv（cs.AR / cs.AI / cs.LG，2026-11-21~23 提交 / 11-24 可见批次；已逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致，PDF 来自 arxiv.org/pdf 真实下载并校验 %PDF 头与 %%EOF，非占位）。行业动态均经 URL HTTP 200 可达性核验且页面内容吻合，非 arXiv 通知 / 学术征稿，已按公司 + 事件去重。本页为 2026-11-24 论文段 + 新闻段合并更新。</p>
 </header>
 <section>
   <div class="abstracts">
@@ -44,6 +44,55 @@
         <span class="tag">新禹思</span><span class="tag">HyperS2C</span><span class="tag">华大九天</span><span class="tag">HSCompile.aix</span><span class="tag">编译Agent</span><span class="tag">调试Agent</span><span class="tag">Super Agent</span><span class="tag">数字前端EDA</span><span class="tag">RTL</span><span class="tag">功能验证</span><span class="tag">国产EDA</span><span class="tag">2026-11-24</span>
       </div>
       <a href="https://news.qq.com/rain/a/20261124A07EYN00" target="_blank">📰 腾讯新闻（news.qq.com，已核验 HTTP 200 且页面含所述内容）</a>
+    </div>
+
+
+    <!-- 2611.30766 Layered Formal Guidance -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · 23 Nov 2026 · Tan, Yan, Meng, Xiangchen, Lyu, Yangdi</div>
+      <h4>🧩 Bridging the Semantic Gap from Natural Language Specifications to RTL with Layered Formal Guidance——以分层形式化引导弥合自然语言规格到 RTL 的语义鸿沟</h4>
+      <p>LLM 从自然语言规格生成 RTL 在复杂控制逻辑与时序行为设计上可靠性有限，根源在于高层自然语言常遗漏实现关键细节，迫使 LLM 推断未言明的假设。本文提出 Layered Formal Guidance，把形式化属性作为自然语言规格与 RTL 生成之间的中间语义层，分三层施加引导：生成前的属性驱动规格增补、生成后的属性一致性检查、检查后的反例引导精化。在 RTLLM 基准与多种开源 IP 设计上，框架取得更高的功能正确率与更低的采样输出轨迹多样性；并可灵活增强通用 LLM 与领域专用模型，显著提升生成可靠性。属「前端 RTL / 形式化引导的规格到 RTL 生成（属性中间层 + 一致性检查 + 反例精化）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">自然语言到RTL</span><span class="tag">形式化引导</span><span class="tag">属性一致性检查</span><span class="tag">反例引导精化</span><span class="tag">RTLLM</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.30766" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.30766_LayeredFormalGuidance.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.31082 ChiProgramBench -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.AR · 23 Nov 2026 · Gou, Tianrun, Yang, Qingyao, Xu, Wendong, Chen, Liang, Li, Kuan, Wong, Ngai</div>
+      <h4>🔎 ChiProgramBench: Can LLM Agents Rebuild Efficient Circuits from Pin-Level Experiments?——LLM 智能体能否仅凭引脚实验重建高效电路？</h4>
+      <p>为评估 LLM 智能体理解「可运行但不可检视」硬件系统的能力，本文提出 ChiProgramBench：18 个任务源自开源处理器、加速器、编解码器、变换、互连与控制电路。智能体只能驱动并读取隐藏有状态仿真参考的引脚，随后提交由公开库单元构成的门级网表；黑盒发现设置仅提供匿名功能引脚与固定存储器接口，功能引导重建则额外给出电路用途与各引脚角色。隐藏测试逐周期比对输出，且仅在全部用例通过时，功耗、延迟与面积才按相对参考的表现计分。在 6 种智能体配置、432 次试验中，黑盒与功能引导的全用例通过率仅 12.0% 与 14.8%；功能引导把平均功能分（按周期加权的通过用例占比）从 24.6% 提升到 30.9%；58 个全通过设计中仅 3 个在功耗、面积、延迟综合上优于参考——行为恢复与高效实现仍是两项独立挑战。属「AI Agent / 硬件黑盒逆向重建基准（引脚实验 + 假设验证 + 门级网表 + PPA 计分）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">AI Agent</span><span class="tag">硬件逆向重建</span><span class="tag">ChiProgramBench</span><span class="tag">黑盒引脚实验</span><span class="tag">门级网表</span><span class="tag">LLM智能体基准</span><span class="tag">PPA</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.31082" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.31082_ChiProgramBench.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.29582 LLM-Assisted RTL & Synthesis Co-Optimization -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 22 Nov 2026 · Ouyang, Yikang, Luo, Yang, Zuo, Dongsheng, Liang, Xiaoxiao, Ma, Yuzhe</div>
+      <h4>⚙️ LLM-Assisted Co-Optimization of RTL and Synthesis Algorithms via Bottleneck Analysis——基于瓶颈分析的 RTL 与综合算法 LLM 辅助协同优化</h4>
+      <p>综合后 PPA 由 RTL 代码与综合算法共同决定：只优化任一层，收益都可能被另一层的瓶颈限制。本文提出 LLM 辅助的区域协同优化框架——RTL 结构与综合所用布尔网络对电路不同区域的瓶颈暴露互补机会；高斯过程（GP）从区域图表示与 PPA 反馈中学习，判断每个区域优化 RTL 还是综合算法更有潜力；贝叶斯优化结合 GP 预测与预测不确定性给出指导，LLM Router 再结合电路分析选择各区域的处理方式；自我改进的 LLM worker 分别优化 RTL 或综合算法，并把区域改动贪心集成进当前设计配置。在 16 个 RTL 设计上，WNS 平均改善 103.27%、面积 1.23%、功耗 13.26%，相对各指标最强基线分别高出 47.80、2.75 与 13.17 个百分点。属「前端 RTL / LLM 驱动的 RTL 与综合算法协同优化（瓶颈分析 + GP/BO 决策 + 区域贪心集成）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">逻辑综合</span><span class="tag">协同优化</span><span class="tag">瓶颈分析</span><span class="tag">高斯过程</span><span class="tag">贝叶斯优化</span><span class="tag">LLM Router</span><span class="tag">PPA</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.29582" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.29582_RTLSynthesisCoOpt.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.28778 Nested Port-Hamiltonian Passive Macromodeling -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · 21 Nov 2026 · Zhu, Benchao, Zhu, Keren</div>
+      <h4>📉 Multi-Order Passive Macromodeling from Layouts via Nested Port-Hamiltonian Learning——基于嵌套端口-哈密顿学习的版图多阶无源宏建模</h4>
+      <p>互连与电源分配网络的紧凑无源状态空间宏模型，是稳定开展信号/电源完整性瞬态仿真的重要基础；但传统流程需对每个版图做昂贵的全波 EM 仿真，而传统拟合与已有学习代理多依赖事后拟合或无源扰动，精度受损且不保证收敛。本文提出直接在无源空间中学习的端到端宏建模框架，把物理版图图映射为多阶端口-哈密顿（pH）宏模型：网络把版图图编码为无约束矩阵块，再以完备的前缀嵌套 pH 参数化组装，从构造上保证连续频域的无源性与稳定性，一次前向传播经状态切片即可得到任意 k 阶模型；训练时用渐进阶数增长课程直接以 S 参数监督所有阶次，无需参考实现。在先进封装 27 万结构数据集中 2.7 万个未见测试结构上，平均 S 参数误差较基于真值 EM 响应拟合的主流工具降低 42%（最高 65%），导出的 459,000 个模型零无源违例，宏模型生成加速 11,000–39,000×（每版图 36–85 ms）。属「模拟与架构 / 版图到无源宏模型的端到端学习（pH 参数化无源保证 + 阶数增长课程 + 大规模加速）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">模拟与架构</span><span class="tag">无源宏建模</span><span class="tag">端口-哈密顿</span><span class="tag">信号完整性</span><span class="tag">电源完整性</span><span class="tag">版图图学习</span><span class="tag">S参数</span><span class="tag">先进封装</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.28778" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.28778_PassiveMacromodeling.pdf">📥 本地PDF</a>
     </div>
 
   </div>

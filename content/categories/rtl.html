@@ -7,9 +7,35 @@
 </head>
 <body>
 <section id="cat-rtl">
-  <div class="section-title"><span class="icon">⚡</span> RTL生成（116篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">⚡</span> RTL生成（118篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">LLM / AI 辅助 Verilog / RTL 代码生成与调试</p>
   <div class="abstracts">
+    <!-- 2611.30766 Layered Formal Guidance -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🧩 Bridging the Semantic Gap from Natural Language Specifications to RTL with Layered Formal Guidance——以分层形式化引导弥合自然语言规格到 RTL 的语义鸿沟</div>
+      <div class="abs-meta">arXiv:2611.30766 · cs.AR / cs.AI · 23 Nov 2026 · Tan, Yan, Meng, Xiangchen, Lyu, Yangdi</div>
+      <div class="abs-body">LLM 从自然语言规格生成 RTL 在复杂控制逻辑与时序设计上可靠性有限，根源是自然语言遗漏实现关键细节造成的语义鸿沟。提出 Layered Formal Guidance：把形式化属性作为规格与 RTL 生成之间的中间语义层，分三层引导——生成前属性驱动规格增补、生成后属性一致性检查、检查后反例引导精化。在 RTLLM 与多种开源 IP 上功能正确率更高、采样输出轨迹多样性更低，且可灵活增强通用 LLM 与领域专用模型。属「前端 RTL / 形式化引导的规格到 RTL 生成」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.30766" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.30766_LayeredFormalGuidance.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">前端RTL</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">自然语言到RTL</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">形式化引导</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">属性一致性检查</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">反例精化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTLLM</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2611.29582 LLM-Assisted RTL & Synthesis Co-Optimization -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">⚙️ LLM-Assisted Co-Optimization of RTL and Synthesis Algorithms via Bottleneck Analysis——基于瓶颈分析的 RTL 与综合算法 LLM 辅助协同优化</div>
+      <div class="abs-meta">arXiv:2611.29582 · cs.AR · 22 Nov 2026 · Ouyang, Yikang, Luo, Yang, Zuo, Dongsheng, Liang, Xiaoxiao, Ma, Yuzhe</div>
+      <div class="abs-body">综合后 PPA 由 RTL 与综合算法共同决定，单层优化易受另一层瓶颈限制。提出 LLM 辅助区域协同优化：GP 从区域图表示与 PPA 反馈学习以判断各区域应优化 RTL 还是综合算法，贝叶斯优化结合预测与 uncertainty 给出指导，LLM Router 结合电路分析选择策略，自我改进的 LLM worker 执行优化并贪心集成。16 个 RTL 设计上 WNS 平均改善 103.27%、面积 1.23%、功耗 13.26%，相对各指标最强基线高出 47.80 / 2.75 / 13.17 个百分点。属「前端 RTL / RTL 与综合算法协同优化」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.29582" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.29582_RTLSynthesisCoOpt.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">前端RTL</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">逻辑综合</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">协同优化</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">瓶颈分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">高斯过程</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">LLM Router</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">PPA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
     <!-- 2611.27035 Mind the Delta / DiffScope -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>
