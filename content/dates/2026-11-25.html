@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-11-25 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 论文来源：arXiv（cs.AR，2026-11-22~24 提交 / 11-25 公告批次；已逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致，PDF 来自 arxiv.org/pdf 真实下载并校验 %PDF 头与 %%EOF，非占位）。本页为 2026-11-25 论文段更新（行业动态如由新闻段收录将另行追加）。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2611.31876 AgentDRC -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.MA · 24 Nov 2026 · Liu, Pengju, Xu, Nuo, Chen, Winso, Li, Peijun, Zhao, Yang (Katie), Cao, Yu, Ding, Caiwen</div>
+      <h4>🤖 AgentDRC: Multi-Agent Algorithms for Spatially-Aware Automated DRC Correction——AgentDRC：面向空间感知自动 DRC 修复的多智能体算法</h4>
+      <p>Design Rule Checking（DRC）违例修复仍是物理设计中耗时的瓶颈，即便有先进 EDA 优化也常需人工介入；既有 LLM 智能体方法受限于冗余上下文形状、对原始坐标空间推理不足与扁平化版图表示效率低下。AgentDRC 把迭代式 DRC 修正表述为多智能体算法，提出空间感知的验证与修正算法：重建关键形状间的结构化空间关系，并通过几何与语义约束检查验证修复；系统协调四个专用智能体感知多层级、多模态几何特征，过滤无关形状并迭代纠正违例。在困难违例上 pass@1 最高 30.4%、pass@5 达 55.7%，较最佳基线的 pass@5 提升 13.8 个百分点；作者承诺录用后开源全部代码与基准任务。属「后端物理设计 / 多智能体 DRC 自动修复（空间关系重建 + 几何/语义约束验证）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">后端物理设计</span><span class="tag">DRC修复</span><span class="tag">多智能体</span><span class="tag">空间感知</span><span class="tag">几何约束验证</span><span class="tag">版图</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.31876" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.31876_AgentDRC.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.31709 RTLDetective -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR · 23 Nov 2026 · Javidnia, Neusha, Zhang, Ruisi, Koushanfar, Farinaz</div>
+      <h4>🔎 RTLDetective: Agentic RTL Debugging through Dataflow Analysis and Simulation-Guided Fault Localization——RTLDetective：以数据流分析与仿真引导故障定位实现智能体式 RTL 调试</h4>
+      <p>LLM 智能体在 RTL 调试中展现潜力，但准确局部化功能错误并生成可靠修复仍具挑战。RTLDetective 提出多智能体框架，融合信号依赖分析、仿真引导故障定位与知识推理：从 RTL 代码构建信号依赖图，并从波形轨迹提取失败信息；轻量定位智能体预测期望的中间信号值，通过定向仿真干预加以评估，迭代探测信号依赖以隔离可疑逻辑并识别潜在故障位置；调试智能体结合上述证据、静态分析、硬件设计原则与 RTL Bug 模式知识库以及推理生成修正 RTL；框架跨调试迭代复用缓存上下文以降低推理开销。在 MEIC 基准上取得 86.1% 修复率，较最佳基线高 13.9 个百分点，且 LLM 调用次数更少。属「功能验证 / 智能体式 RTL 调试与修复（信号依赖图 + 仿真干预 + 知识库推理）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">RTL调试</span><span class="tag">多智能体</span><span class="tag">数据流分析</span><span class="tag">故障定位</span><span class="tag">波形轨迹</span><span class="tag">MEIC</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.31709" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.31709_RTLDetective.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.32405 CPU-Eval -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.AI · 24 Nov 2026 · Iwata, Yuisei, Masuda, Yutaka, Ishihara, Tohru</div>
+      <h4>🧩 CPU-Eval: Evaluating Large Language Models for CPU Hardware Code Generation——CPU-Eval：面向 CPU 硬件代码生成的 LLM 评测基准</h4>
+      <p>VerilogEval 等基准推动了 LLM 生成硬件描述语言（HDL）的快速发展，但近期 HDL 生成系统在该基准上通过率已超 90%，难以进一步区分能力差异。CPU-Eval 从 6 款 CPU 构建 339 道 HDL 生成题，取材于包含已流片家族在内的真实 CPU 设计，覆盖从小型嵌入式核到可运行 Linux 的乱序核，代码涵盖 SystemVerilog、Chisel 与 SpinalHDL；每道题要求 LLM 完成真实 CPU 开发任务——生成 HDL。在 7 个前沿 LLM 上，CPU-Eval 的平均 pass@1 比 VerilogEval v2 Spec-to-RTL 低 45.14 个百分点，暴露出高通过率掩盖的能力差异；源码行数更多的子模块 pass@1 更低，说明细粒度模块化设计有利于 LLM 辅助硬件生成；使用较少见 HDL 编写的 CPU 上 pass@1 也更低，提示部署前应验证模型对目标 HDL 的熟练度。属「前端 RTL / 真实 CPU 硬件代码生成基准」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">HDL生成</span><span class="tag">CPU-Eval</span><span class="tag">VerilogEval</span><span class="tag">SystemVerilog</span><span class="tag">Chisel</span><span class="tag">SpinalHDL</span><span class="tag">LLM基准评测</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.32405" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.32405_CPUEval.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.31313 SlotFill -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AR / cs.LG · 22 Nov 2026 · Tabassum, Tasnim, Zheng, Hao</div>
+      <h4>🧵 SlotFill: Repairing Lossy SoC Communication Traces for Post-Silicon Validation——SlotFill：修复硅后验证中丢失消息的 SoC 通信轨迹</h4>
+      <p>硅后验证依赖 SoC 组件间通信的消息轨迹，但追踪缓冲与监视器会丢消息，且往往不留丢失痕迹。SlotFill 的目标是把每条被删除的消息放回正确的间隔、并恢复其类型与顺序：为剩余消息之间的每个空隙分配固定数量的槽位，由 Transformer 模型为每个槽位填入一条消息或判定为空，因此输入不会暴露究竟丢失了多少消息；模型还利用幸存消息的监视器字段（时间戳、事务 ID、地址）。在 4 核与 8 核系统的整程序 gem5 轨迹（20.7 亿条消息）上，15% 丢失率时最高精确恢复 97% 的被删消息，50% 丢失率时恢复 87%；时间戳较粗时，15% 丢失率下仍可恢复 76%–83%。属「功能验证 / 硅后验证（Transformer 轨迹修复 + 丢失消息重建）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">硅后验证</span><span class="tag">SoC</span><span class="tag">通信轨迹修复</span><span class="tag">Transformer</span><span class="tag">gem5</span><span class="tag">消息重建</span><span class="tag">cs.AR</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.31313" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.31313_SlotFill.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

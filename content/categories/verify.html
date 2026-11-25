@@ -7,9 +7,35 @@
 </head>
 <body>
 <section id="cat-verify">
-  <div class="section-title"><span class="icon">✅</span> 功能验证（54篇） <span class="line"></span></div>
+  <div class="section-title"><span class="icon">✅</span> 功能验证（56篇） <span class="line"></span></div>
   <p style="color:var(--muted);font-size:.85rem;margin-bottom:24px;">形式验证、UVM、断言生成、测试生成、覆盖率</p>
   <div class="abstracts">
+    <!-- 2611.31709 RTLDetective -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🔎 RTLDetective: Agentic RTL Debugging through Dataflow Analysis and Simulation-Guided Fault Localization——RTLDetective：以数据流分析与仿真引导故障定位实现智能体式 RTL 调试</div>
+      <div class="abs-meta">arXiv:2611.31709 · cs.AR · 23 Nov 2026 · Javidnia, Neusha, Zhang, Ruisi, Koushanfar, Farinaz</div>
+      <div class="abs-body">多智能体框架融合信号依赖分析、仿真引导故障定位与知识推理：由 RTL 构建信号依赖图、从波形提取失败信息；定位智能体预测中间信号值并以定向仿真干预迭代隔离可疑逻辑，调试智能体结合静态分析与 RTL Bug 模式知识库生成修复，跨迭代复用缓存降低推理开销。MEIC 基准上 86.1% 修复率，较最佳基线高 13.9 个百分点且 LLM 调用更少。属「功能验证 / 智能体式 RTL 调试与修复」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.31709" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.31709_RTLDetective.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">RTL调试</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">多智能体</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">数据流分析</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">故障定位</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">波形轨迹</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">MEIC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
+    <!-- 2611.31313 SlotFill -->
+    <div class="abs-card">
+      <span class="badge-new">NEW</span>
+      <div class="abs-title">🧵 SlotFill: Repairing Lossy SoC Communication Traces for Post-Silicon Validation——SlotFill：修复硅后验证中丢失消息的 SoC 通信轨迹</div>
+      <div class="abs-meta">arXiv:2611.31313 · cs.AR / cs.LG · 22 Nov 2026 · Tabassum, Tasnim, Zheng, Hao</div>
+      <div class="abs-body">硅后验证的 SoC 消息轨迹常因缓冲/监视器丢消息且不留痕迹。SlotFill 为每个空隙分配固定槽位，由 Transformer 决定填入消息或留空，输入不暴露丢失量，并利用幸存消息的时间戳、事务 ID 与地址。4/8 核整程序 gem5 轨迹（20.7 亿消息）上，15% 丢失率最高精确恢复 97%，50% 丢失率恢复 87%，粗时间戳下 15% 丢失率仍恢复 76%–83%。属「功能验证 / 硅后验证轨迹修复」方向。</div>
+      <div class="abs-links">
+        <a href="https://arxiv.org/abs/2611.31313" target="_blank">📄 arXiv</a>
+        <a class="local" href="../dates/2611.31313_SlotFill.pdf">📥 本地PDF</a>
+        <span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">AI for EDA</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">功能验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">硅后验证</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">SoC</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">通信轨迹修复</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">Transformer</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">gem5</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">消息重建</span><span style="color:var(--accent);font-size:.75rem;padding:3px 8px;border:1px solid var(--accent);border-radius:8px;">cs.AR</span>
+      </div>
+    </div>
+
     <!-- 2611.26815 ARGUS -->
     <div class="abs-card">
       <span class="badge-new">NEW</span>
