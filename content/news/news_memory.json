@@ -1,8 +1,22 @@
 {
-  "lastUpdate": "2026-11-24",
+  "lastUpdate": "2026-11-25",
   "cutoffDate": "2026-05-08",
-  "totalItems": 207,
+  "totalItems": 209,
   "items": [
+    {
+      "date": "2026-11-25",
+      "company": "华为 / 行芯科技（Phlexing Technology）",
+      "title": "🏗️ 华为×行芯科技披露「韦(τ)EDA」进展：3D-Native τ-Aware Signoff 工具 GloryEX / GloryBolt，实现行业首次国产 EDA 工具串链成功",
+      "link": "https://www.ithome.com/1/032/480.htm",
+      "keywords": ["华为", "行芯科技", "Phlexing", "韦EDA", "τ定律", "3D-Native", "τ-Aware Signoff", "GloryEX", "GloryBolt", "国产EDA", "工具串链", "IT之家", "2026-11-24", "2026-11-25"]
+    },
+    {
+      "date": "2026-11-25",
+      "company": "Synopsys（新思科技）",
+      "title": "🧭 新思科技官方博客：四十年 EDA 自动化经验谈 AI 智能体落地——按「犯错成本」分级授权、信任逐步建立、通用智能≠领域判断",
+      "link": "https://www.synopsys.com/blogs/chip-design/ai-agents-chip-design-automation.html",
+      "keywords": ["Synopsys", "新思科技", "Thomas Andersen", "Agentic AI", "AI Agent", "芯片设计", "信任", "领域判断", "人工复核", "EDA自动化", "官方博客", "2026-11-24", "2026-11-25"]
+    },
     {
       "date": "2026-11-24",
       "company": "ChipAgents / Renesas Electronics（瑞萨电子）",
