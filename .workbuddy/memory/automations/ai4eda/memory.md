@@ -509,3 +509,15 @@
 ## 2026-11-23 执行摘要（论文段 scope=paper，高层记录）
 
 > 论文 +4：GRADPlace(2611.27287)、MindTheDelta/DiffScope(2611.27035)、ARGUS(2611.26815)、RFIC像素化无源 LM(2611.27559)。四篇均经 arxiv.org/abs 逐字核验标题/作者/摘要/分类/提交日期一致，PDF 从 arxiv.org/pdf 并行断点续传下载并校验 %PDF 头与 %%EOF（0.28–1.47MB）。manifest.papers 437→441、lastUpdate 2026-11-23；分类 rtl/physical/verify/analog 各 +1；新建 date/latest 页（仅论文卡），papers/index 跳转更新；顺手补齐 rtl.html 历史遗留未闭合 div。提交采用显式路径 git add，未纳入孤儿 PDF 与临时文件。详细索引见精简版 .workbuddy/automations/ai4eda/memory.md。
+
+## 2026-11-24 执行摘要（论文段 scope=paper，高层记录）
+
+> 论文 +4：Layered Formal Guidance(2611.30766)、ChiProgramBench(2611.31082)、RTL×综合协同优化(2611.29582)、嵌套 pH 无源宏建模(2611.28778)。四篇均经 arxiv.org/abs 逐字核验标题/作者/摘要/分类/提交日期一致，PDF 从 arxiv.org/pdf 下载（2 篇断点续传）并校验 %PDF-1.7 头与 %%EOF（0.41–1.40MB）。当日页/最新页已由新闻段创建（2 新闻卡）→ 各追加 4 论文卡（共 6 卡）；分类 rtl 116→118、agent 55→56、analog 73→74；manifest.papers 441→445、batches 145→146、dates[11-24].count 2→6；papers/index 跳转改指 11-24。显式路径 git add → commit e4a962b → push origin/main。详细索引见精简版 .workbuddy/automations/ai4eda/memory.md。
+
+## 2026-11-25 执行摘要（论文段 scope=paper，高层记录）
+
+> 论文 +4：AgentDRC(2611.31876)、RTLDetective(2611.31709)、CPU-Eval(2611.32405)、SlotFill(2611.31313)。四篇均经 arxiv.org/abs 逐字核验标题/作者/摘要/分类/提交日期一致，PDF 由 arxiv.org/pdf 下载并校验 %PDF-1.7 头与 %%EOF（0.28–1.07MB）；新建 date/latest 页（仅 4 论文卡）并把 papers/index 跳转改指 11-25；分类 rtl 118→119/verify 54→56/physical 110→111；manifest.papers 445→449、batches 146→147、dates[11-25].count=4。显式路径 git add → commit f4850e8 → push origin/main。联网正常、无幻觉；详细索引见精简版 .workbuddy/automations/ai4eda/memory.md。
+
+## 2026-11-26 执行摘要（论文段 scope=paper，高层记录）
+
+> 论文 +4：DiversePlace(2611.34472)、Kolpona(2611.33973)、REFORGE(2611.33748)、AIChipBench(2611.33093)。四篇均经 arxiv.org/abs 逐字核验标题/作者/摘要/分类/提交日期一致，PDF 由 arxiv.org/pdf 真实下载并校验 %PDF-1.7 头与 %%EOF（DiversePlace 首次下载截断，经备用节点续传补全后复位）；复用已存在的 11-26 date/latest 页（仅 4 论文卡），papers/index 跳转改指 11-26；分类 rtl 119→121/verify 56→57/physical 111→112；manifest.papers 449→453、batches 147→148、dates[11-26].count=4、lastUpdate 11-26。显式路径 git add → commit/push origin/main。联网正常、无幻觉；详细索引见精简版 .workbuddy/automations/ai4eda/memory.md。

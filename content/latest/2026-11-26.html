@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../toggle.js"></script>  <style>
+    .abstracts { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .abs-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04); margin-bottom: 14px; transition: box-shadow .25s; }
+    .abs-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .abs-card .src { font-size: .75rem; color: #94a3b8; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .abs-card .dot { width: 6px; height: 6px; border-radius: 50%; background: #0ea5e9; flex-shrink: 0; }
+    .abs-card h4 { font-size: .92rem; font-weight: 600; margin-bottom: 7px; line-height: 1.45; color: #1e293b; }
+    .abs-card p { font-size: .84rem; color: #334155; line-height: 1.6; margin-bottom: 10px; }
+    .abs-card a { color: #0ea5e9; text-decoration: none; font-size: .8rem; font-weight: 500; }
+    .abs-card a:hover { opacity: .75; }
+    .tag { display: inline-block; background: #f1f5f9; color: #475569; font-size: .7rem; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>📅 2026-11-26 动态</h1>
+  <p class="subtitle">共 4 篇论文 · 论文来源：arXiv（cs.LG / cs.AR / cs.AI / cs.SE / cs.CL，2026-11-24~25 提交 / 11-26 公告批次；已逐篇经 arxiv.org/abs 核验标题/作者/摘要/分类/提交日期一致，PDF 来自 arxiv.org/pdf 真实下载并校验 %PDF 头与 %%EOF，非占位）。本页为 2026-11-26 论文段更新（行业动态由新闻段另行更新）。</p>
+</header>
+<section>
+  <div class="abstracts">
+
+    <!-- 2611.34472 DiversePlace -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG / cs.AR · 25 Nov 2026 · Zhou, Wenrui, Liu, Jiashun, Fang, Wenji, Xie, Zhiyao, Pan, Ling</div>
+      <h4>🎯 DiversePlace: Diversity-Seeking Curriculum Reinforcement Learning for Macro Placement——DiversePlace：面向宏单元布局的多样性驱动课程强化学习</h4>
+      <p>宏单元布局是物理设计早期的关键决策，其位置强烈约束后续实现阶段；由于高影响的离散决策须在下游质量可准确度量之前做出，训练只能依赖半周长线长（HPWL）这类快速但不完美的代理。既有 RL 布局器多优化单一 HPWL 驱动解，长序列决策又常需大量搜索辅助或离线专家数据，几乎没有空间保留多个有竞争力的布局。DiversePlace 把「质量受控的多样性」显式设为布局目标：不依赖单一代理最优解，而是维护一组 HPWL 有竞争力但彼此显著不同的紧凑布局档案供下游挑选。它实现为课程式 PPO 框架，结合质量门控的多样性奖励与逐步扩展的布局视野，实现从零开始的 RL 优化，同时把探索约束在有竞争力的 HPWL 区域内。在 ISPD2005 基准上，DiversePlace 在全部八款设计上稳定提升 top-5 / top-10 / top-20 档案多样性，并取得更低或几乎相同的 HPWL 且效率更好。属「后端物理设计 / 宏单元布局（多样性驱动课程 RL + 质量门控多样性奖励）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">后端物理设计</span><span class="tag">宏单元布局</span><span class="tag">强化学习</span><span class="tag">课程PPO</span><span class="tag">多样性奖励</span><span class="tag">HPWL</span><span class="tag">ISPD2005</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.34472" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.34472_DiversePlace.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.33973 Kolpona -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.LG / cs.AI / cs.AR · 25 Nov 2026 · Farazi, Musa Tur, Uddin, Md Nasir, Bhattacharjee, Soumik, Sabrina, Tishna, Haider, Chowdhury Mohammad Rakin</div>
+      <h4>🧬 Kolpona: An Agentic Framework with Gradient-Free Neuron Programming for RTL Generation——Kolpona：以无梯度神经元编程提升 RTL 生成的智能体框架</h4>
+      <p>用于 RTL 设计的开源权重 LLM 通常靠在精选 Verilog 语料上微调来改进，这需要大量已验证设计与 GPU 训练。Kolpona 提出无需梯度训练即可改进此类模型的智能体框架：其一是「神经元编程」——一种权重空间编程（WSP）新形式，以闭式形式把单个神经元写入权重，用以消除在练习任务上发现的失败习惯，且仅当新任务上的测试台结果更优时才保留每次编辑；推理时，使用工具的智能体提出设计，再由无标签选择阶段仅凭规格、候选与仿真结果为每个任务交付一个设计。在 Qwen3.5-4B 上，对 16 个神经元的编辑把模型单独的 VerilogEval v2 pass@1 从 31.7% 提升到 55.4%，完整框架达到 77.6%；在 Qwen3.8-27B 上，Kolpona 把 VerilogEval v2 的 pass@1 从 73.1% 提升到 94.9%、RTLLM v2.1 从 66.0% 提升到 92.0%（单张 32GB GPU），高于对比中所有已发表系统；RTL 编辑还迁移到 Python，把 4B 模型在 HumanEval+ / MBPP+ 上的 pass@1 分别从 84.8% / 67.7% 提升到 91.5% / 77.5%。属「前端 RTL / 无梯度权重空间编辑 + 智能体 RTL 生成」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">RTL生成</span><span class="tag">智能体框架</span><span class="tag">权重空间编程</span><span class="tag">神经元编程</span><span class="tag">无梯度编辑</span><span class="tag">VerilogEval v2</span><span class="tag">RTLLM</span><span class="tag">cs.LG</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.33973" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.33973_Kolpona.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.33748 REFORGE -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.AI / cs.SE · 25 Nov 2026 · Hossain, Tanvir, Paria, Sudipta, Myers, Aidan Gleason, Bhunia, Swarup, Hoque, Tamzidul</div>
+      <h4>🔧 REFORGE: LLM-Assisted RTL Bug Repair with Structured Context and Verification Feedback——REFORGE：以结构化上下文与验证反馈驱动的 LLM 辅助 RTL Bug 修复</h4>
+      <p>LLM 能编写和修复 RTL，但编译或测试台通过并不等于缺陷已消除、行为保持、安全或实现可行；既有方法常只报告单一修复率，不保留这些属性的独立证据，难以可复现比较与集成进硬件设计流程。REFORGE 是首个在迭代间维护并累积结构化修复证据的 LLM 辅助 RTL 修复框架，可同时满足功能、行为等价、安全与成本效率多目标：对有缺陷 RTL 画像、识别结构与安全相关特征、定位失败行为，并用验证引导的诊断生成完整 RTL 修复变体；每个变体都经语法检查、仿真、形式分析、off-trigger 保持、安全重扫以及综合级功耗/性能/面积分析。该后端无关的修复—验证流程在三个 LLM 后端、三套基准的 288 次运行上评测：CirFix 上所提上下文与诊断把「交付经检查修复」的运行从 32/63 提升到 51/63，所有配置都修复了 Hack@DAC OpenTitan 缺陷；证据记录还显示仅测试台判据报告的修复数比全部适用检查多 3.9 倍、安全干净的输出可能缺乏功能验证、不同 RTL 修复可能实现等价硬件。属「功能验证 / 多阶段验证证据驱动的 RTL 修复」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">功能验证</span><span class="tag">RTL修复</span><span class="tag">LLM辅助</span><span class="tag">结构化证据</span><span class="tag">验证引导诊断</span><span class="tag">形式分析</span><span class="tag">安全重扫</span><span class="tag">CirFix</span><span class="tag">cs.AI</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.33748" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.33748_REFORGE.pdf">📥 本地PDF</a>
+    </div>
+
+    <!-- 2611.33093 AIChipBench -->
+    <div class="abs-card">
+      <div class="src"><span class="dot"></span>arXiv · cs.CL / cs.AI · 24 Nov 2026 · Wang, Guangyuan, Li, Chengran, Luo, Minchen, Feng, Jichen, Wang, Mengdi, Zhang, Yifan</div>
+      <h4>🧪 AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design——AIChipBench：面向自动化 AI 加速器设计的 LLM 智能体基准</h4>
+      <p>语言模型解码器在解码步之间携带状态，硬件中错误的状态更新可能让当前 token 正确却在若干 token 之后破坏输出，因此设计可能通过输出测试却仍是错的。AIChipBench 考察 LLM 编码智能体要正确构建此类硬件需要什么：智能体须依据一个指定每步输出与存储状态的可执行整数参考，用可综合 RTL 实现量化的 Qwen3.5、Gemma 3、Gemma 4 与 Llama 3.2 解码器；在固定预算下针对公开测试调试，冻结设计在留出 token 序列、复位、访存停顿与综合上评分，第二条赛道要求在面积几乎不变下加速正确设计。跨四个编码智能体的 9,136 次尝试表明难点在于存储状态：在 12 个智能体—任务单元上，指向首个状态不匹配的反馈比仅输出的反馈把接受率提高 25.0~46.9 个百分点并使每个被接受设计的智能体工时减半；在新序列与条件下重评时，69 个被接受设计中有 45 个在其测试所需的 32 步内失败；加速尝试中超过三分之一以失败告终。总分排名 Sol 5.6、Fable 5.1 高于 Astra 6 与 Opus 5.5，且在 200 次随机划分的两半实例上顺序一致。属「前端 RTL / LLM 智能体 RTL 生成基准（暴露存储状态调试与最终测试不足）」方向。</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="tag">AI for EDA</span><span class="tag">前端RTL</span><span class="tag">RTL生成</span><span class="tag">LLM智能体</span><span class="tag">基准评测</span><span class="tag">AI加速器</span><span class="tag">状态调试</span><span class="tag">可综合RTL</span><span class="tag">综合验证</span><span class="tag">cs.CL</span>
+      </div>
+      <a href="https://arxiv.org/abs/2611.33093" target="_blank">📄 arXiv</a>
+      &nbsp;<a class="local" href="../dates/2611.33093_AIChipBench.pdf">📥 本地PDF</a>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

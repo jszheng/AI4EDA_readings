@@ -28,6 +28,10 @@
 
 ## 运行索引（一行/天；详情不展开，避免本文件再次膨胀）
 
+- 2026-11-26 论文 +4（scope=paper）：DiversePlace(2611.34472, cs.LG/cs.AR, 质量门控多样性奖励+课程 PPO 宏单元布局, ISPD2005 top-5/10/20 多样性提升)、Kolpona(2611.33973, cs.LG/cs.AI/cs.AR, 无梯度神经元编程+智能体 RTL 生成, VerilogEval v2 94.9%/RTLLM v2.1 92.0%)、REFORGE(2611.33748, cs.AI/cs.SE, 结构化证据+验证反馈 RTL 修复, CirFix 32/63→51/63)、AIChipBench(2611.33093, cs.CL/cs.AI, LLM 智能体 RTL 生成基准, 状态反馈接受率 +25.0~46.9pp)；4 篇均经 arxiv.org/abs 逐字核验（标题/作者/摘要/分类/提交日期一致）+ arxiv.org/pdf 真实下载校验 %PDF-1.7 头与 %%EOF（0.50–4.16MB 非占位，DiversePlace 经备用节点续传补全）；复用已存在的 date/latest 页（仅 4 论文卡）、papers/index 跳转改指 11-26；rtl 119→121/verify 56→57/physical 111→112，manifest.papers 449→453、batches 147→148、dates[11-26].count=4；显式路径 git add → commit/push origin/main；联网正常，无幻觉。
+
+- 2026-11-25 新闻 +2（scope=news）：华为×行芯科技披露「韬(τ)EDA」进展——3D-Native τ-Aware Signoff 工具 GloryEX（信号路径 RC 抽取）/GloryBolt（电源路径 PI 签核），2025/2026 联合落地 27/37 项新功能、2027 规划 30 项，实现行业首次国产 EDA 工具串链成功（IT之家 ithome.com 11-25，HTTP 200 核验；华为官网 11-24 同日确认）；Synopsys 官方博客 11-24 文章《What 40 Years of Design Automation Can Teach Us About AI Agents》（Thomas Andersen，原文 Forbes Tech Council 10-23）——按犯错成本分级授权、信任逐步建立、通用智能≠领域判断、未写下的专家知识、自动化把工作向上重分配（synopsys.com HTTP 200 核验）。2 条均经 URL 200 + 内容吻合 + 非 arXiv/征稿 + 去重（与 11-10 Agentic AI 采用路径博客为不同文章）。当日 date/latest 页已由论文段创建（4 论文卡）→ 各追加 2 新闻卡（共 6 卡）、subtitle 更新，papers/index 跳转已指 11-25 无需重做；manifest.news 248→250、dates[11-25].count 4→6；JSON totalItems 207→209、lastUpdate→11-25；新闻页卡片 190→192、TOC 70→72、头部最后更新→11-25。排除项：WIR #166 404 不存在；SemiEngineering 11-24 三篇 AI 分析文与 11-25 Blog Review 为观点/圆桌汇总非公告；西门子凌琳访谈（OFweek 200）为专访非产品公告；Moores Lab AI Startup 报道为 9-29 旧稿。显式路径 git add → commit d938016 → push origin/main 成功。联网正常，无幻觉。
+
 - 2026-11-25 论文 +4（scope=paper）：AgentDRC(2611.31876, cs.AR/cs.MA, 多智能体空间感知 DRC 修复, pass@1 30.4%/pass@5 55.7%)、RTLDetective(2611.31709, cs.AR, 信号依赖图+仿真引导故障定位的 RTL 调试, MEIC 86.1% 修复率)、CPU-Eval(2611.32405, cs.AR/cs.AI, 6 款 CPU 339 道 HDL 生成题基准, 7 模型 pass@1 比 VerilogEval v2 低 45.14pp)、SlotFill(2611.31313, cs.AR/cs.LG, Transformer 硅后 SoC 轨迹丢消息修复, 15% 丢失恢复 97%)；4 篇均经 arxiv.org/abs 逐字核验（标题/作者/摘要/分类/提交日期一致）+ arxiv.org/pdf 真实下载校验 %PDF-1.7 头与 %%EOF（0.28–1.07MB 非占位）；新建 date/latest 页（仅 4 论文卡），papers/index 跳转改指 11-25；rtl 118→119/verify 54→56/physical 110→111，manifest.papers 445→449、batches 146→147、dates[11-25].count=4；显式路径 git add → commit/push origin/main；联网正常，无幻觉。
 
 - 2026-11-24 论文 +4（scope=paper）：Layered Formal Guidance(2611.30766, cs.AR/cs.AI, 形式属性中间层+生成前增补/生成后一致性检查/反例精化, RTLLM 正确率提升)、ChiProgramBench(2611.31082, cs.AI/cs.AR, 18 项硬件黑盒引脚重建基准, 432 试验全通过率仅 12.0%/14.8%)、RTL×综合算法协同优化(2611.29582, cs.AR, GP 瓶颈分析+BO+LLM Router, 16 设计 WNS +103.27%)、嵌套端口-哈密顿无源宏建模(2611.28778, cs.AR/cs.LG, S 参数误差 -42%、零无源违例、11,000–39,000× 加速)；4 篇均经 arxiv.org/abs 逐字核验（标题/作者/摘要/分类/提交日期一致）+ arxiv.org/pdf 真实下载校验 %PDF-1.7 头与 %%EOF（0.41–1.40MB 非占位，2 篇经断点续传补全）；当日页已由新闻段创建（2 新闻卡）→ date/latest 各追加 4 论文卡（共 6 卡）、subtitle 更新，papers/index 手动跳转 11-23→11-24；rtl 116→118/agent 55→56/analog 73→74，manifest.papers 441→445、batches 145→146、dates[11-24].count 2→6；孤儿 PDF 2611.20414/23905/24037/28667 仍未纳入提交（23905/28667 为 0 字节）；联网正常，无幻觉。
@@ -64,13 +68,7 @@
 | 2026-11-08 | 维护 | 站点维护（无论文/新闻新增）：① 新闻页大清理——去重 + 移除 >180 天陈旧条目 + 时间倒序 + 清理 header 累加垃圾与冗长 nav，卡片 233→173、区块 129→90；② 拆分自动化为「AI4EDA 论文段(工作日08:00)」+「AI4EDA 新闻段(工作日08:20)」两个轻量运行，技能 ai4eda-daily-update 新增 SCOPE 段与 memory.md 防膨胀纪律；③ 清理 5 个孤儿文件（3 个同 ID 重复 PDF、1 个超范围 PDF 2610.40042、1 个临时 html）。 |
 
 - 2026-09-02~10-23 基线期归档（明细已折叠，保留计数轨迹）：papers 139→392，news 218→~227；其中 09-15~09-28 ❌ 全为幻觉已撤回（见顶部告警），09-29 起逐篇核验恢复。期间关键事件：Synopsys AgentEngineer/Autopilot、Cadence RTL Agent、NVIDIA Open Agent Safety、Keysight ADS 2027 agentic AI；10-13 零新增，10-21/10-22 无运行。
-- 2026-10-27 补录 +2（TranSAGE / RTL_Bug_Repair）news +4（WIR #161：Rambus/ChipAgents、Altera、Cadence/Socionext/Nokia、Infineon）
-- 2026-10-28 +5（AnalogScout/AnalogPortBench/PaFeDSE/EGGPlacer/DiffRouter）
-- 2026-10-30 0 论文 / news +1（Cadence Maestro 领域专用 AI 模型）
-- 2026-11-02 恢复 +7（孤儿 PDF 逐篇核验；git 08b4cab）rtl 107→110 / analog 62→66
-- 2026-11-04 +3（CorrectRTL/MCTS-SFT/Analog Layout Agents）news +2（Siemens×NVIDIA 3D-IC、Synopsys@GTC Berlin）
-- 2026-11-05 +4（GNN ClockMesh/CAPER/HLSClaw/GlobalRouting FlowMatch）；news 0
-- **2026-11-06 +1（2611.07324 MementoHLS，cs.AR，HLS 生成与修复）；news 0（无合规可核验新闻）** → commit 6b72507，papers 417 / news 231 / lastUpdate 2026-11-06
+- 2026-10-27~11-06 归档：10-27 +2（TranSAGE/RTL_Bug_Repair）、10-28 +5（AnalogScout 等）、10-30 0 论文、11-02 恢复 +7（孤儿 PDF 核验）、11-04 +3、11-05 +4、11-06 +1（MementoHLS）；papers 392→417 / news ~227→231。
 
 ## 近期边界判定标准（维持站点「AI for EDA」定位，避免噪声）
 
